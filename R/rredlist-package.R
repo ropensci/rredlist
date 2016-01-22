@@ -1,6 +1,7 @@
 #' rredlist
 #'
-#' @import httr jsonlite
+#' @importFrom httr GET content stop_for_status
+#' @importFrom jsonlite fromJSON
 #' @name rredlist-package
 #' @aliases rredlist
 #' @docType package
