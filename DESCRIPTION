@@ -1,0 +1,17 @@
+Package: rredlist
+Type: Package
+Title: IUCN Red List Client
+Description: IUCN Red List client. Functions for fetching data and stuff.
+Version: 0.0.4.9300
+Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
+    email = "myrmecocystus@gmail.com"))
+License: MIT + file LICENSE
+URL: https://github.com/ropenscilabs/rredlist
+BugReports: https://github.com/ropenscilabs/rredlist/issues
+LazyData: TRUE
+Imports:
+    httr,
+    jsonlite
+Suggests:
+    testthat
+RoxygenNote: 5.0.1
