@@ -1,24 +1,19 @@
 rredlist
 ========
 
-```{r echo=FALSE}
-knitr::opts_chunk$set(
-  warning = FALSE,
-  message = FALSE,
-  collapse = TRUE,
-  comment = "#>"
-)
-```
+
 
 [![Build Status](https://travis-ci.org/ropenscilabs/rredlist.svg?branch=master)](https://travis-ci.org/ropenscilabs/rredlist)
 
 ## Install
 
-```{r eval=FALSE}
+
+```r
 devtools::install_github("ropenscilabs/rredlist")
 ```
 
-```{r}
+
+```r
 library("rredlist")
 ```
 
