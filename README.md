@@ -37,6 +37,17 @@ of the function name, e.g., \code{\link{rl_search_}}
 This package does not include support for the spatial API, described at
 [http://apiv3.iucnredlist.org/spatial][spatial].
 
+## Citing IUCN API
+
+use the function `rl_citation()`
+
+
+```r
+rl_citation()
+#> [1] "IUCN 2015. IUCN Red List of Threatened Species. Version 2015-4 <www.iucnredlist.org>"
+```
+
+
 ## Install
 
 CRAN
