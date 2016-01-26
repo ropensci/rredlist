@@ -6,6 +6,37 @@ rredlist
 
 [![Build Status](https://travis-ci.org/ropenscilabs/rredlist.svg?branch=master)](https://travis-ci.org/ropenscilabs/rredlist)
 
+[IUCN Red List docs][docs]
+
+## Authentication
+
+IUCN requires you to get your own API key, an alphanumeric string that you
+need to send in every request. Get it at [http://apiv3.iucnredlist.org/api/v3/token][token].
+Keep this key private. You can pass the key in to each function via the
+`key` parameter, but it's better to store the key either as a environment
+variable (`IUCN_REDLIST_KEY`) or an R option (`iucn_redlist_key`) - we
+suggest using the former option.
+
+## High vs. Low level package APIs
+
+__High level API__
+
+High level functions do the HTTP request and parse data to a data.frame for
+ease of downstream use. The high level functions have no underscore on the end
+of the function name, e.g., \code{\link{rl_search}}
+
+__Low level API__
+
+The parsing to data.frame in the high level API does take extra time. The low
+level API only does the HTTP request, and gives back JSON without doing any
+more parsing. The low level functions DO have an underscore on the end
+of the function name, e.g., \code{\link{rl_search_}}
+
+## No Spatial
+
+This package does not include support for the spatial API, described at
+[http://apiv3.iucnredlist.org/spatial][spatial].
+
 ## Install
 
 CRAN
@@ -29,8 +60,8 @@ library("rredlist")
 
 ## High level API
 
-High level functions do the HTTP request and parse to data to a data.frame for ease 
-of downstream use. 
+High level functions do the HTTP request and parse to data to a data.frame for ease
+of downstream use.
 
 
 ```r
@@ -139,3 +170,7 @@ rl_search_('Fratercula arctica') %>% dot()
 ## Meta
 
 * Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+
+[docs]: http://apiv3.iucnredlist.org/api/v3/docs
+[token]: http://apiv3.iucnredlist.org/api/v3/token
+[spatial]: http://apiv3.iucnredlist.org/spatial
