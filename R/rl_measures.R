@@ -14,7 +14,7 @@
 #' rl_measures_(id = 22694927, region = 'europe')
 #' }
 rl_measures <- function(name = NULL, id = NULL, region = NULL, key = NULL, parse = TRUE, ...) {
-  rl_parse(rr_GET(.measures(name, id, region), key, ...), parse)
+  rl_parse(rl_measures_(name, id, region, key, ...), parse)
 }
 
 #' @export

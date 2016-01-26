@@ -5,7 +5,7 @@
 \alias{rl_countries_}
 \title{Get countries}
 \usage{
-rl_countries(key = NULL, parse = FALSE, ...)
+rl_countries(key = NULL, parse = TRUE, ...)
 
 rl_countries_(key = NULL, ...)
 }

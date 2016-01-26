@@ -7,8 +7,8 @@
 #' rl_countries()
 #' rl_countries_()
 #' }
-rl_countries <- function(key = NULL, parse = FALSE, ...) {
-  rl_parse(rr_GET("country/list", key, ...), parse)
+rl_countries <- function(key = NULL, parse = TRUE, ...) {
+  rl_parse(rl_countries_(key, ...), parse)
 }
 
 #' @export

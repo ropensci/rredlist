@@ -18,7 +18,7 @@
 #' res <- rl_sp_country('NZ', config=verbose())
 #' }
 rl_sp_country <- function(country, key = NULL, parse = TRUE, ...) {
-  rl_parse(rr_GET(file.path("country/getspecies", country), key, ...), parse)
+  rl_parse(rl_sp_country_(country, key, ...), parse)
 }
 
 #' @export

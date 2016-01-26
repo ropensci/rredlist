@@ -8,9 +8,8 @@
 #' rl_sp_count_()
 #' }
 rl_sp_count <- function(key = NULL, parse = TRUE, ...) {
-  rl_parse(rr_GET("speciescount", key, ...), parse)
+  rl_parse(rl_sp_count_(key, ...), parse)
 }
-
 
 #' @export
 #' @rdname rl_sp_count

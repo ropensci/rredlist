@@ -14,7 +14,7 @@
 #' rl_narrative_('Fratercula arctica', region = 'europe')
 #' }
 rl_narrative <- function(name = NULL, id = NULL, region = NULL, key = NULL, parse = TRUE, ...) {
-  rl_parse(rr_GET(.narrative(name, id, region), key, ...), parse)
+  rl_parse(rl_narrative_(name, id, region, key, ...), parse)
 }
 
 #' @export

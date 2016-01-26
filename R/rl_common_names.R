@@ -9,7 +9,7 @@
 #' rl_common_names_('Loxodonta africana')
 #' }
 rl_common_names <- function(name = NULL, key = NULL, parse = TRUE, ...) {
-  rl_parse(rr_GET(file.path("species/common_names", name), key, ...), parse)
+  rl_parse(rl_common_names_(name, key, ...), parse)
 }
 
 #' @export

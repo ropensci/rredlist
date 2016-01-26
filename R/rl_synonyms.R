@@ -10,7 +10,7 @@
 #' rl_synonyms_('Loxodonta africana')
 #' }
 rl_synonyms <- function(name = NULL, key = NULL, parse = TRUE, ...) {
-  rl_parse(rr_GET(file.path("species/synonym", name), key, ...), parse)
+  rl_parse(rl_synonyms_(name, key, ...), parse)
 }
 
 #' @export

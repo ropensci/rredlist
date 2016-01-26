@@ -11,7 +11,7 @@
 #' rl_sp_(page = 3)
 #' }
 rl_sp <- function(page, key = NULL, parse = TRUE, ...) {
-  rl_parse(rr_GET(file.path("species/page", page), key, ...), parse)
+  rl_parse(rl_sp_(page, key, ...), parse)
 }
 
 #' @export

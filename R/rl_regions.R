@@ -9,7 +9,7 @@
 #' rl_regions_()
 #' }
 rl_regions <- function(key = NULL, parse = TRUE, ...) {
-  rl_parse(rr_GET("region/list", key, ...), parse)
+  rl_parse(rl_regions_(key, ...), parse)
 }
 
 #' @export

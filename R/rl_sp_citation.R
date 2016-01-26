@@ -14,7 +14,7 @@
 #' rl_sp_citation_(id = 2467, region = 'europe')
 #' }
 rl_sp_citation <- function(name = NULL, id = NULL, region = NULL, key = NULL, parse = TRUE, ...) {
-  rl_parse(rr_GET(.sp_citation(name, id, region), key, ...), parse)
+  rl_parse(rl_sp_citation_(name, id, region, key, ...), parse)
 }
 
 #' @export

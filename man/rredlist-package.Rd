@@ -21,7 +21,7 @@ suggest using the former option.
 \section{High vs. Low level package APIs}{
 
 \strong{High level API}
-High level functions do the HTTP request and parse to data to a data.frame for
+High level functions do the HTTP request and parse data to a data.frame for
 ease of downstream use. The high level functions have no underscore on the end
 of the function name, e.g., \code{\link{rl_search}}
 

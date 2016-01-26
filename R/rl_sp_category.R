@@ -11,7 +11,7 @@
 #' rl_sp_category_('EX')
 #' }
 rl_sp_category <- function(category, key = NULL, parse = TRUE, ...) {
-  rl_parse(rr_GET(file.path("species/category", category), key, ...), parse)
+  rl_parse(rl_sp_category_(category, key, ...), parse)
 }
 
 #' @export

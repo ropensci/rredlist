@@ -14,7 +14,7 @@
 #' rl_habitats_(id = 12392)
 #' }
 rl_habitats <- function(name = NULL, id = NULL, region = NULL, key = NULL, parse = TRUE, ...) {
-  rl_parse(rr_GET(.habitats(name, id, region), key, ...), parse)
+  rl_parse(rl_habitats_(name, id, region, key, ...), parse)
 }
 
 #' @export

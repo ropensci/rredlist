@@ -12,7 +12,7 @@
 #' rl_threats_('Fratercula arctica')
 #' }
 rl_threats <- function(name = NULL, id = NULL, region = NULL, key = NULL, parse = TRUE, ...) {
-  rl_parse(rr_GET(.threats(name, id, region), key, ...), parse)
+  rl_parse(rl_threats_(name, id, region, key, ...), parse)
 }
 
 #' @export

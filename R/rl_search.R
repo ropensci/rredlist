@@ -15,7 +15,7 @@
 #' rl_search_('Fratercula arctica', region = 'europe')
 #' }
 rl_search <- function(name = NULL, id = NULL, region = NULL, key = NULL, parse = TRUE, ...) {
-  rl_parse(rr_GET(.search(name, id, region), key, ...), parse)
+  rl_parse(rl_search_(name, id, region, key, ...), parse)
 }
 
 #' @export
