@@ -8,6 +8,18 @@
 #' variable (\code{IUCN_REDLIST_KEY}) or an R option (\code{iucn_redlist_key}) - we
 #' suggest using the former option.
 #'
+#' @section High vs. Low level package APIs:
+#' \strong{High level API}
+#' High level functions do the HTTP request and parse data to a data.frame for
+#' ease of downstream use. The high level functions have no underscore on the end
+#' of the function name, e.g., \code{\link{rl_search}}
+#'
+#' \strong{Low level API}
+#' The parsing to data.frame in the high level API does take extra time. The low
+#' level API only does the HTTP request, and gives back JSON without doing any
+#' more parsing. The low level functions DO have an underscore on the end
+#' of the function name, e.g., \code{\link{rl_search_}}
+#'
 #' @section No Spatial:
 #' This package does not include support for the spatial API, described at
 #' \url{http://apiv3.iucnredlist.org/spatial}

@@ -2,6 +2,32 @@ rredlist
 ========
 
 ```{r echo=FALSE}
+```{r echo=FALSE}
+library("knitr")
+hook_output <- knitr::knit_hooks$get("output")
+knitr::knit_hooks$set(output = function(x, options) {
+   lines <- options$output.lines
+   if (is.null(lines)) {
+     return(hook_output(x, options))  # pass to default hook
+   }
+   x <- unlist(strsplit(x, "\n"))
+   more <- "..."
+   if (length(lines)==1) {        # first n lines
+     if (length(x) > lines) {
+       # truncate the output, but add ....
+       x <- c(head(x, lines), more)
+     }
+   } else {
+     x <- c(if (abs(lines[1])>1) more else NULL,
+            x[lines],
+            if (length(x)>lines[abs(length(lines))]) more else NULL
+           )
+   }
+   # paste these lines together
+   x <- paste(c(x, ""), collapse = "\n")
+   hook_output(x, options)
+ })
+
 knitr::opts_chunk$set(
   warning = FALSE,
   message = FALSE,
@@ -14,12 +40,59 @@ knitr::opts_chunk$set(
 
 ## Install
 
+CRAN
+
+```{r eval=FALSE}
+install.packages("rredlist")
+```
+
+Development version
+
 ```{r eval=FALSE}
 devtools::install_github("ropenscilabs/rredlist")
 ```
 
 ```{r}
 library("rredlist")
+```
+
+## High level API
+
+High level functions do the HTTP request and parse to data to a data.frame for ease 
+of downstream use. 
+
+```{r}
+rl_search('Fratercula arctica')
+```
+
+Likely a bit faster is to parse to a list only, and not take the extra data.frame parsing time
+
+```{r output.lines=1:10}
+rl_search('Fratercula arctica', parse = FALSE)
+```
+
+## Low level API
+
+The parsing to data.frame in the high level API does take extra time. The low level API
+only does the HTTP request, and gives back JSON without doing any more parsing
+
+```{r}
+rl_search_('Fratercula arctica')
+```
+
+To consume this JSON, you can use `jsonlite`
+
+```{r}
+library("jsonlite")
+jsonlite::fromJSON(rl_search_('Fratercula arctica'))
+```
+
+Or other tools, e.g., `jq` via the `jqr` R client
+
+```{r output.lines=1:20}
+# devtools::install_github("ropensci/jqr")
+library("jqr")
+rl_search_('Fratercula arctica') %>% dot()
 ```
 
 ## Meta
