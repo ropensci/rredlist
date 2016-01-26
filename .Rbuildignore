@@ -5,5 +5,4 @@ README.Rmd
 .travis.yml
 appveyor.yml
 cran-comments.md
-NEWS.md
 man-roxygen
