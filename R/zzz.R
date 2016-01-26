@@ -4,7 +4,15 @@ rr_GET <- function(path, key, ...){
   temp <- GET(file.path(rr_base(), path), query = ct(list(token = check_key(key))), ...)
   stop_for_status(temp)
   stopifnot(temp$headers$`content-type` == 'application/json; charset=utf-8')
+  err_catcher(temp)
   content(temp, as = 'text', encoding = "UTF-8")
+}
+
+err_catcher <- function(x) {
+  xx <- content(x)
+  if ("message" %in% names(xx)) {
+    stop(xx$message, call. = FALSE)
+  }
 }
 
 rl_parse <- function(x, parse) {
