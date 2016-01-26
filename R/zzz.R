@@ -10,8 +10,8 @@ rr_GET <- function(path, key, ...){
 
 err_catcher <- function(x) {
   xx <- content(x)
-  if ("message" %in% names(xx)) {
-    stop(xx$message, call. = FALSE)
+  if (any(vapply(c("message", "error"), function(z) z %in% names(xx), logical(1)))) {
+    stop(xx[[1]], call. = FALSE)
   }
 }
 
