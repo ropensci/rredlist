@@ -24,6 +24,17 @@
 #' This package does not include support for the spatial API, described at
 #' \url{http://apiv3.iucnredlist.org/spatial}
 #'
+#' @section Citing the Red List API:
+#' The citation is
+#' \code{IUCN 2015. IUCN Red List of Threatened Species. Version 2015-4 <www.iucnredlist.org>}.
+#' You can get this programatically via \code{\link{rl_citation}}
+#'
+#' @section Rate limiting:
+#' From the IUCN folks: Too many frequent calls, or too many calls per day might get your
+#' access blocked temporarily. If you're a heavy API user, the Red List Unit asked that you
+#' contact them, as there might be better options. They suggest a 2-second delay between
+#' your calls if you plan to make a lot of calls.
+#'
 #' @importFrom httr GET content stop_for_status
 #' @importFrom jsonlite fromJSON
 #' @name rredlist-package
