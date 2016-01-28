@@ -22,7 +22,7 @@ rl_parse <- function(x, parse) {
 check_key <- function(x){
   tmp <- if (is.null(x)) Sys.getenv("IUCN_REDLIST_KEY", "") else x
   if (tmp == "") {
-    getOption("iucn_redlist_key", stop("need an API key for NOAA data", call. = FALSE))
+    getOption("iucn_redlist_key", stop("need an API key for Red List data", call. = FALSE))
   } else {
     tmp
   }
