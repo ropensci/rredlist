@@ -37,6 +37,9 @@ knitr::opts_chunk$set(
 ```
 
 [![Build Status](https://travis-ci.org/ropenscilabs/rredlist.svg?branch=master)](https://travis-ci.org/ropenscilabs/rredlist)
+[![codecov.io](https://codecov.io/github/ropenscilabs/rredlist/coverage.svg?branch=master)](https://codecov.io/github/ropenscilabs/rredlist?branch=master)
+[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rredlist)](https://github.com/metacran/cranlogs.app)
+[![cran version](http://www.r-pkg.org/badges/version/rredlist)](http://cran.rstudio.com/web/packages/rredlist)
 
 [IUCN Red List docs][docs]
 
