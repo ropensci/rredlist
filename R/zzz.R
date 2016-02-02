@@ -9,7 +9,7 @@ rr_GET <- function(path, key, ...){
 }
 
 err_catcher <- function(x) {
-  xx <- content(x)
+  xx <- jsonlite::fromJSON(content(x, as = 'text', encoding = "UTF-8"))
   if (any(vapply(c("message", "error"), function(z) z %in% names(xx), logical(1)))) {
     stop(xx[[1]], call. = FALSE)
   }
