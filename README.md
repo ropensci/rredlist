@@ -26,14 +26,14 @@ __High level API__
 
 High level functions do the HTTP request and parse data to a data.frame for
 ease of downstream use. The high level functions have no underscore on the end
-of the function name, e.g., \code{\link{rl_search}}
+of the function name, e.g., `rl_search`
 
 __Low level API__
 
 The parsing to data.frame in the high level API does take extra time. The low
 level API only does the HTTP request, and gives back JSON without doing any
 more parsing. The low level functions DO have an underscore on the end
-of the function name, e.g., \code{\link{rl_search_}}
+of the function name, e.g., `rl_search_`
 
 ## No Spatial
 
@@ -47,7 +47,7 @@ use the function `rl_citation()`
 
 ```r
 rl_citation()
-#> Error in eval(expr, envir, enclos): could not find function "rl_citation"
+#> [1] "IUCN 2015. IUCN Red List of Threatened Species. Version 2015-4 <www.iucnredlist.org>"
 ```
 
 
