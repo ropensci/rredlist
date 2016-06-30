@@ -7,7 +7,7 @@ rredlist
 [![Build Status](https://travis-ci.org/ropenscilabs/rredlist.svg?branch=master)](https://travis-ci.org/ropenscilabs/rredlist)
 [![codecov.io](https://codecov.io/github/ropenscilabs/rredlist/coverage.svg?branch=master)](https://codecov.io/github/ropenscilabs/rredlist?branch=master)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rredlist)](https://github.com/metacran/cranlogs.app)
-[![cran version](http://www.r-pkg.org/badges/version/rredlist)](http://cran.rstudio.com/web/packages/rredlist)
+[![cran version](http://www.r-pkg.org/badges/version/rredlist)](https://cran.r-project.org/package=rredlist)
 
 [IUCN Red List docs][docs]
 
@@ -82,7 +82,7 @@ of downstream use.
 rl_search('Fratercula arctica')
 #> $name
 #> [1] "Fratercula arctica"
-#> 
+#>
 #> $result
 #>    taxonid    scientific_name  kingdom   phylum class           order
 #> 1 22694927 Fratercula arctica ANIMALIA CHORDATA  AVES CHARADRIIFORMES
@@ -101,12 +101,12 @@ Likely a bit faster is to parse to a list only, and not take the extra data.fram
 rl_search('Fratercula arctica', parse = FALSE)
 #> $name
 #> [1] "Fratercula arctica"
-#> 
+#>
 #> $result
 #> $result[[1]]
 #> $result[[1]]$taxonid
 #> [1] 22694927
-#> 
+#>
 #> $result[[1]]$scientific_name
 #> [1] "Fratercula arctica"
 ...
@@ -131,7 +131,7 @@ library("jsonlite")
 jsonlite::fromJSON(rl_search_('Fratercula arctica'))
 #> $name
 #> [1] "Fratercula arctica"
-#> 
+#>
 #> $result
 #>    taxonid    scientific_name  kingdom   phylum class           order
 #> 1 22694927 Fratercula arctica ANIMALIA CHORDATA  AVES CHARADRIIFORMES
