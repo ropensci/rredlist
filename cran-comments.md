@@ -3,6 +3,8 @@
 * local OS X install, R 3.3.1
 * ubuntu 12.04 (on travis-ci), R 3.3.1
 * win-builder (devel and release)
+* R-hub (Ubuntu devel and release, Windows devel and release,
+Debian Linux devel and release, Fedora Linux, R-devel)
 
 ## R CMD check results
 
