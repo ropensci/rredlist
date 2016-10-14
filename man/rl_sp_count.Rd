@@ -3,7 +3,7 @@
 \name{rl_sp_count}
 \alias{rl_sp_count}
 \alias{rl_sp_count_}
-\title{Species count}
+\title{Get total species count of taxa in the Red List}
 \usage{
 rl_sp_count(key = NULL, parse = TRUE, ...)
 
@@ -23,7 +23,7 @@ a function with a trailing underscore, in which case json as character
 string is returned.
 }
 \description{
-Species count
+Get total species count of taxa in the Red List
 }
 \examples{
 \dontrun{

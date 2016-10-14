@@ -3,7 +3,7 @@
 \name{rl_synonyms}
 \alias{rl_synonyms}
 \alias{rl_synonyms_}
-\title{Get species narrative information by taxon name or IUCN id}
+\title{Get species synonym information by taxonomic name}
 \usage{
 rl_synonyms(name = NULL, key = NULL, parse = TRUE, ...)
 
@@ -25,7 +25,7 @@ a function with a trailing underscore, in which case json as character
 string is returned.
 }
 \description{
-Get species narrative information by taxon name or IUCN id
+Get species synonym information by taxonomic name
 }
 \examples{
 \dontrun{

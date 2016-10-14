@@ -1,4 +1,4 @@
-#' Get species conservation measures by taxon name or IUCN id
+#' Get species conservation measures by taxon name, IUCN id, and region
 #'
 #' @export
 #' @template commonargs

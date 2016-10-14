@@ -1,4 +1,4 @@
-#' Species count
+#' Get total species count of taxa in the Red List
 #'
 #' @export
 #' @template all

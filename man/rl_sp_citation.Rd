@@ -3,7 +3,7 @@
 \name{rl_sp_citation}
 \alias{rl_sp_citation}
 \alias{rl_sp_citation_}
-\title{Get citations}
+\title{Get citations by taxon name, IUCN id, and region}
 \usage{
 rl_sp_citation(name = NULL, id = NULL, region = NULL, key = NULL,
   parse = TRUE, ...)
@@ -30,7 +30,7 @@ a function with a trailing underscore, in which case json as character
 string is returned.
 }
 \description{
-Get citations
+Get citations by taxon name, IUCN id, and region
 }
 \examples{
 \dontrun{

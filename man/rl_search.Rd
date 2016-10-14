@@ -3,7 +3,7 @@
 \name{rl_search}
 \alias{rl_search}
 \alias{rl_search_}
-\title{Search by taxon name or IUCN id}
+\title{Search by taxon name, IUCN id, and region}
 \usage{
 rl_search(name = NULL, id = NULL, region = NULL, key = NULL,
   parse = TRUE, ...)
@@ -30,7 +30,7 @@ a function with a trailing underscore, in which case json as character
 string is returned.
 }
 \description{
-Search by taxon name or IUCN id
+Search by taxon name, IUCN id, and region
 }
 \examples{
 \dontrun{

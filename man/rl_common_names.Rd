@@ -3,7 +3,7 @@
 \name{rl_common_names}
 \alias{rl_common_names}
 \alias{rl_common_names_}
-\title{Get species narrative information by taxon name or IUCN id}
+\title{Get common names for a given taxonomic name}
 \usage{
 rl_common_names(name = NULL, key = NULL, parse = TRUE, ...)
 
@@ -25,7 +25,7 @@ a function with a trailing underscore, in which case json as character
 string is returned.
 }
 \description{
-UPDATE
+Get common names for a given taxonomic name
 }
 \examples{
 \dontrun{

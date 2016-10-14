@@ -3,7 +3,7 @@
 \name{rl_measures}
 \alias{rl_measures}
 \alias{rl_measures_}
-\title{Get species conservation measures by taxon name or IUCN id}
+\title{Get species conservation measures by taxon name, IUCN id, and region}
 \usage{
 rl_measures(name = NULL, id = NULL, region = NULL, key = NULL,
   parse = TRUE, ...)
@@ -30,7 +30,7 @@ a function with a trailing underscore, in which case json as character
 string is returned.
 }
 \description{
-Get species conservation measures by taxon name or IUCN id
+Get species conservation measures by taxon name, IUCN id, and region
 }
 \examples{
 \dontrun{

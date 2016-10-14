@@ -1,4 +1,4 @@
-#' Get species narrative information by taxon name or IUCN id
+#' Get species synonym information by taxonomic name
 #'
 #' @export
 #' @param name (character) Binomial taxonomic name

@@ -1,6 +1,4 @@
-#' Get species narrative information by taxon name or IUCN id
-#'
-#' UPDATE
+#' Get common names for a given taxonomic name
 #'
 #' @export
 #' @param name (character) Binomial taxonomic name

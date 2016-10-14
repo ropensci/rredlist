@@ -1,4 +1,4 @@
-#' Get citations
+#' Get citations by taxon name, IUCN id, and region
 #'
 #' @export
 #' @template commonargs

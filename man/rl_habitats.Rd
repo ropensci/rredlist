@@ -3,7 +3,7 @@
 \name{rl_habitats}
 \alias{rl_habitats}
 \alias{rl_habitats_}
-\title{Get species habitats by taxon name or IUCN id}
+\title{Get species habitats by taxon name, IUCN id, and region}
 \usage{
 rl_habitats(name = NULL, id = NULL, region = NULL, key = NULL,
   parse = TRUE, ...)
@@ -30,7 +30,7 @@ a function with a trailing underscore, in which case json as character
 string is returned.
 }
 \description{
-Get species habitats by taxon name or IUCN id
+Get species habitats by taxon name, IUCN id, and region
 }
 \examples{
 \dontrun{
