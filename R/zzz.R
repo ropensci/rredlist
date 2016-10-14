@@ -29,3 +29,5 @@ check_key <- function(x){
 }
 
 rr_base <- function() "http://apiv3.iucnredlist.org/api/v3"
+
+space <- function(x) gsub("\\s", "%20", x)

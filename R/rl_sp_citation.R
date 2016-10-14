@@ -26,12 +26,12 @@ rl_sp_citation_ <- function(name = NULL, id = NULL, region = NULL, key = NULL, .
 .sp_citation <- function(name = NULL, id = NULL, region = NULL) {
   stopifnot(xor(!is.null(name), !is.null(id)))
   path <- if (!is.null(name)) {
-    file.path("species/citation", name)
+    file.path("species/citation", space(name))
   } else {
     file.path("species/citation/id", id)
   }
   if (!is.null(region)) {
-    path <- file.path(path, "region", region)
+    path <- file.path(path, "region", space(region))
   }
   path
 }

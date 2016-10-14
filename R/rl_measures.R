@@ -26,12 +26,12 @@ rl_measures_ <- function(name = NULL, id = NULL, region = NULL, key = NULL, ...)
 .measures <- function(name = NULL, id = NULL, region = NULL) {
   stopifnot(xor(!is.null(name), !is.null(id)))
   path <- if (!is.null(name)) {
-    file.path("measures/species/name", name)
+    file.path("measures/species/name", space(name))
   } else {
     file.path("measures/species/id", id)
   }
   if (!is.null(region)) {
-    path <- file.path(path, "region", region)
+    path <- file.path(path, "region", space(region))
   }
   path
 }

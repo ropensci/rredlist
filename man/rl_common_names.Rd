@@ -25,7 +25,7 @@ a function with a trailing underscore, in which case json as character
 string is returned.
 }
 \description{
-Get species narrative information by taxon name or IUCN id
+UPDATE
 }
 \examples{
 \dontrun{

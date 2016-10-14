@@ -27,12 +27,12 @@ rl_search_ <- function(name = NULL, id = NULL, region = NULL, key = NULL, ...) {
 .search <- function(name = NULL, id = NULL, region = NULL) {
   stopifnot(xor(!is.null(name), !is.null(id)))
   path <- if (!is.null(name)) {
-    file.path("species", name)
+    file.path("species", space(name))
   } else {
     file.path("species/id", id)
   }
   if (!is.null(region)) {
-    path <- file.path(path, "region", region)
+    path <- file.path(path, "region", space(region))
   }
   path
 }

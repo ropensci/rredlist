@@ -26,12 +26,12 @@ rl_narrative_ <- function(name = NULL, id = NULL, region = NULL, key = NULL, ...
 .narrative <- function(name = NULL, id = NULL, region = NULL) {
   stopifnot(xor(!is.null(name), !is.null(id)))
   path <- if (!is.null(name)) {
-    file.path("species/narrative", name)
+    file.path("species/narrative", space(name))
   } else {
     file.path("species/narrative/id", id)
   }
   if (!is.null(region)) {
-    path <- file.path(path, "region", region)
+    path <- file.path(path, "region", space(region))
   }
   path
 }

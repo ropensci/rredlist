@@ -24,12 +24,12 @@ rl_threats_ <- function(name = NULL, id = NULL, region = NULL, key = NULL, ...) 
 .threats <- function(name = NULL, id = NULL, region = NULL) {
   stopifnot(xor(!is.null(name), !is.null(id)))
   path <- if (!is.null(name)) {
-    file.path("threats/species/name", name)
+    file.path("threats/species/name", space(name))
   } else {
     file.path("threats/species/id", id)
   }
   if (!is.null(region)) {
-    path <- file.path(path, "region", region)
+    path <- file.path(path, "region", space(region))
   }
   path
 }
