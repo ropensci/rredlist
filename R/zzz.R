@@ -1,15 +1,17 @@
 ct <- function(l) Filter(Negate(is.null), l)
 
 rr_GET <- function(path, key, ...){
-  temp <- GET(file.path(rr_base(), path), query = ct(list(token = check_key(key))), ...)
-  stop_for_status(temp)
-  stopifnot(temp$headers$`content-type` == 'application/json; charset=utf-8')
+  cli <- HttpClient$new(url = file.path(rr_base(), path), opts = list(...))
+  temp <- cli$get(query = list(token = check_key(key)))
+  if (temp$status_code > 201) {
+    stop(sprintf("(%s) - %s", temp$status_code, temp$status_http()$message), call. = FALSE)
+  }
   err_catcher(temp)
-  content(temp, as = 'text', encoding = "UTF-8")
+  temp$parse()
 }
 
 err_catcher <- function(x) {
-  xx <- jsonlite::fromJSON(content(x, as = 'text', encoding = "UTF-8"))
+  xx <- jsonlite::fromJSON(x$parse())
   if (any(vapply(c("message", "error"), function(z) z %in% names(xx), logical(1)))) {
     stop(xx[[1]], call. = FALSE)
   }

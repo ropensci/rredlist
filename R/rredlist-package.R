@@ -37,7 +37,7 @@
 #' They suggest a 2-second delay between your calls if you plan to make a
 #' lot of calls.
 #'
-#' @importFrom httr GET content stop_for_status
+#' @import crul
 #' @importFrom jsonlite fromJSON
 #' @name rredlist-package
 #' @aliases rredlist
