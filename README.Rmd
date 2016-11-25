@@ -36,8 +36,8 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![Build Status](https://travis-ci.org/ropenscilabs/rredlist.svg?branch=master)](https://travis-ci.org/ropenscilabs/rredlist)
-[![codecov.io](https://codecov.io/github/ropenscilabs/rredlist/coverage.svg?branch=master)](https://codecov.io/github/ropenscilabs/rredlist?branch=master)
+[![Build Status](https://travis-ci.org/ropensci/rredlist.svg?branch=master)](https://travis-ci.org/ropensci/rredlist)
+[![codecov.io](https://codecov.io/github/ropensci/rredlist/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rredlist?branch=master)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rredlist)](https://github.com/metacran/cranlogs.app)
 [![cran version](http://www.r-pkg.org/badges/version/rredlist)](https://cran.r-project.org/package=rredlist)
 
@@ -92,7 +92,7 @@ install.packages("rredlist")
 Development version
 
 ```{r eval=FALSE}
-devtools::install_github("ropenscilabs/rredlist")
+devtools::install_github("ropensci/rredlist")
 ```
 
 ```{r}
@@ -140,6 +140,9 @@ rl_search_('Fratercula arctica') %>% dot()
 
 ## Meta
 
+* Please [report any issues or bugs](https://github.com/ropensci/rredlist/issues).
+* License: MIT
+* Get citation information for `rredlist` in R doing `citation(package = 'rredlist')`
 * Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
 
 [docs]: http://apiv3.iucnredlist.org/api/v3/docs

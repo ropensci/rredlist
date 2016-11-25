@@ -8,8 +8,8 @@ Version: 0.2.1.9000
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"))
 License: MIT + file LICENSE
-URL: https://github.com/ropenscilabs/rredlist
-BugReports: https://github.com/ropenscilabs/rredlist/issues
+URL: https://github.com/ropensci/rredlist
+BugReports: https://github.com/ropensci/rredlist/issues
 Imports:
     crul (>= 0.1.0),
     jsonlite (>= 1.1)
