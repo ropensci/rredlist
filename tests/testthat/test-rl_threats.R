@@ -57,8 +57,8 @@ test_that("fails well", {
   expect_error(rl_threats(id = "adsfds"), "id must be of class integer, numeric")
   expect_error(rl_threats(id = list()), "id must be of class integer, numeric")
 
-  expect_error(rl_threats(region = 5), "region must be of class character")
-  expect_error(rl_threats(region = list()), "region must be of class character")
+  expect_error(rl_threats("ad", region = 5), "region must be of class character")
+  expect_error(rl_threats("ad", region = list()), "region must be of class character")
 
   expect_error(rl_threats(key = 5), "key must be of class character")
   expect_error(rl_threats(key = matrix()), "key must be of class character")
