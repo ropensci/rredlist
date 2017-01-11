@@ -25,24 +25,6 @@ rl_occ_country <- function(name = NULL, id = NULL, region = NULL,
 rl_occ_country_ <- function(name = NULL, id = NULL, region = NULL,
                             key = NULL, ...) {
   assert_is(key, 'character')
-  rr_GET(.occ_country(name, id, region), key, ...)
-}
-
-.occ_country <- function(name = NULL, id = NULL, region = NULL) {
-  stopifnot(xor(!is.null(name), !is.null(id)))
-  assert_is(name, 'character')
-  assert_is(id, c('integer', 'numeric'))
-  assert_is(region, 'character')
-  assert_n(name, 1)
-  assert_n(id, 1)
-  assert_n(region, 1)
-  path <- if (!is.null(name)) {
-    file.path("species/countries/name", space(name))
-  } else {
-    file.path("species/countries/id", id)
-  }
-  if (!is.null(region)) {
-    path <- file.path(path, "region", space(region))
-  }
-  path
+  rr_GET(nir("species/countries/name", "species/countries/id",
+             name, id, region), key, ...)
 }

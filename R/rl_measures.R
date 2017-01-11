@@ -24,24 +24,6 @@ rl_measures <- function(name = NULL, id = NULL, region = NULL,
 rl_measures_ <- function(name = NULL, id = NULL, region = NULL,
                          key = NULL, ...) {
   assert_is(key, 'character')
-  rr_GET(.measures(name, id, region), key, ...)
-}
-
-.measures <- function(name = NULL, id = NULL, region = NULL) {
-  stopifnot(xor(!is.null(name), !is.null(id)))
-  assert_is(name, 'character')
-  assert_is(id, c('integer', 'numeric'))
-  assert_is(region, 'character')
-  assert_n(name, 1)
-  assert_n(id, 1)
-  assert_n(region, 1)
-  path <- if (!is.null(name)) {
-    file.path("measures/species/name", space(name))
-  } else {
-    file.path("measures/species/id", id)
-  }
-  if (!is.null(region)) {
-    path <- file.path(path, "region", space(region))
-  }
-  path
+  rr_GET(nir("measures/species/name", "measures/species/id",
+             name, id, region), key, ...)
 }
