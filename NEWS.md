@@ -3,21 +3,26 @@ rredlist 0.3.0
 
 ### NEW FEATURES
 
-* xxx (#xx)
-* xxx (#xx)
-* xxx (#xx)
+* New functions `rl_occ_country` and `rl_occ_country_` for 
+getting country occurrences by species name or ID (#13)
+* Replaced `httr` with `crul`. Please note this only affects use 
+of curl options. See `crul` docs for how to use curl options (#14)
 
 ### MINOR IMPROVEMENTS
 
-* xxx (#xx)
-* xxx (#xx)
-* xxx (#xx)
-
-### BUG FIXES
-
-* xxx (#xx)
-* xxx (#xx)
-* xxx (#xx)
+* User agent string like `r-curl/2.3 crul/0.2.0 rOpenSci(rredlist/0.3.0)` 
+sent in all requests now to help IUCN API maintainers know 
+how often requests come from R and this package (#19)
+* Taxon names are now given back in `rl_threats` - we didn't do 
+anything in the package - the API now gives the names back and 
+adds them in a column (#10)
+* Type checking all parameter inputs now both in terms of class
+and length - with helpful error messages on fail (#17)
+* Simplify package codebase by having single internal function for a 
+suite of half a dozen or so functions that have similar pattern (#18)
+* Removed `key` parameter from `rl_version()` and `rl_citation()` as
+API key not required for those methods
+* More thorough test suite
 
 
 rredlist 0.2.0
