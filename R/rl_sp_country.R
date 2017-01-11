@@ -14,8 +14,7 @@
 #' rl_sp_country_('NZ')
 #'
 #' # curl options
-#' library("httr")
-#' res <- rl_sp_country('NZ', config=verbose())
+#' res <- rl_sp_country('NZ', verbose = TRUE)
 #' }
 rl_sp_country <- function(country, key = NULL, parse = TRUE, ...) {
   rl_parse(rl_sp_country_(country, key, ...), parse)

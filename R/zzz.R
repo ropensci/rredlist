@@ -1,17 +1,16 @@
 ct <- function(l) Filter(Negate(is.null), l)
 
 rr_GET <- function(path, key, ...){
-  cli <- HttpClient$new(url = file.path(rr_base(), path), opts = list(...))
+  cli <- crul::HttpClient$new(url = file.path(rr_base(), path), opts = list(...))
   temp <- cli$get(query = list(token = check_key(key)))
-  if (temp$status_code > 201) {
-    stop(sprintf("(%s) - %s", temp$status_code, temp$status_http()$message), call. = FALSE)
-  }
-  err_catcher(temp)
-  temp$parse()
+  temp$raise_for_status()
+  x <- temp$parse("UTF-8")
+  err_catcher(x)
+  return(x)
 }
 
 err_catcher <- function(x) {
-  xx <- jsonlite::fromJSON(x$parse())
+  xx <- jsonlite::fromJSON(x)
   if (any(vapply(c("message", "error"), function(z) z %in% names(xx), logical(1)))) {
     stop(xx[[1]], call. = FALSE)
   }

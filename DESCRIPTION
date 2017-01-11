@@ -11,7 +11,7 @@ License: MIT + file LICENSE
 URL: https://github.com/ropensci/rredlist
 BugReports: https://github.com/ropensci/rredlist/issues
 Imports:
-    crul (>= 0.1.0),
+    crul (>= 0.2.0),
     jsonlite (>= 1.1)
 Suggests:
     roxygen2 (>= 5.0.1),

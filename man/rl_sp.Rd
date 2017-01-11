@@ -17,7 +17,7 @@ rl_sp_(page, key = NULL, ...)
 \item{parse}{(logical) Whether to parse to list (\code{FALSE}) or
 data.frame (\code{TRUE}). Default: \code{TRUE}}
 
-\item{...}{Curl options passed to \code{\link[httr]{GET}}}
+\item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
 }
 \description{
 Get species

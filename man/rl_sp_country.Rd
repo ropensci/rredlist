@@ -17,7 +17,7 @@ rl_sp_country_(country, key = NULL, ...)
 \item{parse}{(logical) Whether to parse to list (\code{FALSE}) or
 data.frame (\code{TRUE}). Default: \code{TRUE}}
 
-\item{...}{Curl options passed to \code{\link[httr]{GET}}}
+\item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
 }
 \value{
 A list, with the data in the \code{result} slot, unless using
@@ -38,8 +38,7 @@ rl_sp_country('NZ', parse = FALSE)
 rl_sp_country_('NZ')
 
 # curl options
-library("httr")
-res <- rl_sp_country('NZ', config=verbose())
+res <- rl_sp_country('NZ', verbose = TRUE)
 }
 }
 \references{
