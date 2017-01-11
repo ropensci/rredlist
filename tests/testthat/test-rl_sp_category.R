@@ -52,3 +52,20 @@ test_that("no results", {
   expect_is(aa$result, "list")
   expect_equal(length(aa$result), 0)
 })
+
+test_that("fails well", {
+  skip_on_cran()
+
+  expect_error(rl_sp_category(5), "category must be of class character")
+  expect_error(rl_sp_category(list()), "category must be of class character")
+
+  expect_error(rl_sp_category(key = 5), "key must be of class character")
+  expect_error(rl_sp_category(key = matrix()), "key must be of class character")
+
+  expect_error(rl_sp_category(parse = 5), "parse must be of class logical")
+  expect_error(rl_sp_category(parse = matrix()), "parse must be of class logical")
+
+  # lengths
+  expect_error(rl_sp_category(letters[1:2]), "category must be length 1")
+})
+

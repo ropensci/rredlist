@@ -10,7 +10,7 @@ rl_sp(page, key = NULL, parse = TRUE, ...)
 rl_sp_(page, key = NULL, ...)
 }
 \arguments{
-\item{page}{(interger) Page to get. Default: 1}
+\item{page}{(integer/numeric) Page to get. Default: 1}
 
 \item{key}{A IUCN API token}
 

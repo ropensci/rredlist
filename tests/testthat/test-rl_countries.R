@@ -32,3 +32,14 @@ test_that("low level works", {
   expect_is(aa, "character")
   expect_is(jsonlite::fromJSON(aa), "list")
 })
+
+test_that("fails well", {
+  skip_on_cran()
+
+  expect_error(rl_countries(key = 5), "key must be of class character")
+  expect_error(rl_countries(key = matrix()), "key must be of class character")
+
+  expect_error(rl_countries(parse = 5), "parse must be of class logical")
+  expect_error(rl_countries(parse = matrix()), "parse must be of class logical")
+})
+

@@ -43,3 +43,20 @@ test_that("no results", {
   expect_is(aa$result, "list")
   expect_equal(length(aa$result), 0)
 })
+
+test_that("fails well", {
+  skip_on_cran()
+
+  expect_error(rl_common_names(5), "name must be of class character")
+  expect_error(rl_common_names(list()), "name must be of class character")
+
+  expect_error(rl_common_names(key = 5), "key must be of class character")
+  expect_error(rl_common_names(key = matrix()), "key must be of class character")
+
+  expect_error(rl_common_names(parse = 5), "parse must be of class logical")
+  expect_error(rl_common_names(parse = matrix()), "parse must be of class logical")
+
+  # lengths
+  expect_error(rl_common_names(letters[1:2]), "name must be length 1")
+})
+

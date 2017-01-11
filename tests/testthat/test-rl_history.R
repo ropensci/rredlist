@@ -68,3 +68,28 @@ test_that("fails well", {
 
   expect_error(rl_history(), "is not TRUE")
 })
+
+test_that("fails well", {
+  skip_on_cran()
+
+  expect_error(rl_history(5), "name must be of class character")
+  expect_error(rl_history(list()), "name must be of class character")
+
+  expect_error(rl_history(id = "adsfds"), "id must be of class integer, numeric")
+  expect_error(rl_history(id = list()), "id must be of class integer, numeric")
+
+  expect_error(rl_history("ab", region = 5), "region must be of class character")
+  expect_error(rl_history("ab", region = list()), "region must be of class character")
+
+  expect_error(rl_history(key = 5), "key must be of class character")
+  expect_error(rl_history(key = matrix()), "key must be of class character")
+
+  expect_error(rl_history(parse = 5), "parse must be of class logical")
+  expect_error(rl_history(parse = matrix()), "parse must be of class logical")
+
+  # lengths
+  expect_error(rl_history(letters[1:2]), "name must be length 1")
+  expect_error(rl_history(id = 1:2), "id must be length 1")
+  expect_error(rl_history(letters[1], region = letters[1:2]), "region must be length 1")
+})
+

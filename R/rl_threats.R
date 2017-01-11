@@ -13,18 +13,28 @@
 #'
 #' rl_threats(id = 62290750)
 #' }
-rl_threats <- function(name = NULL, id = NULL, region = NULL, key = NULL, parse = TRUE, ...) {
+rl_threats <- function(name = NULL, id = NULL, region = NULL, key = NULL,
+                       parse = TRUE, ...) {
+  assert_is(parse, 'logical')
   rl_parse(rl_threats_(name, id, region, key, ...), parse)
 }
 
 #' @export
 #' @rdname rl_threats
-rl_threats_ <- function(name = NULL, id = NULL, region = NULL, key = NULL, ...) {
+rl_threats_ <- function(name = NULL, id = NULL, region = NULL,
+                        key = NULL, ...) {
+  assert_is(key, 'character')
   rr_GET(.threats(name, id, region), key, ...)
 }
 
 .threats <- function(name = NULL, id = NULL, region = NULL) {
   stopifnot(xor(!is.null(name), !is.null(id)))
+  assert_is(name, 'character')
+  assert_is(id, c('integer', 'numeric'))
+  assert_is(region, 'character')
+  assert_n(name, 1)
+  assert_n(id, 1)
+  assert_n(region, 1)
   path <- if (!is.null(name)) {
     file.path("threats/species/name", space(name))
   } else {

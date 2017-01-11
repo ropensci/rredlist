@@ -22,17 +22,17 @@ test_that("fails well when an invalid region passed", {
   # results in an `error` slot, which we catch
 
   expect_error(rl_habitats(id = 22694927, region = 34234),
-               "Region not found.")
-  expect_error(rl_habitats_(id = 22694927, region = 34234),
+               "region must be of class character")
+  expect_error(rl_habitats_(id = 22694927, region = '34234'),
                "Region not found.")
 
-  expect_error(rl_search(id = 22694927, region = '3wer'),
-               "Region not found.")
+  expect_error(rl_search(id = 22694927, region = 2727343),
+               "region must be of class character")
   expect_error(rl_search_(id = 22694927, region = '3wer'),
                "Region not found.")
 
-  expect_error(rl_measures(id = 22694927, region = '3wer'),
-               "Region not found.")
+  expect_error(rl_measures(id = 22694927, region = 12345),
+               "region must be of class character")
   expect_error(rl_measures_(id = 22694927, region = '3wer'),
                "Region not found.")
 })

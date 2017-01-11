@@ -46,3 +46,28 @@ test_that("no results", {
   expect_is(aa$result, "list")
   expect_equal(length(aa$result), 0)
 })
+
+test_that("fails well", {
+  skip_on_cran()
+
+  expect_error(rl_habitats(5), "name must be of class character")
+  expect_error(rl_habitats(list()), "name must be of class character")
+
+  expect_error(rl_habitats(id = "adsfds"), "id must be of class integer, numeric")
+  expect_error(rl_habitats(id = list()), "id must be of class integer, numeric")
+
+  expect_error(rl_habitats("ab", region = 5), "region must be of class character")
+  expect_error(rl_habitats("ab", region = list()), "region must be of class character")
+
+  expect_error(rl_habitats(key = 5), "key must be of class character")
+  expect_error(rl_habitats(key = matrix()), "key must be of class character")
+
+  expect_error(rl_habitats(parse = 5), "parse must be of class logical")
+  expect_error(rl_habitats(parse = matrix()), "parse must be of class logical")
+
+  # lengths
+  expect_error(rl_habitats(letters[1:2]), "name must be length 1")
+  expect_error(rl_habitats(id = 1:2), "id must be length 1")
+  expect_error(rl_habitats(letters[1], region = letters[1:2]), "region must be length 1")
+})
+
