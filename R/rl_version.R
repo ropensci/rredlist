@@ -2,7 +2,7 @@
 #'
 #' @export
 #' @param key A IUCN API token
-#' @param ... Curl options passed to \code{\link[httr]{GET}}
+#' @param ... Curl options passed to \code{\link[crul]{HttpClient}}
 #' @return API version as character string
 #' @examples \dontrun{
 #' rl_version()

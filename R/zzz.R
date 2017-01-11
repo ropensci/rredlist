@@ -1,15 +1,16 @@
 ct <- function(l) Filter(Negate(is.null), l)
 
 rr_GET <- function(path, key, ...){
-  temp <- GET(file.path(rr_base(), path), query = ct(list(token = check_key(key))), ...)
-  stop_for_status(temp)
-  stopifnot(temp$headers$`content-type` == 'application/json; charset=utf-8')
-  err_catcher(temp)
-  content(temp, as = 'text', encoding = "UTF-8")
+  cli <- crul::HttpClient$new(url = file.path(rr_base(), path), opts = list(...))
+  temp <- cli$get(query = list(token = check_key(key)))
+  temp$raise_for_status()
+  x <- temp$parse("UTF-8")
+  err_catcher(x)
+  return(x)
 }
 
 err_catcher <- function(x) {
-  xx <- jsonlite::fromJSON(content(x, as = 'text', encoding = "UTF-8"))
+  xx <- jsonlite::fromJSON(x)
   if (any(vapply(c("message", "error"), function(z) z %in% names(xx), logical(1)))) {
     stop(xx[[1]], call. = FALSE)
   }

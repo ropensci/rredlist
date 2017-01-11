@@ -9,7 +9,7 @@ rl_version(key = NULL, ...)
 \arguments{
 \item{key}{A IUCN API token}
 
-\item{...}{Curl options passed to \code{\link[httr]{GET}}}
+\item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
 }
 \value{
 API version as character string

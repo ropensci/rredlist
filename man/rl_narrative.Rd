@@ -22,7 +22,7 @@ rl_narrative_(name = NULL, id = NULL, region = NULL, key = NULL, ...)
 \item{parse}{(logical) Whether to parse to list (\code{FALSE}) or
 data.frame (\code{TRUE}). Default: \code{TRUE}}
 
-\item{...}{Curl options passed to \code{\link[httr]{GET}}}
+\item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
 }
 \value{
 A list, with the data in the \code{result} slot, unless using
