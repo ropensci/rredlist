@@ -4,7 +4,7 @@ test_that("fails well on bad key", {
   skip_on_cran()
 
   expect_error(rl_common_names('Loxodonta africana', key = "adfds"),
-               "Token not valid")
+               "Token not valid!")
   expect_error(rl_common_names_('Loxodonta africana', key = "adfds"),
                "Token not valid")
 })

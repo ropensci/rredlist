@@ -1,10 +1,9 @@
 ## Test environments
 
-* local OS X install, R 3.3.1
-* ubuntu 12.04 (on travis-ci), R 3.3.1
+* local OS X install, R 3.3.2
+* ubuntu 12.04 (on travis-ci), R 3.3.2
 * win-builder (devel and release)
-* R-hub (Ubuntu devel and release, Windows devel and release,
-Debian Linux devel and release, Fedora Linux, R-devel)
+* R-hub (Ubuntu, Windows, Debian Linux, Fedora Linux)
 
 ## R CMD check results
 
@@ -13,7 +12,7 @@ Debian Linux devel and release, Fedora Linux, R-devel)
 License components with restrictions and base license permitting such:
    MIT + file LICENSE
  File 'LICENSE':
-   YEAR: 2016
+   YEAR: 2017
    COPYRIGHT HOLDER: Scott Chamberlain
 
 ## Reverse dependencies
@@ -23,7 +22,7 @@ it showed no problems.
 
 ---
 
-This version adds a few new functions, and fixes a few bugs. 
+This version xxxx
 
 Thanks! 
 Scott Chamberlain

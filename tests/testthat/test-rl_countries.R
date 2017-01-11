@@ -1,0 +1,34 @@
+context("rl_countries functions")
+
+test_that("high level works - parsing", {
+  skip_on_cran()
+
+  aa <- rl_countries()
+
+  expect_is(aa, "list")
+  expect_type(aa$count, "integer")
+  expect_is(aa$results, "data.frame")
+  expect_true(any(grepl("Egypt", aa$results$country, ignore.case = TRUE)))
+})
+
+test_that("high level works - not parsing", {
+  skip_on_cran()
+
+  aa <- rl_countries(parse = FALSE)
+
+  expect_is(aa, "list")
+  expect_type(aa$count, "integer")
+  expect_is(aa$results, "list")
+  expect_true(any(grepl("Egypt", vapply(aa$results, "[[", "", "country"), ignore.case = TRUE)))
+})
+
+test_that("low level works", {
+  skip_on_cran()
+
+  library("jsonlite")
+
+  aa <- rl_countries_()
+
+  expect_is(aa, "character")
+  expect_is(jsonlite::fromJSON(aa), "list")
+})

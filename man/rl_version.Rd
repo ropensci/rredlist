@@ -4,11 +4,9 @@
 \alias{rl_version}
 \title{Get the Red List API version}
 \usage{
-rl_version(key = NULL, ...)
+rl_version(...)
 }
 \arguments{
-\item{key}{A IUCN API token}
-
 \item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
 }
 \value{
