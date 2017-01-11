@@ -1,9 +1,20 @@
 ct <- function(l) Filter(Negate(is.null), l)
 
+rredlist_ua <- function() {
+  versions <- c(
+    paste0("r-curl/", utils::packageVersion("curl")),
+    paste0("crul/", utils::packageVersion("crul")),
+    sprintf("rOpenSci(rredlist/%s)", utils::packageVersion("rredlist"))
+  )
+  paste0(versions, collapse = " ")
+}
+
 rr_GET <- function(path, key, ...){
-  cli <- crul::HttpClient$new(url = file.path(rr_base(), path),
-                              opts = list(...))
-  temp <- cli$get(query = list(token = check_key(key)))
+  cli <- crul::HttpClient$new(
+    url = file.path(rr_base(), path),
+    opts = list(useragent = rredlist_ua())
+  )
+  temp <- cli$get(query = list(token = check_key(key)), ...)
   temp$raise_for_status()
   x <- temp$parse("UTF-8")
   err_catcher(x)
