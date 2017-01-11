@@ -2,8 +2,8 @@ rredlist
 ========
 
 ```{r echo=FALSE}
-```{r echo=FALSE}
 library("knitr")
+library("rredlist")
 hook_output <- knitr::knit_hooks$get("output")
 knitr::knit_hooks$set(output = function(x, options) {
    lines <- options$output.lines

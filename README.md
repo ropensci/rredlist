@@ -3,7 +3,6 @@ rredlist
 
 
 
-
 [![Build Status](https://travis-ci.org/ropensci/rredlist.svg?branch=master)](https://travis-ci.org/ropensci/rredlist)
 [![codecov.io](https://codecov.io/github/ropensci/rredlist/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rredlist?branch=master)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rredlist)](https://github.com/metacran/cranlogs.app)
@@ -47,7 +46,7 @@ use the function `rl_citation()`
 
 ```r
 rl_citation()
-#> Error in eval(expr, envir, enclos): could not find function "rl_citation"
+#> [1] "IUCN 2015. IUCN Red List of Threatened Species. Version 2016-3 <www.iucnredlist.org>"
 ```
 
 
@@ -87,13 +86,13 @@ rl_search('Fratercula arctica')
 #>    taxonid    scientific_name  kingdom   phylum class           order
 #> 1 22694927 Fratercula arctica ANIMALIA CHORDATA  AVES CHARADRIIFORMES
 #>    family      genus main_common_name        authority published_year
-#> 1 ALCIDAE Fratercula  Atlantic Puffin (Linnaeus, 1758)           2015
+#> 1 ALCIDAE Fratercula  Atlantic Puffin (Linnaeus, 1758)           2016
 #>   category criteria marine_system freshwater_system terrestrial_system
 #> 1       VU  A4abcde          TRUE             FALSE               TRUE
-#>                 assessor  reviewer aoo_km2 eoo_km2 errata_flag
-#> 1 BirdLife International Symes, A.      NA 1620000       FALSE
-#>   errata_reason
-#> 1            NA
+#>                 assessor                 reviewer aoo_km2  eoo_km2
+#> 1 BirdLife International Butchart, S. & Symes, A.      NA 20800000
+#>   errata_flag errata_reason
+#> 1       FALSE            NA
 ```
 
 Likely a bit faster is to parse to a list only, and not take the extra data.frame parsing time
@@ -122,7 +121,7 @@ only does the HTTP request, and gives back JSON without doing any more parsing
 
 ```r
 rl_search_('Fratercula arctica')
-#> [1] "{\"name\":\"Fratercula arctica\",\"result\":[{\"taxonid\":22694927,\"scientific_name\":\"Fratercula arctica\",\"kingdom\":\"ANIMALIA\",\"phylum\":\"CHORDATA\",\"class\":\"AVES\",\"order\":\"CHARADRIIFORMES\",\"family\":\"ALCIDAE\",\"genus\":\"Fratercula\",\"main_common_name\":\"Atlantic Puffin\",\"authority\":\"(Linnaeus, 1758)\",\"published_year\":2015,\"category\":\"VU\",\"criteria\":\"A4abcde\",\"marine_system\":true,\"freshwater_system\":false,\"terrestrial_system\":true,\"assessor\":\"BirdLife International\",\"reviewer\":\"Symes, A.\",\"aoo_km2\":null,\"eoo_km2\":\"1620000\",\"errata_flag\":false,\"errata_reason\":null}]}"
+#> [1] "{\"name\":\"Fratercula arctica\",\"result\":[{\"taxonid\":22694927,\"scientific_name\":\"Fratercula arctica\",\"kingdom\":\"ANIMALIA\",\"phylum\":\"CHORDATA\",\"class\":\"AVES\",\"order\":\"CHARADRIIFORMES\",\"family\":\"ALCIDAE\",\"genus\":\"Fratercula\",\"main_common_name\":\"Atlantic Puffin\",\"authority\":\"(Linnaeus, 1758)\",\"published_year\":2016,\"category\":\"VU\",\"criteria\":\"A4abcde\",\"marine_system\":true,\"freshwater_system\":false,\"terrestrial_system\":true,\"assessor\":\"BirdLife International\",\"reviewer\":\"Butchart, S. & Symes, A.\",\"aoo_km2\":null,\"eoo_km2\":\"20800000\",\"errata_flag\":false,\"errata_reason\":null}]}"
 ```
 
 To consume this JSON, you can use `jsonlite`
@@ -138,13 +137,13 @@ jsonlite::fromJSON(rl_search_('Fratercula arctica'))
 #>    taxonid    scientific_name  kingdom   phylum class           order
 #> 1 22694927 Fratercula arctica ANIMALIA CHORDATA  AVES CHARADRIIFORMES
 #>    family      genus main_common_name        authority published_year
-#> 1 ALCIDAE Fratercula  Atlantic Puffin (Linnaeus, 1758)           2015
+#> 1 ALCIDAE Fratercula  Atlantic Puffin (Linnaeus, 1758)           2016
 #>   category criteria marine_system freshwater_system terrestrial_system
 #> 1       VU  A4abcde          TRUE             FALSE               TRUE
-#>                 assessor  reviewer aoo_km2 eoo_km2 errata_flag
-#> 1 BirdLife International Symes, A.      NA 1620000       FALSE
-#>   errata_reason
-#> 1            NA
+#>                 assessor                 reviewer aoo_km2  eoo_km2
+#> 1 BirdLife International Butchart, S. & Symes, A.      NA 20800000
+#>   errata_flag errata_reason
+#> 1       FALSE            NA
 ```
 
 Or other tools, e.g., `jq` via the `jqr` R client
@@ -168,7 +167,7 @@ rl_search_('Fratercula arctica') %>% dot()
 #>             "genus": "Fratercula",
 #>             "main_common_name": "Atlantic Puffin",
 #>             "authority": "(Linnaeus, 1758)",
-#>             "published_year": 2015,
+#>             "published_year": 2016,
 #>             "category": "VU",
 #>             "criteria": "A4abcde",
 #>             "marine_system": true,
