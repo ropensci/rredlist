@@ -10,6 +10,8 @@
 #' rl_threats(id = 12392)
 #' rl_threats(id = 22694927, region = 'europe')
 #' rl_threats_('Fratercula arctica')
+#'
+#' rl_threats(id = 62290750)
 #' }
 rl_threats <- function(name = NULL, id = NULL, region = NULL, key = NULL, parse = TRUE, ...) {
   rl_parse(rl_threats_(name, id, region, key, ...), parse)
