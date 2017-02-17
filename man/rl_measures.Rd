@@ -46,4 +46,3 @@ rl_measures_(id = 22694927, region = 'europe')
 \references{
 API docs at \url{http://apiv3.iucnredlist.org/api/v3/docs}
 }
-

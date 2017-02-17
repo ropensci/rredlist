@@ -20,4 +20,3 @@ Get the Red List API version
 rl_version()
 }
 }
-

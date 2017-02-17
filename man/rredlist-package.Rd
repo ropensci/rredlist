@@ -2,8 +2,8 @@
 % Please edit documentation in R/rredlist-package.R
 \docType{package}
 \name{rredlist-package}
-\alias{rredlist}
 \alias{rredlist-package}
+\alias{rredlist}
 \title{rredlist - IUCN Red List Client}
 \description{
 rredlist - IUCN Red List Client
@@ -54,8 +54,8 @@ Red List Unit asked that you contact them, as there might be better options.
 They suggest a 2-second delay between your calls if you plan to make a
 lot of calls.
 }
+
 \author{
 Scott Chamberlain \email{myrmecocystus@gmail.com}
 }
 \keyword{package}
-

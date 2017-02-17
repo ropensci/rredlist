@@ -20,4 +20,3 @@ Get the citation Red List API version
 rl_citation()
 }
 }
-

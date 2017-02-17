@@ -36,4 +36,3 @@ rl_common_names_('Loxodonta africana')
 \references{
 API docs at \url{http://apiv3.iucnredlist.org/api/v3/docs}
 }
-

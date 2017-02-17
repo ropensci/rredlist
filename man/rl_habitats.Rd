@@ -49,4 +49,3 @@ rl_habitats_(id = 12392)
 \references{
 API docs at \url{http://apiv3.iucnredlist.org/api/v3/docs}
 }
-
