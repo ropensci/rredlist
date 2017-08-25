@@ -18,10 +18,12 @@ License components with restrictions and base license permitting such:
 
 * I have run R CMD check on the 1 downstream dependeny, and 
 it showed no problems.
+<https://github.com/ropensci/rredlist/blob/master/revdep/README.md>
 
 ---
 
-This version xxx.
+This version adds two new functions and makes many improvements to 
+documentation.
 
 Thanks! 
 Scott Chamberlain
