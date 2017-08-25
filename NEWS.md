@@ -1,3 +1,20 @@
+rredlist 0.4.0
+==============
+
+### NEW FEATURES
+
+* Gains new functions `rl_growth_forms()` and `rl_growth_forms_()`. added 
+tests for them as well (#20) thanks @stevenpbachman
+
+### MINOR IMPROVEMENTS
+
+* Now using markdown documentation (#22)
+* Fixed many man files which for `region` parameter described 
+requiring a taxonomic name - fixed to describe accurately. Also 
+improved docs in general (#21)
+
+
+
 rredlist 0.3.0
 ==============
 
