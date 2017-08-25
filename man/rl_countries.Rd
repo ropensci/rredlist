@@ -10,7 +10,8 @@ rl_countries(key = NULL, parse = TRUE, ...)
 rl_countries_(key = NULL, ...)
 }
 \arguments{
-\item{key}{A IUCN API token}
+\item{key}{A IUCN API token. See
+\url{http://apiv3.iucnredlist.org/api/v3/token} to get a token}
 
 \item{parse}{(logical) Whether to parse to list (\code{FALSE}) or
 data.frame (\code{TRUE}). Default: \code{TRUE}}

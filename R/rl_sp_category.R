@@ -1,10 +1,12 @@
 #' Get species by category
 #'
 #' @export
-#' @param category (character) 2 letter category code
+#' @param category (character) A two-letter category code. One of
+#' "DD", "LC", "NT", "VU", "EN", "CR", "EW", "EX", "LRlc", "LRnt", "LRcd"
 #' @template all
 #' @examples \dontrun{
 #' rl_sp_category('VU')
+#' rl_sp_category('LRlc')
 #' rl_sp_category('EN')
 #' rl_sp_category('EX')
 #' rl_sp_category('EX', parse = FALSE)

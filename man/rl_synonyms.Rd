@@ -12,7 +12,8 @@ rl_synonyms_(name = NULL, key = NULL, ...)
 \arguments{
 \item{name}{(character) Binomial taxonomic name}
 
-\item{key}{A IUCN API token}
+\item{key}{A IUCN API token. See
+\url{http://apiv3.iucnredlist.org/api/v3/token} to get a token}
 
 \item{parse}{(logical) Whether to parse to list (\code{FALSE}) or
 data.frame (\code{TRUE}). Default: \code{TRUE}}

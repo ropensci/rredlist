@@ -1,7 +1,7 @@
 #' Get the Red List API version
 #'
 #' @export
-#' @param ... Curl options passed to \code{\link[crul]{HttpClient}}
+#' @param ... Curl options passed to [crul::HttpClient()]
 #' @return API version as character string
 #' @examples \dontrun{
 #' rl_version()

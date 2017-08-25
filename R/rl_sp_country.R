@@ -1,7 +1,8 @@
 #' Get species by country
 #'
 #' @export
-#' @param country (character) Country 2 letter character code
+#' @param country (character) A two-letter country code. See `isocode` column
+#' in result of [rl_countries()] request for country codes.
 #' @template all
 #' @template info
 #' @examples \dontrun{

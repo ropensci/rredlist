@@ -18,10 +18,12 @@ rl_search_(name = NULL, id = NULL, region = NULL, key = NULL, ...)
 
 \item{id}{(character) An IUCN identifier}
 
-\item{region}{(character) A region name, see [rl_regions()] for
-acceptable region identifiers (use the entries in the `identifier` column)}
+\item{region}{(character) A region name, see \code{\link{rl_regions}} for
+acceptable region identifiers (use the entries in the \code{identifier}
+column)}
 
-\item{key}{A IUCN API token}
+\item{key}{A IUCN API token. See
+\url{http://apiv3.iucnredlist.org/api/v3/token} to get a token}
 
 \item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
 

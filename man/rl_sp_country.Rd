@@ -10,9 +10,11 @@ rl_sp_country(country, key = NULL, parse = TRUE, ...)
 rl_sp_country_(country, key = NULL, ...)
 }
 \arguments{
-\item{country}{(character) Country 2 letter character code}
+\item{country}{(character) A two-letter country code. See \code{isocode} column
+in result of \code{\link[=rl_countries]{rl_countries()}} request for country codes.}
 
-\item{key}{A IUCN API token}
+\item{key}{A IUCN API token. See
+\url{http://apiv3.iucnredlist.org/api/v3/token} to get a token}
 
 \item{parse}{(logical) Whether to parse to list (\code{FALSE}) or
 data.frame (\code{TRUE}). Default: \code{TRUE}}

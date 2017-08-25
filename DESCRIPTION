@@ -10,9 +10,9 @@ Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
 License: MIT + file LICENSE
 URL: https://github.com/ropensci/rredlist
 BugReports: https://github.com/ropensci/rredlist/issues
-
+Roxygen: list(markdown = TRUE)
 Imports:
-    crul (>= 0.2.0),
+    crul (>= 0.3.8),
     jsonlite (>= 1.1)
 Suggests:
     roxygen2 (>= 6.0.1),

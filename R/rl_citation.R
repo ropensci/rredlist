@@ -1,7 +1,7 @@
 #' Get the citation Red List API version
 #'
 #' @export
-#' @param ... Curl options passed to \code{\link[crul]{HttpClient}}
+#' @param ... Curl options passed to [crul::HttpClient()]
 #' @return API citation as character string
 #' @examples \dontrun{
 #' rl_citation()

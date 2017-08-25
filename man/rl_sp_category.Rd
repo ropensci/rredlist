@@ -10,9 +10,11 @@ rl_sp_category(category, key = NULL, parse = TRUE, ...)
 rl_sp_category_(category, key = NULL, parse = TRUE, ...)
 }
 \arguments{
-\item{category}{(character) 2 letter category code}
+\item{category}{(character) A two-letter category code. One of
+"DD", "LC", "NT", "VU", "EN", "CR", "EW", "EX", "LRlc", "LRnt", "LRcd"}
 
-\item{key}{A IUCN API token}
+\item{key}{A IUCN API token. See
+\url{http://apiv3.iucnredlist.org/api/v3/token} to get a token}
 
 \item{parse}{(logical) Whether to parse to list (\code{FALSE}) or
 data.frame (\code{TRUE}). Default: \code{TRUE}}
@@ -25,6 +27,7 @@ Get species by category
 \examples{
 \dontrun{
 rl_sp_category('VU')
+rl_sp_category('LRlc')
 rl_sp_category('EN')
 rl_sp_category('EX')
 rl_sp_category('EX', parse = FALSE)

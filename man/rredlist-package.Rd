@@ -20,7 +20,7 @@ that work closely with the IUCN Red List."
 
 IUCN requires you to get your own API key, an alphanumeric string that you
 need to send in every request. Get it at
-\url{http://apiv3.iucnredlist.org/api/v3/token}.
+\url{http://apiv3.iucnredlist.org/api/v3/token}
 Keep this key private. You can pass the key in to each function via the
 \code{key} parameter, but it's better to store the key either as a
 environment variable (\code{IUCN_REDLIST_KEY}) or an R option
@@ -32,13 +32,13 @@ environment variable (\code{IUCN_REDLIST_KEY}) or an R option
 \strong{High level API}
 High level functions do the HTTP request and parse data to a data.frame for
 ease of downstream use. The high level functions have no underscore on
-the end of the function name, e.g., \code{\link{rl_search}}
+the end of the function name, e.g., \code{\link[=rl_search]{rl_search()}}
 
 \strong{Low level API}
 The parsing to data.frame in the high level API does take extra time.
 The low level API only does the HTTP request, and gives back JSON without
 doing any more parsing. The low level functions DO have an underscore on
-the end of the function name, e.g., \code{\link{rl_search_}}
+the end of the function name, e.g., \code{\link[=rl_search_]{rl_search_()}}
 }
 
 \section{No Spatial}{
@@ -50,8 +50,8 @@ This package does not include support for the spatial API, described at
 \section{Citing the Red List API}{
 
 The citation is
-\code{IUCN 2015. IUCN Red List of Threatened Species. Version 2015-4 <www.iucnredlist.org>}.
-You can get this programatically via \code{\link{rl_citation}}
+\code{IUCN 2015. IUCN Red List of Threatened Species. Version 2015-4 <www.iucnredlist.org>}
+You can get this programatically via \code{\link[=rl_citation]{rl_citation()}}
 }
 
 \section{Rate limiting}{

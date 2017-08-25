@@ -12,7 +12,8 @@ rl_sp_(page, key = NULL, ...)
 \arguments{
 \item{page}{(integer/numeric) Page to get. Default: 1}
 
-\item{key}{A IUCN API token}
+\item{key}{A IUCN API token. See
+\url{http://apiv3.iucnredlist.org/api/v3/token} to get a token}
 
 \item{parse}{(logical) Whether to parse to list (\code{FALSE}) or
 data.frame (\code{TRUE}). Default: \code{TRUE}}
