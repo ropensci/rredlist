@@ -1,5 +1,11 @@
 #' rredlist - IUCN Red List Client
 #'
+#' @section Taxonomic Names vs. IUCN IDs:
+#' From the documentation (quoting): "It is advisable wherever possible to use
+#' the taxon name (species name) to make your API calls, rather than using IDs.
+#' IDs are not immovable are expected to be used mainly by organisations
+#' that work closely with the IUCN Red List."
+#'
 #' @section Authentication:
 #' IUCN requires you to get your own API key, an alphanumeric string that you
 #' need to send in every request. Get it at

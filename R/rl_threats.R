@@ -9,6 +9,7 @@
 #' rl_threats('Fratercula arctica', region = 'europe')
 #' rl_threats(id = 12392)
 #' rl_threats(id = 22694927, region = 'europe')
+#' rl_threats(name = 'Abies numidica')
 #' rl_threats_('Fratercula arctica')
 #'
 #' rl_threats(id = 62290750)

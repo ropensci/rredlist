@@ -11,11 +11,12 @@ rl_threats(name = NULL, id = NULL, region = NULL, key = NULL,
 rl_threats_(name = NULL, id = NULL, region = NULL, key = NULL, ...)
 }
 \arguments{
-\item{name}{(character) Binomial taxonomic name}
+\item{name}{(character) A taxonomic name}
 
-\item{id}{(character) IUCN id}
+\item{id}{(character) An IUCN identifier}
 
-\item{region}{(character) Binomial taxonomic name}
+\item{region}{(character) A region name, see [rl_regions()] for
+acceptable region identifiers (use the entries in the `identifier` column)}
 
 \item{key}{A IUCN API token}
 
@@ -38,6 +39,7 @@ rl_threats('Fratercula arctica')
 rl_threats('Fratercula arctica', region = 'europe')
 rl_threats(id = 12392)
 rl_threats(id = 22694927, region = 'europe')
+rl_threats(name = 'Abies numidica')
 rl_threats_('Fratercula arctica')
 
 rl_threats(id = 62290750)
