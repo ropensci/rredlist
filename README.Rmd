@@ -43,6 +43,10 @@ knitr::opts_chunk$set(
 
 [IUCN Red List docs][docs]
 
+## Citing the IUCN Red List API
+
+See <http://apiv3.iucnredlist.org/about>
+
 ## Authentication
 
 IUCN requires you to get your own API key, an alphanumeric string that you
@@ -70,7 +74,15 @@ of the function name, e.g., `rl_search_`
 ## No Spatial
 
 This package does not include support for the spatial API, described at
-[http://apiv3.iucnredlist.org/spatial][spatial].
+<http://apiv3.iucnredlist.org/spatial>.
+
+## Rate Limiting
+
+From the IUCN folks: "Too many frequent calls, or too many calls per day
+might get your access blocked temporarily. If you're a heavy API user, the
+Red List Unit asked that you contact them, as there might be better options.
+They suggest a 2-second delay between your calls if you plan to make a
+lot of calls."
 
 ## Citing IUCN API
 
@@ -147,4 +159,3 @@ rl_search_('Fratercula arctica') %>% dot()
 
 [docs]: http://apiv3.iucnredlist.org/api/v3/docs
 [token]: http://apiv3.iucnredlist.org/api/v3/token
-[spatial]: http://apiv3.iucnredlist.org/spatial

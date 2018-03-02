@@ -63,6 +63,11 @@ They suggest a 2-second delay between your calls if you plan to make a
 lot of calls.
 }
 
+\section{Citing the IUCN Red List API}{
+
+See \url{http://apiv3.iucnredlist.org/about}
+}
+
 \author{
 Scott Chamberlain \email{myrmecocystus@gmail.com}
 }

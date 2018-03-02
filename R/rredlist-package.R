@@ -44,6 +44,9 @@
 #' They suggest a 2-second delay between your calls if you plan to make a
 #' lot of calls.
 #'
+#' @section Citing the IUCN Red List API:
+#' See <http://apiv3.iucnredlist.org/about>
+#'
 #' @importFrom jsonlite fromJSON
 #' @name rredlist-package
 #' @aliases rredlist
