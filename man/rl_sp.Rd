@@ -5,18 +5,31 @@
 \alias{rl_sp_}
 \title{Get species}
 \usage{
-rl_sp(page, key = NULL, parse = TRUE, ...)
+rl_sp(page = 1, key = NULL, parse = TRUE, all = FALSE, quiet = FALSE,
+  ...)
 
-rl_sp_(page, key = NULL, ...)
+rl_sp_(page, key = NULL, all = FALSE, quiet = FALSE, ...)
 }
 \arguments{
-\item{page}{(integer/numeric) Page to get. Default: 1}
+\item{page}{(integer/numeric) Page to get. Default: 1. you can
+get up to 10,000 records per page. Paging is required because
+it's too much burden on a server to just "get all the data"
+in one request}
 
 \item{key}{A IUCN API token. See
 \url{http://apiv3.iucnredlist.org/api/v3/token} to get a token}
 
 \item{parse}{(logical) Whether to parse to list (\code{FALSE}) or
 data.frame (\code{TRUE}). Default: \code{TRUE}}
+
+\item{all}{(logical) to get all results or not. Default: \code{FALSE}.
+this means we do the paging internally for you. result is a list
+of results, so you have to bind them together yourself into
+a data.frame, see example}
+
+\item{quiet}{(logical) give progress for download or not.
+Default: \code{FALSE} (that is, give progress). ignored if
+\code{all = FALSE}}
 
 \item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
 }
@@ -26,5 +39,13 @@ Get species
 \examples{
 \dontrun{
 rl_sp(page = 3)
+
+# get all results
+out <- rl_sp(all = TRUE)
+length(out)
+vapply(out, "[[", 1, "count")
+all_df <- do.call(rbind, lapply(out, "[[", "result"))
+head(all_df)
+NROW(all_df)
 }
 }
