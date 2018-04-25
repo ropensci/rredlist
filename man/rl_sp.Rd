@@ -5,13 +5,13 @@
 \alias{rl_sp_}
 \title{Get species}
 \usage{
-rl_sp(page = 1, key = NULL, parse = TRUE, all = FALSE, quiet = FALSE,
+rl_sp(page = 0, key = NULL, parse = TRUE, all = FALSE, quiet = FALSE,
   ...)
 
 rl_sp_(page, key = NULL, all = FALSE, quiet = FALSE, ...)
 }
 \arguments{
-\item{page}{(integer/numeric) Page to get. Default: 1. you can
+\item{page}{(integer/numeric) Page to get. Default: 0. you can
 get up to 10,000 records per page. Paging is required because
 it's too much burden on a server to just "get all the data"
 in one request}

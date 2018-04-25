@@ -1,7 +1,7 @@
 #' Get species
 #'
 #' @export
-#' @param page (integer/numeric) Page to get. Default: 1. you can 
+#' @param page (integer/numeric) Page to get. Default: 0. you can 
 #' get up to 10,000 records per page. Paging is required because
 #' it's too much burden on a server to just "get all the data"
 #' in one request
@@ -24,7 +24,7 @@
 #' head(all_df)
 #' NROW(all_df)
 #' }
-rl_sp <- function(page = 1, key = NULL, parse = TRUE, all = FALSE, 
+rl_sp <- function(page = 0, key = NULL, parse = TRUE, all = FALSE, 
   quiet = FALSE, ...) {
 
   assert_is(parse, 'logical')
@@ -45,7 +45,7 @@ rl_sp_ <- function(page, key = NULL, all = FALSE, quiet = FALSE, ...) {
     out <- list()
     done <- FALSE
     i <- 0
-    page <- 1
+    page <- 0
     while (!done) {
       if (!quiet) cat(".")
       i <- i + 1
