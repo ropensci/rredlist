@@ -1,7 +1,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://apiv3.iucnredlist.org/api/v3/version?token=<<rredlist_api_token>>
+    uri: http://apiv3.iucnredlist.org/api/v3/species/history/name/Loxodonta%20africana?token=<<rredlist_api_token>>
     body:
       encoding: ''
       string: ''
@@ -17,14 +17,14 @@ http_interactions:
     headers:
       status: HTTP/1.1 200 OK
       server: nginx/1.1.19
-      date: Mon, 30 Apr 2018 23:38:53 GMT
+      date: Tue, 01 May 2018 00:33:27 GMT
       content-type: application/json; charset=utf-8
-      content-length: '20'
+      content-length: '400'
       connection: keep-alive
       x-powered-by: Sails <sailsjs.org>
       vary: Accept-Encoding
     body:
       encoding: UTF-8
-      string: '{"version":"2017-3"}'
-  recorded_at: 2018-04-30 23:38:53 GMT
+      string: '{"name":"Loxodonta africana","result":[{"year":"2008","code":"VU","category":"Vulnerable"},{"year":"2004","code":"VU","category":"Vulnerable"},{"year":"1996","code":"EN","category":"Endangered"},{"year":"1994","code":"V","category":"Vulnerable"},{"year":"1990","code":"V","category":"Vulnerable"},{"year":"1988","code":"V","category":"Vulnerable"},{"year":"1986","code":"V","category":"Vulnerable"}]}'
+  recorded_at: 2018-05-01 00:33:27 GMT
   recorded_with: vcr/0.0.8.9534, webmockr/0.2.2.9119, crul/0.5.2

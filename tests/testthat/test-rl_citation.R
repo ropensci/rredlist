@@ -3,7 +3,9 @@ context("rl_citation functions")
 test_that("rl_citation works", {
   skip_on_cran()
 
-  aa <- rl_citation()
+  vcr::use_cassette("rl_citation", {
+    aa <- rl_citation()
+  })
 
   expect_is(aa, "character")
   expect_match(aa, "IUCN")

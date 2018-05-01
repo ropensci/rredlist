@@ -1,7 +1,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://apiv3.iucnredlist.org/api/v3/version?token=<<rredlist_api_token>>
+    uri: http://apiv3.iucnredlist.org/api/v3/species/synonym/Loxodonta%20africana?token=<<rredlist_api_token>>
     body:
       encoding: ''
       string: ''
@@ -17,14 +17,17 @@ http_interactions:
     headers:
       status: HTTP/1.1 200 OK
       server: nginx/1.1.19
-      date: Mon, 30 Apr 2018 23:38:53 GMT
+      date: Tue, 01 May 2018 01:53:04 GMT
       content-type: application/json; charset=utf-8
-      content-length: '20'
+      content-length: '362'
       connection: keep-alive
       x-powered-by: Sails <sailsjs.org>
       vary: Accept-Encoding
     body:
       encoding: UTF-8
-      string: '{"version":"2017-3"}'
-  recorded_at: 2018-04-30 23:38:53 GMT
+      string: '{"name":"loxodonta africana","count":2,"result":[{"accepted_id":12392,"accepted_name":"Loxodonta
+        africana","authority":"(Blumenbach, 1797)","synonym":"Loxodonta cyclotis","syn_authority":"Matschie,
+        1900"},{"accepted_id":12392,"accepted_name":"Loxodonta africana","authority":"(Blumenbach,
+        1797)","synonym":"Elephas africana","syn_authority":"Blumenbach, 1797"}]}'
+  recorded_at: 2018-05-01 01:53:04 GMT
   recorded_with: vcr/0.0.8.9534, webmockr/0.2.2.9119, crul/0.5.2
