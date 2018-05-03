@@ -42,9 +42,7 @@ test_that("high level works - by ID", {
 test_that("high level works - region", {
   skip_on_cran()
 
-  # FIXME: go back to combining these aa and bb tests when vcr fixed for 
-  #  multiple requests for the same cassette
-  vcr::use_cassette("rl_history-region-a", {
+  vcr::use_cassette("rl_history-region-together", {
     aa <- rl_history(id = 22823, region = 'europe')
 
     expect_is(aa, "list")
@@ -52,9 +50,7 @@ test_that("high level works - region", {
     expect_is(aa$name, "character")
     expect_is(aa$result, "data.frame")
     expect_gt(NROW(aa$result), 0)
-  })
 
-  vcr::use_cassette("rl_history-region-b", {
     bb <- rl_history(id = 22823, region = 'mediterranean')
 
     expect_is(bb, "list")
