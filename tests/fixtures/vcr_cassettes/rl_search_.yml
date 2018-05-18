@@ -17,7 +17,7 @@ http_interactions:
     headers:
       status: HTTP/1.1 200 OK
       server: nginx/1.1.19
-      date: Tue, 01 May 2018 01:50:13 GMT
+      date: Thu, 17 May 2018 18:36:23 GMT
       content-type: application/json; charset=utf-8
       content-length: '683'
       connection: keep-alive
@@ -29,5 +29,5 @@ http_interactions:
         arctica","kingdom":"ANIMALIA","phylum":"CHORDATA","class":"AVES","order":"CHARADRIIFORMES","family":"ALCIDAE","genus":"Fratercula","main_common_name":"Atlantic
         Puffin","authority":"(Linnaeus, 1758)","published_year":2017,"category":"VU","criteria":"A4abcde","marine_system":true,"freshwater_system":false,"terrestrial_system":true,"assessor":"BirdLife
         International","reviewer":"Symes, A.","aoo_km2":null,"eoo_km2":"20800000","elevation_upper":null,"elevation_lower":null,"depth_upper":null,"depth_lower":null,"errata_flag":null,"errata_reason":null,"amended_flag":null,"amended_reason":null}]}'
-  recorded_at: 2018-05-01 01:50:14 GMT
-  recorded_with: vcr/0.0.8.9534, webmockr/0.2.2.9119, crul/0.5.2
+  recorded_at: 2018-05-17 18:36:23 GMT
+  recorded_with: vcr/0.1.0, webmockr/0.2.6, crul/0.5.2

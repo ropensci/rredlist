@@ -17,7 +17,7 @@ http_interactions:
     headers:
       status: HTTP/1.1 200 OK
       server: nginx/1.1.19
-      date: Tue, 01 May 2018 01:46:18 GMT
+      date: Thu, 17 May 2018 18:36:12 GMT
       content-type: application/json; charset=utf-8
       content-length: '40'
       connection: keep-alive
@@ -26,5 +26,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"name":"Loxodonta asdfadf","result":[]}'
-  recorded_at: 2018-05-01 01:46:18 GMT
-  recorded_with: vcr/0.0.8.9534, webmockr/0.2.2.9119, crul/0.5.2
+  recorded_at: 2018-05-17 18:36:13 GMT
+  recorded_with: vcr/0.1.0, webmockr/0.2.6, crul/0.5.2

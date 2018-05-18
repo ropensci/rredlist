@@ -17,7 +17,7 @@ http_interactions:
     headers:
       status: HTTP/1.1 200 OK
       server: nginx/1.1.19
-      date: Tue, 01 May 2018 00:33:19 GMT
+      date: Thu, 17 May 2018 18:36:03 GMT
       content-type: application/json; charset=utf-8
       content-length: '400'
       connection: keep-alive
@@ -26,5 +26,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"name":"Loxodonta africana","result":[{"year":"2008","code":"VU","category":"Vulnerable"},{"year":"2004","code":"VU","category":"Vulnerable"},{"year":"1996","code":"EN","category":"Endangered"},{"year":"1994","code":"V","category":"Vulnerable"},{"year":"1990","code":"V","category":"Vulnerable"},{"year":"1988","code":"V","category":"Vulnerable"},{"year":"1986","code":"V","category":"Vulnerable"}]}'
-  recorded_at: 2018-05-01 00:33:20 GMT
-  recorded_with: vcr/0.0.8.9534, webmockr/0.2.2.9119, crul/0.5.2
+  recorded_at: 2018-05-17 18:36:03 GMT
+  recorded_with: vcr/0.1.0, webmockr/0.2.6, crul/0.5.2

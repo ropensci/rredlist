@@ -17,7 +17,7 @@ http_interactions:
     headers:
       status: HTTP/1.1 200 OK
       server: nginx/1.1.19
-      date: Tue, 01 May 2018 01:47:45 GMT
+      date: Thu, 17 May 2018 18:36:14 GMT
       content-type: application/json; charset=utf-8
       transfer-encoding: chunked
       connection: keep-alive
@@ -152,5 +152,5 @@ http_interactions:
         (e.g. tourism). Ensure that appropriate protection (national laws and international
         agreements) applies to new areas and times in cases of changes in seabird
         migration routes and times.","usetrade":null}]}'
-  recorded_at: 2018-05-01 01:47:46 GMT
-  recorded_with: vcr/0.0.8.9534, webmockr/0.2.2.9119, crul/0.5.2
+  recorded_at: 2018-05-17 18:36:15 GMT
+  recorded_with: vcr/0.1.0, webmockr/0.2.6, crul/0.5.2

@@ -17,7 +17,7 @@ http_interactions:
     headers:
       status: HTTP/1.1 200 OK
       server: nginx/1.1.19
-      date: Mon, 30 Apr 2018 23:41:42 GMT
+      date: Thu, 17 May 2018 18:35:38 GMT
       content-type: application/json; charset=utf-8
       content-length: '311'
       connection: keep-alive
@@ -28,5 +28,5 @@ http_interactions:
       string: '{"name":"Loxodonta africana","result":[{"taxonname":"African Elephant","primary":true,"language":"eng"},{"taxonname":"Éléphant
         Africain","primary":false,"language":"fre"},{"taxonname":"Éléphant d''Afrique","primary":false,"language":"fre"},{"taxonname":"Elefante
         Africano","primary":false,"language":"spa"}]}'
-  recorded_at: 2018-04-30 23:41:42 GMT
-  recorded_with: vcr/0.0.8.9534, webmockr/0.2.2.9119, crul/0.5.2
+  recorded_at: 2018-05-17 18:35:38 GMT
+  recorded_with: vcr/0.1.0, webmockr/0.2.6, crul/0.5.2
