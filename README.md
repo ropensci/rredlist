@@ -8,7 +8,16 @@ rredlist
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rredlist)](https://github.com/metacran/cranlogs.app)
 [![cran version](http://www.r-pkg.org/badges/version/rredlist)](https://cran.r-project.org/package=rredlist)
 
+`rredlist` is an R client for the IUCN Red List (<http://apiv3.iucnredlist.org/api/v3/docs>). 
+The IUCN Red List is a global list of threatened and endangered species.
+
 [IUCN Red List docs][docs]
+
+> important note: [redlistr][] is a different package - not working with the IUCN Red List API
+
+## Citing the IUCN Red List API
+
+See <http://apiv3.iucnredlist.org/about>
 
 ## Authentication
 
@@ -37,7 +46,15 @@ of the function name, e.g., `rl_search_`
 ## No Spatial
 
 This package does not include support for the spatial API, described at
-[http://apiv3.iucnredlist.org/spatial][spatial].
+<http://apiv3.iucnredlist.org/spatial>.
+
+## Rate Limiting
+
+From the IUCN folks: "Too many frequent calls, or too many calls per day
+might get your access blocked temporarily. If you're a heavy API user, the
+Red List Unit asked that you contact them, as there might be better options.
+They suggest a 2-second delay between your calls if you plan to make a
+lot of calls."
 
 ## Citing IUCN API
 
@@ -46,7 +63,7 @@ use the function `rl_citation()`
 
 ```r
 rl_citation()
-#> [1] "IUCN 2015. IUCN Red List of Threatened Species. Version 2017-1 <www.iucnredlist.org>"
+#> [1] "IUCN 2015. IUCN Red List of Threatened Species. Version 2017-3 <www.iucnredlist.org>"
 ```
 
 
@@ -89,12 +106,12 @@ rl_search('Fratercula arctica')
 #> 1 ALCIDAE Fratercula  Atlantic Puffin (Linnaeus, 1758)           2017
 #>   category criteria marine_system freshwater_system terrestrial_system
 #> 1       VU  A4abcde          TRUE             FALSE               TRUE
-#>                 assessor                 reviewer aoo_km2  eoo_km2
-#> 1 BirdLife International Butchart, S. & Symes, A.      NA 20800000
-#>   elevation_upper elevation_lower depth_upper depth_lower errata_flag
-#> 1              NA              NA          NA          NA       FALSE
-#>   errata_reason
-#> 1            NA
+#>                 assessor  reviewer aoo_km2  eoo_km2 elevation_upper
+#> 1 BirdLife International Symes, A.      NA 20800000              NA
+#>   elevation_lower depth_upper depth_lower errata_flag errata_reason
+#> 1              NA          NA          NA          NA            NA
+#>   amended_flag amended_reason
+#> 1           NA             NA
 ```
 
 Likely a bit faster is to parse to a list only, and not take the extra data.frame parsing time
@@ -123,7 +140,7 @@ only does the HTTP request, and gives back JSON without doing any more parsing
 
 ```r
 rl_search_('Fratercula arctica')
-#> [1] "{\"name\":\"Fratercula arctica\",\"result\":[{\"taxonid\":22694927,\"scientific_name\":\"Fratercula arctica\",\"kingdom\":\"ANIMALIA\",\"phylum\":\"CHORDATA\",\"class\":\"AVES\",\"order\":\"CHARADRIIFORMES\",\"family\":\"ALCIDAE\",\"genus\":\"Fratercula\",\"main_common_name\":\"Atlantic Puffin\",\"authority\":\"(Linnaeus, 1758)\",\"published_year\":2017,\"category\":\"VU\",\"criteria\":\"A4abcde\",\"marine_system\":true,\"freshwater_system\":false,\"terrestrial_system\":true,\"assessor\":\"BirdLife International\",\"reviewer\":\"Butchart, S. & Symes, A.\",\"aoo_km2\":null,\"eoo_km2\":\"20800000\",\"elevation_upper\":null,\"elevation_lower\":null,\"depth_upper\":null,\"depth_lower\":null,\"errata_flag\":false,\"errata_reason\":null}]}"
+#> [1] "{\"name\":\"Fratercula arctica\",\"result\":[{\"taxonid\":22694927,\"scientific_name\":\"Fratercula arctica\",\"kingdom\":\"ANIMALIA\",\"phylum\":\"CHORDATA\",\"class\":\"AVES\",\"order\":\"CHARADRIIFORMES\",\"family\":\"ALCIDAE\",\"genus\":\"Fratercula\",\"main_common_name\":\"Atlantic Puffin\",\"authority\":\"(Linnaeus, 1758)\",\"published_year\":2017,\"category\":\"VU\",\"criteria\":\"A4abcde\",\"marine_system\":true,\"freshwater_system\":false,\"terrestrial_system\":true,\"assessor\":\"BirdLife International\",\"reviewer\":\"Symes, A.\",\"aoo_km2\":null,\"eoo_km2\":\"20800000\",\"elevation_upper\":null,\"elevation_lower\":null,\"depth_upper\":null,\"depth_lower\":null,\"errata_flag\":null,\"errata_reason\":null,\"amended_flag\":null,\"amended_reason\":null}]}"
 ```
 
 To consume this JSON, you can use `jsonlite`
@@ -142,12 +159,12 @@ jsonlite::fromJSON(rl_search_('Fratercula arctica'))
 #> 1 ALCIDAE Fratercula  Atlantic Puffin (Linnaeus, 1758)           2017
 #>   category criteria marine_system freshwater_system terrestrial_system
 #> 1       VU  A4abcde          TRUE             FALSE               TRUE
-#>                 assessor                 reviewer aoo_km2  eoo_km2
-#> 1 BirdLife International Butchart, S. & Symes, A.      NA 20800000
-#>   elevation_upper elevation_lower depth_upper depth_lower errata_flag
-#> 1              NA              NA          NA          NA       FALSE
-#>   errata_reason
-#> 1            NA
+#>                 assessor  reviewer aoo_km2  eoo_km2 elevation_upper
+#> 1 BirdLife International Symes, A.      NA 20800000              NA
+#>   elevation_lower depth_upper depth_lower errata_flag errata_reason
+#> 1              NA          NA          NA          NA            NA
+#>   amended_flag amended_reason
+#> 1           NA             NA
 ```
 
 Or other tools, e.g., `jq` via the `jqr` R client
@@ -189,4 +206,4 @@ rl_search_('Fratercula arctica') %>% dot()
 
 [docs]: http://apiv3.iucnredlist.org/api/v3/docs
 [token]: http://apiv3.iucnredlist.org/api/v3/token
-[spatial]: http://apiv3.iucnredlist.org/spatial
+[redlistr]: https://github.com/red-list-ecosystem/redlistr

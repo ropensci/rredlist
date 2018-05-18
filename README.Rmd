@@ -41,7 +41,12 @@ knitr::opts_chunk$set(
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rredlist)](https://github.com/metacran/cranlogs.app)
 [![cran version](http://www.r-pkg.org/badges/version/rredlist)](https://cran.r-project.org/package=rredlist)
 
+`rredlist` is an R client for the IUCN Red List (<http://apiv3.iucnredlist.org/api/v3/docs>). 
+The IUCN Red List is a global list of threatened and endangered species.
+
 [IUCN Red List docs][docs]
+
+> important note: [redlistr][] is a different package - not working with the IUCN Red List API
 
 ## Citing the IUCN Red List API
 
@@ -159,3 +164,4 @@ rl_search_('Fratercula arctica') %>% dot()
 
 [docs]: http://apiv3.iucnredlist.org/api/v3/docs
 [token]: http://apiv3.iucnredlist.org/api/v3/token
+[redlistr]: https://github.com/red-list-ecosystem/redlistr
