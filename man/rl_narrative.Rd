@@ -19,8 +19,7 @@ rl_narrative_(name = NULL, id = NULL, region = NULL, key = NULL, ...)
 acceptable region identifiers (use the entries in the \code{identifier}
 column)}
 
-\item{key}{A IUCN API token. See
-\url{http://apiv3.iucnredlist.org/api/v3/token} to get a token}
+\item{key}{A IUCN API token. See \code{\link{rl_use_iucn}}.}
 
 \item{parse}{(logical) Whether to parse to list (\code{FALSE}) or
 data.frame (\code{TRUE}). Default: \code{TRUE}}

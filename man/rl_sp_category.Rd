@@ -13,8 +13,7 @@ rl_sp_category_(category, key = NULL, parse = TRUE, ...)
 \item{category}{(character) A two-letter category code. One of
 "DD", "LC", "NT", "VU", "EN", "CR", "EW", "EX", "LRlc", "LRnt", "LRcd"}
 
-\item{key}{A IUCN API token. See
-\url{http://apiv3.iucnredlist.org/api/v3/token} to get a token}
+\item{key}{A IUCN API token. See \code{\link{rl_use_iucn}}.}
 
 \item{parse}{(logical) Whether to parse to list (\code{FALSE}) or
 data.frame (\code{TRUE}). Default: \code{TRUE}}
