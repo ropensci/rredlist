@@ -1,7 +1,18 @@
-rredlist 0.4.1.9500
+rredlist 0.5.0
 ===================
 
-* Gain new function `rl_use_iucn` to help with API key setup (PR #31 by @maelle).
+### NEW FEATURES 
+
+* gains new function `rl_use_iucn` to help with API key setup (#31) by @maelle
+* gains new functions `rl_comp_groups` and `rl_comp_groups_` to interface with the comprehensive groups API route (#26)
+* `rl_sp` gains two new parameters: `all` (logical) to toggle getting all results or not, if selected we do paging internally; `quiet` parameter (logical) suppresses progress (#29)
+
+### MINOR IMPROVEMENTS
+
+* mention `redlistr` package in README to help users decide which package to use for which use cases (#30)
+* now using `webmockr` and `vcr` to do unit test caching (#33) (#34)
+
+
 
 rredlist 0.4.0
 ==============
