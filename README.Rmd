@@ -36,6 +36,7 @@ knitr::opts_chunk$set(
 )
 ```
 
+[![cran checks](https://cranchecks.info/badges/worst/rredlist)](https://cranchecks.info/pkgs/rredlist)
 [![Build Status](https://travis-ci.org/ropensci/rredlist.svg?branch=master)](https://travis-ci.org/ropensci/rredlist)
 [![codecov.io](https://codecov.io/github/ropensci/rredlist/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rredlist?branch=master)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rredlist)](https://github.com/metacran/cranlogs.app)
@@ -161,7 +162,11 @@ rl_search_('Fratercula arctica') %>% dot()
 * Please [report any issues or bugs](https://github.com/ropensci/rredlist/issues).
 * License: MIT
 * Get citation information for `rredlist` in R doing `citation(package = 'rredlist')`
-* Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+
+[![rofooter](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
+
+
 
 [docs]: http://apiv3.iucnredlist.org/api/v3/docs
 [token]: http://apiv3.iucnredlist.org/api/v3/token
