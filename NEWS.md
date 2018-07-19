@@ -1,3 +1,8 @@
+rredlist 0.4.1.9500
+===================
+
+* Gain new function `rl_use_iucn` to help with API key setup (PR #31 by @maelle).
+
 rredlist 0.4.0
 ==============
 

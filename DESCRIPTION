@@ -4,9 +4,19 @@ Title: 'IUCN' Red List Client
 Description: 'IUCN' Red List (<http://apiv3.iucnredlist.org/api/v3/docs>) client.
     The 'IUCN' Red List is a global list of threatened and endangered species.
     Functions cover all of the Red List 'API' routes. An 'API' key is required.
-Version: 0.4.1.9120
-Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
-    email = "myrmecocystus@gmail.com"))
+Version: 0.4.1.9500
+Authors@R: 
+    c(person(given = "Scott",
+             family = "Chamberlain",
+             role = c("aut", "cre"),
+             email = "myrmecocystus@gmail.com"),
+      person(given = "rOpenSci",
+             role = "fnd",
+             comment = "https://ropensci.org/"),
+      person(given = "Maëlle",
+             family = "Salmon",
+             role = "ctb",
+             email = "maelle.salmon@yahoo.se"))
 License: MIT + file LICENSE
 URL: https://github.com/ropensci/rredlist
 BugReports: https://github.com/ropensci/rredlist/issues
@@ -19,4 +29,5 @@ Suggests:
     testthat,
     webmockr (>= 0.2.6),
     vcr (>= 0.1.0)
+Encoding: UTF-8
 RoxygenNote: 6.0.1
