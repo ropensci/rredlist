@@ -1,0 +1,30 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://apiv3.iucnredlist.org/api/v3/species/common_names/Loxodonta%20africana?token=adfds
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/3.2 crul/0.5.2 rOpenSci(rredlist/0.4.1.9120)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      server: nginx/1.1.19
+      date: Thu, 17 May 2018 18:35:33 GMT
+      content-type: application/json; charset=utf-8
+      content-length: '30'
+      connection: keep-alive
+      x-powered-by: Sails <sailsjs.org>
+      vary: Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: '{"message":"Token not valid!"}'
+  recorded_at: 2018-05-17 18:35:34 GMT
+  recorded_with: vcr/0.1.0, webmockr/0.2.6, crul/0.5.2

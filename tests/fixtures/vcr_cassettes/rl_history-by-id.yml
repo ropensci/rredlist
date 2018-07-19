@@ -1,0 +1,30 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://apiv3.iucnredlist.org/api/v3/species/history/id/12392?token=<<rredlist_api_token>>
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/3.2 crul/0.5.2 rOpenSci(rredlist/0.4.1.9120)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      server: nginx/1.1.19
+      date: Thu, 17 May 2018 18:36:09 GMT
+      content-type: application/json; charset=utf-8
+      content-length: '387'
+      connection: keep-alive
+      x-powered-by: Sails <sailsjs.org>
+      vary: Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: '{"name":"12392","result":[{"year":"2008","code":"VU","category":"Vulnerable"},{"year":"2004","code":"VU","category":"Vulnerable"},{"year":"1996","code":"EN","category":"Endangered"},{"year":"1994","code":"V","category":"Vulnerable"},{"year":"1990","code":"V","category":"Vulnerable"},{"year":"1988","code":"V","category":"Vulnerable"},{"year":"1986","code":"V","category":"Vulnerable"}]}'
+  recorded_at: 2018-05-17 18:36:09 GMT
+  recorded_with: vcr/0.1.0, webmockr/0.2.6, crul/0.5.2

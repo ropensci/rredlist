@@ -1,0 +1,34 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://apiv3.iucnredlist.org/api/v3/measures/species/name/Fratercula%20arctica?token=<<rredlist_api_token>>
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/3.2 crul/0.5.2 rOpenSci(rredlist/0.4.1.9120)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      server: nginx/1.1.19
+      date: Thu, 17 May 2018 18:36:12 GMT
+      content-type: application/json; charset=utf-8
+      content-length: '448'
+      connection: keep-alive
+      x-powered-by: Sails <sailsjs.org>
+      vary: Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: '{"name":"Fratercula arctica","result":[{"code":"1.1","title":"Site/area
+        protection"},{"code":"1.2","title":"Resource & habitat protection"},{"code":"2.1","title":"Site/area
+        management"},{"code":"2.2","title":"Invasive/problematic species control"},{"code":"4.3","title":"Awareness
+        & communications"},{"code":"5.2","title":"Policies and regulations"},{"code":"5.4","title":"Compliance
+        and enforcement"},{"code":"5.4.4","title":"Scale unspecified"}]}'
+  recorded_at: 2018-05-17 18:36:12 GMT
+  recorded_with: vcr/0.1.0, webmockr/0.2.6, crul/0.5.2

@@ -1,0 +1,37 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://apiv3.iucnredlist.org/api/v3/habitats/species/name/Fratercula%20arctica?token=<<rredlist_api_token>>
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/3.2 crul/0.5.2 rOpenSci(rredlist/0.4.1.9120)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      server: nginx/1.1.19
+      date: Thu, 17 May 2018 18:35:47 GMT
+      content-type: application/json; charset=utf-8
+      content-length: '954'
+      connection: keep-alive
+      x-powered-by: Sails <sailsjs.org>
+      vary: Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: '{"name":"Fratercula arctica","result":[{"code":"10.1","habitat":"Marine
+        Oceanic - Epipelagic (0-200m)","suitability":"Suitable","season":"breeding","majorimportance":"No"},{"code":"10.1","habitat":"Marine
+        Oceanic - Epipelagic (0-200m)","suitability":"Suitable","season":"non-breeding","majorimportance":"No"},{"code":"13.1","habitat":"Marine
+        Coastal/Supratidal - Sea Cliffs and Rocky Offshore Islands","suitability":"Suitable","season":"breeding","majorimportance":"No"},{"code":"4.2","habitat":"Grassland
+        - Subarctic","suitability":"Suitable","season":"breeding","majorimportance":"Yes"},{"code":"4.4","habitat":"Grassland
+        - Temperate","suitability":"Suitable","season":"breeding","majorimportance":"Yes"},{"code":"9.1","habitat":"Marine
+        Neritic - Pelagic","suitability":"Suitable","season":"breeding","majorimportance":"Yes"},{"code":"9.1","habitat":"Marine
+        Neritic - Pelagic","suitability":"Suitable","season":"non-breeding","majorimportance":"Yes"}]}'
+  recorded_at: 2018-05-17 18:35:48 GMT
+  recorded_with: vcr/0.1.0, webmockr/0.2.6, crul/0.5.2

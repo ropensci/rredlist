@@ -1,0 +1,156 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://apiv3.iucnredlist.org/api/v3/species/narrative/Fratercula%20arctica?token=<<rredlist_api_token>>
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/3.2 crul/0.5.2 rOpenSci(rredlist/0.4.1.9120)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      server: nginx/1.1.19
+      date: Thu, 17 May 2018 18:36:16 GMT
+      content-type: application/json; charset=utf-8
+      transfer-encoding: chunked
+      connection: keep-alive
+      x-powered-by: Sails <sailsjs.org>
+      etag: '"-1526502880"'
+      vary: Accept-Encoding
+      content-encoding: gzip
+    body:
+      encoding: UTF-8
+      string: '{"name":"Fratercula arctica","result":[{"species_id":22694927,"taxonomicnotes":null,"rationale":"This
+        species has experienced rapid declines across most of its European range.
+        Population trends outside Europe are unknown. Extrapolated over three generation
+        lengths and allowing for uncertainty, the population is thought to be declining
+        at a rate sufficient to trigger Vulnerable under the population size criterion.
+        Should population trends become less uncertain both within and outside its
+        European range it may merit uplisting or downlisting.","geographicrange":"The
+        Atlantic Puffin can be found throughout the North Atlantic Ocean, from north-west
+        Greenland (<strong>to </strong><strong>Denmark</strong>) to the coastline
+        of Newfoundland (<strong>Canada</strong>) and Maine (<strong>USA</strong>)
+        in the west, and from north-west <strong>Russia&#160;</strong>down to the
+        Canary Islands, <strong>Spain</strong> (in winter) in the east (del Hoyo <em>et
+        al</em>. 1996)<strong></strong>. The population in <strong>Iceland</strong>
+        and <strong>Norway</strong>, which together account for 80% of the European
+        population, decreased markedly since the early 2000s (BirdLife International
+        2015).&#160;In much of Iceland breeding has generally failed every year since
+        2003, but in the north, at least, it has been borderline sustainable (G. A.
+        Gudmundsson&#160;<em>in litt</em>. 2015, E. Hansen <em>in litt. </em>2016,
+        A. Petersen <em>in litt. </em>2016). The largest Norwegian colony, Røst, has
+        experienced sharp declines&#160;from almost 1.5 million breeding pairs in
+        1979 to only 289,000 pairs in 2015, and has produced virtually no chicks in
+        the last 9 years&#160;(T. Anker-Nilssen <em>in litt</em>. 2015, Anker-Nilssen
+        <em>et al. </em>2016). Most other Norwegian colonies are much smaller, including
+        that at Runde, which has also declined; however most colonies remain unmonitored
+        (A. O. Folkestad&#160;<em>in litt</em>. 2015, T. Anker-Nilssen <em>in litt</em>.
+        2015, 2016). Numbers on the southern coast of the Barents Sea have increased
+        such that declines in the total population in Norway are estimated at approximately
+        33% since the early 1980s (Fauchald <em>et al.</em> 2015).&#160;Populations
+        in the Faroe Islands (Denmark) and Greenland are also reported to be decreasing
+        (BirdLife International 2015).<br/>The population size was estimated to be
+        increasing in the U.K. during 1969-2000, and populations in the North Sea
+        are probably currently stable or increasing after a decline in the 2000s due
+        to two very low overwinter survivals of adults (Harris and Wanless 2011,&#160;<a>Harris
+        <em>et al.</em> 2013</a>).&#160;A reduction in the recruitment of juveniles
+        into the breeding population is thought to be the most likely factor involved
+        in a sharp decrease in the number of puffins at the Fair Isle (U.K.) breeding
+        colony; from approximately 20,200 individuals in 1986 to 10,700 individuals
+        in 2012 (Miles&#160;<em>et al</em>. 2015). Adult survival probability remained
+        similar across the 27 years of the study, whilst breeding success, the number
+        of feeding visits by adults to chicks and the size of available prey fish
+        all decreased. Trends from North America are uncertain, with the population
+        at Great Island, Witless Bay showing increases between 1979 and 1994, but
+        it has potentially stabilised or is in decline now (Wilhelm <em>et al. </em>2015).
+        A restoration project off the coast of Maine has also had some success (D.
+        Wege <em>in litt. </em>2002, see&#160;http://projectpuffin.audubon.org/).<p></p>","population":"The
+        European population is estimated to be 4,770,000-5,780,000 pairs, which equates
+        to 9,550,000-11,600,000 mature individuals (BirdLife International 2015).","populationtrend":"decreasing","habitat":"The
+        species is exclusively marine, found on rocky coasts and offshore islands
+        (Nettleship <em>et al</em>. 2014). It nests on grassy maritime slopes, sea
+        cliffs and rocky slopes. During the winter it is wide-ranging, found in offshore
+        and pelagic habitats.<br/><br/>The species is a pursuit-diver, catching most
+        of its prey within 30 m of the water surface but&#160;capable of diving to
+        60 m (Piatt and Nettleship 1985, Burger and Simpson 1986)<sup></sup>. They
+        prey on ''forage'' species, including juvenile pelagic fishes, such as herring
+        <em>Clupea harengus</em>, juvenile and adult capelin <em>Mallotus</em> <em>villosus</em>,
+        and sandeel <em>Ammodytes</em> spp. (Barrett <em>et al</em>. 1987)<strong><sup></sup></strong>.
+        At times, they also prey on juvenile demersal fishes, such as gadids; planktonic
+        crustaceans; and polychaete worms (Harris and Hislop 1978, Barrett <em>et
+        al. </em>1987, Martin 1989, Rodway and Montevecchi 1996, Harris <em>et al.
+        </em>2015)<strong><sup></sup></strong>. In the southern and eastern parts
+        of its range, sandeels usually form the majority of the prey fed to chicks
+        (Corkhill 1973, Hislop and Harris 1985, Harris and Wanless 1986, Martin 1989,
+        Harris and Riddiford 1989).&#160;However, there are exceptions, such as at
+        Skomer Island in 1969 when sprat made up the majority of the diet fed to chicks
+        (Corkhill 1973), and in the Lofoten islands, where first-year herring are
+        often the commonest food of chicks (Anker-Nilssen and Aarvak 2006).<br/><br/>When
+        feeding chicks, birds generally forage within 10 km of their colony, but may
+        range as far as 50 to 100 km or more (Harris 1984,&#160;Anker-Nilssen and
+        Lorentsen 1990,&#160;Rodway and Montevecchi 1996)<strong><sup></sup></strong>.
+        A boat transect run on one day in 1970 found that 85% of all birds seen were
+        concentrated within just 3 km of the colony (BirdLife International 2000)<strong><sup></sup></strong>,
+        but other studies have found peaks in the density of foraging birds at up
+        to 40 km distance from the colony (Webb <em>et al.</em> 1985, Stone <em>et
+        al.</em> 1992, Stone <em>et al. </em>1993, BirdLife International 2000)<strong><sup></sup></strong>.
+        Similarly, surveys and GPS tracking at the Isle of May, Scotland, suggest
+        that birds forage close to the breeding colony, but also at other sites up
+        to 40 km away (Wanless <em>et al.</em> 1990, BirdLife International 2000,
+        Harris <em>et al. </em>2012)<strong><sup></sup></strong>. Various studies
+        (Pearson 1968, Corkhill 1973, Bradstreet and Brown 1985, BirdLife International
+        2000)<strong><sup></sup></strong>, based on different breeding colonies, have
+        estimated the theoretical maximum foraging radius at anywhere from 32 km (Corkhill
+        1973)<strong><sup></sup></strong> to 200 km (Bradstreet and Brown 1985). <p></p>","threats":"This
+        species is highly susceptible to the impacts of climate change, such as sea
+        temperature rise and shifts in prey distribution and abundance (Durant <em>et
+        al</em>. 2003, Sandvik <em>et al</em>. 2005). This is a particularly important
+        threat when prey species are exploited unsustainably, leading to prey reductions
+        and subsequent unsuccessful breeding.&#160;Breeding failures are usually assumed
+        to be due to food shortages (e.g. Martin 1989, Anker-Nilssen and Aarvak 2006,
+        Harris and Wanless 2011, Anker-Nilssen <em>et al.</em> 2016). It is vulnerable
+        to oil spills and other marine pollution. Extreme weather events and storms
+        also pose a threat, with large wrecks recorded following severe winter storms
+        at sea. At the breeding colonies the species is vulnerable to invasive predators,
+        such as rats, cats, and American Mink <em>Neovison vison</em>. The species
+        is susceptible to being caught in gillnets, although other fishing gears may
+        also catch significant numbers. Increasing numbers of offshore wind farms
+        may result in displacement from habitat, although the risk of collision is
+        considered very low (Bradbury <em>et al</em>. 2014). The species is hunted
+        for human consumption in Iceland, and in the Faroe Islands (Thorup <em>et
+        al</em>. 2014). Harvesting, livestock grazing and tourism&#160;at its breeding
+        grounds pose additional threats due to disturbance (Nettleship <em>et al</em>.
+        2014).","conservationmeasures":"<strong>Conservation and Research Actions
+        Underway</strong><br/>The species is listed under the African Eurasian Waterbird
+        Agreement. It is included in the Action Plan for Seabirds in Western-Nordic
+        Areas (TemaNord 2010). There are 76 marine Important Bird Areas identified
+        across the European region. Within the EU there are 40 Special Protection
+        Areas which list this species as occurring within its boundaries.&#160;<br/><br/><strong>Conservation
+        and Research Actions Proposed</strong><br/>Further identification of important
+        sites for this species, particularly in offshore regions and designation as
+        marine protected areas. Increase knowledge of the species''s ecological requirements
+        in winter (Harris <em>et al. </em>2015). Develop a monitoring schemes to understand
+        population trends (Nettleship <em>et al</em>. 2014). Identify the risks of
+        different activities on seabirds, and locations sensitive to seabirds.&#160;Continue
+        eradication of invasive predators from breeding colonies. Management of fisheries
+        to ensure long-term sustainability of key stocks (e.g. sandeels). Establish
+        observer schemes for bycatch and prepare National/Regional plans of action
+        on seabird bycatch. Continue Arctic Monitoring and Assessment Programme (AMAP)
+        monitoring of seabird contaminants; include new contaminants and secure communication
+        between seabird and contaminants research.&#160;Develop a system to monitor
+        and predict impacts of offshore oil developments on important areas for the
+        species, in particular, key wintering sites (Nettleship&#160;<em>et al</em>.
+        2014).&#160;Increase the level of understanding among the public of introducing
+        hunting restrictions. Develop codes-of-conduct for more organised activities
+        (e.g. tourism). Ensure that appropriate protection (national laws and international
+        agreements) applies to new areas and times in cases of changes in seabird
+        migration routes and times.","usetrade":null}]}'
+  recorded_at: 2018-05-17 18:36:16 GMT
+  recorded_with: vcr/0.1.0, webmockr/0.2.6, crul/0.5.2

@@ -26,6 +26,8 @@ Imports:
     jsonlite (>= 1.1)
 Suggests:
     roxygen2 (>= 6.0.1),
-    testthat
+    testthat,
+    webmockr (>= 0.2.6),
+    vcr (>= 0.1.0)
 Encoding: UTF-8
 RoxygenNote: 6.0.1

@@ -1,0 +1,69 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://apiv3.iucnredlist.org/api/v3/threats/species/name/Fratercula%20arctica?token=<<rredlist_api_token>>
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/3.2 crul/0.5.2 rOpenSci(rredlist/0.4.1.9120)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      server: nginx/1.1.19
+      date: Thu, 17 May 2018 18:37:31 GMT
+      content-type: application/json; charset=utf-8
+      transfer-encoding: chunked
+      connection: keep-alive
+      x-powered-by: Sails <sailsjs.org>
+      etag: '"1560526344"'
+      vary: Accept-Encoding
+      content-encoding: gzip
+    body:
+      encoding: UTF-8
+      string: '{"name":"Fratercula arctica","result":[{"code":"11.1","title":"Habitat
+        shifting & alteration","timing":"Ongoing","scope":"Whole (>90%)","severity":"Slow,
+        Significant Declines","score":"Medium Impact: 7","invasive":null},{"code":"11.3","title":"Temperature
+        extremes","timing":"Ongoing","scope":"Unknown","severity":"Unknown","score":"Unknown","invasive":null},{"code":"11.4","title":"Storms
+        & flooding","timing":"Ongoing","scope":"Unknown","severity":"Rapid Declines","score":"Unknown","invasive":null},{"code":"11.5","title":"Other
+        impacts","timing":"Ongoing","scope":"Unknown","severity":"Unknown","score":"Unknown","invasive":null},{"code":"2.3","title":"Livestock
+        farming & ranching","timing":"Ongoing","scope":"Majority (50-90%)","severity":"Slow,
+        Significant Declines","score":"Medium Impact: 6","invasive":null},{"code":"2.3.2","title":"Small-holder
+        grazing, ranching or farming","timing":"Ongoing","scope":"Majority (50-90%)","severity":"Slow,
+        Significant Declines","score":"Medium Impact: 6","invasive":null},{"code":"3.3","title":"Renewable
+        energy","timing":"Ongoing","scope":"Minority (<50%)","severity":"Causing/Could
+        cause fluctuations","score":"Low Impact: 5","invasive":null},{"code":"5.1","title":"Hunting
+        & trapping terrestrial animals","timing":"Ongoing","scope":"Minority (<50%)","severity":"Slow,
+        Significant Declines","score":"Low Impact: 5","invasive":null},{"code":"5.1.1","title":"Intentional
+        use (species is the target)","timing":"Ongoing","scope":"Minority (<50%)","severity":"Slow,
+        Significant Declines","score":"Low Impact: 5","invasive":null},{"code":"5.4","title":"Fishing
+        & harvesting aquatic resources","timing":"Ongoing","scope":"Unknown","severity":"Rapid
+        Declines","score":"Unknown","invasive":null},{"code":"5.4.4","title":"Unintentional
+        effects: (large scale) [harvest]","timing":"Ongoing","scope":"Unknown","severity":"Rapid
+        Declines","score":"Unknown","invasive":null},{"code":"6.1","title":"Recreational
+        activities","timing":"Ongoing","scope":"Majority (50-90%)","severity":"Slow,
+        Significant Declines","score":"Medium Impact: 6","invasive":null},{"code":"8.1","title":"Invasive
+        non-native/alien species/diseases (Neovison vison)","timing":"Ongoing","scope":"Majority
+        (50-90%)","severity":"Slow, Significant Declines","score":"Medium Impact:
+        6","invasive":"Neovison vison"},{"code":"8.1","title":"Invasive non-native/alien
+        species/diseases (Unspecified Rattus)","timing":"Ongoing","scope":"Majority
+        (50-90%)","severity":"Slow, Significant Declines","score":"Medium Impact:
+        6","invasive":"Unspecified Rattus"},{"code":"8.1.2","title":"Named species
+        (Neovison vison)","timing":"Ongoing","scope":"Majority (50-90%)","severity":"Slow,
+        Significant Declines","score":"Medium Impact: 6","invasive":"Neovison vison"},{"code":"8.1.2","title":"Named
+        species (Unspecified Rattus)","timing":"Ongoing","scope":"Majority (50-90%)","severity":"Slow,
+        Significant Declines","score":"Medium Impact: 6","invasive":"Unspecified Rattus"},{"code":"9.2","title":"Industrial
+        & military effluents","timing":"Ongoing","scope":"Unknown","severity":"Unknown","score":"Unknown","invasive":null},{"code":"9.2","title":"Industrial
+        & military effluents","timing":"Past, Likely to Return","scope":"Unknown","severity":"Rapid
+        Declines","score":"Past Impact","invasive":null},{"code":"9.2.1","title":"Oil
+        spills","timing":"Past, Likely to Return","scope":"Unknown","severity":"Rapid
+        Declines","score":"Past Impact","invasive":null},{"code":"9.2.3","title":"Type
+        Unknown/Unrecorded","timing":"Ongoing","scope":"Unknown","severity":"Unknown","score":"Unknown","invasive":null}]}'
+  recorded_at: 2018-05-17 18:37:32 GMT
+  recorded_with: vcr/0.1.0, webmockr/0.2.6, crul/0.5.2
