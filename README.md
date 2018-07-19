@@ -3,6 +3,7 @@ rredlist
 
 
 
+[![cran checks](https://cranchecks.info/badges/worst/rredlist)](https://cranchecks.info/pkgs/rredlist)
 [![Build Status](https://travis-ci.org/ropensci/rredlist.svg?branch=master)](https://travis-ci.org/ropensci/rredlist)
 [![codecov.io](https://codecov.io/github/ropensci/rredlist/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rredlist?branch=master)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rredlist)](https://github.com/metacran/cranlogs.app)
@@ -21,12 +22,14 @@ See <http://apiv3.iucnredlist.org/about>
 
 ## Authentication
 
-IUCN requires you to get your own API key, an alphanumeric string that you
-need to send in every request. Get it at <http://apiv3.iucnredlist.org/api/v3/token>.
-Keep this key private. You can pass the key in to each function via the
-`key` parameter, but it's better to store the key either as a environment
-variable (`IUCN_REDLIST_KEY`) or an R option (`iucn_redlist_key`) - we
-suggest using the former option.
+IUCN requires you to get your own API key, an alphanumeric string that you need to send in every request. There's an helper function in the package helping you getting it at <http://apiv3.iucnredlist.org/api/v3/token> and storing it.
+
+
+```r
+rredlist::rl_use_iucn()
+```
+
+Keep this key private. You can pass the key in to each function via the `key` parameter, but it's better to store the key either as a environment variable (`IUCN_REDLIST_KEY`) or an R option (`iucn_redlist_key`) - we recommend using the former option.
 
 ## High vs. Low level package APIs
 
@@ -63,7 +66,7 @@ use the function `rl_citation()`
 
 ```r
 rl_citation()
-#> [1] "IUCN 2015. IUCN Red List of Threatened Species. Version 2017-3 <www.iucnredlist.org>"
+#> [1] "IUCN 2015. IUCN Red List of Threatened Species. Version 2018-1 <www.iucnredlist.org>"
 ```
 
 
@@ -202,7 +205,11 @@ rl_search_('Fratercula arctica') %>% dot()
 * Please [report any issues or bugs](https://github.com/ropensci/rredlist/issues).
 * License: MIT
 * Get citation information for `rredlist` in R doing `citation(package = 'rredlist')`
-* Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+
+[![rofooter](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
+
+
 
 [docs]: http://apiv3.iucnredlist.org/api/v3/docs
 [token]: http://apiv3.iucnredlist.org/api/v3/token
