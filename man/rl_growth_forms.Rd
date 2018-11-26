@@ -52,4 +52,5 @@ rl_growth_forms_(id = 63532, region = 'europe')
 }
 \references{
 API docs at \url{http://apiv3.iucnredlist.org/api/v3/docs}
+Classification scheme at \url{https://nc.iucnredlist.org/redlist/content/attachment_files/nov_2013_plant_growth_forms_classification_scheme.pdf}
 }
