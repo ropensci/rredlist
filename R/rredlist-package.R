@@ -45,6 +45,14 @@
 #' They suggest a 2-second delay between your calls if you plan to make a
 #' lot of calls.
 #'
+#' #' @section IUCN Metadata:
+#' From the IUCN folks: To allow the underlying data to be analysed, and to
+#' ensure uniformity when describing the habitat in which a taxon occurs, the
+#' threats to a taxon, what conservation actions are in place or are needed, and
+#' whether or not the taxon is utilized, a set of standard terms (Classification Schemes)
+#' have been developed for documenting taxa on The IUCN Red List.
+#' See <https://www.iucnredlist.org/resources/classification-schemes>
+#'
 #' @section Citing the IUCN Red List API:
 #' See <http://apiv3.iucnredlist.org/about>
 #'
