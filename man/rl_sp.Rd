@@ -5,8 +5,8 @@
 \alias{rl_sp_}
 \title{Get species}
 \usage{
-rl_sp(page = 0, key = NULL, parse = TRUE, all = FALSE, quiet = FALSE,
-  ...)
+rl_sp(page = 0, key = NULL, parse = TRUE, all = FALSE,
+  quiet = FALSE, ...)
 
 rl_sp_(page, key = NULL, all = FALSE, quiet = FALSE, ...)
 }

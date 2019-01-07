@@ -8,7 +8,8 @@
 rl_growth_forms(name = NULL, id = NULL, region = NULL, key = NULL,
   parse = TRUE, ...)
 
-rl_growth_forms_(name = NULL, id = NULL, region = NULL, key = NULL, ...)
+rl_growth_forms_(name = NULL, id = NULL, region = NULL, key = NULL,
+  ...)
 }
 \arguments{
 \item{name}{(character) A taxonomic name}

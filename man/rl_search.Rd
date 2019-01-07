@@ -6,7 +6,8 @@
 \alias{rl_search_}
 \title{Search by taxon name, IUCN id, and region}
 \usage{
-rl_occ_country_(name = NULL, id = NULL, region = NULL, key = NULL, ...)
+rl_occ_country_(name = NULL, id = NULL, region = NULL, key = NULL,
+  ...)
 
 rl_search(name = NULL, id = NULL, region = NULL, key = NULL,
   parse = TRUE, ...)

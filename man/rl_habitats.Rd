@@ -9,7 +9,8 @@
 rl_habitats(name = NULL, id = NULL, region = NULL, key = NULL,
   parse = TRUE, ...)
 
-rl_habitats_(name = NULL, id = NULL, region = NULL, key = NULL, ...)
+rl_habitats_(name = NULL, id = NULL, region = NULL, key = NULL,
+  ...)
 
 rl_history_(name = NULL, id = NULL, region = NULL, key = NULL, ...)
 }
