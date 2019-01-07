@@ -64,6 +64,14 @@ assert_n <- function(x, n) {
   }
 }
 
+assert_not_na <- function(x) {
+  if (!is.null(x)) {
+    if (any(is.na(x))) {
+      stop(deparse(substitute(x)), " must not be NA", call. = FALSE)
+    }
+  }
+}
+
 nir <- function(path_name, path_id, name = NULL, id = NULL, region = NULL) {
 
   # only one of name OR id
@@ -73,6 +81,11 @@ nir <- function(path_name, path_id, name = NULL, id = NULL, region = NULL) {
   assert_is(name, 'character')
   assert_is(id, c('integer', 'numeric'))
   assert_is(region, 'character')
+
+  # can't be NA
+  assert_not_na(name)
+  assert_not_na(id)
+  assert_not_na(region)
 
   # check lengths - only length 1 allowed for all
   assert_n(name, 1)

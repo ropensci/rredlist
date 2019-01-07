@@ -60,12 +60,15 @@ test_that("fails well", {
 
   expect_error(rl_search(5), "name must be of class character")
   expect_error(rl_search(list()), "name must be of class character")
+  expect_error(rl_search(NA_character_), "name must not be NA")
 
   expect_error(rl_search(id = "adsfds"), "id must be of class integer, numeric")
   expect_error(rl_search(id = list()), "id must be of class integer, numeric")
+  expect_error(rl_search(id = NA_integer_), "id must not be NA")
 
   expect_error(rl_search("adfadf", region = 5), "region must be of class character")
   expect_error(rl_search("adfadf", region = list()), "region must be of class character")
+  expect_error(rl_search(id = 1, region = NA_character_), "region must not be NA")
 
   expect_error(rl_search(key = 5), "key must be of class character")
   expect_error(rl_search(key = matrix()), "key must be of class character")
