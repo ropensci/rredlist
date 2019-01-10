@@ -28,6 +28,7 @@ Suggests:
     roxygen2 (>= 6.1.1),
     testthat,
     webmockr (>= 0.2.6),
-    vcr (>= 0.1.0)
+    vcr (>= 0.2.0.9114)
 Encoding: UTF-8
 RoxygenNote: 6.1.1
+Remotes: ropensci/vcr
