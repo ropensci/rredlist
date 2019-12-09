@@ -18,7 +18,7 @@ Authors@R:
              role = "ctb",
              email = "maelle.salmon@yahoo.se"))
 License: MIT + file LICENSE
-URL: https://github.com/ropensci/rredlist
+URL: https://docs.ropensci.org/rredlist, https://github.com/ropensci/rredlist
 BugReports: https://github.com/ropensci/rredlist/issues
 Roxygen: list(markdown = TRUE)
 Imports:
