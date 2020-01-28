@@ -16,6 +16,9 @@ The IUCN Red List is a global list of threatened and endangered species.
 
 > important note: [redlistr][] is a different package - not working with the IUCN Red List API
 
+> Note: there can sometimes be a discrepancy between what you get on the IUCN website and what
+> you get with this package; we don't know why, the IUCN API is not an open book.
+
 ## Citing the IUCN Red List API
 
 See <http://apiv3.iucnredlist.org/about>
@@ -66,7 +69,7 @@ use the function `rl_citation()`
 
 ```r
 rl_citation()
-#> [1] "IUCN 2015. IUCN Red List of Threatened Species. Version 2018-1 <www.iucnredlist.org>"
+#> [1] "IUCN 2015. IUCN Red List of Threatened Species. Version 2019-3 <www.iucnredlist.org>"
 ```
 
 
@@ -103,18 +106,18 @@ rl_search('Fratercula arctica')
 #> [1] "Fratercula arctica"
 #> 
 #> $result
-#>    taxonid    scientific_name  kingdom   phylum class           order
-#> 1 22694927 Fratercula arctica ANIMALIA CHORDATA  AVES CHARADRIIFORMES
-#>    family      genus main_common_name        authority published_year
-#> 1 ALCIDAE Fratercula  Atlantic Puffin (Linnaeus, 1758)           2017
-#>   category criteria marine_system freshwater_system terrestrial_system
-#> 1       VU  A4abcde          TRUE             FALSE               TRUE
-#>                 assessor  reviewer aoo_km2  eoo_km2 elevation_upper
-#> 1 BirdLife International Symes, A.      NA 20800000              NA
-#>   elevation_lower depth_upper depth_lower errata_flag errata_reason
-#> 1              NA          NA          NA          NA            NA
-#>   amended_flag amended_reason
-#> 1           NA             NA
+#>    taxonid    scientific_name  kingdom   phylum class           order  family
+#> 1 22694927 Fratercula arctica ANIMALIA CHORDATA  AVES CHARADRIIFORMES ALCIDAE
+#>        genus main_common_name        authority published_year assessment_date
+#> 1 Fratercula  Atlantic Puffin (Linnaeus, 1758)           2018      2018-08-07
+#>   category criteria population_trend marine_system freshwater_system
+#> 1       VU  A4abcde       Decreasing          TRUE             FALSE
+#>   terrestrial_system               assessor    reviewer aoo_km2  eoo_km2
+#> 1               TRUE BirdLife International Westrip, J.      NA 20800000
+#>   elevation_upper elevation_lower depth_upper depth_lower errata_flag
+#> 1              NA              NA          NA          NA          NA
+#>   errata_reason amended_flag amended_reason
+#> 1            NA           NA             NA
 ```
 
 Likely a bit faster is to parse to a list only, and not take the extra data.frame parsing time
@@ -143,7 +146,7 @@ only does the HTTP request, and gives back JSON without doing any more parsing
 
 ```r
 rl_search_('Fratercula arctica')
-#> [1] "{\"name\":\"Fratercula arctica\",\"result\":[{\"taxonid\":22694927,\"scientific_name\":\"Fratercula arctica\",\"kingdom\":\"ANIMALIA\",\"phylum\":\"CHORDATA\",\"class\":\"AVES\",\"order\":\"CHARADRIIFORMES\",\"family\":\"ALCIDAE\",\"genus\":\"Fratercula\",\"main_common_name\":\"Atlantic Puffin\",\"authority\":\"(Linnaeus, 1758)\",\"published_year\":2017,\"category\":\"VU\",\"criteria\":\"A4abcde\",\"marine_system\":true,\"freshwater_system\":false,\"terrestrial_system\":true,\"assessor\":\"BirdLife International\",\"reviewer\":\"Symes, A.\",\"aoo_km2\":null,\"eoo_km2\":\"20800000\",\"elevation_upper\":null,\"elevation_lower\":null,\"depth_upper\":null,\"depth_lower\":null,\"errata_flag\":null,\"errata_reason\":null,\"amended_flag\":null,\"amended_reason\":null}]}"
+#> [1] "{\"name\":\"Fratercula arctica\",\"result\":[{\"taxonid\":22694927,\"scientific_name\":\"Fratercula arctica\",\"kingdom\":\"ANIMALIA\",\"phylum\":\"CHORDATA\",\"class\":\"AVES\",\"order\":\"CHARADRIIFORMES\",\"family\":\"ALCIDAE\",\"genus\":\"Fratercula\",\"main_common_name\":\"Atlantic Puffin\",\"authority\":\"(Linnaeus, 1758)\",\"published_year\":2018,\"assessment_date\":\"2018-08-07\",\"category\":\"VU\",\"criteria\":\"A4abcde\",\"population_trend\":\"Decreasing\",\"marine_system\":true,\"freshwater_system\":false,\"terrestrial_system\":true,\"assessor\":\"BirdLife International\",\"reviewer\":\"Westrip, J.\",\"aoo_km2\":null,\"eoo_km2\":\"20800000\",\"elevation_upper\":null,\"elevation_lower\":null,\"depth_upper\":null,\"depth_lower\":null,\"errata_flag\":null,\"errata_reason\":null,\"amended_flag\":null,\"amended_reason\":null}]}"
 ```
 
 To consume this JSON, you can use `jsonlite`
@@ -156,18 +159,18 @@ jsonlite::fromJSON(rl_search_('Fratercula arctica'))
 #> [1] "Fratercula arctica"
 #> 
 #> $result
-#>    taxonid    scientific_name  kingdom   phylum class           order
-#> 1 22694927 Fratercula arctica ANIMALIA CHORDATA  AVES CHARADRIIFORMES
-#>    family      genus main_common_name        authority published_year
-#> 1 ALCIDAE Fratercula  Atlantic Puffin (Linnaeus, 1758)           2017
-#>   category criteria marine_system freshwater_system terrestrial_system
-#> 1       VU  A4abcde          TRUE             FALSE               TRUE
-#>                 assessor  reviewer aoo_km2  eoo_km2 elevation_upper
-#> 1 BirdLife International Symes, A.      NA 20800000              NA
-#>   elevation_lower depth_upper depth_lower errata_flag errata_reason
-#> 1              NA          NA          NA          NA            NA
-#>   amended_flag amended_reason
-#> 1           NA             NA
+#>    taxonid    scientific_name  kingdom   phylum class           order  family
+#> 1 22694927 Fratercula arctica ANIMALIA CHORDATA  AVES CHARADRIIFORMES ALCIDAE
+#>        genus main_common_name        authority published_year assessment_date
+#> 1 Fratercula  Atlantic Puffin (Linnaeus, 1758)           2018      2018-08-07
+#>   category criteria population_trend marine_system freshwater_system
+#> 1       VU  A4abcde       Decreasing          TRUE             FALSE
+#>   terrestrial_system               assessor    reviewer aoo_km2  eoo_km2
+#> 1               TRUE BirdLife International Westrip, J.      NA 20800000
+#>   elevation_upper elevation_lower depth_upper depth_lower errata_flag
+#> 1              NA              NA          NA          NA          NA
+#>   errata_reason amended_flag amended_reason
+#> 1            NA           NA             NA
 ```
 
 Or other tools, e.g., `jq` via the `jqr` R client
@@ -191,12 +194,12 @@ rl_search_('Fratercula arctica') %>% dot()
 #>             "genus": "Fratercula",
 #>             "main_common_name": "Atlantic Puffin",
 #>             "authority": "(Linnaeus, 1758)",
-#>             "published_year": 2017,
+#>             "published_year": 2018,
+#>             "assessment_date": "2018-08-07",
 #>             "category": "VU",
 #>             "criteria": "A4abcde",
+#>             "population_trend": "Decreasing",
 #>             "marine_system": true,
-#>             "freshwater_system": false,
-#>             "terrestrial_system": true,
 ...
 ```
 
@@ -205,7 +208,7 @@ rl_search_('Fratercula arctica') %>% dot()
 * Please [report any issues or bugs](https://github.com/ropensci/rredlist/issues).
 * License: MIT
 * Get citation information for `rredlist` in R doing `citation(package = 'rredlist')`
-* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+* Please note that this project is released with a [Contributor Code of Conduct][coc]. By participating in this project you agree to abide by its terms.
 
 [![rofooter](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
 
@@ -214,3 +217,4 @@ rl_search_('Fratercula arctica') %>% dot()
 [docs]: http://apiv3.iucnredlist.org/api/v3/docs
 [token]: http://apiv3.iucnredlist.org/api/v3/token
 [redlistr]: https://github.com/red-list-ecosystem/redlistr
+[coc]: https://github.com/ropensci/rredlist/blob/master/CODE_OF_CONDUCT.md
