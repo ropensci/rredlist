@@ -1,3 +1,12 @@
+rredlist 0.6.0
+===================
+
+### MINOR IMPROVEMENTS
+
+* note in docs about how result may differ in website vs. in this package through the API  (#35)
+* fail with useful message when NA's passed to parameters in package functions (#38)
+
+
 rredlist 0.5.0
 ===================
 

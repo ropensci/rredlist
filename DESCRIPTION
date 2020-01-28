@@ -16,8 +16,7 @@ Authors@R:
       person(given = "Maëlle",
              family = "Salmon",
              role = "ctb",
-             email = "maelle.salmon@yahoo.se"),
-      person("rOpenSci", role = "fnd", comment = "https://ropensci.org")
+             email = "maelle.salmon@yahoo.se")
       )
 License: MIT + file LICENSE
 URL: https://github.com/ropensci/rredlist (devel)
