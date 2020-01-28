@@ -1,0 +1,34 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://apiv3.iucnredlist.org/api/v3/species/Fratercula%20arctica?token=<<rredlist_api_token>>
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(rredlist/0.6.0)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      server: nginx/1.1.19
+      date: Tue, 28 Jan 2020 00:43:46 GMT
+      content-type: application/json; charset=utf-8
+      content-length: '748'
+      connection: keep-alive
+      x-powered-by: Sails <sailsjs.org>
+      vary: Accept-Encoding
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"name":"Fratercula arctica","result":[{"taxonid":22694927,"scientific_name":"Fratercula
+        arctica","kingdom":"ANIMALIA","phylum":"CHORDATA","class":"AVES","order":"CHARADRIIFORMES","family":"ALCIDAE","genus":"Fratercula","main_common_name":"Atlantic
+        Puffin","authority":"(Linnaeus, 1758)","published_year":2018,"assessment_date":"2018-08-07","category":"VU","criteria":"A4abcde","population_trend":"Decreasing","marine_system":true,"freshwater_system":false,"terrestrial_system":true,"assessor":"BirdLife
+        International","reviewer":"Westrip, J.","aoo_km2":null,"eoo_km2":"20800000","elevation_upper":null,"elevation_lower":null,"depth_upper":null,"depth_lower":null,"errata_flag":null,"errata_reason":null,"amended_flag":null,"amended_reason":null}]}'
+  recorded_at: 2020-01-28 00:43:46 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0

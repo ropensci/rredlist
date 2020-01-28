@@ -1,0 +1,242 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://apiv3.iucnredlist.org/api/v3/species/narrative/Fratercula%20arctica?token=<<rredlist_api_token>>
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(rredlist/0.6.0)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      server: nginx/1.1.19
+      date: Tue, 28 Jan 2020 00:43:34 GMT
+      content-type: application/json; charset=utf-8
+      transfer-encoding: chunked
+      connection: keep-alive
+      x-powered-by: Sails <sailsjs.org>
+      etag: '"726075169"'
+      vary: Accept-Encoding
+      content-encoding: gzip
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"name":"Fratercula arctica","result":[{"species_id":22694927,"taxonomicnotes":null,"rationale":"This
+        species has experienced rapid declines across most of its European range.
+        Population trends outside Europe are unknown. Extrapolated over three generation
+        lengths and allowing for uncertainty, the population is thought to be declining
+        at a rate sufficient to be listed as Vulnerable. Should population trends
+        become less uncertain both within and outside its European range it may merit
+        uplisting or downlisting.","geographicrange":"The Atlantic Puffin can be found
+        throughout the North Atlantic Ocean, from north-west Greenland (<strong>to
+        </strong><strong>Denmark</strong>) to the coastline of Newfoundland (<strong>Canada</strong>)
+        and Maine (<strong>USA</strong>) in the west, and from north-west <strong>Russia&#160;</strong>down
+        to the Canary Islands, <strong>Spain</strong> (in winter) in the east (del
+        Hoyo <em>et al</em>. 1996)<strong></strong>. The population in <strong>Iceland</strong>
+        and <strong>Norway</strong>, which together account for 80% of the European
+        population, decreased markedly since the early 2000s (BirdLife International
+        2015).&#160;In much of Iceland breeding has generally failed every year since
+        2003, but in the north, at least, it has been borderline sustainable (G. A.
+        Gudmundsson&#160;<em>in litt</em>. 2015, E. Hansen <em>in litt. </em>2016,
+        A. Petersen <em>in litt. </em>2016). The largest Norwegian colony, Røst, has
+        experienced sharp declines&#160;from almost 1.5 million breeding pairs in
+        1979 to only 289,000 pairs in 2015, and has produced virtually no chicks in
+        the last 9 years&#160;(T. Anker-Nilssen <em>in litt</em>. 2015, Anker-Nilssen
+        <em>et al. </em>2016). Most other Norwegian colonies are much smaller, including
+        that at Runde, which has also declined; however most colonies remain unmonitored
+        (A. O. Folkestad&#160;<em>in litt</em>. 2015, T. Anker-Nilssen <em>in litt</em>.
+        2015, 2016). Numbers on the southern coast of the Barents Sea have increased
+        such that declines in the total population in Norway are estimated at approximately
+        33% since the early 1980s (Fauchald <em>et al.</em> 2015).&#160;Populations
+        in the Faroe Islands (Denmark) and Greenland are also reported to be decreasing
+        (BirdLife International 2015).<br/>The population size was estimated to be
+        increasing in the U.K. during 1969-2000, and populations in the North Sea
+        are probably currently stable or increasing after a decline in the 2000s due
+        to two very low overwinter survivals of adults (Harris and Wanless 2011,&#160;<a>Harris
+        <em>et al.</em> 2013</a>).&#160;A reduction in the recruitment of juveniles
+        into the breeding population is thought to be the most likely factor involved
+        in a sharp decrease in the number of puffins at the Fair Isle (U.K.) breeding
+        colony; from approximately 20,200 individuals in 1986 to 10,700 individuals
+        in 2012 (Miles&#160;<em>et al</em>. 2015). Adult survival probability remained
+        similar across the 27 years of the study, whilst breeding success, the number
+        of feeding visits by adults to chicks and the size of available prey fish
+        all decreased. Trends from North America are uncertain, with the population
+        at Great Island, Witless Bay showing increases between 1979 and 1994, but
+        it has potentially stabilised or is in decline now (Wilhelm <em>et al. </em>2015).
+        A restoration project off the coast of Maine has also had some success (D.
+        Wege <em>in litt. </em>2002, see&#160;http://projectpuffin.audubon.org/).<p></p>","population":"The
+        European population is estimated to be 4,770,000-5,780,000 pairs, which equates
+        to 9,550,000-11,600,000 mature individuals (BirdLife International 2015).
+        The global population size is estimated at&#160;12–14 million mature individuals
+        (Harris and Wanless 2011; Berglund and Hentati-Sundberg 2014).","populationtrend":"decreasing","habitat":"The
+        species is exclusively marine, found on rocky coasts and offshore islands
+        (Nettleship <em>et al</em>. 2014). It nests on grassy maritime slopes, sea
+        cliffs and rocky slopes. During the winter it is wide-ranging, found in offshore
+        and pelagic habitats.<br/><br/>The species is a pursuit-diver, catching most
+        of its prey within 30 m of the water surface but&#160;capable of diving to
+        60 m (Piatt and Nettleship 1985, Burger and Simpson 1986)<sup></sup>. They
+        prey on ''forage'' species, including juvenile pelagic fishes, such as herring
+        <em>Clupea harengus</em>, juvenile and adult capelin <em>Mallotus</em> <em>villosus</em>,
+        and sandeel <em>Ammodytes</em> spp. (Barrett <em>et al</em>. 1987)<strong><sup></sup></strong>.
+        At times, they also prey on juvenile demersal fishes, such as gadids; planktonic
+        crustaceans; and polychaete worms (Harris and Hislop 1978, Barrett <em>et
+        al. </em>1987, Martin 1989, Rodway and Montevecchi 1996, Harris <em>et al.
+        </em>2015)<strong><sup></sup></strong>. In the southern and eastern parts
+        of its range, sandeels usually form the majority of the prey fed to chicks
+        (Corkhill 1973, Hislop and Harris 1985, Harris and Wanless 1986, Martin 1989,
+        Harris and Riddiford 1989).&#160;However, there are exceptions, such as at
+        Skomer Island in 1969 when sprat made up the majority of the diet fed to chicks
+        (Corkhill 1973), and in the Lofoten islands, where first-year herring are
+        often the commonest food of chicks (Anker-Nilssen and Aarvak 2006).<br/><br/>When
+        feeding chicks, birds generally forage within 10 km of their colony, but may
+        range as far as 50 to 100 km or more (Harris 1984,&#160;Anker-Nilssen and
+        Lorentsen 1990,&#160;Rodway and Montevecchi 1996)<strong><sup></sup></strong>.
+        A boat transect run on one day in 1970 found that 85% of all birds seen were
+        concentrated within just 3 km of the colony (BirdLife International 2000)<strong><sup></sup></strong>,
+        but other studies have found peaks in the density of foraging birds at up
+        to 40 km distance from the colony (Webb <em>et al.</em> 1985, Stone <em>et
+        al.</em> 1992, Stone <em>et al. </em>1993, BirdLife International 2000)<strong><sup></sup></strong>.
+        Similarly, surveys and GPS tracking at the Isle of May, Scotland, suggest
+        that birds forage close to the breeding colony, but also at other sites up
+        to 40 km away (Wanless <em>et al.</em> 1990, BirdLife International 2000,
+        Harris <em>et al. </em>2012)<strong><sup></sup></strong>. Various studies
+        (Pearson 1968, Corkhill 1973, Bradstreet and Brown 1985, BirdLife International
+        2000)<strong><sup></sup></strong>, based on different breeding colonies, have
+        estimated the theoretical maximum foraging radius at anywhere from 32 km (Corkhill
+        1973)<strong><sup></sup></strong> to 200 km (Bradstreet and Brown 1985). <p></p>","threats":"<p>This
+        species is highly susceptible to the impacts of climate change, such as increased
+        sea surface temperature (SST) and associated shifts in prey (e.g. Herring,
+        Sandeel) distribution, abundance and quality (Durant<em> et al.</em> 2003,
+        Sandvik<em> et al. </em>2005). Breeding failures are usually assumed to be
+        due to food shortages (e.g. Martin 1989, Anker-Nilssen and Aarvak 2006, Harris
+        and Wanless 2011, Anker-Nilssen <em>et al.</em> 2016), as changing temperatures
+        can cause mismatches between plankton blooms, prey abundance peaks and Puffin
+        breeding seasons, leading to poor chick growth, shortened nesting periods
+        and lower fledging success (Durant <em>et al. </em>2006). Sandvik <em>et al.</em>
+        (2005) demonstrated decreased survival in North Atlantic seabirds (including
+        the puffin) with increasing SST. There are several recorded examples of food
+        stock collapse and its detrimental consequences for Puffins; The Sandeel population
+        collapse near Shetland in 1985-1990 led to successive years of breeding failures
+        (Mitchell <em>et al.</em> 2004), and another Sandeel crash in South and West
+        Iceland and the Faroes in 2003-2005 led to food scarcity and collapse of Puffin
+        populations with some colonies having 0% breeding success (Hansen and Sigurdsson
+        <em>in litt. </em>2016).</p>  <p>Extreme weather and storms can cause mass
+        mortality of seabirds, with large wrecks recorded following severe winter
+        storms at sea, and represents a potentially growing threat due to the predicted
+        increase in the frequency of extreme weather events (Melillo <em>et al. </em>2014).
+        In Pop Witless Bay, extreme cold and wet weather in 2011 caused the death
+        of thousands of chicks across Witless Bay Reserve (Wilhelm <em>et al.</em>
+        2015). A severe wreck in March 2016 also delayed breeding on Isle of May (Newell
+        2016). The 2002 Norway wreck could have caused the death of as many as 100,000
+        birds, diagnosed as prolonged exposure to adverse feeding conditions at sea
+        (but may also have been caused by disease or climatic factors affecting prey
+        abundance) (Anker-Nilssen<em> et al.</em> 2013). A large wreck occurred in
+        March 2013 along the coast of Scotland/northeastern UK, also coinciding with
+        periods of extreme weather (3,055 and 1,364 birds collected on Scottish and
+        English coast, respectively), where the majority died of starvation, likely
+        due to difficulty feeding at sea (Harris and Elkins 2013). Productivity fell
+        to 0.46 in the Farne islands in 2015 due to flooding caused by two major storms
+        that destroyed nests with chicks (Wildlife review 2015). More such examples
+        have been recorded throughout the species’ range.</p>  <p>The threat of climate
+        change to food stocks is exacerbated by the unsustainable harvesting of prey
+        species by commercial fisheries, causing further reductions in food availability
+        and subsequent low breeding success (Breton and Diamond 2014). Major fisheries
+        have been noted as contributing to the collapse of key prey fish species since
+        the 1960s and been linked to reproductive failure at colonies such as Røst,
+        Norway (reduced recruitment due to food shortage in breeding season is considered
+        the most likely cause of decline during 1986-2012) (Tasker <em>et al. </em>2000,
+        Anker-Nilssen <em>et al.</em> 2003, Miles <em>et al.</em> 2015). In addition
+        to overharvesting of prey stocks, commercial fisheries are a cause of direct
+        mortality. The Atlantic Puffin’s foraging strategy (diving) makes the species
+        susceptible to being caught in gillnets and other fishing gear, but bycatch
+        has not been recorded in significantly large numbers (Tasker <em>et al.</em>
+        2000, Rogan and Mackey 2007) and likely has a “trivial effect” on Puffin populations
+        (Harris and Wanless 2011).</p>  <p>At the breeding colonies, the species is
+        vulnerable to invasive predators. American Mink <em>Neovison vison</em> is
+        known to take puffins from burrows, and the escape of mink from fur farms
+        in Iceland in the early 1930s drove many colonies to extinction in the following
+        decades (Harris and Wanless 2011). Mink are still causing low rates of chick
+        survival in parts of the range, including Hornøya, Norway (Barrett 2015).
+        Rats <em>Rattus</em> spp. depredate eggs and chicks and have been linked to
+        drastic colony declines and local extinctions in Sweden (Harris and Wanless
+        2011), on the Faroe Islands (Stempniewicz and Jensen 2007), Lundy Island (Lock
+        2006), Shiant Islands (Lockley 1953), and Ailsa Craig and Puffin Islands (Mitchell
+        <em>et al.</em> 2004) (see also TemaNord 2010). Recolonisation and population
+        recovery can be seen after rat eradication (Lock 2006).</p>  <p>Hunting of
+        puffins, mostly for human consumption, is allowed on the Faeroe Islands and
+        Iceland (Thorup <em>et al. </em>2014), yet uncontrolled harvesting in nesting
+        grounds may lead to local declines. Adult birds are taken during the nesting
+        season, thus causing reduced reproductive success and significant adult mortality,
+        in addition to the general effects of disturbance. 10,000 individuals were
+        recorded to be taken annually in the Nólsoy colony (Faeroes) and 150,000 in
+        Iceland. This is suspected to limit recovery of populations and may exceed
+        recruitment rate on Iceland, while the Nólsoy population is considered stable
+        only due to migration (Stempniewicz and Jensen 2007). The species is particularly
+        vulnerable to disturbance when nesting, and human intrusion associated with
+        other recreational activities (tourism, walks) may also impact the species.
+        Nest desertions have been recorded (Nettleship <em>et al. </em>2014), and
+        at one study site a 40% decrease in breeding success was seen in a frequently
+        visited area compared to the control site (Rodway<em> et al. </em>1996).</p>  <p>The
+        species is also vulnerable to oil spills and other forms of marine pollution.
+        Past oil spills have had severe impacts on affected puffin populations; the
+        wreck of the Torrey Canyon in 1967 was linked to decline in puffin numbers
+        at Sept-Iles (Brittany) and the wreck of the oil tanker Amoco Cadiz (1978)
+        badly affected moulting puffins in the region, killing 1,391 confirmed puffins
+        which coincided with a 44% reduction in the Sept-Iles population. The number
+        of Puffins killed is likely an underestimate, as many will not be recovered
+        or identified on beaches after wrecks (Harris and Wanless 2011). Oiled puffins
+        are often unable to fly, accentuating the effects of reduced food supplies
+        and extreme weather preventing feeding. However, other oil spills seem to
+        have had less effect on Puffin populations; the Tricolor spill in 2003 (Netherlands)
+        was not found to have been a major cause of a local puffin wreck (35% of birds
+        were oiled, most after death) (Camphuysen 2003). Nonetheless, the greatest
+        impact of oil spills is likely to be on long-term condition of adults and
+        ecosystem degradation, imposing a further risk to the Atlantic Puffin’s food
+        resources. Various incidences of other marine pollutants have been recorded
+        in the species; in 1970 21% of carcasses found in Scotland, and 22% of those
+        shot off the coast of Norway contained elastic threads and other plastic particles
+        (nylon thread, plastic beads etc). Given that the same proportion of pollutants
+        were measured in healthy and deceased Puffins on Isle of May, pollution is
+        regarded unlikely to be the primary cause of death, but may still pose a risk
+        by accumulating over time and accentuating other threats for individuals already
+        compromised by low food availability, adverse climatic conditions or hunting.
+        The highest proportion of pollutants were found in first year birds, which
+        may be explained by higher mortality among young birds with higher loads and
+        only the less polluted birds reaching adulthood (Harris and Wanless 2011).  </p><p>Increasing
+        numbers of offshore windfarms could result in displacement, but the risk of
+        collision is considered very low (Bradbury <em>et al.</em> 2014). However,
+        a study into puffin vision suggests they may be vulnerable to collision with
+        man-made objects related to underwater wind farms (Martin and Wanless 2015).<br/></p>","conservationmeasures":"<strong>Conservation
+        and Research Actions Underway</strong><br/>The species is listed under the
+        African Eurasian Waterbird Agreement. It is included in the Action Plan for
+        Seabirds in Western-Nordic Areas (TemaNord 2010). There are 76 marine Important
+        Bird Areas identified across the European region. Within the EU there are
+        40 Special Protection Areas which list this species as occurring within its
+        boundaries.&#160;<br/><br/><strong>Conservation and Research Actions Proposed</strong><br/>Further
+        identify important sites for this species, particularly in offshore regions
+        and designation as marine protected areas. Increase knowledge of the species''s
+        ecological requirements in winter (Harris <em>et al. </em>2015). Develop monitoring
+        schemes to understand population trends (Nettleship <em>et al</em>. 2014).
+        Identify the risks of different activities on seabirds, and locations sensitive
+        to seabirds.&#160;Continue eradication of invasive predators from breeding
+        colonies. Manage fisheries to ensure long-term sustainability of key stocks
+        (e.g. sandeels). Establish observer schemes for bycatch and prepare National/Regional
+        plans of action on seabird bycatch. Continue Arctic Monitoring and Assessment
+        Programme (AMAP) monitoring of seabird contaminants; include new contaminants
+        and secure communication between seabird and contaminants research.&#160;Develop
+        a system to monitor and predict impacts of offshore oil developments on important
+        areas for the species, in particular, key wintering sites (Nettleship&#160;<em>et
+        al</em>. 2014).&#160;Increase the level of understanding among the public
+        of introducing hunting restrictions. Develop codes-of-conduct for more organised
+        activities (e.g. tourism). Ensure that appropriate protection (national laws
+        and international agreements) applies to new areas and times in cases of changes
+        in seabird migration routes and times.","usetrade":null}]}'
+  recorded_at: 2020-01-28 00:43:34 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0

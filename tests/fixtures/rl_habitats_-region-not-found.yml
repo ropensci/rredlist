@@ -1,0 +1,32 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://apiv3.iucnredlist.org/api/v3/habitats/species/id/22694927/region/34234?token=<<rredlist_api_token>>
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(rredlist/0.6.0)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      server: nginx/1.1.19
+      date: Tue, 28 Jan 2020 00:41:04 GMT
+      content-type: application/json; charset=utf-8
+      content-length: '90'
+      connection: keep-alive
+      x-powered-by: Sails <sailsjs.org>
+      vary: Accept-Encoding
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"error":"Region not found. If you require assistance, please refer
+        to the contact page."}'
+  recorded_at: 2020-01-28 00:41:05 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0

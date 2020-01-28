@@ -1,0 +1,64 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://apiv3.iucnredlist.org/api/v3/threats/species/name/Fratercula%20arctica?token=<<rredlist_api_token>>
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(rredlist/0.6.0)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      server: nginx/1.1.19
+      date: Tue, 28 Jan 2020 00:44:45 GMT
+      content-type: application/json; charset=utf-8
+      transfer-encoding: chunked
+      connection: keep-alive
+      x-powered-by: Sails <sailsjs.org>
+      etag: '"254832005"'
+      vary: Accept-Encoding
+      content-encoding: gzip
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"name":"Fratercula arctica","result":[{"code":"11.3","title":"Temperature
+        extremes","timing":"Ongoing","scope":"Majority (50-90%)","severity":"Slow,
+        Significant Declines","score":"Medium Impact: 6","invasive":null},{"code":"11.4","title":"Storms
+        & flooding","timing":"Ongoing","scope":"Minority (<50%)","severity":"Rapid
+        Declines","score":"Medium Impact: 6","invasive":null},{"code":"3.3","title":"Renewable
+        energy","timing":"Ongoing","scope":"Minority (<50%)","severity":"Causing/Could
+        cause fluctuations","score":"Low Impact: 5","invasive":null},{"code":"5.1","title":"Hunting
+        & trapping terrestrial animals","timing":"Ongoing","scope":"Minority (<50%)","severity":"Slow,
+        Significant Declines","score":"Low Impact: 5","invasive":null},{"code":"5.1.1","title":"Intentional
+        use (species is the target)","timing":"Ongoing","scope":"Minority (<50%)","severity":"Slow,
+        Significant Declines","score":"Low Impact: 5","invasive":null},{"code":"5.4","title":"Fishing
+        & harvesting aquatic resources","timing":"Ongoing","scope":"Unknown","severity":"Rapid
+        Declines","score":"Unknown","invasive":null},{"code":"5.4.4","title":"Unintentional
+        effects: (large scale) [harvest]","timing":"Ongoing","scope":"Unknown","severity":"Rapid
+        Declines","score":"Unknown","invasive":null},{"code":"6.1","title":"Recreational
+        activities","timing":"Ongoing","scope":"Minority (<50%)","severity":"Negligible
+        declines","score":"Low Impact: 4","invasive":null},{"code":"8.1","title":"Invasive
+        non-native/alien species/diseases (Neovison vison)","timing":"Ongoing","scope":"Majority
+        (50-90%)","severity":"Slow, Significant Declines","score":"Medium Impact:
+        6","invasive":"Neovison vison"},{"code":"8.1","title":"Invasive non-native/alien
+        species/diseases (Unspecified Rattus)","timing":"Ongoing","scope":"Majority
+        (50-90%)","severity":"Slow, Significant Declines","score":"Medium Impact:
+        6","invasive":"Unspecified Rattus"},{"code":"8.1.2","title":"Named species
+        (Neovison vison)","timing":"Ongoing","scope":"Majority (50-90%)","severity":"Slow,
+        Significant Declines","score":"Medium Impact: 6","invasive":"Neovison vison"},{"code":"8.1.2","title":"Named
+        species (Unspecified Rattus)","timing":"Ongoing","scope":"Majority (50-90%)","severity":"Slow,
+        Significant Declines","score":"Medium Impact: 6","invasive":"Unspecified Rattus"},{"code":"9.2","title":"Industrial
+        & military effluents","timing":"Ongoing","scope":"Minority (<50%)","severity":"Slow,
+        Significant Declines","score":"Low Impact: 5","invasive":null},{"code":"9.2.1","title":"Oil
+        spills","timing":"Ongoing","scope":"Minority (<50%)","severity":"Slow, Significant
+        Declines","score":"Low Impact: 5","invasive":null},{"code":"9.4","title":"Garbage
+        & solid waste","timing":"Ongoing","scope":"Minority (<50%)","severity":"Unknown","score":"Unknown","invasive":null}]}'
+  recorded_at: 2020-01-28 00:44:45 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0
