@@ -7,7 +7,7 @@
 rl_citation(...)
 }
 \arguments{
-\item{...}{Curl options passed to \code{\link[crul:HttpClient]{crul::HttpClient()}}}
+\item{...}{Curl options passed to \link[crul:verb-GET]{crul::verb-GET}}
 }
 \value{
 API citation as character string

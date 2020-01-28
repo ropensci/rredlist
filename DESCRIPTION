@@ -4,7 +4,7 @@ Title: 'IUCN' Red List Client
 Description: 'IUCN' Red List (<http://apiv3.iucnredlist.org/api/v3/docs>) client.
     The 'IUCN' Red List is a global list of threatened and endangered species.
     Functions cover all of the Red List 'API' routes. An 'API' key is required.
-Version: 0.5.1.9100
+Version: 0.6.0
 Authors@R: 
     c(person(given = "Scott",
              family = "Chamberlain",
@@ -16,19 +16,23 @@ Authors@R:
       person(given = "Maëlle",
              family = "Salmon",
              role = "ctb",
-             email = "maelle.salmon@yahoo.se"))
+             email = "maelle.salmon@yahoo.se"),
+      person("rOpenSci", role = "fnd", comment = "https://ropensci.org")
+      )
 License: MIT + file LICENSE
-URL: https://docs.ropensci.org/rredlist, https://github.com/ropensci/rredlist
+URL: https://github.com/ropensci/rredlist (devel)
+    https://docs.ropensci.org/rredlist (docs)
 BugReports: https://github.com/ropensci/rredlist/issues
 Roxygen: list(markdown = TRUE)
+Encoding: UTF-8
+Language: en-US
 Imports:
     crul (>= 0.3.8),
     jsonlite (>= 1.1)
 Suggests:
-    roxygen2 (>= 6.1.1),
     testthat,
-    webmockr (>= 0.2.6),
-    vcr (>= 0.2.0.9114)
-Encoding: UTF-8
+    vcr (>= 0.4.0)
 RoxygenNote: 7.0.2
-Remotes: ropensci/vcr
+X-schema.org-applicationCategory: Biodiversity
+X-schema.org-keywords: IUCN, biodiversity, API, web-services, traits, habitat, species, conservation
+X-schema.org-isPartOf: https://ropensci.org

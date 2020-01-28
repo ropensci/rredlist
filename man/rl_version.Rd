@@ -7,7 +7,7 @@
 rl_version(...)
 }
 \arguments{
-\item{...}{Curl options passed to \code{\link[crul:HttpClient]{crul::HttpClient()}}}
+\item{...}{Curl options passed to \link[crul:verb-GET]{crul::verb-GET}}
 }
 \value{
 API version as character string

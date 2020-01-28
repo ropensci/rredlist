@@ -19,7 +19,7 @@ that work closely with the IUCN Red List."
 \section{Authentication}{
 
 IUCN requires you to get your own API key, an alphanumeric string that you
-need to send in every request. See key A IUCN API token. See \code{\link{rl_use_iucn}}
+need to send in every request. See key A IUCN API token. See \code{\link[=rl_use_iucn]{rl_use_iucn()}}
 for help getting and storing it. Get it at
 \url{http://apiv3.iucnredlist.org/api/v3/token}
 Keep this key private. You can pass the key in to each function via the
