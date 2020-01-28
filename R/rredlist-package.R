@@ -44,6 +44,11 @@
 #' Red List Unit asked that you contact them, as there might be better options.
 #' They suggest a 2-second delay between your calls if you plan to make a
 #' lot of calls.
+#' 
+#' @section Data Discrepancy:
+#' There can sometimes be a discrepancy between what you get on the IUCN
+#' website and what you get with this package; we don't know why, the IUCN
+#' API is not an open book.
 #'
 #' @section Citing the IUCN Red List API:
 #' See <http://apiv3.iucnredlist.org/about>

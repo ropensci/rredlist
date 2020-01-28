@@ -5,11 +5,16 @@
 \alias{rl_measures_}
 \title{Get species conservation measures by taxon name, IUCN id, and region}
 \usage{
-rl_measures(name = NULL, id = NULL, region = NULL, key = NULL,
-  parse = TRUE, ...)
+rl_measures(
+  name = NULL,
+  id = NULL,
+  region = NULL,
+  key = NULL,
+  parse = TRUE,
+  ...
+)
 
-rl_measures_(name = NULL, id = NULL, region = NULL, key = NULL,
-  ...)
+rl_measures_(name = NULL, id = NULL, region = NULL, key = NULL, ...)
 }
 \arguments{
 \item{name}{(character) A taxonomic name}

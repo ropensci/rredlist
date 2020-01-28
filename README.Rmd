@@ -49,6 +49,9 @@ The IUCN Red List is a global list of threatened and endangered species.
 
 > important note: [redlistr][] is a different package - not working with the IUCN Red List API
 
+> Note: there can sometimes be a discrepancy between what you get on the IUCN website and what
+> you get with this package; we don't know why, the IUCN API is not an open book.
+
 ## Citing the IUCN Red List API
 
 See <http://apiv3.iucnredlist.org/about>

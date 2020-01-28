@@ -4,8 +4,14 @@
 \alias{rl_history}
 \title{Get historical assessments by taxon name, IUCN id, and region}
 \usage{
-rl_history(name = NULL, id = NULL, region = NULL, key = NULL,
-  parse = TRUE, ...)
+rl_history(
+  name = NULL,
+  id = NULL,
+  region = NULL,
+  key = NULL,
+  parse = TRUE,
+  ...
+)
 }
 \arguments{
 \item{name}{(character) A taxonomic name}

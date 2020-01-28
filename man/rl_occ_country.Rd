@@ -4,8 +4,14 @@
 \alias{rl_occ_country}
 \title{Get country occurrence by species name or ID}
 \usage{
-rl_occ_country(name = NULL, id = NULL, region = NULL, key = NULL,
-  parse = TRUE, ...)
+rl_occ_country(
+  name = NULL,
+  id = NULL,
+  region = NULL,
+  key = NULL,
+  parse = TRUE,
+  ...
+)
 }
 \arguments{
 \item{name}{(character) A taxonomic name}

@@ -5,11 +5,16 @@
 \alias{rl_growth_forms_}
 \title{Get plant species growth forms by taxon name, IUCN id, and region}
 \usage{
-rl_growth_forms(name = NULL, id = NULL, region = NULL, key = NULL,
-  parse = TRUE, ...)
+rl_growth_forms(
+  name = NULL,
+  id = NULL,
+  region = NULL,
+  key = NULL,
+  parse = TRUE,
+  ...
+)
 
-rl_growth_forms_(name = NULL, id = NULL, region = NULL, key = NULL,
-  ...)
+rl_growth_forms_(name = NULL, id = NULL, region = NULL, key = NULL, ...)
 }
 \arguments{
 \item{name}{(character) A taxonomic name}

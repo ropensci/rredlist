@@ -51,7 +51,7 @@ This package does not include support for the spatial API, described at
 \section{Citing the Red List API}{
 
 The citation is
-\code{IUCN 2015. IUCN Red List of Threatened Species. Version 2015-4 <www.iucnredlist.org>}
+\verb{IUCN 2015. IUCN Red List of Threatened Species. Version 2015-4 <www.iucnredlist.org>}
 You can get this programatically via \code{\link[=rl_citation]{rl_citation()}}
 }
 
@@ -62,6 +62,13 @@ might get your access blocked temporarily. If you're a heavy API user, the
 Red List Unit asked that you contact them, as there might be better options.
 They suggest a 2-second delay between your calls if you plan to make a
 lot of calls.
+}
+
+\section{Data Discrepancy}{
+
+There can sometimes be a discrepancy between what you get on the IUCN
+website and what you get with this package; we don't know why, the IUCN
+API is not an open book.
 }
 
 \section{Citing the IUCN Red List API}{

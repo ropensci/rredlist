@@ -5,11 +5,16 @@
 \alias{rl_sp_citation_}
 \title{Get citations by taxon name, IUCN id, and region}
 \usage{
-rl_sp_citation(name = NULL, id = NULL, region = NULL, key = NULL,
-  parse = TRUE, ...)
+rl_sp_citation(
+  name = NULL,
+  id = NULL,
+  region = NULL,
+  key = NULL,
+  parse = TRUE,
+  ...
+)
 
-rl_sp_citation_(name = NULL, id = NULL, region = NULL, key = NULL,
-  ...)
+rl_sp_citation_(name = NULL, id = NULL, region = NULL, key = NULL, ...)
 }
 \arguments{
 \item{name}{(character) A taxonomic name}

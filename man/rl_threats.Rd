@@ -5,8 +5,14 @@
 \alias{rl_threats_}
 \title{Get species threats by taxon name, IUCN id, and region}
 \usage{
-rl_threats(name = NULL, id = NULL, region = NULL, key = NULL,
-  parse = TRUE, ...)
+rl_threats(
+  name = NULL,
+  id = NULL,
+  region = NULL,
+  key = NULL,
+  parse = TRUE,
+  ...
+)
 
 rl_threats_(name = NULL, id = NULL, region = NULL, key = NULL, ...)
 }
