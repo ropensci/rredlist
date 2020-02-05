@@ -1,4 +1,4 @@
-# dummy line
+Sys.setenv("IUCN_REDLIST_KEY" = "foobar")
 # set up vcr
 library("vcr")
 invisible(vcr::vcr_configure(
