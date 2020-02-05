@@ -1,3 +1,4 @@
+# dummy line
 # set up vcr
 library("vcr")
 invisible(vcr::vcr_configure(
