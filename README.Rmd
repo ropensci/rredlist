@@ -45,7 +45,7 @@ knitr::opts_chunk$set(
 `rredlist` is an R client for the IUCN Red List (<https://apiv3.iucnredlist.org/api/v3/docs>). 
 The IUCN Red List is a global list of threatened and endangered species.
 
-[IUCN Red List docs][docs]
+IUCN Red List docs: http://apiv3.iucnredlist.org/api/v3/docs The web API [needs authentication](#authentication).
 
 > What rredlist is not: [redlistr][] is a different package - not working with the IUCN Red List API; Furthermore, rredlist does not include support for the spatial API, described at
 <https://apiv3.iucnredlist.org/spatial>.
@@ -59,7 +59,7 @@ The IUCN Red List is a global list of threatened and endangered species.
 library("rredlist")
 ```
 
-High level functions do the HTTP request and parse to data to a data.frame for ease
+High level functions do the HTTP request and parse data to a data.frame for ease
 of downstream use. The high level functions have no underscore on the end
 of the function name, e.g., `rl_search()`
 
@@ -156,7 +156,6 @@ lot of calls."
 
 
 
-[docs]: http://apiv3.iucnredlist.org/api/v3/docs
 [token]: https://apiv3.iucnredlist.org/api/v3/token
 [redlistr]: https://github.com/red-list-ecosystem/redlistr
 [coc]: https://github.com/ropensci/rredlist/blob/master/CODE_OF_CONDUCT.md
