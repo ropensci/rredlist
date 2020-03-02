@@ -75,10 +75,10 @@ rl_search('Fratercula arctica', parse = FALSE)
 
 For even more speed, use the low level package interface.
 
-## Low level API
+## Low level interface
 
-The parsing to data.frame in the high level API does take extra time. The low level API
-only does the HTTP request, and gives back JSON without doing any more parsing. The low level functions DO have an underscore on the end
+The parsing to data.frame in the high level functions does take extra time. The low level functions
+only do the HTTP request, and give back JSON without doing any more parsing. The low level functions DO have an underscore on the end
 of the function name, e.g., `rl_search_()`
 
 ```{r}
