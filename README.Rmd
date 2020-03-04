@@ -1,5 +1,13 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
 rredlist
 ========
+
+> R client for the IUCN Red List of threatened and endangered species.
 
 ```{r echo=FALSE}
 library("knitr")
@@ -42,16 +50,13 @@ knitr::opts_chunk$set(
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rredlist)](https://github.com/metacran/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/rredlist)](https://cran.r-project.org/package=rredlist)
 
-`rredlist` is an R client for the IUCN Red List (<https://apiv3.iucnredlist.org/api/v3/docs>). 
+`rredlist` is an R client for the IUCN Red List (https://apiv3.iucnredlist.org/api/v3/docs). 
 The IUCN Red List is a global list of threatened and endangered species.
 
 IUCN Red List docs: http://apiv3.iucnredlist.org/api/v3/docs The web API [needs authentication](#authentication).
 
 > What rredlist is not: [redlistr][] is a different package - not working with the IUCN Red List API; Furthermore, rredlist does not include support for the spatial API, described at
-<https://apiv3.iucnredlist.org/spatial>.
-
-> Note: there can sometimes be a discrepancy between what you get on the IUCN website and what
-> you get with this package; we don't know why, the IUCN API is not an open book.
+https://apiv3.iucnredlist.org/spatial.
 
 ## High level interface
 
@@ -66,6 +71,9 @@ of the function name, e.g., `rl_search()`
 ```{r}
 rl_search('Fratercula arctica')
 ```
+
+> Note: there can sometimes be a discrepancy between what you get on the IUCN website and what
+> you get with this package; we don't know why, the IUCN API is not an open book.
 
 Likely a bit faster is to parse to a list only, and not take the extra data.frame parsing time
 
@@ -118,7 +126,7 @@ remotes::install_github("ropensci/rredlist")
 
 ### Authentication
 
-IUCN requires you to get your own API key, an alphanumeric string that you need to send in every request. There's an helper function in the package helping you getting it at <https://apiv3.iucnredlist.org/api/v3/token> and storing it.
+IUCN requires you to get your own API key, an alphanumeric string that you need to send in every request. There's an helper function in the package helping you getting it at https://apiv3.iucnredlist.org/api/v3/token and storing it.
 
 ```{r}
 rredlist::rl_use_iucn()
