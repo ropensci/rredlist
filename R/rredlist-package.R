@@ -1,5 +1,5 @@
-#' rredlist - IUCN Red List Client
-#'
+#' @title rredlist
+#' @description IUCN Red List R Client
 #' @section Taxonomic Names vs. IUCN IDs:
 #' From the documentation (quoting): "It is advisable wherever possible to use
 #' the taxon name (species name) to make your API calls, rather than using IDs.

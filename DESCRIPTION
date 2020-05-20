@@ -31,7 +31,7 @@ Imports:
 Suggests:
     testthat,
     vcr (>= 0.4.0)
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.0
 X-schema.org-applicationCategory: Biodiversity
 X-schema.org-keywords: IUCN, biodiversity, API, web-services, traits, habitat, species, conservation
 X-schema.org-isPartOf: https://ropensci.org

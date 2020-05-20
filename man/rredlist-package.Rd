@@ -4,9 +4,9 @@
 \name{rredlist-package}
 \alias{rredlist-package}
 \alias{rredlist}
-\title{rredlist - IUCN Red List Client}
+\title{rredlist}
 \description{
-rredlist - IUCN Red List Client
+IUCN Red List R Client
 }
 \section{Taxonomic Names vs. IUCN IDs}{
 
