@@ -6,7 +6,7 @@ http_interactions:
       encoding: ''
       string: ''
     headers:
-      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(rredlist/0.6.0)
+      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(rredlist/0.6.0.91)
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
   response:
@@ -16,16 +16,19 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      server: nginx/1.1.19
-      date: Tue, 28 Jan 2020 00:41:33 GMT
+      server: nginx/1.14.0 (Ubuntu)
+      date: Sun, 03 May 2020 16:07:25 GMT
       content-type: application/json; charset=utf-8
       content-length: '20'
       connection: keep-alive
       x-powered-by: Sails <sailsjs.org>
+      etag: W/"14-O864lh6yoAoRuDqCP2sZCg"
       vary: Accept-Encoding
+      set-cookie: sails.sid=s%3Apdh9bs8LpEQWoLXuFLaf31NiNm8irxLl.hjhuIFSeICzR7MW9QTa2UTrsUiiqLj5jbkE%2B0nXR0lQ;
+        Path=/; HttpOnly
     body:
       encoding: UTF-8
       file: no
-      string: '{"version":"2019-3"}'
-  recorded_at: 2020-01-28 00:41:33 GMT
-  recorded_with: vcr/0.4.0, webmockr/0.5.0
+      string: '{"version":"2020-1"}'
+  recorded_at: 2020-05-03 16:07:26 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
