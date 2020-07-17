@@ -2,6 +2,7 @@ context("rl_narrative functions")
 
 test_that("high level works - parsing", {
   skip_on_cran()
+  skip_on_ci()
 
   vcr::use_cassette("rl_narrative", {
     aa <- rl_narrative('Fratercula arctica')
@@ -16,6 +17,7 @@ test_that("high level works - parsing", {
 
 test_that("high level works - not parsing", {
   skip_on_cran()
+  skip_on_ci()
 
   vcr::use_cassette("rl_narrative-not-parsing", {
     aa <- rl_narrative('Fratercula arctica', parse = FALSE)
@@ -30,6 +32,7 @@ test_that("high level works - not parsing", {
 
 test_that("low level works", {
   skip_on_cran()
+  skip_on_ci()
 
   library("jsonlite")
 
