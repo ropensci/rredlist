@@ -11,3 +11,4 @@ man-roxygen
 ^revdep$
 Makefile
 ^codemeta\.json$
+^LICENSE\.md$
