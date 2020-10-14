@@ -9,13 +9,7 @@ rredlist
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rredlist)](https://github.com/r-hub/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/rredlist)](https://cran.r-project.org/package=rredlist)
 
-`rredlist` is an R client for the IUCN Red List (https://apiv3.iucnredlist.org/api/v3/docs). 
-The IUCN Red List is a global list of threatened and endangered species.
-
-IUCN Red List docs: http://apiv3.iucnredlist.org/api/v3/docs The web API [needs authentication](#authentication).
-
-> What rredlist is not: [redlistr][] is a different package - not working with the IUCN Red List API; Furthermore, rredlist does not include support for the spatial API, described at
-https://apiv3.iucnredlist.org/spatial.
+`rredlist` is an R client for the IUCN Red List (https://apiv3.iucnredlist.org/api/v3/docs). The IUCN Red List is a global list of threatened and endangered species. IUCN Red List docs: https://apiv3.iucnredlist.org/api/v3/docs
 
 ## Installation
 
