@@ -20,7 +20,7 @@ Authors@R:
       )
 License: MIT + file LICENSE
 URL: https://github.com/ropensci/rredlist (devel)
-    https://docs.ropensci.org/rredlist (docs)
+    https://docs.ropensci.org/rredlist/ (docs)
 BugReports: https://github.com/ropensci/rredlist/issues
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
