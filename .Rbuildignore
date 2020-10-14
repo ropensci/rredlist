@@ -12,3 +12,4 @@ man-roxygen
 Makefile
 ^codemeta\.json$
 ^LICENSE\.md$
+vignettes/rredlist.Rmd

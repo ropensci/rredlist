@@ -26,3 +26,8 @@ readme:
 
 check_windows:
 	${RSCRIPT} -e "devtools::check_win_devel(); devtools::check_win_release()"
+
+vign:
+	cd vignettes;\
+	${RSCRIPT} -e "Sys.setenv(NOT_CRAN='true'); knitr::knit('rredlist.Rmd.og', output = 'rredlist.Rmd')";\
+	cd ..

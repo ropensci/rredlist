@@ -1,0 +1,153 @@
+---
+title: "rredlist"
+author: "Scott Chamberlain"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: readable
+vignette: >
+  %\VignetteIndexEntry{Introduction to rredlist}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r echo=FALSE}
+library("knitr")
+library("rredlist")
+hook_output <- knitr::knit_hooks$get("output")
+knitr::knit_hooks$set(output = function(x, options) {
+   lines <- options$output.lines
+   if (is.null(lines)) {
+     return(hook_output(x, options))  # pass to default hook
+   }
+   x <- unlist(strsplit(x, "\n"))
+   more <- "..."
+   if (length(lines)==1) {        # first n lines
+     if (length(x) > lines) {
+       # truncate the output, but add ....
+       x <- c(head(x, lines), more)
+     }
+   } else {
+     x <- c(if (abs(lines[1])>1) more else NULL,
+            x[lines],
+            if (length(x)>lines[abs(length(lines))]) more else NULL
+           )
+   }
+   # paste these lines together
+   x <- paste(c(x, ""), collapse = "\n")
+   hook_output(x, options)
+ })
+
+knitr::opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+`rredlist` is an R client for the IUCN Red List (https://apiv3.iucnredlist.org/api/v3/docs). 
+The IUCN Red List is a global list of threatened and endangered species.
+
+IUCN Red List docs: http://apiv3.iucnredlist.org/api/v3/docs The web API [needs authentication](#authentication).
+
+> What rredlist is not: [redlistr][] is a different package - not working with the IUCN Red List API; Furthermore, rredlist does not include support for the spatial API, described at
+https://apiv3.iucnredlist.org/spatial.
+
+
+## Installation
+
+CRAN
+
+```{r eval=FALSE}
+install.packages("rredlist")
+```
+
+Development version
+
+```{r eval=FALSE}
+remotes::install_github("ropensci/rredlist")
+# OR
+install.packages("rredlist", repos="https://dev.ropensci.org")
+```
+
+## Authentication
+
+IUCN requires you to get your own API key, an alphanumeric string that you need to send in every request. There's an helper function in the package helping you getting it at https://apiv3.iucnredlist.org/api/v3/token and storing it.
+
+```{r}
+rredlist::rl_use_iucn()
+```
+
+Keep this key private. You can pass the key in to each function via the `key` parameter, but it's better to store the key either as a environment variable (`IUCN_REDLIST_KEY`) or an R option (`iucn_redlist_key`) - we recommend using the former option.
+
+
+## High level interface
+
+```{r}
+library("rredlist")
+```
+
+High level functions do the HTTP request and parse data to a data.frame for ease
+of downstream use. The high level functions have no underscore on the end
+of the function name, e.g., `rl_search()`
+
+```{r}
+rl_search('Fratercula arctica')
+```
+
+> Note: there can sometimes be a discrepancy between what you get on the IUCN website and what
+> you get with this package; we don't know why, the IUCN API is not an open book.
+
+Likely a bit faster is to parse to a list only, and not take the extra data.frame parsing time
+
+```{r output.lines=1:10}
+rl_search('Fratercula arctica', parse = FALSE)
+```
+
+For even more speed, use the low level package interface.
+
+## Low level interface
+
+The parsing to data.frame in the high level functions does take extra time. The low level functions
+only do the HTTP request, and give back JSON without doing any more parsing. The low level functions DO have an underscore on the end
+of the function name, e.g., `rl_search_()`
+
+```{r}
+rl_search_('Fratercula arctica')
+```
+
+To consume this JSON, you can use `jsonlite`
+
+```{r}
+library("jsonlite")
+jsonlite::fromJSON(rl_search_('Fratercula arctica'))
+```
+
+Or other tools, e.g., `jq` via the `jqr` R client
+
+```{r output.lines=1:20}
+# remotes::install_github("ropensci/jqr")
+library("jqr")
+rl_search_('Fratercula arctica') %>% dot()
+```
+
+## Usage best practice
+
+### Citing the IUCN Red List API
+
+Use the function `rl_citation()`:
+
+```{r}
+rl_citation()
+```
+
+### Rate Limiting
+
+From the IUCN folks: "Too many frequent calls, or too many calls per day
+might get your access blocked temporarily. If you're a heavy API user, the
+Red List Unit asked that you contact them, as there might be better options.
+They suggest a 2-second delay between your calls if you plan to make a
+lot of calls."
