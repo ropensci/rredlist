@@ -52,5 +52,5 @@ rl_narrative_('Fratercula arctica', region = 'europe')
 }
 }
 \references{
-API docs at \url{http://apiv3.iucnredlist.org/api/v3/docs}
+API docs at https://apiv3.iucnredlist.org/api/v3/docs
 }
