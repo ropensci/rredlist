@@ -1,12 +1,12 @@
 language: r
 os: linux
 cache: packages
-dist: trusty
+dist: xenial
 
 r_packages:
   - covr
 
-matrix:
+jobs:
   include:
     - os: linux
       r: release
