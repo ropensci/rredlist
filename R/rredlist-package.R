@@ -10,7 +10,7 @@
 #' IUCN requires you to get your own API key, an alphanumeric string that you
 #' need to send in every request. See key A IUCN API token. See [rl_use_iucn()]
 #' for help getting and storing it. Get it at
-#' <http://apiv3.iucnredlist.org/api/v3/token>
+#' https://apiv3.iucnredlist.org/api/v3/token
 #' Keep this key private. You can pass the key in to each function via the
 #' `key` parameter, but it's better to store the key either as a
 #' environment variable (`IUCN_REDLIST_KEY`) or an R option
@@ -30,13 +30,14 @@
 #'
 #' @section No Spatial:
 #' This package does not include support for the spatial API, described at
-#' <http://apiv3.iucnredlist.org/spatial>
+#' https://apiv3.iucnredlist.org/spatial
 #'
 #' @section Citing the Red List API:
-#' The citation is
-#' `IUCN 2015. IUCN Red List of Threatened Species. Version 2015-4
-#' <www.iucnredlist.org>`
-#' You can get this programatically via [rl_citation()]
+#' Get the proper citation for the version of the Red List you are using
+#' by programatically running [rl_citation()]
+#' 
+#' @section Red List API Terms of Use:
+#' See https://www.iucnredlist.org/terms/terms-of-use
 #'
 #' @section Rate limiting:
 #' From the IUCN folks: Too many frequent calls, or too many calls per day
@@ -44,19 +45,13 @@
 #' Red List Unit asked that you contact them, as there might be better options.
 #' They suggest a 2-second delay between your calls if you plan to make a
 #' lot of calls.
-#' 
-#' @section Data Discrepancy:
-#' There can sometimes be a discrepancy between what you get on the IUCN
-#' website and what you get with this package; we don't know why, the IUCN
-#' API is not an open book.
 #'
 #' @section Citing the IUCN Red List API:
-#' See <http://apiv3.iucnredlist.org/about>
+#' See https://apiv3.iucnredlist.org/about
 #'
 #' @importFrom jsonlite fromJSON
 #' @name rredlist-package
 #' @aliases rredlist
 #' @docType package
-#' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
 #' @keywords package
 NULL

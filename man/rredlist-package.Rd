@@ -21,7 +21,7 @@ that work closely with the IUCN Red List."
 IUCN requires you to get your own API key, an alphanumeric string that you
 need to send in every request. See key A IUCN API token. See \code{\link[=rl_use_iucn]{rl_use_iucn()}}
 for help getting and storing it. Get it at
-\url{http://apiv3.iucnredlist.org/api/v3/token}
+https://apiv3.iucnredlist.org/api/v3/token
 Keep this key private. You can pass the key in to each function via the
 \code{key} parameter, but it's better to store the key either as a
 environment variable (\code{IUCN_REDLIST_KEY}) or an R option
@@ -45,14 +45,18 @@ the end of the function name, e.g., \code{\link[=rl_search_]{rl_search_()}}
 \section{No Spatial}{
 
 This package does not include support for the spatial API, described at
-\url{http://apiv3.iucnredlist.org/spatial}
+https://apiv3.iucnredlist.org/spatial
 }
 
 \section{Citing the Red List API}{
 
-The citation is
-\verb{IUCN 2015. IUCN Red List of Threatened Species. Version 2015-4 <www.iucnredlist.org>}
-You can get this programatically via \code{\link[=rl_citation]{rl_citation()}}
+Get the proper citation for the version of the Red List you are using
+by programatically running \code{\link[=rl_citation]{rl_citation()}}
+}
+
+\section{Red List API Terms of Use}{
+
+See https://www.iucnredlist.org/terms/terms-of-use
 }
 
 \section{Rate limiting}{
@@ -64,19 +68,9 @@ They suggest a 2-second delay between your calls if you plan to make a
 lot of calls.
 }
 
-\section{Data Discrepancy}{
-
-There can sometimes be a discrepancy between what you get on the IUCN
-website and what you get with this package; we don't know why, the IUCN
-API is not an open book.
-}
-
 \section{Citing the IUCN Red List API}{
 
-See \url{http://apiv3.iucnredlist.org/about}
+See https://apiv3.iucnredlist.org/about
 }
 
-\author{
-Scott Chamberlain \email{myrmecocystus@gmail.com}
-}
 \keyword{package}
