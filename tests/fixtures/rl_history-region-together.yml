@@ -1,7 +1,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://apiv3.iucnredlist.org/api/v3/species/history/id/22823/region/europe?token=<<rredlist_api_token>>
+    uri: https://apiv3.iucnredlist.org/api/v3/species/history/id/22823/region/europe?token=<<rredlist_api_token>>
     body:
       encoding: ''
       string: ''
@@ -31,7 +31,7 @@ http_interactions:
   recorded_with: vcr/0.4.0, webmockr/0.5.0
 - request:
     method: get
-    uri: http://apiv3.iucnredlist.org/api/v3/species/history/id/22823/region/mediterranean?token=<<rredlist_api_token>>
+    uri: https://apiv3.iucnredlist.org/api/v3/species/history/id/22823/region/mediterranean?token=<<rredlist_api_token>>
     body:
       encoding: ''
       string: ''

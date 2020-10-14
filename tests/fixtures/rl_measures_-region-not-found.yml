@@ -1,7 +1,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://apiv3.iucnredlist.org/api/v3/measures/species/id/22694927/region/3wer?token=<<rredlist_api_token>>
+    uri: https://apiv3.iucnredlist.org/api/v3/measures/species/id/22694927/region/3wer?token=<<rredlist_api_token>>
     body:
       encoding: ''
       string: ''

@@ -1,7 +1,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://apiv3.iucnredlist.org/api/v3/threats/species/name/Fratercula%20arctica?token=<<rredlist_api_token>>
+    uri: https://apiv3.iucnredlist.org/api/v3/threats/species/name/Fratercula%20arctica?token=<<rredlist_api_token>>
     body:
       encoding: ''
       string: ''
