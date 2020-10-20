@@ -1,3 +1,13 @@
+rredlist 0.7.0
+===================
+
+### MINOR IMPROVEMENTS
+
+* vignette added, but only available on the docs site (#24)
+* when testing, if a iucm redlist key not found, set a dummy key (#41)
+* readme improvements (#42)
+* change base url for Red List API to https from http
+
 rredlist 0.6.0
 ===================
 

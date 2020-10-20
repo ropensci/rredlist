@@ -8,17 +8,16 @@
   "description": "'IUCN' Red List (<http://apiv3.iucnredlist.org/api/v3/docs>) client.\n    The 'IUCN' Red List is a global list of threatened and endangered species.\n    Functions cover all of the Red List 'API' routes. An 'API' key is required.",
   "name": "rredlist: 'IUCN' Red List Client",
   "codeRepository": "https://github.com/ropensci/rredlist",
-  "relatedLink": "https://docs.ropensci.org/rredlist",
+  "relatedLink": ["https://docs.ropensci.org/rredlist", "https://docs.ropensci.org/rredlist/"],
   "issueTracker": "https://github.com/ropensci/rredlist/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.6.2",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.6.2 Patched (2019-12-12 r77564)",
+  "runtimePlatform": "R version 4.0.3 (2020-10-10)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -116,6 +115,6 @@
   "keywords": ["IUCN", "biodiversity", "API", "web-services", "traits", "habitat", "species", "conservation", "api-wrapper", "rstats", "iucn-red-list", "iucn", "r", "r-package", "taxize"],
   "releaseNotes": "https://github.com/ropensci/rredlist/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/rredlist/blob/master/README.md",
-  "fileSize": "619.129KB",
+  "fileSize": "0KB",
   "contIntegration": ["https://travis-ci.org/ropensci/rredlist", "https://codecov.io/github/ropensci/rredlist?branch=master"]
 }
