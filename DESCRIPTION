@@ -6,9 +6,13 @@ Description: 'IUCN' Red List (<http://apiv3.iucnredlist.org/api/v3/docs>) client
     Functions cover all of the Red List 'API' routes. An 'API' key is required.
 Version: 0.7.0
 Authors@R: 
-    c(person(given = "Scott",
-             family = "Chamberlain",
+    c(person(given = "William",
+             family = "Gearty",
              role = c("aut", "cre"),
+             email = "willgearty@gmail.com"),
+      person(given = "Scott",
+             family = "Chamberlain",
+             role = c("aut"),
              email = "myrmecocystus@gmail.com"),
       person(given = "rOpenSci",
              role = "fnd",
