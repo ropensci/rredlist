@@ -3,11 +3,11 @@ rredlist
 
 
 
-[![cran checks](https://cranchecks.info/badges/worst/rredlist)](https://cranchecks.info/pkgs/rredlist)
-[![R-check](https://github.com/ropensci/rredlist/workflows/R-check/badge.svg)](https://github.com/ropensci/rredlist/actions?query=workflow%3AR-check)
+[![cran version](https://www.r-pkg.org/badges/version/rredlist)](https://cran.r-project.org/package=rredlist)
+[![cran status](https://badges.cranchecks.info/worst/rredlist.svg)](https://cran.r-project.org/web/checks/check_results_rredlist.html)
+[![R-check](https://github.com/ropensci/rredlist/actions/workflows/R-check.yml/badge.svg)](https://github.com/ropensci/rredlist/actions/workflows/R-check.yml)
 [![codecov.io](https://codecov.io/github/ropensci/rredlist/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rredlist?branch=master)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rredlist)](https://github.com/r-hub/cranlogs.app)
-[![cran version](https://www.r-pkg.org/badges/version/rredlist)](https://cran.r-project.org/package=rredlist)
 
 `rredlist` is an R client for the IUCN Red List (https://apiv3.iucnredlist.org/api/v3/docs). The IUCN Red List is a global list of threatened and endangered species. IUCN Red List docs: https://apiv3.iucnredlist.org/api/v3/docs
 
