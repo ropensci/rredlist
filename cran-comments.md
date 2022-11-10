@@ -1,21 +1,27 @@
-## Test environments
+## Test environments (with Github Actions)
 
-* local OS X install, R 4.0.3
-* ubuntu 16.04 (on travis-ci), R 4.0.3
-* win-builder (evel and release)
+* Windows 10.0.20348 (x86_64-w64-mingw32): R 4.2.2
+* Mac OS X 11.7.1 (x86_64-apple-darwin17.0): R 4.2.2
+* Ubuntu 20.04.5 (x86_64-pc-linux-gnu): R 4.1.3, 4.2.2, and devel (r83320)
 
 ## R CMD check results
 
 0 errors | 0 warnings | 0 notes
 
-## Reverse dependencies
+## Downstream dependencies
 
-* I have run R CMD check on the 1 downstream dependeny. There is one error in the reverse dependency taxize, but it's a simple check of a URL returned that has changed because the base url for the API wrapped in this package has changed. A fix is ready in the reverse dependency taxize and will be submitted soon. Summary at: 
-<https://github.com/ropensci/rredlist/blob/master/revdep/README.md>
+Checked 1 reverse dependencies, comparing R CMD check results across CRAN and dev versions of this package:
+
+ * taxize (0.9.100)
+
+Dependency check results:
+
+ * Found 0 new problems
+ * Failed to check 0 packages
 
 ---
 
-This version makes minor improvements to documentation.
+This version updates the documentation with the new maintainer.
 
-Thanks! 
-Scott Chamberlain
+Thanks!
+William Gearty

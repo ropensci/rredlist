@@ -1,28 +1,24 @@
 # Platform
 
-|field    |value                        |
-|:--------|:----------------------------|
-|version  |R version 4.0.3 (2020-10-10) |
-|os       |macOS Catalina 10.15.7       |
-|system   |x86_64, darwin17.0           |
-|ui       |X11                          |
-|language |(EN)                         |
-|collate  |en_US.UTF-8                  |
-|ctype    |en_US.UTF-8                  |
-|tz       |US/Pacific                   |
-|date     |2020-10-20                   |
+|field    |value                                     |
+|:--------|:-----------------------------------------|
+|version  |R version 4.2.2 (2022-10-31 ucrt)         |
+|os       |Windows 10 x64 (build 19041)              |
+|system   |x86_64, mingw32                           |
+|ui       |RStudio                                   |
+|language |(EN)                                      |
+|collate  |English_United States.utf8                |
+|ctype    |English_United States.utf8                |
+|tz       |America/New_York                          |
+|date     |2022-11-10                                |
+|rstudio  |2022.07.1+554 Spotted Wakerobin (desktop) |
+|pandoc   |NA                                        |
 
 # Dependencies
 
-|package  |old   |new   |Δ  |
-|:--------|:-----|:-----|:--|
-|rredlist |0.6.0 |0.7.0 |*  |
+|package  |old   |new        |Δ  |
+|:--------|:-----|:----------|:--|
+|rredlist |0.7.0 |0.7.0.9000 |*  |
 
 # Revdeps
-
-## New problems (1)
-
-|package                      |version |error  |warning |note |
-|:----------------------------|:-------|:------|:-------|:----|
-|[taxize](problems.md#taxize) |0.9.98  |__+1__ |        |     |
 

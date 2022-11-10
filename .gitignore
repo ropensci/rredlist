@@ -2,7 +2,7 @@
 .Rhistory
 .RData
 oldtravis.yml
-revdep/checks.noindex
+revdep/checks
 revdep/data.sqlite
-revdep/library.noindex
+revdep/library
 rredlist.Rproj

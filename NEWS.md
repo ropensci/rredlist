@@ -1,4 +1,4 @@
-development version
+rredlist 0.7.1
 ===================
 
 William Gearty is now the maintainer of rredlist
@@ -99,7 +99,7 @@ and `rl_history_()` (#8)
 ### MINOR IMPROVEMENTS
 
 * Fixed description of what `rl_common_names` does. In addition, 
-clarified descriptino of what other functions do as well, whenever
+clarified description of what other functions do as well, whenever
 it was unclear (#12)
 
 ### BUG FIXES

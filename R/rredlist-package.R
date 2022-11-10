@@ -3,7 +3,7 @@
 #' @section Taxonomic Names vs. IUCN IDs:
 #' From the documentation (quoting): "It is advisable wherever possible to use
 #' the taxon name (species name) to make your API calls, rather than using IDs.
-#' IDs are not immovable are expected to be used mainly by organisations
+#' IDs are not immovable are expected to be used mainly by organizations
 #' that work closely with the IUCN Red List."
 #'
 #' @section Authentication:
