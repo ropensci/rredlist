@@ -1,3 +1,8 @@
+development version
+===================
+
+William Gearty is now the maintainer of rredlist
+
 rredlist 0.7.0
 ===================
 
