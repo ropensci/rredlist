@@ -12,10 +12,10 @@
 #'
 rl_use_iucn <- function(){
   if(interactive()){
-    utils::browseURL("https://apiv3.iucnredlist.org/api/v3/token")
+    utils::browseURL("https://api.iucnredlist.org/users/sign_up")
   }
 
   message("After getting your key set it as IUCN_REDLIST_KEY in .Renviron.\n IUCN_REDLIST_KEY='youractualkeynotthisstring'\n For that, use usethis::edit_r_environ()")
 
-  invisible("https://apiv3.iucnredlist.org/api/v3/token")
+  invisible("https://api.iucnredlist.org/users/sign_up")
 }

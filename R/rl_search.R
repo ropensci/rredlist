@@ -25,6 +25,6 @@ rl_search <- function(name = NULL, id = NULL, region = NULL,
 rl_search_ <- function(name = NULL, id = NULL, region = NULL,
                        key = NULL, ...) {
   assert_is(key, 'character')
-  rr_GET(nir("species", "species/id",
+  rr_GET_v3(nir("species", "species/id",
              name, id, region), key, ...)
 }

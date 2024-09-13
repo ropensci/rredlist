@@ -19,5 +19,5 @@ rl_common_names_ <- function(name = NULL, key = NULL, ...) {
   assert_is(key, 'character')
   assert_is(name, 'character')
   assert_n(name, 1)
-  rr_GET(file.path("species/common_names", space(name)), key, ...)
+  rr_GET_v3(file.path("species/common_names", space(name)), key, ...)
 }

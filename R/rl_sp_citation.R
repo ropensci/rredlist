@@ -24,6 +24,6 @@ rl_sp_citation <- function(name = NULL, id = NULL, region = NULL,
 rl_sp_citation_ <- function(name = NULL, id = NULL, region = NULL,
                             key = NULL, ...) {
   assert_is(key, 'character')
-  rr_GET(nir("species/citation", "species/citation/id",
+  rr_GET_v3(nir("species/citation", "species/citation/id",
              name, id, region), key, ...)
 }

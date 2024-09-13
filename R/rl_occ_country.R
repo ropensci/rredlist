@@ -25,6 +25,6 @@ rl_occ_country <- function(name = NULL, id = NULL, region = NULL,
 rl_occ_country_ <- function(name = NULL, id = NULL, region = NULL,
                             key = NULL, ...) {
   assert_is(key, 'character')
-  rr_GET(nir("species/countries/name", "species/countries/id",
+  rr_GET_v3(nir("species/countries/name", "species/countries/id",
              name, id, region), key, ...)
 }

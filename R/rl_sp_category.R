@@ -23,5 +23,5 @@ rl_sp_category_ <- function(category, key = NULL, parse = TRUE, ...) {
   assert_is(key, 'character')
   assert_is(category, 'character')
   assert_n(category, 1)
-  rr_GET(file.path("species/category", category), key, ...)
+  rr_GET_v3(file.path("species/category", category), key, ...)
 }

@@ -1,21 +1,21 @@
 #' Get species
 #'
 #' @export
-#' @param page (integer/numeric) Page to get. Default: 0. you can 
+#' @param page (integer/numeric) Page to get. Default: 0. you can
 #' get up to 10,000 records per page. Paging is required because
 #' it's too much burden on a server to just "get all the data"
 #' in one request
-#' @param all (logical) to get all results or not. Default: `FALSE`. 
+#' @param all (logical) to get all results or not. Default: `FALSE`.
 #' this means we do the paging internally for you. result is a list
-#' of results, so you have to bind them together yourself into 
+#' of results, so you have to bind them together yourself into
 #' a data.frame, see example
-#' @param quiet (logical) give progress for download or not. 
-#' Default: `FALSE` (that is, give progress). ignored if 
-#' `all = FALSE` 
+#' @param quiet (logical) give progress for download or not.
+#' Default: `FALSE` (that is, give progress). ignored if
+#' `all = FALSE`
 #' @template all
 #' @examples \dontrun{
 #' rl_sp(page = 3)
-#' 
+#'
 #' # get all results
 #' out <- rl_sp(all = TRUE)
 #' length(out)
@@ -24,7 +24,7 @@
 #' head(all_df)
 #' NROW(all_df)
 #' }
-rl_sp <- function(page = 0, key = NULL, parse = TRUE, all = FALSE, 
+rl_sp <- function(page = 0, key = NULL, parse = TRUE, all = FALSE,
   quiet = FALSE, ...) {
 
   assert_is(parse, 'logical')
@@ -40,7 +40,7 @@ rl_sp_ <- function(page, key = NULL, all = FALSE, quiet = FALSE, ...) {
   assert_is(key, 'character')
   assert_is(page, c('integer', 'numeric'))
   assert_n(page, 1)
-  
+
   if (all) {
     out <- list()
     done <- FALSE
@@ -49,7 +49,7 @@ rl_sp_ <- function(page, key = NULL, all = FALSE, quiet = FALSE, ...) {
     while (!done) {
       if (!quiet) cat(".")
       i <- i + 1
-      tmp <- rr_GET(file.path("species/page", page), key, ...)
+      tmp <- rr_GET_v3(file.path("species/page", page), key, ...)
       if (jsonlite::fromJSON(tmp, FALSE)$count == 0) {
         done <- TRUE
       } else {
@@ -60,6 +60,6 @@ rl_sp_ <- function(page, key = NULL, all = FALSE, quiet = FALSE, ...) {
     if (!quiet) cat("\n")
     return(out)
   } else {
-    rr_GET(file.path("species/page", page), key, ...)
+    rr_GET_v3(file.path("species/page", page), key, ...)
   }
 }

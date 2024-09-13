@@ -24,6 +24,6 @@ rl_measures <- function(name = NULL, id = NULL, region = NULL,
 rl_measures_ <- function(name = NULL, id = NULL, region = NULL,
                          key = NULL, ...) {
   assert_is(key, 'character')
-  rr_GET(nir("measures/species/name", "measures/species/id",
+  rr_GET_v3(nir("measures/species/name", "measures/species/id",
              name, id, region), key, ...)
 }

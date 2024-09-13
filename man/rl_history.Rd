@@ -2,6 +2,7 @@
 % Please edit documentation in R/rl_history.R
 \name{rl_history}
 \alias{rl_history}
+\alias{rl_history_}
 \title{Get historical assessments by taxon name, IUCN id, and region}
 \usage{
 rl_history(
@@ -12,6 +13,8 @@ rl_history(
   parse = TRUE,
   ...
 )
+
+rl_history_(name = NULL, id = NULL, region = NULL, key = NULL, ...)
 }
 \arguments{
 \item{name}{(character) A taxonomic name}
@@ -22,10 +25,10 @@ rl_history(
 acceptable region identifiers (use the entries in the \code{identifier}
 column)}
 
-\item{key}{A IUCN API token. See \code{\link{rl_use_iucn}}.}
+\item{key}{(character) An IUCN API token. See \code{\link{rl_use_iucn}}.}
 
-\item{parse}{(logical) Whether to parse to list (\code{FALSE}) or
-data.frame (\code{TRUE}). Default: \code{TRUE}}
+\item{parse}{(logical) Whether to parse the output to list (\code{FALSE}) or,
+where possible, data.frame (\code{TRUE}). Default: \code{TRUE}}
 
 \item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
 }
@@ -49,5 +52,5 @@ rl_history_(id = 12392)
 }
 }
 \references{
-API docs at https://apiv3.iucnredlist.org/api/v3/docs
+API docs at https://apiv3.iucnredlist.org/api/v3/docs.
 }

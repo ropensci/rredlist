@@ -25,6 +25,6 @@ rl_threats <- function(name = NULL, id = NULL, region = NULL, key = NULL,
 rl_threats_ <- function(name = NULL, id = NULL, region = NULL,
                         key = NULL, ...) {
   assert_is(key, 'character')
-  rr_GET(nir("threats/species/name", "threats/species/id",
+  rr_GET_v3(nir("threats/species/name", "threats/species/id",
              name, id, region), key, ...)
 }

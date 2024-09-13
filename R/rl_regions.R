@@ -17,5 +17,5 @@ rl_regions <- function(key = NULL, parse = TRUE, ...) {
 #' @rdname rl_regions
 rl_regions_ <- function(key = NULL, ...) {
   assert_is(key, 'character')
-  rr_GET("region/list", key, ...)
+  rr_GET_v3("region/list", key, ...)
 }

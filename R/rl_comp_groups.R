@@ -1,7 +1,7 @@
 #' Information about comprehensive groups
 #'
 #' @export
-#' @param group (character) A comprehensive group name. 
+#' @param group (character) A comprehensive group name.
 #' Call `rl_comp_groups()` without passing this parameter
 #' to get the list of comprehensive groups
 #' @template all
@@ -27,5 +27,5 @@ rl_comp_groups_ <- function(group = NULL, key = NULL, ...) {
 
   path <- "comp-group/list"
   if (!is.null(group)) path <- file.path("comp-group/getspecies", group)
-  rr_GET(path, key, ...)
+  rr_GET_v3(path, key, ...)
 }

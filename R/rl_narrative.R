@@ -24,6 +24,6 @@ rl_narrative <- function(name = NULL, id = NULL, region = NULL,
 rl_narrative_ <- function(name = NULL, id = NULL, region = NULL,
                           key = NULL, ...) {
   assert_is(key, 'character')
-  rr_GET(nir("species/narrative", "species/narrative/id",
+  rr_GET_v3(nir("species/narrative", "species/narrative/id",
              name, id, region), key, ...)
 }

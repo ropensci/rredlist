@@ -2,21 +2,32 @@
 % Please edit documentation in R/rl_citation.R
 \name{rl_citation}
 \alias{rl_citation}
-\title{Get the citation Red List API version}
+\title{Get the citation for the Red List API}
 \usage{
-rl_citation(...)
+rl_citation(key = NULL, ...)
 }
 \arguments{
-\item{...}{Curl options passed to \link[crul:verb-GET]{crul::verb-GET}}
+\item{key}{(character) An IUCN API token. See \code{\link{rl_use_iucn}}.}
+
+\item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
 }
 \value{
-API citation as character string
+Red List citation as character string
 }
 \description{
-Get the citation Red List API version
+Full acknowledgement and citation needs to be given for using the API. Use
+this function to get the full citation for the current version of the Red
+List API. More details are available here: \url{https://api.iucnredlist.org/}.
 }
 \examples{
 \dontrun{
 rl_citation()
 }
 }
+\seealso{
+Red List information and statistics:
+\code{\link{rl_api_version}()},
+\code{\link{rl_sp_count}()},
+\code{\link{rl_version}()}
+}
+\concept{stats}

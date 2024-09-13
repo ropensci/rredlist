@@ -20,5 +20,5 @@ rl_synonyms_ <- function(name = NULL, key = NULL, ...) {
   assert_is(key, 'character')
   assert_is(name, 'character')
   assert_n(name, 1)
-  rr_GET(file.path("species/synonym", space(name)), key, ...)
+  rr_GET_v3(file.path("species/synonym", space(name)), key, ...)
 }

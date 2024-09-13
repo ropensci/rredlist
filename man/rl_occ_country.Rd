@@ -22,10 +22,10 @@ rl_occ_country(
 acceptable region identifiers (use the entries in the \code{identifier}
 column)}
 
-\item{key}{A IUCN API token. See \code{\link{rl_use_iucn}}.}
+\item{key}{(character) An IUCN API token. See \code{\link{rl_use_iucn}}.}
 
-\item{parse}{(logical) Whether to parse to list (\code{FALSE}) or
-data.frame (\code{TRUE}). Default: \code{TRUE}}
+\item{parse}{(logical) Whether to parse the output to list (\code{FALSE}) or,
+where possible, data.frame (\code{TRUE}). Default: \code{TRUE}}
 
 \item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
 }
@@ -50,5 +50,5 @@ rl_occ_country_('Fratercula arctica', region = 'europe')
 }
 }
 \references{
-API docs at https://apiv3.iucnredlist.org/api/v3/docs
+API docs at https://apiv3.iucnredlist.org/api/v3/docs.
 }

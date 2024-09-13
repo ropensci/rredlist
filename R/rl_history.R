@@ -20,10 +20,10 @@ rl_history <- function(name = NULL, id = NULL, region = NULL,
 }
 
 #' @export
-#' @rdname rl_habitats
+#' @rdname rl_history
 rl_history_ <- function(name = NULL, id = NULL, region = NULL,
                         key = NULL, ...) {
   assert_is(key, 'character')
-  rr_GET(nir("species/history/name", "species/history/id",
+  rr_GET_v3(nir("species/history/name", "species/history/id",
              name, id, region), key, ...)
 }

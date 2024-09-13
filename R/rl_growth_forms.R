@@ -29,6 +29,6 @@ rl_growth_forms <- function(name = NULL, id = NULL, region = NULL,
 rl_growth_forms_ <- function(name = NULL, id = NULL, region = NULL,
                          key = NULL, ...) {
   assert_is(key, 'character')
-  rr_GET(nir("growth_forms/species/name", "growth_forms/species/id",
+  rr_GET_v3(nir("growth_forms/species/name", "growth_forms/species/id",
              name, id, region), key, ...)
 }

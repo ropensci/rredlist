@@ -14,10 +14,10 @@ rl_comp_groups_(group = NULL, key = NULL, ...)
 Call \code{rl_comp_groups()} without passing this parameter
 to get the list of comprehensive groups}
 
-\item{key}{A IUCN API token. See \code{\link{rl_use_iucn}}.}
+\item{key}{(character) An IUCN API token. See \code{\link{rl_use_iucn}}.}
 
-\item{parse}{(logical) Whether to parse to list (\code{FALSE}) or
-data.frame (\code{TRUE}). Default: \code{TRUE}}
+\item{parse}{(logical) Whether to parse the output to list (\code{FALSE}) or,
+where possible, data.frame (\code{TRUE}). Default: \code{TRUE}}
 
 \item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
 }
@@ -40,5 +40,5 @@ rl_comp_groups_('groupers')
 }
 }
 \references{
-API docs at https://apiv3.iucnredlist.org/api/v3/docs
+API docs at https://apiv3.iucnredlist.org/api/v3/docs.
 }

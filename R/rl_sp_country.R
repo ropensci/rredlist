@@ -28,5 +28,5 @@ rl_sp_country_ <- function(country, key = NULL, ...) {
   assert_is(key, 'character')
   assert_is(country, 'character')
   assert_n(country, 1)
-  rr_GET(file.path("country/getspecies", country), key, ...)
+  rr_GET_v3(file.path("country/getspecies", country), key, ...)
 }
