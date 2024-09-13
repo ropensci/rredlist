@@ -4,9 +4,9 @@
 \name{rredlist-package}
 \alias{rredlist-package}
 \alias{rredlist}
-\title{rredlist}
+\title{rredlist: 'IUCN' Red List Client}
 \description{
-IUCN Red List R Client
+'IUCN' Red List (\url{https://api.iucnredlist.org/}) client. The 'IUCN' Red List is a global list of threatened and endangered species. Functions cover all of the Red List 'API' routes. An 'API' key is required.
 }
 \section{Taxonomic Names vs. IUCN IDs}{
 
@@ -70,7 +70,32 @@ lot of calls.
 
 \section{Citing the IUCN Red List API}{
 
-See https://apiv3.iucnredlist.org/about
+See https://api.iucnredlist.org/
 }
 
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://docs.ropensci.org/rredlist/}
+  \item \url{https://github.com/ropensci/rredlist}
+  \item Report bugs at \url{https://github.com/ropensci/rredlist/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: William Gearty \email{willgearty@gmail.com}
+
+Authors:
+\itemize{
+  \item Scott Chamberlain \email{myrmecocystus@gmail.com}
+}
+
+Other contributors:
+\itemize{
+  \item rOpenSci (https://ropensci.org/) [funder]
+  \item Maëlle Salmon \email{maelle.salmon@yahoo.se} [contributor]
+}
+
+}
+\keyword{internal}
 \keyword{package}

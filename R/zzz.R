@@ -9,12 +9,25 @@ rredlist_ua <- function() {
   paste0(versions, collapse = " ")
 }
 
-rr_GET <- function(path, key, ...){
+rr_GET_v3 <- function(path, key, ...){
   cli <- crul::HttpClient$new(
-    url = file.path(rr_base(), path),
+    url = file.path(rr_base_v3(), path),
     opts = list(useragent = rredlist_ua())
   )
-  temp <- cli$get(query = list(token = check_key(key)), ...)
+  temp <- cli$get(query = list(token = check_key_v3(key)), ...)
+  temp$raise_for_status()
+  x <- temp$parse("UTF-8")
+  err_catcher(x)
+  return(x)
+}
+
+rr_GET <- function(path, key = NULL, query = list(), ...){
+  cli <- crul::HttpClient$new(
+    url = file.path(rr_base(), path),
+    opts = list(useragent = rredlist_ua()),
+    headers = list(Authorization = check_key(key))
+  )
+  temp <- cli$get(query = ct(query), ...)
   temp$raise_for_status()
   x <- temp$parse("UTF-8")
   err_catcher(x)
@@ -43,7 +56,18 @@ check_key <- function(x){
   }
 }
 
-rr_base <- function() "https://apiv3.iucnredlist.org/api/v3"
+check_key_v3 <- function(x){
+  tmp <- if (is.null(x)) Sys.getenv("IUCN_REDLIST_KEY_v3", "") else x
+  if (tmp == "") {
+    getOption("iucn_redlist_key_v3", stop("need an API key for Red List data",
+                                       call. = FALSE))
+  } else {
+    tmp
+  }
+}
+
+rr_base_v3 <- function() "https://apiv3.iucnredlist.org/api/v3"
+rr_base <- function() "https://api.iucnredlist.org/api/v4"
 
 space <- function(x) gsub("\\s", "%20", x)
 
@@ -103,4 +127,37 @@ nir <- function(path_name, path_id, name = NULL, id = NULL, region = NULL) {
   }
 
   return(path)
+}
+
+combine_assessments <- function(res, parse) {
+  if (length(res) <= 1) return(rl_parse(res, parse))
+  lst <- lapply(res, rl_parse, parse = parse)
+  tmp <- lst[[1]]
+  assessments <- lapply(lst, "[[", "assessments")
+  if (parse) {
+    tmp$assessments <- do.call(rbind, assessments)
+  } else {
+    tmp$assessments <- do.call(c, assessments)
+  }
+  return(tmp)
+}
+
+#' @importFrom jsonlite fromJSON
+page_assessments <- function(path, key, quiet, ...) {
+  out <- list()
+  done <- FALSE
+  page <- 1
+  while (!done) {
+    tmp <- rr_GET(path, key, query = list(page = page), ...)
+    if (length(fromJSON(tmp, FALSE)$assessments) == 0) {
+      if (page == 1) out <- tmp else if (page == 2) out <- out[[1]]
+      done <- TRUE
+    } else {
+      if (!quiet) cat(".")
+      out[[page]] <- tmp
+      page <- page + 1
+    }
+  }
+  if (!quiet && page > 1) cat("\n")
+  return(out)
 }

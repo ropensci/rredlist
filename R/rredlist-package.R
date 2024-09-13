@@ -1,5 +1,7 @@
+#' @keywords internal
+"_PACKAGE"
+
 #' @title rredlist
-#' @description IUCN Red List R Client
 #' @section Taxonomic Names vs. IUCN IDs:
 #' From the documentation (quoting): "It is advisable wherever possible to use
 #' the taxon name (species name) to make your API calls, rather than using IDs.
@@ -35,7 +37,7 @@
 #' @section Citing the Red List API:
 #' Get the proper citation for the version of the Red List you are using
 #' by programatically running [rl_citation()]
-#' 
+#'
 #' @section Red List API Terms of Use:
 #' See https://www.iucnredlist.org/terms/terms-of-use
 #'
@@ -47,11 +49,10 @@
 #' lot of calls.
 #'
 #' @section Citing the IUCN Red List API:
-#' See https://apiv3.iucnredlist.org/about
+#' See https://api.iucnredlist.org/
 #'
 #' @importFrom jsonlite fromJSON
 #' @name rredlist-package
 #' @aliases rredlist
-#' @docType package
 #' @keywords package
 NULL

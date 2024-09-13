@@ -1,7 +1,7 @@
 # set up vcr
 library("vcr")
 
-vcr_dir <- "../fixtures"
+vcr_dir <- vcr::vcr_test_path("fixtures")
 
 if (!nzchar(Sys.getenv("IUCN_REDLIST_KEY"))) {
   if (dir.exists(vcr_dir)) {
@@ -14,5 +14,6 @@ if (!nzchar(Sys.getenv("IUCN_REDLIST_KEY"))) {
 
 invisible(vcr::vcr_configure(
   dir = vcr_dir,
-  filter_sensitive_data = list("<<rredlist_api_token>>" = Sys.getenv('IUCN_REDLIST_KEY'))
+  filter_sensitive_data = list("<<rredlist_api_token>>" = Sys.getenv('IUCN_REDLIST_KEY_v3')),
+  filter_request_headers = list(Authorization = "My bearer token is safe")
 ))

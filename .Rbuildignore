@@ -13,3 +13,4 @@ Makefile
 ^codemeta\.json$
 ^LICENSE\.md$
 vignettes/rredlist.Rmd
+^CRAN-SUBMISSION$
