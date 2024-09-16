@@ -99,3 +99,56 @@ rl_scopes_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
     rr_GET(path, key, query = list(page = page), ...)
   }
 }
+
+#' FAO marine fishing region assessment summary
+#'
+#' Return assessments for a given marine fishing region as defined by the Food
+#' and Agriculture Organization (FAO) of the United Nations (e.g., Pacific -
+#' northwest, Arctic Sea). More details are available here:
+#' <https://www.fao.org/fishery/en/area>.
+#'
+#' @export
+#' @param code (character) The code of the FAO region to look up. If not
+#'   supplied, a list of all FAO regions will be returned.
+#' @template all
+#' @template info_new
+#' @template page
+#' @family geo
+#' @examples \dontrun{
+#' # Get a list of all scopes
+#' rl_faos()
+#' # Get assessment summary for the Arctic Sea FAO region
+#' rl_faos(code = "18")
+#' }
+rl_faos <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
+                    page = 1, quiet = FALSE, ...) {
+  assert_is(parse, 'logical')
+  assert_is(all, 'logical')
+
+  res <- rl_faos_(code, key, all, page, quiet, ...)
+  if (all) {
+    combine_assessments(res, parse)
+  } else {
+    rl_parse(res, parse)
+  }
+}
+
+#' @export
+#' @rdname rl_faos
+rl_faos_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
+                       quiet = FALSE, ...) {
+  assert_is(key, 'character')
+  assert_is(code, 'character')
+  assert_is(page, c('integer', 'numeric'))
+  assert_n(page, 1)
+  assert_is(all, 'logical')
+  assert_is(quiet, 'logical')
+
+  path <- paste("faos", code, sep = "/")
+
+  if (all) {
+    page_assessments(path, key, quiet, ...)
+  } else {
+    rr_GET(path, key, query = list(page = page), ...)
+  }
+}

@@ -47,9 +47,8 @@ much burden on a server to just "get all the data" in one request.}
 \item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
 }
 \value{
-A list, with the data in the \code{result} slot, unless using
-a function with a trailing underscore, in which case json as character
-string is returned.
+A list unless using a function with a trailing underscore, in which
+case json as character string is returned.
 }
 \description{
 Returns a collection of assessments for a given country code
@@ -63,10 +62,11 @@ rl_countries("MG")
 }
 }
 \references{
-API docs at https://apiv3.iucnredlist.org/api/v3/docs.
+API docs at \url{https://api.iucnredlist.org/}.
 }
 \seealso{
 Geographic regions:
+\code{\link{rl_faos}()},
 \code{\link{rl_realms}()},
 \code{\link{rl_scopes}()}
 }

@@ -18,8 +18,8 @@ rl_habitats(
 rl_habitats_(code = NULL, key = NULL, all = TRUE, page = 1, quiet = FALSE, ...)
 }
 \arguments{
-\item{code}{(character) The code of the habitat to look up. If not supplied, a
-list of all habitats will be returned.}
+\item{code}{(character) The code of the habitat to look up. If not supplied,
+a list of all habitats will be returned.}
 
 \item{key}{(character) An IUCN API token. See \code{\link{rl_use_iucn}}.}
 
@@ -44,8 +44,8 @@ A list unless using a function with a trailing underscore, in which
 case json as character string is returned.
 }
 \description{
-Return the latest assessments for a given habitat (e.g., Forest - Temperate or
-Marine Intertidal). These habitat codes correspond to the IUCN Red List
+Return the latest assessments for a given habitat (e.g., Forest - Temperate
+or Marine Intertidal). These habitat codes correspond to the IUCN Red List
 Habitats Classification Scheme (v3.1).
 }
 \examples{

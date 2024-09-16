@@ -3,59 +3,64 @@
 \name{rl_growth_forms}
 \alias{rl_growth_forms}
 \alias{rl_growth_forms_}
-\title{Get plant species growth forms by taxon name, IUCN id, and region}
+\title{Growth form assessment summary}
 \usage{
 rl_growth_forms(
-  name = NULL,
-  id = NULL,
-  region = NULL,
+  code = NULL,
   key = NULL,
   parse = TRUE,
+  all = TRUE,
+  page = 1,
+  quiet = FALSE,
   ...
 )
 
-rl_growth_forms_(name = NULL, id = NULL, region = NULL, key = NULL, ...)
+rl_growth_forms_(
+  code = NULL,
+  key = NULL,
+  all = TRUE,
+  page = 1,
+  quiet = FALSE,
+  ...
+)
 }
 \arguments{
-\item{name}{(character) A taxonomic name}
-
-\item{id}{(character) An IUCN identifier}
-
-\item{region}{(character) A region name, see \code{\link{rl_regions}} for
-acceptable region identifiers (use the entries in the \code{identifier}
-column)}
+\item{code}{(character) The code of the growth form to look up. If not
+supplied, a list of all growth forms will be returned.}
 
 \item{key}{(character) An IUCN API token. See \code{\link{rl_use_iucn}}.}
 
 \item{parse}{(logical) Whether to parse the output to list (\code{FALSE}) or,
 where possible, data.frame (\code{TRUE}). Default: \code{TRUE}}
 
+\item{all}{(logical) Whether to retrieve all results at once or not. If
+\code{TRUE} we do the paging internally for you and bind all of the results
+together. If \code{FALSE}, only a single page of results will be retrieved.}
+
+\item{page}{(integer/numeric) Page to get if \code{all} is \code{FALSE}. Default: 1.
+Each page returns up to 100 records. Paging is required because it's too
+much burden on a server to just "get all the data" in one request.}
+
+\item{quiet}{(logical) Whether to give progress for download or not. Default:
+\code{FALSE} (that is, give progress). Ignored if \code{all = FALSE}.}
+
 \item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
 }
 \value{
-A list, with the data in the \code{result} slot, unless using
-a function with a trailing underscore, in which case json as character
-string is returned.
+A list unless using a function with a trailing underscore, in which
+case json as character string is returned.
 }
 \description{
-Get plant species growth forms by taxon name, IUCN id, and region
+Returns a list of the latest assessments for a given growth form code.
 }
 \examples{
 \dontrun{
-rl_growth_forms('Quercus robur')
-rl_growth_forms('Quercus robur', region = 'europe')
-rl_growth_forms(id = 63532)
-rl_growth_forms(id = 63532, region = 'europe')
-
-rl_growth_forms('Mucuna bracteata')
-rl_growth_forms('Abarema villifera')
-rl_growth_forms('Adansonia perrieri')
-rl_growth_forms('Adenostemma harlingii')
-
-rl_growth_forms_('Quercus robur')
-rl_growth_forms_(id = 63532, region = 'europe')
+# Get list of all growth forms
+rl_growth_forms()
+# Get assessment summary for lichens
+rl_growth_forms("LC")
 }
 }
 \references{
-API docs at https://apiv3.iucnredlist.org/api/v3/docs.
+API docs at \url{https://api.iucnredlist.org/}.
 }

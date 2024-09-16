@@ -1,31 +1,48 @@
-#' Information about comprehensive groups
+#' Comprehensive group assessment summary
+#'
+#' Returns a list of the latest assessments for an comprehensive group name
 #'
 #' @export
-#' @param group (character) A comprehensive group name.
-#' Call `rl_comp_groups()` without passing this parameter
-#' to get the list of comprehensive groups
+#' @param name (character) The code of the comprehensive group to look up. If
+#'   not supplied, a list of all comprehensive groups will be returned.
 #' @template all
-#' @template info
+#' @template info_new
+#' @template page
 #' @examples \dontrun{
+#' # Get list of all comprehensive groups
 #' rl_comp_groups()
-#' rl_comp_groups('mammals')
-#' rl_comp_groups('groupers')
-#'
-#' rl_comp_groups_()
-#' rl_comp_groups_('groupers')
+#' # Get assessment summary for sea snakes
+#' rl_comp_groups('seasnakes')
 #' }
-rl_comp_groups <- function(group = NULL, key = NULL, parse = TRUE, ...) {
+rl_comp_groups <- function(name = NULL, key = NULL, parse = TRUE, all = TRUE,
+                           page = 1, quiet = FALSE, ...) {
   assert_is(parse, 'logical')
-  rl_parse(rl_comp_groups_(group, key, ...), parse)
+  assert_is(all, 'logical')
+
+  res <- rl_comp_groups_(name, key, all, page, quiet, ...)
+  if (all) {
+    combine_assessments(res, parse)
+  } else {
+    rl_parse(res, parse)
+  }
 }
 
 #' @export
 #' @rdname rl_comp_groups
-rl_comp_groups_ <- function(group = NULL, key = NULL, ...) {
+rl_comp_groups_ <- function(name = NULL, key = NULL, all = TRUE, page = 1,
+                            quiet = FALSE, ...) {
   assert_is(key, 'character')
-  assert_is(group, 'character')
+  assert_is(name, 'character')
+  assert_is(page, c('integer', 'numeric'))
+  assert_n(page, 1)
+  assert_is(all, 'logical')
+  assert_is(quiet, 'logical')
 
-  path <- "comp-group/list"
-  if (!is.null(group)) path <- file.path("comp-group/getspecies", group)
-  rr_GET_v3(path, key, ...)
+  path <- paste("comprehensive_groups", name, sep = "/")
+
+  if (all) {
+    page_assessments(path, key, quiet, ...)
+  } else {
+    rr_GET(path, key, query = list(page = page), ...)
+  }
 }

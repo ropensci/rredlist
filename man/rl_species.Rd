@@ -47,8 +47,8 @@ A list unless using a function with a trailing underscore, in which
 case json as character string is returned.
 }
 \description{
-Get an assessment summary for a particular species, subspecies, variety, or
-subpopulation
+Get an assessment summary for a particular species (i.e., Latin binomial) or
+subspecies/variety/subpopulation (i.e., Latin trinomial)
 }
 \details{
 Geographically separate subpopulations of a species are defined as

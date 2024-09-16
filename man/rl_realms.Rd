@@ -44,7 +44,8 @@ A list unless using a function with a trailing underscore, in which
 case json as character string is returned.
 }
 \description{
-Get an assessment summary for a particular biogeographical realm
+Get an assessment summary for a particular biogeographical realm (e.g.,
+Neotropical or Palearctic)
 }
 \examples{
 \dontrun{
@@ -60,6 +61,7 @@ API docs at \url{https://api.iucnredlist.org/}.
 \seealso{
 Geographic regions:
 \code{\link{rl_countries}()},
+\code{\link{rl_faos}()},
 \code{\link{rl_scopes}()}
 }
 \concept{geo}

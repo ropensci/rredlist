@@ -44,7 +44,7 @@ A list unless using a function with a trailing underscore, in which
 case json as character string is returned.
 }
 \description{
-Return assessments for a given geographical assessment scope (e.g. Global,
+Return assessments for a given geographical assessment scope (e.g., Global,
 Mediterranean).
 }
 \examples{
@@ -61,6 +61,7 @@ API docs at \url{https://api.iucnredlist.org/}.
 \seealso{
 Geographic regions:
 \code{\link{rl_countries}()},
+\code{\link{rl_faos}()},
 \code{\link{rl_realms}()}
 }
 \concept{geo}

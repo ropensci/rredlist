@@ -44,7 +44,7 @@ A list unless using a function with a trailing underscore, in which
 case json as character string is returned.
 }
 \description{
-Return the latest assessments for a given system (e.g. terrestrial,
+Return the latest assessments for a given system (e.g., terrestrial,
 freshwater or marine).
 }
 \examples{
