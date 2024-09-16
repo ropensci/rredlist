@@ -5,7 +5,7 @@
 #' @export
 #' @param id (integer) The unique identifier of the assessment.
 #' @template all
-#' @template info_new
+#' @template info
 #' @examples \dontrun{
 #' # Get assessment details for Fratercula arctica
 #' ex1 <- rl_assessment(id = 166290968)

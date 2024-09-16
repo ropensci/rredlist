@@ -1,4 +1,4 @@
-#' Conservations actions needed assessment summary
+#' Conservation actions needed assessment summary
 #'
 #' Return the latest assessments with a given conservation action needed (e.g.,
 #' Land/water management or Species recovery). These conservation action codes
@@ -9,7 +9,7 @@
 #' @param code (character) The code of the conservation action to look up. If
 #'   not supplied, a list of all conservation actions will be returned.
 #' @template all
-#' @template info_new
+#' @template info
 #' @template page
 #' @family conservation
 #' @examples \dontrun{
@@ -61,7 +61,7 @@ rl_actions_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
 #' @param code (character) The code of the research type to look up. If not
 #'   supplied, a list of all research types will be returned.
 #' @template all
-#' @template info_new
+#' @template info
 #' @template page
 #' @family conservation
 #' @examples \dontrun{

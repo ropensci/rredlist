@@ -8,7 +8,7 @@
 #' @param code (character) The code of the habitat to look up. If not supplied,
 #'   a list of all habitats will be returned.
 #' @template all
-#' @template info_new
+#' @template info
 #' @template page
 #' @family habitat
 #' @examples \dontrun{
@@ -59,7 +59,7 @@ rl_habitats_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
 #' @param code (character) The code of the system to look up. If not supplied, a
 #'   list of all systems will be returned.
 #' @template all
-#' @template info_new
+#' @template info
 #' @template page
 #' @family habitat
 #' @examples \dontrun{

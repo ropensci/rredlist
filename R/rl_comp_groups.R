@@ -6,7 +6,7 @@
 #' @param name (character) The code of the comprehensive group to look up. If
 #'   not supplied, a list of all comprehensive groups will be returned.
 #' @template all
-#' @template info_new
+#' @template info
 #' @template page
 #' @examples \dontrun{
 #' # Get list of all comprehensive groups

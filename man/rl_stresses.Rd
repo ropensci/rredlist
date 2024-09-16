@@ -59,7 +59,7 @@ rl_stresses("1_2")
 API docs at \url{https://api.iucnredlist.org/}.
 }
 \seealso{
-Threats and use/trade:
+Threats, stresses, and use/trade:
 \code{\link{rl_threats}()},
 \code{\link{rl_use_and_trade}()}
 }

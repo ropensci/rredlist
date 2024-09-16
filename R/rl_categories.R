@@ -12,7 +12,7 @@
 #' @param code (character) The code of the Red List category to look up. If not
 #'   supplied, a list of all categories will be returned.
 #' @template all
-#' @template info_new
+#' @template info
 #' @template page
 #' @examples \dontrun{
 #' # Get all Red List categories
@@ -51,4 +51,29 @@ rl_categories_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
   } else {
     rr_GET(path, key, query = list(page = page), ...)
   }
+}
+
+#' Green Status assessment summary
+#'
+#' List all Green Status assessments.
+#'
+#' @export
+#' @template all
+#' @template info
+#' @examples \dontrun{
+#' # Get list of Green Status assessments
+#' rl_green()
+#' }
+rl_green <- function(key = NULL, parse = TRUE, ...) {
+  assert_is(parse, 'logical')
+
+  rl_parse(rl_green_(key, ...), parse)
+}
+
+#' @export
+#' @rdname rl_green
+rl_green_ <- function(key = NULL, ...) {
+  assert_is(key, 'character')
+
+  rr_GET("green_status/all", key, ...)
 }

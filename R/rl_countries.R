@@ -6,7 +6,7 @@
 #' @param code (character) The ISO alpha-2 code of the country to look up. If
 #'   not supplied, a list of all countries will be returned.
 #' @template all
-#' @template info_new
+#' @template info
 #' @template page
 #' @family geo
 #' @examples \dontrun{

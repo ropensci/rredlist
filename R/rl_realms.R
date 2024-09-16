@@ -7,7 +7,7 @@
 #' @param code (character) The code of the biogeographical realm to look up. If
 #'   not supplied, a list of all biogeographical realms will be returned.
 #' @template all
-#' @template info_new
+#' @template info
 #' @template page
 #' @family geo
 #' @examples \dontrun{
@@ -58,7 +58,7 @@ rl_realms_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
 #' @param code (character) The code of the scope to look up. If not supplied, a
 #'   list of all scopes will be returned.
 #' @template all
-#' @template info_new
+#' @template info
 #' @template page
 #' @family geo
 #' @examples \dontrun{
@@ -111,7 +111,7 @@ rl_scopes_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
 #' @param code (character) The code of the FAO region to look up. If not
 #'   supplied, a list of all FAO regions will be returned.
 #' @template all
-#' @template info_new
+#' @template info
 #' @template page
 #' @family geo
 #' @examples \dontrun{

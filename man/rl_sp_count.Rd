@@ -13,9 +13,6 @@ rl_sp_count_(key = NULL, ...)
 \item{key}{(character) An IUCN API token. See \code{\link{rl_use_iucn}}.}
 
 \item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
-
-\item{parse}{(logical) Whether to parse the output to list (\code{FALSE}) or,
-where possible, data.frame (\code{TRUE}). Default: \code{TRUE}}
 }
 \value{
 A list unless using a function with a trailing underscore, in which
@@ -26,6 +23,7 @@ Returns a count of the number of unique species which have assessments
 }
 \examples{
 \dontrun{
+# Get count of species with assessments
 rl_sp_count()
 }
 }
