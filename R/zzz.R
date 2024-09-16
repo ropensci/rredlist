@@ -9,18 +9,6 @@ rredlist_ua <- function() {
   paste0(versions, collapse = " ")
 }
 
-rr_GET_v3 <- function(path, key, ...){
-  cli <- crul::HttpClient$new(
-    url = file.path(rr_base_v3(), path),
-    opts = list(useragent = rredlist_ua())
-  )
-  temp <- cli$get(query = list(token = check_key_v3(key)), ...)
-  temp$raise_for_status()
-  x <- temp$parse("UTF-8")
-  err_catcher(x)
-  return(x)
-}
-
 rr_GET <- function(path, key = NULL, query = list(), ...){
   cli <- crul::HttpClient$new(
     url = file.path(rr_base(), path),
@@ -56,17 +44,6 @@ check_key <- function(x){
   }
 }
 
-check_key_v3 <- function(x){
-  tmp <- if (is.null(x)) Sys.getenv("IUCN_REDLIST_KEY_v3", "") else x
-  if (tmp == "") {
-    getOption("iucn_redlist_key_v3", stop("need an API key for Red List data",
-                                       call. = FALSE))
-  } else {
-    tmp
-  }
-}
-
-rr_base_v3 <- function() "https://apiv3.iucnredlist.org/api/v3"
 rr_base <- function() "https://api.iucnredlist.org/api/v4"
 
 space <- function(x) gsub("\\s", "%20", x)

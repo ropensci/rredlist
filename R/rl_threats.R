@@ -10,8 +10,9 @@
 #' @param code (character) The code of the threat to look up. If not supplied, a
 #'   list of all threats will be returned.
 #' @template all
-#' @template info
+#' @template info_new
 #' @template page
+#' @family threats
 #' @examples \dontrun{
 #' # Get all threats
 #' rl_threats()
@@ -60,8 +61,9 @@ rl_threats_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
 #' @param code (character) The code of the stress to look up. If not supplied, a
 #'   list of all stresses will be returned.
 #' @template all
-#' @template info
+#' @template info_new
 #' @template page
+#' @family threats
 #' @examples \dontrun{
 #' # Get all stresses
 #' rl_stresses()
@@ -110,8 +112,9 @@ rl_stresses_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
 #' @param code (character) The code of the use and trade to look up. If not
 #'   supplied, a list of all uses and trades will be returned.
 #' @template all
-#' @template info
+#' @template info_new
 #' @template page
+#' @family threats
 #' @examples \dontrun{
 #' # Get all stresses
 #' rl_use_and_trade()

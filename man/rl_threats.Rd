@@ -40,9 +40,8 @@ much burden on a server to just "get all the data" in one request.}
 \item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
 }
 \value{
-A list, with the data in the \code{result} slot, unless using
-a function with a trailing underscore, in which case json as character
-string is returned.
+A list unless using a function with a trailing underscore, in which
+case json as character string is returned.
 }
 \description{
 Return a list of the latest assessments which are subject to a specific
@@ -60,5 +59,11 @@ rl_threats("5_1_1")
 }
 }
 \references{
-API docs at https://apiv3.iucnredlist.org/api/v3/docs.
+API docs at \url{https://api.iucnredlist.org/}.
 }
+\seealso{
+Threats and use/trade:
+\code{\link{rl_stresses}()},
+\code{\link{rl_use_and_trade}()}
+}
+\concept{threats}
