@@ -1,0 +1,54 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/conservation_actions/?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '2613'
+      content-type: application/json
+      etag: W/"b8c447de3a0b1be9f9be1d46cd058d65"
+      x-request-id: 177da87a-701e-46dd-b43f-271ea961df16
+      x-runtime: '0.010989'
+      date: Tue, 17 Sep 2024 21:06:13 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"conservation_actions":[{"description":{"en":"Land/water protection"},"code":"1"},{"description":{"en":"Site/area
+        protection"},"code":"1_1"},{"description":{"en":"Resource \u0026 habitat protection"},"code":"1_2"},{"description":{"en":"Land/water
+        management"},"code":"2"},{"description":{"en":"Site/area management"},"code":"2_1"},{"description":{"en":"Invasive/problematic
+        species control"},"code":"2_2"},{"description":{"en":"Habitat \u0026 natural
+        process restoration"},"code":"2_3"},{"description":{"en":"Species management"},"code":"3"},{"description":{"en":"Species
+        management"},"code":"3_1"},{"description":{"en":"Harvest management"},"code":"3_1_1"},{"description":{"en":"Trade
+        management"},"code":"3_1_2"},{"description":{"en":"Limiting population growth"},"code":"3_1_3"},{"description":{"en":"Species
+        recovery"},"code":"3_2"},{"description":{"en":"Species re-introduction"},"code":"3_3"},{"description":{"en":"Reintroduction"},"code":"3_3_1"},{"description":{"en":"Benign
+        introduction"},"code":"3_3_2"},{"description":{"en":"Ex-situ conservation"},"code":"3_4"},{"description":{"en":"Captive
+        breeding/artificial propagation"},"code":"3_4_1"},{"description":{"en":"Genome
+        resource bank"},"code":"3_4_2"},{"description":{"en":"Education \u0026 awareness"},"code":"4"},{"description":{"en":"Formal
+        education"},"code":"4_1"},{"description":{"en":"Training"},"code":"4_2"},{"description":{"en":"Awareness
+        \u0026 communications"},"code":"4_3"},{"description":{"en":"Law \u0026 policy"},"code":"5"},{"description":{"en":"Legislation"},"code":"5_1"},{"description":{"en":"International
+        level"},"code":"5_1_1"},{"description":{"en":"National level"},"code":"5_1_2"},{"description":{"en":"Sub-national
+        level"},"code":"5_1_3"},{"description":{"en":"Scale unspecified"},"code":"5_1_4"},{"description":{"en":"Policies
+        and regulations"},"code":"5_2"},{"description":{"en":"Private sector standards
+        \u0026 codes"},"code":"5_3"},{"description":{"en":"Compliance and enforcement"},"code":"5_4"},{"description":{"en":"International
+        level"},"code":"5_4_1"},{"description":{"en":"National level"},"code":"5_4_2"},{"description":{"en":"Sub-national
+        level"},"code":"5_4_3"},{"description":{"en":"Scale unspecified"},"code":"5_4_4"},{"description":{"en":"Livelihood,
+        economic \u0026 other incentives"},"code":"6"},{"description":{"en":"Linked
+        enterprises \u0026 livelihood alternatives"},"code":"6_1"},{"description":{"en":"Substitution"},"code":"6_2"},{"description":{"en":"Market
+        forces"},"code":"6_3"},{"description":{"en":"Conservation payments"},"code":"6_4"},{"description":{"en":"Non-monetary
+        values"},"code":"6_5"}]}'
+  recorded_at: 2024-09-17 21:06:13 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

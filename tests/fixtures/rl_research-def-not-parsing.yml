@@ -1,0 +1,40 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/research/?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '989'
+      content-type: application/json
+      etag: W/"4634c5dc601f33fbf2811ccb70b7e468"
+      x-request-id: 97e163f6-0cb7-4f44-a4e1-2ac554ebc88c
+      x-runtime: '0.012521'
+      date: Tue, 17 Sep 2024 21:12:50 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"research":[{"description":{"en":"Research"},"code":"1"},{"description":{"en":"Taxonomy"},"code":"1_1"},{"description":{"en":"Population
+        size, distribution \u0026 trends"},"code":"1_2"},{"description":{"en":"Life
+        history \u0026 ecology"},"code":"1_3"},{"description":{"en":"Harvest, use
+        \u0026 livelihoods"},"code":"1_4"},{"description":{"en":"Threats"},"code":"1_5"},{"description":{"en":"Actions"},"code":"1_6"},{"description":{"en":"Conservation
+        Planning"},"code":"2"},{"description":{"en":"Species Action/Recovery Plan"},"code":"2_1"},{"description":{"en":"Area-based
+        Management Plan"},"code":"2_2"},{"description":{"en":"Harvest \u0026 Trade
+        Management Plan"},"code":"2_3"},{"description":{"en":"Monitoring"},"code":"3"},{"description":{"en":"Population
+        trends"},"code":"3_1"},{"description":{"en":"Harvest level trends"},"code":"3_2"},{"description":{"en":"Trade
+        trends"},"code":"3_3"},{"description":{"en":"Habitat trends"},"code":"3_4"},{"description":{"en":"Other"},"code":"4"}]}'
+  recorded_at: 2024-09-17 21:12:51 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

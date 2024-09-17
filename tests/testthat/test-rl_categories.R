@@ -12,7 +12,7 @@ test_that("high level works - parsing", {
   expect_is(aa$red_list_categories, "data.frame")
 
   vcr::use_cassette("rl_categories", {
-    aa <- rl_categories('V')
+    aa <- rl_categories('EW')
   })
 
   expect_is(aa, "list")
@@ -33,7 +33,7 @@ test_that("high level works - not parsing", {
   expect_is(aa$red_list_categories, "list")
 
   vcr::use_cassette("rl_categories-not-parsing", {
-    aa <- rl_categories('V', parse = FALSE)
+    aa <- rl_categories('EW', parse = FALSE)
   })
 
   expect_is(aa, "list")
@@ -59,7 +59,7 @@ test_that("low level works", {
   expect_is(aajson$red_list_categories, "data.frame")
 
   vcr::use_cassette("rl_categories_", {
-    aa <- rl_categories_('V', all = FALSE)
+    aa <- rl_categories_('EW', all = FALSE)
   })
 
   aajson <- jsonlite::fromJSON(aa)

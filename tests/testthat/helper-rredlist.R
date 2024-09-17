@@ -12,8 +12,6 @@ if (!nzchar(Sys.getenv("IUCN_REDLIST_KEY"))) {
   }
 }
 
-Sys.setenv(VCR_VERBOSE_ERRORS=TRUE)
-
 invisible(vcr::vcr_configure(
   dir = vcr_dir,
   filter_sensitive_data = list("<<rredlist_api_token>>" = Sys.getenv('IUCN_REDLIST_KEY')),

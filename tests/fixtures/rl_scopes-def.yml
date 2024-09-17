@@ -1,0 +1,37 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/scopes/?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '733'
+      content-type: application/json
+      etag: W/"e8d96d9223aea20bcc71e83123b7dbd3"
+      x-request-id: 0d2a37d5-d4ce-40d0-b7a4-f29f4f924c6c
+      x-runtime: '0.012484'
+      date: Tue, 17 Sep 2024 21:16:41 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Europe"},"code":"2"},{"description":{"en":"Mediterranean"},"code":"4"},{"description":{"en":"Western
+        Africa"},"code":"8"},{"description":{"en":"S. Africa FW"},"code":"9"},{"description":{"en":"Pan-Africa"},"code":"10"},{"description":{"en":"Central
+        Africa"},"code":"16"},{"description":{"en":"Northeastern Africa"},"code":"17"},{"description":{"en":"Eastern
+        Africa"},"code":"18"},{"description":{"en":"Northern Africa"},"code":"21"},{"description":{"en":"Gulf
+        of Mexico"},"code":"45433062"},{"description":{"en":"Caribbean"},"code":"45433063"},{"description":{"en":"Persian
+        Gulf"},"code":"45433064"},{"description":{"en":"Arabian Sea"},"code":"100765562"}]}'
+  recorded_at: 2024-09-17 21:16:41 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0
