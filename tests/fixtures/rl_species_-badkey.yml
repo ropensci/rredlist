@@ -1,7 +1,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.iucnredlist.org/api/v4/information/red_list_version
+    uri: https://api.iucnredlist.org/api/v4/taxa/scientific_name?genus_name=Loxodonta&species_name=africana
     body:
       encoding: ''
       string: ''
@@ -12,21 +12,20 @@ http_interactions:
       Authorization: My bearer token is safe
   response:
     status:
-      status_code: '200'
-      message: OK
-      explanation: Request fulfilled, document follows
+      status_code: '401'
+      message: Unauthorized
+      explanation: No permission -- see authorization schemes
     headers:
-      status: HTTP/1.1 200 OK
-      cache-control: max-age=0, private, must-revalidate
-      content-length: '29'
+      status: HTTP/1.1 401 Unauthorized
+      cache-control: no-cache
+      content-length: '24'
       content-type: application/json
-      etag: W/"f7c41b9779278709bef0d0206aad804f"
-      x-request-id: fd872b08-a6b7-453e-a749-d7ff569ba66c
-      x-runtime: '0.010688'
+      x-request-id: 1819022d-2da9-4a70-a057-27cb12698f78
+      x-runtime: '0.006599'
       date: Tue, 17 Sep 2024 17:40:40 GMT
     body:
       encoding: ''
       file: no
-      string: '{"red_list_version":"2024-1"}'
-  recorded_at: 2024-09-17 17:40:41 GMT
+      string: '{"error":"Unauthorized"}'
+  recorded_at: 2024-09-17 17:40:40 GMT
   recorded_with: vcr/1.6.0, webmockr/1.0.0

@@ -16,7 +16,15 @@ rr_GET <- function(path, key = NULL, query = list(), ...){
     headers = list(Authorization = check_key(key))
   )
   temp <- cli$get(query = ct(query), ...)
-  temp$raise_for_status()
+  if (temp$status_code >= 300) {
+    if (temp$status_code == 401) {
+      stop("Token not valid! (HTTP 401)", call. = FALSE)
+    } else if (temp$status_code == 404) {
+      stop("No results returned for query. (HTTP 404)", call. = FALSE)
+    } else {
+      temp$raise_for_status()
+    }
+  }
   x <- temp$parse("UTF-8")
   err_catcher(x)
   return(x)

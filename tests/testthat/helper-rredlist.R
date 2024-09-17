@@ -14,6 +14,6 @@ if (!nzchar(Sys.getenv("IUCN_REDLIST_KEY"))) {
 
 invisible(vcr::vcr_configure(
   dir = vcr_dir,
-  filter_sensitive_data = list("<<rredlist_api_token>>" = Sys.getenv('IUCN_REDLIST_KEY_v3')),
+  filter_sensitive_data = list("<<rredlist_api_token>>" = Sys.getenv('IUCN_REDLIST_KEY')),
   filter_request_headers = list(Authorization = "My bearer token is safe")
 ))

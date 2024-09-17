@@ -33,6 +33,7 @@ Imports:
     crul (>= 0.3.8),
     jsonlite (>= 1.1)
 Suggests:
+    spelling,
     testthat,
     vcr (>= 0.4.0)
 RoxygenNote: 7.3.2
