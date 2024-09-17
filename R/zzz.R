@@ -11,7 +11,7 @@ rredlist_ua <- function() {
 
 rr_GET <- function(path, key = NULL, query = list(), ...){
   cli <- crul::HttpClient$new(
-    url = file.path(rr_base(), path),
+    url = paste(rr_base(), space(path), sep = "/"),
     opts = list(useragent = rredlist_ua()),
     headers = list(Authorization = check_key(key))
   )
@@ -79,39 +79,6 @@ assert_not_na <- function(x) {
       stop(deparse(substitute(x)), " must not be NA", call. = FALSE)
     }
   }
-}
-
-nir <- function(path_name, path_id, name = NULL, id = NULL, region = NULL) {
-
-  # only one of name OR id
-  stopifnot(xor(!is.null(name), !is.null(id)))
-
-  # check types
-  assert_is(name, 'character')
-  assert_is(id, c('integer', 'numeric'))
-  assert_is(region, 'character')
-
-  # can't be NA
-  assert_not_na(name)
-  assert_not_na(id)
-  assert_not_na(region)
-
-  # check lengths - only length 1 allowed for all
-  assert_n(name, 1)
-  assert_n(id, 1)
-  assert_n(region, 1)
-
-  # construct path
-  path <- if (!is.null(name)) {
-    file.path(path_name, space(name))
-  } else {
-    file.path(path_id, id)
-  }
-  if (!is.null(region)) {
-    path <- file.path(path, "region", space(region))
-  }
-
-  return(path)
 }
 
 combine_assessments <- function(res, parse) {

@@ -21,12 +21,12 @@ http_interactions:
       content-length: '29'
       content-type: application/json
       etag: W/"f7c41b9779278709bef0d0206aad804f"
-      x-request-id: fd872b08-a6b7-453e-a749-d7ff569ba66c
-      x-runtime: '0.010688'
-      date: Tue, 17 Sep 2024 17:40:40 GMT
+      x-request-id: 587e18a9-c391-4abe-bcf5-d12d10c3375e
+      x-runtime: '0.012286'
+      date: Tue, 17 Sep 2024 20:00:36 GMT
     body:
       encoding: ''
       file: no
       string: '{"red_list_version":"2024-1"}'
-  recorded_at: 2024-09-17 17:40:41 GMT
+  recorded_at: 2024-09-17 20:00:37 GMT
   recorded_with: vcr/1.6.0, webmockr/1.0.0

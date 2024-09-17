@@ -1,7 +1,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.iucnredlist.org/api/v4/growth_forms?page=1
+    uri: https://api.iucnredlist.org/api/v4/growth_forms/?page=1
     body:
       encoding: ''
       string: ''
@@ -21,9 +21,9 @@ http_interactions:
       content-length: '1183'
       content-type: application/json
       etag: W/"4408072f5a5f71a7d1774c1d14eac919"
-      x-request-id: 4cc441db-123c-4c11-ad7f-023c0bf8e4fc
-      x-runtime: '0.014042'
-      date: Tue, 17 Sep 2024 17:45:47 GMT
+      x-request-id: 5e98d6d4-6d2b-4d21-8ae1-b10791d46405
+      x-runtime: '0.010362'
+      date: Tue, 17 Sep 2024 20:01:16 GMT
     body:
       encoding: ''
       file: no
@@ -34,5 +34,5 @@ http_interactions:
         - large"},"code":"SL"},{"description":{"en":"Shrub - small"},"code":"SS"},{"description":{"en":"Succulent
         - tree"},"code":"ST"},{"description":{"en":"Tree - size unknown"},"code":"T"},{"description":{"en":"Tree
         - large"},"code":"TL"},{"description":{"en":"Tree - small"},"code":"TS"},{"description":{"en":"Vines"},"code":"V"}]}'
-  recorded_at: 2024-09-17 17:45:48 GMT
+  recorded_at: 2024-09-17 20:01:16 GMT
   recorded_with: vcr/1.6.0, webmockr/1.0.0

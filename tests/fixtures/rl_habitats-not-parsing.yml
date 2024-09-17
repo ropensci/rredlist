@@ -27,9 +27,9 @@ http_interactions:
       page-items: '100'
       total-count: '35'
       total-pages: '1'
-      x-request-id: 11473090-4c2d-4d36-a687-0093624efa85
-      x-runtime: '0.113557'
-      date: Tue, 17 Sep 2024 17:45:53 GMT
+      x-request-id: c071be6b-7e5a-468f-aeeb-b878caf3c359
+      x-runtime: '0.084236'
+      date: Tue, 17 Sep 2024 20:01:19 GMT
     body:
       encoding: ''
       file: no
@@ -41,7 +41,7 @@ http_interactions:
         Africa FW"},"code":"9"}]},{"year_published":"2010","latest":true,"sis_taxon_id":60058,"url":"https://www.iucnredlist.org/species/60058/12288665","assessment_id":12288665,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"S.
         Africa FW"},"code":"9"}]},{"year_published":"2010","latest":true,"sis_taxon_id":63198,"url":"https://www.iucnredlist.org/species/63198/12619605","assessment_id":12619605,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Central
         Africa"},"code":"16"},{"description":{"en":"Pan-Africa"},"code":"10"}]},{"year_published":"2019","latest":true,"sis_taxon_id":41276,"url":"https://www.iucnredlist.org/species/41276/45186309","assessment_id":45186309,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2019","latest":true,"sis_taxon_id":41289,"url":"https://www.iucnredlist.org/species/41289/45189637","assessment_id":45189637,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":true,"sis_taxon_id":41631,"url":"https://www.iucnredlist.org/species/41631/45210677","assessment_id":45210677,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":true,"sis_taxon_id":41635,"url":"https://www.iucnredlist.org/species/41635/45211301","assessment_id":45211301,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":true,"sis_taxon_id":136797,"url":"https://www.iucnredlist.org/species/136797/45221721","assessment_id":45221721,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":true,"sis_taxon_id":12521,"url":"https://www.iucnredlist.org/species/12521/50655874","assessment_id":50655874,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2004","latest":false,"sis_taxon_id":56187,"url":"https://www.iucnredlist.org/species/56187/55061188","assessment_id":55061188,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"sis_taxon_id":136797,"url":"https://www.iucnredlist.org/species/136797/86117930","assessment_id":86117930,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2010","latest":false,"sis_taxon_id":185704,"url":"https://www.iucnredlist.org/species/185704/95255328","assessment_id":95255328,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Pan-Africa"},"code":"10"}]},{"year_published":"2019","latest":true,"sis_taxon_id":62026818,"url":"https://www.iucnredlist.org/species/62026818/148762978","assessment_id":148762978,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"}]}],"filters":{}}'
-  recorded_at: 2024-09-17 17:45:53 GMT
+  recorded_at: 2024-09-17 20:01:20 GMT
   recorded_with: vcr/1.6.0, webmockr/1.0.0
 - request:
     method: get
@@ -72,12 +72,12 @@ http_interactions:
       page-items: '100'
       total-count: '35'
       total-pages: '1'
-      x-request-id: af2a0fd7-f2e9-4670-9d4d-dbe567735bb9
-      x-runtime: '0.023029'
-      date: Tue, 17 Sep 2024 17:45:53 GMT
+      x-request-id: ee52348e-6bfb-4bda-9092-685da270558a
+      x-runtime: '0.024149'
+      date: Tue, 17 Sep 2024 20:01:19 GMT
     body:
       encoding: ''
       file: no
       string: '{"habitat":{"description":{"en":"Savanna"},"code":"2"},"assessments":[],"filters":{}}'
-  recorded_at: 2024-09-17 17:45:53 GMT
+  recorded_at: 2024-09-17 20:01:20 GMT
   recorded_with: vcr/1.6.0, webmockr/1.0.0

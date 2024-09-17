@@ -27,9 +27,9 @@ http_interactions:
       page-items: '100'
       total-count: '35'
       total-pages: '1'
-      x-request-id: e709fbc9-1687-4c9c-80f4-468bce0cb123
-      x-runtime: '0.096244'
-      date: Tue, 17 Sep 2024 17:45:54 GMT
+      x-request-id: 96805b22-a28f-42de-98bf-d4c6fe09d696
+      x-runtime: '0.090168'
+      date: Tue, 17 Sep 2024 20:01:20 GMT
     body:
       encoding: ''
       file: no
@@ -41,43 +41,5 @@ http_interactions:
         Africa FW"},"code":"9"}]},{"year_published":"2010","latest":true,"sis_taxon_id":60058,"url":"https://www.iucnredlist.org/species/60058/12288665","assessment_id":12288665,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"S.
         Africa FW"},"code":"9"}]},{"year_published":"2010","latest":true,"sis_taxon_id":63198,"url":"https://www.iucnredlist.org/species/63198/12619605","assessment_id":12619605,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Central
         Africa"},"code":"16"},{"description":{"en":"Pan-Africa"},"code":"10"}]},{"year_published":"2019","latest":true,"sis_taxon_id":41276,"url":"https://www.iucnredlist.org/species/41276/45186309","assessment_id":45186309,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2019","latest":true,"sis_taxon_id":41289,"url":"https://www.iucnredlist.org/species/41289/45189637","assessment_id":45189637,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":true,"sis_taxon_id":41631,"url":"https://www.iucnredlist.org/species/41631/45210677","assessment_id":45210677,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":true,"sis_taxon_id":41635,"url":"https://www.iucnredlist.org/species/41635/45211301","assessment_id":45211301,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":true,"sis_taxon_id":136797,"url":"https://www.iucnredlist.org/species/136797/45221721","assessment_id":45221721,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":true,"sis_taxon_id":12521,"url":"https://www.iucnredlist.org/species/12521/50655874","assessment_id":50655874,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2004","latest":false,"sis_taxon_id":56187,"url":"https://www.iucnredlist.org/species/56187/55061188","assessment_id":55061188,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"sis_taxon_id":136797,"url":"https://www.iucnredlist.org/species/136797/86117930","assessment_id":86117930,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2010","latest":false,"sis_taxon_id":185704,"url":"https://www.iucnredlist.org/species/185704/95255328","assessment_id":95255328,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Pan-Africa"},"code":"10"}]},{"year_published":"2019","latest":true,"sis_taxon_id":62026818,"url":"https://www.iucnredlist.org/species/62026818/148762978","assessment_id":148762978,"code":"2","code_type":"habitat","scopes":[{"description":{"en":"Global"},"code":"1"}]}],"filters":{}}'
-  recorded_at: 2024-09-17 17:45:54 GMT
-  recorded_with: vcr/1.6.0, webmockr/1.0.0
-- request:
-    method: get
-    uri: https://api.iucnredlist.org/api/v4/habitats/2?page=2
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
-      Accept-Encoding: gzip, deflate
-      Accept: application/json, text/xml, application/xml, */*
-      Authorization: My bearer token is safe
-  response:
-    status:
-      status_code: '200'
-      message: OK
-      explanation: Request fulfilled, document follows
-    headers:
-      status: HTTP/1.1 200 OK
-      cache-control: max-age=0, private, must-revalidate
-      content-length: '85'
-      content-type: application/json
-      current-page: '2'
-      etag: W/"b17a770232927570322e6dc26566601f"
-      link: <https://api.iucnredlist.org/api/v4/habitats/2?page=1&per_page=100>; rel="first",
-        <https://api.iucnredlist.org/api/v4/habitats/2?page=1&per_page=100>; rel="prev",
-        <https://api.iucnredlist.org/api/v4/habitats/2?page=1&per_page=100>; rel="last"
-      page-items: '100'
-      total-count: '35'
-      total-pages: '1'
-      x-request-id: 7c42d4f5-9931-45a1-9adc-87d650d5c3a2
-      x-runtime: '0.022452'
-      date: Tue, 17 Sep 2024 17:45:54 GMT
-    body:
-      encoding: ''
-      file: no
-      string: '{"habitat":{"description":{"en":"Savanna"},"code":"2"},"assessments":[],"filters":{}}'
-  recorded_at: 2024-09-17 17:45:54 GMT
+  recorded_at: 2024-09-17 20:01:20 GMT
   recorded_with: vcr/1.6.0, webmockr/1.0.0

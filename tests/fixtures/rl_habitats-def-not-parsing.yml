@@ -1,7 +1,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.iucnredlist.org/api/v4/habitats?page=1
+    uri: https://api.iucnredlist.org/api/v4/habitats/?page=1
     body:
       encoding: ''
       string: ''
@@ -21,9 +21,9 @@ http_interactions:
       content-length: '9949'
       content-type: application/json
       etag: W/"4dbf148f528195e94487e3c2c4958c70"
-      x-request-id: 80dd3a1e-a229-4a4b-b896-41c3ba3fa0c9
-      x-runtime: '0.012023'
-      date: Tue, 17 Sep 2024 17:45:53 GMT
+      x-request-id: 4fee5288-50cc-4b18-929c-df9567ffca6f
+      x-runtime: '0.012419'
+      date: Tue, 17 Sep 2024 20:01:19 GMT
     body:
       encoding: ''
       file: no
@@ -129,5 +129,5 @@ http_interactions:
         - Mariculture Cages"},"code":"15_12"},{"description":{"en":"Artificial/Marine
         - Mari/Brackishculture Ponds"},"code":"15_13"},{"description":{"en":"Introduced
         vegetation"},"code":"16"},{"description":{"en":"Other"},"code":"17"},{"description":{"en":"Unknown"},"code":"18"}]}'
-  recorded_at: 2024-09-17 17:45:53 GMT
+  recorded_at: 2024-09-17 20:01:19 GMT
   recorded_with: vcr/1.6.0, webmockr/1.0.0

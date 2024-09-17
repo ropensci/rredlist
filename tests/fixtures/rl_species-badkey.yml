@@ -20,12 +20,12 @@ http_interactions:
       cache-control: no-cache
       content-length: '24'
       content-type: application/json
-      x-request-id: 025fc502-5d9e-43a5-8b00-6290bca965f7
-      x-runtime: '0.006722'
-      date: Tue, 17 Sep 2024 17:40:40 GMT
+      x-request-id: 76223315-e38a-4a36-9f30-5c991412a683
+      x-runtime: '0.006580'
+      date: Tue, 17 Sep 2024 19:59:42 GMT
     body:
       encoding: ''
       file: no
       string: '{"error":"Unauthorized"}'
-  recorded_at: 2024-09-17 17:40:40 GMT
+  recorded_at: 2024-09-17 19:59:42 GMT
   recorded_with: vcr/1.6.0, webmockr/1.0.0

@@ -1,7 +1,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.iucnredlist.org/api/v4/red_list_categories?page=1
+    uri: https://api.iucnredlist.org/api/v4/red_list_categories/?page=1
     body:
       encoding: ''
       string: ''
@@ -21,9 +21,9 @@ http_interactions:
       content-length: '3536'
       content-type: application/json
       etag: W/"6f14b22e04bd092fcbe6b8eb9cd94211"
-      x-request-id: aea4c9a8-f3b5-47f0-aa43-0b7baa1fe438
-      x-runtime: '0.015374'
-      date: Tue, 17 Sep 2024 17:46:23 GMT
+      x-request-id: eb8de906-cf1a-4cc2-b414-aaec1855bff6
+      x-runtime: '0.013379'
+      date: Tue, 17 Sep 2024 20:00:10 GMT
     body:
       encoding: ''
       file: no
@@ -54,5 +54,5 @@ http_interactions:
         of Danger"},"code":"O"},{"version":"Earlier Version","description":{"en":"Rare"},"code":"R"},{"version":"3.1","description":{"en":"Regionally
         Extinct"},"code":"RE"},{"version":"Earlier Version","description":{"en":"Threatened"},"code":"T"},{"version":"Earlier
         Version","description":{"en":"Vulnerable"},"code":"V"},{"version":"3.1","description":{"en":"Vulnerable"},"code":"VU"},{"version":"2.3","description":{"en":"Vulnerable"},"code":"VU"}]}'
-  recorded_at: 2024-09-17 17:46:23 GMT
+  recorded_at: 2024-09-17 20:00:10 GMT
   recorded_with: vcr/1.6.0, webmockr/1.0.0
