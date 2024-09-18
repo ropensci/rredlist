@@ -1,0 +1,78 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/taxa/family/Hominidae?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '12656'
+      content-type: application/json
+      current-page: '1'
+      etag: W/"8779df77a58832b13468377f212b9b34"
+      link: <https://api.iucnredlist.org/api/v4/taxa/family/Hominidae?page=1&per_page=100>;
+        rel="first", <https://api.iucnredlist.org/api/v4/taxa/family/Hominidae?page=1&per_page=100>;
+        rel="last"
+      page-items: '100'
+      total-count: '63'
+      total-pages: '1'
+      x-request-id: 339665fb-7aae-4c84-9408-9f5e076fadaa
+      x-runtime: '0.541465'
+      date: Wed, 18 Sep 2024 14:37:28 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"assessments":[{"year_published":"2008","latest":false,"sis_taxon_id":136584,"url":"https://www.iucnredlist.org/species/136584/4313662","assessment_id":4313662,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2000","latest":false,"sis_taxon_id":15932,"url":"https://www.iucnredlist.org/species/15932/5321856","assessment_id":5321856,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1996","latest":false,"sis_taxon_id":15932,"url":"https://www.iucnredlist.org/species/15932/5321883","assessment_id":5321883,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"sis_taxon_id":15932,"url":"https://www.iucnredlist.org/species/15932/5321906","assessment_id":5321906,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2007","latest":false,"sis_taxon_id":15932,"url":"https://www.iucnredlist.org/species/15932/5322067","assessment_id":5322067,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1988","latest":false,"sis_taxon_id":15932,"url":"https://www.iucnredlist.org/species/15932/5322237","assessment_id":5322237,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1988","latest":false,"sis_taxon_id":15932,"url":"https://www.iucnredlist.org/species/15932/5322256","assessment_id":5322256,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1965","latest":false,"sis_taxon_id":15932,"url":"https://www.iucnredlist.org/species/15932/5322275","assessment_id":5322275,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1986","latest":false,"sis_taxon_id":15932,"url":"https://www.iucnredlist.org/species/15932/5322293","assessment_id":5322293,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1990","latest":false,"sis_taxon_id":15932,"url":"https://www.iucnredlist.org/species/15932/5322312","assessment_id":5322312,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1994","latest":false,"sis_taxon_id":15932,"url":"https://www.iucnredlist.org/species/15932/5322331","assessment_id":5322331,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2007","latest":false,"sis_taxon_id":15933,"url":"https://www.iucnredlist.org/species/15933/5322354","assessment_id":5322354,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1996","latest":false,"sis_taxon_id":15933,"url":"https://www.iucnredlist.org/species/15933/5322604","assessment_id":5322604,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"sis_taxon_id":15933,"url":"https://www.iucnredlist.org/species/15933/5322627","assessment_id":5322627,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2000","latest":false,"sis_taxon_id":15933,"url":"https://www.iucnredlist.org/species/15933/5322894","assessment_id":5322894,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1988","latest":false,"sis_taxon_id":15933,"url":"https://www.iucnredlist.org/species/15933/5322923","assessment_id":5322923,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1988","latest":false,"sis_taxon_id":15933,"url":"https://www.iucnredlist.org/species/15933/5322942","assessment_id":5322942,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2000","latest":false,"sis_taxon_id":15933,"url":"https://www.iucnredlist.org/species/15933/5322961","assessment_id":5322961,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1986","latest":false,"sis_taxon_id":15933,"url":"https://www.iucnredlist.org/species/15933/5322990","assessment_id":5322990,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1990","latest":false,"sis_taxon_id":15933,"url":"https://www.iucnredlist.org/species/15933/5323009","assessment_id":5323009,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1994","latest":false,"sis_taxon_id":15933,"url":"https://www.iucnredlist.org/species/15933/5323028","assessment_id":5323028,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1996","latest":false,"sis_taxon_id":17975,"url":"https://www.iucnredlist.org/species/17975/7640584","assessment_id":7640584,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2000","latest":false,"sis_taxon_id":17975,"url":"https://www.iucnredlist.org/species/17975/7640607","assessment_id":7640607,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"sis_taxon_id":17975,"url":"https://www.iucnredlist.org/species/17975/7640635","assessment_id":7640635,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2007","latest":false,"sis_taxon_id":17975,"url":"https://www.iucnredlist.org/species/17975/7640795","assessment_id":7640795,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1988","latest":false,"sis_taxon_id":17975,"url":"https://www.iucnredlist.org/species/17975/7640965","assessment_id":7640965,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1990","latest":false,"sis_taxon_id":17975,"url":"https://www.iucnredlist.org/species/17975/7640984","assessment_id":7640984,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1965","latest":false,"sis_taxon_id":17975,"url":"https://www.iucnredlist.org/species/17975/7641003","assessment_id":7641003,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1986","latest":false,"sis_taxon_id":17975,"url":"https://www.iucnredlist.org/species/17975/7641021","assessment_id":7641021,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1994","latest":false,"sis_taxon_id":17975,"url":"https://www.iucnredlist.org/species/17975/7641040","assessment_id":7641040,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"sis_taxon_id":39994,"url":"https://www.iucnredlist.org/species/39994/10289921","assessment_id":10289921,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2000","latest":false,"sis_taxon_id":39994,"url":"https://www.iucnredlist.org/species/39994/10290114","assessment_id":10290114,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2000","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/12983737","assessment_id":12983737,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1996","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/12983764","assessment_id":12983764,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/12983787","assessment_id":12983787,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2007","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/12983966","assessment_id":12983966,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1986","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/12984110","assessment_id":12984110,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1988","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/12984129","assessment_id":12984129,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1988","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/12984148","assessment_id":12984148,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1994","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/12984167","assessment_id":12984167,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1990","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/12984186","assessment_id":12984186,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/17963949","assessment_id":17963949,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":false,"sis_taxon_id":39994,"url":"https://www.iucnredlist.org/species/39994/17964126","assessment_id":17964126,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":false,"sis_taxon_id":15932,"url":"https://www.iucnredlist.org/species/15932/17964305","assessment_id":17964305,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":false,"sis_taxon_id":15933,"url":"https://www.iucnredlist.org/species/15933/17964454","assessment_id":17964454,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":false,"sis_taxon_id":17975,"url":"https://www.iucnredlist.org/species/17975/17966347","assessment_id":17966347,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":false,"sis_taxon_id":39994,"url":"https://www.iucnredlist.org/species/39994/102325702","assessment_id":102325702,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":false,"sis_taxon_id":15933,"url":"https://www.iucnredlist.org/species/15933/102326672","assessment_id":102326672,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/102330408","assessment_id":102330408,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":true,"sis_taxon_id":15932,"url":"https://www.iucnredlist.org/species/15932/102331567","assessment_id":102331567,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2017","latest":false,"sis_taxon_id":121097935,"url":"https://www.iucnredlist.org/species/121097935/115575085","assessment_id":115575085,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2019","latest":true,"sis_taxon_id":39994,"url":"https://www.iucnredlist.org/species/39994/115576640","assessment_id":115576640,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2017","latest":false,"sis_taxon_id":120588639,"url":"https://www.iucnredlist.org/species/120588639/120588662","assessment_id":120588662,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2017","latest":false,"sis_taxon_id":121097935,"url":"https://www.iucnredlist.org/species/121097935/123797627","assessment_id":123797627,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":false,"sis_taxon_id":17975,"url":"https://www.iucnredlist.org/species/17975/123809220","assessment_id":123809220,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":true,"sis_taxon_id":15933,"url":"https://www.iucnredlist.org/species/15933/129038584","assessment_id":129038584,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2018","latest":true,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/136250858","assessment_id":136250858,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":false,"sis_taxon_id":121097935,"url":"https://www.iucnredlist.org/species/121097935/247631244","assessment_id":247631244,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":false,"sis_taxon_id":17975,"url":"https://www.iucnredlist.org/species/17975/247631797","assessment_id":247631797,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":false,"sis_taxon_id":120588639,"url":"https://www.iucnredlist.org/species/120588639/247632253","assessment_id":247632253,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2024","latest":true,"sis_taxon_id":120588639,"url":"https://www.iucnredlist.org/species/120588639/259042400","assessment_id":259042400,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2024","latest":true,"sis_taxon_id":17975,"url":"https://www.iucnredlist.org/species/17975/259043172","assessment_id":259043172,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2024","latest":true,"sis_taxon_id":121097935,"url":"https://www.iucnredlist.org/species/121097935/259045437","assessment_id":259045437,"scopes":[{"description":{"en":"Global"},"code":"1"}]}],"filters":{"family_name":"Hominidae"}}'
+  recorded_at: 2024-09-18 14:37:29 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/taxa/family/Hominidae?page=2
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '56'
+      content-type: application/json
+      current-page: '2'
+      etag: W/"7aef01253a3d2f0e1ffc4e65de43d86f"
+      link: <https://api.iucnredlist.org/api/v4/taxa/family/Hominidae?page=1&per_page=100>;
+        rel="first", <https://api.iucnredlist.org/api/v4/taxa/family/Hominidae?page=1&per_page=100>;
+        rel="prev", <https://api.iucnredlist.org/api/v4/taxa/family/Hominidae?page=1&per_page=100>;
+        rel="last"
+      page-items: '100'
+      total-count: '63'
+      total-pages: '1'
+      x-request-id: 5319e351-7af0-42de-81d3-30f740a0635f
+      x-runtime: '0.227884'
+      date: Wed, 18 Sep 2024 14:37:28 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"assessments":[],"filters":{"family_name":"Hominidae"}}'
+  recorded_at: 2024-09-18 14:37:29 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

@@ -1,0 +1,78 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/taxa/kingdom/Chromista?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '3668'
+      content-type: application/json
+      current-page: '1'
+      etag: W/"63cd6eb289f20bc9834f534b373f6d22"
+      link: <https://api.iucnredlist.org/api/v4/taxa/kingdom/Chromista?page=1&per_page=100>;
+        rel="first", <https://api.iucnredlist.org/api/v4/taxa/kingdom/Chromista?page=1&per_page=100>;
+        rel="last"
+      page-items: '100'
+      total-count: '18'
+      total-pages: '1'
+      x-request-id: 3ce661ad-c312-4148-8fea-71e107b37a90
+      x-runtime: '0.446891'
+      date: Wed, 18 Sep 2024 14:37:04 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"assessments":[{"year_published":"2007","latest":true,"sis_taxon_id":63585,"url":"https://www.iucnredlist.org/species/63585/12684515","assessment_id":12684515,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2007","latest":true,"sis_taxon_id":63586,"url":"https://www.iucnredlist.org/species/63586/12684685","assessment_id":12684685,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2007","latest":true,"sis_taxon_id":63587,"url":"https://www.iucnredlist.org/species/63587/12684867","assessment_id":12684867,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2007","latest":true,"sis_taxon_id":63588,"url":"https://www.iucnredlist.org/species/63588/12685041","assessment_id":12685041,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2007","latest":true,"sis_taxon_id":63589,"url":"https://www.iucnredlist.org/species/63589/12685219","assessment_id":12685219,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2007","latest":true,"sis_taxon_id":63590,"url":"https://www.iucnredlist.org/species/63590/12685548","assessment_id":12685548,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2007","latest":true,"sis_taxon_id":63591,"url":"https://www.iucnredlist.org/species/63591/12685707","assessment_id":12685707,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2007","latest":true,"sis_taxon_id":63592,"url":"https://www.iucnredlist.org/species/63592/12685875","assessment_id":12685875,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2007","latest":true,"sis_taxon_id":63593,"url":"https://www.iucnredlist.org/species/63593/12686056","assessment_id":12686056,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2007","latest":true,"sis_taxon_id":63594,"url":"https://www.iucnredlist.org/species/63594/12686231","assessment_id":12686231,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2007","latest":true,"sis_taxon_id":63595,"url":"https://www.iucnredlist.org/species/63595/12686392","assessment_id":12686392,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2007","latest":true,"sis_taxon_id":63596,"url":"https://www.iucnredlist.org/species/63596/12686555","assessment_id":12686555,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2007","latest":true,"sis_taxon_id":63597,"url":"https://www.iucnredlist.org/species/63597/12686720","assessment_id":12686720,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2007","latest":true,"sis_taxon_id":63598,"url":"https://www.iucnredlist.org/species/63598/12686906","assessment_id":12686906,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2007","latest":true,"sis_taxon_id":63599,"url":"https://www.iucnredlist.org/species/63599/12687105","assessment_id":12687105,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":198113620,"url":"https://www.iucnredlist.org/species/198113620/200405861","assessment_id":200405861,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":198113679,"url":"https://www.iucnredlist.org/species/198113679/200405866","assessment_id":200405866,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":198113763,"url":"https://www.iucnredlist.org/species/198113763/200405871","assessment_id":200405871,"scopes":[{"description":{"en":"Global"},"code":"1"}]}],"filters":{"kingdom_name":"Chromista"}}'
+  recorded_at: 2024-09-18 14:37:04 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/taxa/kingdom/Chromista?page=2
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '57'
+      content-type: application/json
+      current-page: '2'
+      etag: W/"48a1c2af77bf15ee34b5e28223d3e3a5"
+      link: <https://api.iucnredlist.org/api/v4/taxa/kingdom/Chromista?page=1&per_page=100>;
+        rel="first", <https://api.iucnredlist.org/api/v4/taxa/kingdom/Chromista?page=1&per_page=100>;
+        rel="prev", <https://api.iucnredlist.org/api/v4/taxa/kingdom/Chromista?page=1&per_page=100>;
+        rel="last"
+      page-items: '100'
+      total-count: '18'
+      total-pages: '1'
+      x-request-id: a87d9318-62c0-4ff9-9cac-cba4d9fb9a98
+      x-runtime: '0.215933'
+      date: Wed, 18 Sep 2024 14:37:04 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"assessments":[],"filters":{"kingdom_name":"Chromista"}}'
+  recorded_at: 2024-09-18 14:37:04 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

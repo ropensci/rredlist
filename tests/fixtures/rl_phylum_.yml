@@ -1,0 +1,39 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/taxa/phylum/Porifera?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '5070'
+      content-type: application/json
+      current-page: '1'
+      etag: W/"aa4cce31df1cf1305a41690136d9258d"
+      link: <https://api.iucnredlist.org/api/v4/taxa/phylum/Porifera?page=1&per_page=100>;
+        rel="first", <https://api.iucnredlist.org/api/v4/taxa/phylum/Porifera?page=1&per_page=100>;
+        rel="last"
+      page-items: '100'
+      total-count: '24'
+      total-pages: '1'
+      x-request-id: 29f5cbc0-1a66-4521-a259-c63e38c39ab5
+      x-runtime: '0.667316'
+      date: Wed, 18 Sep 2024 14:37:09 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"assessments":[{"year_published":"2023","latest":true,"sis_taxon_id":220642551,"url":"https://www.iucnredlist.org/species/220642551/220642557","assessment_id":220642557,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220658844,"url":"https://www.iucnredlist.org/species/220658844/220658853","assessment_id":220658853,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220658973,"url":"https://www.iucnredlist.org/species/220658973/220659021","assessment_id":220659021,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220659050,"url":"https://www.iucnredlist.org/species/220659050/220659073","assessment_id":220659073,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220659161,"url":"https://www.iucnredlist.org/species/220659161/220659221","assessment_id":220659221,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220659266,"url":"https://www.iucnredlist.org/species/220659266/220659312","assessment_id":220659312,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220659359,"url":"https://www.iucnredlist.org/species/220659359/220659363","assessment_id":220659363,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220659626,"url":"https://www.iucnredlist.org/species/220659626/220659642","assessment_id":220659642,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220660370,"url":"https://www.iucnredlist.org/species/220660370/220660378","assessment_id":220660378,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220718350,"url":"https://www.iucnredlist.org/species/220718350/220718360","assessment_id":220718360,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220719673,"url":"https://www.iucnredlist.org/species/220719673/220719689","assessment_id":220719689,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220725256,"url":"https://www.iucnredlist.org/species/220725256/220725272","assessment_id":220725272,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220733176,"url":"https://www.iucnredlist.org/species/220733176/220733179","assessment_id":220733179,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220733384,"url":"https://www.iucnredlist.org/species/220733384/220733456","assessment_id":220733456,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220736273,"url":"https://www.iucnredlist.org/species/220736273/220736279","assessment_id":220736279,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220736883,"url":"https://www.iucnredlist.org/species/220736883/220736892","assessment_id":220736892,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220738215,"url":"https://www.iucnredlist.org/species/220738215/220738232","assessment_id":220738232,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220751777,"url":"https://www.iucnredlist.org/species/220751777/220751780","assessment_id":220751780,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220752695,"url":"https://www.iucnredlist.org/species/220752695/220752706","assessment_id":220752706,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220752772,"url":"https://www.iucnredlist.org/species/220752772/220752778","assessment_id":220752778,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220753752,"url":"https://www.iucnredlist.org/species/220753752/220753852","assessment_id":220753852,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220754052,"url":"https://www.iucnredlist.org/species/220754052/220754069","assessment_id":220754069,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220754328,"url":"https://www.iucnredlist.org/species/220754328/220754338","assessment_id":220754338,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"sis_taxon_id":220740050,"url":"https://www.iucnredlist.org/species/220740050/220779705","assessment_id":220779705,"scopes":[{"description":{"en":"Global"},"code":"1"}]}],"filters":{"phylum_name":"Porifera"}}'
+  recorded_at: 2024-09-18 14:37:09 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0
