@@ -1,0 +1,31 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/taxa/scientific_name?genus_name=Loxodonta&species_name=africanum
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '404'
+      message: Not Found
+      explanation: Nothing matches the given URI
+    headers:
+      status: HTTP/1.1 404 Not Found
+      cache-control: no-cache
+      content-length: '21'
+      content-type: application/json
+      x-request-id: 655de895-6214-4293-9d3b-095c272f43be
+      x-runtime: '0.208818'
+      date: Wed, 18 Sep 2024 16:01:17 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"error":"Not found"}'
+  recorded_at: 2024-09-18 16:01:17 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

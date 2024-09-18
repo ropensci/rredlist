@@ -1,0 +1,1145 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/green_status/all
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '146726'
+      content-type: application/json
+      etag: W/"b643365999e6fb6cc827e756a30305bd"
+      x-request-id: 7e3ed6c1-2d06-4b2d-92af-d8875d2c491f
+      x-runtime: '0.577590'
+      date: Wed, 18 Sep 2024 16:03:52 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"assessments":[{"assessment_year":"2022","weights":"Default","justification":"\u003cp\u003eThe
+        American Horseshoe Crab has a Species Recovery Score of 69% (Moderately Depleted).
+        While it is Viable throughout much of its range, declines due to development,
+        harvesting, climate change and sea level rise prevent it from being Functional
+        save for in a few spatial units. Its Conservation Legacy is Indeterminate;
+        though the best estimate is that conservation actions, including harvest management,
+        have benefitted the species. The species has a Medium Conservation Gain and
+        Dependence; within 10 years, the best estimate is that the species\u0026#39;
+        score will increase to 83% with continued conservation, or decrease to 48%
+        if it ceased. However, given the pressures of climate change, which affects
+        spawning cues, and sea level rise, which reduces available spawning habitat,
+        the species is expected in 100 years to lose those short-term gains, giving
+        it a Recovery Potential of Zero.\u003cbr\u003e\u003cbr\u003eFor additional
+        data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Moderately Depleted","species_recovery_score_best":"69%","species_recovery_score_minimum":"60%","species_recovery_score_maximum":"93%","conservation_legacy_category":"Indeterminate","conservation_legacy_best":"24%","conservation_legacy_minimum":"-2%","conservation_legacy_maximum":"57%","conservation_dependence_category":"Medium","conservation_dependence_best":"21%","conservation_dependence_minimum":"0%","conservation_dependence_maximum":"69%","conservation_gain_category":"Medium","conservation_gain_best":"14%","conservation_gain_minimum":"-36%","conservation_gain_maximum":"36%","recovery_potential_category":"Zero","recovery_potential_best":"0%","recovery_potential_minimum":"-69%","recovery_potential_maximum":"38%","assessor_names":"Smith,
+        D., Brockmann, J., Carmichael, R., Hallerman, E., Watson, W. \u0026 Zald\u0026iacute;var-Rae,
+        J.","reviewer_names":"Botton, M. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace,
+        M.K. \u0026 Young, R.E.","compilers":null,"url":"https://www.iucnredlist.org/species/11987/80159830","assessment_date":"2022-07-21","taxon":{"sis_id":11987,"scientific_name":"Limulus
+        polyphemus","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"ARTHROPODA","class_name":"MEROSTOMATA","order_name":"XIPHOSURA","family_name":"LIMULIDAE","genus_name":"Limulus","species_name":"polyphemus","subpopulation_name":null,"infra_name":null,"authority":"(Linnaeus,
+        1758)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Horseshoe Crab Specialist Group","url":null,"description":"Co-Chairs:
+        Mark L. Botton (email: botton@fordham.edu) and Paul K.S. Shin (email: paulksshin@gmail.com)\nRed
+        List Authority Coordinator: Dave Smith (email: drsmith@usgs.gov)"}],"common_names":[{"main":false,"name":"Atlantic
+        Horseshoe Crab","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Horseshoe
+        Crab","language":{"code":"eng","description":{"en":"English"}}},{"main":true,"name":"American
+        Horseshoe Crab","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Monoculus
+        polyphemus Linnaeus, 1758","status":"ACCEPTED","genus_name":"Monoculus","species_name":"polyphemus","species_author":"Linnaeus,
+        1758","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eEncino
+        Arroyero\u0026#39;s Species Recovery Score of 33% (Largely Depleted) is due
+        to low recruitment and an age structure skewed toward very old individuals,
+        preventing the species from being Viable in any of its spatial units (instead,
+        it is Present in all of them). Encino Arroyero has a Conservation Legacy of
+        Zero due to the species\u0026#39; extremely long generation time and continued
+        threats, even within protected areas. Because of the possible states that
+        casn be assigned in the Green Status assessment, there is also Zero Conservation
+        Dependence; if conservation actions were to stop, it is expected that the
+        species would indeed decline majorly over a 10-year period, but likely some
+        individuals would remain, which would mean the species was still Present in
+        all of its spatial units. Encino Arroyero has a Medium Conservation Gain;
+        within a 10-year period, if proposed bans on cutting down these trees are
+        implemented, and planned seedling planting is carried out, it is expected
+        that the species could become Viable in some of its spatial units, leading
+        to a score of 44%. Finally, within 100 years it would be possible for Encino
+        Arroyero to become Functional in two spatial units and Viable in most, leading
+        to a score of 78%. Therefore, the Recovery Potential for Encino Arroyero is
+        High.\u003cbr\u003e\u003cbr\u003eFor additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Largely Depleted","species_recovery_score_best":"33%","species_recovery_score_minimum":"33%","species_recovery_score_maximum":"33%","conservation_legacy_category":"Zero","conservation_legacy_best":"0%","conservation_legacy_minimum":"0%","conservation_legacy_maximum":"17%","conservation_dependence_category":"Zero","conservation_dependence_best":"0%","conservation_dependence_minimum":"0%","conservation_dependence_maximum":"33%","conservation_gain_category":"Medium","conservation_gain_best":"11%","conservation_gain_minimum":"0%","conservation_gain_maximum":"11%","recovery_potential_category":"High","recovery_potential_best":"44%","recovery_potential_minimum":"11%","recovery_potential_maximum":"67%","assessor_names":"Alvarez-Clare,
+        S.A.C., Carrero, C. \u0026 Perez Morales, D.W.","reviewer_names":"Gonz\u0026aacute;lez
+        Rodriguez, A. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace,
+        M.K.","compilers":null,"url":"https://www.iucnredlist.org/species/30726/2795363","assessment_date":"2021-10-31","taxon":{"sis_id":30726,"scientific_name":"Quercus
+        brandegeei","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"PLANTAE","phylum_name":"TRACHEOPHYTA","class_name":"MAGNOLIOPSIDA","order_name":"FAGALES","family_name":"FAGACEAE","genus_name":"Quercus","species_name":"brandegeei","subpopulation_name":null,"infra_name":null,"authority":"Goldman","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[],"common_names":[{"main":true,"name":"Encino
+        Arroyero","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}}],"synonyms":[]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Species Recovery Score of 79% (Moderately Depleted) is due to Alpine Ibex
+        having been restored to functionality in five out of eight spatial units.
+        Alpine Ibex has a High Conservation Legacy; without past conservation action,
+        the Alpine Ibex would almost certainly be extinct today as the result of intense
+        hunting pressure between the 16th and 19th centuries. There is a Low Conservation
+        Dependence; if conservation actions were to stop, it is expected that the
+        species would not show much change over a 10-year period, falling only to
+        75%. The Alpine Ibex has a Conservation Gain of Zero; while there are plans
+        to bolster the genetic diversity of the species, it is not expected that effects
+        large enough to change the state in a spatial unit would be seen within a
+        10-year period. Finally, within 100 years it would be possible for the Alpine
+        Ibex to become at least Viable in all spatial units, and Functional in most,
+        leading to a score of 88%. This makes the Recovery Potential for Alpine Ibex
+        Low, relative to the current score.\u003cbr\u003e\u003cbr\u003eFor additional
+        data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Moderately Depleted","species_recovery_score_best":"79%","species_recovery_score_minimum":"75%","species_recovery_score_maximum":"83%","conservation_legacy_category":"High","conservation_legacy_best":"79%","conservation_legacy_minimum":"71%","conservation_legacy_maximum":"83%","conservation_dependence_category":"Low","conservation_dependence_best":"4%","conservation_dependence_minimum":"0%","conservation_dependence_maximum":"42%","conservation_gain_category":"Zero","conservation_gain_best":"0%","conservation_gain_minimum":"-8%","conservation_gain_maximum":"13%","recovery_potential_category":"Low","recovery_potential_best":"8%","recovery_potential_minimum":"-17%","recovery_potential_maximum":"25%","assessor_names":"Brambilla,
+        A., Bassano, B., Biebach, I., Cavailhes, J., Gressmann, G., Grossen, C., Keller,
+        L., Toïgo, C. \u0026 von Hardenberg, A.","reviewer_names":"Milner-Gulland,
+        E.J., Mallon, D.P. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace,
+        M.K.","compilers":"Wynter, V.","url":"https://www.iucnredlist.org/species/42397/161916377","assessment_date":"2021-10-31","taxon":{"sis_id":42397,"scientific_name":"Capra
+        ibex","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"ARTIODACTYLA","family_name":"BOVIDAE","genus_name":"Capra","species_name":"ibex","subpopulation_name":null,"infra_name":null,"authority":"Linnaeus,
+        1758","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[],"common_names":[{"main":false,"name":"Alpensteinbock","language":{"code":"ger","description":{"en":"German"}}},{"main":false,"name":"Bouquetin
+        des Alpes","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Íbice
+        de los Alpes","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":false,"name":"Stambecco
+        alpino","language":{"code":"ita","description":{"en":"Italian"}}},{"main":true,"name":"Alpine
+        Ibex","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Royle\u0026#39;s Pika has a Species Recovery Score of 83% (Slightly Depleted)
+        because although it is widespread and found in large numbers, recent climate-related
+        changes have caused this montane species to experience a genetic bottleneck
+        across at least some parts of its range, which may reduce the species\u0026#39;
+        fitness. Because no conservation actions have been carried out, or are planned,
+        for the Royle\u0026#39;s Pika, the species\u0026#39; Conservation Legacy,
+        Conservation Dependence; and Conservation Gain are all Zero. However, within
+        100 years it would be possible for genetic restoration to recover the species\u0026#39;
+        to functionality across its range, leading to a score of 100%. Therefore,
+        the Recovery Potential for The Royle\u0026#39;s Pika is Medium. However, climate
+        change could threaten the achievement of that long-term recovery, and the
+        confidence interval around the Recovery Potential estimate is wide.\u003cbr\u003e\u003cbr\u003eFor
+        additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Slightly Depleted","species_recovery_score_best":"83%","species_recovery_score_minimum":"67%","species_recovery_score_maximum":"100%","conservation_legacy_category":"Zero","conservation_legacy_best":"0%","conservation_legacy_minimum":"-33%","conservation_legacy_maximum":"33%","conservation_dependence_category":"Zero","conservation_dependence_best":"0%","conservation_dependence_minimum":"-33%","conservation_dependence_maximum":"33%","conservation_gain_category":"Zero","conservation_gain_best":"0%","conservation_gain_minimum":"-33%","conservation_gain_maximum":"33%","recovery_potential_category":"Medium","recovery_potential_best":"17%","recovery_potential_minimum":"-67%","recovery_potential_maximum":"33%","assessor_names":"Bhattacharya,
+        S. \u0026 Dahal, N.","reviewer_names":"Smith, A.T. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace,
+        M.K.","compilers":null,"url":"https://www.iucnredlist.org/species/41268/45184591","assessment_date":"2021-10-31","taxon":{"sis_id":41268,"scientific_name":"Ochotona
+        roylei","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"LAGOMORPHA","family_name":"OCHOTONIDAE","genus_name":"Ochotona","species_name":"roylei","subpopulation_name":null,"infra_name":null,"authority":"(Ogilby,
+        1839)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Lagomorph Specialist Group (rabbits, pikas and hares)","url":"https://www.lagomorphspecialistgroup.org/","description":"Co-Chaisr:
+        Andrew T. Smith (email: a.smith@asu.edu) and Hayley Lanier (email: hclanier@ou.edu)\nRed
+        List Authority Coordinator: Charlotte Johnston (email: Charlotte.Johnston@asu.edu)"}],"common_names":[{"main":false,"name":"Himalayan
+        Mouse Hare","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Hui
+        Shutu","language":{"code":"chi","description":{"en":"Chinese"}}},{"main":true,"name":"Royle''s
+        Pika","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Ochotona
+        himalayana Feng, 1973","status":"ACCEPTED","genus_name":"Ochotona","species_name":"himalayana","species_author":"Feng,
+        1973","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003e\u003cem\u003eRhinoderma
+        darwinii\u003c/em\u003e\u0026#39;s Species Recovery Score of 17% (Critically
+        Depleted) is due to the species having been extirpated over the majority of
+        its indigenous range, and threatened in many of the pockets where it does
+        remain. \u003cem\u003eR. darwinii\u003c/em\u003e has a High Conservation Legacy;
+        without past conservation action, it is expected that \u003cem\u003eR. darwinii\u003c/em\u003e
+        would be nearly extinct today, with a score of just 3%. There is a High Conservation
+        Dependence; if species and habitat protection were to stop, it is expected
+        that habitat loss and degradation would occur in many areas where the species
+        remains over a 10-year period, bringing the score to 2%. \u003cem\u003eRhinoderma
+        darwinii\u003c/em\u003e has a Conservation Gain of Zero; within a 10-year
+        period it is expected that planned conservation actions, while beneficial,
+        would primarily work to prevent further decline over that time period. Finally,
+        within 100 years it would be possible for \u003cem\u003eR. darwinii\u003c/em\u003e
+        to be reintroduced in some parts of the range where habitat remains or could
+        be restored, and that it could be recovered to ecologically functional populations
+        in parts of its range, leading to a score of 60%. Therefore, the Recovery
+        Potential for \u003cem\u003eR. darwinii\u003c/em\u003e is High.\u003cbr\u003e\u003cbr\u003eFor
+        additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Critically Depleted","species_recovery_score_best":"17%","species_recovery_score_minimum":"12%","species_recovery_score_maximum":"26%","conservation_legacy_category":"High","conservation_legacy_best":"14%","conservation_legacy_minimum":"-10%","conservation_legacy_maximum":"25%","conservation_dependence_category":"High","conservation_dependence_best":"15%","conservation_dependence_minimum":"-9%","conservation_dependence_maximum":"26%","conservation_gain_category":"Zero","conservation_gain_best":"0%","conservation_gain_minimum":"-14%","conservation_gain_maximum":"16%","recovery_potential_category":"High","recovery_potential_best":"43%","recovery_potential_minimum":"0%","recovery_potential_maximum":"61%","assessor_names":"Azat,
+        C. \u0026 Valenzuela-S\u0026aacute;nchez, A.","reviewer_names":"Crump, M.L.
+        \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace, M.K.","compilers":null,"url":"https://www.iucnredlist.org/species/19513/79809372","assessment_date":"2021-10-31","taxon":{"sis_id":19513,"scientific_name":"Rhinoderma
+        darwinii","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"AMPHIBIA","order_name":"ANURA","family_name":"RHINODERMATIDAE","genus_name":"Rhinoderma","species_name":"darwinii","subpopulation_name":null,"infra_name":null,"authority":"Duméril
+        \u0026amp; Bibron, 1841","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Amphibian Specialist Group","url":"https://www.iucn-amphibians.org/","description":"Chair:
+        Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator:
+        Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"}],"common_names":[{"main":false,"name":"Darwin''s
+        Frog","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Rana
+        Narigona","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":false,"name":"Ranita
+        de Darwin","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":false,"name":"Sapito
+        Partero","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":false,"name":"Sapito
+        Vaquero","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":true,"name":"Southern
+        Darwin''s Frog","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Saiga\u0026#39;s Species Recovery Score of 38% (Largely Depleted) is due to
+        extirpation across some parts of its indigenous range, as well as the fact
+        that the species is threatened in most areas where it remains extant.The Saiga
+        has a Medium Conservation Legacy; without past conservation action, the Saiga
+        would likely have gone extinct in one spatial unit, and would have lost viability
+        and functionality in others, resulting in a score of 19%. However, the positive
+        effects of conservation have been masked somewhat by disease outbreaks, which
+        have knocked the species back to levels lower than what had been achieved
+        through concerted conservation. There is a Medium Conservation Dependence;
+        if conservation actions like habitat protections and veterinary care were
+        to stop, it is expected that the species\u0026#39; status would deteriorate
+        in most spatial units over a 10-year period, bringing the score to 19%. The
+        Saiga also has a Medium Conservation Gain: within a 10-year period, if conservation
+        continues, it is expected that one more spatial unit will become Viable and
+        one more will become Functional; combined with the planned reintroduction
+        to a spatial unit where the species is currently Absent, a score of 52% is
+        expected to be achieved. Finally, within 100 years it would be possible for
+        the Saiga to achieve a score of 52%; while some areas of the indigenous range
+        are unlikely to provide suitable habitat in the long term, where there is
+        suitable habitat it will be possible for the species to become Viable or Functional
+        in many cases. Therefore, the Recovery Potential for the Saiga is Medium.\u003cbr\u003e\u003cbr\u003eFor
+        additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Largely Depleted","species_recovery_score_best":"38%","species_recovery_score_minimum":"33%","species_recovery_score_maximum":"52%","conservation_legacy_category":"Medium","conservation_legacy_best":"19%","conservation_legacy_minimum":"10%","conservation_legacy_maximum":"48%","conservation_dependence_category":"Medium","conservation_dependence_best":"19%","conservation_dependence_minimum":"5%","conservation_dependence_maximum":"52%","conservation_gain_category":"Medium","conservation_gain_best":"14%","conservation_gain_minimum":"-24%","conservation_gain_maximum":"33%","recovery_potential_category":"Medium","recovery_potential_best":"24%","recovery_potential_minimum":"0%","recovery_potential_maximum":"52%","assessor_names":"Milner-Gulland,
+        E.J.","reviewer_names":"Mallon, D.P. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace,
+        M.K.","compilers":"Wynter, V.","url":"https://www.iucnredlist.org/species/19832/233712210","assessment_date":"2021-10-31","taxon":{"sis_id":19832,"scientific_name":"Saiga
+        tatarica","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[{"sis_id":19833,"scientific_name":"Saiga
+        tatarica ssp. mongolica","kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"ARTIODACTYLA","family_name":"BOVIDAE","genus_name":"Saiga","species_name":"tatarica","subpopulation_name":null,"infra_name":"mongolica","authority":"Bannikov,
+        1946","ssc_groups":[],"common_names":[{"main":false,"name":"Mongol Bokhon","language":{"code":"mon","description":{"en":"Mongolian"}}},{"main":true,"name":"Mongolian
+        Saiga","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Saiga
+        mongolica Bannikov, 1946","status":"ACCEPTED","genus_name":"Saiga","species_name":"mongolica","species_author":"Bannikov,
+        1946","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]},{"sis_id":19834,"scientific_name":"Saiga
+        tatarica ssp. tatarica","kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"ARTIODACTYLA","family_name":"BOVIDAE","genus_name":"Saiga","species_name":"tatarica","subpopulation_name":null,"infra_name":"tatarica","authority":"(Linnaeus,
+        1766)","ssc_groups":[],"common_names":[{"main":true,"name":"Saiga","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[]}],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"ARTIODACTYLA","family_name":"BOVIDAE","genus_name":"Saiga","species_name":"tatarica","subpopulation_name":null,"infra_name":null,"authority":"(Linnaeus,
+        1766)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[],"common_names":[{"main":false,"name":"Mongolian
+        Saiga","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Saiga","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Saiga","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Saiga","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Saiga
+        Antelope","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Saiga
+        Antelope","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Saiga
+        Antelope","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Ak
+        bokon","language":{"code":"kaz","description":{"en":"Kazakh"}}},{"main":false,"name":"Antilope
+        Saiga","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":false,"name":"Antílope
+        Saiga","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":false,"name":"Mongol
+        bokhon","language":{"code":"mon","description":{"en":"Mongolian"}}},{"main":false,"name":"Saiga","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Saiga","language":{"code":"spa","description":{"en":"Spanish;
+        Castilian"}}},{"main":false,"name":"Saiga","language":{"code":"spa","description":{"en":"Spanish;
+        Castilian"}}},{"main":false,"name":"Saïga","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Saïga","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Saïga","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Saigak","language":{"code":"rus","description":{"en":"Russian"}}},{"main":false,"name":"Saigak","language":{"code":"rus","description":{"en":"Russian"}}},{"main":false,"name":"Saigak","language":{"code":"rus","description":{"en":"Russian"}}},{"main":false,"name":"Saigak","language":{"code":"rus","description":{"en":"Russian"}}},{"main":true,"name":"Saiga","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Ibex
+        imberbis Gmelin, 1760 [unavailable]","status":"ACCEPTED","genus_name":"Ibex","species_name":"imberbis","species_author":"Gmelin,
+        1760 [unavailable]","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null},{"name":"Capra
+        tatarica Linnaeus, 1766","status":"ACCEPTED","genus_name":"Capra","species_name":"tatarica","species_author":"Linnaeus,
+        1766","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        African Penguin\u0026#39;s Species Recovery Score of 33% represents the species\u0026#39;
+        threatened status in all of its spatial units; the species has greatly declined
+        since the late 1800s, first from egg collecting and guano scraping and later,
+        in the mid-1900s, due to industrial fishing. The African Penguin has a High
+        Conservation Legacy; without protected areas, the African Penguin would possibly
+        be extinct today. Conservation Dependence and Conservation Gain are both Zero:
+        the species would likely not disappear from any spatial units within 10 years
+        without conservation; with conservation, the species is not expected to become
+        Viable in any spatial units within 10 years, given the species\u0026#39; slow
+        reproduction. However, within 100 years it would be possible for the African
+        Penguin to become Viable in three out of four spatial units, leading to a
+        score of 58%. Therefore, the Recovery Potential for the African Penguin is
+        Medium.\u003cbr\u003e\u003cbr\u003eFor additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Largely Depleted","species_recovery_score_best":"33%","species_recovery_score_minimum":"33%","species_recovery_score_maximum":"33%","conservation_legacy_category":"High","conservation_legacy_best":"33%","conservation_legacy_minimum":"0%","conservation_legacy_maximum":"33%","conservation_dependence_category":"Zero","conservation_dependence_best":"0%","conservation_dependence_minimum":"0%","conservation_dependence_maximum":"33%","conservation_gain_category":"Zero","conservation_gain_best":"0%","conservation_gain_minimum":"-8%","conservation_gain_maximum":"0%","recovery_potential_category":"Medium","recovery_potential_best":"25%","recovery_potential_minimum":"0%","recovery_potential_maximum":"58%","assessor_names":"Hagen,
+        C., McInnes, A., Waller, L.J. \u0026 Stephenson, P.J.","reviewer_names":"Garcia
+        Borboroglu, P., IUCN SSC Penguin Specialist Group \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace,
+        M.K.","compilers":null,"url":"https://www.iucnredlist.org/species/22697810/157423361","assessment_date":"2021-10-31","taxon":{"sis_id":22697810,"scientific_name":"Spheniscus
+        demersus","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"AVES","order_name":"SPHENISCIFORMES","family_name":"SPHENISCIDAE","genus_name":"Spheniscus","species_name":"demersus","subpopulation_name":null,"infra_name":null,"authority":"(Linnaeus,
+        1758)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Bird Red List Authority (BirdLife International)","url":"https://www.birdlife.org/","description":"Red
+        List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"}],"common_names":[{"main":false,"name":"Black-footed
+        Penguin","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Jackass
+        Penguin","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Manchot
+        du Cap","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Pingüino
+        del Cabo","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":true,"name":"African
+        Penguin","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Greater Prairie-chicken\u0026#39;s Species Recovery Score of 50% (Largely
+        Depleted) is due to the species only being ecologically Functional in two
+        of its six spatial units, and one subspecies, the Heath Hen, is extinct. The
+        Greater Prairie-chicken has a Medium Conservation Legacy; without past actions
+        of captive breeding programmes and translocations, the Greater Prairie-chicken
+        would have a score of 39% today. There is a Low Conservation Dependence; if
+        conservation actions were to stop, it is expected that the species would lose
+        functionality in one spatial unit, bringing the score to 44%. The Greater
+        Prairie-chicken has a Conservation Gain of Zero; even with planned conservation,
+        it is unlikely that spatial units which are not already Functional would achieve
+        viability or functionality in 10 years\u0026#39; time. Even within 100 years,
+        it is expected that the Greater Prairie-chicken could achieve viability in
+        just one additional spatial unit; a substantial part of the range is too degraded
+        to restore. Therefore, the Recovery Potential for the Greater Prairie-chicken
+        is Low.\u003cbr\u003e\u003cbr\u003eFor additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Largely Depleted","species_recovery_score_best":"50%","species_recovery_score_minimum":"39%","species_recovery_score_maximum":"56%","conservation_legacy_category":"Medium","conservation_legacy_best":"11%","conservation_legacy_minimum":"-17%","conservation_legacy_maximum":"33%","conservation_dependence_category":"Low","conservation_dependence_best":"6%","conservation_dependence_minimum":"-11%","conservation_dependence_maximum":"39%","conservation_gain_category":"Zero","conservation_gain_best":"0%","conservation_gain_minimum":"-17%","conservation_gain_maximum":"22%","recovery_potential_category":"Low","recovery_potential_best":"6%","recovery_potential_minimum":"-28%","recovery_potential_maximum":"22%","assessor_names":"Berger,
+        D.","reviewer_names":"Hermes, C. \u0026 Grace, M.K.","contributors":"Gregory,
+        A.","facilitators":"Grace, M.K.","compilers":null,"url":"https://www.iucnredlist.org/species/22679514/177901079","assessment_date":"2021-10-31","taxon":{"sis_id":22679514,"scientific_name":"Tympanuchus
+        cupido","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"AVES","order_name":"GALLIFORMES","family_name":"PHASIANIDAE","genus_name":"Tympanuchus","species_name":"cupido","subpopulation_name":null,"infra_name":null,"authority":"(Linnaeus,
+        1758)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Bird Red List Authority (BirdLife International)","url":"https://www.birdlife.org/","description":"Red
+        List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"}],"common_names":[{"main":false,"name":"Greater
+        Prairie Chicken","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Greater
+        Prairie-Chicken","language":{"code":"eng","description":{"en":"English"}}},{"main":true,"name":"Greater
+        Prairie-chicken","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Tetrao
+        cupido Linnaeus, 1758","status":"ACCEPTED","genus_name":"Tetrao","species_name":"cupido","species_author":"Linnaeus,
+        1758","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Vicu\u0026ntilde;a\u0026#39;s Species Recovery Score of 67% (Moderately Depleted)
+        reflects widespread past decimation of the species for its valuable wool;
+        only in the last decades has the species been restored to Viable populations
+        across its range thanks to legal protection from hunting, an international
+        trade ban, and the introduction of sustainable livelihood schemes. The Vicu\u0026ntilde;a
+        has a High Conservation Legacy; without this past conservation action, the
+        Vicu\u0026ntilde;a would almost certainly be close to extinction today, with
+        a score of only 8%. There is a Medium Conservation Dependence; poaching remains
+        a threat, and if conservation actions were to stop, it is expected that the
+        species could become threatened across its range once more within a 10-year
+        period, bringing the score to 33%. The Vicu\u0026ntilde;a has a Medium Conservation
+        Gain; within a 10-year period, if conservation continues, it is expected that
+        the species could become Functional in three of four spatial units, leading
+        to a score of 92%. Finally, within 100 years it would be possible for the
+        Vicu\u0026ntilde;a to become Fully Recovered; relative to the current score,
+        this represents a Medium Recovery Potential.\u003cbr\u003e\u003cbr\u003eFor
+        additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.","species_recovery_category":"Moderately Depleted","species_recovery_score_best":"67%","species_recovery_score_minimum":"67%","species_recovery_score_maximum":"100%","conservation_legacy_category":"High","conservation_legacy_best":"58%","conservation_legacy_minimum":"33%","conservation_legacy_maximum":"100%","conservation_dependence_category":"Medium","conservation_dependence_best":"33%","conservation_dependence_minimum":"8%","conservation_dependence_maximum":"92%","conservation_gain_category":"Medium","conservation_gain_best":"25%","conservation_gain_minimum":"-33%","conservation_gain_maximum":"33%","recovery_potential_category":"Medium","recovery_potential_best":"33%","recovery_potential_minimum":"-33%","recovery_potential_maximum":"33%","assessor_names":"Acebes,
+        P. \u0026 Gonzalez, B.","reviewer_names":"Vil\u0026aacute;, B. \u0026 Grace,
+        M.K.","contributors":null,"facilitators":"Grace, M.K.","compilers":null,"url":"https://www.iucnredlist.org/species/22956/145360542","assessment_date":"2021-10-31","taxon":{"sis_id":22956,"scientific_name":"Vicugna
+        vicugna","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[{"sis_id":22957,"scientific_name":"Vicugna
+        vicugna ssp. mensalis","kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"ARTIODACTYLA","family_name":"CAMELIDAE","genus_name":"Vicugna","species_name":"vicugna","subpopulation_name":null,"infra_name":"mensalis","authority":"(Thomas,
+        1917)","ssc_groups":[],"common_names":[],"synonyms":[]},{"sis_id":22958,"scientific_name":"Vicugna
+        vicugna ssp. vicugna","kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"ARTIODACTYLA","family_name":"CAMELIDAE","genus_name":"Vicugna","species_name":"vicugna","subpopulation_name":null,"infra_name":"vicugna","authority":"(Molina,
+        1782)","ssc_groups":[],"common_names":[],"synonyms":[]}],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"ARTIODACTYLA","family_name":"CAMELIDAE","genus_name":"Vicugna","species_name":"vicugna","subpopulation_name":null,"infra_name":null,"authority":"(Molina,
+        1782)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[],"common_names":[{"main":false,"name":"Vicugna","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Vicuña","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Huari","language":{"code":"aym","description":{"en":"Aymara"}}},{"main":false,"name":"Vigogne","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Wik''uña","language":{"code":"que","description":{"en":"Quechua"}}},{"main":true,"name":"Vicuna","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Species Recovery Score of 33% (Largely Depleted) is due to the Cheer Pheasant
+        being Present (that is, non-Viable and non-Functional) in all spatial units.
+        The Cheer Pheasant has a Medium Conservation Legacy; without past conservation
+        action, the Cheer Pheasant would have a score of 22%, as it is likely it would
+        have gone extinct in one of its three spatial units. The species\u0026#39;
+        Conservation Dependence and Conservation Gain are both Zero, as it is (respectively)
+        unlikely that the species would go extinct in any spatial unit in the span
+        of 10 years, even if all conservation stopped, and the species is likely to
+        remain threatened in all spatial units over that time period even with continued
+        conservation. Finally, within 100 years it would be possible for the Cheer
+        Pheasant to become Functional in all spatial units, leading to a score of
+        100%. Therefore, the Recovery Potential for the Cheer Pheasant is High.\u003cbr\u003e\u003cbr\u003eFor
+        additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Largely Depleted","species_recovery_score_best":"33%","species_recovery_score_minimum":"33%","species_recovery_score_maximum":"33%","conservation_legacy_category":"Medium","conservation_legacy_best":"11%","conservation_legacy_minimum":"0%","conservation_legacy_maximum":"22%","conservation_dependence_category":"Zero","conservation_dependence_best":"0%","conservation_dependence_minimum":"0%","conservation_dependence_maximum":"11%","conservation_gain_category":"Zero","conservation_gain_best":"0%","conservation_gain_minimum":"0%","conservation_gain_maximum":"67%","recovery_potential_category":"High","recovery_potential_best":"67%","recovery_potential_minimum":"22%","recovery_potential_maximum":"67%","assessor_names":"Gupta,
+        G. \u0026 McGowan, P.J.K.","reviewer_names":"Kaul, R. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace,
+        M.K.","compilers":null,"url":"https://www.iucnredlist.org/species/22679312/218835395","assessment_date":"2021-10-31","taxon":{"sis_id":22679312,"scientific_name":"Catreus
+        wallichii","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"AVES","order_name":"GALLIFORMES","family_name":"PHASIANIDAE","genus_name":"Catreus","species_name":"wallichii","subpopulation_name":null,"infra_name":null,"authority":"(Hardwicke,
+        1827)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Bird Red List Authority (BirdLife International)","url":"https://www.birdlife.org/","description":"Red
+        List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"}],"common_names":[{"main":false,"name":"Chir
+        Pheasant","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Wallich''s
+        Pheasant","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Faisán
+        Chir","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":false,"name":"Faisán
+        de Wallich","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":true,"name":"Cheer
+        Pheasant","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Catreus
+        wallichii ssp. wallichii (Hardwicke, 1827) [orth. error] — Sibley and Monroe
+        (1990, 1993)","status":"ACCEPTED","genus_name":"Catreus","species_name":"wallichii","species_author":null,"infrarank_author":"(Hardwicke,
+        1827) [orth. error] — Sibley and Monroe (1990, 1993)","subpopulation_name":null,"infra_type":"subspecies","infra_name":"wallichii"},{"name":"Catreus
+        wallichi (Hardwicke, 1827) [orth. error]","status":"ACCEPTED","genus_name":"Catreus","species_name":"wallichi","species_author":"(Hardwicke,
+        1827) [orth. error]","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null},{"name":"Catreus
+        wallichii ssp. wallichii (Hardwicke, 1827) [orth. error] — Collar and Andrew
+        (1988)","status":"ACCEPTED","genus_name":"Catreus","species_name":"wallichii","species_author":null,"infrarank_author":"(Hardwicke,
+        1827) [orth. error] — Collar and Andrew (1988)","subpopulation_name":null,"infra_type":"subspecies","infra_name":"wallichii"},{"name":"Lophophorus
+        wallichii Hardwicke, 1827","status":"ACCEPTED","genus_name":"Lophophorus","species_name":"wallichii","species_author":"Hardwicke,
+        1827","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003e\u003cem\u003eCavia
+        intermedia\u003c/em\u003e evolved on, and has persisted on, a tiny island
+        for around 8,000 years. Its Species Recovery Score of 33% (Largely Depleted)
+        reflects the species\u0026#39; threatened status, rather than indicating a
+        large decline from its historical state; in fact, the species is expected
+        to occur in similar numbers today as it has for centuries. The island is difficult
+        to access, and while some hunting may take place occasionally, it is unlikely
+        to pose a major threat; therefore, past and planned conservation actions are
+        minimal, and the species Conservation Legacy, Conservation Dependence, and
+        Conservation Gain are all Zero. Nonetheless, there is a relatively high probability
+        that a stochastic event (in this case, a fire) could drive the species to
+        extinction within 20 years; therefore, all future scenarios include the possibility
+        of extinction. Because the population currently fluctuates around carrying
+        capacity, it is unlikely that the species could increase to much higher levels,
+        but in the long term, if there was evidence that the species was not declining
+        and that all non-stochastic threats were not operating, the species may yet
+        be considered Fully Recovered. However, the threat of stochastic extinction
+        makes the Recovery Potential for this species Indeterminate.\u003cbr\u003e\u003cbr\u003eFor
+        additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Largely Depleted","species_recovery_score_best":"33%","species_recovery_score_minimum":"33%","species_recovery_score_maximum":"33%","conservation_legacy_category":"Zero","conservation_legacy_best":"0%","conservation_legacy_minimum":"0%","conservation_legacy_maximum":"33%","conservation_dependence_category":"Zero","conservation_dependence_best":"0%","conservation_dependence_minimum":"0%","conservation_dependence_maximum":"33%","conservation_gain_category":"Zero","conservation_gain_best":"0%","conservation_gain_minimum":"-33%","conservation_gain_maximum":"0%","recovery_potential_category":"Indeterminate","recovery_potential_best":"0%","recovery_potential_minimum":"-33%","recovery_potential_maximum":"67%","assessor_names":"Salvador,
+        C.H.","reviewer_names":"Lacher, T. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace,
+        M.K.","compilers":null,"url":"https://www.iucnredlist.org/species/136520/22189125","assessment_date":"2021-10-31","taxon":{"sis_id":136520,"scientific_name":"Cavia
+        intermedia","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"RODENTIA","family_name":"CAVIIDAE","genus_name":"Cavia","species_name":"intermedia","subpopulation_name":null,"infra_name":null,"authority":"Cherem,
+        Olimpio \u0026amp; Ximenez, 1999","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Small Mammal Specialist Group","url":"http://www.small-mammals.org/","description":"Co-Chairs:
+        Thomas Lacher (email: tlacher@tamu.edu) and Rosalind Kennerley (email: Rosalind.Kennerley@durrell.org)\nRed
+        List Authority Coordinator: Roslaind Kennedy (email: Rosalind.Kennerley@durrell.org)"}],"common_names":[{"main":false,"name":"Moleques
+        do Sul Guinea Pig","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Santa-Catarina-Meerschweinchen","language":{"code":"ger","description":{"en":"German"}}},{"main":true,"name":"Santa
+        Catarina’s Guinea Pig","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Species Recovery Score of 67% (Moderately Depleted) is due to the Black Stork
+        being Functional in one of its two spatial units, and Present in the other.
+        The Black Stork has a Medium Conservation Legacy; without past conservation
+        action, including protected areas, the Black Stork would have a score of 50%,
+        as it is not likely the species would be Functional in any spatial unit. Its
+        Conservation Dependence category is Zero; if conservation actions were to
+        stop, it is expected that the species status would not change quickly enough
+        to trigger a change in state over the next 10 years. The Black Stork has a
+        Medium Conservation Gain; within a 10-year period, if conservation continues,
+        it is expected that the currently Present spatial unit could become Viable,
+        leading to a score of 83%. Finally, within 100 years it would be possible
+        for The Black Stork to be Functional in all spatial units, leading to a score
+        of 100%. Therefore, the Recovery Potential for The Black Stork is Medium (relative
+        to its current score).\u003cbr\u003e\u003cbr\u003eFor additional data, see
+        the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Moderately Depleted","species_recovery_score_best":"67%","species_recovery_score_minimum":"67%","species_recovery_score_maximum":"83%","conservation_legacy_category":"Medium","conservation_legacy_best":"17%","conservation_legacy_minimum":"-17%","conservation_legacy_maximum":"33%","conservation_dependence_category":"Zero","conservation_dependence_best":"0%","conservation_dependence_minimum":"-17%","conservation_dependence_maximum":"33%","conservation_gain_category":"Medium","conservation_gain_best":"17%","conservation_gain_minimum":"-17%","conservation_gain_maximum":"33%","recovery_potential_category":"Medium","recovery_potential_best":"33%","recovery_potential_minimum":"0%","recovery_potential_maximum":"33%","assessor_names":"Cano-Alonso,
+        L.S.","reviewer_names":"Hermes, C. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace,
+        M.K.","compilers":null,"url":"https://www.iucnredlist.org/species/22697669/111747857","assessment_date":"2021-10-31","taxon":{"sis_id":22697669,"scientific_name":"Ciconia
+        nigra","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"AVES","order_name":"CICONIIFORMES","family_name":"CICONIIDAE","genus_name":"Ciconia","species_name":"nigra","subpopulation_name":null,"infra_name":null,"authority":"(Linnaeus,
+        1758)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Bird Red List Authority (BirdLife International)","url":"https://www.birdlife.org/","description":"Red
+        List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"}],"common_names":[{"main":false,"name":"Cigogne
+        noire","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Μαύρος
+        Πελαργός","language":{"code":"gre","description":{"en":"Greek, Modern (1453-)"}}},{"main":true,"name":"Black
+        Stork","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Ardea
+        nigra Linnaeus, 1758","status":"ACCEPTED","genus_name":"Ardea","species_name":"nigra","species_author":"Linnaeus,
+        1758","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Species Recovery Score of 13% (Critically Depleted) is due to Philippine Crocodiles
+        being Absent in 11/18 spatial units and only Present in the rest. Philippine
+        Crocodiles have a High Conservation Legacy; without past conservation action,
+        Philippine Crocodiles would only persist in three spatial units today. There
+        is a High Conservation Dependence; if conservation actions were to stop, it
+        is expected that the species would go extinct in all but one spatial unit
+        over a 10-year period, bringing the score to 2%. Philippine Crocodiles have
+        a High Conservation Gain; within a 10-year period, planned reintroductions
+        and continued conservation could begin to achieve Viable spatial units, leading
+        to a score of 26%. Finally, within 100 years it is unclear what could happen;
+        the impacts of future habitat loss, dam building and climate change are uncertain.
+        Therefore, the Recovery Potential for Philippine Crocodiles is Indeterminate.\u003cbr\u003e\u003cbr\u003eFor
+        additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Critically Depleted","species_recovery_score_best":"13%","species_recovery_score_minimum":"7%","species_recovery_score_maximum":"24%","conservation_legacy_category":"High","conservation_legacy_best":"7%","conservation_legacy_minimum":"-13%","conservation_legacy_maximum":"24%","conservation_dependence_category":"High","conservation_dependence_best":"11%","conservation_dependence_minimum":"-7%","conservation_dependence_maximum":"24%","conservation_gain_category":"High","conservation_gain_best":"13%","conservation_gain_minimum":"-15%","conservation_gain_maximum":"31%","recovery_potential_category":"Indeterminate","recovery_potential_best":"28%","recovery_potential_minimum":"-9%","recovery_potential_maximum":"46%","assessor_names":"van
+        Weerd, M. \u0026 Gatan-Balbas, M.","reviewer_names":"Manolis, C., Hoffmann,
+        M. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace, M.K.","compilers":null,"url":"https://www.iucnredlist.org/species/5672/3048281","assessment_date":"2021-10-31","taxon":{"sis_id":5672,"scientific_name":"Crocodylus
+        mindorensis","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"REPTILIA","order_name":"CROCODYLIA","family_name":"CROCODYLIDAE","genus_name":"Crocodylus","species_name":"mindorensis","subpopulation_name":null,"infra_name":null,"authority":"Schmidt,
+        1935","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Crocodile Specialist Group (crocodiles, alligators and caimans)","url":"http://www.iucncsg.org/","description":"Chair:
+        Grahame Webb (email: gwebb@wmi.com.au)\nRed List Authority Coordinator: James
+        Perran Ross (email: rossp@wec.ufl.edu)\nNewsletter: http://www.iucncsg.org/pages/Publications.html"}],"common_names":[{"main":false,"name":"Bukarot
+        (N. Luzon)","language":{"code":"phi","description":{"en":"Philippine (Other)"}}},{"main":false,"name":"Buwaya","language":{"code":"tgl","description":{"en":"Tagalog"}}},{"main":true,"name":"Philippine
+        Crocodile","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Species Recovery Score of 11% (Critically Depleted) is due to the Jamaican
+        Rock Iguana being found in only two of six spatial units today, and threatened
+        in both. The Jamaican Rock Iguana has a High Conservation Legacy; without
+        past conservation action, the Jamaican Rock Iguana would almost certainly
+        be extinct today. There is a Low Conservation Dependence; if conservation
+        actions were to stop, it is expected that one of the two remaining spatial
+        units would be extirpated over a 10-year period, bringing the score to 6%.
+        The Jamaican Rock Iguana has a High Conservation Gain; within a 10-year period,
+        given planned reintroductions and invasive species control, it is expected
+        that the species would become Viable in two spatial units and remain Present
+        in a third, leading to a score of 28%. Finally, within 100 years it would
+        be possible for the Jamaican Rock Iguana to become Viable or Functional over
+        a substantial proportion of its indigenous range, leading to a score of 61%.
+        Therefore, the Recovery Potential for the Jamaican Rock Iguana is High.\u003cbr\u003e\u003cbr\u003eFor
+        additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Critically Depleted","species_recovery_score_best":"11%","species_recovery_score_minimum":"6%","species_recovery_score_maximum":"11%","conservation_legacy_category":"High","conservation_legacy_best":"11%","conservation_legacy_minimum":"6%","conservation_legacy_maximum":"11%","conservation_dependence_category":"Low","conservation_dependence_best":"6%","conservation_dependence_minimum":"-6%","conservation_dependence_maximum":"6%","conservation_gain_category":"High","conservation_gain_best":"17%","conservation_gain_minimum":"11%","conservation_gain_maximum":"33%","recovery_potential_category":"High","recovery_potential_best":"50%","recovery_potential_minimum":"33%","recovery_potential_maximum":"61%","assessor_names":"Grant,
+        T.D. \u0026 Pasachnik, S.A.","reviewer_names":"Hoffmann, M. \u0026 Grace,
+        M.K.","contributors":null,"facilitators":"Grace, M.K.","compilers":"Wynter,
+        V.","url":"https://www.iucnredlist.org/species/6027/206739532","assessment_date":"2021-10-31","taxon":{"sis_id":6027,"scientific_name":"Cyclura
+        collei","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"REPTILIA","order_name":"SQUAMATA","family_name":"IGUANIDAE","genus_name":"Cyclura","species_name":"collei","subpopulation_name":null,"infra_name":null,"authority":"Gray,
+        1845","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Iguana Specialist Group","url":"http://www.iucn-isg.org/","description":"Co-Chairs:
+        Stesha Pasachnik (email: sapasachnik@gmail.com) and Charles Knapp (email:
+        cknapp@sheddaquarium.org)\nRed List Authority Coordinator: Tandora Grant (email:
+        tgrant@sandiegozoo.org)\nNewsletter: http://www.iucn-isg.org/publications/archive-newsletters/"}],"common_names":[{"main":false,"name":"Jamaican
+        Ground Iguana","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Jamaican
+        Iguana","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Cyclure
+        terrestre de la Jamaïque","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Iguane
+        terrestre de la Jamaïque","language":{"code":"fre","description":{"en":"French"}}},{"main":true,"name":"Jamaican
+        Rock Iguana","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[]}},{"assessment_year":"2022","weights":"Default","justification":"\u003cp\u003eThe
+        Mauritius Kestrel has a Species Recovery Score of 17% (Critically Depleted),
+        primarily as a result of massive forest loss on Mauritius. However, without
+        the reintroductions that have taken place, as well as provision of nest boxes
+        and supplemental feeding, the species would almost certainly be extinct today
+        (High Conservation Legacy). If these actions were to cease, then the species
+        would decline over the next 10 years to a score of 10% (Low Conservation Dependence).
+        Over that same time frame, the species is expected to remain stable with continued
+        conservation (Zero Conservation Gain). In the long term, it will be possible
+        to establish subpopulations in all remaining habitat, and even achieve some
+        Functional subpopulations; however, the large-scale forest conversion limits
+        the maximum predicted score that could be achieved over 100 years to 30% (Medium
+        Recovery Potential).\u003cbr\u003e\u003cbr\u003eFor additional data, see the
+        \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Critically Depleted","species_recovery_score_best":"17%","species_recovery_score_minimum":"17%","species_recovery_score_maximum":"27%","conservation_legacy_category":"High","conservation_legacy_best":"17%","conservation_legacy_minimum":"13%","conservation_legacy_maximum":"27%","conservation_dependence_category":"Low","conservation_dependence_best":"7%","conservation_dependence_minimum":"0%","conservation_dependence_maximum":"20%","conservation_gain_category":"Zero","conservation_gain_best":"0%","conservation_gain_minimum":"-10%","conservation_gain_maximum":"10%","recovery_potential_category":"Medium","recovery_potential_best":"13%","recovery_potential_minimum":"-3%","recovery_potential_maximum":"20%","assessor_names":"Tatayah,
+        V.","reviewer_names":"Nicoll, M. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace,
+        M.K. \u0026 Young, R.E.","compilers":null,"url":"https://www.iucnredlist.org/species/22696373/226885309","assessment_date":"2022-07-21","taxon":{"sis_id":22696373,"scientific_name":"Falco
+        punctatus","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"AVES","order_name":"FALCONIFORMES","family_name":"FALCONIDAE","genus_name":"Falco","species_name":"punctatus","subpopulation_name":null,"infra_name":null,"authority":"Temminck,
+        1821","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Bird Red List Authority (BirdLife International)","url":"https://www.birdlife.org/","description":"Red
+        List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"}],"common_names":[{"main":false,"name":"Cernícalo
+        de la Mauricio","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":false,"name":"Crécerelle
+        de l''Ile Maurice","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Crécerelle
+        de Maurice","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Faucon
+        de l''Ile Maurice","language":{"code":"fre","description":{"en":"French"}}},{"main":true,"name":"Mauritius
+        Kestrel","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Species Recovery Score of 17% (Critically Depleted) is due to the Northern
+        Sportive Lemur being Absent in one of its two spatial units, and highly threatened
+        (Present) in the other due to habitat loss for charcoal production and hunting.
+        The Northern Sportive Lemur has a High Conservation Legacy; without past conservation
+        action, especially the establishment of the Montagne des Fran\u0026ccedil;ais
+        protected area, the Northern Sportive Lemur would almost certainly be extinct
+        today. There is a High Conservation Dependence; if protections were to stop,
+        it is expected that the species would be driven to extinction within 10 years.
+        The Northern Sportive Lemur has a High Conservation Gain; within a 10-year
+        period, if the planned actions of forest restoration, reforestation and monitoring
+        are carried out as planned, it is expected that the species may go from Present
+        to Viable in its extant spatial unit, leading to a score of 33%. Finally,
+        within 100 years it would be possible for the Northern Sportive Lemur to be
+        reintroduced to its second spatial unit, and even become Functional in both
+        as a result of reforestation and habitat restoration, as well as enforcement
+        of protected area laws and a reduction in charcoal production, leading to
+        a score of 100%. Therefore, the Recovery Potential for the Northern Sportive
+        Lemur is High. However, while this recovery is biologically and ecologically
+        possible, it will require a large-scale coordinated effort.\u003cbr\u003e\u003cbr\u003eFor
+        additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Critically Depleted","species_recovery_score_best":"17%","species_recovery_score_minimum":"17%","species_recovery_score_maximum":"17%","conservation_legacy_category":"High","conservation_legacy_best":"17%","conservation_legacy_minimum":"17%","conservation_legacy_maximum":"17%","conservation_dependence_category":"High","conservation_dependence_best":"17%","conservation_dependence_minimum":"17%","conservation_dependence_maximum":"17%","conservation_gain_category":"High","conservation_gain_best":"17%","conservation_gain_minimum":"0%","conservation_gain_maximum":"33%","recovery_potential_category":"High","recovery_potential_best":"83%","recovery_potential_minimum":"67%","recovery_potential_maximum":"83%","assessor_names":"Louis
+        Jr, E.E. \u0026 Stephenson, P.J.","reviewer_names":"Schwitzer, C. \u0026 Grace,
+        M.K.","contributors":null,"facilitators":"Grace, M.K.","compilers":null,"url":"https://www.iucnredlist.org/species/11622/115567059","assessment_date":"2021-10-31","taxon":{"sis_id":11622,"scientific_name":"Lepilemur
+        septentrionalis","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"PRIMATES","family_name":"LEPILEMURIDAE","genus_name":"Lepilemur","species_name":"septentrionalis","subpopulation_name":null,"infra_name":null,"authority":"Rumpler
+        \u0026amp; Albignac, 1975","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Primate Specialist Group","url":"http://www.primate-sg.org/","description":"Chair:
+        Russell Mittermeier (email: rmittermeier@globalwildlife.org)\nRed List Authority
+        Focal Points: \nProsimians, monkeys and smaller apes - Sanjay Molur (email:
+        sanjay@zooreach.org) and Christoph Schwitzer (email: cschwitzer@bristolzoo.org.uk)\nVice-Chair
+        for great apes - Dirck S. Byler (email: dbyler@globalwildlife.org)\nVice-Chair
+        for small apes - Susan M. Cheyne (email: section.small.apes@gmail.com)\nJournals
+        and Newsletters: \nPrimate Conservation: http://www.primate-sg.org/primate_conservation/\nNeotropical
+        Primates: http://www.primate-sg.org/neotropical_primates/\nAsian Primates:
+        http://www.primate-sg.org/asian_primates_newsletter/ and http://www.primate-sg.org/asian_primates_journal/\nLemur
+        News: http://www.primate-sg.org/lemur_news/\nAfrican Primates: http://www.primate-sg.org/african_primates/\n"}],"common_names":[{"main":false,"name":"Northern
+        Sportive Lemur","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Lemur
+        Comadreja Septentrional","language":{"code":"spa","description":{"en":"Spanish;
+        Castilian"}}},{"main":true,"name":"Sahafary Sportive Lemur","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[]}},{"assessment_year":"2022","weights":"Default","justification":"\u003cp\u003eThe
+        Himalayan Monal has a Species Recovery Score of 58% (Moderately Depleted)
+        because it is declining across its range, leaving it Viable in three spatial
+        units and Present in the fourth. Nonetheless, there is a Medium Conservation
+        Legacy; without the existence of protected areas, it is expected that the
+        species would only be Viable in one spatial unit today, bringing the score
+        to 42%. The species\u0026#39; Conservation Gain is Indeterminate, but it has
+        a Medium Conservation Dependence: if protected areas were to be degazetted,
+        the species is expected to reduce its score to 42% within 10 years. Finally,
+        it would be feasible, with sustained and heightened conservation efforts,
+        to restore the species to functionality across its range (a score of 100%).
+        This gives the species a High Recovery Potential.\u003cbr\u003e\u003cbr\u003eFor
+        additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Moderately Depleted","species_recovery_score_best":"58%","species_recovery_score_minimum":"50%","species_recovery_score_maximum":"83%","conservation_legacy_category":"Medium","conservation_legacy_best":"17%","conservation_legacy_minimum":"0%","conservation_legacy_maximum":"50%","conservation_dependence_category":"Medium","conservation_dependence_best":"17%","conservation_dependence_minimum":"8%","conservation_dependence_maximum":"50%","conservation_gain_category":"Indeterminate","conservation_gain_best":"8%","conservation_gain_minimum":"-17%","conservation_gain_maximum":"50%","recovery_potential_category":"High","recovery_potential_best":"42%","recovery_potential_minimum":"17%","recovery_potential_maximum":"50%","assessor_names":"Gupta,
+        G. \u0026 McGowan, P.","reviewer_names":"Dowell, S. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace,
+        M.K. \u0026 Young, R.E.","compilers":null,"url":"https://www.iucnredlist.org/species/22679182/92806166","assessment_date":"2022-07-21","taxon":{"sis_id":22679182,"scientific_name":"Lophophorus
+        impejanus","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"AVES","order_name":"GALLIFORMES","family_name":"PHASIANIDAE","genus_name":"Lophophorus","species_name":"impejanus","subpopulation_name":null,"infra_name":null,"authority":"(Latham,
+        1790)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Bird Red List Authority (BirdLife International)","url":"https://www.birdlife.org/","description":"Red
+        List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"}],"common_names":[{"main":true,"name":"Himalayan
+        Monal","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Eurasian Otter\u0026#39;s Species Recovery Score of 40% (Largely Depleted)
+        is due to large declines since the 1950s as a result of hunting and habitat
+        loss. The Eurasian Otter has an Indeterminate Conservation Legacy, meaning
+        that it is difficult to measure the impact of past conservation; however,
+        the best estimate this that legal protection has resulted in a higher score
+        today than it would have had otherwise. There is also Indeterminate Conservation
+        Dependence, meaning it is unclear how the score would change over the next
+        10 years if conservation stopped. However, the Eurasian Otter has a Low Conservation
+        Gain; within a 10-year period, if conservation continues as planned, it is
+        expected that the species\u0026#39; score could increase from 40% to 54%.
+        Finally, within 100 years, the Recovery Potential is also Indeterminate, as
+        climate change is predicted to increase available habitat in some areas and
+        decrease it in others.\u003cbr\u003e\u003cbr\u003eFor additional data, see
+        the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Largely Depleted","species_recovery_score_best":"40%","species_recovery_score_minimum":"28%","species_recovery_score_maximum":"55%","conservation_legacy_category":"Indeterminate","conservation_legacy_best":"21%","conservation_legacy_minimum":"-15%","conservation_legacy_maximum":"47%","conservation_dependence_category":"Indeterminate","conservation_dependence_best":"15%","conservation_dependence_minimum":"-14%","conservation_dependence_maximum":"45%","conservation_gain_category":"Low","conservation_gain_best":"3%","conservation_gain_minimum":"-25%","conservation_gain_maximum":"33%","recovery_potential_category":"Indeterminate","recovery_potential_best":"14%","recovery_potential_minimum":"-23%","recovery_potential_maximum":"44%","assessor_names":"Loy,
+        A., Jamwal, P.S. \u0026 Hussain, S.A.","reviewer_names":"Grace, M.K. \u0026
+        Rheingantz, M.L.","contributors":"Oleynikov, A., Djurovic, N., Al-Sheikhly,
+        O.F., Chan, B., Sasaki, H., van Dijk, J., Weinberger, I., Hong, S., Li, F.,
+        Aadrean, A. \u0026 Savage, M.","facilitators":"Grace, M.K.","compilers":null,"url":"https://www.iucnredlist.org/species/12419/218069689","assessment_date":"2021-10-31","taxon":{"sis_id":12419,"scientific_name":"Lutra
+        lutra","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"CARNIVORA","family_name":"MUSTELIDAE","genus_name":"Lutra","species_name":"lutra","subpopulation_name":null,"infra_name":null,"authority":"(Linnaeus,
+        1758)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Otter Specialist Group","url":"http://www.otterspecialistgroup.org/","description":"Co-Chairs:
+        Nicole Duplaix (email: Nicole.Duplaix@oregonstate.edu) and Anna Loy (email:
+        a.loy@unimol.it)\nRed List Authority Coordinator: Syed Ainul Hussain (email:
+        hussain@wii.gov.in)\nNewsletter: http://www.otterspecialistgroup.org/Bulletin/IUCNOSGBull.html"}],"common_names":[{"main":false,"name":"Common
+        Otter","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"European
+        Otter","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"European
+        River Otter","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Old
+        World Otter","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Fischotter","language":{"code":"ger","description":{"en":"German"}}},{"main":false,"name":"Loutre
+        commune","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Loutre
+        de rivière","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Loutre
+        d''Europe","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Nutria","language":{"code":"spa","description":{"en":"Spanish;
+        Castilian"}}},{"main":false,"name":"Nutria Común","language":{"code":"spa","description":{"en":"Spanish;
+        Castilian"}}},{"main":false,"name":"видра","language":{"code":"mac","description":{"en":"Macedonian"}}},{"main":true,"name":"Eurasian
+        Otter","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Lutra
+        nippon Imaizumi \u0026 Yoshiyuki, 1989","status":"ADDED","genus_name":"Lutra","species_name":"nippon","species_author":"Imaizumi
+        \u0026 Yoshiyuki, 1989","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null},{"name":"Viverra
+        lutra Linnaeus, 1758","status":"ACCEPTED","genus_name":"Viverra","species_name":"lutra","species_author":"Linnaeus,
+        1758","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Giant River Prawn has a Species Recovery Score of 100% (Non-Depleted) as it
+        is a common species whose distribution and abundance are not assessed to have
+        been significantly impacted by humans, despite its commercial use. No conservation
+        actions have been taken for this species, and none are planned at this time,
+        so the four Conservation Impact Metrics (Conservation Legacy, Conservation
+        Dependence, Conservation Gain, and Recovery Potential) are all Zero.\u003cbr\u003e\u003cbr\u003eFor
+        additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Non-Depleted","species_recovery_score_best":"100%","species_recovery_score_minimum":"100%","species_recovery_score_maximum":"100%","conservation_legacy_category":"Zero","conservation_legacy_best":"0%","conservation_legacy_minimum":"0%","conservation_legacy_maximum":"0%","conservation_dependence_category":"Zero","conservation_dependence_best":"0%","conservation_dependence_minimum":"0%","conservation_dependence_maximum":"0%","conservation_gain_category":"Zero","conservation_gain_best":"0%","conservation_gain_minimum":"0%","conservation_gain_maximum":"0%","recovery_potential_category":"Zero","recovery_potential_best":"0%","recovery_potential_minimum":"-33%","recovery_potential_maximum":"0%","assessor_names":"Niloy,
+        M.N.H. \u0026 Chowdhury, G.H.","reviewer_names":"Grace, M.K.","contributors":null,"facilitators":"Grace,
+        M.K.","compilers":null,"url":"https://www.iucnredlist.org/species/197873/2503520","assessment_date":"2021-10-31","taxon":{"sis_id":197873,"scientific_name":"Macrobrachium
+        rosenbergii","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"ARTHROPODA","class_name":"MALACOSTRACA","order_name":"DECAPODA","family_name":"PALAEMONIDAE","genus_name":"Macrobrachium","species_name":"rosenbergii","subpopulation_name":null,"infra_name":null,"authority":"(De
+        Man, 1879)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[],"common_names":[{"main":false,"name":"Giant
+        Freshwater Prawn","language":{"code":"eng","description":{"en":"English"}}},{"main":true,"name":"Giant
+        River Prawn","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Palaemon
+        rosenbergii De Man, 1879","status":"ACCEPTED","genus_name":"Palaemon","species_name":"rosenbergii","species_author":"De
+        Man, 1879","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Species Recovery Score of 17% (Critically Depleted) is due to massive forest
+        loss across the Pink Pigeon\u0026#39;s indigenous range. The Pink Pigeon has
+        a High Conservation Legacy; without past conservation action, Pink Pigeons
+        would almost certainly be extinct today. There is a Low Conservation Dependence;
+        if conservation actions were to stop, it is expected that loss of restored
+        ecological functionality would occur over a 10-year period, bringing the score
+        to 12%. The Pink Pigeon has a Low Conservation Gain; within a 10-year period,
+        it is expected that the scope of threats facing the species will allow for
+        only modest progress over that time scale (leading to a score of 21%). Finally,
+        within 100 years it would be possible for Pink Pigeon to achieve ecological
+        functionality in many of the spatial units where suitable habitat remains
+        or could be restored, leading to a score of 44%. Therefore, the Recovery Potential
+        for Pink Pigeon is Medium.\u003cbr\u003e\u003cbr\u003eFor additional data,
+        see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Critically Depleted","species_recovery_score_best":"17%","species_recovery_score_minimum":"17%","species_recovery_score_maximum":"17%","conservation_legacy_category":"High","conservation_legacy_best":"17%","conservation_legacy_minimum":"14%","conservation_legacy_maximum":"17%","conservation_dependence_category":"Low","conservation_dependence_best":"5%","conservation_dependence_minimum":"5%","conservation_dependence_maximum":"8%","conservation_gain_category":"Low","conservation_gain_best":"5%","conservation_gain_minimum":"0%","conservation_gain_maximum":"17%","recovery_potential_category":"Medium","recovery_potential_best":"27%","recovery_potential_minimum":"15%","recovery_potential_maximum":"36%","assessor_names":"Tatayah,
+        V.","reviewer_names":"Hermes, C. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace,
+        M.K.","compilers":null,"url":"https://www.iucnredlist.org/species/22690392/179390191","assessment_date":"2021-10-31","taxon":{"sis_id":22690392,"scientific_name":"Nesoenas
+        mayeri","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"AVES","order_name":"COLUMBIFORMES","family_name":"COLUMBIDAE","genus_name":"Nesoenas","species_name":"mayeri","subpopulation_name":null,"infra_name":null,"authority":"(Prévost,
+        1843)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Bird Red List Authority (BirdLife International)","url":"https://www.birdlife.org/","description":"Red
+        List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"}],"common_names":[{"main":false,"name":"Paloma
+        de Mauricio","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":false,"name":"Pigeon
+        rose","language":{"code":"fre","description":{"en":"French"}}},{"main":true,"name":"Pink
+        Pigeon","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Columba
+        mayeri ssp. mayeri Prévost, 1843 — Collar \u003ci\u003eet al\u003c/i\u003e.
+        (1994)","status":"ACCEPTED","genus_name":"Columba","species_name":"mayeri","species_author":null,"infrarank_author":"Prévost,
+        1843 — Collar \u003ci\u003eet al\u003c/i\u003e. (1994)","subpopulation_name":null,"infra_type":"subspecies","infra_name":"mayeri"},{"name":"Streptopelia
+        mayeri (Prévost, 1843) — BirdLife International (2004)","status":"ACCEPTED","genus_name":"Streptopelia","species_name":"mayeri","species_author":"(Prévost,
+        1843) — BirdLife International (2004)","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null},{"name":"Columba
+        mayeri ssp. mayeri Prévost, 1843 — Sibley and Monroe (1990, 1993)","status":"ACCEPTED","genus_name":"Columba","species_name":"mayeri","species_author":null,"infrarank_author":"Prévost,
+        1843 — Sibley and Monroe (1990, 1993)","subpopulation_name":null,"infra_type":"subspecies","infra_name":"mayeri"},{"name":"Columba
+        mayeri ssp. mayeri Prévost, 1843 — BirdLife International (2000)","status":"ACCEPTED","genus_name":"Columba","species_name":"mayeri","species_author":null,"infrarank_author":"Prévost,
+        1843 — BirdLife International (2000)","subpopulation_name":null,"infra_type":"subspecies","infra_name":"mayeri"},{"name":"Columba
+        mayeri Prévost, 1843","status":"ACCEPTED","genus_name":"Columba","species_name":"mayeri","species_author":"Prévost,
+        1843","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Banded Wobbegong\u0026#39;s Species Recovery Score of 100% (Fully Recovered)
+        is due to the introduction of fishing restrictions in spatial units where
+        it was previously threatened. The Banded Wobbegong has a Medium Conservation
+        Legacy; if not for the implementation of fishing regulations, the species
+        would likely still be threatened in two of its four spatial units. There is
+        also a Medium Conservation Dependence; if conservation actions were to stop,
+        it is expected that the species could become non-functional in these spatial
+        units over a 10-year period, bringing the score to 83%. The Banded Wobbegong
+        has a Conservation Gain of Zero; the species is already considered Fully Recovered.
+        Finally, over the next 100 years this success is expected to continue and
+        climate change is not considered a threat to this species, making the Recovery
+        Potential for the Banded Wobbegong also Zero.\u003cbr\u003e\u003cbr\u003eFor
+        additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Fully Recovered","species_recovery_score_best":"100%","species_recovery_score_minimum":"67%","species_recovery_score_maximum":"100%","conservation_legacy_category":"Medium","conservation_legacy_best":"33%","conservation_legacy_minimum":"0%","conservation_legacy_maximum":"50%","conservation_dependence_category":"Medium","conservation_dependence_best":"17%","conservation_dependence_minimum":"-33%","conservation_dependence_maximum":"33%","conservation_gain_category":"Zero","conservation_gain_best":"0%","conservation_gain_minimum":"-17%","conservation_gain_maximum":"33%","recovery_potential_category":"Zero","recovery_potential_best":"0%","recovery_potential_minimum":"-17%","recovery_potential_maximum":"33%","assessor_names":"Huveneers,
+        C.","reviewer_names":"Rigby, C.L., Pierce, S.J., Perez Jimenez, J.C., Ak\u0026ccedil;akaya,
+        H.R. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace, M.K.","compilers":"Wynter,
+        V.","url":"https://www.iucnredlist.org/species/161709/68638176","assessment_date":"2021-10-31","taxon":{"sis_id":161709,"scientific_name":"Orectolobus
+        halei","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"CHONDRICHTHYES","order_name":"ORECTOLOBIFORMES","family_name":"ORECTOLOBIDAE","genus_name":"Orectolobus","species_name":"halei","subpopulation_name":null,"infra_name":null,"authority":"Whitley,
+        1940","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Shark Specialist Group (sharks and rays)","url":"https://www.iucnssg.org","description":"Chair:
+        Rima Jabado (email: rimajabado@hotmail.com)\nRed List Authority Coordinator:
+        Cassie Rigby (email: crigby@westnet.com.au)"}],"common_names":[{"main":false,"name":"Gulf
+        Wobbegong","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Large
+        Ornate Wobbegong","language":{"code":"eng","description":{"en":"English"}}},{"main":true,"name":"Banded
+        Wobbegong","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Orectolobus
+        ornatus ssp. halei Whitley, 1940","status":"ACCEPTED","genus_name":"Orectolobus","species_name":"ornatus","species_author":null,"infrarank_author":"Whitley,
+        1940","subpopulation_name":null,"infra_type":"subspecies","infra_name":"halei"},{"name":"Orectolobus
+        devisi Ogilby, 1916","status":"ACCEPTED","genus_name":"Orectolobus","species_name":"devisi","species_author":"Ogilby,
+        1916","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2021","weights":"Fine-resolution","justification":"\u003cp\u003eThe
+        Whale Shark\u0026#39;s Species Recovery Score of 29% (Largely Depleted) is
+        due to the species being threatened across its range because of declines in
+        abundance. The Whale Shark has a Low Conservation Legacy; without past conservation
+        action, the Whale Shark would have a score of 25%, as it is expected that
+        the closure of some targeted fisheries in two spatial units helped reduce
+        the species\u0026#39; decline there. There is a Low Conservation Dependence;
+        if conservation actions were to stop, it is expected that resumed high levels
+        of bycatch could become an issue in one spatial unit over a 10-year period,
+        bringing the score to 27%. The Whale Shark has a Medium Conservation Gain;
+        the species has a long generation time, limiting the speed at which it can
+        show recovery, but within a 10-year period it is expected that a reduction
+        in targeted fishing, and bycatch mitigation in gillnet and purse-seine fisheries,
+        will allow populations to stabilize, albeit at a low level, leading to a score
+        of 55%. Finally, within 100 years it would be possible for The Whale Shark
+        to Fully Recover; climate shifts, and potential effects on plankton productivity,
+        are not expected to limit Whale Shark habitat availability. Therefore, the
+        Recovery Potential for The Whale Shark is High, but achieving this will required
+        concerted and sustained effort.\u003cbr\u003e\u003cbr\u003eFor additional
+        data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Largely Depleted","species_recovery_score_best":"29%","species_recovery_score_minimum":"25%","species_recovery_score_maximum":"55%","conservation_legacy_category":"Low","conservation_legacy_best":"4%","conservation_legacy_minimum":"-6%","conservation_legacy_maximum":"32%","conservation_dependence_category":"Low","conservation_dependence_best":"2%","conservation_dependence_minimum":"-8%","conservation_dependence_maximum":"30%","conservation_gain_category":"Medium","conservation_gain_best":"26%","conservation_gain_minimum":"-26%","conservation_gain_maximum":"32%","recovery_potential_category":"High","recovery_potential_best":"71%","recovery_potential_minimum":"45%","recovery_potential_maximum":"75%","assessor_names":"Pierce,
+        S.J., Grace, M.K. \u0026 Araujo, G.","reviewer_names":"Rigby, C.L, Spaet,
+        J.L.Y \u0026 Hoffmann, M.","contributors":null,"facilitators":"Grace, M.K.","compilers":"Wynter,
+        V.","url":"https://www.iucnredlist.org/species/19488/2365291","assessment_date":"2021-10-31","taxon":{"sis_id":19488,"scientific_name":"Rhincodon
+        typus","species_taxa":[],"subpopulation_taxa":[{"sis_id":126671962,"scientific_name":"Rhincodon
+        typus Atlantic Subpopulation","kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"CHONDRICHTHYES","order_name":"ORECTOLOBIFORMES","family_name":"RHINCODONTIDAE","genus_name":"Rhincodon","species_name":"typus","subpopulation_name":"Atlantic
+        Subpopulation","infra_name":null,"authority":"Smith, 1828","ssc_groups":[{"name":"IUCN
+        SSC Shark Specialist Group (sharks and rays)","url":"https://www.iucnssg.org","description":"Chair:
+        Rima Jabado (email: rimajabado@hotmail.com)\nRed List Authority Coordinator:
+        Cassie Rigby (email: crigby@westnet.com.au)"}],"common_names":[],"synonyms":[]},{"sis_id":126671910,"scientific_name":"Rhincodon
+        typus Indo-Pacific Subpopulation","kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"CHONDRICHTHYES","order_name":"ORECTOLOBIFORMES","family_name":"RHINCODONTIDAE","genus_name":"Rhincodon","species_name":"typus","subpopulation_name":"Indo-Pacific
+        Subpopulation","infra_name":null,"authority":"Smith, 1828","ssc_groups":[{"name":"IUCN
+        SSC Shark Specialist Group (sharks and rays)","url":"https://www.iucnssg.org","description":"Chair:
+        Rima Jabado (email: rimajabado@hotmail.com)\nRed List Authority Coordinator:
+        Cassie Rigby (email: crigby@westnet.com.au)"}],"common_names":[],"synonyms":[]}],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"CHONDRICHTHYES","order_name":"ORECTOLOBIFORMES","family_name":"RHINCODONTIDAE","genus_name":"Rhincodon","species_name":"typus","subpopulation_name":null,"infra_name":null,"authority":"Smith,
+        1828","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Shark Specialist Group (sharks and rays)","url":"https://www.iucnssg.org","description":"Chair:
+        Rima Jabado (email: rimajabado@hotmail.com)\nRed List Authority Coordinator:
+        Cassie Rigby (email: crigby@westnet.com.au)"}],"common_names":[{"main":false,"name":"Requin
+        baleine","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Tiburón
+        Ballena","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":false,"name":"القرش
+        الحوت","language":{"code":"ara","description":{"en":"Arabic"}}},{"main":true,"name":"Whale
+        Shark","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Sardinian Currant\u0026#39;s Species Recovery Score of 33% (Largely Depleted)
+        is due to the fact that this species, which has only ever existed in one spatial
+        unit, is not currently Viable. The Sardinian Currant has a Conservation Legacy
+        and Conservation Gain of Zero; past attempts to bolster the wild population
+        with individuals from \u003cem\u003eex situ\u003c/em\u003e populations have
+        not been successful, and while attempts continue, it is unclear whether they
+        will be able to restore a Viable population within 10 years, given ongoing
+        threats from human disturbance and grazing animals. Given these threats, there
+        is a High Conservation Dependence; if conservation actions were to stop, it
+        is expected that the species would likely go extinct over a 10-year period.
+        Finally, with effective protection and successful translocations, within 100
+        years it would be possible for the Sardinian Currant to become Fully Recovered.
+        However, this future is uncertain, especially because the relict population
+        is vulnerable to extinction via stochastic events, which are expected to increase
+        in frequency with climate change. Therefore, the Recovery Potential for Sardinian
+        Currant is Indeterminate.\u003cbr\u003e\u003cbr\u003eFor additional data,
+        see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Largely Depleted","species_recovery_score_best":"33%","species_recovery_score_minimum":"33%","species_recovery_score_maximum":"33%","conservation_legacy_category":"Zero","conservation_legacy_best":"0%","conservation_legacy_minimum":"0%","conservation_legacy_maximum":"0%","conservation_dependence_category":"High","conservation_dependence_best":"33%","conservation_dependence_minimum":"0%","conservation_dependence_maximum":"33%","conservation_gain_category":"Zero","conservation_gain_best":"0%","conservation_gain_minimum":"0%","conservation_gain_maximum":"0%","recovery_potential_category":"Indeterminate","recovery_potential_best":"0%","recovery_potential_minimum":"-33%","recovery_potential_maximum":"67%","assessor_names":"Fenu,
+        G., Cogoni, D. \u0026 Bacchetta, G.","reviewer_names":"Montagnani, C. \u0026
+        Grace, M.K.","contributors":null,"facilitators":"Grace, M.K.","compilers":null,"url":"https://www.iucnredlist.org/species/61675/102933336","assessment_date":"2021-10-31","taxon":{"sis_id":61675,"scientific_name":"Ribes
+        sardoum","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"PLANTAE","phylum_name":"TRACHEOPHYTA","class_name":"MAGNOLIOPSIDA","order_name":"SAXIFRAGALES","family_name":"GROSSULARIACEAE","genus_name":"Ribes","species_name":"sardoum","subpopulation_name":null,"infra_name":null,"authority":"Martelli","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[],"common_names":[{"main":true,"name":"Sardinian
+        Currant","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Bonnethead Shark\u0026#39;s Species Recovery Score of 44% (Largely Depleted)
+        reflects that while the species is Viable in one of its three spatial units,
+        it is not ecologically Functional; in the other two spatial units, the species
+        is threatened and therefore Present (not Viable). The Bonnethead Shark has
+        a High Conservation Legacy; without past fisheries management, the Bonnethead
+        Shark would have a score of 11%, due to expected extirpation in two spatial
+        units and loss of viability in the third. There is a High Conservation Dependence;
+        if management were to stop, it is expected that within a 10-year period, the
+        score could drop to 11%. The Bonnethead Shark has a Medium Conservation Gain;
+        regulation is expected to have the most effect in the spatial unit that is
+        currently Viable, allowing the species to become Functional there and contributing
+        to an overall score of 55%. Finally, the species breeds extremely quickly,
+        so if effective fisheries management were implemented rangewide, within 100
+        years the species could easily be Viable in all spatial units, and Functional
+        in one, for an overall score of 78%. Therefore, the Recovery Potential for
+        the Bonnethead Shark is Medium.\u003cbr\u003e\u003cbr\u003eFor additional
+        data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Largely Depleted","species_recovery_score_best":"44%","species_recovery_score_minimum":"44%","species_recovery_score_maximum":"44%","conservation_legacy_category":"High","conservation_legacy_best":"33%","conservation_legacy_minimum":"11%","conservation_legacy_maximum":"33%","conservation_dependence_category":"High","conservation_dependence_best":"33%","conservation_dependence_minimum":"33%","conservation_dependence_maximum":"33%","conservation_gain_category":"Medium","conservation_gain_best":"11%","conservation_gain_minimum":"0%","conservation_gain_maximum":"11%","recovery_potential_category":"Medium","recovery_potential_best":"33%","recovery_potential_minimum":"33%","recovery_potential_maximum":"33%","assessor_names":"P\u0026eacute;rez-Jim\u0026eacute;nez,
+        J.C.","reviewer_names":"Finucci, B., Rigby, C.L. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace,
+        M.K.","compilers":null,"url":"https://www.iucnredlist.org/species/39387/205765567","assessment_date":"2021-10-31","taxon":{"sis_id":39387,"scientific_name":"Sphyrna
+        tiburo","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"CHONDRICHTHYES","order_name":"CARCHARHINIFORMES","family_name":"SPHYRNIDAE","genus_name":"Sphyrna","species_name":"tiburo","subpopulation_name":null,"infra_name":null,"authority":"(Linnaeus,
+        1758)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Shark Specialist Group (sharks and rays)","url":"https://www.iucnssg.org","description":"Chair:
+        Rima Jabado (email: rimajabado@hotmail.com)\nRed List Authority Coordinator:
+        Cassie Rigby (email: crigby@westnet.com.au)"}],"common_names":[{"main":true,"name":"Bonnethead
+        Shark","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Squalus
+        tiburo Linnaeus, 1758","status":"ACCEPTED","genus_name":"Squalus","species_name":"tiburo","species_author":"Linnaeus,
+        1758","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2022","weights":"Fine-resolution","justification":"\u003cp\u003eThe
+        Western Tragopan has a Species Recovery Score of 35% (Largely Depleted). However,
+        without the legal protection it has received, it is estimated that the score
+        would only be 10% today, giving it a Low Conservation Legacy (relative to
+        the current score). While the relatively slow-growing species is not expected
+        to improve in score over the next 10 years (Conservation Gain of Zero), if
+        conservation actions were to stop, over that same time frame the species\u0026#39;
+        score is predicted to plummet to 10% (Low Conservation Dependence, relative
+        to current score). Over 100 years, it would be possible to restore the species
+        to viability throughout its range, leading to a score of 65% (Medium Recovery
+        Potential).\u003cbr\u003e\u003cbr\u003eFor additional data, see the \u003ca
+        href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Largely Depleted","species_recovery_score_best":"35%","species_recovery_score_minimum":"35%","species_recovery_score_maximum":"35%","conservation_legacy_category":"Low","conservation_legacy_best":"10%","conservation_legacy_minimum":"10%","conservation_legacy_maximum":"20%","conservation_dependence_category":"Low","conservation_dependence_best":"10%","conservation_dependence_minimum":"10%","conservation_dependence_maximum":"35%","conservation_gain_category":"Zero","conservation_gain_best":"0%","conservation_gain_minimum":"0%","conservation_gain_maximum":"0%","recovery_potential_category":"Medium","recovery_potential_best":"30%","recovery_potential_minimum":"20%","recovery_potential_maximum":"45%","assessor_names":"Gupta,
+        G. \u0026 McGowan, P.","reviewer_names":"Kaul, R. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace,
+        M.K. \u0026 Young, R.E.","compilers":null,"url":"https://www.iucnredlist.org/species/22679147/112467383","assessment_date":"2022-07-21","taxon":{"sis_id":22679147,"scientific_name":"Tragopan
+        melanocephalus","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"AVES","order_name":"GALLIFORMES","family_name":"PHASIANIDAE","genus_name":"Tragopan","species_name":"melanocephalus","subpopulation_name":null,"infra_name":null,"authority":"(Gray,
+        1829)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Bird Red List Authority (BirdLife International)","url":"https://www.birdlife.org/","description":"Red
+        List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"}],"common_names":[{"main":false,"name":"Black-headed
+        Tragopan","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Western
+        Horned-pheasant","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Jejeel","language":{"code":"urd","description":{"en":"Urdu"}}},{"main":false,"name":"Tragopán
+        de Cabeza Negra","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":false,"name":"Tragopán
+        Dorsigrís","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":false,"name":"Tragopán
+        Occidental","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":true,"name":"Western
+        Tragopan","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[]}},{"assessment_year":"2022","weights":"Default","justification":"\u003cp\u003e\u003cem\u003eTrechus
+        terrabravensis\u003c/em\u003e has a Species Recovery Score of 83% (Slightly
+        Depleted). The species is endemic to Ilha Terceira. While much forest has
+        been cleared on the island, and protected areas established in response, the
+        species is a habitat specialist restricted to inaccessible areas and it is
+        unclear how much habitat has been lost to human development; therefore, the
+        Conservation Legacy is Indeterminate. The species has a High Conservation
+        Dependence; without continued management of invasive plants, the species\u0026#39;
+        score is expected to decrease to 25% over the next 10 years. However, continued
+        removal of invasive plants and creation of corridors is expected to benefit
+        the species in future, with maximum expected recovery to 92% achievable within
+        the next 10 years, giving the species a Low Conservation Gain and Recovery
+        Potential. \u003cbr\u003e\u003cbr\u003eFor additional data, see the \u003ca
+        href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Slightly Depleted","species_recovery_score_best":"83%","species_recovery_score_minimum":"58%","species_recovery_score_maximum":"92%","conservation_legacy_category":"Indeterminate","conservation_legacy_best":"33%","conservation_legacy_minimum":"-8%","conservation_legacy_maximum":"67%","conservation_dependence_category":"High","conservation_dependence_best":"58%","conservation_dependence_minimum":"33%","conservation_dependence_maximum":"67%","conservation_gain_category":"Low","conservation_gain_best":"8%","conservation_gain_minimum":"-33%","conservation_gain_maximum":"33%","recovery_potential_category":"Low","recovery_potential_best":"8%","recovery_potential_minimum":"-58%","recovery_potential_maximum":"33%","assessor_names":"Borges,
+        P.A.V.","reviewer_names":"Boieiro, M. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace,
+        M.K. \u0026 Young, R.E.","compilers":null,"url":"https://www.iucnredlist.org/species/97126159/99166599","assessment_date":"2022-07-21","taxon":{"sis_id":97126159,"scientific_name":"Trechus
+        terrabravensis","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"ARTHROPODA","class_name":"INSECTA","order_name":"COLEOPTERA","family_name":"CARABIDAE","genus_name":"Trechus","species_name":"terrabravensis","subpopulation_name":null,"infra_name":null,"authority":"Borges,
+        Serrano \u0026amp; Amorim, 2004","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[],"common_names":[{"main":false,"name":"Carocho-da-terra-brava","language":{"code":"por","description":{"en":"Portuguese"}}},{"main":true,"name":"Ground-beetle","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Common Birdwing\u0026#39;s Species Recovery Score of 52% (Moderately Depleted)
+        is because, of the species\u0026#39; 14 spatial units, it is only Viable in
+        four of them, and Functional in only one. The Common Birdwing\u0026#39;s Conservation
+        Impact Metrics (Conservation Legacy, Conservation Gain, Conservation Dependence,
+        and Recovery Potential) are all Indeterminate. The species was historically
+        popular with collectors and has experienced declines in its forest habitat
+        throughout its range; while the species is legally protected in many countries,
+        and occurs within a number of protected areas, estimating the impacts of these
+        actions requires more monitoring data.\u003cbr\u003e\u003cbr\u003eFor additional
+        data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Moderately Depleted","species_recovery_score_best":"52%","species_recovery_score_minimum":"38%","species_recovery_score_maximum":"64%","conservation_legacy_category":"Indeterminate","conservation_legacy_best":"7%","conservation_legacy_minimum":"-21%","conservation_legacy_maximum":"40%","conservation_dependence_category":"Indeterminate","conservation_dependence_best":"10%","conservation_dependence_minimum":"-21%","conservation_dependence_maximum":"43%","conservation_gain_category":"Indeterminate","conservation_gain_best":"25%","conservation_gain_minimum":"-12%","conservation_gain_maximum":"52%","recovery_potential_category":"Indeterminate","recovery_potential_best":"38%","recovery_potential_minimum":"-2%","recovery_potential_maximum":"62%","assessor_names":"Sultana,
+        S. \u0026 Chowdhury, G.W.","reviewer_names":"B\u0026ouml;hm, M. \u0026 Grace,
+        M.K.","contributors":null,"facilitators":"Grace, M.K.","compilers":null,"url":"https://www.iucnredlist.org/species/91188632/118127416","assessment_date":"2021-10-31","taxon":{"sis_id":91188632,"scientific_name":"Troides
+        helena","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"ARTHROPODA","class_name":"INSECTA","order_name":"LEPIDOPTERA","family_name":"PAPILIONIDAE","genus_name":"Troides","species_name":"helena","subpopulation_name":null,"infra_name":null,"authority":"(Linnaeus,
+        1758)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Butterfly Specialist Group","url":"https://www.iucn.org/commissions/ssc-groups/invertebrates/butterfly","description":"Chair
+        and Red List Authority Coordinator: Monika Böhm (email: mbohm@indyzoo.com)"}],"common_names":[{"main":false,"name":"Sunaulo
+        Chari Putali","language":{"code":"nep","description":{"en":"Nepali"}}},{"main":true,"name":"Common
+        Birdwing","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Papilio
+        helena Linnaeus, 1758","status":"ACCEPTED","genus_name":"Papilio","species_name":"helena","species_author":"Linnaeus,
+        1758","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Species Recovery Score of 75% (Moderately Depleted) is due to Blue Cranes
+        being Functional in two spatial units, Viable in the third, and Present in
+        the fourth. The Blue Crane has a High Conservation Legacy; without past conservation
+        action including protected areas, campaigns to reduce human-wildlife conflict,
+        and steps taken to reduce mortality from collisions with powerlines, Blue
+        Cranes would have a score of 33% today. There is a Medium Conservation Dependence;
+        if conservation actions were to stop, it is expected that its status would
+        deteriorate across its range over a 10-year period, bringing the score to
+        42%. Blue Cranes have a Medium Conservation Gain; within a 10-year period,
+        if conservation continues, it is expected that the species will become Functional
+        in three out of four spatial units, leading to a score of 92%. Finally, within
+        100 years it would be possible for the Blue Crane to become Functional across
+        its range, leading to a score of 100%. Therefore, the Recovery Potential for
+        Blue Cranes is Medium, relative to its already high score.\u003cbr\u003e\u003cbr\u003eFor
+        additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Moderately Depleted","species_recovery_score_best":"75%","species_recovery_score_minimum":"67%","species_recovery_score_maximum":"75%","conservation_legacy_category":"High","conservation_legacy_best":"42%","conservation_legacy_minimum":"17%","conservation_legacy_maximum":"50%","conservation_dependence_category":"Medium","conservation_dependence_best":"33%","conservation_dependence_minimum":"8%","conservation_dependence_maximum":"50%","conservation_gain_category":"Medium","conservation_gain_best":"17%","conservation_gain_minimum":"0%","conservation_gain_maximum":"25%","recovery_potential_category":"Medium","recovery_potential_best":"25%","recovery_potential_minimum":"17%","recovery_potential_maximum":"33%","assessor_names":"Craig,
+        C.A., Scott, A. \u0026 Scott, M.","reviewer_names":"Smith, T. \u0026 Grace,
+        M.K.","contributors":null,"facilitators":"Grace, M.K.","compilers":"Wynter,
+        V.","url":"https://www.iucnredlist.org/species/22692109/177514877","assessment_date":"2021-10-31","taxon":{"sis_id":22692109,"scientific_name":"Anthropoides
+        paradiseus","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"AVES","order_name":"GRUIFORMES","family_name":"GRUIDAE","genus_name":"Anthropoides","species_name":"paradiseus","subpopulation_name":null,"infra_name":null,"authority":"(Lichtenstein,
+        1793)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Bird Red List Authority (BirdLife International)","url":"https://www.birdlife.org/","description":"Red
+        List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"}],"common_names":[{"main":false,"name":"Stanley
+        Crane","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Grue
+        bleue","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Grue
+        de paradis","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Grulla
+        Azul","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":false,"name":"Grulla
+        de Paraiso","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":true,"name":"Blue
+        Crane","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Anthropoides
+        paradisea ssp. paradisea (Lichtenstein, 1793) — Dowsett and Forbes-Watson
+        (1993)","status":"ACCEPTED","genus_name":"Anthropoides","species_name":"paradisea","species_author":null,"infrarank_author":"(Lichtenstein,
+        1793) — Dowsett and Forbes-Watson (1993)","subpopulation_name":null,"infra_type":"subspecies","infra_name":"paradisea"},{"name":"Grus
+        paradisea (Lichtenstein, 1793)","status":"ACCEPTED","genus_name":"Grus","species_name":"paradisea","species_author":"(Lichtenstein,
+        1793)","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null},{"name":"Ardea
+        paradisea Lichtenstein, 1793","status":"ACCEPTED","genus_name":"Ardea","species_name":"paradisea","species_author":"Lichtenstein,
+        1793","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2022","weights":"Default","justification":"\u003cp\u003eThe
+        Sehuencas Water Frog has a Species Recovery Score of 11% (Critically Depleted)
+        as it is Absent in most of its indigenous range and threatened (Present) where
+        it remains. The species has a Conservation Legacy of Zero; it has remained
+        extant despite difficulties in effectively managing the protected area in
+        which it is found. Given this difficulty in managing the protected area, the
+        Conservation Dependence is also Zero; if the species has persisted despite
+        continued disturbance to date, it will likely do so over the next 10 years.
+        The status of the species is not expected to improve unless management improves,
+        which is unlikely to happen over the next 10 years (Zero Conservation Gain),
+        but if it does, over the next 100 years, at least one Viable population is
+        possible, bringing the score to 22% (Medium Recovery Potential).\u003cbr\u003e\u003cbr\u003eFor
+        additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Critically Depleted","species_recovery_score_best":"11%","species_recovery_score_minimum":"11%","species_recovery_score_maximum":"11%","conservation_legacy_category":"Zero","conservation_legacy_best":"0%","conservation_legacy_minimum":"0%","conservation_legacy_maximum":"0%","conservation_dependence_category":"Zero","conservation_dependence_best":"0%","conservation_dependence_minimum":"0%","conservation_dependence_maximum":"11%","conservation_gain_category":"Zero","conservation_gain_best":"0%","conservation_gain_minimum":"0%","conservation_gain_maximum":"0%","recovery_potential_category":"Medium","recovery_potential_best":"11%","recovery_potential_minimum":"0%","recovery_potential_maximum":"22%","assessor_names":"Camacho-Badani,
+        T. \u0026 Barron-Lavayen, S.","reviewer_names":"Mu\u0026ntilde;oz, O.Q. \u0026
+        Grace, M.K.","contributors":null,"facilitators":"Grace, M.K. \u0026 Young
+        R.E.","compilers":null,"url":"https://www.iucnredlist.org/species/57369/154335458","assessment_date":"2022-07-21","taxon":{"sis_id":57369,"scientific_name":"Telmatobius
+        yuracare","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"AMPHIBIA","order_name":"ANURA","family_name":"TELMATOBIIDAE","genus_name":"Telmatobius","species_name":"yuracare","subpopulation_name":null,"infra_name":null,"authority":"De
+        la Riva, 1994","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Amphibian Specialist Group","url":"https://www.iucn-amphibians.org/","description":"Chair:
+        Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator:
+        Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"}],"common_names":[{"main":true,"name":"Sehuencas
+        Water Frog","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[]}},{"assessment_year":"2023","weights":"Default","justification":"\u003cp\u003eThe
+        Species Recovery Score of 22% (Largely Depleted) is due to the Iberian Lynx
+        being Absent in two of its six spatial units, and Present but not Functional
+        in the remaining four. Despite its depleted state, the species has a High
+        Conservation Legacy; measures such as area protection, reintroductions, poaching
+        prevention, road kill mitigation, and genetic management have reversed population
+        declines and prevented likely extinction. Continuation of these measures,
+        as well as planned reintroductions to spatial units in which the species is
+        currently Absent, are expected to double the Recovery Score in 10 years: a
+        Medium Conservation Gain. If all conservation were to stop, declines would
+        resume and the species would probably be extirpated from the East Spain spatial
+        unit within 10 years, reducing the Recovery Score to 17%. However, populations
+        would persist in at least three spatial units in this timeframe, so the Conservation
+        Dependence is Low. Enough suitable habitat remains that the species could
+        reach Fully Recovered status in 100 years, assuming conservation efforts continue
+        with maximum efficacy. There is some uncertainty in this prediction, as the
+        possibility of multiple disease outbreaks in European Rabbits (the species''
+        main prey item) could hamper progress, but the Recovery Potential remains
+        High.\u003cbr\u003e\u003cbr\u003eFor additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Largely Depleted","species_recovery_score_best":"22%","species_recovery_score_minimum":"22%","species_recovery_score_maximum":"22%","conservation_legacy_category":"High","conservation_legacy_best":"22%","conservation_legacy_minimum":"11%","conservation_legacy_maximum":"22%","conservation_dependence_category":"Low","conservation_dependence_best":"6%","conservation_dependence_minimum":"0%","conservation_dependence_maximum":"6%","conservation_gain_category":"Medium","conservation_gain_best":"22%","conservation_gain_minimum":"0%","conservation_gain_maximum":"44%","recovery_potential_category":"High","recovery_potential_best":"78%","recovery_potential_minimum":"11%","recovery_potential_maximum":"78%","assessor_names":"Ortiz,
+        F.J.S., Carlton, E., Lanz, T. \u0026 Breitenmoser, U.","reviewer_names":"Alonso,
+        G.G, Zamora, G.L., Blanco, A.R., Parra, M.L. \u0026 Cygan, M.G.W.","contributors":null,"facilitators":"Grace,
+        M.K. \u0026 Young, R.E.","compilers":null,"url":"https://www.iucnredlist.org/species/12520/218695618","assessment_date":"2023-10-31","taxon":{"sis_id":12520,"scientific_name":"Lynx
+        pardinus","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"CARNIVORA","family_name":"FELIDAE","genus_name":"Lynx","species_name":"pardinus","subpopulation_name":null,"infra_name":null,"authority":"(Temminck,
+        1827)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Cat Specialist Group (wild cats)","url":"http://www.catsg.org/","description":"Chair:
+        Christine Breitenmoser (email: ch.breitenmoser@kora.ch) and Urs Max Breitenmoser
+        (email: urs.breitenmoser@vetsuisse.unibe.ch)\nRed List Authority Coordinator:
+        Tabea Lanz (email: t.lanz@kora.ch)\nNewsletter: http://www.catsg.org/index.php?id=7"}],"common_names":[{"main":false,"name":"Lince
+        ibérico","language":{"code":"por","description":{"en":"Portuguese"}}},{"main":false,"name":"Lince
+        ibérico","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":false,"name":"Lynx
+        pardelle","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Pardelluchs","language":{"code":"ger","description":{"en":"German"}}},{"main":true,"name":"Iberian
+        Lynx","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Felis
+        pardina Temminck, 1827","status":"ACCEPTED","genus_name":"Felis","species_name":"pardina","species_author":"Temminck,
+        1827","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2022","weights":"Default","justification":"\u003cp\u003eThe
+        Pygmy Hog has a Species Recovery Score of 8% (Critically Depleted) as it has
+        been extirpated from the majority of its indigenous range. However, without
+        protected areas and reintroductions, the species would almost certainly be
+        extinct today, resulting in a High Conservation Legacy. Over the next 10 years,
+        if conservation stopped, the species is expected to become Absent in one spatial
+        unit, decreasing the score to 4% (Low Conservation Dependence); conversely,
+        over the same time period, the species is likely to be reintroduced to another
+        spatial unit, increasing the score to 13% (Low Conservation Gain). In the
+        long term, it would be possible to reintroduce the species in a handful of
+        spatial units, and to establish a Functional population in one spatial unit,
+        bringing the score to 29% (High Recovery Potential, relative to current score).\u003cbr\u003e\u003cbr\u003eFor
+        additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Critically Depleted","species_recovery_score_best":"8%","species_recovery_score_minimum":"8%","species_recovery_score_maximum":"8%","conservation_legacy_category":"High","conservation_legacy_best":"8%","conservation_legacy_minimum":"0%","conservation_legacy_maximum":"8%","conservation_dependence_category":"Low","conservation_dependence_best":"4%","conservation_dependence_minimum":"0%","conservation_dependence_maximum":"8%","conservation_gain_category":"Low","conservation_gain_best":"4%","conservation_gain_minimum":"0%","conservation_gain_maximum":"13%","recovery_potential_category":"High","recovery_potential_best":"21%","recovery_potential_minimum":"4%","recovery_potential_maximum":"38%","assessor_names":"Deka,
+        P.,  Hudson, M., Das, D. \u0026 Kennerley, R.","reviewer_names":"Narayan,
+        G. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace, M.K. \u0026
+        Young, R.E.","compilers":null,"url":"https://www.iucnredlist.org/species/21172/44139115","assessment_date":"2022-07-21","taxon":{"sis_id":21172,"scientific_name":"Porcula
+        salvania","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"ARTIODACTYLA","family_name":"SUIDAE","genus_name":"Porcula","species_name":"salvania","subpopulation_name":null,"infra_name":null,"authority":"Hodgson,
+        1847","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[],"common_names":[{"main":false,"name":"Jabalí
+        Enano","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":false,"name":"Jabalí
+        Pigmeo","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":false,"name":"Nal
+        Gahori","language":{"code":"asm","description":{"en":"Assamese"}}},{"main":false,"name":"Sanglier
+        nain","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Sanglier
+        pygmée","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Sano
+        Banel","language":{"code":"nep","description":{"en":"Nepali"}}},{"main":false,"name":"Takuri
+        Borah","language":{"code":"asm","description":{"en":"Assamese"}}},{"main":true,"name":"Pygmy
+        Hog","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Sus
+        salvanius (Hodgson, 1847)","status":"ADDED","genus_name":"Sus","species_name":"salvanius","species_author":"(Hodgson,
+        1847)","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2022","weights":"Default","justification":"\u003cp\u003eThe
+        Chinstrap Penguin has a Species Recovery Score of 80% (Moderately Depleted).
+        The primary conservation actions for this species have included regulation
+        of the fisheries of their prey, but the species\u0026#39; score is not expected
+        to be different today in the absence of this action (Conservation Legacy of
+        Zero), though there is uncertainty around this estimate. Over the next 10
+        years, the best estimate is that the species would decline if conservation
+        action stopped, but the future impact of conservation actions is hard to estimate
+        precisely given that climate change is predicted to cause declines in species
+        status over the same period; therefore, a dynamic baseline was used, but even
+        so Conservation Dependence and Gain are both Indeterminate. Finally, in 100
+        years, due to climate change the most optimistic estimate is that the species
+        will have declined to a score of 60%, meaning that the Recovery Potential
+        is Negative.\u003cbr\u003e\u003cbr\u003eFor additional data, see the \u003ca
+        href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Moderately Depleted","species_recovery_score_best":"80%","species_recovery_score_minimum":"53%","species_recovery_score_maximum":"93%","conservation_legacy_category":"Zero","conservation_legacy_best":"0%","conservation_legacy_minimum":"-40%","conservation_legacy_maximum":"40%","conservation_dependence_category":"Indeterminate","conservation_dependence_best":"7%","conservation_dependence_minimum":"-47%","conservation_dependence_maximum":"47%","conservation_gain_category":"Indeterminate","conservation_gain_best":"0%","conservation_gain_minimum":"-47%","conservation_gain_maximum":"47%","recovery_potential_category":"Negative","recovery_potential_best":"-20%","recovery_potential_minimum":"-60%","recovery_potential_maximum":"33%","assessor_names":"Strycker,
+        N. \u0026 Lynch, H.","reviewer_names":"Hart, T. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace,
+        M.K. \u0026 Young, R.E.","compilers":null,"url":"https://www.iucnredlist.org/species/22697761/184807209","assessment_date":"2022-07-21","taxon":{"sis_id":22697761,"scientific_name":"Pygoscelis
+        antarcticus","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"AVES","order_name":"SPHENISCIFORMES","family_name":"SPHENISCIDAE","genus_name":"Pygoscelis","species_name":"antarcticus","subpopulation_name":null,"infra_name":null,"authority":"(Forster,
+        1781)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Bird Red List Authority (BirdLife International)","url":"https://www.birdlife.org/","description":"Red
+        List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"}],"common_names":[{"main":false,"name":"Pingüino
+        barbijo","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":true,"name":"Chinstrap
+        Penguin","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Pygoscelis
+        antarctica (Forster, 1781) [orth. error] — Sibley and Monroe (1990, 1993)","status":"ACCEPTED","genus_name":"Pygoscelis","species_name":"antarctica","species_author":"(Forster,
+        1781) [orth. error] — Sibley and Monroe (1990, 1993)","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null},{"name":"Pygoscelis
+        antarctica (Forster, 1781) [orth. error] — BirdLife International (2004)","status":"ACCEPTED","genus_name":"Pygoscelis","species_name":"antarctica","species_author":"(Forster,
+        1781) [orth. error] — BirdLife International (2004)","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null},{"name":"Pygoscelis
+        antarctica (Forster, 1781) [orth. error] — Turbott (1990)","status":"ACCEPTED","genus_name":"Pygoscelis","species_name":"antarctica","species_author":"(Forster,
+        1781) [orth. error] — Turbott (1990)","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null},{"name":"Pygoscelis
+        antarctica (Forster, 1781) [orth. error] — Christidis and Boles (1994)","status":"ACCEPTED","genus_name":"Pygoscelis","species_name":"antarctica","species_author":"(Forster,
+        1781) [orth. error] — Christidis and Boles (1994)","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2022","weights":"Default","justification":"\u003cp\u003eThe
+        Mountain Chicken has a Species Recovery Score of 5% (Critically Depleted)
+        as it has been lost from the majority of islands on which it was once found,
+        and is threatened (Present) only on Dominica, where it was driven to near-extinction
+        by chytridiomycosis. Nonetheless, it has a High Conservation Legacy, because
+        if a hunting ban and ban on importing mongooses had not been implemented on
+        Dominica (the main non-chytrid threats to the species), the Mountain Chicken
+        would almost certainly be extinct today. Nonetheless, if these actions stopped,
+        the species could easily go extinct within 10 years (High Conservation Dependence).
+        The remaining individuals may have a genetic resistance to chytrid (though
+        this needs to be confirmed), and if chytrid control measures are put in place
+        then this pool of individuals could be used for reintroductions to Montserrat
+        within 10 years, bringing the score to 10% (Low Conservation Gain). Nonetheless,
+        this potential genetic basis for resistance, combined with control of invasive
+        mammals on the islands of its indigenous range, could allow for the species
+        to recovery to 43% within 100 years (High Recovery Potential).\u003cbr\u003e\u003cbr\u003eFor
+        additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Critically Depleted","species_recovery_score_best":"5%","species_recovery_score_minimum":"5%","species_recovery_score_maximum":"10%","conservation_legacy_category":"High","conservation_legacy_best":"5%","conservation_legacy_minimum":"0%","conservation_legacy_maximum":"10%","conservation_dependence_category":"High","conservation_dependence_best":"5%","conservation_dependence_minimum":"0%","conservation_dependence_maximum":"10%","conservation_gain_category":"Low","conservation_gain_best":"5%","conservation_gain_minimum":"-5%","conservation_gain_maximum":"10%","recovery_potential_category":"High","recovery_potential_best":"38%","recovery_potential_minimum":"10%","recovery_potential_maximum":"48%","assessor_names":"Hudson,
+        M.A., Cunningham, A. \u0026 Stephenson, P.J.","reviewer_names":"Tapley, B.
+        \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace, M.K. \u0026
+        Young, R.E.","compilers":null,"url":"https://www.iucnredlist.org/species/57125/3055585","assessment_date":"2022-07-21","taxon":{"sis_id":57125,"scientific_name":"Leptodactylus
+        fallax","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"AMPHIBIA","order_name":"ANURA","family_name":"LEPTODACTYLIDAE","genus_name":"Leptodactylus","species_name":"fallax","subpopulation_name":null,"infra_name":null,"authority":"Müller,
+        1926","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Amphibian Specialist Group","url":"https://www.iucn-amphibians.org/","description":"Chair:
+        Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator:
+        Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"}],"common_names":[{"main":false,"name":"Giant
+        Ditch Frog","language":{"code":"eng","description":{"en":"English"}}},{"main":true,"name":"Mountain
+        Chicken","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Leptodactylus
+        dominicensis Cochran, 1923","status":"MERGE","genus_name":"Leptodactylus","species_name":"dominicensis","species_author":"Cochran,
+        1923","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Species Recovery Score of 8% (Critically Depleted) for the Pale-headed Brush-finch
+        is due to the species being Absent in three of four spatial units, and only
+        Present in the fourth. The Pale-headed Brush-finch has a High Conservation
+        Legacy; without past conservation action, the Pale-headed Brush-finch would
+        almost certainly be extinct. The species has a Conservation Dependence of
+        Zero; even if conservation actions were to stop, the species would likely
+        remain Present in its only extant spatial unit over the next 10 years. The
+        Pale-headed Brush-finch has a Low Conservation Gain; within a 10-year period,
+        if conservation continues, it is expected that its score would double (to
+        17%) as the species expands in its current spatial unit. Finally, within 100
+        years it would be possible for the Pale-headed Brush-finch to be reintroduced
+        in the spatial units where it is currently Absent, and to become Functional
+        where it currently exists, leading to a score of 75%. Therefore, the Recovery
+        Potential for the Pale-headed Brush-finch is High.\u003cbr\u003e\u003cbr\u003eFor
+        additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Critically Depleted","species_recovery_score_best":"8%","species_recovery_score_minimum":"8%","species_recovery_score_maximum":"8%","conservation_legacy_category":"High","conservation_legacy_best":"8%","conservation_legacy_minimum":"8%","conservation_legacy_maximum":"8%","conservation_dependence_category":"Zero","conservation_dependence_best":"0%","conservation_dependence_minimum":"0%","conservation_dependence_maximum":"8%","conservation_gain_category":"Low","conservation_gain_best":"8%","conservation_gain_minimum":"0%","conservation_gain_maximum":"33%","recovery_potential_category":"High","recovery_potential_best":"67%","recovery_potential_minimum":"33%","recovery_potential_maximum":"75%","assessor_names":"Hermes,
+        C.","reviewer_names":"Fernando, E. \u0026 Grace, M.K.","contributors":"Hartmann,
+        S.A. \u0026 Schaefer, H.M.","facilitators":"Grace, M.K.","compilers":"Wynter,
+        V.","url":"https://www.iucnredlist.org/species/22721487/181562033","assessment_date":"2021-10-31","taxon":{"sis_id":22721487,"scientific_name":"Atlapetes
+        pallidiceps","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"AVES","order_name":"PASSERIFORMES","family_name":"PASSERELLIDAE","genus_name":"Atlapetes","species_name":"pallidiceps","subpopulation_name":null,"infra_name":null,"authority":"(Sharpe,
+        1900)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Bird Red List Authority (BirdLife International)","url":"https://www.birdlife.org/","description":"Red
+        List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"}],"common_names":[{"main":false,"name":"Pale-headed
+        Brush Finch","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Pale-headed
+        Brush-Finch","language":{"code":"eng","description":{"en":"English"}}},{"main":true,"name":"Pale-headed
+        Brush-finch","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Buarremon
+        pallidiceps Sharpe, 1900","status":"ACCEPTED","genus_name":"Buarremon","species_name":"pallidiceps","species_author":"Sharpe,
+        1900","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2022","weights":"Default","justification":"\u003cp\u003eThe
+        American Bison has a Species Recovery Score of 17% (Critically Depleted),
+        as it is Absent from many of its indigenous spatial units. Nonetheless, the
+        majority of extant herds within the species\u0026#39; indigenous range today
+        are the result of reintroductions, so the species has a High Conservation
+        Legacy. If hunting pressure increased, the species\u0026#39; status would
+        decline over the next 10 years to 12%, but the the species would not be driven
+        to extinction over that time period (relatively Low Conservation Dependence).
+        Additional reintroductions and stabilisation of existing herds could increase
+        the score to 22% over the next 10 years (Low Conservation Gain). Over 100
+        years, the species could be Functional in most areas where it is currently
+        extant, though reintroductions in other areas are complicated by human pressures
+        (Medium Recovery Potential).\u003cbr\u003e\u003cbr\u003eFor additional data,
+        see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Critically Depleted","species_recovery_score_best":"17%","species_recovery_score_minimum":"17%","species_recovery_score_maximum":"17%","conservation_legacy_category":"High","conservation_legacy_best":"17%","conservation_legacy_minimum":"16%","conservation_legacy_maximum":"17%","conservation_dependence_category":"Low","conservation_dependence_best":"6%","conservation_dependence_minimum":"6%","conservation_dependence_maximum":"13%","conservation_gain_category":"Low","conservation_gain_best":"4%","conservation_gain_minimum":"1%","conservation_gain_maximum":"10%","recovery_potential_category":"Medium","recovery_potential_best":"33%","recovery_potential_minimum":"24%","recovery_potential_maximum":"51%","assessor_names":"Rogers,
+        L.R., Ranglack, D.H. \u0026 Plumb, G.","reviewer_names":"Wilson, G. \u0026
+        Grace, M.K.","contributors":null,"facilitators":"Grace, M.K. \u0026 Young,
+        R.E.","compilers":null,"url":"https://www.iucnredlist.org/species/2815/123789863","assessment_date":"2022-07-21","taxon":{"sis_id":2815,"scientific_name":"Bison
+        bison","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"ARTIODACTYLA","family_name":"BOVIDAE","genus_name":"Bison","species_name":"bison","subpopulation_name":null,"infra_name":null,"authority":"(Linnaeus,
+        1758)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[],"common_names":[{"main":false,"name":"Amerikanischer
+        Bison","language":{"code":"ger","description":{"en":"German"}}},{"main":false,"name":"Bison
+        d''Amerique","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Bisonte
+        Americano","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":false,"name":"Edjere","language":{"code":"chp","description":{"en":"Chipewyan;
+        Dene Suline"}}},{"main":false,"name":"Moostoosh","language":{"code":"cre","description":{"en":"Cree"}}},{"main":false,"name":"Tatanka","language":{"code":"dak","description":{"en":"Dakota"}}},{"main":true,"name":"American
+        Bison","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Bos
+        bison Linnaeus, 1758","status":"ACCEPTED","genus_name":"Bos","species_name":"bison","species_author":"Linnaeus,
+        1758","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Species Recovery Score of 56% (Moderately Depleted) is due to the White Shark
+        being threatened in many of its spatial units, and Functional in just one
+        currently. The four conservation impact metrics, however, are Indeterminate;
+        more research is required to evaluate the past and potential future impacts
+        of conservation for this species.\u003cbr\u003e\u003cbr\u003eFor additional
+        data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Moderately Depleted","species_recovery_score_best":"56%","species_recovery_score_minimum":"37%","species_recovery_score_maximum":"74%","conservation_legacy_category":"Indeterminate","conservation_legacy_best":"4%","conservation_legacy_minimum":"-22%","conservation_legacy_maximum":"63%","conservation_dependence_category":"Indeterminate","conservation_dependence_best":"0%","conservation_dependence_minimum":"-22%","conservation_dependence_maximum":"56%","conservation_gain_category":"Indeterminate","conservation_gain_best":"26%","conservation_gain_minimum":"-15%","conservation_gain_maximum":"56%","recovery_potential_category":"Indeterminate","recovery_potential_best":"33%","recovery_potential_minimum":"-4%","recovery_potential_maximum":"63%","assessor_names":"Spaet,
+        J.L.Y.","reviewer_names":"Rigby, C.L., Huveneers, C. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace,
+        M.K.","compilers":null,"url":"https://www.iucnredlist.org/species/3855/212629880","assessment_date":"2021-10-31","taxon":{"sis_id":3855,"scientific_name":"Carcharodon
+        carcharias","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"CHONDRICHTHYES","order_name":"LAMNIFORMES","family_name":"LAMNIDAE","genus_name":"Carcharodon","species_name":"carcharias","subpopulation_name":null,"infra_name":null,"authority":"(Linnaeus,
+        1758)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Shark Specialist Group (sharks and rays)","url":"https://www.iucnssg.org","description":"Chair:
+        Rima Jabado (email: rimajabado@hotmail.com)\nRed List Authority Coordinator:
+        Cassie Rigby (email: crigby@westnet.com.au)"}],"common_names":[{"main":false,"name":"Great
+        White Shark","language":{"code":"eng","description":{"en":"English"}}},{"main":true,"name":"White
+        Shark","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Squalus
+        carcharias Linnaeus, 1758","status":"ACCEPTED","genus_name":"Squalus","species_name":"carcharias","species_author":"Linnaeus,
+        1758","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2021","weights":"Default","justification":"\u003cp\u003eThe
+        Species Recovery Score of 20% (Critically Depleted) is due to the Burrowing
+        Bettong being Absent in 36/46 spatial units. The Burrowing Bettong has a High
+        Conservation Legacy; without reintroductions in areas where invasive predators
+        are excluded, the species would have a score of only 7%. There is a Medium
+        Conservation Dependence; if predator exclosures were removed, those spatial
+        units would be extirpated over a 10-year period, bringing the score to 9%.
+        The Burrowing Bettong has a Low Conservation Gain; within a 10-year period,
+        reintroduction is proposed in one spatial unit (Dirk Hartog Island), leading
+        to a score of 21%. Finally, the Recovery Potential within 100 years is Indeterminate,
+        as climate change could reduce the viability of reintroduction projects throughout
+        much of the range, and it is unclear whether introduced predator populations
+        can be effectively controlled.\u003cbr\u003e\u003cbr\u003eFor additional data,
+        see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Critically Depleted","species_recovery_score_best":"20%","species_recovery_score_minimum":"14%","species_recovery_score_maximum":"22%","conservation_legacy_category":"High","conservation_legacy_best":"13%","conservation_legacy_minimum":"7%","conservation_legacy_maximum":"22%","conservation_dependence_category":"Medium","conservation_dependence_best":"10%","conservation_dependence_minimum":"3%","conservation_dependence_maximum":"17%","conservation_gain_category":"Low","conservation_gain_best":"1%","conservation_gain_minimum":"-7%","conservation_gain_maximum":"9%","recovery_potential_category":"Indeterminate","recovery_potential_best":"19%","recovery_potential_minimum":"-9%","recovery_potential_maximum":"43%","assessor_names":"Woinarski,
+        J.C.Z.","reviewer_names":"Johnson, C.N. \u0026 Grace, M.K.","contributors":null,"facilitators":"Grace,
+        M.K.","compilers":"Wynter, V.","url":"https://www.iucnredlist.org/species/2784/21961179","assessment_date":"2021-10-31","taxon":{"sis_id":2784,"scientific_name":"Bettongia
+        lesueur","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"DIPROTODONTIA","family_name":"POTOROIDAE","genus_name":"Bettongia","species_name":"lesueur","subpopulation_name":null,"infra_name":null,"authority":"(Quoy
+        \u0026amp; Gaimard, 1824)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Australasian Marsupial and Monotreme Specialist Group","url":"https://www.iucn.org/commissions/ssc-groups/mammals/specialist-groups-a-e/australasian-marsupial-and-monotreme","description":"Co-Chairs:
+        John Woinarski (email: John.Woinarski@cdu.edu.au) and Diana Fisher (email:
+        d.fisher@uq.edu.au)\nRed List Authority Coordinator: Chris Johnson (email:
+        c.n.johnson@utas.edu.au)"}],"common_names":[{"main":false,"name":"Boodie","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Burrowing
+        Rat-kangaroo","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Lesueur’s
+        Bettong","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Lesueur''s
+        Rat Kangaroo","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Bettongie
+        de Lesueur","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Canguro-rata
+        de Lesueur","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":false,"name":"Kangourou-rat
+        de Lesueur","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Lesueur-Bürstenkänguru","language":{"code":"ger","description":{"en":"German"}}},{"main":false,"name":"Lesueur-Rattenkänguru","language":{"code":"ger","description":{"en":"German"}}},{"main":false,"name":"Westliches
+        Bürstenkänguru","language":{"code":"ger","description":{"en":"German"}}},{"main":true,"name":"Burrowing
+        Bettong","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Bettongia
+        lesueuri (Quoy \u0026 Gaimard, 1824) [orth. error]","status":"ACCEPTED","genus_name":"Bettongia","species_name":"lesueuri","species_author":"(Quoy
+        \u0026 Gaimard, 1824) [orth. error]","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null},{"name":"Hypsiprymnus
+        lesueur Quoy \u0026 Gaimard, 1824","status":"ACCEPTED","genus_name":"Hypsiprymnus","species_name":"lesueur","species_author":"Quoy
+        \u0026 Gaimard, 1824","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}},{"assessment_year":"2022","weights":"Default","justification":"\u003cp\u003eThe
+        Species Recovery Score of 57% (Moderately Depleted) is due to the Roat\u0026aacute;n
+        Spiny-tailed Iguana being Absent in one spatial unit, Functional in three,
+        and threatened (Present) in the remaining three. The Roat\u0026aacute;n Spiny-tailed
+        Iguana has a Medium Conservation Legacy; without past conservation action,
+        the Roat\u0026aacute;n Spiny-tailed Iguana would almost certainly be threatened
+        throughout its entire range today. Conservation Dependence is Indeterminate;
+        though the best estimate is that without continued conservation, the species
+        could become extirpated in many spatial units over 10 years, there is uncertainty
+        in this prediction. The Roat\u0026aacute;n Spiny-tailed Iguana has a Conservation
+        Gain of Zero; within a 10-year period, the best estimate is that the score
+        will not change. Finally, the best estimate is that over 100 years, the species
+        could become Functional in most spatial units with sustained conservation
+        effort, but there is uncertainty in this prediction. Therefore, the Recovery
+        Potential for the Roat\u0026aacute;n Spiny-tailed Iguana is Indeterminate.\u003cbr\u003e\u003cbr\u003eFor
+        additional data, see the \u003ca href=\u0026quot;https://www.iucnredlist.org/resources/gss-supplementary\u0026quot;
+        target=\u0026quot;_self\u0026quot;\u003eSupplementary Information\u003c/a\u003e
+        document.\u003c/p\u003e","species_recovery_category":"Moderately Depleted","species_recovery_score_best":"57%","species_recovery_score_minimum":"33%","species_recovery_score_maximum":"62%","conservation_legacy_category":"Medium","conservation_legacy_best":"29%","conservation_legacy_minimum":"0%","conservation_legacy_maximum":"48%","conservation_dependence_category":"Indeterminate","conservation_dependence_best":"52%","conservation_dependence_minimum":"-5%","conservation_dependence_maximum":"62%","conservation_gain_category":"Zero","conservation_gain_best":"0%","conservation_gain_minimum":"-14%","conservation_gain_maximum":"24%","recovery_potential_category":"Indeterminate","recovery_potential_best":"19%","recovery_potential_minimum":"-5%","recovery_potential_maximum":"52%","assessor_names":"Pasachnik,
+        S.A., Grant, T.D. \u0026 Goode, A.B.C.","reviewer_names":"de Queiroz, K. \u0026
+        Grace, M.K.","contributors":null,"facilitators":"Grace, M.K. \u0026 Young,
+        R.E.","compilers":null,"url":"https://www.iucnredlist.org/species/44191/122558520","assessment_date":"2022-07-21","taxon":{"sis_id":44191,"scientific_name":"Ctenosaura
+        oedirhina","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"REPTILIA","order_name":"SQUAMATA","family_name":"IGUANIDAE","genus_name":"Ctenosaura","species_name":"oedirhina","subpopulation_name":null,"infra_name":null,"authority":"de
+        Queiroz, 1987","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Iguana Specialist Group","url":"http://www.iucn-isg.org/","description":"Co-Chairs:
+        Stesha Pasachnik (email: sapasachnik@gmail.com) and Charles Knapp (email:
+        cknapp@sheddaquarium.org)\nRed List Authority Coordinator: Tandora Grant (email:
+        tgrant@sandiegozoo.org)\nNewsletter: http://www.iucn-isg.org/publications/archive-newsletters/"}],"common_names":[{"main":false,"name":"De
+        Queiroz''s Spiny-tailed Iguana","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Wishywilly","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Garrobo","language":{"code":"spa","description":{"en":"Spanish;
+        Castilian"}}},{"main":true,"name":"Roatán Spiny-tailed Iguana","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[]}}]}'
+  recorded_at: 2024-09-18 16:03:53 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

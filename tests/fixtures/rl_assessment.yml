@@ -1,0 +1,380 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/assessment/166290968
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '35852'
+      content-type: application/json
+      etag: W/"49659809e04e5373ca64efd4711aa6b7"
+      x-request-id: 3393f0cd-e005-4293-90d1-0bfc71b6b507
+      x-runtime: '0.108561'
+      date: Wed, 18 Sep 2024 16:08:32 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"assessment_date":"2020-12-18T00:00:00.000Z","year_published":"2021","latest":true,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":22694927,"criteria":"A2abcde+4abcde","url":"https://www.iucnredlist.org/species/22694927/166290968","citation":"BirdLife
+        International 2021. Fratercula arctica (Europe assessment). The IUCN Red List
+        of Threatened Species 2021: e.T22694927A166290968. https://dx.doi.org/10.2305/IUCN.UK.2021-3.RLTS.T22694927A166290968.en.
+        Accessed on 18 September 2024.","assessment_id":166290968,"assessment_points":false,"assessment_ranges":true,"taxon":{"sis_id":22694927,"scientific_name":"Fratercula
+        arctica","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"AVES","order_name":"CHARADRIIFORMES","family_name":"ALCIDAE","genus_name":"Fratercula","species_name":"arctica","subpopulation_name":null,"infra_name":null,"authority":"(Linnaeus,
+        1758)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Bird Red List Authority (BirdLife International)","url":"https://www.birdlife.org/","description":"Red
+        List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"}],"common_names":[{"main":false,"name":"Puffin","language":{"code":"eng","description":{"en":"English"}}},{"main":true,"name":"Atlantic
+        Puffin","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[]},"population_trend":{"description":{"en":"Decreasing"},"code":"1"},"red_list_category":{"version":"3.1","description":{"en":"Endangered"},"code":"EN"},"supplementary_info":{"upper_elevation_limit":null,"lower_elevation_limit":null,"lower_depth_limit":null,"upper_depth_limit":null,"population_size":"7400000-8240000,7820000","population_severely_fragmented":"No","population_continuing_decline":"Yes","generational_length":"17","congregatory":"Congregatory
+        (and dispersive)","movement_patterns":"Full Migrant","continuing_decline_in_area":"Unknown","conservation_actions_in_place":[{"name":"In-place
+        research and monitoring","actions":[{"name":"Action Recovery Plan","value":"Yes"},{"name":"Systematic
+        monitoring scheme","value":"No"}]},{"name":"In-place land/water protection","actions":[{"name":"Conservation
+        sites identified","value":"Yes, over entire range"},{"name":"Occurs in at
+        least one protected area","value":"Yes"},{"name":"Invasive species control
+        or prevention","value":"No"}]},{"name":"In-place species management","actions":[{"name":"Successfully
+        reintroduced or introduced benignly","value":"No"},{"name":"Subject to ex-situ
+        conservation","value":"No"}]},{"name":"In-place education","actions":[{"name":"Subject
+        to recent education and awareness programmes","value":"No"},{"name":"Included
+        in international legislation","value":"Yes"},{"name":"Subject to any international
+        management / trade controls","value":"No"}]}],"identification_information":null,"extreme_fluctuations":"No","no_of_subpopulations":null,"continuing_decline_in_subpopulations":"Unknown","extreme_fluctuations_in_subpopulations":"No","all_individuals_in_one_subpopulation":"No","no_of_individuals_in_largest_subpopulation":null,"estimated_area_of_occupancy":null,"continuing_decline_in_area_of_occupancy":"Unknown","extreme_fluctuations_in_area_of_occupancy":"No","estimated_extent_of_occurence":null,"continuing_decline_in_extent_of_occurence":"Unknown","extreme_fluctuations_in_extent_of_occurence":"No","continuing_decline_in_number_of_locations":"Unknown","extreme_fluctuations_in_number_of_locations":"No"},"documentation":{"range":"The
+        species can be found throughout the North Atlantic Ocean. In Europe, it occurs
+        in north-west Greenland (to Denmark), and from north Norway down to the Canary
+        Islands, Spain in the east (Nettleship \u003cem\u003eet al.\u003c/em\u003e
+        2014), and breeds primarily in Norway and Iceland, and also notably in the
+        United Kingdom and the Faroe Islands.","population":"The European breeding
+        population is estimated at 3,700,000-4,120,000 pairs, which equates to\u0026#160;7,400,000-8,240,000
+        mature individuals. The breeding population in the EU28 is estimated at 601,000-602,000
+        pairs, which equates to 1,200,000-1,210,000 mature individuals. For details
+        of national estimates, see the Supplementary Information.","habitats":"The
+        breeding range is restricted to colder parts of the Atlantic and Arctic Oceans,
+        with its southernmost colonies in Brittany (France).\u0026#160; Breeding colonies
+        are located in Iceland, Norway, Faroe Islands, the U.K., Ireland and France
+        on islands or high cliffs.\u003cbr/\u003e\u003cbr/\u003eThe species nests
+        on grassy maritime slopes, sea cliffs and rocky slopes (Nettleship \u003cem\u003eet
+        al.\u003c/em\u003e 2014). During the winter the species is highly pelagic
+        and is dispersed widely across the sea from the Azores to the western Mediterranean
+        and Canary Islands. When feeding chicks, birds generally forage within 10
+        km of their colony, but may range as far as 50 to 100 km or more (Harris 1984,
+        Rodway and Montevecchi 1996). Birds of this species are pursuit-divers that
+        catch most of their prey within 30 m of the water surface (Piatt and Nettleship
+        1985). They prey on ''forage'' species, including juvenile pelagic fishes,
+        such as herring (\u003cem\u003eClupea harengus\u003c/em\u003e), juvenile and
+        adult capelin (\u003cem\u003eMallotus villosus\u003c/em\u003e), and sand eel
+        (\u003cem\u003eAmmodytes \u003c/em\u003e\u003cem\u003espp.\u003c/em\u003e)
+        (Barrett \u003cem\u003eet al. \u003c/em\u003e1987). At times, they also prey
+        on juvenile demersal fishes, such as gadids (Harris and Hislop 1978, Martin
+        1989, Rodway and Montevecchi 1996). Sand eels usually form the majority of
+        the prey fed to chicks (Corkhill 1973, Hislop and Harris 1985, Harris and
+        Wanless 1986, Harris and Riddiford 1989, Martin 1989), and many chicks starve
+        during periods of low sand eel abundance (Martin 1989).\u003cbr/\u003e\u003cbr/\u003eAlthough
+        the generation length for both EU and Europe regional assessments were calculated
+        using the same methodology, new information arriving after the EU assessments
+        were undertaken gave rise to an update in the generation lengths. This new
+        information was then used for the Europe level assessments giving rise to
+        a difference between the generation lengths used for the EU and Europe regions.","threats":"This
+        species is highly susceptible to the impacts of climate change, such as sea
+        temperature rise and shifts in prey distribution and abundance (Durant \u003cem\u003eet
+        al.\u003c/em\u003e 2003, Sandvik \u003cem\u003eet al. \u003c/em\u003e2005).
+        This is a particularly important threat when prey species are exploited unsustainably,
+        leading to prey reductions and subsequent unsuccessful breeding. The species
+        is vulnerable to oil spills and other marine pollution. The species is also
+        vulnerable to extreme weather events and storms, with large wrecks recorded
+        following severe winter storms at sea. At the breeding colonies the species
+        is vulnerable to invasive predators, such as rats, cats, and American Mink
+        (\u003cem\u003eNeovison vison\u003c/em\u003e). The species is susceptible
+        to being caught in gillnets, although other fishing gears may also catch significant
+        numbers. Increasing numbers of offshore wind farms may result in displacement
+        from habitat, although the risk of collision is considered very low (Bradbury
+        \u003cem\u003eet al.\u003c/em\u003e 2014). The species is hunted for human
+        consumption in Iceland, and in the Faroe Islands (Thorup \u003cem\u003eet
+        al.\u003c/em\u003e 2014).","measures":"\u003cstrong\u003eConservation Actions
+        Underway\u003c/strong\u003e\u003cbr/\u003eThe species is listed under the
+        African Eurasian Waterbird Agreement. The species is included in the Action
+        plan for seabirds in Western-Nordic areas (2010). There are 76 marine Important
+        Bird Areas identified across the European region. Within the EU there are
+        40 Special Protection Areas which list this species as occurring within its
+        boundaries. \u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003eConservation Actions
+        Proposed\u003c/strong\u003e\u003cbr/\u003eFurther identification of important
+        sites for this species, particularly in offshore regions and designation as
+        marine protected areas; Identify the risks of different activities on seabirds,
+        and locations sensitive to seabirds. Continue eradication of invasive predators
+        from breeding colonies. Management of fisheries to ensure long term sustainability
+        of key stocks (e.g. sand eels). Establish observer schemes for bycatch and
+        prepare National/European Community plans of action on seabird bycatch. Continue
+        AMAP monitoring of seabird contaminants; include new contaminants and secure
+        communication between seabird and contaminants research. Increase the level
+        of understanding among the public of introducing hunting restrictions. Develop
+        codes-of-conduct for more organised activities (e.g. tourism). Ensure that
+        appropriate protection (national laws and international agreements) applies
+        to new areas and times in cases of changes in seabird migration routes and
+        times.","use_trade":null,"rationale":"\u003cstrong\u003eEuropean regional
+        assessment:\u0026#160;\u003c/strong\u003e\u003cstrong\u003eEndangered (EN)\u003c/strong\u003e\u003cstrong\u003e\u003cbr/\u003eEU28
+        regional assessment: Least Concern (LC)\u003c/strong\u003e\u003cbr/\u003e\u003cbr/\u003eIn
+        Europe, this species has an extremely large range (its extent of occurrence
+        (EOO) is much larger than 20,000 km² and its area of occupancy (AOO) is much
+        larger than 2,000 km²), and hence it does not approach the thresholds for
+        Vulnerable under the range size criteria (criteria B and D2). The population
+        size is extremely large, (much larger than 10,000 mature individuals), and
+        hence it does not approach the thresholds for Vulnerable under the population
+        size criteria (criteria C and D). The probability of extinction has not been
+        calculated for this species, therefore criterion E cannot be applied. The
+        population trend appears to be decreasing at a very rapid rate which meets
+        the thresholds for Endangered (EN) under the population size reduction criterion
+        (criterion A). The species is therefore assessed as such in Europe. There
+        is not considered to be significant potential for rescue from outside the
+        region, and therefore the final category remains unchanged.\u0026#160;\u003cbr/\u003e\u003cbr/\u003eIn
+        the EU28, this species has a very large range (its extent of occurrence (EOO)
+        is much larger than 20,000 km² and its area of occupancy (AOO) is much larger
+        than 2,000 km²), and hence it does not approach the thresholds for Vulnerable
+        under the range size criteria (criteria B and D2). The population size is
+        extremely large, (much larger than 10,000 mature individuals), and hence it
+        does not approach the thresholds for Vulnerable under the population size
+        criteria (criteria C and D). The population trend appears to be increasing,
+        and hence the species does not approach the thresholds for Vulnerable under
+        the population size reduction criterion (criterion A). The probability of
+        extinction has not been calculated for this species, therefore criterion E
+        cannot be applied. For these reasons the species is evaluated as Least Concern
+        in the EU28.","trend_justification":"In Europe, the population size is estimated
+        to have decreased by approximately 68% (best estimate) over the past 51 years
+        (three generations) and is expected to decline at a similar rate between 1970-2021.  In
+        the EU28, the population size is estimated to be increasing. These trends
+        were calculated using the IUCN Criterion A tool, and based on Náttúrufræðistofnun
+        Íslands\u0026#160;2018 and Fauchald \u003cem\u003eet al.\u003c/em\u003e\u0026#160;2015,
+        and on the national population figures provided in the Supplementary Information
+        (see this document for details of national estimates).","taxonomic_notes":null},"biogeographical_realms":[{"description":{"en":"Palearctic"},"code":"7"}],"conservation_actions":[{"note":"","code":"5_4_4","description":{"en":"Scale
+        unspecified"}},{"note":"","code":"1_1","description":{"en":"Site/area protection"}},{"note":"","code":"2_1","description":{"en":"Site/area
+        management"}},{"note":"","code":"1_2","description":{"en":"Resource \u0026
+        habitat protection"}},{"note":"","code":"4_3","description":{"en":"Awareness
+        \u0026 communications"}},{"note":"","code":"2_2","description":{"en":"Invasive/problematic
+        species control"}},{"note":"","code":"5_2","description":{"en":"Policies and
+        regulations"}}],"faos":[],"habitats":[{"majorImportance":"Yes","season":"Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Neritic - Macroalgal/Kelp"},"code":"9_7"},{"majorImportance":"Yes","season":"Non-Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Neritic - Pelagic"},"code":"9_1"},{"majorImportance":"No","season":"Non-Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Oceanic - Epipelagic
+        (0-200m)"},"code":"10_1"},{"majorImportance":"Yes","season":"Non-Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Neritic - Subtidal
+        Sandy-Mud"},"code":"9_5"},{"majorImportance":"Yes","season":"Non-Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Neritic - Subtidal
+        Loose Rock/pebble/gravel"},"code":"9_3"},{"majorImportance":"No","season":"Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Oceanic - Mesopelagic
+        (200-1000m)"},"code":"10_2"},{"majorImportance":"Yes","season":"Non-Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Neritic - Subtidal
+        Sandy"},"code":"9_4"},{"majorImportance":"No","season":"Breeding Season","suitability":"Suitable","description":{"en":"Marine
+        Intertidal - Rocky Shoreline"},"code":"12_1"},{"majorImportance":"Yes","season":"Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Neritic - Seagrass
+        (Submerged)"},"code":"9_9"},{"majorImportance":"No","season":"Breeding Season","suitability":"Suitable","description":{"en":"Marine
+        Intertidal - Tidepools"},"code":"12_6"},{"majorImportance":"Yes","season":"Non-Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Neritic - Subtidal
+        Rock and Rocky Reefs"},"code":"9_2"},{"majorImportance":"Yes","season":"Breeding
+        Season","suitability":"Suitable","description":{"en":"Grassland - Temperate"},"code":"4_4"},{"majorImportance":"No","season":"Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Coastal/Supratidal
+        - Sea Cliffs and Rocky Offshore Islands"},"code":"13_1"},{"majorImportance":"Yes","season":"Breeding
+        Season","suitability":"Suitable","description":{"en":"Grassland - Subarctic"},"code":"4_2"}],"locations":[{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Non-Breeding
+        Season"],"description":{"en":"Belgium"},"code":"BE"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Non-Breeding
+        Season"],"description":{"en":"Spain"},"code":"ES"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Iceland"},"code":"IS"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Non-Breeding
+        Season"],"description":{"en":"Netherlands"},"code":"NL"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Breeding
+        Season"],"description":{"en":"United Kingdom"},"code":"GB"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Non-Breeding
+        Season"],"description":{"en":"Germany"},"code":"DE"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Resident","Passage"],"description":{"en":"France"},"code":"FR"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Vagrant","presence":"Extant","seasonality":null,"description":{"en":"Malta"},"code":"MT"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Greenland"},"code":"GL"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Non-Breeding
+        Season"],"description":{"en":"Italy"},"code":"IT"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Origin
+        Uncertain","presence":"Extant","seasonality":["Seasonal Occurrence Uncertain"],"description":{"en":"Estonia"},"code":"EE"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Vagrant","presence":"Extant","seasonality":null,"description":{"en":"Croatia"},"code":"HR"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Breeding
+        Season"],"description":{"en":"Russian Federation"},"code":"RU"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Vagrant","presence":"Extant","seasonality":null,"description":{"en":"Austria"},"code":"AT"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Non-Breeding
+        Season","Passage"],"description":{"en":"Denmark"},"code":"DK"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Vagrant","presence":"Extant","seasonality":["Seasonal
+        Occurrence Uncertain"],"description":{"en":"Serbia"},"code":"RS"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Vagrant","presence":"Extant","seasonality":null,"description":{"en":"Finland"},"code":"FI"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Passage","Non-Breeding
+        Season"],"description":{"en":"Gibraltar"},"code":"GI"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Non-Breeding
+        Season"],"description":{"en":"Sweden"},"code":"SE"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Origin
+        Uncertain","presence":"Extant","seasonality":["Seasonal Occurrence Uncertain"],"description":{"en":"Lithuania"},"code":"LT"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Ireland"},"code":"IE"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Breeding
+        Season"],"description":{"en":"European Russia"},"code":"RU-EU"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Faroe
+        Islands"},"code":"FO"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Vagrant","presence":"Extant","seasonality":["Seasonal
+        Occurrence Uncertain"],"description":{"en":"Montenegro"},"code":"ME"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Vagrant","presence":"Extant","seasonality":null,"description":{"en":"Hungary"},"code":"HU"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Breeding
+        Season"],"description":{"en":"Svalbard and Jan Mayen"},"code":"SJ"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Origin
+        Uncertain","presence":"Extant","seasonality":["Seasonal Occurrence Uncertain"],"description":{"en":"Latvia"},"code":"LV"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Breeding
+        Season"],"description":{"en":"Norway"},"code":"NO"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Non-Breeding
+        Season"],"description":{"en":"Portugal"},"code":"PT"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Vagrant","presence":"Extant","seasonality":null,"description":{"en":"Poland"},"code":"PL"}],"researches":[{"note":"","code":"1_5","description":{"en":"Threats"}},{"note":"","code":"3_1","description":{"en":"Population
+        trends"}}],"use_and_trade":[{"international":null,"national":true,"other":null,"subsistence":true,"description":{"en":"Food
+        - human"},"code":"1"},{"international":true,"national":null,"other":null,"subsistence":null,"description":{"en":"Pets/display
+        animals, horticulture"},"code":"13"}],"threats":[{"scope":"Majority (50-90%)","timing":"Ongoing","internationalTrade":null,"score":"Medium
+        Impact: 6","severity":"Slow, Significant Declines","ancestry":null,"virus":null,"ias":"Neovison
+        vison","text":null,"description":{"en":"Named species"},"code":"8_1_2"},{"scope":"Unknown","timing":"Ongoing","internationalTrade":null,"score":"Unknown","severity":"Unknown","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Habitat
+        shifting \u0026 alteration"},"code":"11_1"},{"scope":"Minority (\u003c50%)","timing":"Ongoing","internationalTrade":null,"score":"Low
+        Impact: 5","severity":"Slow, Significant Declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Intentional
+        use (species is the target)"},"code":"5_1_1"},{"scope":"Minority (\u003c50%)","timing":"Ongoing","internationalTrade":null,"score":"Low
+        Impact: 5","severity":"Causing/Could cause fluctuations","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Renewable
+        energy"},"code":"3_3"},{"scope":"Unknown","timing":"Ongoing","internationalTrade":null,"score":"Unknown","severity":"Rapid
+        Declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Storms
+        \u0026 flooding"},"code":"11_4"},{"scope":"Unknown","timing":"Ongoing","internationalTrade":null,"score":"Unknown","severity":"Unknown","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Temperature
+        extremes"},"code":"11_3"},{"scope":"Unknown","timing":"Past, Likely to Return","internationalTrade":null,"score":"Past
+        Impact","severity":"Rapid Declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Oil
+        spills"},"code":"9_2_1"},{"scope":"Unknown","timing":"Ongoing","internationalTrade":null,"score":"Unknown","severity":"Rapid
+        Declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Unintentional
+        effects: (large scale) [harvest]"},"code":"5_4_4"},{"scope":"Unknown","timing":"Ongoing","internationalTrade":null,"score":"Unknown","severity":"Unknown","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Other
+        impacts"},"code":"11_5"},{"scope":"Unknown","timing":"Ongoing","internationalTrade":null,"score":"Unknown","severity":"Unknown","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Type
+        Unknown/Unrecorded"},"code":"9_2_3"}],"credits":[{"credit_type_name":"assessor","full":"BirdLife
+        International","value":[" BirdLife International (BirdLife International)"]},{"credit_type_name":"evaluator","full":"Burfield,
+        I. \u0026 Martin, R.","value":["Ian Burfield (BirdLife International - European
+        Division)","Rob Martin (BirdLife)"]},{"credit_type_name":"contributor","full":"Ashpole,
+        J, Burfield, I., Ieronymidou, C., Pople, R., Tarzia, M, Wheatley, H. \u0026
+        Wright, L","value":["Ian Burfield (BirdLife International - European Division)","Joscelyne
+        Ashpole (BirdLife)","Rob Pople (BirdLife International)","Christina Ieronymidou
+        (BirdLife International)","Hannah Wheatley (BirdLife International)","Laura
+        Wright (BirdLife)","M Tarzia (BirdLife)"]},{"credit_type_name":"facilitators","full":"Fernando,
+        E., Grice, H., Piggott, A., Rutherford, C.A. \u0026 Staneva, A.","value":["Anna
+        Staneva (BirdLIfe International)","Hannah Grice (RBG Kew)","Eresha Fernando
+        (BirdLife International)","Claire Rutherford (BirdLife International)","Alexa
+        Piggott (BirdLife International)"]}],"errata":[],"references":[{"citation":"del
+        Hoyo, J., Elliott, A., and Sargatal, J. 1996. \u003ci\u003eHandbook of the
+        Birds of the World, vol. 3: Hoatzin to Auks\u003c/i\u003e. Lynx Edicions,
+        Barcelona, Spain.","year":"1996","title":"Handbook of the Birds of the World,
+        vol. 3: Hoatzin to Auks","author":"del Hoyo, J., Elliott, A., and Sargatal,
+        J.","citation_short":""},{"citation":"BirdLife International. 2000. \u003ci\u003eThe
+        Development of Boundary Selection Criteria for the Extension of Breeding Seabird
+        Special Protection Areas into the Marine Environment. OSPAR Convention for
+        the Protection of the Marine Environment of the North-East Atlantic.\u003c/i\u003e
+        Vlissingen (Flushing).","year":"2000","title":"The Development of Boundary
+        Selection Criteria for the Extension of Breeding Seabird Special Protection
+        Areas into the Marine Environment. OSPAR Convention for the Protection of
+        the Marine Environment of the North-East Atlantic.","author":"BirdLife International","citation_short":null},{"citation":"Harris,
+        M.P. and Riddiford, N.J. 1989. The food of some young seabirds on Fair Isle
+        in 1986-88. \u003ci\u003eScottish Birds\u003c/i\u003e 15: 119-125.","year":"1989","title":"The
+        food of some young seabirds on Fair Isle in 1986-88","author":"Harris, M.P.
+        and Riddiford, N.J.","citation_short":null},{"citation":"Harris, M.P. and
+        Hislop, J.R.G. 1978. The food of young puffins. \u003ci\u003eJournal of Zoology\u003c/i\u003e
+        185: 213-236.","year":"1978","title":"The food of young puffins","author":"Harris,
+        M.P. and Hislop, J.R.G.","citation_short":null},{"citation":"Harris, M.P.
+        and Wanless, S. 1986. The food of young razorbills on the Isle of May and
+        a comparison with that of young guillemots and puffins. \u003ci\u003eOrnis
+        Scandinavica\u003c/i\u003e 17: 41-46.","year":"1986","title":"The food of
+        young razorbills on the Isle of May and a comparison with that of young guillemots
+        and puffins","author":"Harris, M.P. and Wanless, S.","citation_short":null},{"citation":"Pearson,
+        T.H. 1968. The feeding ecology of sea-bird species breeding on the Farne Islands,
+        Northumberland. \u003ci\u003eJournal of Animal Ecology\u003c/i\u003e 37: 521-552.","year":"1968","title":"The
+        feeding ecology of sea-bird species breeding on the Farne Islands, Northumberland","author":"Pearson,
+        T.H.","citation_short":null},{"citation":"Harris, M.P. 1984. A. \u0026 C.
+        Black Publishers Ltd, London, UK.","year":"1984","title":"","author":"Harris,
+        M.P.","citation_short":null},{"citation":"Stone, C.J., Harrison, N.M., Webb,
+        A. \u0026 Best, B.J. Seabird distribution around Skomer and Skokholm Islands,
+        June 1990. 1992. Seabird distribution around Skomer and Skokholm Islands,
+        June 1990.","year":"1992","title":"Seabird distribution around Skomer and
+        Skokholm Islands, June 1990","author":"Stone, C.J., Harrison, N.M., Webb,
+        A. \u0026 Best, B.J. Seabird distribution around Skomer and Skokholm Islands,
+        June 1990.","citation_short":null},{"citation":"Corkhill, P. 1973. Food and
+        feeding ecology of puffins. \u003ci\u003eBird Study\u003c/i\u003e 20(3): 207-220.","year":"1973","title":"Food
+        and feeding ecology of puffins","author":"Corkhill, P.","citation_short":null},{"citation":"Piatt,
+        J.F., Nettleship, D.N. 1985. Diving depths of four alcids. \u003ci\u003eThe
+        Auk \u003c/i\u003e 102: 293-297.","year":"1985","title":"Diving depths of
+        four alcids","author":"Piatt, J.F., Nettleship, D.N.","citation_short":null},{"citation":"Wanless,
+        S., Harris, M.P. and Morris, J.A. 1990. A comparison of feeding areas used
+        by individual common murres (Uria aalge) razorbills (Alca torda) and an Atlantic
+        puffin (Fratercula arctica) during the breeding season. \u003ci\u003eColonial
+        Waterbirds\u003c/i\u003e 13: 16-24.","year":"1990","title":"A comparison of
+        feeding areas used by individual common murres (Uria aalge) razorbills (Alca
+        torda) and an Atlantic puffin (Fratercula arctica) during the breeding season","author":"Wanless,
+        S., Harris, M.P. and Morris, J.A.","citation_short":null},{"citation":"Hislop,
+        J.R.G. and Harris, M.P. 1985. Recent changes in the food of young puffins
+        (Fratercula arctica) on the Isle of May in relation to fish stocks. \u003ci\u003eIbis\u003c/i\u003e
+        127: 234-239.","year":"1985","title":"Recent changes in the food of young
+        puffins (Fratercula arctica) on the Isle of May in relation to fish stocks","author":"Hislop,
+        J.R.G. and Harris, M.P.","citation_short":null},{"citation":"Creelman, E.
+        and Storey, A.E. 1991. Sex-differences in reproductive-behavior of Atlantic
+        puffins. \u003ci\u003eCondor\u003c/i\u003e 93(2): 390-398.","year":"1991","title":"Sex-differences
+        in reproductive-behavior of Atlantic puffins","author":"Creelman, E. and Storey,
+        A.E.","citation_short":null},{"citation":"Burger, A.E. and Simpson, M. 1986.
+        Diving depths of Atlantic puffins and common murres. \u003ci\u003eAuk\u003c/i\u003e
+        103: 828-830.","year":"1986","title":"Diving depths of Atlantic puffins and
+        common murres","author":"Burger, A.E. and Simpson, M.","citation_short":null},{"citation":"Rodway,
+        M.S., Montevecchi, W. A. 1996. Sampling methods for assessing the diets of
+        Atlantic puffin chicks . \u003ci\u003eMarine Ecology Progress Series\u003c/i\u003e
+        144(1-3): 41-55.","year":"1996","title":"Sampling methods for assessing the
+        diets of Atlantic puffin chicks ","author":"Rodway, M.S., Montevecchi, W.
+        A.","citation_short":null},{"citation":"Martin, A.R. 1989. The diet of Atlantic
+        puffin Fratercula arctica and northern gannet Sula bassana chicks at a Shetland
+        colony during a period of changing prey availability. \u003ci\u003eBird Study\u003c/i\u003e
+        36(3): 170-180.","year":"1989","title":"The diet of Atlantic puffin Fratercula
+        arctica and northern gannet Sula bassana chicks at a Shetland colony during
+        a period of changing prey availability","author":"Martin, A.R.","citation_short":null},{"citation":"Webb,
+        A., Tasker, M.L. and Greenstreet, S.P.R. 1985. The distribution of guillemots
+        (Uria aalge), razorbills (Alca torda) and puffins (Fratercula arctica) at
+        sea around Flamborough Head, June 1984.","year":"1985","title":"The distribution
+        of guillemots (Uria aalge), razorbills (Alca torda) and puffins (Fratercula
+        arctica) at sea around Flamborough Head, June 1984.","author":"Webb, A., Tasker,
+        M.L. and Greenstreet, S.P.R.","citation_short":null},{"citation":"Barrett,
+        R.T., Anker-Nilsson, T., Rikardsen, F., Valde, K., Røv, N. and Vader, W. 1987.
+        The food, growth and fledging success of Norwegian puffin chicks Fratercula
+        arctica in 1980-1983. \u003ci\u003eOrnis Scandinavica\u003c/i\u003e 18: 73-83.","year":"1987","title":"The
+        food, growth and fledging success of Norwegian puffin chicks Fratercula arctica
+        in 1980-1983","author":"Barrett, R.T., Anker-Nilsson, T., Rikardsen, F., Valde,
+        K., Røv, N. and Vader, W.","citation_short":""},{"citation":"Stone, C.J.,
+        Webb, A., Barton, T.R. \u0026 Gordon, J.R.W. 1993. Seabird distribution around
+        Skomer and Skokholm Islands, June 1992.","year":"1993","title":"Seabird distribution
+        around Skomer and Skokholm Islands, June 1992.","author":"Stone, C.J., Webb,
+        A., Barton, T.R. \u0026 Gordon, J.R.W.","citation_short":null},{"citation":"Sandvik,
+        H., Erikstad, K.E., Barrett, R.T. and Yoccoz, N.G. 2005. The effect of climate
+        on adult survival in five species of North Atlantic seabirds. \u003ci\u003eJournal
+        of Animal Ecology\u003c/i\u003e 74(5): 817-831.","year":"2005","title":"The
+        effect of climate on adult survival in five species of North Atlantic seabirds","author":"Sandvik,
+        H., Erikstad, K.E., Barrett, R.T. and Yoccoz, N.G.","citation_short":""},{"citation":"Bradbury,
+        G., Trinder, M., Furness, B., Banks, A.N., Caldow, R.W.G. and Hume, D. 2014.
+        Mapping Seabird Sensitivity to Offshore Wind Farms. \u003ci\u003ePLoS ONE
+        \u003c/i\u003e 9(9): e106366.","year":"2014","title":"Mapping Seabird Sensitivity
+        to Offshore Wind Farms","author":"Bradbury, G., Trinder, M., Furness, B.,
+        Banks, A.N., Caldow, R.W.G. and Hume, D.","citation_short":null},{"citation":"Durant,
+        J.; Anker-Nilssen, T.; Stenseth, N. C. 2003. Trophic interactions under climate
+        fluctuations: the Atlantic puffin as an example. \u003ci\u003eProceedings
+        of the Royal Society of London Series B\u003c/i\u003e 270: 1461-1466.","year":"2003","title":"Trophic
+        interactions under climate fluctuations: the Atlantic puffin as an example","author":"Durant,
+        J.; Anker-Nilssen, T.; Stenseth, N. C.","citation_short":null},{"citation":"Thorup,
+        S.H., Jensen, J-K., Petersen, K.T. and Kasper, D.B. 2014. \u003ci\u003eFærøsk
+        Trækfugleatlas. The Faroese Bird Migration Atlas\u003c/i\u003e. Faroe University
+        Press, Tórshavn.","year":"2014","title":"Færøsk Trækfugleatlas. The Faroese
+        Bird Migration Atlas","author":"Thorup, S.H., Jensen, J-K., Petersen, K.T.
+        and Kasper, D.B.","citation_short":null},{"citation":"Nettleship, D.N., Kirwan,
+        G.M., Christie, D.A. and de Juana, E. 2014. Atlantic Puffin (\u003ci\u003eFratercula
+        arctica\u003c/i\u003e). In: del Hoyo, J., Elliott, A., Sargatal, J., Christie,
+        D.A. and de Juana, E. (eds), \u003ci\u003eHandbook of the Birds of the World
+        Alive\u003c/i\u003e, Lynx Edicions, Barcelona.","year":"2014","title":"Atlantic
+        Puffin (\u003ci\u003eFratercula arctica\u003c/i\u003e)","author":"Nettleship,
+        D.N., Kirwan, G.M., Christie, D.A. and de Juana, E.","citation_short":null},{"citation":"Fauchald,
+        P.; Anker-Nilssen, T.; Barrett, R. T.; Bustnes, J. O.; Bårdsen, B. J.; Christensen-Dalsgaard,
+        S.; Descamps, S.; Engen, S.; Erikstad, K. E.; Hanssen, S. A.; Lorentsen, S.-H.;
+        Moe, B.; Reiertsen, T. K.; Strøm,, H.; Systad, G. H. 2015. The status and
+        trends of seabirds breeding in Norway and Svalbard. Norwegian Institute for
+        Nature Research, NINA Report 1151.","year":"2015","title":"The status and
+        trends of seabirds breeding in Norway and Svalbard","author":"Fauchald, P.;
+        Anker-Nilssen, T.; Barrett, R. T.; Bustnes, J. O.; Bårdsen, B. J.; Christensen-Dalsgaard,
+        S.; Descamps, S.; Engen, S.; Erikstad, K. E.; Hanssen, S. A.; Lorentsen, S.-H.;
+        Moe, B.; Reiertsen, T. K.; Strøm,, H.; Systad, G. H.","citation_short":null},{"citation":"Bird,
+        J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G.,
+        Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. 2020. Generation
+        lengths of the world’s birds and their implications for extinction risk. \u003ci\u003eConservation
+        Biology\u003c/i\u003e 34(5): 1252-1261.","year":"2020","title":"Generation
+        lengths of the world’s birds and their implications for extinction risk","author":"Bird,
+        J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G.,
+        Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. ","citation_short":""},{"citation":"IUCN.
+        2021. The IUCN Red List of Threatened Species. Version 2021-3. Available at:
+        \u003ca href=\"www.iucnredlist.org\"\u003ewww.iucnredlist.org\u003c/a\u003e.
+        (Accessed: 09 December 2021).","year":"2021","title":"The IUCN Red List of
+        Threatened Species. Version 2021-3","author":"IUCN","citation_short":"IUCN
+        2021-3"},{"citation":"NÁTTÚRUFRÆÐISTOFNUN ÍSLANDS. 2018. \u003ci\u003eVálisti
+        fugla\u003c/i\u003e.","year":"2018","title":"Válisti fugla","author":"Náttúrufræðistofnun
+        Íslands","citation_short":""}],"growth_forms":[],"lmes":[],"scopes":[{"description":{"en":"Europe"},"code":"2"}],"stresses":[{"description":{"en":"Ecosystem
+        degradation"},"code":"1_2"},{"description":{"en":"Ecosystem degradation"},"code":"1_2"},{"description":{"en":"Ecosystem
+        degradation"},"code":"1_2"},{"description":{"en":"Indirect ecosystem effects"},"code":"1_3"},{"description":{"en":"Indirect
+        ecosystem effects"},"code":"1_3"},{"description":{"en":"Indirect ecosystem
+        effects"},"code":"1_3"},{"description":{"en":"Indirect ecosystem effects"},"code":"1_3"},{"description":{"en":"Indirect
+        ecosystem effects"},"code":"1_3"},{"description":{"en":"Species mortality"},"code":"2_1"},{"description":{"en":"Species
+        mortality"},"code":"2_1"},{"description":{"en":"Species mortality"},"code":"2_1"},{"description":{"en":"Species
+        mortality"},"code":"2_1"},{"description":{"en":"Species mortality"},"code":"2_1"},{"description":{"en":"Species
+        mortality"},"code":"2_1"},{"description":{"en":"Species mortality"},"code":"2_1"},{"description":{"en":"Species
+        disturbance"},"code":"2_2"},{"description":{"en":"Species disturbance"},"code":"2_2"},{"description":{"en":"Reduced
+        reproductive success"},"code":"2_3_7"}],"systems":[{"description":{"en":"Terrestrial"},"code":"0"},{"description":{"en":"Marine"},"code":"2"}]}'
+  recorded_at: 2024-09-18 16:08:32 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

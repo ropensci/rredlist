@@ -1,0 +1,48 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/taxa/possibly_extinct?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '4968'
+      content-type: application/json
+      current-page: '1'
+      etag: W/"6a0c4537956f2d88da5bc3b4fe79e7d1"
+      link: <https://api.iucnredlist.org/api/v4/taxa/possibly_extinct?page=1&items=20>;
+        rel="first", <https://api.iucnredlist.org/api/v4/taxa/possibly_extinct?page=2&items=20>;
+        rel="next", <https://api.iucnredlist.org/api/v4/taxa/possibly_extinct?page=69&items=20>;
+        rel="last"
+      page-items: '20'
+      total-count: '1369'
+      total-pages: '69'
+      x-request-id: a4d40dbb-9c83-42d9-ae67-20d2734f40d8
+      x-runtime: '0.132454'
+      date: Wed, 18 Sep 2024 15:56:32 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"assessments":[{"year_published":"2011","latest":true,"sis_taxon_id":11455,"url":"https://www.iucnredlist.org/species/11455/3278905","assessment_id":3278905,"scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Europe"},"code":"2"}]},{"year_published":"2013","latest":true,"sis_taxon_id":197693,"url":"https://www.iucnredlist.org/species/197693/2496283","assessment_id":2496283,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2010","latest":true,"sis_taxon_id":155620,"url":"https://www.iucnredlist.org/species/155620/4809588","assessment_id":4809588,"scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Europe"},"code":"2"},{"description":{"en":"Mediterranean"},"code":"4"}]},{"year_published":"2014","latest":true,"sis_taxon_id":196742,"url":"https://www.iucnredlist.org/species/196742/2475481","assessment_id":2475481,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2020","latest":true,"sis_taxon_id":15900,"url":"https://www.iucnredlist.org/species/15900/176837344","assessment_id":176837344,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2010","latest":true,"sis_taxon_id":185821,"url":"https://www.iucnredlist.org/species/185821/8484921","assessment_id":8484921,"scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Eastern
+        Africa"},"code":"18"},{"description":{"en":"Pan-Africa"},"code":"10"}]},{"year_published":"2010","latest":true,"sis_taxon_id":185855,"url":"https://www.iucnredlist.org/species/185855/8492049","assessment_id":8492049,"scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Eastern
+        Africa"},"code":"18"},{"description":{"en":"Pan-Africa"},"code":"10"}]},{"year_published":"2010","latest":true,"sis_taxon_id":16118,"url":"https://www.iucnredlist.org/species/16118/5390513","assessment_id":5390513,"scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Eastern
+        Africa"},"code":"18"},{"description":{"en":"Pan-Africa"},"code":"10"}]},{"year_published":"2010","latest":true,"sis_taxon_id":18403,"url":"https://www.iucnredlist.org/species/18403/8224440","assessment_id":8224440,"scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Eastern
+        Africa"},"code":"18"},{"description":{"en":"Pan-Africa"},"code":"10"}]},{"year_published":"2010","latest":true,"sis_taxon_id":18332,"url":"https://www.iucnredlist.org/species/18332/8092931","assessment_id":8092931,"scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Eastern
+        Africa"},"code":"18"},{"description":{"en":"Pan-Africa"},"code":"10"}]},{"year_published":"2012","latest":true,"sis_taxon_id":199538,"url":"https://www.iucnredlist.org/species/199538/2599578","assessment_id":2599578,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2013","latest":true,"sis_taxon_id":203556,"url":"https://www.iucnredlist.org/species/203556/2768425","assessment_id":2768425,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2010","latest":true,"sis_taxon_id":18319,"url":"https://www.iucnredlist.org/species/18319/8071625","assessment_id":8071625,"scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Eastern
+        Africa"},"code":"18"},{"description":{"en":"Pan-Africa"},"code":"10"}]},{"year_published":"2011","latest":true,"sis_taxon_id":172430,"url":"https://www.iucnredlist.org/species/172430/6890986","assessment_id":6890986,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2010","latest":true,"sis_taxon_id":60725,"url":"https://www.iucnredlist.org/species/60725/12399993","assessment_id":12399993,"scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Eastern
+        Africa"},"code":"18"},{"description":{"en":"Pan-Africa"},"code":"10"}]},{"year_published":"2008","latest":true,"sis_taxon_id":134417,"url":"https://www.iucnredlist.org/species/134417/3953354","assessment_id":3953354,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":true,"sis_taxon_id":61726,"url":"https://www.iucnredlist.org/species/61726/12547200","assessment_id":12547200,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2009","latest":true,"sis_taxon_id":169621,"url":"https://www.iucnredlist.org/species/169621/6656020","assessment_id":6656020,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2010","latest":true,"sis_taxon_id":60532,"url":"https://www.iucnredlist.org/species/60532/12375463","assessment_id":12375463,"scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Eastern
+        Africa"},"code":"18"},{"description":{"en":"Pan-Africa"},"code":"10"}]},{"year_published":"2011","latest":true,"sis_taxon_id":165205,"url":"https://www.iucnredlist.org/species/165205/5989964","assessment_id":5989964,"scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Europe"},"code":"2"}]}]}'
+  recorded_at: 2024-09-18 15:56:33 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

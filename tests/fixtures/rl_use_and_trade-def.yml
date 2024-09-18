@@ -1,0 +1,40 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/use_and_trade/?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '1053'
+      content-type: application/json
+      etag: W/"c5b94d3cda0e4e581f722a56f3559c43"
+      x-request-id: 10a5703a-02c2-4321-bf3a-d70c92ae06fd
+      x-runtime: '0.011661'
+      date: Wed, 18 Sep 2024 15:45:58 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"use_and_trade":[{"description":{"en":"Food - human"},"code":"1"},{"description":{"en":"Food
+        - animal"},"code":"2"},{"description":{"en":"Medicine - human \u0026 veterinary"},"code":"3"},{"description":{"en":"Poisons"},"code":"4"},{"description":{"en":"Manufacturing
+        chemicals"},"code":"5"},{"description":{"en":"Other chemicals"},"code":"6"},{"description":{"en":"Fuels"},"code":"7"},{"description":{"en":"Fibre"},"code":"8"},{"description":{"en":"Construction
+        or structural materials"},"code":"9"},{"description":{"en":"Wearing apparel,
+        accessories"},"code":"10"},{"description":{"en":"Other household goods"},"code":"11"},{"description":{"en":"Handicrafts,
+        jewellery, etc."},"code":"12"},{"description":{"en":"Pets/display animals,
+        horticulture"},"code":"13"},{"description":{"en":"Research"},"code":"14"},{"description":{"en":"Sport
+        hunting/specimen collecting"},"code":"15"},{"description":{"en":"Establishing
+        ex-situ production *"},"code":"16"},{"description":{"en":"Other (free text)"},"code":"17"},{"description":{"en":"Unknown"},"code":"18"}]}'
+  recorded_at: 2024-09-18 15:45:58 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

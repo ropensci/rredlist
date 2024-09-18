@@ -11,6 +11,17 @@ test_that("rl_version works", {
   })
 })
 
+test_that("rl_api_version works", {
+  skip_on_cran()
+
+  vcr::use_cassette("rl_api_version", {
+    aa <- rl_api_version()
+
+    expect_is(aa, "character")
+    expect_match(aa, "v[0-9]")
+  })
+})
+
 test_that("rl_version curl options work", {
   skip_on_cran()
 

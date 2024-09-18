@@ -1,0 +1,38 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/stresses/?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '930'
+      content-type: application/json
+      etag: W/"316b83c31855421348b4b111514c51eb"
+      x-request-id: 76b128b9-a511-4d64-b06a-4d41fe9c3042
+      x-runtime: '0.086617'
+      date: Wed, 18 Sep 2024 15:40:32 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"stresses":[{"description":{"en":"Ecosystem stresses"},"code":"1"},{"description":{"en":"Ecosystem
+        conversion"},"code":"1_1"},{"description":{"en":"Ecosystem degradation"},"code":"1_2"},{"description":{"en":"Indirect
+        ecosystem effects"},"code":"1_3"},{"description":{"en":"Species Stresses"},"code":"2"},{"description":{"en":"Species
+        mortality"},"code":"2_1"},{"description":{"en":"Species disturbance"},"code":"2_2"},{"description":{"en":"Indirect
+        species effects"},"code":"2_3"},{"description":{"en":"Hybridisation"},"code":"2_3_1"},{"description":{"en":"Competition"},"code":"2_3_2"},{"description":{"en":"Loss
+        of mutualism"},"code":"2_3_3"},{"description":{"en":"Loss of pollinator"},"code":"2_3_4"},{"description":{"en":"Inbreeding"},"code":"2_3_5"},{"description":{"en":"Skewed
+        sex ratios"},"code":"2_3_6"},{"description":{"en":"Reduced reproductive success"},"code":"2_3_7"},{"description":{"en":"Other"},"code":"2_3_8"}]}'
+  recorded_at: 2024-09-18 15:40:32 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

@@ -59,7 +59,7 @@ test_that("low level works", {
   expect_is(aajson$threats, "data.frame")
 
   vcr::use_cassette("rl_threats_", {
-    aa <- rl_threats_('11_4', all = FALSE)
+    aa <- rl_threats_('9_5_1', all = FALSE)
   })
 
   aajson <- jsonlite::fromJSON(aa)
