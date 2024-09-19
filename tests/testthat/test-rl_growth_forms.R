@@ -12,7 +12,7 @@ test_that("high level works - parsing", {
   expect_is(aa$growth_forms, "data.frame")
 
   vcr::use_cassette("rl_growth_forms", {
-    aa <- rl_growth_forms('LC')
+    aa <- rl_growth_forms("LC")
   })
 
   expect_is(aa, "list")
@@ -33,7 +33,7 @@ test_that("high level works - not parsing", {
   expect_is(aa$growth_forms, "list")
 
   vcr::use_cassette("rl_growth_forms-not-parsing", {
-    aa <- rl_growth_forms('LC', parse = FALSE)
+    aa <- rl_growth_forms("LC", parse = FALSE)
   })
 
   expect_is(aa, "list")
@@ -59,7 +59,7 @@ test_that("low level works", {
   expect_is(aajson$growth_forms, "data.frame")
 
   vcr::use_cassette("rl_growth_forms_", {
-    aa <- rl_growth_forms_('LC', all = FALSE)
+    aa <- rl_growth_forms_("LC", all = FALSE)
   })
 
   aajson <- jsonlite::fromJSON(aa)
@@ -76,10 +76,12 @@ test_that("fails well", {
   expect_error(rl_growth_forms(list()), "code must be of class character")
 
   expect_error(rl_growth_forms(key = 5), "key must be of class character")
-  expect_error(rl_growth_forms(key = matrix()), "key must be of class character")
+  expect_error(rl_growth_forms(key = matrix()),
+               "key must be of class character")
 
   expect_error(rl_growth_forms(parse = 5), "parse must be of class logical")
-  expect_error(rl_growth_forms(parse = matrix()), "parse must be of class logical")
+  expect_error(rl_growth_forms(parse = matrix()),
+               "parse must be of class logical")
 
   expect_error(rl_growth_forms(page = "next"), "page must be of class integer")
   expect_error(rl_growth_forms(all = "yes"), "all must be of class logical")
@@ -87,6 +89,4 @@ test_that("fails well", {
 
   # lengths
   expect_error(rl_growth_forms(page = 1:2), "page must be length 1")
-
 })
-

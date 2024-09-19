@@ -22,8 +22,8 @@
 #' }
 rl_categories <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
                           page = 1, quiet = FALSE, ...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_categories_(code, key, all, page, quiet, ...)
   if (all) {
@@ -37,12 +37,12 @@ rl_categories <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
 #' @rdname rl_categories
 rl_categories_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
                            quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(code, 'character')
-  assert_is(page, c('integer', 'numeric'))
+  assert_is(key, "character")
+  assert_is(code, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- paste("red_list_categories", code, sep = "/")
 
@@ -65,7 +65,7 @@ rl_categories_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
 #' rl_green()
 #' }
 rl_green <- function(key = NULL, parse = TRUE, ...) {
-  assert_is(parse, 'logical')
+  assert_is(parse, "logical")
 
   rl_parse(rl_green_(key, ...), parse)
 }
@@ -73,7 +73,7 @@ rl_green <- function(key = NULL, parse = TRUE, ...) {
 #' @export
 #' @rdname rl_green
 rl_green_ <- function(key = NULL, ...) {
-  assert_is(key, 'character')
+  assert_is(key, "character")
 
   rr_GET("green_status/all", key, ...)
 }

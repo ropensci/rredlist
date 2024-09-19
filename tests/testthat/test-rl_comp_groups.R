@@ -12,7 +12,7 @@ test_that("high level works - parsing", {
   expect_is(aa$comprehensive_group, "data.frame")
 
   vcr::use_cassette("rl_comp_groups", {
-    aa <- rl_comp_groups('seasnakes')
+    aa <- rl_comp_groups("seasnakes")
   })
 
   expect_is(aa, "list")
@@ -33,7 +33,7 @@ test_that("high level works - not parsing", {
   expect_is(aa$comprehensive_group, "list")
 
   vcr::use_cassette("rl_comp_groups-not-parsing", {
-    aa <- rl_comp_groups('seasnakes', parse = FALSE)
+    aa <- rl_comp_groups("seasnakes", parse = FALSE)
   })
 
   expect_is(aa, "list")
@@ -59,7 +59,7 @@ test_that("low level works", {
   expect_is(aajson$comprehensive_group, "data.frame")
 
   vcr::use_cassette("rl_comp_groups_", {
-    aa <- rl_comp_groups_('seasnakes', all = FALSE)
+    aa <- rl_comp_groups_("seasnakes", all = FALSE)
   })
 
   aajson <- jsonlite::fromJSON(aa)
@@ -79,7 +79,8 @@ test_that("fails well", {
   expect_error(rl_comp_groups(key = matrix()), "key must be of class character")
 
   expect_error(rl_comp_groups(parse = 5), "parse must be of class logical")
-  expect_error(rl_comp_groups(parse = matrix()), "parse must be of class logical")
+  expect_error(rl_comp_groups(parse = matrix()),
+               "parse must be of class logical")
 
   expect_error(rl_comp_groups(page = "next"), "page must be of class integer")
   expect_error(rl_comp_groups(all = "yes"), "all must be of class logical")

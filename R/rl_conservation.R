@@ -20,8 +20,8 @@
 #' }
 rl_actions <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
                        page = 1, quiet = FALSE, ...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_actions_(code, key, all, page, quiet, ...)
   if (all) {
@@ -35,12 +35,12 @@ rl_actions <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
 #' @rdname rl_actions
 rl_actions_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
                         quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(code, 'character')
-  assert_is(page, c('integer', 'numeric'))
+  assert_is(key, "character")
+  assert_is(code, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- paste("conservation_actions", code, sep = "/")
 
@@ -72,8 +72,8 @@ rl_actions_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
 #' }
 rl_research <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
                         page = 1, quiet = FALSE, ...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_research_(code, key, all, page, quiet, ...)
   if (all) {
@@ -87,12 +87,12 @@ rl_research <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
 #' @rdname rl_research
 rl_research_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
                          quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(code, 'character')
-  assert_is(page, c('integer', 'numeric'))
+  assert_is(key, "character")
+  assert_is(code, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- paste("research", code, sep = "/")
 

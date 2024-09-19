@@ -9,7 +9,7 @@ rredlist_ua <- function() {
   paste0(versions, collapse = " ")
 }
 
-rr_GET <- function(path, key = NULL, query = list(), ...){
+rr_GET <- function(path, key = NULL, query = list(), ...) {
   cli <- crul::HttpClient$new(
     url = paste(rr_base(), space(path), sep = "/"),
     opts = list(useragent = rredlist_ua()),
@@ -42,7 +42,7 @@ rl_parse <- function(x, parse) {
   jsonlite::fromJSON(x, parse)
 }
 
-check_key <- function(x){
+check_key <- function(x) {
   tmp <- if (is.null(x)) Sys.getenv("IUCN_REDLIST_KEY", "") else x
   if (tmp == "") {
     getOption("iucn_redlist_key", stop("need an API key for Red List data",

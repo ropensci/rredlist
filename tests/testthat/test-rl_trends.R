@@ -12,7 +12,7 @@ test_that("high level works - parsing", {
   expect_is(aa$population_trends, "data.frame")
 
   vcr::use_cassette("rl_pop_trends", {
-    aa <- rl_pop_trends('2', all = FALSE)
+    aa <- rl_pop_trends("2", all = FALSE)
   })
 
   expect_is(aa, "list")
@@ -33,7 +33,7 @@ test_that("high level works - not parsing", {
   expect_is(aa$population_trends, "list")
 
   vcr::use_cassette("rl_pop_trends-not-parsing", {
-    aa <- rl_pop_trends('2', parse = FALSE, all = FALSE)
+    aa <- rl_pop_trends("2", parse = FALSE, all = FALSE)
   })
 
   expect_is(aa, "list")
@@ -59,7 +59,7 @@ test_that("low level works", {
   expect_is(aajson$population_trends, "data.frame")
 
   vcr::use_cassette("rl_pop_trends_", {
-    aa <- rl_pop_trends_('2', all = FALSE)
+    aa <- rl_pop_trends_("2", all = FALSE)
   })
 
   aajson <- jsonlite::fromJSON(aa)
@@ -79,7 +79,8 @@ test_that("fails well", {
   expect_error(rl_pop_trends(key = matrix()), "key must be of class character")
 
   expect_error(rl_pop_trends(parse = 5), "parse must be of class logical")
-  expect_error(rl_pop_trends(parse = matrix()), "parse must be of class logical")
+  expect_error(rl_pop_trends(parse = matrix()),
+               "parse must be of class logical")
 
   expect_error(rl_pop_trends(page = "next"), "page must be of class integer")
   expect_error(rl_pop_trends(all = "yes"), "all must be of class logical")

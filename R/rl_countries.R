@@ -16,9 +16,9 @@
 #' rl_countries("MG")
 #' }
 rl_countries <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
-                         page = 1, quiet = FALSE,...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+                         page = 1, quiet = FALSE, ...) {
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_countries_(code, key, all, page, quiet, ...)
   if (all) {
@@ -32,12 +32,12 @@ rl_countries <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
 #' @rdname rl_countries
 rl_countries_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
                           quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(code, 'character')
-  assert_is(page, c('integer', 'numeric'))
+  assert_is(key, "character")
+  assert_is(code, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- paste("countries", code, sep = "/")
 

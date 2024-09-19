@@ -12,7 +12,7 @@
 #' rl_api_version()
 #' }
 rl_api_version <- function(key = NULL, ...) {
-  assert_is(key, 'character')
+  assert_is(key, "character")
   rl_parse(rr_GET("information/api_version", key, ...), TRUE)$api_version
 }
 
@@ -29,7 +29,7 @@ rl_api_version <- function(key = NULL, ...) {
 #' rl_version()
 #' }
 rl_version <- function(key = NULL, ...) {
-  assert_is(key, 'character')
+  assert_is(key, "character")
   rl_parse(rr_GET("information/red_list_version", key, ...),
            TRUE)$red_list_version
 }

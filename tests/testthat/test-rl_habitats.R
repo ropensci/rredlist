@@ -12,7 +12,7 @@ test_that("high level works - parsing", {
   expect_is(aa$habitats, "data.frame")
 
   vcr::use_cassette("rl_habitats", {
-    aa <- rl_habitats('2')
+    aa <- rl_habitats("2")
   })
 
   expect_is(aa, "list")
@@ -33,7 +33,7 @@ test_that("high level works - not parsing", {
   expect_is(aa$habitats, "list")
 
   vcr::use_cassette("rl_habitats-not-parsing", {
-    aa <- rl_habitats('2', parse = FALSE)
+    aa <- rl_habitats("2", parse = FALSE)
   })
 
   expect_is(aa, "list")
@@ -59,7 +59,7 @@ test_that("low level works", {
   expect_is(aajson$habitats, "data.frame")
 
   vcr::use_cassette("rl_habitats_", {
-    aa <- rl_habitats_('2', all = FALSE)
+    aa <- rl_habitats_("2", all = FALSE)
   })
 
   aajson <- jsonlite::fromJSON(aa)

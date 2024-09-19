@@ -19,8 +19,8 @@
 #' }
 rl_habitats <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
                         page = 1, quiet = FALSE, ...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_habitats_(code, key, all, page, quiet, ...)
   if (all) {
@@ -34,12 +34,12 @@ rl_habitats <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
 #' @rdname rl_habitats
 rl_habitats_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
                          quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(code, 'character')
-  assert_is(page, c('integer', 'numeric'))
+  assert_is(key, "character")
+  assert_is(code, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- paste("habitats", code, sep = "/")
 
@@ -70,8 +70,8 @@ rl_habitats_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
 #' }
 rl_systems <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
                        page = 1, quiet = FALSE, ...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_systems_(code, key, all, page, quiet, ...)
   if (all) {
@@ -85,12 +85,12 @@ rl_systems <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
 #' @rdname rl_systems
 rl_systems_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
                         quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(code, 'character')
-  assert_is(page, c('integer', 'numeric'))
+  assert_is(key, "character")
+  assert_is(code, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- paste("systems", code, sep = "/")
 

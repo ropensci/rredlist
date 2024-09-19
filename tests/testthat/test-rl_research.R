@@ -12,7 +12,7 @@ test_that("high level works - parsing", {
   expect_is(aa$research, "data.frame")
 
   vcr::use_cassette("rl_research", {
-    aa <- rl_research('4')
+    aa <- rl_research("4")
   })
 
   expect_is(aa, "list")
@@ -33,7 +33,7 @@ test_that("high level works - not parsing", {
   expect_is(aa$research, "list")
 
   vcr::use_cassette("rl_research-not-parsing", {
-    aa <- rl_research('4', parse = FALSE)
+    aa <- rl_research("4", parse = FALSE)
   })
 
   expect_is(aa, "list")
@@ -59,7 +59,7 @@ test_that("low level works", {
   expect_is(aajson$research, "data.frame")
 
   vcr::use_cassette("rl_research_", {
-    aa <- rl_research_('4', all = FALSE)
+    aa <- rl_research_("4", all = FALSE)
   })
 
   aajson <- jsonlite::fromJSON(aa)

@@ -12,7 +12,7 @@ test_that("high level works - parsing", {
   expect_is(aa$countries, "data.frame")
 
   vcr::use_cassette("rl_countries", {
-    aa <- rl_countries('VA')
+    aa <- rl_countries("VA")
   })
 
   expect_is(aa, "list")
@@ -33,7 +33,7 @@ test_that("high level works - not parsing", {
   expect_is(aa$countries, "list")
 
   vcr::use_cassette("rl_countries-not-parsing", {
-    aa <- rl_countries('VA', parse = FALSE)
+    aa <- rl_countries("VA", parse = FALSE)
   })
 
   expect_is(aa, "list")
@@ -59,7 +59,7 @@ test_that("low level works", {
   expect_is(aajson$countries, "data.frame")
 
   vcr::use_cassette("rl_countries_", {
-    aa <- rl_countries_('VA', all = FALSE)
+    aa <- rl_countries_("VA", all = FALSE)
   })
 
   aajson <- jsonlite::fromJSON(aa)

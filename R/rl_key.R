@@ -10,12 +10,14 @@
 #'
 #' @export
 #'
-rl_use_iucn <- function(){
-  if(interactive()){
+rl_use_iucn <- function() {
+  if (interactive()) {
     utils::browseURL("https://api.iucnredlist.org/users/sign_up")
   }
 
-  message("After getting your key set it as IUCN_REDLIST_KEY in .Renviron.\n IUCN_REDLIST_KEY='youractualkeynotthisstring'\n For that, use usethis::edit_r_environ()")
+  message(paste0("After getting your key set it as IUCN_REDLIST_KEY in",
+                 " .Renviron.\n IUCN_REDLIST_KEY='youractualkeynotthisstring'",
+                 "\n For that, use usethis::edit_r_environ()"))
 
   invisible("https://api.iucnredlist.org/users/sign_up")
 }

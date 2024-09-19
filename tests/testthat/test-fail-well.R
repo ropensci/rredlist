@@ -4,11 +4,11 @@ test_that("fails well on bad key", {
   skip_on_cran()
 
   vcr::use_cassette("rl_species-badkey", {
-    expect_error(rl_species('Loxodonta', 'africana', key = "adfds"),
+    expect_error(rl_species("Loxodonta", "africana", key = "adfds"),
                  "Token not valid!")
   })
   vcr::use_cassette("rl_species_-badkey", {
-    expect_error(rl_species_('Loxodonta', 'africana', key = "adfds"),
+    expect_error(rl_species_("Loxodonta", "africana", key = "adfds"),
                  "Token not valid")
   })
 })
@@ -17,11 +17,11 @@ test_that("fails well on bad query", {
   skip_on_cran()
 
   vcr::use_cassette("rl_species-badquery", {
-    expect_error(rl_species('Loxodonta', 'africanum'),
+    expect_error(rl_species("Loxodonta", "africanum"),
                  "No results returned for query")
   })
   vcr::use_cassette("rl_species_-badquery", {
-    expect_error(rl_species_('Loxodonta', 'africanum'),
+    expect_error(rl_species_("Loxodonta", "africanum"),
                  "No results returned for query")
   })
 })

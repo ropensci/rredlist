@@ -12,7 +12,7 @@ test_that("high level works - parsing", {
   expect_is(aa$conservation_action, "data.frame")
 
   vcr::use_cassette("rl_actions", {
-    aa <- rl_actions('6_5')
+    aa <- rl_actions("6_5")
   })
 
   expect_is(aa, "list")
@@ -33,7 +33,7 @@ test_that("high level works - not parsing", {
   expect_is(aa$conservation_action, "list")
 
   vcr::use_cassette("rl_actions-not-parsing", {
-    aa <- rl_actions('6_5', parse = FALSE)
+    aa <- rl_actions("6_5", parse = FALSE)
   })
 
   expect_is(aa, "list")
@@ -59,7 +59,7 @@ test_that("low level works", {
   expect_is(aajson$conservation_action, "data.frame")
 
   vcr::use_cassette("rl_actions_", {
-    aa <- rl_actions_('6_5', all = FALSE)
+    aa <- rl_actions_("6_5", all = FALSE)
   })
 
   aajson <- jsonlite::fromJSON(aa)

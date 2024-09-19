@@ -12,7 +12,7 @@ test_that("high level works - parsing", {
   expect_is(aa$systems, "data.frame")
 
   vcr::use_cassette("rl_systems", {
-    aa <- rl_systems('2', all = FALSE)
+    aa <- rl_systems("2", all = FALSE)
   })
 
   expect_is(aa, "list")
@@ -33,7 +33,7 @@ test_that("high level works - not parsing", {
   expect_is(aa$systems, "list")
 
   vcr::use_cassette("rl_systems-not-parsing", {
-    aa <- rl_systems('2', parse = FALSE, all = FALSE)
+    aa <- rl_systems("2", parse = FALSE, all = FALSE)
   })
 
   expect_is(aa, "list")
@@ -59,7 +59,7 @@ test_that("low level works", {
   expect_is(aajson$systems, "data.frame")
 
   vcr::use_cassette("rl_systems_", {
-    aa <- rl_systems_('2', all = FALSE)
+    aa <- rl_systems_("2", all = FALSE)
   })
 
   aajson <- jsonlite::fromJSON(aa)

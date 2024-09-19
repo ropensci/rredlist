@@ -45,10 +45,12 @@ test_that("fails well", {
   skip_on_cran()
 
   expect_error(rl_extinct_wild(key = 5), "key must be of class character")
-  expect_error(rl_extinct_wild(key = matrix()), "key must be of class character")
+  expect_error(rl_extinct_wild(key = matrix()),
+               "key must be of class character")
 
   expect_error(rl_extinct_wild(parse = 5), "parse must be of class logical")
-  expect_error(rl_extinct_wild(parse = matrix()), "parse must be of class logical")
+  expect_error(rl_extinct_wild(parse = matrix()),
+               "parse must be of class logical")
 
   expect_error(rl_extinct_wild(page = "next"), "page must be of class integer")
   expect_error(rl_extinct_wild(all = "yes"), "all must be of class logical")

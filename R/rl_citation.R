@@ -13,6 +13,6 @@
 #' rl_citation()
 #' }
 rl_citation <- function(key = NULL, ...) {
-  paste('IUCN 2024. IUCN Red List of Threatened Species. Version',
-        rl_version(key, ...), '<www.iucnredlist.org>')
+  paste("IUCN 2024. IUCN Red List of Threatened Species. Version",
+        rl_version(key, ...), "<www.iucnredlist.org>")
 }

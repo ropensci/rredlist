@@ -12,7 +12,7 @@ test_that("high level works - parsing", {
   expect_is(aa$use_and_trade, "data.frame")
 
   vcr::use_cassette("rl_use_and_trade", {
-    aa <- rl_use_and_trade('4')
+    aa <- rl_use_and_trade("4")
   })
 
   expect_is(aa, "list")
@@ -33,7 +33,7 @@ test_that("high level works - not parsing", {
   expect_is(aa$use_and_trade, "list")
 
   vcr::use_cassette("rl_use_and_trade-not-parsing", {
-    aa <- rl_use_and_trade('4', parse = FALSE)
+    aa <- rl_use_and_trade("4", parse = FALSE)
   })
 
   expect_is(aa, "list")
@@ -59,7 +59,7 @@ test_that("low level works", {
   expect_is(aajson$use_and_trade, "data.frame")
 
   vcr::use_cassette("rl_use_and_trade_", {
-    aa <- rl_use_and_trade_('4', all = FALSE)
+    aa <- rl_use_and_trade_("4", all = FALSE)
   })
 
   aajson <- jsonlite::fromJSON(aa)
@@ -76,10 +76,12 @@ test_that("fails well", {
   expect_error(rl_use_and_trade(list()), "code must be of class character")
 
   expect_error(rl_use_and_trade(key = 5), "key must be of class character")
-  expect_error(rl_use_and_trade(key = matrix()), "key must be of class character")
+  expect_error(rl_use_and_trade(key = matrix()),
+               "key must be of class character")
 
   expect_error(rl_use_and_trade(parse = 5), "parse must be of class logical")
-  expect_error(rl_use_and_trade(parse = matrix()), "parse must be of class logical")
+  expect_error(rl_use_and_trade(parse = matrix()),
+               "parse must be of class logical")
 
   expect_error(rl_use_and_trade(page = "next"), "page must be of class integer")
   expect_error(rl_use_and_trade(all = "yes"), "all must be of class logical")

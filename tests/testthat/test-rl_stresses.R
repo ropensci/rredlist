@@ -12,7 +12,7 @@ test_that("high level works - parsing", {
   expect_is(aa$stresses, "data.frame")
 
   vcr::use_cassette("rl_stresses", {
-    aa <- rl_stresses('2_3_4')
+    aa <- rl_stresses("2_3_4")
   })
 
   expect_is(aa, "list")
@@ -33,7 +33,7 @@ test_that("high level works - not parsing", {
   expect_is(aa$stresses, "list")
 
   vcr::use_cassette("rl_stresses-not-parsing", {
-    aa <- rl_stresses('2_3_4', parse = FALSE)
+    aa <- rl_stresses("2_3_4", parse = FALSE)
   })
 
   expect_is(aa, "list")
@@ -59,7 +59,7 @@ test_that("low level works", {
   expect_is(aajson$stresses, "data.frame")
 
   vcr::use_cassette("rl_stresses_", {
-    aa <- rl_stresses_('2_3_4', all = FALSE)
+    aa <- rl_stresses_("2_3_4", all = FALSE)
   })
 
   aajson <- jsonlite::fromJSON(aa)

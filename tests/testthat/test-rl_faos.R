@@ -12,7 +12,7 @@ test_that("high level works - parsing", {
   expect_is(aa$faos, "data.frame")
 
   vcr::use_cassette("rl_faos", {
-    aa <- rl_faos('18')
+    aa <- rl_faos("18")
   })
 
   expect_is(aa, "list")
@@ -33,7 +33,7 @@ test_that("high level works - not parsing", {
   expect_is(aa$faos, "list")
 
   vcr::use_cassette("rl_faos-not-parsing", {
-    aa <- rl_faos('18', parse = FALSE)
+    aa <- rl_faos("18", parse = FALSE)
   })
 
   expect_is(aa, "list")
@@ -59,7 +59,7 @@ test_that("low level works", {
   expect_is(aajson$faos, "data.frame")
 
   vcr::use_cassette("rl_faos_", {
-    aa <- rl_faos_('18', all = FALSE)
+    aa <- rl_faos_("18", all = FALSE)
   })
 
   aajson <- jsonlite::fromJSON(aa)

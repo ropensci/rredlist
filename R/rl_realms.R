@@ -18,8 +18,8 @@
 #' }
 rl_realms <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
                       page = 1, quiet = FALSE, ...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_realms_(code, key, all, page, quiet, ...)
   if (all) {
@@ -33,12 +33,12 @@ rl_realms <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
 #' @rdname rl_realms
 rl_realms_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
                        quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(code, 'character')
-  assert_is(page, c('integer', 'numeric'))
+  assert_is(key, "character")
+  assert_is(code, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- paste("biogeographical_realms", code, sep = "/")
 
@@ -69,8 +69,8 @@ rl_realms_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
 #' }
 rl_scopes <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
                       page = 1, quiet = FALSE, ...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_scopes_(code, key, all, page, quiet, ...)
   if (all) {
@@ -84,12 +84,12 @@ rl_scopes <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
 #' @rdname rl_scopes
 rl_scopes_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
                        quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(code, 'character')
-  assert_is(page, c('integer', 'numeric'))
+  assert_is(key, "character")
+  assert_is(code, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- paste("scopes", code, sep = "/")
 
@@ -122,8 +122,8 @@ rl_scopes_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
 #' }
 rl_faos <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
                     page = 1, quiet = FALSE, ...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_faos_(code, key, all, page, quiet, ...)
   if (all) {
@@ -136,13 +136,13 @@ rl_faos <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
 #' @export
 #' @rdname rl_faos
 rl_faos_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
-                       quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(code, 'character')
-  assert_is(page, c('integer', 'numeric'))
+                     quiet = FALSE, ...) {
+  assert_is(key, "character")
+  assert_is(code, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- paste("faos", code, sep = "/")
 

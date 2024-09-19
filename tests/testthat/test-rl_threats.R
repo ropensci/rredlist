@@ -12,7 +12,7 @@ test_that("high level works - parsing", {
   expect_is(aa$threats, "data.frame")
 
   vcr::use_cassette("rl_threats", {
-    aa <- rl_threats('9_5_1')
+    aa <- rl_threats("9_5_1")
   })
 
   expect_is(aa, "list")
@@ -33,7 +33,7 @@ test_that("high level works - not parsing", {
   expect_is(aa$threats, "list")
 
   vcr::use_cassette("rl_threats-not-parsing", {
-    aa <- rl_threats('9_5_1', parse = FALSE)
+    aa <- rl_threats("9_5_1", parse = FALSE)
   })
 
   expect_is(aa, "list")
@@ -59,7 +59,7 @@ test_that("low level works", {
   expect_is(aajson$threats, "data.frame")
 
   vcr::use_cassette("rl_threats_", {
-    aa <- rl_threats_('9_5_1', all = FALSE)
+    aa <- rl_threats_("9_5_1", all = FALSE)
   })
 
   aajson <- jsonlite::fromJSON(aa)

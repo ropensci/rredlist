@@ -20,9 +20,9 @@
 #' rl_threats("5_1_1")
 #' }
 rl_threats <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
-                       page = 1, quiet = FALSE,...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+                       page = 1, quiet = FALSE, ...) {
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_threats_(code, key, all, page, quiet, ...)
   if (all) {
@@ -36,12 +36,12 @@ rl_threats <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
 #' @rdname rl_threats
 rl_threats_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
                         quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(code, 'character')
-  assert_is(page, c('integer', 'numeric'))
+  assert_is(key, "character")
+  assert_is(code, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- paste("threats", code, sep = "/")
 
@@ -71,9 +71,9 @@ rl_threats_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
 #' rl_stresses("1_2")
 #' }
 rl_stresses <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
-                       page = 1, quiet = FALSE,...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+                        page = 1, quiet = FALSE, ...) {
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_stresses_(code, key, all, page, quiet, ...)
   if (all) {
@@ -86,13 +86,13 @@ rl_stresses <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
 #' @export
 #' @rdname rl_stresses
 rl_stresses_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
-                        quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(code, 'character')
-  assert_is(page, c('integer', 'numeric'))
+                         quiet = FALSE, ...) {
+  assert_is(key, "character")
+  assert_is(code, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- paste("stresses", code, sep = "/")
 
@@ -122,9 +122,9 @@ rl_stresses_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
 #' rl_use_and_trade("3")
 #' }
 rl_use_and_trade <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
-                        page = 1, quiet = FALSE,...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+                             page = 1, quiet = FALSE, ...) {
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_use_and_trade_(code, key, all, page, quiet, ...)
   if (all) {
@@ -137,13 +137,13 @@ rl_use_and_trade <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
 #' @export
 #' @rdname rl_use_and_trade
 rl_use_and_trade_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
-                         quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(code, 'character')
-  assert_is(page, c('integer', 'numeric'))
+                              quiet = FALSE, ...) {
+  assert_is(key, "character")
+  assert_is(code, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- paste("use_and_trade", code, sep = "/")
 

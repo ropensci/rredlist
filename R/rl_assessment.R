@@ -13,7 +13,7 @@
 #' ex1$systems
 #' }
 rl_assessment <- function(id, key = NULL, parse = TRUE, ...) {
-  assert_is(parse, 'logical')
+  assert_is(parse, "logical")
 
   rl_parse(rl_assessment_(id, key, ...), parse)
 }
@@ -21,8 +21,8 @@ rl_assessment <- function(id, key = NULL, parse = TRUE, ...) {
 #' @export
 #' @rdname rl_assessment
 rl_assessment_ <- function(id, key = NULL, ...) {
-  assert_is(key, 'character')
-  assert_is(id, c('integer', 'numeric'))
+  assert_is(key, "character")
+  assert_is(id, c("integer", "numeric"))
   assert_n(id, 1)
 
   rr_GET(paste0("assessment/", id), key, ...)

@@ -12,7 +12,7 @@ test_that("high level works - parsing", {
   expect_is(aa$biogeographical_realms, "data.frame")
 
   vcr::use_cassette("rl_realms", {
-    aa <- rl_realms('1')
+    aa <- rl_realms("1")
   })
 
   expect_is(aa, "list")
@@ -33,7 +33,7 @@ test_that("high level works - not parsing", {
   expect_is(aa$biogeographical_realms, "list")
 
   vcr::use_cassette("rl_realms-not-parsing", {
-    aa <- rl_realms('1', parse = FALSE)
+    aa <- rl_realms("1", parse = FALSE)
   })
 
   expect_is(aa, "list")
@@ -59,7 +59,7 @@ test_that("low level works", {
   expect_is(aajson$biogeographical_realms, "data.frame")
 
   vcr::use_cassette("rl_realms_", {
-    aa <- rl_realms_('1', all = FALSE)
+    aa <- rl_realms_("1", all = FALSE)
   })
 
   aajson <- jsonlite::fromJSON(aa)

@@ -18,6 +18,6 @@ rl_sp_count <- function(key = NULL, ...) {
 #' @export
 #' @rdname rl_sp_count
 rl_sp_count_ <- function(key = NULL, ...) {
-  assert_is(key, 'character')
+  assert_is(key, "character")
   rr_GET("statistics/count", key, ...)
 }

@@ -12,7 +12,7 @@ test_that("high level works - parsing", {
   expect_is(aa$scopes, "data.frame")
 
   vcr::use_cassette("rl_scopes", {
-    aa <- rl_scopes('100765562')
+    aa <- rl_scopes("100765562")
   })
 
   expect_is(aa, "list")
@@ -33,7 +33,7 @@ test_that("high level works - not parsing", {
   expect_is(aa$scopes, "list")
 
   vcr::use_cassette("rl_scopes-not-parsing", {
-    aa <- rl_scopes('100765562', parse = FALSE)
+    aa <- rl_scopes("100765562", parse = FALSE)
   })
 
   expect_is(aa, "list")
@@ -59,7 +59,7 @@ test_that("low level works", {
   expect_is(aajson$scopes, "data.frame")
 
   vcr::use_cassette("rl_scopes_", {
-    aa <- rl_scopes_('100765562', all = FALSE)
+    aa <- rl_scopes_("100765562", all = FALSE)
   })
 
   aajson <- jsonlite::fromJSON(aa)

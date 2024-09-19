@@ -38,7 +38,7 @@
 #' }
 rl_species <- function(genus, species, infra = NULL, subpopulation = NULL,
                        key = NULL, parse = TRUE, ...) {
-  assert_is(parse, 'logical')
+  assert_is(parse, "logical")
 
   rl_parse(rl_species_(genus, species, infra, subpopulation, key, ...), parse)
 }
@@ -47,11 +47,11 @@ rl_species <- function(genus, species, infra = NULL, subpopulation = NULL,
 #' @rdname rl_species
 rl_species_ <- function(genus, species, infra = NULL, subpopulation = NULL,
                         key = NULL, ...) {
-  assert_is(key, 'character')
-  assert_is(genus, 'character')
-  assert_is(species, 'character')
-  assert_is(infra, 'character')
-  assert_is(subpopulation, 'character')
+  assert_is(key, "character")
+  assert_is(genus, "character")
+  assert_is(species, "character")
+  assert_is(infra, "character")
+  assert_is(subpopulation, "character")
 
   rr_GET("taxa/scientific_name", key,
          query = list(genus_name = genus, species_name = species,
@@ -77,8 +77,8 @@ rl_species_ <- function(genus, species, infra = NULL, subpopulation = NULL,
 #' }
 rl_family <- function(family = NULL, key = NULL, parse = TRUE, all = TRUE,
                       page = 1, quiet = FALSE, ...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_family_(family, key, all, page, quiet, ...)
   if (all) {
@@ -92,12 +92,12 @@ rl_family <- function(family = NULL, key = NULL, parse = TRUE, all = TRUE,
 #' @rdname rl_family
 rl_family_ <- function(family = NULL, key = NULL, all = TRUE, page = 1,
                        quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(family, 'character')
-  assert_is(page, c('integer', 'numeric'))
+  assert_is(key, "character")
+  assert_is(family, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- paste("taxa/family", family, sep = "/")
 
@@ -126,8 +126,8 @@ rl_family_ <- function(family = NULL, key = NULL, all = TRUE, page = 1,
 #' }
 rl_order <- function(order = NULL, key = NULL, parse = TRUE, all = TRUE,
                      page = 1, quiet = FALSE, ...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_order_(order, key, all, page, quiet, ...)
   if (all) {
@@ -141,12 +141,12 @@ rl_order <- function(order = NULL, key = NULL, parse = TRUE, all = TRUE,
 #' @rdname rl_order
 rl_order_ <- function(order = NULL, key = NULL, all = TRUE, page = 1,
                       quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(order, 'character')
-  assert_is(page, c('integer', 'numeric'))
+  assert_is(key, "character")
+  assert_is(order, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- paste("taxa/order", order, sep = "/")
 
@@ -175,8 +175,8 @@ rl_order_ <- function(order = NULL, key = NULL, all = TRUE, page = 1,
 #' }
 rl_class <- function(class = NULL, key = NULL, parse = TRUE, all = TRUE,
                      page = 1, quiet = FALSE, ...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_class_(class, key, all, page, quiet, ...)
   if (all) {
@@ -190,12 +190,12 @@ rl_class <- function(class = NULL, key = NULL, parse = TRUE, all = TRUE,
 #' @rdname rl_class
 rl_class_ <- function(class = NULL, key = NULL, all = TRUE, page = 1,
                       quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(class, 'character')
-  assert_is(page, c('integer', 'numeric'))
+  assert_is(key, "character")
+  assert_is(class, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- paste("taxa/class", class, sep = "/")
 
@@ -224,8 +224,8 @@ rl_class_ <- function(class = NULL, key = NULL, all = TRUE, page = 1,
 #' }
 rl_phylum <- function(phylum = NULL, key = NULL, parse = TRUE, all = TRUE,
                       page = 1, quiet = FALSE, ...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_phylum_(phylum, key, all, page, quiet, ...)
   if (all) {
@@ -239,12 +239,12 @@ rl_phylum <- function(phylum = NULL, key = NULL, parse = TRUE, all = TRUE,
 #' @rdname rl_phylum
 rl_phylum_ <- function(phylum = NULL, key = NULL, all = TRUE, page = 1,
                        quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(phylum, 'character')
-  assert_is(page, c('integer', 'numeric'))
+  assert_is(key, "character")
+  assert_is(phylum, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- paste("taxa/phylum", phylum, sep = "/")
 
@@ -273,8 +273,8 @@ rl_phylum_ <- function(phylum = NULL, key = NULL, all = TRUE, page = 1,
 #' }
 rl_kingdom <- function(kingdom = NULL, key = NULL, parse = TRUE, all = TRUE,
                        page = 1, quiet = FALSE, ...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_kingdom_(kingdom, key, all, page, quiet, ...)
   if (all) {
@@ -288,12 +288,12 @@ rl_kingdom <- function(kingdom = NULL, key = NULL, parse = TRUE, all = TRUE,
 #' @rdname rl_kingdom
 rl_kingdom_ <- function(kingdom = NULL, key = NULL, all = TRUE, page = 1,
                         quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(kingdom, 'character')
-  assert_is(page, c('integer', 'numeric'))
+  assert_is(key, "character")
+  assert_is(kingdom, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- paste("taxa/kingdom", kingdom, sep = "/")
 
@@ -319,8 +319,8 @@ rl_kingdom_ <- function(kingdom = NULL, key = NULL, all = TRUE, page = 1,
 #' }
 rl_extinct <- function(key = NULL, parse = TRUE, all = TRUE, page = 1,
                        quiet = FALSE, ...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_extinct_(key, all, page, quiet, ...)
   if (all) {
@@ -333,11 +333,11 @@ rl_extinct <- function(key = NULL, parse = TRUE, all = TRUE, page = 1,
 #' @export
 #' @rdname rl_extinct
 rl_extinct_ <- function(key = NULL, all = TRUE, page = 1, quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(page, c('integer', 'numeric'))
+  assert_is(key, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- "taxa/possibly_extinct"
   if (all) {
@@ -362,8 +362,8 @@ rl_extinct_ <- function(key = NULL, all = TRUE, page = 1, quiet = FALSE, ...) {
 #' }
 rl_extinct_wild <- function(key = NULL, parse = TRUE, all = TRUE, page = 1,
                             quiet = FALSE, ...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_extinct_wild_(key, all, page, quiet, ...)
   if (all) {
@@ -377,11 +377,11 @@ rl_extinct_wild <- function(key = NULL, parse = TRUE, all = TRUE, page = 1,
 #' @rdname rl_extinct_wild
 rl_extinct_wild_ <- function(key = NULL, all = TRUE, page = 1,
                              quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(page, c('integer', 'numeric'))
+  assert_is(key, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- "taxa/possibly_extinct_in_the_wild"
   if (all) {

@@ -46,7 +46,8 @@ test_that("fails well", {
 
   expect_error(rl_assessment(), "is missing, with no default")
 
-  expect_error(rl_assessment(166290968, key = 5), "key must be of class character")
+  expect_error(rl_assessment(166290968, key = 5),
+               "key must be of class character")
   expect_error(rl_assessment(166290968, key = matrix()),
                "key must be of class character")
 

@@ -15,9 +15,9 @@
 #' rl_growth_forms("LC")
 #' }
 rl_growth_forms <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
-                            page = 1, quiet = FALSE,...) {
-  assert_is(parse, 'logical')
-  assert_is(all, 'logical')
+                            page = 1, quiet = FALSE, ...) {
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
 
   res <- rl_growth_forms_(code, key, all, page, quiet, ...)
   if (all) {
@@ -31,12 +31,12 @@ rl_growth_forms <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
 #' @rdname rl_growth_forms
 rl_growth_forms_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
                              quiet = FALSE, ...) {
-  assert_is(key, 'character')
-  assert_is(code, 'character')
-  assert_is(page, c('integer', 'numeric'))
+  assert_is(key, "character")
+  assert_is(code, "character")
+  assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
-  assert_is(all, 'logical')
-  assert_is(quiet, 'logical')
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
 
   path <- paste("growth_forms", code, sep = "/")
 
