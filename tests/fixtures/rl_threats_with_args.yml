@@ -1,0 +1,78 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/threats/9_5_1?page=1&latest=TRUE&scope_code=2&year_published=2017
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '2417'
+      content-type: application/json
+      current-page: '1'
+      etag: W/"116a1aaa78e8df7809a182b9cee8d836"
+      link: <https://api.iucnredlist.org/api/v4/threats/9_5_1?page=1&latest=TRUE&scope_code=2&year_published=2017&per_page=100>;
+        rel="first", <https://api.iucnredlist.org/api/v4/threats/9_5_1?page=1&latest=TRUE&scope_code=2&year_published=2017&per_page=100>;
+        rel="last"
+      page-items: '100'
+      total-count: '9'
+      total-pages: '1'
+      x-request-id: 0fb138aa-d362-4768-976a-3ebbde3ef582
+      x-runtime: '0.043728'
+      date: Fri, 20 Sep 2024 18:01:37 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"threat":{"description":{"en":"Acid rain"},"code":"9_5_1"},"assessments":[{"year_published":"2017","latest":true,"sis_taxon_id":171389,"url":"https://www.iucnredlist.org/species/171389/1325438","assessment_id":1325438,"code":"9_5_1","code_type":"threat","scopes":[{"description":{"en":"Europe"},"code":"2"}]},{"year_published":"2017","latest":true,"sis_taxon_id":171730,"url":"https://www.iucnredlist.org/species/171730/1330560","assessment_id":1330560,"code":"9_5_1","code_type":"threat","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Europe"},"code":"2"}]},{"year_published":"2017","latest":true,"sis_taxon_id":83503925,"url":"https://www.iucnredlist.org/species/83503925/83504118","assessment_id":83504118,"code":"9_5_1","code_type":"threat","scopes":[{"description":{"en":"Europe"},"code":"2"}]},{"year_published":"2017","latest":true,"sis_taxon_id":42270,"url":"https://www.iucnredlist.org/species/42270/83978869","assessment_id":83978869,"code":"9_5_1","code_type":"threat","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Europe"},"code":"2"}]},{"year_published":"2017","latest":true,"sis_taxon_id":86859657,"url":"https://www.iucnredlist.org/species/86859657/87312283","assessment_id":87312283,"code":"9_5_1","code_type":"threat","scopes":[{"description":{"en":"Europe"},"code":"2"}]},{"year_published":"2017","latest":true,"sis_taxon_id":86859858,"url":"https://www.iucnredlist.org/species/86859858/87312435","assessment_id":87312435,"code":"9_5_1","code_type":"threat","scopes":[{"description":{"en":"Europe"},"code":"2"}]},{"year_published":"2017","latest":true,"sis_taxon_id":88108047,"url":"https://www.iucnredlist.org/species/88108047/88191617","assessment_id":88191617,"code":"9_5_1","code_type":"threat","scopes":[{"description":{"en":"Europe"},"code":"2"}]},{"year_published":"2017","latest":true,"sis_taxon_id":42385,"url":"https://www.iucnredlist.org/species/42385/95729675","assessment_id":95729675,"code":"9_5_1","code_type":"threat","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Europe"},"code":"2"}]},{"year_published":"2017","latest":true,"sis_taxon_id":171017,"url":"https://www.iucnredlist.org/species/171017/112848141","assessment_id":112848141,"code":"9_5_1","code_type":"threat","scopes":[{"description":{"en":"Europe"},"code":"2"}]}],"filters":{"latest":"TRUE","scope_code":"2","year_published":"2017"}}'
+  recorded_at: 2024-09-20 18:01:37 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/threats/9_5_1?page=2&latest=TRUE&scope_code=2&year_published=2017
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '146'
+      content-type: application/json
+      current-page: '2'
+      etag: W/"a9596730a5c34ecf308432d47f1230b5"
+      link: <https://api.iucnredlist.org/api/v4/threats/9_5_1?page=1&latest=TRUE&scope_code=2&year_published=2017&per_page=100>;
+        rel="first", <https://api.iucnredlist.org/api/v4/threats/9_5_1?page=1&latest=TRUE&scope_code=2&year_published=2017&per_page=100>;
+        rel="prev", <https://api.iucnredlist.org/api/v4/threats/9_5_1?page=1&latest=TRUE&scope_code=2&year_published=2017&per_page=100>;
+        rel="last"
+      page-items: '100'
+      total-count: '9'
+      total-pages: '1'
+      x-request-id: 094c897f-ec4a-4fb6-bc2f-7d429cd36f9e
+      x-runtime: '0.021166'
+      date: Fri, 20 Sep 2024 18:01:37 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"threat":{"description":{"en":"Acid rain"},"code":"9_5_1"},"assessments":[],"filters":{"latest":"TRUE","scope_code":"2","year_published":"2017"}}'
+  recorded_at: 2024-09-20 18:01:37 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

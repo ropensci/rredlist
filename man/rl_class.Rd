@@ -37,7 +37,18 @@ much burden on a server to just "get all the data" in one request.}
 \item{quiet}{(logical) Whether to give progress for download or not. Default:
 \code{FALSE} (that is, give progress). Ignored if \code{all = FALSE}.}
 
-\item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
+\item{...}{Curl options passed to \code{\link[crul]{HttpClient}}. Also
+includes the following arguments that are supported by most of the API
+endpoints which return lists of assessments (refer to the \href{https://api.iucnredlist.org/api-docs/index.html}{API docs} for more
+information):
+\itemize{
+\item \code{year_published}: (integer) Set this to return only
+assessments from a given year.
+\item \code{latest}: (logical) Set this to \code{TRUE} to return only the
+latest assessment for each taxon.
+\item \code{scope_code}: (integer) Set this to return only assessments
+from a particular scope (e.g., Global, Europe).
+}}
 }
 \value{
 A list unless using a function with a trailing underscore, in which
@@ -64,6 +75,7 @@ Taxa:
 \code{\link{rl_kingdom}()},
 \code{\link{rl_order}()},
 \code{\link{rl_phylum}()},
+\code{\link{rl_sis}()},
 \code{\link{rl_species}()}
 }
 \concept{taxa}

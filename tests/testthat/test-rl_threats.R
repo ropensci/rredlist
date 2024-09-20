@@ -69,6 +69,23 @@ test_that("low level works", {
   expect_named(aajson, c("threat", "assessments", "filters"))
 })
 
+test_that("secret query parameters work", {
+  skip_on_cran()
+
+  vcr::use_cassette("rl_threats_no_args", {
+    aa <- rl_threats("9_5_1")
+  })
+  vcr::use_cassette("rl_threats_with_args", {
+    bb <- rl_threats("9_5_1", latest = TRUE, year_published = 2017,
+                     scope_code = 2)
+  })
+
+  aa_filt <- subset(aa$assessments, latest & year_published == "2017" &
+                      sapply(aa$assessments$scopes,
+                             function(df) "2" %in% df$code))
+  expect_equal(nrow(aa_filt), nrow(bb$assessments))
+})
+
 test_that("fails well", {
   skip_on_cran()
 
