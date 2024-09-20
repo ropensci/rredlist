@@ -10,6 +10,12 @@ rredlist_ua <- function() {
 }
 
 rr_GET <- function(path, key = NULL, query = list(), ...) {
+  # Extract secret API query arguments
+  args <- list(...)
+  query$latest <- args$latest
+  query$scope_code <- args$scope_code
+  query$year_published <- args$year_published
+
   cli <- crul::HttpClient$new(
     url = paste(rr_base(), space(path), sep = "/"),
     opts = list(useragent = rredlist_ua()),

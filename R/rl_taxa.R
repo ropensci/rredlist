@@ -1,3 +1,34 @@
+#' SIS ID assessment summary
+#'
+#' Get an assessment summary for a particular taxonomic entity based on its ID
+#' number from the [IUCN Species Information Service
+#' (SIS)](https://www.iucnredlist.org/assessment/sis).
+#'
+#' @export
+#' @param id (integer) The SIS ID of the taxonomic entity to look up.
+#' @template all
+#' @template info
+#' @family taxa
+#' @examples \dontrun{
+#' # Get assessment summary for species
+#' ex1 <- rl_sis(id = 9404)
+#' nrow(ex1$assessments)
+#' }
+rl_sis <- function(id, key = NULL, parse = TRUE, ...) {
+  assert_is(parse, "logical")
+
+  rl_parse(rl_sis_(id, key, ...), parse)
+}
+
+#' @export
+#' @rdname rl_sis
+rl_sis_ <- function(id, key = NULL, ...) {
+  assert_is(key, "character")
+  assert_is(id, c("integer", "numeric"))
+
+  rr_GET(path <- paste("taxa/sis", id, sep = "/"), key, ...)
+}
+
 #' Species assessment summary
 #'
 #' Get an assessment summary for a particular species (i.e., Latin binomial) or

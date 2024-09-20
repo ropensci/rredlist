@@ -88,6 +88,7 @@ Taxa:
 \code{\link{rl_family}()},
 \code{\link{rl_kingdom}()},
 \code{\link{rl_order}()},
-\code{\link{rl_phylum}()}
+\code{\link{rl_phylum}()},
+\code{\link{rl_sis}()}
 }
 \concept{taxa}
