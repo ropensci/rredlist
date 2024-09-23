@@ -5,7 +5,7 @@
 \alias{rl_sis_}
 \title{SIS ID assessment summary}
 \usage{
-rl_sis(id, key = NULL, latest = FALSE, parse = TRUE, ...)
+rl_sis(id, key = NULL, parse = TRUE, ...)
 
 rl_sis_(id, key = NULL, ...)
 }

@@ -15,7 +15,7 @@
 #' ex1 <- rl_sis(id = 9404)
 #' nrow(ex1$assessments)
 #' }
-rl_sis <- function(id, key = NULL, latest = FALSE, parse = TRUE, ...) {
+rl_sis <- function(id, key = NULL, parse = TRUE, ...) {
   assert_is(parse, "logical")
 
   rl_parse(rl_sis_(id, key, ...), parse)
@@ -52,8 +52,8 @@ rl_sis_latest <- function(id, key = NULL, parse = TRUE, ...) {
   assert_is(parse, "logical")
 
   tmp <- rl_sis(id, key, ...)$assessments
-  tmp_sub <- subset(tmp, latest)
-  rl_assessment(id = tmp$assessment_id[1], key = key, parse = parse, ...)
+  tmp_sub <- subset(tmp, tmp$latest)
+  rl_assessment(id = tmp_sub$assessment_id[1], key = key, parse = parse, ...)
 }
 
 #' Species assessment summary
@@ -165,8 +165,8 @@ rl_species_latest <- function(genus, species, infra = NULL,
 
   tmp <- rl_species(genus, species, infra = infra,
                     subpopulation = subpopulation, key, ...)$assessments
-  tmp_sub <- subset(tmp, latest)
-  rl_assessment(id = tmp$assessment_id[1], key = key, parse = parse, ...)
+  tmp_sub <- subset(tmp, tmp$latest)
+  rl_assessment(id = tmp_sub$assessment_id[1], key = key, parse = parse, ...)
 }
 
 #' Family assessment summary
