@@ -78,6 +78,8 @@ Assessments by taxa:
 \code{\link{rl_kingdom}()},
 \code{\link{rl_phylum}()},
 \code{\link{rl_sis}()},
-\code{\link{rl_species}()}
+\code{\link{rl_sis_latest}()},
+\code{\link{rl_species}()},
+\code{\link{rl_species_latest}()}
 }
 \concept{taxa}

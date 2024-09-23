@@ -15,7 +15,7 @@
 #' ex1 <- rl_sis(id = 9404)
 #' nrow(ex1$assessments)
 #' }
-rl_sis <- function(id, key = NULL, parse = TRUE, ...) {
+rl_sis <- function(id, key = NULL, latest = FALSE, parse = TRUE, ...) {
   assert_is(parse, "logical")
 
   rl_parse(rl_sis_(id, key, ...), parse)
@@ -30,10 +30,36 @@ rl_sis_ <- function(id, key = NULL, ...) {
   rr_GET(path <- paste("taxa/sis", id, sep = "/"), key, ...)
 }
 
+#' SIS ID latest assessment
+#'
+#' Get the latest assessment for a particular taxonomic entity based on its ID
+#' number from the [IUCN Species Information Service
+#' (SIS)](https://www.iucnredlist.org/assessment/sis). Wraps [rl_sis()] and
+#' [rl_assessment()].
+#'
+#' @export
+#' @param id (integer) The SIS ID of the taxonomic entity to look up.
+#' @template all
+#' @template curl
+#' @template info
+#' @family taxa
+#' @examples \dontrun{
+#' # Get latest assessment for species
+#' ex1 <- rl_sis_latest(id = 9404)
+#' ex1$stresses
+#' }
+rl_sis_latest <- function(id, key = NULL, parse = TRUE, ...) {
+  assert_is(parse, "logical")
+
+  tmp <- rl_sis(id, key, ...)$assessments
+  tmp_sub <- subset(tmp, latest)
+  rl_assessment(id = tmp$assessment_id[1], key = key, parse = parse, ...)
+}
+
 #' Species assessment summary
 #'
 #' Get an assessment summary for a particular species (i.e., Latin binomial) or
-#' subspecies/variety/subpopulation (i.e., Latin trinomial)
+#' subspecies/variety/subpopulation (i.e., Latin trinomial).
 #'
 #' @export
 #' @param genus (character) The genus name of the species to look up.
@@ -90,6 +116,57 @@ rl_species_ <- function(genus, species, infra = NULL, subpopulation = NULL,
          query = list(genus_name = genus, species_name = species,
                       infra_name = infra, subpopulation_name = subpopulation),
          ...)
+}
+
+#' Species latest assessment
+#'
+#' Get the latest assessment for a particular species (i.e., Latin binomial) or
+#' subspecies/variety/subpopulation (i.e., Latin trinomial). Wraps
+#' [rl_species()] and [rl_assessment()].
+#'
+#' @export
+#' @param genus (character) The genus name of the species to look up.
+#' @param species (character) The species epithet of the species to look up.
+#' @param infra (character) An optional name of the subspecies or variety to
+#'   look up.
+#' @param subpopulation (character) An optional name of the geographically
+#'   separate subpopulation to look up.
+#' @details Geographically separate subpopulations of a species are defined as
+#'   those populations that are so isolated from others of the same species that
+#'   it is considered extremely unlikely that there is any genetic interchange.
+#'   In general, listings of such subpopulations are restricted to those that
+#'   have been isolated for a long period of time.
+#'
+#'   Assessments of subspecies, varieties, and geographically separate
+#'   subpopulations must adhere to the same standards as for species
+#'   assessments. However, these assessments are only included provided there is
+#'   a global assessment of the species as a whole.
+#'
+#'   Infraspecific ranks such as formas, subvarieties, cultivars, etc are not
+#'   included in the Red List.
+#' @template all
+#' @template curl
+#' @template info
+#' @family taxa
+#' @examples \dontrun{
+#' # Get latest assessment for species
+#' ex1 <- rl_species_latest(genus = "Fratercula", species = "arctica")
+#' ex1$stresses
+#'
+#' # Get latest assessment for subspecies
+#' ex2 <- rl_species_latest(genus = "Gorilla", species = "gorilla",
+#'                          infra = "gorilla")
+#' ex2$stresses
+#' }
+rl_species_latest <- function(genus, species, infra = NULL,
+                              subpopulation = NULL,
+                              key = NULL, parse = TRUE, ...) {
+  assert_is(parse, "logical")
+
+  tmp <- rl_species(genus, species, infra = infra,
+                    subpopulation = subpopulation, key, ...)$assessments
+  tmp_sub <- subset(tmp, latest)
+  rl_assessment(id = tmp$assessment_id[1], key = key, parse = parse, ...)
 }
 
 #' Family assessment summary

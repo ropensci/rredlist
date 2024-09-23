@@ -53,7 +53,8 @@ rl_realms_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
 #' Scope assessment summary
 #'
 #' Return assessments for a given geographical assessment scope (e.g., Global,
-#' Mediterranean).
+#' Mediterranean). This is similar to the `region` argument of the old Red List
+#' API and old versions of rredlist.
 #'
 #' @export
 #' @param code (character) The code of the scope to look up. If not supplied, a

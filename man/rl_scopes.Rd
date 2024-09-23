@@ -58,7 +58,8 @@ case json as character string is returned.
 }
 \description{
 Return assessments for a given geographical assessment scope (e.g., Global,
-Mediterranean).
+Mediterranean). This is similar to the \code{region} argument of the old Red List
+API and old versions of rredlist.
 }
 \examples{
 \dontrun{
