@@ -9,7 +9,8 @@
 #'       latest assessment for each taxon.
 #'     \item \code{scope_code}: (integer) Set this to return only assessments
 #'       from a particular [scope][rl_scopes()] (e.g., `1` for Global, `2` for
-#'       Europe).
+#'       Europe). This is similar to the `region` argument of the old Red List
+#'       API and old versions of rredlist.
 #'   }
 #'   Also supports any [curl options][curl::curl_options()] passed to the GET
 #'   request via \code{\link[crul]{HttpClient}}.

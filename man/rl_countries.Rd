@@ -54,7 +54,8 @@ assessments from a given year.
 latest assessment for each taxon.
 \item \code{scope_code}: (integer) Set this to return only assessments
 from a particular \link[=rl_scopes]{scope} (e.g., \code{1} for Global, \code{2} for
-Europe).
+Europe). This is similar to the \code{region} argument of the old Red List
+API and old versions of rredlist.
 }
 Also supports any \link[curl:curl_options]{curl options} passed to the GET
 request via \code{\link[crul]{HttpClient}}.}
