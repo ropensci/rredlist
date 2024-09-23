@@ -7,6 +7,7 @@
 #' @export
 #' @param id (integer) The SIS ID of the taxonomic entity to look up.
 #' @template all
+#' @template curl
 #' @template info
 #' @family taxa
 #' @examples \dontrun{
@@ -55,6 +56,7 @@ rl_sis_ <- function(id, key = NULL, ...) {
 #'   Infraspecific ranks such as formas, subvarieties, cultivars, etc are not
 #'   included in the Red List.
 #' @template all
+#' @template curl
 #' @template info
 #' @family taxa
 #' @examples \dontrun{
@@ -98,6 +100,7 @@ rl_species_ <- function(genus, species, infra = NULL, subpopulation = NULL,
 #' @param family (character) The name of the family to look up. If not supplied,
 #'   a list of all family names will be returned.
 #' @template all
+#' @template filters
 #' @template info
 #' @template page
 #' @family taxa
@@ -147,6 +150,7 @@ rl_family_ <- function(family = NULL, key = NULL, all = TRUE, page = 1,
 #' @param order (character) The name of the order to look up. If not supplied, a
 #'   list of all order names will be returned.
 #' @template all
+#' @template filters
 #' @template info
 #' @template page
 #' @family taxa
@@ -196,6 +200,7 @@ rl_order_ <- function(order = NULL, key = NULL, all = TRUE, page = 1,
 #' @param class (character) The name of the class to look up. If not supplied, a
 #'   list of all class names will be returned.
 #' @template all
+#' @template filters
 #' @template info
 #' @template page
 #' @family taxa
@@ -245,6 +250,7 @@ rl_class_ <- function(class = NULL, key = NULL, all = TRUE, page = 1,
 #' @param phylum (character) The name of the phylum to look up. If not supplied,
 #'   a list of all phylum names will be returned.
 #' @template all
+#' @template filters
 #' @template info
 #' @template page
 #' @family taxa
@@ -294,6 +300,7 @@ rl_phylum_ <- function(phylum = NULL, key = NULL, all = TRUE, page = 1,
 #' @param kingdom (character) The name of the kingdom to look up. If not
 #'   supplied, a list of all kingdom names will be returned.
 #' @template all
+#' @template filters
 #' @template info
 #' @template page
 #' @family taxa
@@ -341,6 +348,7 @@ rl_kingdom_ <- function(kingdom = NULL, key = NULL, all = TRUE, page = 1,
 #'
 #' @export
 #' @template all
+#' @template curl
 #' @template info
 #' @template page
 #' @family taxa
@@ -384,6 +392,7 @@ rl_extinct_ <- function(key = NULL, all = TRUE, page = 1, quiet = FALSE, ...) {
 #'
 #' @export
 #' @template all
+#' @template curl
 #' @template info
 #' @template page
 #' @family taxa

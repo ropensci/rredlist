@@ -6,6 +6,7 @@
 #' @param code (character) The code of the growth form to look up. If not
 #'   supplied, a list of all growth forms will be returned.
 #' @template all
+#' @template filters
 #' @template info
 #' @template page
 #' @examples \dontrun{

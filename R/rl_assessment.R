@@ -5,6 +5,7 @@
 #' @export
 #' @param id (integer) The unique identifier of the assessment.
 #' @template all
+#' @template curl
 #' @template info
 #' @examples \dontrun{
 #' # Get assessment details for Fratercula arctica

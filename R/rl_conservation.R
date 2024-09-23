@@ -9,6 +9,7 @@
 #' @param code (character) The code of the conservation action to look up. If
 #'   not supplied, a list of all conservation actions will be returned.
 #' @template all
+#' @template filters
 #' @template info
 #' @template page
 #' @family conservation
@@ -61,6 +62,7 @@ rl_actions_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
 #' @param code (character) The code of the research type to look up. If not
 #'   supplied, a list of all research types will be returned.
 #' @template all
+#' @template filters
 #' @template info
 #' @template page
 #' @family conservation

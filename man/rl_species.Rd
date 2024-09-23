@@ -40,18 +40,8 @@ separate subpopulation to look up.}
 \item{parse}{(logical) Whether to parse the output to list (\code{FALSE}) or,
 where possible, data.frame (\code{TRUE}). Default: \code{TRUE}}
 
-\item{...}{Curl options passed to \code{\link[crul]{HttpClient}}. Also
-includes the following arguments that are supported by most of the API
-endpoints which return lists of assessments (refer to the \href{https://api.iucnredlist.org/api-docs/index.html}{API docs} for more
-information):
-\itemize{
-\item \code{year_published}: (integer) Set this to return only
-assessments from a given year.
-\item \code{latest}: (logical) Set this to \code{TRUE} to return only the
-latest assessment for each taxon.
-\item \code{scope_code}: (integer) Set this to return only assessments
-from a particular scope (e.g., Global, Europe).
-}}
+\item{...}{\link[curl:curl_options]{Curl options} passed to the GET request via
+\code{\link[crul]{HttpClient}}.}
 }
 \value{
 A list unless using a function with a trailing underscore, in which
@@ -92,7 +82,7 @@ nrow(ex2$assessments)
 API docs at \url{https://api.iucnredlist.org/}.
 }
 \seealso{
-Taxa:
+Assessments by taxa:
 \code{\link{rl_class}()},
 \code{\link{rl_extinct}()},
 \code{\link{rl_extinct_wild}()},

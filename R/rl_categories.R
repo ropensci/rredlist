@@ -12,6 +12,7 @@
 #' @param code (character) The code of the Red List category to look up. If not
 #'   supplied, a list of all categories will be returned.
 #' @template all
+#' @template filters
 #' @template info
 #' @template page
 #' @examples \dontrun{
@@ -59,6 +60,7 @@ rl_categories_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
 #'
 #' @export
 #' @template all
+#' @template curl
 #' @template info
 #' @examples \dontrun{
 #' # Get list of Green Status assessments

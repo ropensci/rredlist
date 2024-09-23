@@ -10,6 +10,7 @@
 #' @param code (character) The code of the threat to look up. If not supplied, a
 #'   list of all threats will be returned.
 #' @template all
+#' @template filters
 #' @template info
 #' @template page
 #' @family threats
@@ -61,6 +62,7 @@ rl_threats_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
 #' @param code (character) The code of the stress to look up. If not supplied, a
 #'   list of all stresses will be returned.
 #' @template all
+#' @template filters
 #' @template info
 #' @template page
 #' @family threats
@@ -112,6 +114,7 @@ rl_stresses_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
 #' @param code (character) The code of the use and trade to look up. If not
 #'   supplied, a list of all uses and trades will be returned.
 #' @template all
+#' @template filters
 #' @template info
 #' @template page
 #' @family threats
