@@ -27,7 +27,7 @@ rl_sis_ <- function(id, key = NULL, ...) {
   assert_is(key, "character")
   assert_is(id, c("integer", "numeric"))
 
-  rr_GET(path <- paste("taxa/sis", id, sep = "/"), key, ...)
+  rr_GET(paste("taxa/sis", id, sep = "/"), key, ...)
 }
 
 #' SIS ID latest assessment
