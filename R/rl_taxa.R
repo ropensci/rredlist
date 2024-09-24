@@ -53,6 +53,7 @@ rl_sis_latest <- function(id, key = NULL, parse = TRUE, ...) {
 
   tmp <- rl_sis(id, key, ...)$assessments
   tmp_sub <- subset(tmp, tmp$latest)
+  tmp_sub <- tmp_sub[order(tmp_sub$year_published, decreasing = TRUE), ]
   rl_assessment(id = tmp_sub$assessment_id[1], key = key, parse = parse, ...)
 }
 
@@ -166,6 +167,7 @@ rl_species_latest <- function(genus, species, infra = NULL,
   tmp <- rl_species(genus, species, infra = infra,
                     subpopulation = subpopulation, key, ...)$assessments
   tmp_sub <- subset(tmp, tmp$latest)
+  tmp_sub <- tmp_sub[order(tmp_sub$year_published, decreasing = TRUE), ]
   rl_assessment(id = tmp_sub$assessment_id[1], key = key, parse = parse, ...)
 }
 
