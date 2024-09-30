@@ -1,0 +1,166 @@
+---
+title: "Introduction to rredlist"
+author: "William Gearty"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to rredlist}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r echo=FALSE}
+library("knitr")
+library("rredlist")
+hook_output <- knitr::knit_hooks$get("output")
+knitr::knit_hooks$set(output = function(x, options) {
+   lines <- options$output.lines
+   if (is.null(lines)) {
+     return(hook_output(x, options))  # pass to default hook
+   }
+   x <- unlist(strsplit(x, "\n"))
+   more <- "..."
+   if (length(lines)==1) {        # first n lines
+     if (length(x) > lines) {
+       # truncate the output, but add ....
+       x <- c(head(x, lines), more)
+     }
+   } else {
+     x <- c(if (abs(lines[1])>1) more else NULL,
+            x[lines],
+            if (length(x)>lines[abs(length(lines))]) more else NULL
+           )
+   }
+   # paste these lines together
+   x <- paste(c(x, ""), collapse = "\n")
+   hook_output(x, options)
+ })
+
+knitr::opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+`rredlist` is an R client for the IUCN Red List API (https://api.iucnredlist.org/).
+The [IUCN Red List](https://www.iucnredlist.org/) is the world’s most comprehensive information source on the global extinction risk status of animal, fungus and plant species. This package provides access via R to the various data contained within this database which span range details, population size, habitat and ecology, use and/or trade, threats, and conservation actions.
+
+Documentation for the IUCN Red List API are available at https://api.iucnredlist.org/api-docs. **Note that use of the web API, and therefore this package, [requires authentication](#authentication).**
+
+### What `rredlist` is not
+
+1. [`redlistr`](https://cran.r-project.org/package=redlistr) is a different package for contributors to the IUCN Red List - not working with the IUCN Red List API.
+2. `rredlist` does not include support for the spatial API, described at https://apiv3.iucnredlist.org/spatial.
+
+## Installation
+
+CRAN
+
+```{r eval=FALSE}
+install.packages("rredlist")
+```
+
+Development version
+
+```{r eval=FALSE}
+# From GitHub
+remotes::install_github("ropensci/rredlist")
+
+# From r-universe
+install.packages("rredlist", repos = "https://ropensci.r-universe.dev/")
+```
+
+### API Versioning
+
+`rredlist` versions ≤ 0.7.1 tracked [version 3](https://apiv3.iucnredlist.org/) of the IUCN Red List API. `rredlist` versions ≥ 1.0.0 track version 4 of the IUCN Red List API. If you need to use version 3 of the API--and it is still functioning--you can install an old version of `rredlist` using the `remotes` package:
+
+```{r eval=FALSE}
+# From CRAN archive
+remotes::install_version("rredlist", version = "0.7.1")
+
+# From r-universe
+remotes::install_version("rredlist", version = "0.7.1",
+                         repos = "https://ropensci.r-universe.dev/")
+```
+
+## Authentication
+
+IUCN requires you to get your own API key, an alphanumeric string that you need to send in every request. There's a helper function in the package helping you getting it at https://api.iucnredlist.org/users/sign_up and storing it. Once you store this key, the functions in `rredlist` will always default to using this key.
+
+```{r eval = FALSE}
+rredlist::rl_use_iucn()
+```
+
+**Keep this key private.** You can pass the key in to each function via the `key` parameter, but it's better to store the key either as a environment variable (`IUCN_REDLIST_KEY`) or an R option (`iucn_redlist_key`) - we recommend using the former option.
+
+Note that you can no longer generate a new API key for version 3 of the API.
+
+## High level interface
+
+```{r}
+library("rredlist")
+```
+
+High level functions do the HTTP request and parse data to a list for ease
+of downstream use. The high level functions have no underscore on the end
+of the function name, e.g., `rl_species()`. Most of them return long lists containing lots of different information:
+
+```{r output.lines=1:10}
+rl_species("Fratercula", "arctica")
+```
+
+By default, these high level functions will also parse the data to a data.frame, when possible:
+
+```{r output.lines=1:10}
+rl_species("Fratercula", "arctica")$assessments
+```
+
+Likely a bit faster is to parse to a list only, and not take the extra data.frame parsing time:
+
+```{r output.lines=1:10}
+rl_species("Fratercula", "arctica", parse = FALSE)$assessments
+```
+
+For even more speed, use the low level package interface.
+
+## Low level interface
+
+The parsing to data.frame in the high level functions does take extra time. The low level functions
+only do the HTTP request, and give back JSON without doing any more parsing. The low level functions DO have an underscore on the end of the function name, e.g., `rl_species_()`:
+
+```{r}
+rl_species_("Fratercula", "arctica")
+```
+
+To consume this JSON, you can use [`jsonlite`](https://jeroen.r-universe.dev/jsonlite):
+
+```{r output.lines=1:10}
+library("jsonlite")
+jsonlite::fromJSON(rl_species_("Fratercula", "arctica"))
+```
+
+## Usage best practice
+
+### Citing the IUCN Red List API
+
+Use the function `rl_citation()`:
+
+```{r}
+rl_citation()
+```
+
+We'd also really appreciate it if you could cite your use of this package:
+
+```{r}
+citation("rredlist")
+```
+
+### Rate Limiting
+
+From the IUCN folks: "Too many frequent calls, or too many calls per day
+might get your access blocked temporarily. If you're a heavy API user, the
+Red List Unit asked that you contact them, as there might be better options.
+They suggest a 2-second delay between your calls if you plan to make a
+lot of calls."

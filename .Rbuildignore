@@ -12,5 +12,8 @@ man-roxygen
 Makefile
 ^codemeta\.json$
 ^LICENSE\.md$
-vignettes/rredlist.Rmd
+vignettes/precompile.R
+vignettes/source/rredlist.Rmd
 ^CRAN-SUBMISSION$
+^doc$
+^Meta$

@@ -35,8 +35,10 @@ Imports:
 Suggests:
     spelling,
     testthat,
-    vcr (>= 0.4.0)
+    vcr (>= 0.4.0),
+    knitr
 RoxygenNote: 7.3.2
+VignetteBuilder: knitr
 X-schema.org-applicationCategory: Biodiversity
 X-schema.org-keywords: IUCN, biodiversity, API, web-services, traits, habitat, species, conservation
 X-schema.org-isPartOf: https://ropensci.org
