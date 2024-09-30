@@ -52,8 +52,12 @@ rl_sis_latest <- function(id, key = NULL, parse = TRUE, ...) {
   assert_is(parse, "logical")
 
   tmp <- rl_sis(id, key, ...)$assessments
-  tmp_sub <- subset(tmp, tmp$latest)
-  tmp_sub <- tmp_sub[order(tmp_sub$year_published, decreasing = TRUE), ]
+  if (any(tmp$latest, na.rm = TRUE)) {
+    tmp_sub <- subset(tmp, tmp$latest)
+  }
+  tmp_sub$year_published <- as.numeric(as.character(tmp_sub$year_published))
+  ord <- order(tmp_sub$year_published, decreasing = TRUE)
+  tmp_sub <- tmp_sub[ord, , drop = FALSE]
   rl_assessment(id = tmp_sub$assessment_id[1], key = key, parse = parse, ...)
 }
 
@@ -166,8 +170,12 @@ rl_species_latest <- function(genus, species, infra = NULL,
 
   tmp <- rl_species(genus, species, infra = infra,
                     subpopulation = subpopulation, key, ...)$assessments
-  tmp_sub <- subset(tmp, tmp$latest)
-  tmp_sub <- tmp_sub[order(tmp_sub$year_published, decreasing = TRUE), ]
+  if (any(tmp$latest, na.rm = TRUE)) {
+    tmp_sub <- subset(tmp, tmp$latest)
+  }
+  tmp_sub$year_published <- as.numeric(as.character(tmp_sub$year_published))
+  ord <- order(tmp_sub$year_published, decreasing = TRUE)
+  tmp_sub <- tmp_sub[ord, , drop = FALSE]
   rl_assessment(id = tmp_sub$assessment_id[1], key = key, parse = parse, ...)
 }
 
