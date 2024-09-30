@@ -15,6 +15,7 @@
 #' @template filters
 #' @template info
 #' @template page
+#' @family threats
 #' @examples \dontrun{
 #' # Get all Red List categories
 #' rl_categories()
@@ -62,6 +63,7 @@ rl_categories_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
 #' @template all
 #' @template curl
 #' @template info
+#' @family groups
 #' @examples \dontrun{
 #' # Get list of Green Status assessments
 #' rl_green()

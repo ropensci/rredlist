@@ -9,6 +9,7 @@
 #' @template filters
 #' @template info
 #' @template page
+#' @family groups
 #' @examples \dontrun{
 #' # Get list of all comprehensive groups
 #' rl_comp_groups()

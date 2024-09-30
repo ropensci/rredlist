@@ -1,12 +1,20 @@
 # rredlist (development version)
 
-rredlist 0.7.1
-===================
+This new major version of `rredlist` tracks the development of the IUCN Red List API. **The API has been upgraded to v4 and this R package has been updated accordingly.** Note that nearly all functionality of the package has changed:
+
+- Most functionality now revolves around retrieving individual or lists of assessments rather than species
+- Functions have been added, removed, and renamed accordingly; all existing endpoints of the new API are covered
+- The structure of the returned data for most functions has changed, reflecting the change in the structure of the API
+
+**Users will need to generate a new API key to use the new version of the API (see `rl_use_iucn()`).**
+
+**This package no longer supports v3 of the IUCN Red List API.** Older versions of the package may be installed if the old version of the API is needed.
+
+# rredlist 0.7.1
 
 William Gearty is now the maintainer of rredlist
 
-rredlist 0.7.0
-===================
+# rredlist 0.7.0
 
 ### MINOR IMPROVEMENTS
 
@@ -15,8 +23,7 @@ rredlist 0.7.0
 * readme improvements (#42)
 * change base url for Red List API to https from http
 
-rredlist 0.6.0
-===================
+# rredlist 0.6.0
 
 ### MINOR IMPROVEMENTS
 
@@ -24,8 +31,7 @@ rredlist 0.6.0
 * fail with useful message when NA's passed to parameters in package functions (#38)
 
 
-rredlist 0.5.0
-===================
+# rredlist 0.5.0
 
 ### NEW FEATURES 
 
@@ -40,8 +46,7 @@ rredlist 0.5.0
 
 
 
-rredlist 0.4.0
-==============
+# rredlist 0.4.0
 
 ### NEW FEATURES
 
@@ -63,8 +68,7 @@ names instead of IDs because IDs can change through time
 
 
 
-rredlist 0.3.0
-==============
+# rredlist 0.3.0
 
 ### NEW FEATURES
 
@@ -90,8 +94,7 @@ API key not required for those methods
 * More thorough test suite
 
 
-rredlist 0.2.0
-==============
+# rredlist 0.2.0
 
 ### NEW FEATURES
 
@@ -112,8 +115,7 @@ that included taxonomic names weren't being processed correctly. It
 is fixed now (#11)
 
 
-rredlist 0.1.0
-==============
+# rredlist 0.1.0
 
 ### NEW FEATURES
 

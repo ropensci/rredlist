@@ -78,3 +78,11 @@ rl_comp_groups('seasnakes')
 \references{
 API docs at \url{https://api.iucnredlist.org/}.
 }
+\seealso{
+Assessments for specific sets of taxa
+\code{\link{rl_extinct}()},
+\code{\link{rl_extinct_wild}()},
+\code{\link{rl_green}()},
+\code{\link{rl_growth_forms}()}
+}
+\concept{groups}

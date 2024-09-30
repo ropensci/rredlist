@@ -6,6 +6,8 @@
 \alias{rredlist}
 \title{rredlist: 'IUCN' Red List Client}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 'IUCN' Red List (\url{https://api.iucnredlist.org/}) client. The 'IUCN' Red List is a global list of threatened and endangered species. Functions cover all of the Red List 'API' routes. An 'API' key is required.
 }
 \section{Authentication}{

@@ -72,8 +72,6 @@ API docs at \url{https://api.iucnredlist.org/}.
 }
 \seealso{
 Assessments by taxa:
-\code{\link{rl_extinct}()},
-\code{\link{rl_extinct_wild}()},
 \code{\link{rl_family}()},
 \code{\link{rl_kingdom}()},
 \code{\link{rl_order}()},

@@ -438,7 +438,7 @@ rl_kingdom_ <- function(kingdom = NULL, key = NULL, all = TRUE, page = 1,
 #' @template curl
 #' @template info
 #' @template page
-#' @family taxa
+#' @family groups
 #' @examples \dontrun{
 #' ex1 <- rl_extinct()
 #' nrow(ex1$assessments)
@@ -482,7 +482,7 @@ rl_extinct_ <- function(key = NULL, all = TRUE, page = 1, quiet = FALSE, ...) {
 #' @template curl
 #' @template info
 #' @template page
-#' @family taxa
+#' @family groups
 #' @examples \dontrun{
 #' ex1 <- rl_extinct_wild()
 #' nrow(ex1$assessments)

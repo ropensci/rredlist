@@ -53,16 +53,10 @@ nrow(ex1$assessments)
 API docs at \url{https://api.iucnredlist.org/}.
 }
 \seealso{
-Assessments by taxa:
-\code{\link{rl_class}()},
+Assessments for specific sets of taxa
+\code{\link{rl_comp_groups}()},
 \code{\link{rl_extinct}()},
-\code{\link{rl_family}()},
-\code{\link{rl_kingdom}()},
-\code{\link{rl_order}()},
-\code{\link{rl_phylum}()},
-\code{\link{rl_sis}()},
-\code{\link{rl_sis_latest}()},
-\code{\link{rl_species}()},
-\code{\link{rl_species_latest}()}
+\code{\link{rl_green}()},
+\code{\link{rl_growth_forms}()}
 }
-\concept{taxa}
+\concept{groups}

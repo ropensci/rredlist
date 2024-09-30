@@ -10,6 +10,7 @@
 #' @template filters
 #' @template info
 #' @template page
+#' @family threats
 #' @examples \dontrun{
 #' # Get list of all population trends
 #' rl_pop_trends()

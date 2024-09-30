@@ -4,5 +4,6 @@ list(
                          habitat = "Assessments by habitats and systems:",
                          geo = "Assessments by geographic regions:",
                          conservation = "Assessments by conservation actions or research needed:",
-                         threats = "Assessments by threats, stresses, or use/trade:")
+                         threats = "Assessments by threat details:",
+                         groups = "Assessments for specific sets of taxa")
 )

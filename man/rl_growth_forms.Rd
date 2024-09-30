@@ -78,3 +78,11 @@ rl_growth_forms("LC")
 \references{
 API docs at \url{https://api.iucnredlist.org/}.
 }
+\seealso{
+Assessments for specific sets of taxa
+\code{\link{rl_comp_groups}()},
+\code{\link{rl_extinct}()},
+\code{\link{rl_extinct_wild}()},
+\code{\link{rl_green}()}
+}
+\concept{groups}

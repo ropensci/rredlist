@@ -76,7 +76,9 @@ rl_threats("5_1_1")
 API docs at \url{https://api.iucnredlist.org/}.
 }
 \seealso{
-Assessments by threats, stresses, or use/trade:
+Assessments by threat details:
+\code{\link{rl_categories}()},
+\code{\link{rl_pop_trends}()},
 \code{\link{rl_stresses}()},
 \code{\link{rl_use_and_trade}()}
 }

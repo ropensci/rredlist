@@ -84,3 +84,11 @@ rl_categories("VU")
 \references{
 API docs at \url{https://api.iucnredlist.org/}.
 }
+\seealso{
+Assessments by threat details:
+\code{\link{rl_pop_trends}()},
+\code{\link{rl_stresses}()},
+\code{\link{rl_threats}()},
+\code{\link{rl_use_and_trade}()}
+}
+\concept{threats}
