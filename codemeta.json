@@ -2,19 +2,19 @@
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "rredlist",
-  "description": "'IUCN' Red List (<http://apiv3.iucnredlist.org/api/v3/docs>) client. The 'IUCN' Red List is a global list of threatened and endangered species. Functions cover all of the Red List 'API' routes. An 'API' key is required.",
+  "description": "'IUCN' Red List (<https://api.iucnredlist.org/>) client. The 'IUCN' Red List is a global list of threatened and endangered species. Functions cover all of the Red List 'API' routes. An 'API' key is required.",
   "name": "rredlist: 'IUCN' Red List Client",
   "relatedLink": "https://docs.ropensci.org/rredlist/",
   "codeRepository": "https://github.com/ropensci/rredlist",
   "issueTracker": "https://github.com/ropensci/rredlist/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.7.1",
+  "version": "0.7.1.9000",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.2.2 (2022-10-31 ucrt)",
+  "runtimePlatform": "R version 4.4.1 (2024-06-14 ucrt)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -60,6 +60,18 @@
   "softwareSuggestions": [
     {
       "@type": "SoftwareApplication",
+      "identifier": "spelling",
+      "name": "spelling",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=spelling"
+    },
+    {
+      "@type": "SoftwareApplication",
       "identifier": "testthat",
       "name": "testthat",
       "provider": {
@@ -82,6 +94,18 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=vcr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "knitr",
+      "name": "knitr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=knitr"
     }
   ],
   "softwareRequirements": {
@@ -116,8 +140,8 @@
   "applicationCategory": "Biodiversity",
   "isPartOf": "https://ropensci.org",
   "keywords": ["IUCN", "biodiversity", "API", "web-services", "traits", "habitat", "species", "conservation", "api-wrapper", "rstats", "iucn-red-list", "iucn", "r", "r-package", "taxize"],
-  "fileSize": "5245.763KB",
+  "fileSize": "4448.837KB",
   "releaseNotes": "https://github.com/ropensci/rredlist/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/rredlist/blob/master/README.md",
-  "contIntegration": ["https://github.com/ropensci/rredlist/actions?query=workflow%3AR-check", "https://codecov.io/github/ropensci/rredlist?branch=master"]
+  "contIntegration": ["https://github.com/ropensci/rredlist/actions/workflows/R-check.yml", "https://codecov.io/github/ropensci/rredlist?branch=master"]
 }
