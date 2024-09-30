@@ -36,7 +36,8 @@ Suggests:
     spelling,
     testthat,
     vcr (>= 0.4.0),
-    knitr
+    knitr,
+    rmarkdown
 RoxygenNote: 7.3.2
 VignetteBuilder: knitr
 X-schema.org-applicationCategory: Biodiversity

@@ -13,8 +13,9 @@ Makefile
 ^codemeta\.json$
 ^LICENSE\.md$
 vignettes/precompile.R
-vignettes/source/rredlist.Rmd
+^vignettes/source$
 ^CRAN-SUBMISSION$
 ^doc$
 ^Meta$
 ^docs$
+^_pkgdown\.yml$

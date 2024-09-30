@@ -1,0 +1,7 @@
+navbar:
+  components:
+    intro:
+      text: Get started
+      href: articles/rredlist.html
+  structure:
+    left: [intro, reference, news]

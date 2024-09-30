@@ -1,5 +1,4 @@
 Biogeographical
-Conservations
 FAO
 IUCN
 Infraspecific
@@ -10,6 +9,10 @@ Neotropical
 Palearctic
 README
 Redlist
+Rmd
+VignetteEncoding
+VignetteEngine
+VignetteIndexEntry
 acknowledgement
 api
 apiv
@@ -26,10 +29,12 @@ io
 iucm
 iucnredlist
 json
+knitr
+precompile
 programatically
 readme
 redlist
-redlistr
+rmarkdown
 rofooter
 ropensci
 rstudio
