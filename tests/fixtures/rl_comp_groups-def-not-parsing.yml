@@ -1,0 +1,32 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/comprehensive_groups/?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '3895'
+      content-type: application/json
+      etag: W/"52ad9017e209082759612281123cc097"
+      x-request-id: eab55219-d74a-43d1-97ba-6d38bc5edc85
+      x-runtime: '0.012206'
+      date: Tue, 17 Sep 2024 20:56:43 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"comprehensive_group":[{"high":true,"comp":true,"name":"amphibians","higher_name":"amphibians"},{"high":false,"comp":true,"name":"angelfishes","higher_name":"selected_bony_fishes"},{"high":true,"comp":true,"name":"birds","higher_name":"birds"},{"high":false,"comp":true,"name":"blennies","higher_name":"selected_bony_fishes"},{"high":false,"comp":true,"name":"butterfly_fishes","higher_name":"selected_bony_fishes"},{"high":false,"comp":true,"name":"cacti","higher_name":"selected_dicots"},{"high":false,"comp":true,"name":"chameleons","higher_name":"selected_reptiles"},{"high":false,"comp":true,"name":"cone_snails","higher_name":"selected_gastropods"},{"high":false,"comp":true,"name":"conifers","higher_name":"conifers"},{"high":false,"comp":true,"name":"crocodiles_and_alligators","higher_name":"selected_reptiles"},{"high":false,"comp":true,"name":"cycads","higher_name":"cycads"},{"high":false,"comp":true,"name":"fw_caridean_shrimps","higher_name":"selected_crustaceans"},{"high":false,"comp":true,"name":"fw_crabs","higher_name":"selected_crustaceans"},{"high":false,"comp":true,"name":"fw_crayfish","higher_name":"selected_crustaceans"},{"high":false,"comp":true,"name":"groupers","higher_name":"selected_bony_fishes"},{"high":false,"comp":true,"name":"hagfishes","higher_name":null},{"high":false,"comp":true,"name":"lobsters","higher_name":"selected_crustaceans"},{"high":false,"comp":true,"name":"magnolias","higher_name":"selected_dicots"},{"high":true,"comp":true,"name":"mammals","higher_name":"mammals"},{"high":false,"comp":true,"name":"mangrove_plants","higher_name":null},{"high":false,"comp":true,"name":"marine_turtles","higher_name":"selected_reptiles"},{"high":false,"comp":true,"name":"pufferfishes","higher_name":"selected_bony_fishes"},{"high":false,"comp":true,"name":"reef_building_corals","higher_name":"reef_forming_corals"},{"high":false,"comp":true,"name":"seabreams_porgies_picarels","higher_name":"selected_bony_fishes"},{"high":false,"comp":true,"name":"seagrasses","higher_name":null},{"high":false,"comp":true,"name":"seasnakes","higher_name":"selected_reptiles"},{"high":false,"comp":true,"name":"sharks_and_rays","higher_name":"sharks_and_rays"},{"high":false,"comp":true,"name":"sturgeons","higher_name":"selected_bony_fishes"},{"high":false,"comp":true,"name":"surgeonfishes","higher_name":"selected_bony_fishes"},{"high":false,"comp":true,"name":"tarpons_and_ladyfishes","higher_name":"selected_bony_fishes"},{"high":false,"comp":true,"name":"tunas_and_billfishes","higher_name":"selected_bony_fishes"},{"high":false,"comp":true,"name":"wrasses_and_parrotfishes","higher_name":"selected_bony_fishes"},{"high":true,"comp":false,"name":"arachnids","higher_name":null},{"high":true,"comp":false,"name":"brown_algae","higher_name":null},{"high":true,"comp":false,"name":"corals","higher_name":null},{"high":true,"comp":false,"name":"crustaceans","higher_name":null},{"high":true,"comp":false,"name":"fernes_and_allies","higher_name":null},{"high":true,"comp":false,"name":"fishes","higher_name":null},{"high":true,"comp":false,"name":"flowering_plants","higher_name":null},{"high":true,"comp":false,"name":"green_algae","higher_name":null},{"high":true,"comp":false,"name":"gymnosperms","higher_name":null},{"high":true,"comp":false,"name":"horseshoe_crabs","higher_name":null},{"high":true,"comp":false,"name":"insects","higher_name":null},{"high":true,"comp":false,"name":"lichens","higher_name":null},{"high":true,"comp":false,"name":"molluscs","higher_name":null},{"high":true,"comp":false,"name":"mosses","higher_name":null},{"high":true,"comp":false,"name":"mushrooms","higher_name":null},{"high":true,"comp":false,"name":"others","higher_name":null},{"high":true,"comp":false,"name":"red_algae","higher_name":null},{"high":true,"comp":false,"name":"reptiles","higher_name":null},{"high":true,"comp":false,"name":"velvet_worms","higher_name":null}]}'
+  recorded_at: 2024-09-17 20:56:44 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

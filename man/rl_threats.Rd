@@ -3,55 +3,83 @@
 \name{rl_threats}
 \alias{rl_threats}
 \alias{rl_threats_}
-\title{Get species threats by taxon name, IUCN id, and region}
+\title{Threat assessment summary}
 \usage{
 rl_threats(
-  name = NULL,
-  id = NULL,
-  region = NULL,
+  code = NULL,
   key = NULL,
   parse = TRUE,
+  all = TRUE,
+  page = 1,
+  quiet = FALSE,
   ...
 )
 
-rl_threats_(name = NULL, id = NULL, region = NULL, key = NULL, ...)
+rl_threats_(code = NULL, key = NULL, all = TRUE, page = 1, quiet = FALSE, ...)
 }
 \arguments{
-\item{name}{(character) A taxonomic name}
+\item{code}{(character) The code of the threat to look up. If not supplied, a
+list of all threats will be returned.}
 
-\item{id}{(character) An IUCN identifier}
+\item{key}{(character) An IUCN API token. See \code{\link{rl_use_iucn}}.}
 
-\item{region}{(character) A region name, see \code{\link{rl_regions}} for
-acceptable region identifiers (use the entries in the \code{identifier}
-column)}
+\item{parse}{(logical) Whether to parse the output to list (\code{FALSE}) or,
+where possible, data.frame (\code{TRUE}). Default: \code{TRUE}}
 
-\item{key}{A IUCN API token. See \code{\link{rl_use_iucn}}.}
+\item{all}{(logical) Whether to retrieve all results at once or not. If
+\code{TRUE} we do the paging internally for you and bind all of the results
+together. If \code{FALSE}, only a single page of results will be retrieved.}
 
-\item{parse}{(logical) Whether to parse to list (\code{FALSE}) or
-data.frame (\code{TRUE}). Default: \code{TRUE}}
+\item{page}{(integer/numeric) Page to get if \code{all} is \code{FALSE}. Default: 1.
+Each page returns up to 100 records. Paging is required because it's too
+much burden on a server to just "get all the data" in one request.}
 
-\item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
+\item{quiet}{(logical) Whether to suppress progress for multi-page downloads
+or not. Default: \code{FALSE} (that is, give progress). Ignored if \code{all = FALSE}.}
+
+\item{...}{Includes the following filters that are supported by the API
+endpoint (refer to the \href{https://api.iucnredlist.org/api-docs/index.html}{API docs} for more
+information):
+\itemize{
+\item \code{year_published}: (integer) Set this to return only
+assessments from a given year.
+\item \code{latest}: (logical) Set this to \code{TRUE} to return only the
+latest assessment for each taxon.
+\item \code{scope_code}: (integer) Set this to return only assessments
+from a particular \link[=rl_scopes]{scope} (e.g., \code{1} for Global, \code{2} for
+Europe). This is similar to the \code{region} argument of the old Red List
+API and old versions of rredlist.
+}
+Also supports any \link[curl:curl_options]{curl options} passed to the GET
+request via \code{\link[crul]{HttpClient}}.}
 }
 \value{
-A list, with the data in the \code{result} slot, unless using
-a function with a trailing underscore, in which case json as character
-string is returned.
+A list unless using a function with a trailing underscore, in which
+case json as character string is returned.
 }
 \description{
-Get species threats by taxon name, IUCN id, and region
+Return a list of the latest assessments which are subject to a specific
+threat (e.g., energy production and mining, climate change, and severe
+weather). This will only return assessments for the threat code specified.
+You will need to do additional requests for sub-threats (e.g., a request for
+threat code 2_1 will need additional requests for codes 2_1_1, 2_1_2, etc.).
 }
 \examples{
 \dontrun{
-rl_threats('Fratercula arctica')
-rl_threats('Fratercula arctica', region = 'europe')
-rl_threats(id = 12392)
-rl_threats(id = 22694927, region = 'europe')
-rl_threats(name = 'Abies numidica')
-rl_threats_('Fratercula arctica')
-
-rl_threats(id = 62290750)
+# Get all threats
+rl_threats()
+# Get assessment summary for intentional hunting and trapping
+rl_threats("5_1_1")
 }
 }
 \references{
-API docs at https://apiv3.iucnredlist.org/api/v3/docs
+API docs at \url{https://api.iucnredlist.org/}.
 }
+\seealso{
+Assessments by threat details:
+\code{\link{rl_categories}()},
+\code{\link{rl_pop_trends}()},
+\code{\link{rl_stresses}()},
+\code{\link{rl_use_and_trade}()}
+}
+\concept{threats}

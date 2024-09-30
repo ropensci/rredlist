@@ -1,10 +1,10 @@
 Package: rredlist
 Type: Package
 Title: 'IUCN' Red List Client
-Description: 'IUCN' Red List (<http://apiv3.iucnredlist.org/api/v3/docs>) client.
+Description: 'IUCN' Red List (<https://api.iucnredlist.org/>) client.
     The 'IUCN' Red List is a global list of threatened and endangered species.
     Functions cover all of the Red List 'API' routes. An 'API' key is required.
-Version: 0.7.1
+Version: 0.7.1.9000
 Authors@R: 
     c(person(given = "William",
              family = "Gearty",
@@ -23,8 +23,8 @@ Authors@R:
              email = "maelle.salmon@yahoo.se")
       )
 License: MIT + file LICENSE
-URL: https://github.com/ropensci/rredlist (devel)
-    https://docs.ropensci.org/rredlist/ (docs)
+URL: https://docs.ropensci.org/rredlist/,
+     https://github.com/ropensci/rredlist
 BugReports: https://github.com/ropensci/rredlist/issues
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
@@ -33,9 +33,13 @@ Imports:
     crul (>= 0.3.8),
     jsonlite (>= 1.1)
 Suggests:
+    spelling,
     testthat,
-    vcr (>= 0.4.0)
-RoxygenNote: 7.2.1
+    vcr (>= 0.4.0),
+    knitr,
+    rmarkdown
+RoxygenNote: 7.3.2
+VignetteBuilder: knitr
 X-schema.org-applicationCategory: Biodiversity
 X-schema.org-keywords: IUCN, biodiversity, API, web-services, traits, habitat, species, conservation
 X-schema.org-isPartOf: https://ropensci.org

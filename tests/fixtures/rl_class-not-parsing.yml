@@ -1,0 +1,78 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/taxa/class/Hydrozoa?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '5684'
+      content-type: application/json
+      current-page: '1'
+      etag: W/"df9e51b64adf9384fad13254bfe5b6d7"
+      link: <https://api.iucnredlist.org/api/v4/taxa/class/Hydrozoa?page=1&per_page=100>;
+        rel="first", <https://api.iucnredlist.org/api/v4/taxa/class/Hydrozoa?page=1&per_page=100>;
+        rel="last"
+      page-items: '100'
+      total-count: '28'
+      total-pages: '1'
+      x-request-id: d5a4da0e-b672-4793-b75d-6ee600784c3b
+      x-runtime: '0.492271'
+      date: Wed, 18 Sep 2024 14:57:15 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"assessments":[{"year_published":"2008","latest":false,"sis_taxon_id":132975,"url":"https://www.iucnredlist.org/species/132975/3517642","assessment_id":3517642,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"sis_taxon_id":132999,"url":"https://www.iucnredlist.org/species/132999/3530477","assessment_id":3530477,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"sis_taxon_id":133042,"url":"https://www.iucnredlist.org/species/133042/3573218","assessment_id":3573218,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"sis_taxon_id":133140,"url":"https://www.iucnredlist.org/species/133140/3598503","assessment_id":3598503,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"sis_taxon_id":133143,"url":"https://www.iucnredlist.org/species/133143/3599798","assessment_id":3599798,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"sis_taxon_id":133144,"url":"https://www.iucnredlist.org/species/133144/3600166","assessment_id":3600166,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":true,"sis_taxon_id":133276,"url":"https://www.iucnredlist.org/species/133276/3666546","assessment_id":3666546,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":true,"sis_taxon_id":133300,"url":"https://www.iucnredlist.org/species/133300/3678127","assessment_id":3678127,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"sis_taxon_id":133331,"url":"https://www.iucnredlist.org/species/133331/3693768","assessment_id":3693768,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"sis_taxon_id":133362,"url":"https://www.iucnredlist.org/species/133362/3707937","assessment_id":3707937,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"sis_taxon_id":133466,"url":"https://www.iucnredlist.org/species/133466/3758997","assessment_id":3758997,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":true,"sis_taxon_id":133536,"url":"https://www.iucnredlist.org/species/133536/3791495","assessment_id":3791495,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"sis_taxon_id":133553,"url":"https://www.iucnredlist.org/species/133553/3799492","assessment_id":3799492,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":true,"sis_taxon_id":133595,"url":"https://www.iucnredlist.org/species/133595/3820225","assessment_id":3820225,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"sis_taxon_id":133603,"url":"https://www.iucnredlist.org/species/133603/3823788","assessment_id":3823788,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":true,"sis_taxon_id":133612,"url":"https://www.iucnredlist.org/species/133612/3827924","assessment_id":3827924,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2014","latest":true,"sis_taxon_id":132975,"url":"https://www.iucnredlist.org/species/132975/54168861","assessment_id":54168861,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2014","latest":true,"sis_taxon_id":133140,"url":"https://www.iucnredlist.org/species/133140/54202675","assessment_id":54202675,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2014","latest":false,"sis_taxon_id":133331,"url":"https://www.iucnredlist.org/species/133331/54239745","assessment_id":54239745,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2014","latest":true,"sis_taxon_id":133553,"url":"https://www.iucnredlist.org/species/133553/54282868","assessment_id":54282868,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2022","latest":true,"sis_taxon_id":132999,"url":"https://www.iucnredlist.org/species/132999/179618448","assessment_id":179618448,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2022","latest":true,"sis_taxon_id":133042,"url":"https://www.iucnredlist.org/species/133042/179618755","assessment_id":179618755,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2022","latest":true,"sis_taxon_id":133143,"url":"https://www.iucnredlist.org/species/133143/179619810","assessment_id":179619810,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2022","latest":false,"sis_taxon_id":133144,"url":"https://www.iucnredlist.org/species/133144/179620187","assessment_id":179620187,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2022","latest":true,"sis_taxon_id":133362,"url":"https://www.iucnredlist.org/species/133362/179621403","assessment_id":179621403,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2022","latest":true,"sis_taxon_id":133466,"url":"https://www.iucnredlist.org/species/133466/179621708","assessment_id":179621708,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2022","latest":true,"sis_taxon_id":211665591,"url":"https://www.iucnredlist.org/species/211665591/211665605","assessment_id":211665605,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2024","latest":true,"sis_taxon_id":133144,"url":"https://www.iucnredlist.org/species/133144/254316326","assessment_id":254316326,"scopes":[{"description":{"en":"Global"},"code":"1"}]}],"filters":{"class_name":"Hydrozoa"}}'
+  recorded_at: 2024-09-18 14:57:16 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/taxa/class/Hydrozoa?page=2
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '54'
+      content-type: application/json
+      current-page: '2'
+      etag: W/"0f7b782c333f59ae07c6f644b7f023f5"
+      link: <https://api.iucnredlist.org/api/v4/taxa/class/Hydrozoa?page=1&per_page=100>;
+        rel="first", <https://api.iucnredlist.org/api/v4/taxa/class/Hydrozoa?page=1&per_page=100>;
+        rel="prev", <https://api.iucnredlist.org/api/v4/taxa/class/Hydrozoa?page=1&per_page=100>;
+        rel="last"
+      page-items: '100'
+      total-count: '28'
+      total-pages: '1'
+      x-request-id: 35a8db77-e660-4ad7-be79-5474b454eaee
+      x-runtime: '0.241069'
+      date: Wed, 18 Sep 2024 14:57:16 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"assessments":[],"filters":{"class_name":"Hydrozoa"}}'
+  recorded_at: 2024-09-18 14:57:16 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

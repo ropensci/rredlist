@@ -1,0 +1,42 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/faos/?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '1134'
+      content-type: application/json
+      etag: W/"6aceb49763b00c5576b3cfbdb4a65318"
+      x-request-id: c5c31f86-201f-49fe-b045-1c89aee59528
+      x-runtime: '0.011410'
+      date: Tue, 17 Sep 2024 21:15:17 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"faos":[{"description":{"en":"Arctic Sea"},"code":"18"},{"description":{"en":"Atlantic
+        - northwest"},"code":"21"},{"description":{"en":"Atlantic - northeast"},"code":"27"},{"description":{"en":"Atlantic
+        - western central"},"code":"31"},{"description":{"en":"Atlantic - eastern
+        central"},"code":"34"},{"description":{"en":"Mediterranean and Black Sea"},"code":"37"},{"description":{"en":"Atlantic
+        - southwest"},"code":"41"},{"description":{"en":"Atlantic - southeast"},"code":"47"},{"description":{"en":"Atlantic
+        - Antarctic"},"code":"48"},{"description":{"en":"Indian Ocean - western"},"code":"51"},{"description":{"en":"Indian
+        Ocean - eastern"},"code":"57"},{"description":{"en":"Indian Ocean - Antarctic"},"code":"58"},{"description":{"en":"Pacific
+        - northwest"},"code":"61"},{"description":{"en":"Pacific - northeast"},"code":"67"},{"description":{"en":"Pacific
+        - western central"},"code":"71"},{"description":{"en":"Pacific - eastern central"},"code":"77"},{"description":{"en":"Pacific
+        - southwest"},"code":"81"},{"description":{"en":"Pacific - southeast"},"code":"87"},{"description":{"en":"Pacific
+        - Antarctic"},"code":"88"}]}'
+  recorded_at: 2024-09-17 21:15:18 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

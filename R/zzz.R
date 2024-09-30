@@ -9,13 +9,28 @@ rredlist_ua <- function() {
   paste0(versions, collapse = " ")
 }
 
-rr_GET <- function(path, key, ...){
+rr_GET <- function(path, key = NULL, query = list(), ...) {
+  # Extract secret API query arguments
+  args <- list(...)
+  query$latest <- args$latest
+  query$scope_code <- args$scope_code
+  query$year_published <- args$year_published
+
   cli <- crul::HttpClient$new(
-    url = file.path(rr_base(), path),
-    opts = list(useragent = rredlist_ua())
+    url = paste(rr_base(), space(path), sep = "/"),
+    opts = list(useragent = rredlist_ua()),
+    headers = list(Authorization = check_key(key))
   )
-  temp <- cli$get(query = list(token = check_key(key)), ...)
-  temp$raise_for_status()
+  temp <- cli$get(query = ct(query), ...)
+  if (temp$status_code >= 300) {
+    if (temp$status_code == 401) {
+      stop("Token not valid! (HTTP 401)", call. = FALSE)
+    } else if (temp$status_code == 404) {
+      stop("No results returned for query. (HTTP 404)", call. = FALSE)
+    } else {
+      temp$raise_for_status()
+    }
+  }
   x <- temp$parse("UTF-8")
   err_catcher(x)
   return(x)
@@ -33,7 +48,7 @@ rl_parse <- function(x, parse) {
   jsonlite::fromJSON(x, parse)
 }
 
-check_key <- function(x){
+check_key <- function(x) {
   tmp <- if (is.null(x)) Sys.getenv("IUCN_REDLIST_KEY", "") else x
   if (tmp == "") {
     getOption("iucn_redlist_key", stop("need an API key for Red List data",
@@ -43,7 +58,7 @@ check_key <- function(x){
   }
 }
 
-rr_base <- function() "https://apiv3.iucnredlist.org/api/v3"
+rr_base <- function() "https://api.iucnredlist.org/api/v4"
 
 space <- function(x) gsub("\\s", "%20", x)
 
@@ -72,35 +87,35 @@ assert_not_na <- function(x) {
   }
 }
 
-nir <- function(path_name, path_id, name = NULL, id = NULL, region = NULL) {
-
-  # only one of name OR id
-  stopifnot(xor(!is.null(name), !is.null(id)))
-
-  # check types
-  assert_is(name, 'character')
-  assert_is(id, c('integer', 'numeric'))
-  assert_is(region, 'character')
-
-  # can't be NA
-  assert_not_na(name)
-  assert_not_na(id)
-  assert_not_na(region)
-
-  # check lengths - only length 1 allowed for all
-  assert_n(name, 1)
-  assert_n(id, 1)
-  assert_n(region, 1)
-
-  # construct path
-  path <- if (!is.null(name)) {
-    file.path(path_name, space(name))
+combine_assessments <- function(res, parse) {
+  if (length(res) <= 1) return(rl_parse(res, parse))
+  lst <- lapply(res, rl_parse, parse = parse)
+  tmp <- lst[[1]]
+  assessments <- lapply(lst, "[[", "assessments")
+  if (parse) {
+    tmp$assessments <- do.call(rbind, assessments)
   } else {
-    file.path(path_id, id)
+    tmp$assessments <- do.call(c, assessments)
   }
-  if (!is.null(region)) {
-    path <- file.path(path, "region", space(region))
-  }
+  return(tmp)
+}
 
-  return(path)
+#' @importFrom jsonlite fromJSON
+page_assessments <- function(path, key, quiet, ...) {
+  out <- list()
+  done <- FALSE
+  page <- 1
+  while (!done) {
+    tmp <- rr_GET(path, key, query = list(page = page), ...)
+    if (length(fromJSON(tmp, FALSE)$assessments) == 0) {
+      if (page == 1) out <- tmp else if (page == 2) out <- out[[1]]
+      done <- TRUE
+    } else {
+      if (!quiet) cat(".")
+      out[[page]] <- tmp
+      page <- page + 1
+    }
+  }
+  if (!quiet && page > 1) cat("\n")
+  return(out)
 }

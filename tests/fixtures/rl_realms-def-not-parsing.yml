@@ -1,0 +1,32 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/biogeographical_realms/?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '405'
+      content-type: application/json
+      etag: W/"b07167932e2ad448c4677ad866296345"
+      x-request-id: 436d2a86-f35c-4ceb-a3a2-8d015372b210
+      x-runtime: '0.010857'
+      date: Tue, 17 Sep 2024 21:20:11 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"biogeographical_realms":[{"description":{"en":"Afrotropical"},"code":"0"},{"description":{"en":"Antarctic"},"code":"1"},{"description":{"en":"Australasian"},"code":"2"},{"description":{"en":"Indomalayan"},"code":"3"},{"description":{"en":"Nearctic"},"code":"4"},{"description":{"en":"Neotropical"},"code":"5"},{"description":{"en":"Oceanian"},"code":"6"},{"description":{"en":"Palearctic"},"code":"7"}]}'
+  recorded_at: 2024-09-17 21:20:11 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

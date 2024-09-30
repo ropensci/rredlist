@@ -1,0 +1,38 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/growth_forms/?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '1183'
+      content-type: application/json
+      etag: W/"4408072f5a5f71a7d1774c1d14eac919"
+      x-request-id: 5e98d6d4-6d2b-4d21-8ae1-b10791d46405
+      x-runtime: '0.010362'
+      date: Tue, 17 Sep 2024 20:01:16 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"growth_forms":[{"description":{"en":"Annual"},"code":"A"},{"description":{"en":"Moss"},"code":"B"},{"description":{"en":"Cycad"},"code":"C"},{"description":{"en":"Epiphyte"},"code":"E"},{"description":{"en":"Forb
+        or Herb"},"code":"F"},{"description":{"en":"Geophyte"},"code":"GE"},{"description":{"en":"Graminoid"},"code":"GR"},{"description":{"en":"Hydrophyte"},"code":"H"},{"description":{"en":"Lithophyte"},"code":"L"},{"description":{"en":"Lichen"},"code":"LC"},{"description":{"en":"Fungus"},"code":"M"},{"description":{"en":"Parasite"},"code":"P"},{"description":{"en":"Fern"},"code":"PT"},{"description":{"en":"Shrub
+        - size unknown"},"code":"S"},{"description":{"en":"Succulent - annual"},"code":"SA"},{"description":{"en":"Succulent
+        - form unknown"},"code":"SC"},{"description":{"en":"Succulent - shrub"},"code":"SH"},{"description":{"en":"Shrub
+        - large"},"code":"SL"},{"description":{"en":"Shrub - small"},"code":"SS"},{"description":{"en":"Succulent
+        - tree"},"code":"ST"},{"description":{"en":"Tree - size unknown"},"code":"T"},{"description":{"en":"Tree
+        - large"},"code":"TL"},{"description":{"en":"Tree - small"},"code":"TS"},{"description":{"en":"Vines"},"code":"V"}]}'
+  recorded_at: 2024-09-17 20:01:16 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

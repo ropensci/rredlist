@@ -1,0 +1,133 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/habitats/?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '9949'
+      content-type: application/json
+      etag: W/"4dbf148f528195e94487e3c2c4958c70"
+      x-request-id: 603f3689-b708-4788-bc4c-d6f1cbe05f5b
+      x-runtime: '0.016453'
+      date: Tue, 17 Sep 2024 20:01:19 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"habitats":[{"description":{"en":"Forest"},"code":"1"},{"description":{"en":"Forest
+        - Boreal"},"code":"1_1"},{"description":{"en":"Forest - Subarctic"},"code":"1_2"},{"description":{"en":"Forest
+        - Subantarctic"},"code":"1_3"},{"description":{"en":"Forest - Temperate"},"code":"1_4"},{"description":{"en":"Forest
+        - Subtropical/Tropical Dry"},"code":"1_5"},{"description":{"en":"Forest -
+        Subtropical/Tropical Moist Lowland"},"code":"1_6"},{"description":{"en":"Forest
+        - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"},"code":"1_7"},{"description":{"en":"Forest
+        - Subtropical/Tropical Swamp"},"code":"1_8"},{"description":{"en":"Forest
+        - Subtropical/Tropical Moist Montane"},"code":"1_9"},{"description":{"en":"Savanna"},"code":"2"},{"description":{"en":"Savanna
+        - Dry"},"code":"2_1"},{"description":{"en":"Savanna - Moist"},"code":"2_2"},{"description":{"en":"Shrubland"},"code":"3"},{"description":{"en":"Shrubland
+        - Subarctic"},"code":"3_1"},{"description":{"en":"Shrubland - Subantarctic"},"code":"3_2"},{"description":{"en":"Shrubland
+        - Boreal"},"code":"3_3"},{"description":{"en":"Shrubland - Temperate"},"code":"3_4"},{"description":{"en":"Shrubland
+        - Subtropical/Tropical Dry"},"code":"3_5"},{"description":{"en":"Shrubland
+        - Subtropical/Tropical Moist"},"code":"3_6"},{"description":{"en":"Shrubland
+        - Subtropical/Tropical High Altitude"},"code":"3_7"},{"description":{"en":"Shrubland
+        - Mediterranean-type Shrubby Vegetation"},"code":"3_8"},{"description":{"en":"Grassland"},"code":"4"},{"description":{"en":"Grassland
+        - Tundra"},"code":"4_1"},{"description":{"en":"Grassland - Subarctic"},"code":"4_2"},{"description":{"en":"Grassland
+        - Subantarctic"},"code":"4_3"},{"description":{"en":"Grassland - Temperate"},"code":"4_4"},{"description":{"en":"Grassland
+        - Subtropical/Tropical Dry"},"code":"4_5"},{"description":{"en":"Grassland
+        - Subtropical/Tropical Seasonally Wet/Flooded"},"code":"4_6"},{"description":{"en":"Grassland
+        - Subtropical/Tropical High Altitude"},"code":"4_7"},{"description":{"en":"Wetlands
+        (inland)"},"code":"5"},{"description":{"en":"Wetlands (inland) - Permanent
+        Rivers/Streams/Creeks (includes waterfalls)"},"code":"5_1"},{"description":{"en":"Wetlands
+        (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"},"code":"5_2"},{"description":{"en":"Wetlands
+        (inland) - Shrub Dominated Wetlands"},"code":"5_3"},{"description":{"en":"Wetlands
+        (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"},"code":"5_4"},{"description":{"en":"Wetlands
+        (inland) - Permanent Freshwater Lakes (over 8ha)"},"code":"5_5"},{"description":{"en":"Wetlands
+        (inland) - Seasonal/Intermittent Freshwater Lakes (over 8ha)"},"code":"5_6"},{"description":{"en":"Wetlands
+        (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"},"code":"5_7"},{"description":{"en":"Wetlands
+        (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"},"code":"5_8"},{"description":{"en":"Wetlands
+        (inland) - Freshwater Springs and Oases"},"code":"5_9"},{"description":{"en":"Wetlands
+        (inland) - Tundra Wetlands (incl. pools and temporary waters from snowmelt)"},"code":"5_10"},{"description":{"en":"Wetlands
+        (inland) - Alpine Wetlands (includes temporary waters from snowmelt)"},"code":"5_11"},{"description":{"en":"Wetlands
+        (inland) - Geothermal Wetlands"},"code":"5_12"},{"description":{"en":"Wetlands
+        (inland) - Permanent Inland Deltas"},"code":"5_13"},{"description":{"en":"Wetlands
+        (inland) - Permanent Saline, Brackish or Alkaline Lakes"},"code":"5_14"},{"description":{"en":"Wetlands
+        (inland) - Seasonal/Intermittent Saline, Brackish or Alkaline Lakes and Flats"},"code":"5_15"},{"description":{"en":"Wetlands
+        (inland) - Permanent Saline, Brackish or Alkaline Marshes/Pools"},"code":"5_16"},{"description":{"en":"Wetlands
+        (inland) - Seasonal/Intermittent Saline, Brackish or Alkaline Marshes/Pools"},"code":"5_17"},{"description":{"en":"Wetlands
+        (inland) - Karst and Other Subterranean Hydrological Systems (inland)"},"code":"5_18"},{"description":{"en":"Rocky
+        areas (eg. inland cliffs, mountain peaks)"},"code":"6"},{"description":{"en":"Caves
+        and Subterranean Habitats (non-aquatic)"},"code":"7"},{"description":{"en":"Caves
+        and Subterranean Habitats (non-aquatic) - Caves"},"code":"7_1"},{"description":{"en":"Caves
+        and Subterranean Habitats (non-aquatic) - Other Subterranean Habitats"},"code":"7_2"},{"description":{"en":"Desert"},"code":"8"},{"description":{"en":"Desert
+        - Hot"},"code":"8_1"},{"description":{"en":"Desert - Temperate"},"code":"8_2"},{"description":{"en":"Desert
+        - Cold"},"code":"8_3"},{"description":{"en":"Marine Neritic"},"code":"9"},{"description":{"en":"Marine
+        Neritic - Pelagic"},"code":"9_1"},{"description":{"en":"Marine Neritic - Subtidal
+        Rock and Rocky Reefs"},"code":"9_2"},{"description":{"en":"Marine Neritic
+        - Subtidal Loose Rock/pebble/gravel"},"code":"9_3"},{"description":{"en":"Marine
+        Neritic - Subtidal Sandy"},"code":"9_4"},{"description":{"en":"Marine Neritic
+        - Subtidal Sandy-Mud"},"code":"9_5"},{"description":{"en":"Marine Neritic
+        - Subtidal Muddy"},"code":"9_6"},{"description":{"en":"Marine Neritic - Macroalgal/Kelp"},"code":"9_7"},{"description":{"en":"Marine
+        Neritic - Coral Reef"},"code":"9_8"},{"description":{"en":"Outer Reef Channel"},"code":"9_8_1"},{"description":{"en":"Back
+        Slope"},"code":"9_8_2"},{"description":{"en":"Foreslope (Outer Reef Slope)"},"code":"9_8_3"},{"description":{"en":"Lagoon"},"code":"9_8_4"},{"description":{"en":"Inter-Reef
+        Soft Substrate"},"code":"9_8_5"},{"description":{"en":"Inter-Reef Rubble Substrate"},"code":"9_8_6"},{"description":{"en":"Marine
+        Neritic - Seagrass (Submerged)"},"code":"9_9"},{"description":{"en":"Marine
+        Neritic - Estuaries"},"code":"9_10"},{"description":{"en":"Marine Oceanic"},"code":"10"},{"description":{"en":"Marine
+        Oceanic - Epipelagic (0-200m)"},"code":"10_1"},{"description":{"en":"Marine
+        Oceanic - Mesopelagic (200-1000m)"},"code":"10_2"},{"description":{"en":"Marine
+        Oceanic - Bathypelagic (1000-4000m)"},"code":"10_3"},{"description":{"en":"Marine
+        Oceanic - Abyssopelagic (4000-6000m)"},"code":"10_4"},{"description":{"en":"Marine
+        Deep Benthic"},"code":"11"},{"description":{"en":"Marine Deep Benthic - Continental
+        Slope/Bathyl Zone (200-4,000m)"},"code":"11_1"},{"description":{"en":"Hard
+        Substrate"},"code":"11_1_1"},{"description":{"en":"Soft Substrate"},"code":"11_1_2"},{"description":{"en":"Marine
+        Deep Benthic - Abyssal Plain (4,000-6,000m)"},"code":"11_2"},{"description":{"en":"Marine
+        Deep Benthic - Abyssal Mountain/Hills (4,000-6,000m)"},"code":"11_3"},{"description":{"en":"Marine
+        Deep Benthic - Hadal/Deep Sea Trench (\u003e6,000m)"},"code":"11_4"},{"description":{"en":"Marine
+        Deep Benthic - Seamount"},"code":"11_5"},{"description":{"en":"Marine Deep
+        Benthic - Deep Sea Vents (Rifts/Seeps)"},"code":"11_6"},{"description":{"en":"Marine
+        Intertidal"},"code":"12"},{"description":{"en":"Marine Intertidal - Rocky
+        Shoreline"},"code":"12_1"},{"description":{"en":"Marine Intertidal - Sandy
+        Shoreline and/or Beaches, Sand Bars, Spits, Etc"},"code":"12_2"},{"description":{"en":"Marine
+        Intertidal - Shingle and/or Pebble Shoreline and/or Beaches"},"code":"12_3"},{"description":{"en":"Marine
+        Intertidal - Mud Flats and Salt Flats"},"code":"12_4"},{"description":{"en":"Marine
+        Intertidal - Salt Marshes (Emergent Grasses)"},"code":"12_5"},{"description":{"en":"Marine
+        Intertidal - Tidepools"},"code":"12_6"},{"description":{"en":"Marine Intertidal
+        - Mangrove Submerged Roots"},"code":"12_7"},{"description":{"en":"Marine Coastal/Supratidal"},"code":"13"},{"description":{"en":"Marine
+        Coastal/Supratidal - Sea Cliffs and Rocky Offshore Islands"},"code":"13_1"},{"description":{"en":"Marine
+        Coastal/supratidal - Coastal Caves/Karst"},"code":"13_2"},{"description":{"en":"Marine
+        Coastal/Supratidal - Coastal Sand Dunes"},"code":"13_3"},{"description":{"en":"Marine
+        Coastal/Supratidal - Coastal Brackish/Saline Lagoons/Marine Lakes"},"code":"13_4"},{"description":{"en":"Marine
+        Coastal/Supratidal - Coastal Freshwater Lakes"},"code":"13_5"},{"description":{"en":"Artificial/Terrestrial"},"code":"14"},{"description":{"en":"Artificial/Terrestrial
+        - Arable Land"},"code":"14_1"},{"description":{"en":"Artificial/Terrestrial
+        - Pastureland"},"code":"14_2"},{"description":{"en":"Artificial/Terrestrial
+        - Plantations"},"code":"14_3"},{"description":{"en":"Artificial/Terrestrial
+        - Rural Gardens"},"code":"14_4"},{"description":{"en":"Artificial/Terrestrial
+        - Urban Areas"},"code":"14_5"},{"description":{"en":"Artificial/Terrestrial
+        - Subtropical/Tropical Heavily Degraded Former Forest"},"code":"14_6"},{"description":{"en":"Artificial/Aquatic
+        \u0026 Marine"},"code":"15"},{"description":{"en":"Artificial/Aquatic - Water
+        Storage Areas (over 8ha)"},"code":"15_1"},{"description":{"en":"Artificial/Aquatic
+        - Ponds (below 8ha)"},"code":"15_2"},{"description":{"en":"Artificial/Aquatic
+        - Aquaculture Ponds"},"code":"15_3"},{"description":{"en":"Artificial/Aquatic
+        - Salt Exploitation Sites"},"code":"15_4"},{"description":{"en":"Artificial/Aquatic
+        - Excavations (open)"},"code":"15_5"},{"description":{"en":"Artificial/Aquatic
+        - Wastewater Treatment Areas"},"code":"15_6"},{"description":{"en":"Artificial/Aquatic
+        - Irrigated Land (includes irrigation channels)"},"code":"15_7"},{"description":{"en":"Artificial/Aquatic
+        - Seasonally Flooded Agricultural Land"},"code":"15_8"},{"description":{"en":"Artificial/Aquatic
+        - Canals and Drainage Channels, Ditches"},"code":"15_9"},{"description":{"en":"Artificial/Aquatic
+        - Karst and Other Subterranean Hydrological Systems (human-made)"},"code":"15_10"},{"description":{"en":"Artificial/Marine
+        - Marine Anthropogenic Structures"},"code":"15_11"},{"description":{"en":"Artificial/Marine
+        - Mariculture Cages"},"code":"15_12"},{"description":{"en":"Artificial/Marine
+        - Mari/Brackishculture Ponds"},"code":"15_13"},{"description":{"en":"Introduced
+        vegetation"},"code":"16"},{"description":{"en":"Other"},"code":"17"},{"description":{"en":"Unknown"},"code":"18"}]}'
+  recorded_at: 2024-09-17 20:01:20 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

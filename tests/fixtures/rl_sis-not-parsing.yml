@@ -1,0 +1,76 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/taxa/sis/9404
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '7541'
+      content-type: application/json
+      etag: W/"4572bbab72f3bc216904211b073c2719"
+      x-request-id: 8589fc79-bd06-4af7-9102-deb0444be6cf
+      x-runtime: '0.061259'
+      date: Fri, 20 Sep 2024 17:45:28 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"sis_id":9404,"taxon":{"sis_id":9404,"scientific_name":"Gorilla gorilla","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[{"sis_id":39998,"scientific_name":"Gorilla
+        gorilla ssp. diehli","kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"PRIMATES","family_name":"HOMINIDAE","genus_name":"Gorilla","species_name":"gorilla","subpopulation_name":null,"infra_name":"diehli","authority":"Matschie,
+        1904","ssc_groups":[{"name":"IUCN SSC Primate Specialist Group","url":"http://www.primate-sg.org/","description":"Chair:
+        Russell Mittermeier (email: rmittermeier@globalwildlife.org)\nRed List Authority
+        Focal Points: \nProsimians, monkeys and smaller apes - Sanjay Molur (email:
+        sanjay@zooreach.org) and Christoph Schwitzer (email: cschwitzer@bristolzoo.org.uk)\nVice-Chair
+        for great apes - Dirck S. Byler (email: dbyler@globalwildlife.org)\nVice-Chair
+        for small apes - Susan M. Cheyne (email: section.small.apes@gmail.com)\nJournals
+        and Newsletters: \nPrimate Conservation: http://www.primate-sg.org/primate_conservation/\nNeotropical
+        Primates: http://www.primate-sg.org/neotropical_primates/\nAsian Primates:
+        http://www.primate-sg.org/asian_primates_newsletter/ and http://www.primate-sg.org/asian_primates_journal/\nLemur
+        News: http://www.primate-sg.org/lemur_news/\nAfrican Primates: http://www.primate-sg.org/african_primates/\n"}],"common_names":[{"main":true,"name":"Cross
+        River Gorilla","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Gorilla
+        gorilla Nigerian subpopulation","status":"ACCEPTED","genus_name":"Gorilla","species_name":"gorilla","species_author":null,"infrarank_author":"Matschie,
+        1904","subpopulation_name":"Nigerian subpopulation","infra_type":null,"infra_name":null}]},{"sis_id":9406,"scientific_name":"Gorilla
+        gorilla ssp. gorilla","kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"PRIMATES","family_name":"HOMINIDAE","genus_name":"Gorilla","species_name":"gorilla","subpopulation_name":null,"infra_name":"gorilla","authority":"(Savage,
+        1847)","ssc_groups":[{"name":"IUCN SSC Primate Specialist Group","url":"http://www.primate-sg.org/","description":"Chair:
+        Russell Mittermeier (email: rmittermeier@globalwildlife.org)\nRed List Authority
+        Focal Points: \nProsimians, monkeys and smaller apes - Sanjay Molur (email:
+        sanjay@zooreach.org) and Christoph Schwitzer (email: cschwitzer@bristolzoo.org.uk)\nVice-Chair
+        for great apes - Dirck S. Byler (email: dbyler@globalwildlife.org)\nVice-Chair
+        for small apes - Susan M. Cheyne (email: section.small.apes@gmail.com)\nJournals
+        and Newsletters: \nPrimate Conservation: http://www.primate-sg.org/primate_conservation/\nNeotropical
+        Primates: http://www.primate-sg.org/neotropical_primates/\nAsian Primates:
+        http://www.primate-sg.org/asian_primates_newsletter/ and http://www.primate-sg.org/asian_primates_journal/\nLemur
+        News: http://www.primate-sg.org/lemur_news/\nAfrican Primates: http://www.primate-sg.org/african_primates/\n"}],"common_names":[{"main":true,"name":"Western
+        Lowland Gorilla","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[]}],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"PRIMATES","family_name":"HOMINIDAE","genus_name":"Gorilla","species_name":"gorilla","subpopulation_name":null,"infra_name":null,"authority":"(Savage,
+        1847)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Primate Specialist Group","url":"http://www.primate-sg.org/","description":"Chair:
+        Russell Mittermeier (email: rmittermeier@globalwildlife.org)\nRed List Authority
+        Focal Points: \nProsimians, monkeys and smaller apes - Sanjay Molur (email:
+        sanjay@zooreach.org) and Christoph Schwitzer (email: cschwitzer@bristolzoo.org.uk)\nVice-Chair
+        for great apes - Dirck S. Byler (email: dbyler@globalwildlife.org)\nVice-Chair
+        for small apes - Susan M. Cheyne (email: section.small.apes@gmail.com)\nJournals
+        and Newsletters: \nPrimate Conservation: http://www.primate-sg.org/primate_conservation/\nNeotropical
+        Primates: http://www.primate-sg.org/neotropical_primates/\nAsian Primates:
+        http://www.primate-sg.org/asian_primates_newsletter/ and http://www.primate-sg.org/asian_primates_journal/\nLemur
+        News: http://www.primate-sg.org/lemur_news/\nAfrican Primates: http://www.primate-sg.org/african_primates/\n"}],"common_names":[{"main":false,"name":"Lowland
+        Gorilla","language":{"code":"eng","description":{"en":"English"}}},{"main":false,"name":"Gorila
+        Occidental","language":{"code":"spa","description":{"en":"Spanish; Castilian"}}},{"main":false,"name":"Gorille
+        de l''Ouest","language":{"code":"fre","description":{"en":"French"}}},{"main":false,"name":"Westlicher
+        Gorilla","language":{"code":"ger","description":{"en":"German"}}},{"main":true,"name":"Western
+        Gorilla","language":{"code":"eng","description":{"en":"English"}}}],"synonyms":[{"name":"Troglodytes
+        gorilla Savage, 1847","status":"ACCEPTED","genus_name":"Troglodytes","species_name":"gorilla","species_author":"Savage,
+        1847","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]},"assessments":[{"year_published":"2016","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/17963949","assessment_id":17963949,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/102330408","assessment_id":102330408,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2018","latest":true,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/136250858","assessment_id":136250858,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/12983787","assessment_id":12983787,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2007","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/12983966","assessment_id":12983966,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2000","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/12983737","assessment_id":12983737,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1996","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/12983764","assessment_id":12983764,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1994","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/12984167","assessment_id":12984167,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1990","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/12984186","assessment_id":12984186,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1988","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/12984148","assessment_id":12984148,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1988","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/12984129","assessment_id":12984129,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1986","latest":false,"sis_taxon_id":9404,"url":"https://www.iucnredlist.org/species/9404/12984110","assessment_id":12984110,"scopes":[{"description":{"en":"Global"},"code":"1"}]}]}'
+  recorded_at: 2024-09-20 17:45:28 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

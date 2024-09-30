@@ -1,0 +1,119 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/threats/?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '8805'
+      content-type: application/json
+      etag: W/"22bc6c3eb4d123bcd2be84503341bd3e"
+      x-request-id: 40e6a2c8-a3aa-4707-8f37-06b7724300bb
+      x-runtime: '0.011940'
+      date: Tue, 17 Sep 2024 20:01:22 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"threats":[{"description":{"en":"Residential \u0026 commercial development"},"code":"1"},{"description":{"en":"Housing
+        \u0026 urban areas"},"code":"1_1"},{"description":{"en":"Commercial \u0026
+        industrial areas"},"code":"1_2"},{"description":{"en":"Tourism \u0026 recreation
+        areas"},"code":"1_3"},{"description":{"en":"Agriculture \u0026 aquaculture"},"code":"2"},{"description":{"en":"Annual
+        \u0026 perennial non-timber crops"},"code":"2_1"},{"description":{"en":"Shifting
+        agriculture"},"code":"2_1_1"},{"description":{"en":"Small-holder farming"},"code":"2_1_2"},{"description":{"en":"Agro-industry
+        farming"},"code":"2_1_3"},{"description":{"en":"Scale Unknown/Unrecorded"},"code":"2_1_4"},{"description":{"en":"Wood
+        \u0026 pulp plantations"},"code":"2_2"},{"description":{"en":"Small-holder
+        plantations"},"code":"2_2_1"},{"description":{"en":"Agro-industry plantations"},"code":"2_2_2"},{"description":{"en":"Scale
+        Unknown/Unrecorded"},"code":"2_2_3"},{"description":{"en":"Livestock farming
+        \u0026 ranching"},"code":"2_3"},{"description":{"en":"Nomadic grazing"},"code":"2_3_1"},{"description":{"en":"Small-holder
+        grazing, ranching or farming"},"code":"2_3_2"},{"description":{"en":"Agro-industry
+        grazing, ranching or farming"},"code":"2_3_3"},{"description":{"en":"Scale
+        Unknown/Unrecorded"},"code":"2_3_4"},{"description":{"en":"Marine \u0026 freshwater
+        aquaculture"},"code":"2_4"},{"description":{"en":"Subsistence/artisinal aquaculture"},"code":"2_4_1"},{"description":{"en":"Industrial
+        aquaculture"},"code":"2_4_2"},{"description":{"en":"Scale Unknown/Unrecorded"},"code":"2_4_3"},{"description":{"en":"Energy
+        production \u0026 mining"},"code":"3"},{"description":{"en":"Oil \u0026 gas
+        drilling"},"code":"3_1"},{"description":{"en":"Mining \u0026 quarrying"},"code":"3_2"},{"description":{"en":"Renewable
+        energy"},"code":"3_3"},{"description":{"en":"Transportation \u0026 service
+        corridors"},"code":"4"},{"description":{"en":"Roads \u0026 railroads"},"code":"4_1"},{"description":{"en":"Utility
+        \u0026 service lines"},"code":"4_2"},{"description":{"en":"Shipping lanes"},"code":"4_3"},{"description":{"en":"Flight
+        paths"},"code":"4_4"},{"description":{"en":"Biological resource use"},"code":"5"},{"description":{"en":"Hunting
+        \u0026 trapping terrestrial animals"},"code":"5_1"},{"description":{"en":"Intentional
+        use (species is the target)"},"code":"5_1_1"},{"description":{"en":"Unintentional
+        effects (species is not the target)"},"code":"5_1_2"},{"description":{"en":"Persecution/control"},"code":"5_1_3"},{"description":{"en":"Motivation
+        Unknown/Unrecorded"},"code":"5_1_4"},{"description":{"en":"Gathering terrestrial
+        plants"},"code":"5_2"},{"description":{"en":"Intentional use (species is the
+        target)"},"code":"5_2_1"},{"description":{"en":"Unintentional effects (species
+        is not the target)"},"code":"5_2_2"},{"description":{"en":"Persecution/control"},"code":"5_2_3"},{"description":{"en":"Motivation
+        Unknown/Unrecorded"},"code":"5_2_4"},{"description":{"en":"Logging \u0026
+        wood harvesting"},"code":"5_3"},{"description":{"en":"Intentional use: (subsistence/small
+        scale) [harvest]"},"code":"5_3_1"},{"description":{"en":"Intentional use:
+        (large scale) [harvest]"},"code":"5_3_2"},{"description":{"en":"Unintentional
+        effects: (subsistence/small scale) [harvest]"},"code":"5_3_3"},{"description":{"en":"Unintentional
+        effects: (large scale) [harvest]"},"code":"5_3_4"},{"description":{"en":"Motivation
+        Unknown/Unrecorded"},"code":"5_3_5"},{"description":{"en":"Fishing \u0026
+        harvesting aquatic resources"},"code":"5_4"},{"description":{"en":"Intentional
+        use: (subsistence/small scale) [harvest]"},"code":"5_4_1"},{"description":{"en":"Intentional
+        use: (large scale) [harvest]"},"code":"5_4_2"},{"description":{"en":"Unintentional
+        effects: (subsistence/small scale) [harvest]"},"code":"5_4_3"},{"description":{"en":"Unintentional
+        effects: (large scale) [harvest]"},"code":"5_4_4"},{"description":{"en":"Persecution/control"},"code":"5_4_5"},{"description":{"en":"Motivation
+        Unknown/Unrecorded"},"code":"5_4_6"},{"description":{"en":"Human intrusions
+        \u0026 disturbance"},"code":"6"},{"description":{"en":"Recreational activities"},"code":"6_1"},{"description":{"en":"War,
+        civil unrest \u0026 military exercises"},"code":"6_2"},{"description":{"en":"Work
+        \u0026 other activities"},"code":"6_3"},{"description":{"en":"Natural system
+        modifications"},"code":"7"},{"description":{"en":"Fire \u0026 fire suppression"},"code":"7_1"},{"description":{"en":"Increase
+        in fire frequency/intensity"},"code":"7_1_1"},{"description":{"en":"Supression
+        in fire frequency/intensity"},"code":"7_1_2"},{"description":{"en":"Trend
+        Unknown/Unrecorded"},"code":"7_1_3"},{"description":{"en":"Dams \u0026 water
+        management/use"},"code":"7_2"},{"description":{"en":"Abstraction of surface
+        water (domestic use)"},"code":"7_2_1"},{"description":{"en":"Abstraction of
+        surface water (commercial use)"},"code":"7_2_2"},{"description":{"en":"Abstraction
+        of surface water (agricultural use)"},"code":"7_2_3"},{"description":{"en":"Abstraction
+        of surface water (unknown use)"},"code":"7_2_4"},{"description":{"en":"Abstraction
+        of ground water (domestic use)"},"code":"7_2_5"},{"description":{"en":"Abstraction
+        of ground water (commercial use)"},"code":"7_2_6"},{"description":{"en":"Abstraction
+        of ground water (agricultural use)"},"code":"7_2_7"},{"description":{"en":"Abstraction
+        of ground water (unknown use)"},"code":"7_2_8"},{"description":{"en":"Small
+        dams"},"code":"7_2_9"},{"description":{"en":"Large dams"},"code":"7_2_10"},{"description":{"en":"Dams
+        (size unknown)"},"code":"7_2_11"},{"description":{"en":"Other ecosystem modifications"},"code":"7_3"},{"description":{"en":"Invasive
+        and other problematic species, genes \u0026 diseases"},"code":"8"},{"description":{"en":"Invasive
+        non-native/alien species/diseases"},"code":"8_1"},{"description":{"en":"Unspecified
+        species"},"code":"8_1_1"},{"description":{"en":"Named species"},"code":"8_1_2"},{"description":{"en":"Problematic
+        native species/diseases"},"code":"8_2"},{"description":{"en":"Unspecified
+        species"},"code":"8_2_1"},{"description":{"en":"Named species"},"code":"8_2_2"},{"description":{"en":"Introduced
+        genetic material"},"code":"8_3"},{"description":{"en":"Problematic species/disease
+        of unknown origin"},"code":"8_4"},{"description":{"en":"Unspecified species"},"code":"8_4_1"},{"description":{"en":"Named
+        species"},"code":"8_4_2"},{"description":{"en":"Viral/prion-induced diseases"},"code":"8_5"},{"description":{"en":"Unspecified
+        species"},"code":"8_5_1"},{"description":{"en":"Named species"},"code":"8_5_2"},{"description":{"en":"Diseases
+        of unknown cause"},"code":"8_6"},{"description":{"en":"Pollution"},"code":"9"},{"description":{"en":"Domestic
+        \u0026 urban waste water"},"code":"9_1"},{"description":{"en":"Sewage"},"code":"9_1_1"},{"description":{"en":"Run-off"},"code":"9_1_2"},{"description":{"en":"Type
+        Unknown/Unrecorded"},"code":"9_1_3"},{"description":{"en":"Industrial \u0026
+        military effluents"},"code":"9_2"},{"description":{"en":"Oil spills"},"code":"9_2_1"},{"description":{"en":"Seepage
+        from mining"},"code":"9_2_2"},{"description":{"en":"Type Unknown/Unrecorded"},"code":"9_2_3"},{"description":{"en":"Agricultural
+        \u0026 forestry effluents"},"code":"9_3"},{"description":{"en":"Nutrient loads"},"code":"9_3_1"},{"description":{"en":"Soil
+        erosion, sedimentation"},"code":"9_3_2"},{"description":{"en":"Herbicides
+        and pesticides"},"code":"9_3_3"},{"description":{"en":"Type Unknown/Unrecorded"},"code":"9_3_4"},{"description":{"en":"Garbage
+        \u0026 solid waste"},"code":"9_4"},{"description":{"en":"Air-borne pollutants"},"code":"9_5"},{"description":{"en":"Acid
+        rain"},"code":"9_5_1"},{"description":{"en":"Smog"},"code":"9_5_2"},{"description":{"en":"Ozone"},"code":"9_5_3"},{"description":{"en":"Type
+        Unknown/Unrecorded"},"code":"9_5_4"},{"description":{"en":"Excess energy"},"code":"9_6"},{"description":{"en":"Light
+        pollution"},"code":"9_6_1"},{"description":{"en":"Thermal pollution"},"code":"9_6_2"},{"description":{"en":"Noise
+        pollution"},"code":"9_6_3"},{"description":{"en":"Type Unknown/Unrecorded"},"code":"9_6_4"},{"description":{"en":"Geological
+        events"},"code":"10"},{"description":{"en":"Volcanoes"},"code":"10_1"},{"description":{"en":"Earthquakes/tsunamis"},"code":"10_2"},{"description":{"en":"Avalanches/landslides"},"code":"10_3"},{"description":{"en":"Climate
+        change \u0026 severe weather"},"code":"11"},{"description":{"en":"Habitat
+        shifting \u0026 alteration"},"code":"11_1"},{"description":{"en":"Droughts"},"code":"11_2"},{"description":{"en":"Temperature
+        extremes"},"code":"11_3"},{"description":{"en":"Storms \u0026 flooding"},"code":"11_4"},{"description":{"en":"Other
+        impacts"},"code":"11_5"},{"description":{"en":"Other options"},"code":"12"},{"description":{"en":"Other
+        threat"},"code":"12_1"}]}'
+  recorded_at: 2024-09-17 20:01:22 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

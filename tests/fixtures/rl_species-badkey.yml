@@ -1,0 +1,31 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/taxa/scientific_name?genus_name=Loxodonta&species_name=africana
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '401'
+      message: Unauthorized
+      explanation: No permission -- see authorization schemes
+    headers:
+      status: HTTP/1.1 401 Unauthorized
+      cache-control: no-cache
+      content-length: '24'
+      content-type: application/json
+      x-request-id: 76223315-e38a-4a36-9f30-5c991412a683
+      x-runtime: '0.006580'
+      date: Tue, 17 Sep 2024 19:59:42 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"error":"Unauthorized"}'
+  recorded_at: 2024-09-17 19:59:42 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

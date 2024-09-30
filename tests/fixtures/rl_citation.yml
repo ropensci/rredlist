@@ -1,14 +1,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://apiv3.iucnredlist.org/api/v3/version?token=<<rredlist_api_token>>
+    uri: https://api.iucnredlist.org/api/v4/information/red_list_version
     body:
       encoding: ''
       string: ''
     headers:
-      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(rredlist/0.6.0.91)
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
   response:
     status:
       status_code: '200'
@@ -16,19 +17,16 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      server: nginx/1.14.0 (Ubuntu)
-      date: Sun, 03 May 2020 16:07:25 GMT
-      content-type: application/json; charset=utf-8
-      content-length: '20'
-      connection: keep-alive
-      x-powered-by: Sails <sailsjs.org>
-      etag: W/"14-O864lh6yoAoRuDqCP2sZCg"
-      vary: Accept-Encoding
-      set-cookie: sails.sid=s%3Apdh9bs8LpEQWoLXuFLaf31NiNm8irxLl.hjhuIFSeICzR7MW9QTa2UTrsUiiqLj5jbkE%2B0nXR0lQ;
-        Path=/; HttpOnly
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '29'
+      content-type: application/json
+      etag: W/"f7c41b9779278709bef0d0206aad804f"
+      x-request-id: 587e18a9-c391-4abe-bcf5-d12d10c3375e
+      x-runtime: '0.012286'
+      date: Tue, 17 Sep 2024 20:00:36 GMT
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"version":"2020-1"}'
-  recorded_at: 2020-05-03 16:07:26 GMT
-  recorded_with: vcr/0.5.4, webmockr/0.6.2
+      string: '{"red_list_version":"2024-1"}'
+  recorded_at: 2024-09-17 20:00:37 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

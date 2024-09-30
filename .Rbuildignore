@@ -12,4 +12,10 @@ man-roxygen
 Makefile
 ^codemeta\.json$
 ^LICENSE\.md$
-vignettes/rredlist.Rmd
+vignettes/precompile.R
+^vignettes/source$
+^CRAN-SUBMISSION$
+^doc$
+^Meta$
+^docs$
+^_pkgdown\.yml$

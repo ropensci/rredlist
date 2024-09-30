@@ -1,0 +1,32 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/taxa/kingdom/?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '60'
+      content-type: application/json
+      etag: W/"986f7acb982a486adecfac980e922872"
+      x-request-id: f79216d0-fe34-43b3-af5f-5a923bcce034
+      x-runtime: '0.024365'
+      date: Wed, 18 Sep 2024 14:37:04 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"kingdom_names":["ANIMALIA","CHROMISTA","FUNGI","PLANTAE"]}'
+  recorded_at: 2024-09-18 14:37:05 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

@@ -3,34 +3,37 @@
 \name{rl_sp_count}
 \alias{rl_sp_count}
 \alias{rl_sp_count_}
-\title{Get total species count of taxa in the Red List}
+\title{Get count of species in the Red List}
 \usage{
-rl_sp_count(key = NULL, parse = TRUE, ...)
+rl_sp_count(key = NULL, ...)
 
 rl_sp_count_(key = NULL, ...)
 }
 \arguments{
-\item{key}{A IUCN API token. See \code{\link{rl_use_iucn}}.}
-
-\item{parse}{(logical) Whether to parse to list (\code{FALSE}) or
-data.frame (\code{TRUE}). Default: \code{TRUE}}
+\item{key}{(character) An IUCN API token. See \code{\link{rl_use_iucn}}.}
 
 \item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
 }
 \value{
-A list, with the data in the \code{result} slot, unless using
-a function with a trailing underscore, in which case json as character
-string is returned.
+A list unless using a function with a trailing underscore, in which
+case json as character string is returned.
 }
 \description{
-Get total species count of taxa in the Red List
+Returns a count of the number of unique species which have assessments
 }
 \examples{
 \dontrun{
+# Get count of species with assessments
 rl_sp_count()
-rl_sp_count_()
 }
 }
 \references{
-API docs at https://apiv3.iucnredlist.org/api/v3/docs
+API docs at \url{https://api.iucnredlist.org/}.
 }
+\seealso{
+Red List information and statistics:
+\code{\link{rl_api_version}()},
+\code{\link{rl_citation}()},
+\code{\link{rl_version}()}
+}
+\concept{stats}

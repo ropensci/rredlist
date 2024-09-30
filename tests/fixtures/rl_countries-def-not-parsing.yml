@@ -1,0 +1,96 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/countries/?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '12321'
+      content-type: application/json
+      etag: W/"46e6b55086a2537dff6a523e6179a60c"
+      x-request-id: 1cdf5754-1b64-4b26-bcd2-d235bd354a69
+      x-runtime: '0.037545'
+      date: Tue, 17 Sep 2024 20:00:56 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"countries":[{"description":{"en":"Andorra"},"code":"AD"},{"description":{"en":"United
+        Arab Emirates"},"code":"AE"},{"description":{"en":"Afghanistan"},"code":"AF"},{"description":{"en":"Antigua
+        and Barbuda"},"code":"AG"},{"description":{"en":"Anguilla"},"code":"AI"},{"description":{"en":"Albania"},"code":"AL"},{"description":{"en":"Armenia"},"code":"AM"},{"description":{"en":"Angola"},"code":"AO"},{"description":{"en":"Antarctica"},"code":"AQ"},{"description":{"en":"Argentina"},"code":"AR"},{"description":{"en":"American
+        Samoa"},"code":"AS"},{"description":{"en":"Austria"},"code":"AT"},{"description":{"en":"Australia"},"code":"AU"},{"description":{"en":"Aruba"},"code":"AW"},{"description":{"en":"Åland
+        Islands"},"code":"AX"},{"description":{"en":"Azerbaijan"},"code":"AZ"},{"description":{"en":"Bosnia
+        and Herzegovina"},"code":"BA"},{"description":{"en":"Barbados"},"code":"BB"},{"description":{"en":"Bangladesh"},"code":"BD"},{"description":{"en":"Belgium"},"code":"BE"},{"description":{"en":"Burkina
+        Faso"},"code":"BF"},{"description":{"en":"Bulgaria"},"code":"BG"},{"description":{"en":"Bahrain"},"code":"BH"},{"description":{"en":"Burundi"},"code":"BI"},{"description":{"en":"Benin"},"code":"BJ"},{"description":{"en":"Saint
+        Barthélemy"},"code":"BL"},{"description":{"en":"Bermuda"},"code":"BM"},{"description":{"en":"Brunei
+        Darussalam"},"code":"BN"},{"description":{"en":"Bolivia, Plurinational States
+        of"},"code":"BO"},{"description":{"en":"Bonaire, Sint Eustatius and Saba"},"code":"BQ"},{"description":{"en":"Brazil"},"code":"BR"},{"description":{"en":"Bahamas"},"code":"BS"},{"description":{"en":"Bhutan"},"code":"BT"},{"description":{"en":"Bouvet
+        Island"},"code":"BV"},{"description":{"en":"Botswana"},"code":"BW"},{"description":{"en":"Belarus"},"code":"BY"},{"description":{"en":"Belize"},"code":"BZ"},{"description":{"en":"Canada"},"code":"CA"},{"description":{"en":"Cocos
+        (Keeling) Islands"},"code":"CC"},{"description":{"en":"Congo, The Democratic
+        Republic of the"},"code":"CD"},{"description":{"en":"Central African Republic"},"code":"CF"},{"description":{"en":"Congo"},"code":"CG"},{"description":{"en":"Switzerland"},"code":"CH"},{"description":{"en":"Côte
+        d''Ivoire"},"code":"CI"},{"description":{"en":"Cook Islands"},"code":"CK"},{"description":{"en":"Chile"},"code":"CL"},{"description":{"en":"Cameroon"},"code":"CM"},{"description":{"en":"China"},"code":"CN"},{"description":{"en":"Colombia"},"code":"CO"},{"description":{"en":"Costa
+        Rica"},"code":"CR"},{"description":{"en":"Cuba"},"code":"CU"},{"description":{"en":"Cabo
+        Verde"},"code":"CV"},{"description":{"en":"Curaçao"},"code":"CW"},{"description":{"en":"Christmas
+        Island"},"code":"CX"},{"description":{"en":"Cyprus"},"code":"CY"},{"description":{"en":"Czechia"},"code":"CZ"},{"description":{"en":"Germany"},"code":"DE"},{"description":{"en":"Djibouti"},"code":"DJ"},{"description":{"en":"Denmark"},"code":"DK"},{"description":{"en":"Dominica"},"code":"DM"},{"description":{"en":"Dominican
+        Republic"},"code":"DO"},{"description":{"en":"Disputed Territory"},"code":"DT"},{"description":{"en":"Algeria"},"code":"DZ"},{"description":{"en":"Ecuador"},"code":"EC"},{"description":{"en":"Estonia"},"code":"EE"},{"description":{"en":"Egypt"},"code":"EG"},{"description":{"en":"Western
+        Sahara"},"code":"EH"},{"description":{"en":"Eritrea"},"code":"ER"},{"description":{"en":"Spain"},"code":"ES"},{"description":{"en":"Ethiopia"},"code":"ET"},{"description":{"en":"Finland"},"code":"FI"},{"description":{"en":"Fiji"},"code":"FJ"},{"description":{"en":"Falkland
+        Islands (Malvinas)"},"code":"FK"},{"description":{"en":"Micronesia, Federated
+        States of "},"code":"FM"},{"description":{"en":"Faroe Islands"},"code":"FO"},{"description":{"en":"France"},"code":"FR"},{"description":{"en":"Gabon"},"code":"GA"},{"description":{"en":"United
+        Kingdom"},"code":"GB"},{"description":{"en":"Grenada"},"code":"GD"},{"description":{"en":"Georgia"},"code":"GE"},{"description":{"en":"French
+        Guiana"},"code":"GF"},{"description":{"en":"Guernsey"},"code":"GG"},{"description":{"en":"Ghana"},"code":"GH"},{"description":{"en":"Gibraltar"},"code":"GI"},{"description":{"en":"Greenland"},"code":"GL"},{"description":{"en":"Gambia"},"code":"GM"},{"description":{"en":"Guinea"},"code":"GN"},{"description":{"en":"Guadeloupe"},"code":"GP"},{"description":{"en":"Equatorial
+        Guinea"},"code":"GQ"},{"description":{"en":"Greece"},"code":"GR"},{"description":{"en":"South
+        Georgia and the South Sandwich Islands"},"code":"GS"},{"description":{"en":"Guatemala"},"code":"GT"},{"description":{"en":"Guam"},"code":"GU"},{"description":{"en":"Guinea-Bissau"},"code":"GW"},{"description":{"en":"Guyana"},"code":"GY"},{"description":{"en":"Hong
+        Kong"},"code":"HK"},{"description":{"en":"Heard Island and McDonald Islands"},"code":"HM"},{"description":{"en":"Honduras"},"code":"HN"},{"description":{"en":"Croatia"},"code":"HR"},{"description":{"en":"Haiti"},"code":"HT"},{"description":{"en":"Hungary"},"code":"HU"},{"description":{"en":"Indonesia"},"code":"ID"},{"description":{"en":"Ireland"},"code":"IE"},{"description":{"en":"Israel"},"code":"IL"},{"description":{"en":"Isle
+        of Man"},"code":"IM"},{"description":{"en":"India"},"code":"IN"},{"description":{"en":"British
+        Indian Ocean Territory"},"code":"IO"},{"description":{"en":"Iraq"},"code":"IQ"},{"description":{"en":"Iran,
+        Islamic Republic of"},"code":"IR"},{"description":{"en":"Iceland"},"code":"IS"},{"description":{"en":"Italy"},"code":"IT"},{"description":{"en":"Jersey"},"code":"JE"},{"description":{"en":"Jamaica"},"code":"JM"},{"description":{"en":"Jordan"},"code":"JO"},{"description":{"en":"Japan"},"code":"JP"},{"description":{"en":"Kenya"},"code":"KE"},{"description":{"en":"Kyrgyzstan"},"code":"KG"},{"description":{"en":"Cambodia"},"code":"KH"},{"description":{"en":"Kiribati"},"code":"KI"},{"description":{"en":"Comoros"},"code":"KM"},{"description":{"en":"Saint
+        Kitts and Nevis"},"code":"KN"},{"description":{"en":"Korea, Democratic People''s
+        Republic of"},"code":"KP"},{"description":{"en":"Korea, Republic of"},"code":"KR"},{"description":{"en":"Kuwait"},"code":"KW"},{"description":{"en":"Cayman
+        Islands"},"code":"KY"},{"description":{"en":"Kazakhstan"},"code":"KZ"},{"description":{"en":"Lao
+        People''s Democratic Republic"},"code":"LA"},{"description":{"en":"Lebanon"},"code":"LB"},{"description":{"en":"Saint
+        Lucia"},"code":"LC"},{"description":{"en":"Liechtenstein"},"code":"LI"},{"description":{"en":"Sri
+        Lanka"},"code":"LK"},{"description":{"en":"Liberia"},"code":"LR"},{"description":{"en":"Lesotho"},"code":"LS"},{"description":{"en":"Lithuania"},"code":"LT"},{"description":{"en":"Luxembourg"},"code":"LU"},{"description":{"en":"Latvia"},"code":"LV"},{"description":{"en":"Libya"},"code":"LY"},{"description":{"en":"Morocco"},"code":"MA"},{"description":{"en":"Monaco"},"code":"MC"},{"description":{"en":"Moldova"},"code":"MD"},{"description":{"en":"Montenegro"},"code":"ME"},{"description":{"en":"Saint
+        Martin (French part)"},"code":"MF"},{"description":{"en":"Madagascar"},"code":"MG"},{"description":{"en":"Marshall
+        Islands"},"code":"MH"},{"description":{"en":"North Macedonia"},"code":"MK"},{"description":{"en":"Mali"},"code":"ML"},{"description":{"en":"Myanmar"},"code":"MM"},{"description":{"en":"Mongolia"},"code":"MN"},{"description":{"en":"Macao"},"code":"MO"},{"description":{"en":"Northern
+        Mariana Islands"},"code":"MP"},{"description":{"en":"Martinique"},"code":"MQ"},{"description":{"en":"Mauritania"},"code":"MR"},{"description":{"en":"Montserrat"},"code":"MS"},{"description":{"en":"Malta"},"code":"MT"},{"description":{"en":"Mauritius"},"code":"MU"},{"description":{"en":"Maldives"},"code":"MV"},{"description":{"en":"Malawi"},"code":"MW"},{"description":{"en":"Mexico"},"code":"MX"},{"description":{"en":"Malaysia"},"code":"MY"},{"description":{"en":"Mozambique"},"code":"MZ"},{"description":{"en":"Namibia"},"code":"NA"},{"description":{"en":"New
+        Caledonia"},"code":"NC"},{"description":{"en":"Niger"},"code":"NE"},{"description":{"en":"Norfolk
+        Island"},"code":"NF"},{"description":{"en":"Nigeria"},"code":"NG"},{"description":{"en":"Nicaragua"},"code":"NI"},{"description":{"en":"Netherlands"},"code":"NL"},{"description":{"en":"Norway"},"code":"NO"},{"description":{"en":"Nepal"},"code":"NP"},{"description":{"en":"Nauru"},"code":"NR"},{"description":{"en":"Niue"},"code":"NU"},{"description":{"en":"New
+        Zealand"},"code":"NZ"},{"description":{"en":"Oman"},"code":"OM"},{"description":{"en":"Panama"},"code":"PA"},{"description":{"en":"Peru"},"code":"PE"},{"description":{"en":"French
+        Polynesia"},"code":"PF"},{"description":{"en":"Papua New Guinea"},"code":"PG"},{"description":{"en":"Philippines"},"code":"PH"},{"description":{"en":"Pakistan"},"code":"PK"},{"description":{"en":"Poland"},"code":"PL"},{"description":{"en":"Saint
+        Pierre and Miquelon"},"code":"PM"},{"description":{"en":"Pitcairn"},"code":"PN"},{"description":{"en":"Puerto
+        Rico"},"code":"PR"},{"description":{"en":"Palestine, State of"},"code":"PS"},{"description":{"en":"Portugal"},"code":"PT"},{"description":{"en":"Palau"},"code":"PW"},{"description":{"en":"Paraguay"},"code":"PY"},{"description":{"en":"Qatar"},"code":"QA"},{"description":{"en":"Réunion"},"code":"RE"},{"description":{"en":"Romania"},"code":"RO"},{"description":{"en":"Serbia"},"code":"RS"},{"description":{"en":"Russian
+        Federation"},"code":"RU"},{"description":{"en":"Rwanda"},"code":"RW"},{"description":{"en":"Saudi
+        Arabia"},"code":"SA"},{"description":{"en":"Solomon Islands"},"code":"SB"},{"description":{"en":"Seychelles"},"code":"SC"},{"description":{"en":"Sudan"},"code":"SD"},{"description":{"en":"Sweden"},"code":"SE"},{"description":{"en":"Singapore"},"code":"SG"},{"description":{"en":"Saint
+        Helena, Ascension and Tristan da Cunha"},"code":"SH"},{"description":{"en":"Slovenia"},"code":"SI"},{"description":{"en":"Svalbard
+        and Jan Mayen"},"code":"SJ"},{"description":{"en":"Slovakia"},"code":"SK"},{"description":{"en":"Sierra
+        Leone"},"code":"SL"},{"description":{"en":"San Marino"},"code":"SM"},{"description":{"en":"Senegal"},"code":"SN"},{"description":{"en":"Somalia"},"code":"SO"},{"description":{"en":"Suriname"},"code":"SR"},{"description":{"en":"South
+        Sudan"},"code":"SS"},{"description":{"en":"Sao Tome and Principe"},"code":"ST"},{"description":{"en":"El
+        Salvador"},"code":"SV"},{"description":{"en":"Sint Maarten (Dutch part)"},"code":"SX"},{"description":{"en":"Syrian
+        Arab Republic"},"code":"SY"},{"description":{"en":"Eswatini"},"code":"SZ"},{"description":{"en":"Turks
+        and Caicos Islands"},"code":"TC"},{"description":{"en":"Chad"},"code":"TD"},{"description":{"en":"French
+        Southern Territories"},"code":"TF"},{"description":{"en":"Togo"},"code":"TG"},{"description":{"en":"Thailand"},"code":"TH"},{"description":{"en":"Tajikistan"},"code":"TJ"},{"description":{"en":"Tokelau"},"code":"TK"},{"description":{"en":"Timor-Leste"},"code":"TL"},{"description":{"en":"Turkmenistan"},"code":"TM"},{"description":{"en":"Tunisia"},"code":"TN"},{"description":{"en":"Tonga"},"code":"TO"},{"description":{"en":"Türkiye"},"code":"TR"},{"description":{"en":"Trinidad
+        and Tobago"},"code":"TT"},{"description":{"en":"Tuvalu"},"code":"TV"},{"description":{"en":"Taiwan,
+        Province of China"},"code":"TW"},{"description":{"en":"Tanzania, United Republic
+        of"},"code":"TZ"},{"description":{"en":"Ukraine"},"code":"UA"},{"description":{"en":"Uganda"},"code":"UG"},{"description":{"en":"United
+        States Minor Outlying Islands"},"code":"UM"},{"description":{"en":"United
+        States"},"code":"US"},{"description":{"en":"Uruguay"},"code":"UY"},{"description":{"en":"Uzbekistan"},"code":"UZ"},{"description":{"en":"Holy
+        See (Vatican City State)"},"code":"VA"},{"description":{"en":"Saint Vincent
+        and the Grenadines"},"code":"VC"},{"description":{"en":"Venezuela, Bolivarian
+        Republic of"},"code":"VE"},{"description":{"en":"Virgin Islands, British"},"code":"VG"},{"description":{"en":"Virgin
+        Islands, U.S."},"code":"VI"},{"description":{"en":"Viet Nam"},"code":"VN"},{"description":{"en":"Vanuatu"},"code":"VU"},{"description":{"en":"Wallis
+        and Futuna"},"code":"WF"},{"description":{"en":"Samoa"},"code":"WS"},{"description":{"en":"Yemen"},"code":"YE"},{"description":{"en":"Mayotte"},"code":"YT"},{"description":{"en":"South
+        Africa"},"code":"ZA"},{"description":{"en":"Zambia"},"code":"ZM"},{"description":{"en":"Zimbabwe"},"code":"ZW"}]}'
+  recorded_at: 2024-09-17 20:00:57 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

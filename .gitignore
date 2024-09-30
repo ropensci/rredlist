@@ -6,3 +6,6 @@ revdep/checks
 revdep/data.sqlite
 revdep/library
 rredlist.Rproj
+/doc/
+/Meta/
+docs

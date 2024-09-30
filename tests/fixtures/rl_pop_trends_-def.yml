@@ -1,0 +1,32 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/population_trends/?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '204'
+      content-type: application/json
+      etag: W/"62c2d61b9f847367d2c75a1261e5ee06"
+      x-request-id: 8196a8c8-9f4e-4981-99e2-2319e1c361bb
+      x-runtime: '0.018335'
+      date: Wed, 18 Sep 2024 15:53:12 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"population_trends":[{"description":{"en":"Increasing"},"code":"0"},{"description":{"en":"Decreasing"},"code":"1"},{"description":{"en":"Stable"},"code":"2"},{"description":{"en":"Unknown"},"code":"3"}]}'
+  recorded_at: 2024-09-18 15:53:12 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

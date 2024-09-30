@@ -3,42 +3,86 @@
 \name{rl_comp_groups}
 \alias{rl_comp_groups}
 \alias{rl_comp_groups_}
-\title{Information about comprehensive groups}
+\title{Comprehensive group assessment summary}
 \usage{
-rl_comp_groups(group = NULL, key = NULL, parse = TRUE, ...)
+rl_comp_groups(
+  name = NULL,
+  key = NULL,
+  parse = TRUE,
+  all = TRUE,
+  page = 1,
+  quiet = FALSE,
+  ...
+)
 
-rl_comp_groups_(group = NULL, key = NULL, ...)
+rl_comp_groups_(
+  name = NULL,
+  key = NULL,
+  all = TRUE,
+  page = 1,
+  quiet = FALSE,
+  ...
+)
 }
 \arguments{
-\item{group}{(character) A comprehensive group name.
-Call \code{rl_comp_groups()} without passing this parameter
-to get the list of comprehensive groups}
+\item{name}{(character) The code of the comprehensive group to look up. If
+not supplied, a list of all comprehensive groups will be returned.}
 
-\item{key}{A IUCN API token. See \code{\link{rl_use_iucn}}.}
+\item{key}{(character) An IUCN API token. See \code{\link{rl_use_iucn}}.}
 
-\item{parse}{(logical) Whether to parse to list (\code{FALSE}) or
-data.frame (\code{TRUE}). Default: \code{TRUE}}
+\item{parse}{(logical) Whether to parse the output to list (\code{FALSE}) or,
+where possible, data.frame (\code{TRUE}). Default: \code{TRUE}}
 
-\item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
+\item{all}{(logical) Whether to retrieve all results at once or not. If
+\code{TRUE} we do the paging internally for you and bind all of the results
+together. If \code{FALSE}, only a single page of results will be retrieved.}
+
+\item{page}{(integer/numeric) Page to get if \code{all} is \code{FALSE}. Default: 1.
+Each page returns up to 100 records. Paging is required because it's too
+much burden on a server to just "get all the data" in one request.}
+
+\item{quiet}{(logical) Whether to suppress progress for multi-page downloads
+or not. Default: \code{FALSE} (that is, give progress). Ignored if \code{all = FALSE}.}
+
+\item{...}{Includes the following filters that are supported by the API
+endpoint (refer to the \href{https://api.iucnredlist.org/api-docs/index.html}{API docs} for more
+information):
+\itemize{
+\item \code{year_published}: (integer) Set this to return only
+assessments from a given year.
+\item \code{latest}: (logical) Set this to \code{TRUE} to return only the
+latest assessment for each taxon.
+\item \code{scope_code}: (integer) Set this to return only assessments
+from a particular \link[=rl_scopes]{scope} (e.g., \code{1} for Global, \code{2} for
+Europe). This is similar to the \code{region} argument of the old Red List
+API and old versions of rredlist.
+}
+Also supports any \link[curl:curl_options]{curl options} passed to the GET
+request via \code{\link[crul]{HttpClient}}.}
 }
 \value{
-A list, with the data in the \code{result} slot, unless using
-a function with a trailing underscore, in which case json as character
-string is returned.
+A list unless using a function with a trailing underscore, in which
+case json as character string is returned.
 }
 \description{
-Information about comprehensive groups
+Returns a list of the latest assessments for an comprehensive group name
 }
 \examples{
 \dontrun{
+# Get list of all comprehensive groups
 rl_comp_groups()
-rl_comp_groups('mammals')
-rl_comp_groups('groupers')
-
-rl_comp_groups_()
-rl_comp_groups_('groupers')
+# Get assessment summary for sea snakes
+rl_comp_groups('seasnakes')
 }
 }
 \references{
-API docs at https://apiv3.iucnredlist.org/api/v3/docs
+API docs at \url{https://api.iucnredlist.org/}.
 }
+\seealso{
+Assessments for specific sets of taxa
+\code{\link{rl_extinct}()},
+\code{\link{rl_extinct_wild}()},
+\code{\link{rl_green}()},
+\code{\link{rl_growth_forms}()}
+}
+\concept{groups}

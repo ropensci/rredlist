@@ -1,0 +1,136 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/scopes/100765562?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '17353'
+      content-type: application/json
+      current-page: '1'
+      etag: W/"d8fb38cbc419cb2d7f146632c3ac39f4"
+      link: <https://api.iucnredlist.org/api/v4/scopes/100765562?page=1&per_page=100>;
+        rel="first", <https://api.iucnredlist.org/api/v4/scopes/100765562?page=1&per_page=100>;
+        rel="last"
+      page-items: '100'
+      total-count: '58'
+      total-pages: '1'
+      x-request-id: 11673d89-2e4c-4478-8150-3be4ab3f4066
+      x-runtime: '0.158144'
+      date: Tue, 17 Sep 2024 21:18:30 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"scope":{"description":{"en":"Arabian Sea"},"code":"100765562"},"assessments":[{"year_published":"2009","latest":false,"sis_taxon_id":161340,"url":"https://www.iucnredlist.org/species/161340/5402149","assessment_id":5402149,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2009","latest":false,"sis_taxon_id":161349,"url":"https://www.iucnredlist.org/species/161349/5403712","assessment_id":5403712,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2009","latest":false,"sis_taxon_id":161408,"url":"https://www.iucnredlist.org/species/161408/5417342","assessment_id":5417342,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2009","latest":false,"sis_taxon_id":161426,"url":"https://www.iucnredlist.org/species/161426/5421166","assessment_id":5421166,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2009","latest":false,"sis_taxon_id":161447,"url":"https://www.iucnredlist.org/species/161447/5426288","assessment_id":5426288,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2009","latest":false,"sis_taxon_id":161470,"url":"https://www.iucnredlist.org/species/161470/5431540","assessment_id":5431540,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2009","latest":false,"sis_taxon_id":161476,"url":"https://www.iucnredlist.org/species/161476/5432609","assessment_id":5432609,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2009","latest":false,"sis_taxon_id":161488,"url":"https://www.iucnredlist.org/species/161488/5435391","assessment_id":5435391,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2009","latest":false,"sis_taxon_id":161499,"url":"https://www.iucnredlist.org/species/161499/5437452","assessment_id":5437452,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2009","latest":false,"sis_taxon_id":161613,"url":"https://www.iucnredlist.org/species/161613/5464675","assessment_id":5464675,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2009","latest":false,"sis_taxon_id":161625,"url":"https://www.iucnredlist.org/species/161625/5467302","assessment_id":5467302,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2009","latest":false,"sis_taxon_id":161632,"url":"https://www.iucnredlist.org/species/161632/5468956","assessment_id":5468956,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2009","latest":false,"sis_taxon_id":161663,"url":"https://www.iucnredlist.org/species/161663/5475627","assessment_id":5475627,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2009","latest":false,"sis_taxon_id":161690,"url":"https://www.iucnredlist.org/species/161690/5481016","assessment_id":5481016,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2009","latest":false,"sis_taxon_id":161720,"url":"https://www.iucnredlist.org/species/161720/5488163","assessment_id":5488163,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2009","latest":false,"sis_taxon_id":161723,"url":"https://www.iucnredlist.org/species/161723/5488740","assessment_id":5488740,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2009","latest":false,"sis_taxon_id":39371,"url":"https://www.iucnredlist.org/species/39371/10186927","assessment_id":10186927,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2000","latest":false,"sis_taxon_id":39371,"url":"https://www.iucnredlist.org/species/39371/10187095","assessment_id":10187095,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2004","latest":false,"sis_taxon_id":44227,"url":"https://www.iucnredlist.org/species/44227/10875538","assessment_id":10875538,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2006","latest":false,"sis_taxon_id":60131,"url":"https://www.iucnredlist.org/species/60131/12310951","assessment_id":12310951,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2006","latest":false,"sis_taxon_id":60143,"url":"https://www.iucnredlist.org/species/60143/12312676","assessment_id":12312676,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2006","latest":false,"sis_taxon_id":60172,"url":"https://www.iucnredlist.org/species/60172/12316627","assessment_id":12316627,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2012","latest":false,"sis_taxon_id":161690,"url":"https://www.iucnredlist.org/species/161690/14783465","assessment_id":14783465,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2016","latest":false,"sis_taxon_id":161723,"url":"https://www.iucnredlist.org/species/161723/90017155","assessment_id":90017155,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2016","latest":false,"sis_taxon_id":60172,"url":"https://www.iucnredlist.org/species/60172/103930433","assessment_id":103930433,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2016","latest":false,"sis_taxon_id":161476,"url":"https://www.iucnredlist.org/species/161476/103930662","assessment_id":103930662,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2016","latest":false,"sis_taxon_id":161408,"url":"https://www.iucnredlist.org/species/161408/104013494","assessment_id":104013494,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":39371,"url":"https://www.iucnredlist.org/species/39371/109876922","assessment_id":109876922,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":44227,"url":"https://www.iucnredlist.org/species/44227/109895118","assessment_id":109895118,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":60131,"url":"https://www.iucnredlist.org/species/60131/109897319","assessment_id":109897319,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":60143,"url":"https://www.iucnredlist.org/species/60143/109897864","assessment_id":109897864,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":60172,"url":"https://www.iucnredlist.org/species/60172/109899000","assessment_id":109899000,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":161340,"url":"https://www.iucnredlist.org/species/161340/109901335","assessment_id":109901335,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":161349,"url":"https://www.iucnredlist.org/species/161349/109901444","assessment_id":109901444,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":false,"sis_taxon_id":161408,"url":"https://www.iucnredlist.org/species/161408/109902367","assessment_id":109902367,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":161426,"url":"https://www.iucnredlist.org/species/161426/109902537","assessment_id":109902537,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":161447,"url":"https://www.iucnredlist.org/species/161447/109904426","assessment_id":109904426,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":161470,"url":"https://www.iucnredlist.org/species/161470/109904876","assessment_id":109904876,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":161476,"url":"https://www.iucnredlist.org/species/161476/109905030","assessment_id":109905030,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":161488,"url":"https://www.iucnredlist.org/species/161488/109905403","assessment_id":109905403,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":161499,"url":"https://www.iucnredlist.org/species/161499/109905559","assessment_id":109905559,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":false,"sis_taxon_id":161613,"url":"https://www.iucnredlist.org/species/161613/109911839","assessment_id":109911839,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":161625,"url":"https://www.iucnredlist.org/species/161625/109913019","assessment_id":109913019,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":161632,"url":"https://www.iucnredlist.org/species/161632/109913192","assessment_id":109913192,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":161663,"url":"https://www.iucnredlist.org/species/161663/109914005","assessment_id":109914005,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":161690,"url":"https://www.iucnredlist.org/species/161690/109914729","assessment_id":109914729,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":161720,"url":"https://www.iucnredlist.org/species/161720/109916524","assessment_id":109916524,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":161723,"url":"https://www.iucnredlist.org/species/161723/109916678","assessment_id":109916678,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":47407786,"url":"https://www.iucnredlist.org/species/47407786/109921879","assessment_id":109921879,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":70682503,"url":"https://www.iucnredlist.org/species/70682503/109922153","assessment_id":109922153,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":103055306,"url":"https://www.iucnredlist.org/species/103055306/109922484","assessment_id":109922484,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":103055459,"url":"https://www.iucnredlist.org/species/103055459/109922488","assessment_id":109922488,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":104023514,"url":"https://www.iucnredlist.org/species/104023514/109922492","assessment_id":109922492,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":107604242,"url":"https://www.iucnredlist.org/species/107604242/109922500","assessment_id":109922500,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":107604828,"url":"https://www.iucnredlist.org/species/107604828/109922504","assessment_id":109922504,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":107604987,"url":"https://www.iucnredlist.org/species/107604987/109922508","assessment_id":109922508,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2017","latest":true,"sis_taxon_id":104176764,"url":"https://www.iucnredlist.org/species/104176764/111015783","assessment_id":111015783,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]},{"year_published":"2024","latest":true,"sis_taxon_id":161613,"url":"https://www.iucnredlist.org/species/161613/124515045","assessment_id":124515045,"code":"100765562","code_type":"scope","scopes":[{"description":{"en":"Global"},"code":"1"},{"description":{"en":"Arabian
+        Sea"},"code":"100765562"}]}],"filters":{}}'
+  recorded_at: 2024-09-17 21:18:30 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/scopes/100765562?page=2
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '95'
+      content-type: application/json
+      current-page: '2'
+      etag: W/"bbe6bf5583b38581500e40ad8f6d5df7"
+      link: <https://api.iucnredlist.org/api/v4/scopes/100765562?page=1&per_page=100>;
+        rel="first", <https://api.iucnredlist.org/api/v4/scopes/100765562?page=1&per_page=100>;
+        rel="prev", <https://api.iucnredlist.org/api/v4/scopes/100765562?page=1&per_page=100>;
+        rel="last"
+      page-items: '100'
+      total-count: '58'
+      total-pages: '1'
+      x-request-id: f6fd1779-7bcd-4781-9fcf-285bde32ae20
+      x-runtime: '0.033708'
+      date: Tue, 17 Sep 2024 21:18:30 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"scope":{"description":{"en":"Arabian Sea"},"code":"100765562"},"assessments":[],"filters":{}}'
+  recorded_at: 2024-09-17 21:18:30 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

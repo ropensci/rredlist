@@ -1,0 +1,58 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/red_list_categories/?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '3536'
+      content-type: application/json
+      etag: W/"6f14b22e04bd092fcbe6b8eb9cd94211"
+      x-request-id: f32622d9-b0cd-412d-8388-6f8199ad1f17
+      x-runtime: '0.013894'
+      date: Tue, 17 Sep 2024 19:59:42 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"red_list_categories":[{"version":"Earlier Version","description":{"en":"Abundant"},"code":"A"},{"version":"2.3","description":{"en":"Critically
+        Endangered"},"code":"CR"},{"version":"3.1","description":{"en":"Critically
+        Endangered"},"code":"CR"},{"version":"Earlier Version","description":{"en":"Commercially
+        Threatened"},"code":"CT"},{"version":"Earlier Version","description":{"en":"Unknown"},"code":"CUSTOM"},{"version":"2.3","description":{"en":"Data
+        Deficient"},"code":"DD"},{"version":"3.1","description":{"en":"Data Deficient"},"code":"DD"},{"version":"Earlier
+        Version","description":{"en":"Endangered"},"code":"E"},{"version":"2.3","description":{"en":"Endangered"},"code":"EN"},{"version":"3.1","description":{"en":"Endangered"},"code":"EN"},{"version":"2.3","description":{"en":"Extinct
+        in the Wild"},"code":"EW"},{"version":"3.1","description":{"en":"Extinct in
+        the Wild"},"code":"EW"},{"version":"2.3","description":{"en":"Unknown"},"code":"Ex"},{"version":"Earlier
+        Version","description":{"en":"Extinct"},"code":"Ex"},{"version":"Earlier Version","description":{"en":"Extinct?"},"code":"Ex?"},{"version":"Earlier
+        Version","description":{"en":"Unknown"},"code":"EX"},{"version":"3.1","description":{"en":"Extinct"},"code":"EX"},{"version":"2.3","description":{"en":"Extinct"},"code":"EX"},{"version":"Earlier
+        Version","description":{"en":"Extinct/Endangered"},"code":"Ex/E"},{"version":"Earlier
+        Version","description":{"en":"Indeterminate"},"code":"I"},{"version":"Earlier
+        Version","description":{"en":"Insufficiently Known"},"code":"K"},{"version":"2.3","description":{"en":"Unknown"},"code":"LC"},{"version":"3.1","description":{"en":"Least
+        Concern"},"code":"LC"},{"version":"3.1","description":{"en":"Unknown"},"code":"LR/cd"},{"version":"2.3","description":{"en":"Lower
+        Risk/conservation dependent"},"code":"LR/cd"},{"version":"Earlier Version","description":{"en":"Unknown"},"code":"LR/lc"},{"version":"3.1","description":{"en":"Unknown"},"code":"LR/lc"},{"version":"2.3","description":{"en":"Lower
+        Risk/least concern"},"code":"LR/lc"},{"version":"3.1","description":{"en":"Unknown"},"code":"LR/nt"},{"version":"2.3","description":{"en":"Lower
+        Risk/near threatened"},"code":"LR/nt"},{"version":"3.1","description":{"en":"Unknown"},"code":"N/A"},{"version":"Earlier
+        Version","description":{"en":"Unknown"},"code":"N/A"},{"version":null,"description":{"en":"Unknown"},"code":"N/A"},{"version":"3.1","description":{"en":"Not
+        Applicable"},"code":"NA"},{"version":"3.1","description":{"en":"Not Evaluated"},"code":"NE"},{"version":"2.3","description":{"en":"Not
+        Evaluated"},"code":"NE"},{"version":"2.3","description":{"en":"Not Recognized"},"code":"NR"},{"version":"Earlier
+        Version","description":{"en":"Not Recognized"},"code":"NR"},{"version":"3.1","description":{"en":"Not
+        Recognized"},"code":"NR"},{"version":"Earlier Version","description":{"en":"Not
+        Threatened"},"code":"nt"},{"version":"Earlier Version","description":{"en":"Unknown"},"code":"NT"},{"version":"3.1","description":{"en":"Near
+        Threatened"},"code":"NT"},{"version":"Earlier Version","description":{"en":"Out
+        of Danger"},"code":"O"},{"version":"Earlier Version","description":{"en":"Rare"},"code":"R"},{"version":"3.1","description":{"en":"Regionally
+        Extinct"},"code":"RE"},{"version":"Earlier Version","description":{"en":"Threatened"},"code":"T"},{"version":"Earlier
+        Version","description":{"en":"Vulnerable"},"code":"V"},{"version":"3.1","description":{"en":"Vulnerable"},"code":"VU"},{"version":"2.3","description":{"en":"Vulnerable"},"code":"VU"}]}'
+  recorded_at: 2024-09-17 19:59:43 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

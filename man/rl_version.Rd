@@ -2,21 +2,30 @@
 % Please edit documentation in R/rl_version.R
 \name{rl_version}
 \alias{rl_version}
-\title{Get the Red List API version}
+\title{Get the Red List version}
 \usage{
-rl_version(...)
+rl_version(key = NULL, ...)
 }
 \arguments{
-\item{...}{Curl options passed to \link[crul:verb-GET]{crul::verb-GET}}
+\item{key}{(character) An IUCN API token. See \code{\link{rl_use_iucn}}.}
+
+\item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
 }
 \value{
-API version as character string
+Red List version as character string
 }
 \description{
-Get the Red List API version
+Returns the current version number of the IUCN Red List of Threatened Species
 }
 \examples{
 \dontrun{
 rl_version()
 }
 }
+\seealso{
+Red List information and statistics:
+\code{\link{rl_api_version}()},
+\code{\link{rl_citation}()},
+\code{\link{rl_sp_count}()}
+}
+\concept{stats}

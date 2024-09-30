@@ -1,0 +1,33 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/taxa/class/?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '1170'
+      content-type: application/json
+      etag: W/"1304c0c69ae35237080c5dcf64b0b76d"
+      x-request-id: f9a54bdc-a959-45dd-8881-9b25d5c70a45
+      x-runtime: '0.011615'
+      date: Wed, 18 Sep 2024 14:37:09 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"class_names":["ACTINOPTERYGII","AGARICOMYCETES","AMPHIBIA","ANDREAEOPSIDA","ANTHOCEROTOPSIDA","ANTHOZOA","ARACHNIDA","ARTHONIOMYCETES","ASTEROIDEA","AVES","BIVALVIA","BRANCHIOPODA","BRYOPSIDA","BRYOPSIDOPHYCEAE","CALCAREA","CEPHALASPIDOMORPHI","CEPHALOPODA","CHAROPHYACEAE","CHILOPODA","CHLOROPHYCEAE","CHONDRICHTHYES","CLITELLATA","COLLEMBOLA","CYCADOPSIDA","DACRYMYCETES","DEMOSPONGIAE","DIPLOPODA","DOTHIDEOMYCETES","ECHINOIDEA","EUROTIOMYCETES","EXOBASIDIOMYCETES","FLORIDEOPHYCEAE","GASTROPODA","GEOGLOSSOMYCETES","GINKGOOPSIDA","GNETOPSIDA","HAPLOMITRIOPSIDA","HEXANAUPLIA","HOLOTHUROIDEA","HYDROZOA","INSECTA","JUNGERMANNIOPSIDA","LECANOROMYCETES","LEOTIOMYCETES","LILIOPSIDA","LYCOPODIOPSIDA","MAGNOLIOPSIDA","MALACOSTRACA","MAMMALIA","MARCHANTIOPSIDA","MAXILLOPODA","MEROSTOMATA","MONOPLACOPHORA","MYXINI","NEMERTEA","NOT
+        ASSIGNED","OEDIPODIOPSIDA","OSTRACODA","PETROMYZONTI","PEZIZOMYCETES","PHAEOPHYCEAE","PINOPSIDA","POLYCHAETA","POLYPLACOPHORA","POLYPODIOPSIDA","POLYTRICHOPSIDA","REPTILIA","SARCOPTERYGII","SOLENOGASTRES","SORDARIOMYCETES","SPHAGNOPSIDA","TAKAKIOPSIDA","TETRAPHIDOPSIDA","TURBELLARIA","UDEONYCHOPHORA","ULVOPHYCEAE","USTILAGINOMYCETES"]}'
+  recorded_at: 2024-09-18 14:37:09 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

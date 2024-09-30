@@ -1,34 +1,50 @@
-#' Get plant species growth forms by taxon name, IUCN id, and region
+#' Growth form assessment summary
+#'
+#' Returns a list of the latest assessments for a given growth form code.
 #'
 #' @export
-#' @template commonargs
+#' @param code (character) The code of the growth form to look up. If not
+#'   supplied, a list of all growth forms will be returned.
 #' @template all
+#' @template filters
 #' @template info
+#' @template page
+#' @family groups
 #' @examples \dontrun{
-#' rl_growth_forms('Quercus robur')
-#' rl_growth_forms('Quercus robur', region = 'europe')
-#' rl_growth_forms(id = 63532)
-#' rl_growth_forms(id = 63532, region = 'europe')
-#'
-#' rl_growth_forms('Mucuna bracteata')
-#' rl_growth_forms('Abarema villifera')
-#' rl_growth_forms('Adansonia perrieri')
-#' rl_growth_forms('Adenostemma harlingii')
-#'
-#' rl_growth_forms_('Quercus robur')
-#' rl_growth_forms_(id = 63532, region = 'europe')
+#' # Get list of all growth forms
+#' rl_growth_forms()
+#' # Get assessment summary for lichens
+#' rl_growth_forms("LC")
 #' }
-rl_growth_forms <- function(name = NULL, id = NULL, region = NULL,
-                        key = NULL, parse = TRUE, ...) {
-  assert_is(parse, 'logical')
-  rl_parse(rl_growth_forms_(name, id, region, key, ...), parse)
+rl_growth_forms <- function(code = NULL, key = NULL, parse = TRUE, all = TRUE,
+                            page = 1, quiet = FALSE, ...) {
+  assert_is(parse, "logical")
+  assert_is(all, "logical")
+
+  res <- rl_growth_forms_(code, key, all, page, quiet, ...)
+  if (all) {
+    combine_assessments(res, parse)
+  } else {
+    rl_parse(res, parse)
+  }
 }
 
 #' @export
 #' @rdname rl_growth_forms
-rl_growth_forms_ <- function(name = NULL, id = NULL, region = NULL,
-                         key = NULL, ...) {
-  assert_is(key, 'character')
-  rr_GET(nir("growth_forms/species/name", "growth_forms/species/id",
-             name, id, region), key, ...)
+rl_growth_forms_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
+                             quiet = FALSE, ...) {
+  assert_is(key, "character")
+  assert_is(code, "character")
+  assert_is(page, c("integer", "numeric"))
+  assert_n(page, 1)
+  assert_is(all, "logical")
+  assert_is(quiet, "logical")
+
+  path <- paste("growth_forms", code, sep = "/")
+
+  if (all) {
+    page_assessments(path, key, quiet, ...)
+  } else {
+    rr_GET(path, key, query = list(page = page), ...)
+  }
 }
