@@ -13,7 +13,7 @@ Makefile
 ^codemeta\.json$
 ^LICENSE\.md$
 vignettes/precompile.R
-^vignettes/source$
+^vignettes/.source$
 ^CRAN-SUBMISSION$
 ^doc$
 ^Meta$
