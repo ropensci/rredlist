@@ -49,7 +49,7 @@ The [IUCN Red List](https://www.iucnredlist.org/) is the world’s most comprehe
 
 Documentation for the IUCN Red List API are available at https://api.iucnredlist.org/api-docs. **Note that use of the web API, and therefore this package, [requires authentication](#authentication).**
 
-### What `rredlist` is not
+#### What `rredlist` is not:
 
 1. [`redlistr`](https://cran.r-project.org/package=redlistr) is a different package for contributors to the IUCN Red List - not working with the IUCN Red List API.
 2. `rredlist` does not include support for the spatial API, described at https://apiv3.iucnredlist.org/spatial.
