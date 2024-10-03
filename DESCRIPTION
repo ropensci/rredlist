@@ -31,7 +31,8 @@ Encoding: UTF-8
 Language: en-US
 Imports:
     crul (>= 0.3.8),
-    jsonlite (>= 1.1)
+    jsonlite (>= 1.1),
+    lifecycle
 Suggests:
     spelling,
     testthat,

@@ -46,6 +46,7 @@
 #' See https://api.iucnredlist.org/
 #'
 #' @importFrom jsonlite fromJSON
+#' @importFrom lifecycle deprecated
 #' @name rredlist-package
 #' @aliases rredlist
 #' @keywords package
