@@ -18,4 +18,5 @@ vignettes/precompile.R
 ^doc$
 ^Meta$
 ^docs$
+^pkgdown$
 ^_pkgdown\.yml$
