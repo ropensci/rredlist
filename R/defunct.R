@@ -225,6 +225,7 @@ rl_sp_category_ <- function(category, key = NULL, parse = TRUE, ...) {
 #'
 #'   This function is fully deprecated in favor of
 #'   [rl_species_latest()]`$citation` as of **rredlist** version 1.0.0.
+#' @keywords internal
 #' @export
 #' @usage NULL
 rl_sp_citation <- function(name = NULL, id = NULL, region = NULL,
@@ -249,6 +250,7 @@ rl_sp_citation_ <- function(name = NULL, id = NULL, region = NULL,
 #'
 #'   This function is fully deprecated in favor of [rl_countries()] as of
 #'   **rredlist** version 1.0.0.
+#' @keywords internal
 #' @export
 #' @usage NULL
 rl_sp_country <- function(country, key = NULL, parse = TRUE, ...) {
@@ -268,6 +270,7 @@ rl_sp_country_ <- function(country, key = NULL, ...) {
 #'
 #'   This function is fully deprecated in favor of
 #'   [rl_species_latest()]`$taxon$synonyms` as of **rredlist** version 1.0.0.
+#' @keywords internal
 #' @export
 #' @usage NULL
 rl_synonyms <- function(name = NULL, key = NULL, parse = TRUE, ...) {

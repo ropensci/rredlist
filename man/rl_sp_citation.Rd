@@ -10,3 +10,4 @@
 This function is fully deprecated in favor of
 \code{\link[=rl_species_latest]{rl_species_latest()}}\verb{$citation} as of \strong{rredlist} version 1.0.0.
 }
+\keyword{internal}

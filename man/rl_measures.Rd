@@ -7,7 +7,8 @@
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}}
 
-This function is fully deprecated in favor of \code{\link[=rl_actions]{rl_actions()}} as of
-\strong{rredlist} version 1.0.0.
+This function is fully deprecated in favor of
+\code{\link[=rl_species_latest]{rl_species_latest()}}\verb{$conservation_actions} as of \strong{rredlist} version
+1.0.0.
 }
 \keyword{internal}
