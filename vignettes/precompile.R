@@ -1,3 +1,5 @@
+# nocov start
+
 # This script is used to precompile vignettes and should be run for
 # each new version of the package
 
@@ -30,3 +32,5 @@ rm(read_only)
 
 # Restore wd
 setwd(old_wd)
+
+# nocov end
