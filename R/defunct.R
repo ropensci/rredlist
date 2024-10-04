@@ -1,5 +1,3 @@
-# nocov start
-
 #' Get common names for a given taxonomic name
 #'
 #' @description `r lifecycle::badge('deprecated')`
@@ -286,4 +284,3 @@ rl_synonyms_ <- function(name = NULL, key = NULL, ...) {
   lifecycle::deprecate_stop("1.0.0", "rl_synonyms_()",
                             "rl_species_latest()")
 }
-# nocov end
