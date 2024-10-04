@@ -11,6 +11,10 @@
 #' @export
 #' @return Invisibly returns the sign-up URL for the IUCN Red List API.
 #' @importFrom utils browseURL
+#' @examples \dontrun{
+#' # Sign up for an API key
+#' rl_use_iucn()
+#' }
 rl_use_iucn <- function() {
   if (interactive()) {
     browseURL("https://api.iucnredlist.org/users/sign_up")

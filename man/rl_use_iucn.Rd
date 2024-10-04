@@ -17,3 +17,9 @@ provides instruction on how to store the key.
 Note that after filling the online form, you should
 receive an API key shortly but not immediately.
 }
+\examples{
+\dontrun{
+# Sign up for an API key
+rl_use_iucn()
+}
+}
