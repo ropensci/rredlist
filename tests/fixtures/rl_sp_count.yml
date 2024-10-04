@@ -1,0 +1,32 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/statistics/count
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/5.2.3 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '16'
+      content-type: application/json
+      etag: W/"cc20c3c3261bb6e8bf196e092c0b8e76"
+      x-request-id: 2c93fd80-a47d-4789-9386-7b0a847277b2
+      x-runtime: '0.012873'
+      date: Fri, 04 Oct 2024 15:08:40 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"count":163040}'
+  recorded_at: 2024-10-04 15:08:40 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

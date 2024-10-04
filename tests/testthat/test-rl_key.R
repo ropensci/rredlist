@@ -1,4 +1,4 @@
-context("test-rl_key")
+context("rl_key functions")
 
 test_that("rl_key produces expected URL and message", {
   suppressMessages(expect_equal(rl_use_iucn(),
