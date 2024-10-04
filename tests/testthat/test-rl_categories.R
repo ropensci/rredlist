@@ -45,8 +45,6 @@ test_that("high level works - not parsing", {
 test_that("low level works", {
   skip_on_cran()
 
-  library("jsonlite")
-
   vcr::use_cassette("rl_categories_-def", {
     aa <- rl_categories_()
   })

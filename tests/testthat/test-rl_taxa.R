@@ -58,8 +58,6 @@ for (i in seq_along(ranks)) {
   test_that("low level works", {
     skip_on_cran()
 
-    library("jsonlite")
-
     vcr::use_cassette(paste0(fn_name_, "-def"), {
       aa <- fn_()
     })

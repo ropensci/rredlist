@@ -18,3 +18,6 @@ invisible(vcr::vcr_configure(
                                  Sys.getenv("IUCN_REDLIST_KEY")),
   filter_request_headers = list(Authorization = "My bearer token is safe")
 ))
+
+# load other needed packages
+library("jsonlite")

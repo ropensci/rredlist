@@ -27,8 +27,6 @@ test_that("high level works - not parsing", {
 test_that("low level works", {
   skip_on_cran()
 
-  library("jsonlite")
-
   vcr::use_cassette("rl_extinct_wild_", {
     aa <- rl_extinct_wild_(all = FALSE)
   })
