@@ -6,6 +6,9 @@
 \usage{
 rl_use_iucn()
 }
+\value{
+Invisibly returns the sign-up URL for the IUCN Red List API.
+}
 \description{
 Browse IUCN Red List API key request URL and
 provides instruction on how to store the key.

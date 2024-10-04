@@ -1,14 +1,16 @@
 ct <- function(l) Filter(Negate(is.null), l)
 
+#' @importFrom utils packageVersion
 rredlist_ua <- function() {
   versions <- c(
-    paste0("r-curl/", utils::packageVersion("curl")),
-    paste0("crul/", utils::packageVersion("crul")),
-    sprintf("rOpenSci(rredlist/%s)", utils::packageVersion("rredlist"))
+    paste0("r-curl/", packageVersion("curl")),
+    paste0("crul/", packageVersion("crul")),
+    sprintf("rOpenSci(rredlist/%s)", packageVersion("rredlist"))
   )
   paste0(versions, collapse = " ")
 }
 
+#' @importFrom crul HttpClient
 rr_GET <- function(path, key = NULL, query = list(), ...) {
   # Extract secret API query arguments
   args <- list(...)
@@ -16,7 +18,7 @@ rr_GET <- function(path, key = NULL, query = list(), ...) {
   query$scope_code <- args$scope_code
   query$year_published <- args$year_published
 
-  cli <- crul::HttpClient$new(
+  cli <- HttpClient$new(
     url = paste(rr_base(), space(path), sep = "/"),
     opts = list(useragent = rredlist_ua()),
     headers = list(Authorization = check_key(key))
@@ -36,16 +38,18 @@ rr_GET <- function(path, key = NULL, query = list(), ...) {
   return(x)
 }
 
+#' @importFrom jsonlite fromJSON
 err_catcher <- function(x) {
-  xx <- jsonlite::fromJSON(x)
+  xx <- fromJSON(x)
   if (any(vapply(c("message", "error"), function(z) z %in% names(xx),
                  logical(1)))) {
     stop(xx[[1]], call. = FALSE)
   }
 }
 
+#' @importFrom jsonlite fromJSON
 rl_parse <- function(x, parse) {
-  jsonlite::fromJSON(x, parse)
+  fromJSON(x, parse)
 }
 
 check_key <- function(x) {

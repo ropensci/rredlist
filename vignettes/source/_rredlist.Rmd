@@ -138,7 +138,7 @@ To consume this JSON, you can use [`jsonlite`](https://jeroen.r-universe.dev/jso
 
 ```{r output.lines=1:10}
 library("jsonlite")
-jsonlite::fromJSON(rl_species_("Fratercula", "arctica"))
+fromJSON(rl_species_("Fratercula", "arctica"))
 ```
 
 ## Usage best practice

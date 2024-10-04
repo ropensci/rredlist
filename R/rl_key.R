@@ -9,10 +9,11 @@
 #' @aliases rl_use_iucn
 #'
 #' @export
-#'
+#' @return Invisibly returns the sign-up URL for the IUCN Red List API.
+#' @importFrom utils browseURL
 rl_use_iucn <- function() {
   if (interactive()) {
-    utils::browseURL("https://api.iucnredlist.org/users/sign_up")
+    browseURL("https://api.iucnredlist.org/users/sign_up")
   }
 
   message(paste0("After getting your key set it as IUCN_REDLIST_KEY in",

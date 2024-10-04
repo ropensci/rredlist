@@ -3,7 +3,7 @@
 # Please edit source in vignettes/source/_rredlist.Rmd
 title: "Introduction to rredlist"
 author: "William Gearty"
-date: "2024-10-02"
+date: "2024-10-04"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to rredlist}
@@ -151,7 +151,7 @@ To consume this JSON, you can use [`jsonlite`](https://jeroen.r-universe.dev/jso
 
 ``` r
 library("jsonlite")
-jsonlite::fromJSON(rl_species_("Fratercula", "arctica"))
+fromJSON(rl_species_("Fratercula", "arctica"))
 #> $taxon
 #> $taxon$sis_id
 #> [1] 22694927
