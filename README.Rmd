@@ -2,6 +2,32 @@ rredlist
 ========
 
 ```{r echo=FALSE}
+library("knitr")
+library("rredlist")
+hook_output <- knitr::knit_hooks$get("output")
+knitr::knit_hooks$set(output = function(x, options) {
+   lines <- options$output.lines
+   if (is.null(lines)) {
+     return(hook_output(x, options))  # pass to default hook
+   }
+   x <- unlist(strsplit(x, "\n"))
+   more <- "..."
+   if (length(lines)==1) {        # first n lines
+     if (length(x) > lines) {
+       # truncate the output, but add ....
+       x <- c(head(x, lines), more)
+     }
+   } else {
+     x <- c(if (abs(lines[1])>1) more else NULL,
+            x[lines],
+            if (length(x)>lines[abs(length(lines))]) more else NULL
+           )
+   }
+   # paste these lines together
+   x <- paste(c(x, ""), collapse = "\n")
+   hook_output(x, options)
+ })
+
 knitr::opts_chunk$set(
   warning = FALSE,
   message = FALSE,
@@ -10,6 +36,7 @@ knitr::opts_chunk$set(
 )
 ```
 
+[![Status at rOpenSci Software Peer Review](https://badges.ropensci.org/663_status.svg)](https://github.com/ropensci/software-review/issues/663)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![cran version](https://www.r-pkg.org/badges/version/rredlist)](https://cran.r-project.org/package=rredlist)
 [![R-check](https://github.com/ropensci/rredlist/actions/workflows/R-check.yml/badge.svg)](https://github.com/ropensci/rredlist/actions/workflows/R-check.yml)
@@ -32,6 +59,40 @@ Development version
 remotes::install_github("ropensci/rredlist")
 # OR
 install.packages("rredlist", repos = "https://ropensci.r-universe.dev/")
+```
+
+## Authentication
+
+Use of this package requires an IUCN API key which can be acquired at https://api.iucnredlist.org/users/sign_up. There is a helper function to help you get the key and store it properly:
+
+```{r eval=FALSE}
+rredlist::rl_use_iucn()
+```
+
+**Keep this key private.** You can pass the key in to each function via the key parameter, but it’s better to store the key either as a environment variable (`IUCN_REDLIST_KEY`) or an R option (`iucn_redlist_key`) - we recommend using the former option. Note that there is not a default API key that is used as a fallback, and the package will not function without providing/storing your own API key.
+
+## Example usage
+
+### Loading the package
+```{r}
+library("rredlist")
+```
+
+### Search for assessments for a particular species
+```{r output.lines=1:10}
+rl_species("Gorilla", "gorilla")$assessments
+```
+
+### Search for assessments that recommend particular conservation actions
+
+#### Get a list of all conservation actions
+```{r output.lines=1:10}
+rl_actions()
+```
+
+#### Return assessments with a particular conservation action
+```{r output.lines=1:10}
+rl_actions("2_2", all = FALSE)$assessments
 ```
 
 ## Meta

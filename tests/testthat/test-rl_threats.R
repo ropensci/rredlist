@@ -79,8 +79,8 @@ test_that("secret query parameters work", {
   })
 
   aa_filt <- subset(aa$assessments, latest & year_published == "2017" &
-                      sapply(aa$assessments$scopes,
-                             function(df) "2" %in% df$code))
+                      unlist(lapply(aa$assessments$scopes,
+                                    function(df) "2" %in% df$code)))
   expect_equal(nrow(aa_filt), nrow(bb$assessments))
 })
 
