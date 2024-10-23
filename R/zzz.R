@@ -1,5 +1,13 @@
+#' Filter a string to non-null elements
+#' @param l A list.
+#' @noRd
+#' @return A list.
 ct <- function(l) Filter(Negate(is.null), l)
 
+#' Get user agent info
+#' @noRd
+#' @return A string indicating the package version numbers for the curl, crul,
+#'   and rredlist R packages.
 #' @importFrom utils packageVersion
 rredlist_ua <- function() {
   versions <- c(
@@ -10,6 +18,16 @@ rredlist_ua <- function() {
   paste0(versions, collapse = " ")
 }
 
+#' Build and handle a GET query of the IUCN API
+#'
+#' @param path (character) The full API endpoint.
+#' @param key (character) An IUCN API token. See \code{\link{rl_use_iucn}}.
+#' @param query (list) A list of parameters to include in the GET query.
+#' @param ... [Curl options][curl::curl_options()] passed to the GET request via
+#'   \code{\link[crul]{HttpClient}}.
+#'
+#' @noRd
+#' @return The response of the query as a JSON string.
 #' @importFrom crul HttpClient
 rr_GET <- function(path, key = NULL, query = list(), ...) {
   # Extract secret API query arguments
@@ -38,6 +56,11 @@ rr_GET <- function(path, key = NULL, query = list(), ...) {
   return(x)
 }
 
+#' Catch response errors
+#' @param x (character) A JSON string representing the response of a GET query.
+#' @return If no errors are found in the JSON string, nothing is returned. If
+#'   errors are found in the JSON string, an error is thrown.
+#' @noRd
 #' @importFrom jsonlite fromJSON
 err_catcher <- function(x) {
   xx <- fromJSON(x)
@@ -47,11 +70,29 @@ err_catcher <- function(x) {
   }
 }
 
+#' Parse a JSON string to a list
+#'
+#' @param x (character) A JSON string.
+#' @param parse (logical) Whether to parse sub-elements of the list to lists
+#'   (\code{FALSE}) or, where possible, to data.frames (\code{TRUE}). Default:
+#'   \code{TRUE}.
+#'
+#' @return A list.
+#' @noRd
 #' @importFrom jsonlite fromJSON
 rl_parse <- function(x, parse) {
   fromJSON(x, parse)
 }
 
+
+#' Retrieve a stored API key, if needed
+#'
+#' @param x (character) An API key as a string. Can also be `NULL`, in which
+#'   case the API key will be retrieved from the environmental variable or R
+#'   option (in that order).
+#'
+#' @return A string. If no API key is found, an error is thrown.
+#' @noRd
 check_key <- function(x) {
   tmp <- if (is.null(x)) Sys.getenv("IUCN_REDLIST_KEY", "") else x
   if (tmp == "") {
@@ -62,10 +103,23 @@ check_key <- function(x) {
   }
 }
 
+#' Parse a JSON string to a list
+#'
+#' @return The base URL for the IUCN API
+#' @noRd
 rr_base <- function() "https://api.iucnredlist.org/api/v4"
 
 space <- function(x) gsub("\\s", "%20", x)
 
+
+#' Check that a value inherits the desired class
+#'
+#' @param x The value to be checked.
+#' @param y (character) The name of a class.
+#'
+#' @return If the check fails, an error is thrown, otherwise, nothing is
+#'   returned.
+#' @noRd
 assert_is <- function(x, y) {
   if (!is.null(x)) {
     if (!inherits(x, y)) {
@@ -75,6 +129,14 @@ assert_is <- function(x, y) {
   }
 }
 
+#' Check that a value has a desired length
+#'
+#' @param x The value to be checked.
+#' @param n (numeric) The desired length.
+#'
+#' @return If the check fails, an error is thrown, otherwise, nothing is
+#'   returned.
+#' @noRd
 assert_n <- function(x, n) {
   if (!is.null(x)) {
     if (!length(x) == n) {
@@ -83,6 +145,13 @@ assert_n <- function(x, n) {
   }
 }
 
+#' Check that a value is not NA
+#'
+#' @param x The value to be checked.
+#'
+#' @return If the check fails, an error is thrown, otherwise, nothing is
+#'   returned.
+#' @noRd
 assert_not_na <- function(x) {
   if (!is.null(x)) {
     if (any(is.na(x))) {
@@ -91,6 +160,16 @@ assert_not_na <- function(x) {
   }
 }
 
+
+#' Combine assessments from multiple pages of a single query
+#'
+#' @param res A list where each element represents the assessments from a single
+#'   page of a multi-page query (such as the output of `page_assessments()`).
+#' @param parse (logical) Whether to parse and combine the assessments into a
+#'   data.frame (\code{TRUE}) or keep them as lists (\code{FALSE}). Default:
+#'   \code{TRUE}.
+#' @noRd
+#' @return If `parse` is \code{TRUE}, a data.frame, otherwise, a list.
 combine_assessments <- function(res, parse) {
   if (length(res) <= 1) return(rl_parse(res, parse))
   lst <- lapply(res, rl_parse, parse = parse)
@@ -104,6 +183,19 @@ combine_assessments <- function(res, parse) {
   return(tmp)
 }
 
+#' Page through assessments
+#'
+#' @param path (character) The full API endpoint.
+#' @param key (character) An IUCN API token. See \code{\link{rl_use_iucn}}.
+#' @param quiet (logical) Whether to suppress progress for multi-page downloads
+#'   or not. Default: `FALSE` (that is, give progress). Ignored if `all =
+#'   FALSE`.
+#' @param ... [Curl options][curl::curl_options()] passed to the GET request via
+#'   \code{\link[crul]{HttpClient}}.
+#'
+#' @return A list with each element representing the response of one page of
+#'   results.
+#' @noRd
 #' @importFrom jsonlite fromJSON
 page_assessments <- function(path, key, quiet, ...) {
   out <- list()
