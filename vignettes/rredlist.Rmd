@@ -3,7 +3,7 @@
 # Please edit source in vignettes/source/_rredlist.Rmd
 title: "Introduction to rredlist"
 author: "William Gearty"
-date: "2024-10-04"
+date: "2024-10-23"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to rredlist}
@@ -69,6 +69,17 @@ rredlist::rl_use_iucn()
 **Keep this key private.** You can pass the key in to each function via the `key` parameter, but it's better to store the key either as a environment variable (`IUCN_REDLIST_KEY`) or an R option (`iucn_redlist_key`) - we recommend using the former option.
 
 Note that you can no longer generate a new API key for version 3 of the API.
+
+## Overview of available functions
+
+- Query assessments by taxa (e.g., `rl_species()` and `rl_family()`)
+- Query assessments by habitats (e.g., `rl_habitats()` and `rl_systems()`)
+- Query assessments by geography (e.g., `rl_countries()` and `rl_realms()`)
+- Query assessments by actions needed (e.g., `rl_actions()` and `rl_research()`)
+- Query assessments by threat details (e.g., `rl_threats()` and `rl_pop_trends()`)
+- Query assessments for specific sets of taxa (e.g., `rl_extinct()` and `rl_growth_forms()`)
+- Get all details for a single assessment (e.g., `rl_species_latest()` and `rl_assessment()`)
+- Red List information and statistics (e.g., `rl_sp_count()` and `rl_version()`)
 
 ## High level interface
 
@@ -184,16 +195,18 @@ We'd also really appreciate it if you could cite your use of this package:
 citation("rredlist")
 #> To cite package 'rredlist' in publications use:
 #> 
-#>   Gearty W, Chamberlain S (????). _rredlist: 'IUCN' Red List Client_. R package version 0.7.1.9000,
-#>   https://github.com/ropensci/rredlist, <https://docs.ropensci.org/rredlist/>.
+#>   Gearty W, Chamberlain S (2024). _rredlist: 'IUCN' Red List Client_.
+#>   doi:10.32614/CRAN.package.rredlist <https://doi.org/10.32614/CRAN.package.rredlist>, R package
+#>   version 0.7.1.9000, <https://docs.ropensci.org/rredlist/>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
-#>   @Manual{,
+#>   @Manual{rredlist,
 #>     title = {rredlist: 'IUCN' Red List Client},
 #>     author = {William Gearty and Scott Chamberlain},
-#>     note = {R package version 0.7.1.9000, 
-#> https://github.com/ropensci/rredlist},
+#>     year = {2024},
+#>     note = {R package version 0.7.1.9000},
+#>     doi = {10.32614/CRAN.package.rredlist},
 #>     url = {https://docs.ropensci.org/rredlist/},
 #>   }
 ```
