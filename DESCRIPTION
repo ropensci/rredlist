@@ -36,7 +36,7 @@ Imports:
 Suggests:
     spelling,
     testthat,
-    vcr (>= 0.4.0),
+    vcr (>= 0.6.0),
     knitr,
     rmarkdown
 RoxygenNote: 7.3.2

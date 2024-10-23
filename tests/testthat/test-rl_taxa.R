@@ -69,7 +69,7 @@ for (i in seq_along(ranks)) {
     expect_named(aajson, c(paste0(rank, "_names")))
     expect_is(aajson[[paste0(rank, "_names")]], "character")
 
-    vcr::use_cassette(paste0(fn_name, "_"), {
+    vcr::use_cassette(fn_name_, {
       aa <- fn_(name, all = FALSE)
     })
 
