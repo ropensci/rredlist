@@ -8,7 +8,7 @@
 #' for help getting and storing it. Get it at
 #' https://api.iucnredlist.org/users/sign_up
 #' Keep this key private. You can pass the key in to each function via the
-#' `key` parameter, but it's better to store the key either as a
+#' `key` parameter, but it's better to store the key either as an
 #' environment variable (`IUCN_REDLIST_KEY`) or an R option
 #' (`iucn_redlist_key`) - we recommend using the former option.
 #'
@@ -16,21 +16,21 @@
 #' **High level API**
 #' High level functions do the HTTP request and parse data to a data.frame for
 #' ease of downstream use. The high level functions have no underscore on
-#' the end of the function name, e.g., [rl_species()]
+#' the end of the function name, e.g., [rl_species()].
 #'
 #' **Low level API**
 #' The parsing to data.frame in the high level API does take extra time.
 #' The low level API only does the HTTP request, and gives back JSON without
 #' doing any more parsing. The low level functions DO have an underscore on
-#' the end of the function name, e.g., [rl_species_()]
+#' the end of the function name, e.g., [rl_species_()].
 #'
 #' @section No Spatial:
 #' This package does not include support for the spatial API, described at
-#' https://apiv3.iucnredlist.org/spatial
+#' https://apiv3.iucnredlist.org/spatial.
 #'
 #' @section Citing the Red List API:
 #' Get the proper citation for the version of the Red List you are using
-#' by programatically running [rl_citation()]
+#' by programatically running [rl_citation()].
 #'
 #' @section Red List API Terms of Use:
 #' See https://www.iucnredlist.org/terms/terms-of-use

@@ -1,12 +1,12 @@
 #' Get the Red List API version
 #'
 #' Returns the current version number of the IUCN Red List of Threatened Species
-#' API
+#' API.
 #'
 #' @export
-#' @param key (character) An IUCN API token. See \code{\link{rl_use_iucn}}.
-#' @param ... Curl options passed to \code{\link[crul]{HttpClient}}
-#' @return API version as character string
+#' @param key (character) An IUCN API token. See [rl_use_iucn()].
+#' @param ... Curl options passed to [HttpClient][crul::HttpClient()].
+#' @return API version as character string.
 #' @family stats
 #' @examples \dontrun{
 #' rl_api_version()
@@ -21,9 +21,9 @@ rl_api_version <- function(key = NULL, ...) {
 #' Returns the current version number of the IUCN Red List of Threatened Species
 #'
 #' @export
-#' @param key (character) An IUCN API token. See \code{\link{rl_use_iucn}}.
-#' @param ... Curl options passed to \code{\link[crul]{HttpClient}}
-#' @return Red List version as character string
+#' @param key (character) An IUCN API token. See [rl_use_iucn()].
+#' @param ... Curl options passed to [HttpClient][crul::HttpClient()].
+#' @return Red List version as character string.
 #' @family stats
 #' @examples \dontrun{
 #' rl_version()

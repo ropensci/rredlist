@@ -1,7 +1,7 @@
 #' Biogeographical realm assessment summary
 #'
 #' Get an assessment summary for a particular biogeographical realm (e.g.,
-#' Neotropical or Palearctic)
+#' Neotropical or Palearctic).
 #'
 #' @export
 #' @param code (character) The code of the biogeographical realm to look up. If

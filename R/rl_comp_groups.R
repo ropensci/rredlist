@@ -1,6 +1,6 @@
 #' Comprehensive group assessment summary
 #'
-#' Returns a list of the latest assessments for an comprehensive group name
+#' Returns a list of the latest assessments for a comprehensive group name.
 #'
 #' @export
 #' @param name (character) The code of the comprehensive group to look up. If

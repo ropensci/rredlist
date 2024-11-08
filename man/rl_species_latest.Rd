@@ -25,13 +25,13 @@ look up.}
 \item{subpopulation}{(character) An optional name of the geographically
 separate subpopulation to look up.}
 
-\item{key}{(character) An IUCN API token. See \code{\link{rl_use_iucn}}.}
+\item{key}{(character) An IUCN API token. See \code{\link[=rl_use_iucn]{rl_use_iucn()}}.}
 
 \item{parse}{(logical) Whether to parse the output to list (\code{FALSE}) or,
-where possible, data.frame (\code{TRUE}). Default: \code{TRUE}}
+where possible, data.frame (\code{TRUE}). Default: \code{TRUE}.}
 
 \item{...}{\link[curl:curl_options]{Curl options} passed to the GET request via
-\code{\link[crul]{HttpClient}}.}
+\link[crul:HttpClient]{cruls}.}
 }
 \value{
 A list unless using a function with a trailing underscore, in which

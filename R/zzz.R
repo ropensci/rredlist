@@ -21,10 +21,10 @@ rredlist_ua <- function() {
 #' Build and handle a GET query of the IUCN API
 #'
 #' @param path (character) The full API endpoint.
-#' @param key (character) An IUCN API token. See \code{\link{rl_use_iucn}}.
+#' @param key (character) An IUCN API token. See [rl_use_iucn()].
 #' @param query (list) A list of parameters to include in the GET query.
 #' @param ... [Curl options][curl::curl_options()] passed to the GET request via
-#'   \code{\link[crul]{HttpClient}}.
+#'   [HttpClient][crul::HttpClient()].
 #'
 #' @noRd
 #' @return The response of the query as a JSON string.
@@ -74,8 +74,8 @@ err_catcher <- function(x) {
 #'
 #' @param x (character) A JSON string.
 #' @param parse (logical) Whether to parse sub-elements of the list to lists
-#'   (\code{FALSE}) or, where possible, to data.frames (\code{TRUE}). Default:
-#'   \code{TRUE}.
+#'   (`FALSE`) or, where possible, to data.frames (`TRUE`). Default:
+#'   `TRUE`.
 #'
 #' @return A list.
 #' @noRd
@@ -166,10 +166,10 @@ assert_not_na <- function(x) {
 #' @param res A list where each element represents the assessments from a single
 #'   page of a multi-page query (such as the output of `page_assessments()`).
 #' @param parse (logical) Whether to parse and combine the assessments into a
-#'   data.frame (\code{TRUE}) or keep them as lists (\code{FALSE}). Default:
-#'   \code{TRUE}.
+#'   data.frame (`TRUE`) or keep them as lists (`FALSE`). Default:
+#'   `TRUE`.
 #' @noRd
-#' @return If `parse` is \code{TRUE}, a data.frame, otherwise, a list.
+#' @return If `parse` is `TRUE`, a data.frame, otherwise, a list.
 combine_assessments <- function(res, parse) {
   if (length(res) <= 1) return(rl_parse(res, parse))
   lst <- lapply(res, rl_parse, parse = parse)
@@ -186,12 +186,12 @@ combine_assessments <- function(res, parse) {
 #' Page through assessments
 #'
 #' @param path (character) The full API endpoint.
-#' @param key (character) An IUCN API token. See \code{\link{rl_use_iucn}}.
+#' @param key (character) An IUCN API token. See [rl_use_iucn()].
 #' @param quiet (logical) Whether to suppress progress for multi-page downloads
 #'   or not. Default: `FALSE` (that is, give progress). Ignored if `all =
 #'   FALSE`.
 #' @param ... [Curl options][curl::curl_options()] passed to the GET request via
-#'   \code{\link[crul]{HttpClient}}.
+#'   [HttpClient][crul::HttpClient()].
 #'
 #' @return A list with each element representing the response of one page of
 #'   results.

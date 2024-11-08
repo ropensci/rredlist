@@ -28,10 +28,10 @@ rl_comp_groups_(
 \item{name}{(character) The code of the comprehensive group to look up. If
 not supplied, a list of all comprehensive groups will be returned.}
 
-\item{key}{(character) An IUCN API token. See \code{\link{rl_use_iucn}}.}
+\item{key}{(character) An IUCN API token. See \code{\link[=rl_use_iucn]{rl_use_iucn()}}.}
 
 \item{parse}{(logical) Whether to parse the output to list (\code{FALSE}) or,
-where possible, data.frame (\code{TRUE}). Default: \code{TRUE}}
+where possible, data.frame (\code{TRUE}). Default: \code{TRUE}.}
 
 \item{all}{(logical) Whether to retrieve all results at once or not. If
 \code{TRUE} we do the paging internally for you and bind all of the results
@@ -58,14 +58,14 @@ Europe). This is similar to the \code{region} argument of the old Red List
 API and old versions of rredlist.
 }
 Also supports any \link[curl:curl_options]{curl options} passed to the GET
-request via \code{\link[crul]{HttpClient}}.}
+request via \link[crul:HttpClient]{HttpClient}.}
 }
 \value{
 A list unless using a function with a trailing underscore, in which
 case json as character string is returned.
 }
 \description{
-Returns a list of the latest assessments for an comprehensive group name
+Returns a list of the latest assessments for a comprehensive group name.
 }
 \examples{
 \dontrun{

@@ -1,6 +1,6 @@
 #' Country assessment summary
 #'
-#' Returns a collection of assessments for a given country code
+#' Returns a collection of assessments for a given country code.
 #'
 #' @export
 #' @param code (character) The ISO alpha-2 code of the country to look up. If

@@ -1,10 +1,10 @@
 #' Get count of species in the Red List
 #'
-#' Returns a count of the number of unique species which have assessments
+#' Returns a count of the number of unique species which have assessments.
 #'
 #' @export
-#' @param key (character) An IUCN API token. See \code{\link{rl_use_iucn}}.
-#' @param ... Curl options passed to \code{\link[crul]{HttpClient}}
+#' @param key (character) An IUCN API token. See [rl_use_iucn()].
+#' @param ... Curl options passed to [HttpClient][crul::HttpClient()]
 #' @template info
 #' @family stats
 #' @examples \dontrun{
