@@ -7,12 +7,12 @@
 rl_version(key = NULL, ...)
 }
 \arguments{
-\item{key}{(character) An IUCN API token. See \code{\link{rl_use_iucn}}.}
+\item{key}{(character) An IUCN API token. See \code{\link[=rl_use_iucn]{rl_use_iucn()}}.}
 
-\item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
+\item{...}{Curl options passed to \link[crul:HttpClient]{HttpClient}.}
 }
 \value{
-Red List version as character string
+Red List version as character string.
 }
 \description{
 Returns the current version number of the IUCN Red List of Threatened Species

@@ -10,10 +10,10 @@ rl_extinct(key = NULL, parse = TRUE, all = TRUE, page = 1, quiet = FALSE, ...)
 rl_extinct_(key = NULL, all = TRUE, page = 1, quiet = FALSE, ...)
 }
 \arguments{
-\item{key}{(character) An IUCN API token. See \code{\link{rl_use_iucn}}.}
+\item{key}{(character) An IUCN API token. See \code{\link[=rl_use_iucn]{rl_use_iucn()}}.}
 
 \item{parse}{(logical) Whether to parse the output to list (\code{FALSE}) or,
-where possible, data.frame (\code{TRUE}). Default: \code{TRUE}}
+where possible, data.frame (\code{TRUE}). Default: \code{TRUE}.}
 
 \item{all}{(logical) Whether to retrieve all results at once or not. If
 \code{TRUE} we do the paging internally for you and bind all of the results
@@ -27,7 +27,7 @@ much burden on a server to just "get all the data" in one request.}
 or not. Default: \code{FALSE} (that is, give progress). Ignored if \code{all = FALSE}.}
 
 \item{...}{\link[curl:curl_options]{Curl options} passed to the GET request via
-\code{\link[crul]{HttpClient}}.}
+\link[crul:HttpClient]{cruls}.}
 }
 \value{
 A list unless using a function with a trailing underscore, in which

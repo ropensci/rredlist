@@ -5,9 +5,9 @@
 #' List API. More details are available here: <https://api.iucnredlist.org/>.
 #'
 #' @export
-#' @param key (character) An IUCN API token. See \code{\link{rl_use_iucn}}.
-#' @param ... Curl options passed to \code{\link[crul]{HttpClient}}
-#' @return Red List citation as character string
+#' @param key (character) An IUCN API token. See [rl_use_iucn()].
+#' @param ... Curl options passed to [HttpClient][crul::HttpClient()].
+#' @return Red List citation as character string.
 #' @family stats
 #' @examples \dontrun{
 #' rl_citation()

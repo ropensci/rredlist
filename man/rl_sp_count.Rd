@@ -10,16 +10,16 @@ rl_sp_count(key = NULL, ...)
 rl_sp_count_(key = NULL, ...)
 }
 \arguments{
-\item{key}{(character) An IUCN API token. See \code{\link{rl_use_iucn}}.}
+\item{key}{(character) An IUCN API token. See \code{\link[=rl_use_iucn]{rl_use_iucn()}}.}
 
-\item{...}{Curl options passed to \code{\link[crul]{HttpClient}}}
+\item{...}{Curl options passed to \link[crul:HttpClient]{HttpClient}}
 }
 \value{
 A list unless using a function with a trailing underscore, in which
 case json as character string is returned.
 }
 \description{
-Returns a count of the number of unique species which have assessments
+Returns a count of the number of unique species which have assessments.
 }
 \examples{
 \dontrun{

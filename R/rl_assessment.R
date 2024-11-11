@@ -1,6 +1,6 @@
 #' Retrieve an assessment
 #'
-#' Get the full details for a single IUCN Red List assessment
+#' Get the full details for a single IUCN Red List assessment.
 #'
 #' @export
 #' @param id (integer) The unique identifier of the assessment.
