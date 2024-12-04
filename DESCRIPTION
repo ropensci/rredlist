@@ -32,7 +32,8 @@ Language: en-US
 Imports:
     crul (>= 0.3.8),
     jsonlite (>= 1.1),
-    lifecycle
+    lifecycle,
+    cli
 Suggests:
     spelling,
     testthat,

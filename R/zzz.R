@@ -18,7 +18,7 @@ rredlist_ua <- function() {
   paste0(versions, collapse = " ")
 }
 
-#' Build and handle a GET query of the IUCN API
+#' Build and make a GET query of the IUCN API
 #'
 #' @param path (character) The full API endpoint.
 #' @param key (character) An IUCN API token. See [rl_use_iucn()].
@@ -27,9 +27,9 @@ rredlist_ua <- function() {
 #'   [HttpClient][crul::HttpClient()].
 #'
 #' @noRd
-#' @return The response of the query as a JSON string.
+#' @return The raw crul response object.
 #' @importFrom crul HttpClient
-rr_GET <- function(path, key = NULL, query = list(), ...) {
+rr_GET_raw <- function(path, key = NULL, query = list(), ...) {
   # Extract secret API query arguments
   args <- list(...)
   query$latest <- args$latest
@@ -41,19 +41,44 @@ rr_GET <- function(path, key = NULL, query = list(), ...) {
     opts = list(useragent = rredlist_ua()),
     headers = list(Authorization = check_key(key))
   )
-  temp <- cli$get(query = ct(query), ...)
-  if (temp$status_code >= 300) {
-    if (temp$status_code == 401) {
-      stop("Token not valid! (HTTP 401)", call. = FALSE)
-    } else if (temp$status_code == 404) {
-      stop("No results returned for query. (HTTP 404)", call. = FALSE)
-    } else {
-      temp$raise_for_status()
-    }
-  }
-  x <- temp$parse("UTF-8")
+  cli$get(query = ct(query), ...)
+}
+
+#' Handle a GET query of the IUCN API
+#'
+#' @param path (character) The full API endpoint.
+#' @param key (character) An IUCN API token. See [rl_use_iucn()].
+#' @param query (list) A list of parameters to include in the GET query.
+#' @param ... [Curl options][curl::curl_options()] passed to the GET request via
+#'   [HttpClient][crul::HttpClient()].
+#'
+#' @noRd
+#' @return The response of the query as a JSON string.
+#' @importFrom crul HttpClient
+rr_GET <- function(path, key = NULL, query = list(), ...) {
+  res <- rr_GET_raw(path, key, query, ...)
+  status_catcher(res)
+  x <- res$parse("UTF-8")
   err_catcher(x)
   return(x)
+}
+
+#' Catch status code errors
+#' @param res An [crul::HttpResponse] object as returned by
+#'   [crul::HttpClient()].
+#' @return If no status code errors are found, nothing is returned. If status
+#'   code errors are found, an error is thrown.
+#' @noRd
+status_catcher <- function(res) {
+  if (res$status_code >= 300) {
+    if (res$status_code == 401) {
+      stop("Token not valid! (HTTP 401)", call. = FALSE)
+    } else if (res$status_code == 404) {
+      stop("No results returned for query. (HTTP 404)", call. = FALSE)
+    } else {
+      res$raise_for_status()
+    }
+  }
 }
 
 #' Catch response errors
@@ -196,22 +221,27 @@ combine_assessments <- function(res, parse) {
 #' @return A list with each element representing the response of one page of
 #'   results.
 #' @noRd
-#' @importFrom jsonlite fromJSON
+#' @importFrom cli cli_progress_bar cli_progress_update cli_progress_done
 page_assessments <- function(path, key, quiet, ...) {
   out <- list()
-  done <- FALSE
-  page <- 1
-  while (!done) {
-    tmp <- rr_GET(path, key, query = list(page = page), ...)
-    if (length(fromJSON(tmp, FALSE)$assessments) == 0) {
-      if (page == 1) out <- tmp else if (page == 2) out <- out[[1]]
-      done <- TRUE
-    } else {
-      if (!quiet) cat(".")
+  res <- rr_GET_raw(path, key, query = list(page = 1), ...)
+  status_catcher(res)
+  tmp <- res$parse("UTF-8")
+  err_catcher(tmp)
+  total_pages <- as.integer(res$response_headers$`total-pages`)
+  if (length(total_pages) == 0) total_pages <- 1
+  if (!quiet) cli_progress_bar("Paging assessments", total = total_pages)
+  if (total_pages == 1) {
+    out <- tmp
+  } else {
+    out[[1]] <- tmp
+    if (!quiet) cli_progress_update()
+    for (page in 2:total_pages) {
+      tmp <- rr_GET(path, key, query = list(page = page), ...)
       out[[page]] <- tmp
-      page <- page + 1
+      if (!quiet) cli_progress_update()
     }
   }
-  if (!quiet && page > 1) cat("\n")
+  if (!quiet) cli_progress_done()
   return(out)
 }
