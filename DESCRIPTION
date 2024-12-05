@@ -33,7 +33,8 @@ Imports:
     crul (>= 0.3.8),
     jsonlite (>= 1.1),
     lifecycle,
-    cli
+    cli,
+    curl
 Suggests:
     spelling,
     testthat,

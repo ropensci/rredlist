@@ -36,6 +36,7 @@ rr_GET_raw <- function(path, key = NULL, query = list(), ...) {
   query$scope_code <- args$scope_code
   query$year_published <- args$year_published
 
+  check_internet()
   cli <- HttpClient$new(
     url = paste(rr_base(), space(path), sep = "/"),
     opts = list(useragent = rredlist_ua()),
@@ -61,6 +62,19 @@ rr_GET <- function(path, key = NULL, query = list(), ...) {
   x <- res$parse("UTF-8")
   err_catcher(x)
   return(x)
+}
+
+#' Check that the user has internet
+#'
+#' @return If the user has internet, nothing is returned. If the user does not
+#'   have internet, an error is thrown.
+#' @noRd
+#' @importFrom curl nslookup
+check_internet <- function() {
+  # check for internet with DNS lookup
+  if (is.null(nslookup("google.com", error = FALSE))) {
+    stop("An internet connection is required to access the IUCN API.")
+  }
 }
 
 #' Catch status code errors
