@@ -175,21 +175,6 @@ assert_n <- function(x, n) {
   }
 }
 
-#' Check that a value is not NA
-#'
-#' @param x The value to be checked.
-#'
-#' @return If the check fails, an error is thrown, otherwise, nothing is
-#'   returned.
-#' @noRd
-assert_not_na <- function(x) {
-  if (!is.null(x)) {
-    if (any(is.na(x))) {
-      stop(deparse(substitute(x)), " must not be NA", call. = FALSE)
-    }
-  }
-}
-
 #' Combine assessments from multiple pages of a single query
 #'
 #' @param res A list where each element represents the assessments from a single
