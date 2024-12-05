@@ -60,7 +60,6 @@ rr_GET <- function(path, key = NULL, query = list(), ...) {
   res <- rr_GET_raw(path, key, query, ...)
   status_catcher(res)
   x <- res$parse("UTF-8")
-  err_catcher(x)
   return(x)
 }
 
@@ -98,20 +97,6 @@ status_catcher <- function(res) {
   }
 }
 
-#' Catch response errors
-#' @param x (character) A JSON string representing the response of a GET query.
-#' @return If no errors are found in the JSON string, nothing is returned. If
-#'   errors are found in the JSON string, an error is thrown.
-#' @noRd
-#' @importFrom jsonlite fromJSON
-err_catcher <- function(x) {
-  xx <- fromJSON(x)
-  if (any(vapply(c("message", "error"), function(z) z %in% names(xx),
-                 logical(1)))) {
-    stop(xx[[1]], call. = FALSE)
-  }
-}
-
 #' Parse a JSON string to a list
 #'
 #' @param x (character) A JSON string.
@@ -125,7 +110,6 @@ err_catcher <- function(x) {
 rl_parse <- function(x, parse) {
   fromJSON(x, parse)
 }
-
 
 #' Retrieve a stored API key, if needed
 #'
@@ -152,7 +136,6 @@ check_key <- function(x) {
 rr_base <- function() "https://api.iucnredlist.org/api/v4"
 
 space <- function(x) gsub("\\s", "%20", x)
-
 
 #' Check that a value inherits the desired class
 #'
@@ -202,7 +185,6 @@ assert_not_na <- function(x) {
   }
 }
 
-
 #' Combine assessments from multiple pages of a single query
 #'
 #' @param res A list where each element represents the assessments from a single
@@ -243,11 +225,10 @@ page_assessments <- function(path, key, quiet, ...) {
   out <- list()
   res <- rr_GET_raw(path, key, query = list(page = 1), ...)
   status_catcher(res)
-  tmp <- res$parse("UTF-8")
-  err_catcher(tmp)
   total_pages <- as.integer(res$response_headers$`total-pages`)
   if (length(total_pages) == 0) total_pages <- 1
   if (!quiet) cli_progress_bar("Paging assessments", total = total_pages)
+  tmp <- res$parse("UTF-8")
   if (total_pages == 1) {
     out <- tmp
   } else {
