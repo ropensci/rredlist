@@ -40,7 +40,8 @@ Suggests:
     testthat,
     vcr (>= 0.6.0),
     knitr,
-    rmarkdown
+    rmarkdown,
+    webmockr
 RoxygenNote: 7.3.2
 VignetteBuilder: knitr
 X-schema.org-applicationCategory: Biodiversity

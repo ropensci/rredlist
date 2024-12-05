@@ -21,3 +21,4 @@ invisible(vcr::vcr_configure(
 
 # load other needed packages
 library("jsonlite")
+library("webmockr")
