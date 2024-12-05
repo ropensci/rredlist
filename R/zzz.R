@@ -89,6 +89,9 @@ status_catcher <- function(res) {
       stop("Token not valid! (HTTP 401)", call. = FALSE)
     } else if (res$status_code == 404) {
       stop("No results returned for query. (HTTP 404)", call. = FALSE)
+    } else if (res$status_code >= 500) {
+      stop("The IUCN API is not currently available. Please try your query again
+           later.", call. = FALSE)
     } else {
       res$raise_for_status()
     }
