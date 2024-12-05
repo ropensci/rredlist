@@ -232,7 +232,10 @@ page_assessments <- function(path, key, quiet, ...) {
   status_catcher(res)
   total_pages <- as.integer(res$response_headers$`total-pages`)
   if (length(total_pages) == 0) total_pages <- 1
-  if (!quiet) cli_progress_bar("Paging assessments", total = total_pages)
+  if (!quiet) cli_progress_bar(
+    "Paging assessments", total = total_pages, clear = FALSE,
+    format = paste0("{pb_name} ({pb_current}/{pb_total}) | ",
+                    "{pb_bar} {pb_percent} | ETA: {pb_eta}"))
   tmp <- res$parse("UTF-8")
   if (total_pages == 1) {
     out <- tmp
