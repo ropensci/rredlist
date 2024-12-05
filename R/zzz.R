@@ -135,6 +135,11 @@ check_key <- function(x) {
 #' @noRd
 rr_base <- function() "https://api.iucnredlist.org/api/v4"
 
+#' Escape spaces in a URL string
+#'
+#' @param x (character) A URL string (possibly with unescaped spaces)
+#' @return (character) A URL string (with any spaces escaped)
+#' @noRd
 space <- function(x) gsub("\\s", "%20", x)
 
 #' Check that a value inherits the desired class
