@@ -4,13 +4,12 @@
 #' @title rredlist
 #' @section Authentication:
 #' IUCN requires you to get your own API key, an alphanumeric string that you
-#' need to send in every request. See key A IUCN API token. See [rl_use_iucn()]
-#' for help getting and storing it. Get it at
-#' https://api.iucnredlist.org/users/sign_up
-#' Keep this key private. You can pass the key in to each function via the
-#' `key` parameter, but it's better to store the key either as an
-#' environment variable (`IUCN_REDLIST_KEY`) or an R option
-#' (`iucn_redlist_key`) - we recommend using the former option.
+#' need to send in every request. See [rl_use_iucn()] for help getting and
+#' storing it. Get it at <https://api.iucnredlist.org/users/sign_up>. Keep this
+#' key private. You can pass the key in to each function via the `key`
+#' parameter, but it's better to store the key either as an environment variable
+#' (`IUCN_REDLIST_KEY`) or an R option (`iucn_redlist_key`) - we recommend using
+#' the former option.
 #'
 #' @section High vs. Low level package APIs:
 #' **High level API**
@@ -26,14 +25,15 @@
 #'
 #' @section No Spatial:
 #' This package does not include support for the spatial API, described at
-#' https://apiv3.iucnredlist.org/spatial.
+#' <https://apiv3.iucnredlist.org/spatial>.
 #'
-#' @section Citing the Red List API:
+#' @section Citing the IUCN Red List API:
 #' Get the proper citation for the version of the Red List you are using
-#' by programatically running [rl_citation()].
+#' by programatically running [rl_citation()]. Also see
+#' <https://api.iucnredlist.org/>.
 #'
 #' @section Red List API Terms of Use:
-#' See https://www.iucnredlist.org/terms/terms-of-use
+#' See <https://www.iucnredlist.org/terms/terms-of-use>.
 #'
 #' @section Rate limiting:
 #' From the IUCN folks: Too many frequent calls, or too many calls per day
@@ -41,9 +41,6 @@
 #' Red List Unit asked that you contact them, as there might be better options.
 #' They suggest a 2-second delay between your calls if you plan to make a
 #' lot of calls.
-#'
-#' @section Citing the IUCN Red List API:
-#' See https://api.iucnredlist.org/
 #'
 #' @importFrom jsonlite fromJSON
 #' @importFrom lifecycle deprecated
