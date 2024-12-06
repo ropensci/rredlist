@@ -1,0 +1,39 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/taxa/family/Rheidae?page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/6.0.1 crul/1.5.0 rOpenSci(rredlist/0.7.1.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '3149'
+      content-type: application/json
+      current-page: '1'
+      etag: W/"ffa325e8d9058c13de669a118541da23"
+      link: <https://api.iucnredlist.org/api/v4/taxa/family/Rheidae?page=1&per_page=100>;
+        rel="first", <https://api.iucnredlist.org/api/v4/taxa/family/Rheidae?page=1&per_page=100>;
+        rel="last"
+      page-items: '100'
+      total-count: '15'
+      total-pages: '1'
+      x-request-id: 455f7d84-0e63-4759-b0e2-83a61aa13b13
+      x-runtime: '0.514005'
+      date: Fri, 06 Dec 2024 21:13:39 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"assessments":[{"year_published":"2008","latest":false,"sis_taxon_id":22678073,"url":"https://www.iucnredlist.org/species/22678073/34712085","assessment_id":34712085,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2004","latest":false,"sis_taxon_id":22678073,"url":"https://www.iucnredlist.org/species/22678073/34713259","assessment_id":34713259,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2000","latest":false,"sis_taxon_id":22678073,"url":"https://www.iucnredlist.org/species/22678073/34714240","assessment_id":34714240,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1994","latest":false,"sis_taxon_id":22678073,"url":"https://www.iucnredlist.org/species/22678073/34714746","assessment_id":34714746,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1988","latest":false,"sis_taxon_id":22678073,"url":"https://www.iucnredlist.org/species/22678073/34715731","assessment_id":34715731,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2012","latest":false,"sis_taxon_id":22678073,"url":"https://www.iucnredlist.org/species/22678073/37835094","assessment_id":37835094,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2014","latest":false,"sis_taxon_id":22728199,"url":"https://www.iucnredlist.org/species/22728199/40855535","assessment_id":40855535,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2014","latest":false,"sis_taxon_id":22728206,"url":"https://www.iucnredlist.org/species/22728206/40856094","assessment_id":40856094,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":false,"sis_taxon_id":22678073,"url":"https://www.iucnredlist.org/species/22678073/92754472","assessment_id":92754472,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":false,"sis_taxon_id":22728199,"url":"https://www.iucnredlist.org/species/22728199/94974489","assessment_id":94974489,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2016","latest":false,"sis_taxon_id":22728206,"url":"https://www.iucnredlist.org/species/22728206/94974751","assessment_id":94974751,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2018","latest":false,"sis_taxon_id":22728199,"url":"https://www.iucnredlist.org/species/22728199/132179491","assessment_id":132179491,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2020","latest":false,"sis_taxon_id":22728206,"url":"https://www.iucnredlist.org/species/22728206/177987446","assessment_id":177987446,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2022","latest":true,"sis_taxon_id":22678081,"url":"https://www.iucnredlist.org/species/22678081/217016710","assessment_id":217016710,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2022","latest":true,"sis_taxon_id":22678073,"url":"https://www.iucnredlist.org/species/22678073/219615764","assessment_id":219615764,"scopes":[{"description":{"en":"Global"},"code":"1"}]}],"filters":{"family_name":"Rheidae"}}'
+  recorded_at: 2024-12-06 21:13:39 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0
