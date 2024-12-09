@@ -32,13 +32,16 @@ Language: en-US
 Imports:
     crul (>= 0.3.8),
     jsonlite (>= 1.1),
-    lifecycle
+    lifecycle,
+    cli,
+    curl
 Suggests:
     spelling,
     testthat,
     vcr (>= 0.6.0),
     knitr,
-    rmarkdown
+    rmarkdown,
+    webmockr
 RoxygenNote: 7.3.2
 VignetteBuilder: knitr
 X-schema.org-applicationCategory: Biodiversity
