@@ -21,7 +21,7 @@ rl_use_iucn <- function() {
   cli_h2("To get and save an IUCN API key, follow these steps:")
   cli_ol()
   cli_li("Register for an API key on the {.href [IUCN website](https://api.iucnredlist.org/users/sign_up)} (requires an email address and organization info)")
-  cli_li("Run {.run usethis::edit_r_environ()} to open and edit your .Renviron file")
+  cli_li("Open and edit your .Renviron file (e.g., run {.run usethis::edit_r_environ()})")
   cli_li("Add the following text to your .Renviron file, inserting your own API key value:")
   cli_code("     IUCN_REDLIST_KEY='youractualkeynotthisstring'")
   cli_li("Restart R")
