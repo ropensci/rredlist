@@ -41,7 +41,8 @@ Suggests:
     vcr (>= 0.6.0),
     knitr,
     rmarkdown,
-    webmockr
+    webmockr,
+    microbenchmark
 RoxygenNote: 7.3.2
 VignetteBuilder: knitr
 X-schema.org-applicationCategory: Biodiversity

@@ -10,6 +10,7 @@ setwd("vignettes/")
 # Precompile vignettes
 library(knitr)
 knit("./source/_rredlist.Rmd", "rredlist.Rmd")
+knit("./source/_benchmarks.Rmd", "benchmarks.Rmd")
 
 # Build vignettes
 library(devtools)
@@ -28,6 +29,7 @@ read_only <- function(x) {
 }
 # Add read only info
 read_only("rredlist.Rmd")
+read_only("benchmarks.Rmd")
 rm(read_only)
 
 # Restore wd
