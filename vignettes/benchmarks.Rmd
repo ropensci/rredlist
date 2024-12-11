@@ -87,7 +87,7 @@ microbenchmark(
 #>  rl_family_("Rheidae") 610.7493 618.8672 633.7496 627.0082 650.9436 677.3837    10   a
 ```
 
-#### 5\. Taxonomic lookup with query (~11 pages of results)
+#### 5\. Taxonomic lookup with query (~10 pages of results)
 
 
 ``` r
@@ -102,7 +102,7 @@ microbenchmark(
 #>  rl_family_("Corvidae", quiet = TRUE) 9.866713 9.895834  9.985805  9.986027 10.06351 10.07924    10   b
 ```
 
-#### 6\. Taxonomic lookup with query (~37 pages of results)
+#### 6\. Taxonomic lookup with query (~40 pages of results)
 
 
 ``` r
@@ -117,7 +117,7 @@ microbenchmark(
 #>  rl_family_("Tyrannidae", quiet = TRUE) 34.76442 34.91699 35.00961 35.02371 35.08263 35.22149    10   b
 ```
 
-#### 7\. Taxonomic lookup with query (~922 pages of results)
+#### 7\. Taxonomic lookup with query (~900 pages of results)
 
 
 ``` r
@@ -191,7 +191,7 @@ microbenchmark(
 #>     12.4059    12.8977    15.36693    13.4167    14.0818    27.1965    10   c
 ```
 
-Again, even with 37 pages of data to parse, the download takes the vast majority of the time. The highest-level parsing has increased to about 1% of the time it takes to download the data, but this remains less than a second compared to the ~35 second download.
+Again, even with about 40 pages of data to parse, the download takes the vast majority of the time. The highest-level parsing has increased to about 1% of the time it takes to download the data, but this remains less than a second compared to the ~35 second download.
 
 ## Conclusion
 
