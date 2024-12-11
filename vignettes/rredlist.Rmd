@@ -169,8 +169,21 @@ Use the function `rl_citation()`:
 
 ``` r
 rl_citation()
-#> IUCN (2024). "IUCN Red List of Threatened Species." <https://www.iucnredlist.org>. Accessed on 11
-#> December 2024.
+#> To cite the IUCN API in publications, use the following citation:
+#> 
+#>   IUCN (2024). "IUCN Red List of Threatened Species." <https://www.iucnredlist.org>. Accessed on
+#>   11 December 2024.
+#> 
+#> A BibTeX entry for LaTeX users is
+#> 
+#>   @Misc{IUCN2024,
+#>     author = {{IUCN}},
+#>     title = {IUCN Red List of Threatened Species},
+#>     year = {2024},
+#>     edition = {Version 2024-2},
+#>     howpublished = {\url{https://www.iucnredlist.org}},
+#>     note = {Accessed on 11 December 2024},
+#>   }
 ```
 
 We'd also really appreciate it if you could cite your use of this package:

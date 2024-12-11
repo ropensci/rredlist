@@ -11,15 +11,12 @@
 #' @importFrom utils bibentry
 #' @family stats
 #' @examples \dontrun{
-#' # print to string
 #' rl_citation()
-#' # get bibTex entry
-#' toBibtex(rl_citation())
 #' }
 rl_citation <- function(key = NULL, ...) {
   vers <- rl_version(key, ...)
   year <- strsplit(vers, "-")[[1]][1]
-  bibentry(
+  cit <- bibentry(
     bibtype      = "Misc",
     key          = paste0("IUCN", year),
     author       = "IUCN",
@@ -29,4 +26,8 @@ rl_citation <- function(key = NULL, ...) {
     howpublished = "\\url{https://www.iucnredlist.org}",
     note         = paste("Accessed on", format(Sys.Date(),"%d %B %Y")),
   )
+  class(cit) <- c("citation", "bibentry")
+  attr(cit, "mheader") <- "To cite the IUCN API in publications, use the
+                           following citation:"
+  return(cit)
 }
