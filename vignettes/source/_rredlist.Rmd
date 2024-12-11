@@ -44,10 +44,10 @@ knitr::opts_chunk$set(
 )
 ```
 
-`rredlist` is an R client for the IUCN Red List API (https://api.iucnredlist.org/).
+`rredlist` is an R client for the [IUCN Red List API](https://api.iucnredlist.org/).
 The [IUCN Red List](https://www.iucnredlist.org/) is the world’s most comprehensive information source on the global extinction risk status of animal, fungus and plant species. This package provides access via R to the various data contained within this database which span range details, population size, habitat and ecology, use and/or trade, threats, and conservation actions.
 
-Documentation for the IUCN Red List API are available at https://api.iucnredlist.org/api-docs. **Note that use of the web API, and therefore this package, [requires authentication](#authentication).**
+Documentation for the IUCN Red List API is available at https://api.iucnredlist.org/api-docs. **Note that use of the web API, and therefore this package, [requires authentication](#authentication).**
 
 #### What `rredlist` is not:
 
@@ -72,30 +72,15 @@ remotes::install_github("ropensci/rredlist")
 install.packages("rredlist", repos = "https://ropensci.r-universe.dev/")
 ```
 
-### API Versioning
-
-`rredlist` versions ≤ 0.7.1 tracked [version 3](https://apiv3.iucnredlist.org/) of the IUCN Red List API. `rredlist` versions ≥ 1.0.0 track version 4 of the IUCN Red List API. If you need to use version 3 of the API--and it is still functioning--you can install an old version of `rredlist` using the `remotes` package:
-
-```{r eval=FALSE}
-# From CRAN archive
-remotes::install_version("rredlist", version = "0.7.1")
-
-# From r-universe
-remotes::install_version("rredlist", version = "0.7.1",
-                         repos = "https://ropensci.r-universe.dev/")
-```
-
 ## Authentication
 
-IUCN requires you to get your own API key, an alphanumeric string that you need to send in every request. There's a helper function in the package helping you getting it at https://api.iucnredlist.org/users/sign_up and storing it. Once you store this key, the functions in `rredlist` will always default to using this key.
+IUCN requires you to get your own API key, an alphanumeric string that you need to send in every request. The rl_use_iucn() function in the package can walk you through [getting your own key](https://api.iucnredlist.org/users/sign_up) and storing it locally. Once you store this key, the functions in `rredlist` will always default to using this key.
 
 ```{r eval = FALSE}
 rredlist::rl_use_iucn()
 ```
 
 **Keep this key private.** You can pass the key in to each function via the `key` parameter, but it's better to store the key either as a environment variable (`IUCN_REDLIST_KEY`) or an R option (`iucn_redlist_key`) - we recommend using the former option.
-
-Note that you can no longer generate a new API key for version 3 of the API.
 
 ## Overview of available functions
 
@@ -134,7 +119,7 @@ Likely a bit faster is to parse to a list only, and not take the extra data.fram
 rl_species("Fratercula", "arctica", parse = FALSE)$assessments
 ```
 
-For even more speed, use the low level package interface.
+For even more speed, you can use the low level package interface (although see the [benchmarking vignette](benchmarks.html) for specifics).
 
 ## Low level interface
 
@@ -175,3 +160,18 @@ might get your access blocked temporarily. If you're a heavy API user, the
 Red List Unit asked that you contact them, as there might be better options.
 They suggest a 2-second delay between your calls if you plan to make a
 lot of calls."
+
+### API Versioning
+
+`rredlist` versions ≤ 0.7.1 tracked [version 3](https://apiv3.iucnredlist.org/) of the IUCN Red List API. `rredlist` versions ≥ 1.0.0 track version 4 of the IUCN Red List API. If you need to use version 3 of the API--and it is still functioning--you can install an old version of `rredlist` using the `remotes` package:
+
+```{r eval=FALSE}
+# From CRAN archive
+remotes::install_version("rredlist", version = "0.7.1")
+
+# From r-universe
+remotes::install_version("rredlist", version = "0.7.1",
+                         repos = "https://ropensci.r-universe.dev/")
+```
+
+Note, however, that you can no longer generate a new API key for version 3 of the API. See the discussion [here](https://github.com/ropensci/rredlist/issues/52) for possible solutions if you need to use version 3 of the API.

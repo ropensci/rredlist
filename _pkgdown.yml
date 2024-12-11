@@ -8,7 +8,7 @@ navbar:
       text: Get started
       href: articles/rredlist.html
   structure:
-    left: [intro, reference, news]
+    left: [intro, articles, reference, news]
     right: [search, github, lightswitch]
 
 reference:

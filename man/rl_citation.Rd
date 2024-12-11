@@ -12,7 +12,7 @@ rl_citation(key = NULL, ...)
 \item{...}{Curl options passed to \link[crul:HttpClient]{HttpClient}.}
 }
 \value{
-Red List citation as character string.
+Red List citation as a \link[utils:bibentry]{bibentry} object.
 }
 \description{
 Full acknowledgement and citation needs to be given for using the API. Use
@@ -21,7 +21,10 @@ List API. More details are available here: \url{https://api.iucnredlist.org/}.
 }
 \examples{
 \dontrun{
+# print to string
 rl_citation()
+# get bibTex entry
+toBibtex(rl_citation())
 }
 }
 \seealso{
