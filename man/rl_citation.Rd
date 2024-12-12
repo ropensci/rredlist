@@ -21,10 +21,7 @@ List API. More details are available here: \url{https://api.iucnredlist.org/}.
 }
 \examples{
 \dontrun{
-# print to string
 rl_citation()
-# get bibTex entry
-toBibtex(rl_citation())
 }
 }
 \seealso{

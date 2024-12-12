@@ -27,7 +27,7 @@ much burden on a server to just "get all the data" in one request.}
 or not. Default: \code{FALSE} (that is, give progress). Ignored if \code{all = FALSE}.}
 
 \item{...}{\link[curl:curl_options]{Curl options} passed to the GET request via
-\link[crul:HttpClient]{cruls}.}
+\link[crul:HttpClient]{crul}.}
 }
 \value{
 A list unless using a function with a trailing underscore, in which

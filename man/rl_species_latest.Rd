@@ -31,7 +31,7 @@ separate subpopulation to look up.}
 where possible, data.frame (\code{TRUE}). Default: \code{TRUE}.}
 
 \item{...}{\link[curl:curl_options]{Curl options} passed to the GET request via
-\link[crul:HttpClient]{cruls}.}
+\link[crul:HttpClient]{crul}.}
 }
 \value{
 A list unless using a function with a trailing underscore, in which
