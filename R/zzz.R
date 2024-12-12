@@ -42,7 +42,7 @@ rr_GET_raw <- function(path, key = NULL, query = list(), ...) {
     opts = list(useragent = rredlist_ua()),
     headers = list(Authorization = check_key(key))
   )
-  cli$get(query = ct(query), ...)
+  cli$retry("GET", query = ct(query), ..., retry_only_on = c(429))
 }
 
 #' Handle a GET query of the IUCN API
@@ -83,7 +83,7 @@ check_internet <- function() {
 #'   code errors are found, an error is thrown.
 #' @noRd
 status_catcher <- function(res) {
-  if (res$status_code >= 300) {
+  if (res$status_code >= 400) {
     if (res$status_code == 401) {
       stop("Token not valid! (HTTP 401)", call. = FALSE)
     } else if (res$status_code == 404) {
