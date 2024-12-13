@@ -57,4 +57,9 @@ test_that("fails well when correct parameters not given", {
 
   expect_error(rl_species(), "is missing, with no default")
   expect_error(rl_species_(), "is missing, with no default")
+
+  expect_error(rl_species(c("Gorilla", "Gorilla"), c("gorilla", "gorilla")),
+               "must be length 1")
+  expect_error(rl_species_(c("Gorilla", "Gorilla"), c("gorilla", "gorilla")),
+               "must be length 1")
 })
