@@ -34,7 +34,8 @@ Imports:
     jsonlite (>= 1.1),
     lifecycle,
     cli,
-    curl
+    curl,
+    rlang
 Suggests:
     spelling,
     testthat,
@@ -42,7 +43,8 @@ Suggests:
     knitr,
     rmarkdown,
     webmockr,
-    microbenchmark
+    microbenchmark,
+    ggplot2
 RoxygenNote: 7.3.2
 VignetteBuilder: knitr
 X-schema.org-applicationCategory: Biodiversity
