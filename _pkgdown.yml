@@ -68,3 +68,7 @@ reference:
   - rl_api_version
   - rl_citation
   - rl_use_iucn
+
+- title: Visualization tools
+  contents:
+  - scale_color_iucn
