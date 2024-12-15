@@ -20,7 +20,15 @@ Authors@R:
       person(given = "Maëlle",
              family = "Salmon",
              role = "ctb",
-             email = "maelle.salmon@yahoo.se")
+             email = "maelle.salmon@yahoo.se"),
+      person(given = "Kevin",
+             family = "Cazelles",
+             role = "rev",
+             email = "kevin.cazelles@gmail.com"),
+      person(given = "Stephanie",
+             family = "Hazlitt",
+             role = "rev",
+             email = "stephhazlitt@gmail.com")
       )
 License: MIT + file LICENSE
 URL: https://docs.ropensci.org/rredlist/,
