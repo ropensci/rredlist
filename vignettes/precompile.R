@@ -9,8 +9,17 @@ old_wd <- getwd()
 setwd("vignettes/")
 # Precompile vignettes
 library(knitr)
-knit("./source/_rredlist.Rmd", "rredlist.Rmd")
-knit("./source/_benchmarks.Rmd", "benchmarks.Rmd")
+
+vignettes <- c("rredlist.Rmd", "benchmarks.Rmd", "research_workflows.Rmd")
+to_edit <- c()
+
+for (vig in vignettes) {
+  src <- paste0("./source/_", vig)
+  if (!file.exists(vig) || file.info(src)$mtime > file.info(vig)$mtime) {
+    knit(src, vig)
+    to_edit <- append(to_edit, vig)
+  }
+}
 
 # Build vignettes
 library(devtools)
@@ -27,9 +36,12 @@ read_only <- function(x) {
                readLines(x)[2:length(readLines(x))]), tmp)
   close(tmp)
 }
+
 # Add read only info
-read_only("rredlist.Rmd")
-read_only("benchmarks.Rmd")
+for (vig in to_edit) {
+  read_only(vig)
+}
+
 rm(read_only)
 
 # Restore wd

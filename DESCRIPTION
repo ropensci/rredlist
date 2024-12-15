@@ -44,7 +44,9 @@ Suggests:
     rmarkdown,
     webmockr,
     microbenchmark,
-    ggplot2
+    ggplot2,
+    dplyr,
+    patchwork
 RoxygenNote: 7.3.2
 VignetteBuilder: knitr
 X-schema.org-applicationCategory: Biodiversity
