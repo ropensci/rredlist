@@ -46,7 +46,8 @@ Suggests:
     microbenchmark,
     ggplot2,
     dplyr,
-    patchwork
+    patchwork,
+    vdiffr
 RoxygenNote: 7.3.2
 VignetteBuilder: knitr
 X-schema.org-applicationCategory: Biodiversity
