@@ -11,6 +11,13 @@ navbar:
     left: [intro, articles, reference, news]
     right: [search, github, lightswitch]
 
+articles:
+- title: Articles
+  navbar: ~
+  contents:
+  - research_workflows
+  - benchmarks
+
 reference:
 - title: Get all details for a single assessment
   contents:
