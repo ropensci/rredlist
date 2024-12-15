@@ -3,7 +3,7 @@
 # Please edit source in vignettes/source/_rredlist.Rmd
 title: "Introduction to rredlist"
 author: "William Gearty"
-date: "2024-12-11"
+date: "2024-12-15"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to rredlist}
@@ -54,7 +54,7 @@ rredlist::rl_use_iucn()
 
 **Keep this key private.** You can pass the key in to each function via the `key` parameter, but it's better to store the key either as a environment variable (`IUCN_REDLIST_KEY`) or an R option (`iucn_redlist_key`) - we recommend using the former option.
 
-## Overview of available functions
+## Overview of available features
 
 - Query assessments by taxa (e.g., `rl_species()` and `rl_family()`)
 - Query assessments by habitats (e.g., `rl_habitats()` and `rl_systems()`)
@@ -65,7 +65,74 @@ rredlist::rl_use_iucn()
 - Get all details for a single assessment (e.g., `rl_species_latest()` and `rl_assessment()`)
 - Red List information and statistics (e.g., `rl_sp_count()` and `rl_version()`)
 
-## High level interface
+## Example usage
+
+### Loading the package
+
+``` r
+library("rredlist")
+```
+
+### Search for assessments for a particular species
+
+``` r
+rl_species("Gorilla", "gorilla")$assessments
+#>    year_published latest possibly_extinct possibly_extinct_in_the_wild sis_taxon_id
+#> 1            2016  FALSE            FALSE                        FALSE         9404
+#> 2            2018   TRUE            FALSE                        FALSE         9404
+#> 3            2016  FALSE            FALSE                        FALSE         9404
+#> 4            2008  FALSE            FALSE                        FALSE         9404
+#> 5            2007  FALSE            FALSE                        FALSE         9404
+#> 6            2000  FALSE            FALSE                        FALSE         9404
+#> 7            1996  FALSE            FALSE                        FALSE         9404
+#> 8            1994  FALSE            FALSE                        FALSE         9404
+#> 9            1990  FALSE            FALSE                        FALSE         9404
+...
+```
+
+### Search for assessments that recommend particular conservation actions
+
+#### Get a list of all conservation actions
+
+``` r
+rl_actions()
+#> $conservation_actions
+#>                                              en  code
+#> 1                         Land/water protection     1
+#> 2                          Site/area protection   1_1
+#> 3                 Resource & habitat protection   1_2
+#> 4                         Land/water management     2
+#> 5                          Site/area management   2_1
+#> 6          Invasive/problematic species control   2_2
+#> 7         Habitat & natural process restoration   2_3
+#> 8                            Species management     3
+...
+```
+
+#### Return assessments with a particular conservation action
+
+``` r
+rl_actions("2_2", all = FALSE)$assessments
+#>     year_published latest possibly_extinct possibly_extinct_in_the_wild sis_taxon_id
+#> 1             2019   TRUE            FALSE                        FALSE    132523146
+#> 2             2019   TRUE            FALSE                        FALSE        10767
+#> 3             2013   TRUE            FALSE                        FALSE         1078
+#> 4             2019   TRUE            FALSE                        FALSE    132521900
+#> 5             2020  FALSE            FALSE                        FALSE         1086
+#> 6             2019   TRUE            FALSE                        FALSE         1117
+#> 7             2019   TRUE            FALSE                        FALSE        11797
+#> 8             2021   TRUE            FALSE                        FALSE        12124
+#> 9             2019   TRUE            FALSE                        FALSE        12695
+...
+```
+
+## Advanced usage
+
+For a more in-depth walkthrough of how to integrate `rredlist` into research workflows, check out [the vignette](research_workflows.html).
+
+## High level vs. low level interfaces
+
+### High level interface
 
 
 ``` r
@@ -97,16 +164,16 @@ By default, these high level functions will also parse the data to a data.frame,
 
 ``` r
 rl_species("Fratercula", "arctica")$assessments
-#>    year_published latest sis_taxon_id                                                    url assessment_id
-#> 1            2021   TRUE     22694927 https://www.iucnredlist.org/species/22694927/166290968     166290968
-#> 2            2018   TRUE     22694927 https://www.iucnredlist.org/species/22694927/132581443     132581443
-#> 3            2017  FALSE     22694927 https://www.iucnredlist.org/species/22694927/117606911     117606911
-#> 4            2017  FALSE     22694927 https://www.iucnredlist.org/species/22694927/110638141     110638141
-#> 5            2016  FALSE     22694927  https://www.iucnredlist.org/species/22694927/93477427      93477427
-#> 6            2015  FALSE     22694927  https://www.iucnredlist.org/species/22694927/82593109      82593109
-#> 7            2015  FALSE     22694927  https://www.iucnredlist.org/species/22694927/60110592      60110592
-#> 8            2012  FALSE     22694927  https://www.iucnredlist.org/species/22694927/38908739      38908739
-#> 9            2009  FALSE     22694927  https://www.iucnredlist.org/species/22694927/28178290      28178290
+#>    year_published latest possibly_extinct possibly_extinct_in_the_wild sis_taxon_id
+#> 1            2021   TRUE            FALSE                        FALSE     22694927
+#> 2            2018   TRUE            FALSE                        FALSE     22694927
+#> 3            2017  FALSE            FALSE                        FALSE     22694927
+#> 4            2017  FALSE            FALSE                        FALSE     22694927
+#> 5            2016  FALSE            FALSE                        FALSE     22694927
+#> 6            2015  FALSE            FALSE                        FALSE     22694927
+#> 7            2015  FALSE            FALSE                        FALSE     22694927
+#> 8            2012  FALSE            FALSE                        FALSE     22694927
+#> 9            2009  FALSE            FALSE                        FALSE     22694927
 ...
 ```
 
@@ -122,15 +189,15 @@ rl_species("Fratercula", "arctica", parse = FALSE)$assessments
 #> [[1]]$latest
 #> [1] TRUE
 #> 
-#> [[1]]$sis_taxon_id
-#> [1] 22694927
+#> [[1]]$possibly_extinct
+#> [1] FALSE
 #> 
 ...
 ```
 
 For even more speed, you can use the low level package interface (although see the [benchmarking vignette](benchmarks.html) for specifics).
 
-## Low level interface
+### Low level interface
 
 The parsing to data.frame in the high level functions does take extra time. The low level functions
 only do the HTTP request, and give back JSON without doing any more parsing. The low level functions DO have an underscore on the end of the function name, e.g., `rl_species_()`:
@@ -138,7 +205,7 @@ only do the HTTP request, and give back JSON without doing any more parsing. The
 
 ``` r
 rl_species_("Fratercula", "arctica")
-#> [1] "{\"taxon\":{\"sis_id\":22694927,\"scientific_name\":\"Fratercula arctica\",\"species_taxa\":[],\"subpopulation_taxa\":[],\"infrarank_taxa\":[],\"kingdom_name\":\"ANIMALIA\",\"phylum_name\":\"CHORDATA\",\"class_name\":\"AVES\",\"order_name\":\"CHARADRIIFORMES\",\"family_name\":\"ALCIDAE\",\"genus_name\":\"Fratercula\",\"species_name\":\"arctica\",\"subpopulation_name\":null,\"infra_name\":null,\"authority\":\"(Linnaeus, 1758)\",\"species\":true,\"subpopulation\":false,\"infrarank\":false,\"ssc_groups\":[{\"name\":\"IUCN SSC Bird Red List Authority (BirdLife International)\",\"url\":\"https://www.birdlife.org/\",\"description\":\"Red List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)\"}],\"common_names\":[{\"main\":false,\"name\":\"Puffin\",\"language\":\"eng\"},{\"main\":true,\"name\":\"Atlantic Puffin\",\"language\":\"eng\"}],\"synonyms\":[]},\"assessments\":[{\"year_published\":\"2021\",\"latest\":true,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/166290968\",\"assessment_id\":166290968,\"scopes\":[{\"description\":{\"en\":\"Europe\"},\"code\":\"2\"}]},{\"year_published\":\"2018\",\"latest\":true,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/132581443\",\"assessment_id\":132581443,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"2017\",\"latest\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/117606911\",\"assessment_id\":117606911,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"2017\",\"latest\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/110638141\",\"assessment_id\":110638141,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"2016\",\"latest\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/93477427\",\"assessment_id\":93477427,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"2015\",\"latest\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/82593109\",\"assessment_id\":82593109,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"2015\",\"latest\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/60110592\",\"assessment_id\":60110592,\"scopes\":[{\"description\":{\"en\":\"Europe\"},\"code\":\"2\"}]},{\"year_published\":\"2012\",\"latest\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/38908739\",\"assessment_id\":38908739,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"2009\",\"latest\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/28178290\",\"assessment_id\":28178290,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"2008\",\"latest\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/28179292\",\"assessment_id\":28179292,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"2004\",\"latest\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/28180639\",\"assessment_id\":28180639,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"2000\",\"latest\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/28181882\",\"assessment_id\":28181882,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"1994\",\"latest\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/28183212\",\"assessment_id\":28183212,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"1988\",\"latest\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/28184380\",\"assessment_id\":28184380,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]}],\"params\":{\"genus_name\":\"Fratercula\",\"species_name\":\"arctica\"}}"
+#> [1] "{\"taxon\":{\"sis_id\":22694927,\"scientific_name\":\"Fratercula arctica\",\"species_taxa\":[],\"subpopulation_taxa\":[],\"infrarank_taxa\":[],\"kingdom_name\":\"ANIMALIA\",\"phylum_name\":\"CHORDATA\",\"class_name\":\"AVES\",\"order_name\":\"CHARADRIIFORMES\",\"family_name\":\"ALCIDAE\",\"genus_name\":\"Fratercula\",\"species_name\":\"arctica\",\"subpopulation_name\":null,\"infra_name\":null,\"authority\":\"(Linnaeus, 1758)\",\"species\":true,\"subpopulation\":false,\"infrarank\":false,\"ssc_groups\":[{\"name\":\"IUCN SSC Bird Red List Authority (BirdLife International)\",\"url\":\"https://www.birdlife.org/\",\"description\":\"Red List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)\"}],\"common_names\":[{\"main\":false,\"name\":\"Puffin\",\"language\":\"eng\"},{\"main\":true,\"name\":\"Atlantic Puffin\",\"language\":\"eng\"}],\"synonyms\":[]},\"assessments\":[{\"year_published\":\"2021\",\"latest\":true,\"possibly_extinct\":false,\"possibly_extinct_in_the_wild\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/166290968\",\"assessment_id\":166290968,\"scopes\":[{\"description\":{\"en\":\"Europe\"},\"code\":\"2\"}]},{\"year_published\":\"2018\",\"latest\":true,\"possibly_extinct\":false,\"possibly_extinct_in_the_wild\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/132581443\",\"assessment_id\":132581443,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"2017\",\"latest\":false,\"possibly_extinct\":false,\"possibly_extinct_in_the_wild\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/117606911\",\"assessment_id\":117606911,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"2017\",\"latest\":false,\"possibly_extinct\":false,\"possibly_extinct_in_the_wild\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/110638141\",\"assessment_id\":110638141,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"2016\",\"latest\":false,\"possibly_extinct\":false,\"possibly_extinct_in_the_wild\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/93477427\",\"assessment_id\":93477427,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"2015\",\"latest\":false,\"possibly_extinct\":false,\"possibly_extinct_in_the_wild\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/82593109\",\"assessment_id\":82593109,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"2015\",\"latest\":false,\"possibly_extinct\":false,\"possibly_extinct_in_the_wild\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/60110592\",\"assessment_id\":60110592,\"scopes\":[{\"description\":{\"en\":\"Europe\"},\"code\":\"2\"}]},{\"year_published\":\"2012\",\"latest\":false,\"possibly_extinct\":false,\"possibly_extinct_in_the_wild\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/38908739\",\"assessment_id\":38908739,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"2009\",\"latest\":false,\"possibly_extinct\":false,\"possibly_extinct_in_the_wild\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/28178290\",\"assessment_id\":28178290,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"2008\",\"latest\":false,\"possibly_extinct\":false,\"possibly_extinct_in_the_wild\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/28179292\",\"assessment_id\":28179292,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"2004\",\"latest\":false,\"possibly_extinct\":false,\"possibly_extinct_in_the_wild\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/28180639\",\"assessment_id\":28180639,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"2000\",\"latest\":false,\"possibly_extinct\":false,\"possibly_extinct_in_the_wild\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/28181882\",\"assessment_id\":28181882,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"1994\",\"latest\":false,\"possibly_extinct\":false,\"possibly_extinct_in_the_wild\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/28183212\",\"assessment_id\":28183212,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]},{\"year_published\":\"1988\",\"latest\":false,\"possibly_extinct\":false,\"possibly_extinct_in_the_wild\":false,\"sis_taxon_id\":22694927,\"url\":\"https://www.iucnredlist.org/species/22694927/28184380\",\"assessment_id\":28184380,\"scopes\":[{\"description\":{\"en\":\"Global\"},\"code\":\"1\"}]}],\"params\":{\"genus_name\":\"Fratercula\",\"species_name\":\"arctica\"}}"
 ```
 
 To consume this JSON, you can use [`jsonlite`](https://jeroen.r-universe.dev/jsonlite):
@@ -172,7 +239,7 @@ rl_citation()
 #> To cite the IUCN API in publications, use the following citation:
 #> 
 #>   IUCN (2024). "IUCN Red List of Threatened Species." <https://www.iucnredlist.org>. Accessed on
-#>   11 December 2024.
+#>   15 December 2024.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
@@ -182,7 +249,7 @@ rl_citation()
 #>     year = {2024},
 #>     edition = {Version 2024-2},
 #>     howpublished = {\url{https://www.iucnredlist.org}},
-#>     note = {Accessed on 11 December 2024},
+#>     note = {Accessed on 15 December 2024},
 #>   }
 ```
 
