@@ -2,6 +2,7 @@
 % Please edit documentation in R/rl_key.R
 \name{rl_use_iucn}
 \alias{rl_use_iucn}
+\alias{rl_key}
 \title{Helper to get and save IUCN API key}
 \usage{
 rl_use_iucn()
@@ -10,12 +11,14 @@ rl_use_iucn()
 Invisibly returns the sign-up URL for the IUCN Red List API.
 }
 \description{
-Browse IUCN Red List API key request URL and
-provides instruction on how to store the key.
+Provides instruction on how to get and store a key for the IUCN
+API. Users of \code{rredlist} must do this before using any of the package's
+other functionality. Note that registering for a key requires an email
+address and information about your organization.
 }
 \details{
-Note that after filling the online form, you should
-receive an API key shortly but not immediately.
+Note that after filling the online form, you should receive an API
+key shortly but not immediately.
 }
 \examples{
 \dontrun{

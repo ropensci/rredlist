@@ -26,6 +26,7 @@ rl_sis <- function(id, key = NULL, parse = TRUE, ...) {
 rl_sis_ <- function(id, key = NULL, ...) {
   assert_is(key, "character")
   assert_is(id, c("integer", "numeric"))
+  assert_n(id, 1)
 
   rr_GET(paste("taxa/sis", id, sep = "/"), key, ...)
 }
@@ -114,6 +115,7 @@ rl_species_ <- function(genus, species, infra = NULL, subpopulation = NULL,
   assert_is(key, "character")
   assert_is(genus, "character")
   assert_is(species, "character")
+  assert_n(species, 1)
   assert_is(infra, "character")
   assert_is(subpopulation, "character")
 
@@ -215,6 +217,7 @@ rl_family_ <- function(family = NULL, key = NULL, all = TRUE, page = 1,
                        quiet = FALSE, ...) {
   assert_is(key, "character")
   assert_is(family, "character")
+  assert_n(family, 1)
   assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
   assert_is(all, "logical")
@@ -265,6 +268,7 @@ rl_order_ <- function(order = NULL, key = NULL, all = TRUE, page = 1,
                       quiet = FALSE, ...) {
   assert_is(key, "character")
   assert_is(order, "character")
+  assert_n(order, 1)
   assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
   assert_is(all, "logical")
@@ -315,6 +319,7 @@ rl_class_ <- function(class = NULL, key = NULL, all = TRUE, page = 1,
                       quiet = FALSE, ...) {
   assert_is(key, "character")
   assert_is(class, "character")
+  assert_n(class, 1)
   assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
   assert_is(all, "logical")
@@ -365,6 +370,7 @@ rl_phylum_ <- function(phylum = NULL, key = NULL, all = TRUE, page = 1,
                        quiet = FALSE, ...) {
   assert_is(key, "character")
   assert_is(phylum, "character")
+  assert_n(phylum, 1)
   assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
   assert_is(all, "logical")
@@ -415,6 +421,7 @@ rl_kingdom_ <- function(kingdom = NULL, key = NULL, all = TRUE, page = 1,
                         quiet = FALSE, ...) {
   assert_is(key, "character")
   assert_is(kingdom, "character")
+  assert_n(kingdom, 1)
   assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
   assert_is(all, "logical")

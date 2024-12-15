@@ -15,8 +15,8 @@ rl_sp_count_(key = NULL, ...)
 \item{...}{Curl options passed to \link[crul:HttpClient]{HttpClient}}
 }
 \value{
-A list unless using a function with a trailing underscore, in which
-case json as character string is returned.
+An integer representing the number of unique species represented
+within the IUCN database.
 }
 \description{
 Returns a count of the number of unique species which have assessments.

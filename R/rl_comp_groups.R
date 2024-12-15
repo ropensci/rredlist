@@ -35,6 +35,7 @@ rl_comp_groups_ <- function(name = NULL, key = NULL, all = TRUE, page = 1,
                             quiet = FALSE, ...) {
   assert_is(key, "character")
   assert_is(name, "character")
+  assert_n(name, 1)
   assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
   assert_is(all, "logical")

@@ -12,7 +12,7 @@ rl_citation(key = NULL, ...)
 \item{...}{Curl options passed to \link[crul:HttpClient]{HttpClient}.}
 }
 \value{
-Red List citation as character string.
+Red List citation as a \link[utils:bibentry]{bibentry} object.
 }
 \description{
 Full acknowledgement and citation needs to be given for using the API. Use
