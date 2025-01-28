@@ -3,7 +3,7 @@
 # Please edit source in vignettes/source/_rredlist.Rmd
 title: "Introduction to rredlist"
 author: "William Gearty"
-date: "2024-12-15"
+date: "2025-01-27"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to rredlist}
@@ -77,16 +77,16 @@ library("rredlist")
 
 ``` r
 rl_species("Gorilla", "gorilla")$assessments
-#>    year_published latest possibly_extinct possibly_extinct_in_the_wild sis_taxon_id
-#> 1            2016  FALSE            FALSE                        FALSE         9404
-#> 2            2018   TRUE            FALSE                        FALSE         9404
-#> 3            2016  FALSE            FALSE                        FALSE         9404
-#> 4            2008  FALSE            FALSE                        FALSE         9404
-#> 5            2007  FALSE            FALSE                        FALSE         9404
-#> 6            2000  FALSE            FALSE                        FALSE         9404
-#> 7            1996  FALSE            FALSE                        FALSE         9404
-#> 8            1994  FALSE            FALSE                        FALSE         9404
-#> 9            1990  FALSE            FALSE                        FALSE         9404
+#>    year_published latest possibly_extinct possibly_extinct_in_the_wild sis_taxon_id                                                url assessment_id    scopes
+#> 1            2016  FALSE            FALSE                        FALSE         9404 https://www.iucnredlist.org/species/9404/102330408     102330408 Global, 1
+#> 2            2018   TRUE            FALSE                        FALSE         9404 https://www.iucnredlist.org/species/9404/136250858     136250858 Global, 1
+#> 3            2016  FALSE            FALSE                        FALSE         9404  https://www.iucnredlist.org/species/9404/17963949      17963949 Global, 1
+#> 4            2008  FALSE            FALSE                        FALSE         9404  https://www.iucnredlist.org/species/9404/12983787      12983787 Global, 1
+#> 5            2007  FALSE            FALSE                        FALSE         9404  https://www.iucnredlist.org/species/9404/12983966      12983966 Global, 1
+#> 6            2000  FALSE            FALSE                        FALSE         9404  https://www.iucnredlist.org/species/9404/12983737      12983737 Global, 1
+#> 7            1996  FALSE            FALSE                        FALSE         9404  https://www.iucnredlist.org/species/9404/12983764      12983764 Global, 1
+#> 8            1994  FALSE            FALSE                        FALSE         9404  https://www.iucnredlist.org/species/9404/12984167      12984167 Global, 1
+#> 9            1990  FALSE            FALSE                        FALSE         9404  https://www.iucnredlist.org/species/9404/12984186      12984186 Global, 1
 ...
 ```
 
@@ -113,16 +113,16 @@ rl_actions()
 
 ``` r
 rl_actions("2_2", all = FALSE)$assessments
-#>     year_published latest possibly_extinct possibly_extinct_in_the_wild sis_taxon_id
-#> 1             2019   TRUE            FALSE                        FALSE    132523146
-#> 2             2019   TRUE            FALSE                        FALSE        10767
-#> 3             2013   TRUE            FALSE                        FALSE         1078
-#> 4             2019   TRUE            FALSE                        FALSE    132521900
-#> 5             2020  FALSE            FALSE                        FALSE         1086
-#> 6             2019   TRUE            FALSE                        FALSE         1117
-#> 7             2019   TRUE            FALSE                        FALSE        11797
-#> 8             2021   TRUE            FALSE                        FALSE        12124
-#> 9             2019   TRUE            FALSE                        FALSE        12695
+#>     year_published latest possibly_extinct possibly_extinct_in_the_wild sis_taxon_id                                                   url assessment_id code           code_type
+#> 1             2019   TRUE            FALSE                        FALSE    132523146  https://www.iucnredlist.org/species/132523146/497499        497499  2_2 conservation_action
+#> 2             2019   TRUE            FALSE                        FALSE        10767      https://www.iucnredlist.org/species/10767/498370        498370  2_2 conservation_action
+#> 3             2013   TRUE            FALSE                        FALSE         1078       https://www.iucnredlist.org/species/1078/498639        498639  2_2 conservation_action
+#> 4             2019   TRUE            FALSE                        FALSE    132521900  https://www.iucnredlist.org/species/132521900/498826        498826  2_2 conservation_action
+#> 5             2020  FALSE            FALSE                        FALSE         1086       https://www.iucnredlist.org/species/1086/499235        499235  2_2 conservation_action
+#> 6             2019   TRUE            FALSE                        FALSE         1117       https://www.iucnredlist.org/species/1117/500918        500918  2_2 conservation_action
+#> 7             2019   TRUE            FALSE                        FALSE        11797      https://www.iucnredlist.org/species/11797/503908        503908  2_2 conservation_action
+#> 8             2021   TRUE            FALSE                        FALSE        12124      https://www.iucnredlist.org/species/12124/505402        505402  2_2 conservation_action
+#> 9             2019   TRUE            FALSE                        FALSE        12695      https://www.iucnredlist.org/species/12695/507698        507698  2_2 conservation_action
 ...
 ```
 
@@ -164,16 +164,16 @@ By default, these high level functions will also parse the data to a data.frame,
 
 ``` r
 rl_species("Fratercula", "arctica")$assessments
-#>    year_published latest possibly_extinct possibly_extinct_in_the_wild sis_taxon_id
-#> 1            2021   TRUE            FALSE                        FALSE     22694927
-#> 2            2018   TRUE            FALSE                        FALSE     22694927
-#> 3            2017  FALSE            FALSE                        FALSE     22694927
-#> 4            2017  FALSE            FALSE                        FALSE     22694927
-#> 5            2016  FALSE            FALSE                        FALSE     22694927
-#> 6            2015  FALSE            FALSE                        FALSE     22694927
-#> 7            2015  FALSE            FALSE                        FALSE     22694927
-#> 8            2012  FALSE            FALSE                        FALSE     22694927
-#> 9            2009  FALSE            FALSE                        FALSE     22694927
+#>    year_published latest possibly_extinct possibly_extinct_in_the_wild sis_taxon_id                                                    url assessment_id    scopes
+#> 1            2021   TRUE            FALSE                        FALSE     22694927 https://www.iucnredlist.org/species/22694927/166290968     166290968 Europe, 2
+#> 2            2018   TRUE            FALSE                        FALSE     22694927 https://www.iucnredlist.org/species/22694927/132581443     132581443 Global, 1
+#> 3            2017  FALSE            FALSE                        FALSE     22694927 https://www.iucnredlist.org/species/22694927/117606911     117606911 Global, 1
+#> 4            2017  FALSE            FALSE                        FALSE     22694927 https://www.iucnredlist.org/species/22694927/110638141     110638141 Global, 1
+#> 5            2016  FALSE            FALSE                        FALSE     22694927  https://www.iucnredlist.org/species/22694927/93477427      93477427 Global, 1
+#> 6            2015  FALSE            FALSE                        FALSE     22694927  https://www.iucnredlist.org/species/22694927/82593109      82593109 Global, 1
+#> 7            2015  FALSE            FALSE                        FALSE     22694927  https://www.iucnredlist.org/species/22694927/60110592      60110592 Europe, 2
+#> 8            2012  FALSE            FALSE                        FALSE     22694927  https://www.iucnredlist.org/species/22694927/38908739      38908739 Global, 1
+#> 9            2009  FALSE            FALSE                        FALSE     22694927  https://www.iucnredlist.org/species/22694927/28178290      28178290 Global, 1
 ...
 ```
 
@@ -238,8 +238,7 @@ Use the function `rl_citation()`:
 rl_citation()
 #> To cite the IUCN API in publications, use the following citation:
 #> 
-#>   IUCN (2024). "IUCN Red List of Threatened Species." <https://www.iucnredlist.org>. Accessed on
-#>   15 December 2024.
+#>   IUCN (2024). "IUCN Red List of Threatened Species." <https://www.iucnredlist.org>. Accessed on 27 January 2025.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
@@ -249,7 +248,7 @@ rl_citation()
 #>     year = {2024},
 #>     edition = {Version 2024-2},
 #>     howpublished = {\url{https://www.iucnredlist.org}},
-#>     note = {Accessed on 15 December 2024},
+#>     note = {Accessed on 27 January 2025},
 #>   }
 ```
 
@@ -260,8 +259,7 @@ We'd also really appreciate it if you could cite your use of this package:
 citation("rredlist")
 #> To cite package 'rredlist' in publications use:
 #> 
-#>   Gearty W, Chamberlain S (2024). _rredlist: 'IUCN' Red List Client_.
-#>   doi:10.32614/CRAN.package.rredlist <https://doi.org/10.32614/CRAN.package.rredlist>, R package
+#>   Gearty W, Chamberlain S (2024). _rredlist: 'IUCN' Red List Client_. doi:10.32614/CRAN.package.rredlist <https://doi.org/10.32614/CRAN.package.rredlist>, R package
 #>   version 0.7.1.9000, <https://docs.ropensci.org/rredlist/>.
 #> 
 #> A BibTeX entry for LaTeX users is

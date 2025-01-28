@@ -39,7 +39,7 @@ Use of this package requires an IUCN API key which can be acquired at https://ap
 rredlist::rl_use_iucn()
 ```
 
-**Keep this key private.** You can pass the key in to each function via the key parameter, but it’s better to store the key either as a environment variable (`IUCN_REDLIST_KEY`) or an R option (`iucn_redlist_key`) - we recommend using the former option. Note that there is not a default API key that is used as a fallback, and the package will not function without providing/storing your own API key.
+**Keep this key private.** You can pass the key in to each function via the key parameter, but it’s better to store the key either as an environment variable (`IUCN_REDLIST_KEY`) or an R option (`iucn_redlist_key`) - we recommend using the former option. Note that there is not a default API key that is used as a fallback, and the package will not function without providing/storing your own API key.
 
 ## Example usage
 

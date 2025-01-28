@@ -47,7 +47,6 @@ moll_counts <- moll_assessments$assessments %>%
   mutate(year_published = as.numeric(year_published)) %>%
   arrange(year_published) %>%
   mutate(assess_cum = cumsum(assess_cnt))
-
 ```
 
 Now that we have our cumulative sums, we can make a simple plot. We'll save it for later to combine with our second plot.
@@ -60,7 +59,7 @@ gg1 <- ggplot(moll_counts) +
   theme_classic(base_size = 14)
 ```
 
-Now let's see how many cumulative _species_ are assessed by year. In order to do this, we'll first need to filter to only the first assessment for each species using `arrange()` and `slice()`. Then we can calculate the cumulative sum as we did for the assessments above.
+Now let's see how many cumulative _species_ are assessed by year. In order to do this, we'll first need to filter for the first assessment of each species using `arrange()` and `slice()`. Then we can calculate the cumulative sum as we did for the assessments above.
 
 
 ``` r
@@ -189,7 +188,7 @@ We could go ahead and download the full assessments for all Australian species n
 reptilia_assessments <- rl_class(class = "Reptilia", latest = TRUE, quiet = TRUE)
 ```
 
-OK, now we've got our assessment summaries for Autralian species and for reptiles. We can take those two lists of assessments and find the intersection of them to get the list of assessment IDs for Australian reptiles.
+OK, now we've got our assessment summaries for Australian species and for reptiles. We can take those two lists of assessments and find the intersection of them to get the list of assessment IDs for Australian reptiles.
 
 
 ``` r
