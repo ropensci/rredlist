@@ -8,8 +8,15 @@ navbar:
       text: Get started
       href: articles/rredlist.html
   structure:
-    left: [intro, reference, news]
+    left: [intro, articles, reference, news]
     right: [search, github, lightswitch]
+
+articles:
+- title: Articles
+  navbar: ~
+  contents:
+  - research_workflows
+  - benchmarks
 
 reference:
 - title: Get all details for a single assessment
@@ -68,3 +75,7 @@ reference:
   - rl_api_version
   - rl_citation
   - rl_use_iucn
+
+- title: Visualization tools
+  contents:
+  - scale_color_iucn

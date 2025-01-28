@@ -13,13 +13,12 @@
 \section{Authentication}{
 
 IUCN requires you to get your own API key, an alphanumeric string that you
-need to send in every request. See key A IUCN API token. See \code{\link[=rl_use_iucn]{rl_use_iucn()}}
-for help getting and storing it. Get it at
-https://api.iucnredlist.org/users/sign_up
-Keep this key private. You can pass the key in to each function via the
-\code{key} parameter, but it's better to store the key either as an
-environment variable (\code{IUCN_REDLIST_KEY}) or an R option
-(\code{iucn_redlist_key}) - we recommend using the former option.
+need to send in every request. See \code{\link[=rl_use_iucn]{rl_use_iucn()}} for help getting and
+storing it. Get it at \url{https://api.iucnredlist.org/users/sign_up}. Keep this
+key private. You can pass the key in to each function via the \code{key}
+parameter, but it's better to store the key either as an environment variable
+(\code{IUCN_REDLIST_KEY}) or an R option (\code{iucn_redlist_key}) - we recommend using
+the former option.
 }
 
 \section{High vs. Low level package APIs}{
@@ -39,18 +38,19 @@ the end of the function name, e.g., \code{\link[=rl_species_]{rl_species_()}}.
 \section{No Spatial}{
 
 This package does not include support for the spatial API, described at
-https://apiv3.iucnredlist.org/spatial.
+\url{https://apiv3.iucnredlist.org/spatial}.
 }
 
-\section{Citing the Red List API}{
+\section{Citing the IUCN Red List API}{
 
 Get the proper citation for the version of the Red List you are using
-by programatically running \code{\link[=rl_citation]{rl_citation()}}.
+by programatically running \code{\link[=rl_citation]{rl_citation()}}. Also see
+\url{https://api.iucnredlist.org/}.
 }
 
 \section{Red List API Terms of Use}{
 
-See https://www.iucnredlist.org/terms/terms-of-use
+See \url{https://www.iucnredlist.org/terms/terms-of-use}.
 }
 
 \section{Rate limiting}{
@@ -60,11 +60,6 @@ might get your access blocked temporarily. If you're a heavy API user, the
 Red List Unit asked that you contact them, as there might be better options.
 They suggest a 2-second delay between your calls if you plan to make a
 lot of calls.
-}
-
-\section{Citing the IUCN Red List API}{
-
-See https://api.iucnredlist.org/
 }
 
 \seealso{
@@ -88,6 +83,8 @@ Other contributors:
 \itemize{
   \item rOpenSci (https://ropensci.org/) [funder]
   \item Maëlle Salmon \email{maelle.salmon@yahoo.se} [contributor]
+  \item Kevin Cazelles \email{kevin.cazelles@insileco.io} (\href{https://orcid.org/0000-0001-6619-9874}{ORCID}) [reviewer]
+  \item Stephanie Hazlitt \email{stephhazlitt@gmail.com} [reviewer]
 }
 
 }

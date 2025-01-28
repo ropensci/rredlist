@@ -20,7 +20,16 @@ Authors@R:
       person(given = "Maëlle",
              family = "Salmon",
              role = "ctb",
-             email = "maelle.salmon@yahoo.se")
+             email = "maelle.salmon@yahoo.se"),
+      person(given = "Kevin",
+             family = "Cazelles",
+             role = "rev",
+             email = "kevin.cazelles@insileco.io", 
+             comment = c(ORCID = "0000-0001-6619-9874")),
+      person(given = "Stephanie",
+             family = "Hazlitt",
+             role = "rev",
+             email = "stephhazlitt@gmail.com")
       )
 License: MIT + file LICENSE
 URL: https://docs.ropensci.org/rredlist/,
@@ -32,13 +41,22 @@ Language: en-US
 Imports:
     crul (>= 0.3.8),
     jsonlite (>= 1.1),
-    lifecycle
+    lifecycle,
+    cli,
+    curl,
+    rlang
 Suggests:
     spelling,
     testthat,
     vcr (>= 0.6.0),
     knitr,
-    rmarkdown
+    rmarkdown,
+    webmockr,
+    microbenchmark,
+    ggplot2,
+    dplyr,
+    patchwork,
+    vdiffr
 RoxygenNote: 7.3.2
 VignetteBuilder: knitr
 X-schema.org-applicationCategory: Biodiversity

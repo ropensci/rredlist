@@ -38,6 +38,7 @@ rl_actions_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
                         quiet = FALSE, ...) {
   assert_is(key, "character")
   assert_is(code, "character")
+  assert_n(code, 1)
   assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
   assert_is(all, "logical")
@@ -91,6 +92,7 @@ rl_research_ <- function(code = NULL, key = NULL, all = TRUE, page = 1,
                          quiet = FALSE, ...) {
   assert_is(key, "character")
   assert_is(code, "character")
+  assert_n(code, 1)
   assert_is(page, c("integer", "numeric"))
   assert_n(page, 1)
   assert_is(all, "logical")

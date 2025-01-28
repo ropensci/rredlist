@@ -18,7 +18,34 @@ rredlist_ua <- function() {
   paste0(versions, collapse = " ")
 }
 
-#' Build and handle a GET query of the IUCN API
+#' Build and make a GET query of the IUCN API
+#'
+#' @param path (character) The full API endpoint.
+#' @param key (character) An IUCN API token. See [rl_use_iucn()].
+#' @param query (list) A list of parameters to include in the GET query.
+#' @param ... [Curl options][curl::curl_options()] passed to the GET request via
+#'   [HttpClient][crul::HttpClient()].
+#'
+#' @noRd
+#' @return The raw crul response object.
+#' @importFrom crul HttpClient
+rr_GET_raw <- function(path, key = NULL, query = list(), ...) {
+  # Extract secret API query arguments
+  args <- list(...)
+  query$latest <- args$latest
+  query$scope_code <- args$scope_code
+  query$year_published <- args$year_published
+
+  check_internet()
+  cli <- HttpClient$new(
+    url = paste(rr_base(), space(path), sep = "/"),
+    opts = list(useragent = rredlist_ua()),
+    headers = list(Authorization = check_key(key))
+  )
+  cli$retry("GET", query = ct(query), ..., retry_only_on = c(429))
+}
+
+#' Handle a GET query of the IUCN API
 #'
 #' @param path (character) The full API endpoint.
 #' @param key (character) An IUCN API token. See [rl_use_iucn()].
@@ -30,43 +57,43 @@ rredlist_ua <- function() {
 #' @return The response of the query as a JSON string.
 #' @importFrom crul HttpClient
 rr_GET <- function(path, key = NULL, query = list(), ...) {
-  # Extract secret API query arguments
-  args <- list(...)
-  query$latest <- args$latest
-  query$scope_code <- args$scope_code
-  query$year_published <- args$year_published
-
-  cli <- HttpClient$new(
-    url = paste(rr_base(), space(path), sep = "/"),
-    opts = list(useragent = rredlist_ua()),
-    headers = list(Authorization = check_key(key))
-  )
-  temp <- cli$get(query = ct(query), ...)
-  if (temp$status_code >= 300) {
-    if (temp$status_code == 401) {
-      stop("Token not valid! (HTTP 401)", call. = FALSE)
-    } else if (temp$status_code == 404) {
-      stop("No results returned for query. (HTTP 404)", call. = FALSE)
-    } else {
-      temp$raise_for_status()
-    }
-  }
-  x <- temp$parse("UTF-8")
-  err_catcher(x)
+  res <- rr_GET_raw(path, key, query, ...)
+  status_catcher(res)
+  x <- res$parse("UTF-8")
   return(x)
 }
 
-#' Catch response errors
-#' @param x (character) A JSON string representing the response of a GET query.
-#' @return If no errors are found in the JSON string, nothing is returned. If
-#'   errors are found in the JSON string, an error is thrown.
+#' Check that the user has internet
+#'
+#' @return If the user has internet, nothing is returned. If the user does not
+#'   have internet, an error is thrown.
 #' @noRd
-#' @importFrom jsonlite fromJSON
-err_catcher <- function(x) {
-  xx <- fromJSON(x)
-  if (any(vapply(c("message", "error"), function(z) z %in% names(xx),
-                 logical(1)))) {
-    stop(xx[[1]], call. = FALSE)
+#' @importFrom curl nslookup
+check_internet <- function() {
+  # check for internet with DNS lookup
+  if (is.null(nslookup("google.com", error = FALSE))) {
+    stop("An internet connection is required to access the IUCN API.")
+  }
+}
+
+#' Catch status code errors
+#' @param res An [crul::HttpResponse] object as returned by
+#'   [crul::HttpClient()].
+#' @return If no status code errors are found, nothing is returned. If status
+#'   code errors are found, an error is thrown.
+#' @noRd
+status_catcher <- function(res) {
+  if (res$status_code >= 400) {
+    if (res$status_code == 401) {
+      stop("Token not valid! (HTTP 401)", call. = FALSE)
+    } else if (res$status_code == 404) {
+      stop("No results returned for query. (HTTP 404)", call. = FALSE)
+    } else if (res$status_code >= 500) {
+      stop("The IUCN API is not currently available. Please try your query again
+           later.", call. = FALSE)
+    } else {
+      res$raise_for_status()
+    }
   }
 }
 
@@ -83,7 +110,6 @@ err_catcher <- function(x) {
 rl_parse <- function(x, parse) {
   fromJSON(x, parse)
 }
-
 
 #' Retrieve a stored API key, if needed
 #'
@@ -109,8 +135,12 @@ check_key <- function(x) {
 #' @noRd
 rr_base <- function() "https://api.iucnredlist.org/api/v4"
 
+#' Escape spaces in a URL string
+#'
+#' @param x (character) A URL string (possibly with unescaped spaces)
+#' @return (character) A URL string (with any spaces escaped)
+#' @noRd
 space <- function(x) gsub("\\s", "%20", x)
-
 
 #' Check that a value inherits the desired class
 #'
@@ -144,22 +174,6 @@ assert_n <- function(x, n) {
     }
   }
 }
-
-#' Check that a value is not NA
-#'
-#' @param x The value to be checked.
-#'
-#' @return If the check fails, an error is thrown, otherwise, nothing is
-#'   returned.
-#' @noRd
-assert_not_na <- function(x) {
-  if (!is.null(x)) {
-    if (any(is.na(x))) {
-      stop(deparse(substitute(x)), " must not be NA", call. = FALSE)
-    }
-  }
-}
-
 
 #' Combine assessments from multiple pages of a single query
 #'
@@ -196,22 +210,29 @@ combine_assessments <- function(res, parse) {
 #' @return A list with each element representing the response of one page of
 #'   results.
 #' @noRd
-#' @importFrom jsonlite fromJSON
+#' @importFrom cli cli_progress_bar cli_progress_update cli_progress_done
 page_assessments <- function(path, key, quiet, ...) {
   out <- list()
-  done <- FALSE
-  page <- 1
-  while (!done) {
-    tmp <- rr_GET(path, key, query = list(page = page), ...)
-    if (length(fromJSON(tmp, FALSE)$assessments) == 0) {
-      if (page == 1) out <- tmp else if (page == 2) out <- out[[1]]
-      done <- TRUE
-    } else {
-      if (!quiet) cat(".")
+  res <- rr_GET_raw(path, key, query = list(page = 1), ...)
+  status_catcher(res)
+  total_pages <- as.integer(res$response_headers$`total-pages`)
+  if (length(total_pages) == 0) total_pages <- 1
+  if (!quiet) cli_progress_bar(
+    "Paging assessments", total = total_pages, clear = FALSE,
+    format = paste0("{cli::pb_name} ({cli::pb_current}/{cli::pb_total}) | ",
+                    "{cli::pb_bar} {cli::pb_percent} | ETA: {cli::pb_eta}"))
+  tmp <- res$parse("UTF-8")
+  if (total_pages == 1) {
+    out <- tmp
+  } else {
+    out[[1]] <- tmp
+    if (!quiet) cli_progress_update()
+    for (page in 2:total_pages) {
+      tmp <- rr_GET(path, key, query = list(page = page), ...)
       out[[page]] <- tmp
-      page <- page + 1
+      if (!quiet) cli_progress_update()
     }
   }
-  if (!quiet && page > 1) cat("\n")
+  if (!quiet) cli_progress_done()
   return(out)
 }

@@ -17,8 +17,18 @@ rl_sis_(id, key = NULL, ...)
 \item{parse}{(logical) Whether to parse the output to list (\code{FALSE}) or,
 where possible, data.frame (\code{TRUE}). Default: \code{TRUE}.}
 
-\item{...}{\link[curl:curl_options]{Curl options} passed to the GET request via
-\link[crul:HttpClient]{cruls}.}
+\item{...}{Includes the following arguments related to the wait time between
+request retries if a "Too Many Requests" error is received from the API
+(see \link[crul:HttpClient]{HttpClient()$retry()} for more details):
+\itemize{
+\item \code{pause_base}, \code{pause_cap}, and \code{pause_min}: basis, maximum, and minimum
+for calculating wait time for retry
+\item \code{times}: the maximum number of times to retry
+\item \code{onwait}: a callback function if the request will be retried and a
+wait time is being applied
+}
+Also supports any \link[curl:curl_options]{curl options} passed to the GET
+request via \link[crul:HttpClient]{HttpClient}.}
 }
 \value{
 A list unless using a function with a trailing underscore, in which

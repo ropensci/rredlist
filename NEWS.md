@@ -19,7 +19,7 @@ William Gearty is now the maintainer of rredlist
 ### MINOR IMPROVEMENTS
 
 * vignette added, but only available on the docs site (#24)
-* when testing, if a iucm redlist key not found, set a dummy key (#41)
+* when testing, if a iucn redlist key not found, set a dummy key (#41)
 * readme improvements (#42)
 * change base url for Red List API to https from http
 

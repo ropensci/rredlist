@@ -87,3 +87,28 @@ test_that("fails well", {
   # lengths
   expect_error(rl_categories(page = 1:2), "page must be length 1")
 })
+
+suppressPackageStartupMessages(library(ggplot2, quietly = TRUE))
+
+categories <- c("NE", "DD", "LC", "NT", "VU", "EN", "CR", "RE", "EW", "EX")
+set.seed(1234)
+df <- data.frame(
+  x = runif(1000, 0, 10), y = runif(1000, 0, 10),
+  color = sample(categories, 1000, TRUE)
+)
+
+test_that("scale_fill_iucn works", {
+  gg <- ggplot(df) +
+    geom_point(aes(x = x, y = y, fill = color), shape = 21) +
+    scale_fill_iucn() +
+    theme_classic()
+  expect_doppelganger("scale_fill_iucn", gg)
+})
+
+test_that("scale_color_iucn works", {
+  gg <- ggplot(df) +
+    geom_point(aes(x = x, y = y, color = color), shape = 21) +
+    scale_color_iucn() +
+    theme_classic()
+  expect_doppelganger("scale_color_iucn", gg)
+})

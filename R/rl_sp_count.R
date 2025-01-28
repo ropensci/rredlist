@@ -5,7 +5,9 @@
 #' @export
 #' @param key (character) An IUCN API token. See [rl_use_iucn()].
 #' @param ... Curl options passed to [HttpClient][crul::HttpClient()]
-#' @template info
+#' @return An integer representing the number of unique species represented
+#'   within the IUCN database.
+#' @references API docs at <https://api.iucnredlist.org/>.
 #' @family stats
 #' @examples \dontrun{
 #' # Get count of species with assessments

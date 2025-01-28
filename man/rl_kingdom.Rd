@@ -57,6 +57,16 @@ from a particular \link[=rl_scopes]{scope} (e.g., \code{1} for Global, \code{2} 
 Europe). This is similar to the \code{region} argument of the old Red List
 API and old versions of rredlist.
 }
+Also includes the following arguments related to the wait time between
+request retries if a "Too Many Requests" error is received from the API
+(see \link[crul:HttpClient]{HttpClient()$retry()} for more details):
+\itemize{
+\item \code{pause_base}, \code{pause_cap}, and \code{pause_min}: basis, maximum, and minimum
+for calculating wait time for retry
+\item \code{times}: the maximum number of times to retry
+\item \code{onwait}: a callback function if the request will be retried and a
+wait time is being applied
+}
 Also supports any \link[curl:curl_options]{curl options} passed to the GET
 request via \link[crul:HttpClient]{HttpClient}.}
 }
