@@ -17,6 +17,7 @@ acknowledgement
 api
 apiv
 biogeographical
+clade
 codebase
 codecov
 cran
@@ -26,10 +27,12 @@ geo
 http
 https
 io
-iucm
+iucn
 iucnredlist
 json
 knitr
+macroecology
+mollusc
 precompile
 programatically
 readme
@@ -41,4 +44,5 @@ rstudio
 subpopulation
 subvarieties
 trinomial
+walkthrough
 www
