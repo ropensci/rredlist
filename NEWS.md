@@ -1,4 +1,4 @@
-# rredlist (development version)
+# rredlist 1.0.0
 
 This new major version of `rredlist` tracks the development of the IUCN Red List API. **The API has been upgraded to v4 and this R package has been updated accordingly.** Note that nearly all functionality of the package has changed:
 
@@ -9,6 +9,19 @@ This new major version of `rredlist` tracks the development of the IUCN Red List
 **Users will need to generate a new API key to use the new version of the API (see `rl_use_iucn()`).**
 
 **This package no longer supports v3 of the IUCN Red List API.** Older versions of the package may be installed if the old version of the API is needed.
+
+### Other major changes and additions
+
+- Switched from performing a single GET call to retrying the GET call if it is rejected or takes too long
+- Several old functions that are no longer supported by the new API have been deprecated and may be removed in a future release of rredlist
+- Improved the user friendliness of rl_use_iucn()
+- Improved type checking of arguments for all functions
+- Added a progress bar for multi-page queries
+- Improved error status code handling and reduced overall query download overhead
+- rl_citation() now returns a bibentry and prints a BibTeX entry
+- Added IUCN color palette scales for ggplot2
+- Added a new vignette demonstrating the use of rredlist within various research pipelines
+- Added a new vignette demonstrating benchmarking of rredlist
 
 # rredlist 0.7.1
 

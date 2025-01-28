@@ -3,8 +3,8 @@ bibentry(
   bibtype  = "Manual",
   title    = "rredlist: 'IUCN' Red List Client",
   author   = c(person("William", "Gearty"), person("Scott", "Chamberlain")),
-  year     = 2024,
-  note     = "R package version 0.7.1.9000",
+  year     = 2025,
+  note     = "R package version 1.0.0",
   doi      = "10.32614/CRAN.package.rredlist",
   url      = "https://docs.ropensci.org/rredlist/"
 )
