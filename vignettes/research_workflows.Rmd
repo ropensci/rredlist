@@ -217,14 +217,14 @@ names(assessment)
 
 Now you can see why downloading this information will take a while; that's a lot of data! The information available from the IUCN API spans ecology, threats, references, and more!
 
-Now we'll go ahead and download the full records for all of our assessments. Note that performing this many large queries over a short period of time may result in getting timed out by the API. If you do get timed out, `rredlist` will automatically retry the query after a short wait. You can customize the settings related to these retries, including wait time and number of retries. For this download, we'll increase the number of retries to 10 (from the default of 3).
+Now we'll go ahead and download the full records for all of our assessments. Note that performing this many large queries over a short period of time may result in getting timed out by the API. If you do get timed out, `rredlist` will automatically retry the query after a short wait time. By default, if you get timed out more than 3 times for the same query, the query will be stopped and throw an error, forcing you to try the entire download again. However, you can customize the settings related to these retries, including the wait time and the number of retries. Since this is a pretty large download that we don't want to have to redo, we'll increase the number of retries to 10 (from the default of 3).
 
 
 ``` r
 assessment_list <- lapply(assessment_ids, rl_assessment, times = 10)
 ```
 
-Alternatively, if we know we might get timed out, we can impose our own wait time between each query to proactively prevent timeouts. IUCN recommends a wait time of 0.5 seconds between queries to avoid timeouts. We can use `Sys.sleep()` to impose such a wait before each query.
+Alternatively, if we know we might get timed out because of the download size, we can impose our own wait time between each query to proactively prevent timeouts. IUCN recommends a wait time of 0.5 seconds between queries to avoid timeouts. We can use `Sys.sleep()` to impose such a wait before each query.
 
 
 ``` r
