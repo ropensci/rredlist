@@ -83,7 +83,7 @@ Other contributors:
 \itemize{
   \item rOpenSci (https://ropensci.org/) [funder]
   \item Maëlle Salmon \email{maelle.salmon@yahoo.se} [contributor]
-  \item Kevin Cazelles \email{kevin.cazelles@gmail.com} [reviewer]
+  \item Kevin Cazelles \email{kevin.cazelles@insileco.io} (\href{https://orcid.org/0000-0001-6619-9874}{ORCID}) [reviewer]
   \item Stephanie Hazlitt \email{stephhazlitt@gmail.com} [reviewer]
 }
 
