@@ -1,5 +1,4 @@
-rredlist
-========
+# rredlist <img src="man/figures/logo.png" align="right" width="120" />
 
 
 
@@ -53,16 +52,16 @@ library("rredlist")
 
 ``` r
 rl_species("Gorilla", "gorilla")$assessments
-#>    year_published latest sis_taxon_id                                                url assessment_id
-#> 1            2016  FALSE         9404 https://www.iucnredlist.org/species/9404/102330408     102330408
-#> 2            2018   TRUE         9404 https://www.iucnredlist.org/species/9404/136250858     136250858
-#> 3            2016  FALSE         9404  https://www.iucnredlist.org/species/9404/17963949      17963949
-#> 4            2008  FALSE         9404  https://www.iucnredlist.org/species/9404/12983787      12983787
-#> 5            2007  FALSE         9404  https://www.iucnredlist.org/species/9404/12983966      12983966
-#> 6            2000  FALSE         9404  https://www.iucnredlist.org/species/9404/12983737      12983737
-#> 7            1996  FALSE         9404  https://www.iucnredlist.org/species/9404/12983764      12983764
-#> 8            1994  FALSE         9404  https://www.iucnredlist.org/species/9404/12984167      12984167
-#> 9            1990  FALSE         9404  https://www.iucnredlist.org/species/9404/12984186      12984186
+#>    year_published latest possibly_extinct possibly_extinct_in_the_wild sis_taxon_id
+#> 1            2016  FALSE            FALSE                        FALSE         9404
+#> 2            2018   TRUE            FALSE                        FALSE         9404
+#> 3            2016  FALSE            FALSE                        FALSE         9404
+#> 4            2008  FALSE            FALSE                        FALSE         9404
+#> 5            2007  FALSE            FALSE                        FALSE         9404
+#> 6            2000  FALSE            FALSE                        FALSE         9404
+#> 7            1996  FALSE            FALSE                        FALSE         9404
+#> 8            1994  FALSE            FALSE                        FALSE         9404
+#> 9            1990  FALSE            FALSE                        FALSE         9404
 ...
 ```
 
@@ -89,18 +88,26 @@ rl_actions()
 
 ``` r
 rl_actions("2_2", all = FALSE)$assessments
-#>     year_published latest sis_taxon_id                                                   url assessment_id
-#> 1             2019   TRUE    132523146  https://www.iucnredlist.org/species/132523146/497499        497499
-#> 2             2019   TRUE        10767      https://www.iucnredlist.org/species/10767/498370        498370
-#> 3             2013   TRUE         1078       https://www.iucnredlist.org/species/1078/498639        498639
-#> 4             2019   TRUE    132521900  https://www.iucnredlist.org/species/132521900/498826        498826
-#> 5             2020  FALSE         1086       https://www.iucnredlist.org/species/1086/499235        499235
-#> 6             2019   TRUE         1117       https://www.iucnredlist.org/species/1117/500918        500918
-#> 7             2019   TRUE        11797      https://www.iucnredlist.org/species/11797/503908        503908
-#> 8             2021   TRUE        12124      https://www.iucnredlist.org/species/12124/505402        505402
-#> 9             2019   TRUE        12695      https://www.iucnredlist.org/species/12695/507698        507698
+#>     year_published latest possibly_extinct possibly_extinct_in_the_wild sis_taxon_id
+#> 1             2019   TRUE            FALSE                        FALSE    132523146
+#> 2             2019   TRUE            FALSE                        FALSE        10767
+#> 3             2013   TRUE            FALSE                        FALSE         1078
+#> 4             2019   TRUE            FALSE                        FALSE    132521900
+#> 5             2020  FALSE            FALSE                        FALSE         1086
+#> 6             2019   TRUE            FALSE                        FALSE         1117
+#> 7             2019   TRUE            FALSE                        FALSE        11797
+#> 8             2021   TRUE            FALSE                        FALSE        12124
+#> 9             2019   TRUE            FALSE                        FALSE        12695
 ...
 ```
+
+## Logo
+
+<img src="man/figures/logo.png" align="right" width="120" />
+
+The `rredlist` logo showcases a silhouette of a [Javan rhinoceros](https://www.iucnredlist.org/species/19495/18493900) (_Rhinoceros sondaicus_), one of the most endangered mammal species on the planet. The species has suffered extreme population decline due to habitat loss and poaching, with only ~75 individuals alive in the wild today, all in [Ujung Kulon National Park](https://tnujungkulon.menlhk.go.id/), a [UNESCO World Heritage Site](https://whc.unesco.org/en/list/608) in Java, Indonesia. Despite recent conservation efforts, [poaching continues](https://www.savetherhino.org/asia/indonesia/poaching-gangs-claim-to-have-killed-one-third-of-the-remaining-javan-rhino-population/); further, the small population is extremely susceptible to inbreeding, disease, and further habitat loss due to the rampant spreading of local palm trees. You can read more about the Javan rhino on the [IUCN Red List](https://www.iucnredlist.org/species/19495/18493900), [World Wildlife Fund](https://www.worldwildlife.org/species/javan-rhino), and [International Rhino Foundation](https://rhinos.org/about-rhinos/rhino-species/javan-rhino/).
+
+This work, "rredlist logo", is adapted from ["Javan rhino silhouette"](https://creazilla.com/media/silhouette/64313/javan-rhino) by [Creazilla](https://creazilla.com/), used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). "rredlist logo" is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) by William Gearty.
 
 ## Meta
 
