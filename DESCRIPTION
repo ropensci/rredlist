@@ -16,7 +16,7 @@ Authors@R:
              email = "myrmecocystus@gmail.com"),
       person(given = "rOpenSci",
              role = "fnd",
-             comment = "https://ropensci.org/"),
+             comment = c(ROR = "019jywm96")),
       person(given = "Maëlle",
              family = "Salmon",
              role = "ctb",
