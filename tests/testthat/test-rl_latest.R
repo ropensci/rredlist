@@ -24,6 +24,17 @@ test_that("rl_sis_latest works", {
   expect_is(aa$habitats, "data.frame")
 })
 
+test_that("rl_sis_latest works with no latest assessment", {
+  skip_on_cran()
+
+  vcr::use_cassette("rl_sis_latest-no-latest-assessment", {
+    aa <- rl_sis_latest(41129)
+  })
+
+  expect_is(aa, "list")
+  expect_is(aa$taxon, "list")
+})
+
 test_that("rl_species_latest fails well", {
   skip_on_cran()
 

@@ -1,5 +1,9 @@
 # rredlist (development version)
 
+### MINOR IMPROVEMENTS
+
+- Fixed `rl_sis_latest()` and `rl_species_latest()` so that, in the event that no assessment has been officially identified as the latest assessment, they will return the most recently published assessment (based on the year that the assessment was published) (#69).
+
 # rredlist 1.0.0
 
 This new major version of `rredlist` tracks the development of the IUCN Red List API. **The API has been upgraded to v4 and this R package has been updated accordingly.** Note that nearly all functionality of the package has changed:

@@ -1,0 +1,148 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/taxa/sis/41129
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/6.1.0 crul/1.5.0 rOpenSci(rredlist/1.0.0.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: 'HTTP/2 200 '
+      cache-control: max-age=0, private, must-revalidate
+      content-type: application/json
+      etag: W/"210b7ef9ed312aa546a346178cfb77ae"
+      x-request-id: df0e2d05-8eec-4c3d-a8c8-b28f7c3338ea
+      x-runtime: '0.034698'
+      content-length: '1377'
+      date: Thu, 17 Apr 2025 21:50:58 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"sis_id":41129,"taxon":{"sis_id":41129,"scientific_name":"Arenophryne
+        rotunda","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"AMPHIBIA","order_name":"ANURA","family_name":"MYOBATRACHIDAE","genus_name":"Arenophryne","species_name":"rotunda","subpopulation_name":null,"infra_name":null,"authority":"Tyler,
+        1976","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Amphibian Specialist Group","url":"https://www.iucn-amphibians.org/","description":"Chair:
+        Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator:
+        Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"}],"common_names":[{"main":false,"name":"Sandhill
+        Frog","language":"eng"}],"synonyms":[]},"assessments":[{"year_published":"2004","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":41129,"url":"https://www.iucnredlist.org/species/41129/10403608","assessment_id":10403608,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2002","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":41129,"url":"https://www.iucnredlist.org/species/41129/10403703","assessment_id":10403703,"scopes":[{"description":{"en":"Global"},"code":"1"}]}]}'
+  recorded_at: 2025-04-17 21:50:59 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/assessment/10403608
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/6.1.0 crul/1.5.0 rOpenSci(rredlist/1.0.0.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: 'HTTP/2 200 '
+      cache-control: max-age=0, private, must-revalidate
+      content-type: application/json
+      etag: W/"5307bfde948400ce92e1dae058614f67"
+      x-request-id: 2f3f4b2d-ce3f-43c9-a5eb-dd979f368e64
+      x-runtime: '0.069192'
+      content-length: '8930'
+      date: Thu, 17 Apr 2025 21:50:58 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"assessment_date":"2004-04-30T00:00:00.000Z","year_published":"2004","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":41129,"criteria":null,"url":"https://www.iucnredlist.org/species/41129/10403608","citation":"Jean-Marc
+        Hero, Dale Roberts 2004. Arenophryne rotunda. The IUCN Red List of Threatened
+        Species 2004: e.T41129A10403608. https://dx.doi.org/10.2305/IUCN.UK.2004.RLTS.T41129A10403608.en.
+        Accessed on 17 April 2025.","assessment_id":10403608,"assessment_points":false,"assessment_ranges":true,"taxon":{"sis_id":41129,"scientific_name":"Arenophryne
+        rotunda","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"AMPHIBIA","order_name":"ANURA","family_name":"MYOBATRACHIDAE","genus_name":"Arenophryne","species_name":"rotunda","subpopulation_name":null,"infra_name":null,"authority":"Tyler,
+        1976","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Amphibian Specialist Group","url":"https://www.iucn-amphibians.org/","description":"Chair:
+        Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator:
+        Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"}],"common_names":[{"main":false,"name":"Sandhill
+        Frog","language":"eng"}],"synonyms":[]},"population_trend":{"description":{"en":"Stable"},"code":"2"},"red_list_category":{"version":"3.1","description":{"en":"Least
+        Concern"},"code":"LC"},"supplementary_info":{"upper_elevation_limit":null,"lower_elevation_limit":null,"lower_depth_limit":null,"upper_depth_limit":null,"population_size":null,"population_severely_fragmented":"No","population_continuing_decline":null,"generational_length":null,"congregatory":null,"movement_patterns":null,"continuing_decline_in_area":null,"conservation_actions_in_place":[{"name":"In-place
+        land/water protection","actions":[{"name":"Conservation sites identified","value":"Yes,
+        over entire range"},{"name":"Occurs in at least one protected area","value":"Yes"}]}],"identification_information":null,"extreme_fluctuations":null,"no_of_subpopulations":null,"continuing_decline_in_subpopulations":null,"extreme_fluctuations_in_subpopulations":null,"all_individuals_in_one_subpopulation":null,"no_of_individuals_in_largest_subpopulation":null,"estimated_area_of_occupancy":null,"continuing_decline_in_area_of_occupancy":null,"extreme_fluctuations_in_area_of_occupancy":null,"estimated_extent_of_occurence":null,"continuing_decline_in_extent_of_occurence":null,"extreme_fluctuations_in_extent_of_occurence":null,"continuing_decline_in_number_of_locations":null,"extreme_fluctuations_in_number_of_locations":null},"documentation":{"range":"This
+        Australian endemic occurs in a strip along the coast in the southwest and
+        arid zones from Edel Land (Shark Bay) south to Murchison River, Western Australia.
+        It is also on Dirk Hartog Island. The estimated altitudinal range of the species
+        is from 0-150m asl.","population":"It is a common species.","habitats":"The
+        species is found in course-grained coastal sand dunes. It relies on moisture
+        in the sand and rainfall. It burrows in the soft sand and shelters up to 10cm
+        underground. It is active in the winter months when it emerges from the burrow
+        to feed. Males call in the spring. Pairs spend summer together underground
+        and then eggs are deposited in Autumn (April). Large eggs are laid in deep
+        burrows up to 80cm under the ground in moist sand. There is no free-swimming
+        tadpole and tiny frogs hatch from the eggs after about 2 months.","threats":"There
+        is no human infrastructure development within the species'' range as there
+        is no freshwater and the coastline is comprised of cliffs. There is a minor
+        threat from cattle grazing in the range. Desiccation through drought is a
+        possible threat. But overall, this species is not significantly threatened.","measures":"It
+        is protected in Shark Bay due to World Heritage Listing and also protected
+        in Kalbarri National Park and Zuytdorp National Park.","use_trade":null,"rationale":"Listed
+        as Least Concern because, although its Extent of Occurrence is probably less
+        than 5,000 km2, it is common, occurs in habitats that are not significantly
+        threatened, and does not appear to be in decline.","trend_justification":null,"taxonomic_notes":null},"biogeographical_realms":[{"description":{"en":"Australasian"},"code":"2"}],"conservation_actions":[],"faos":[],"habitats":[],"locations":[{"is_endemic":true,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Australia"},"code":"AU"}],"researches":[{"note":null,"code":"3_1","description":{"en":"Population
+        trends"}},{"note":null,"code":"1_2","description":{"en":"Population size,
+        distribution \u0026 trends"}}],"use_and_trade":[],"threats":[{"scope":null,"timing":"Ongoing","internationalTrade":null,"score":"Low
+        Impact: 3","severity":null,"ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Droughts"},"code":"11_2"},{"scope":null,"timing":"Ongoing","internationalTrade":null,"score":"Low
+        Impact: 3","severity":null,"ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Small-holder
+        grazing, ranching or farming"},"code":"2_3_2"}],"credits":[{"credit_type_name":"assessor","full":"Jean-Marc
+        Hero, Dale Roberts","value":null},{"credit_type_name":"evaluator","full":"Global
+        Amphibian Assessment Coordinating Team (Simon Stuart, Janice Chanson and Neil
+        Cox)","value":null}],"errata":[],"references":[{"citation":"IUCN. 2004. 2004
+        IUCN Red List of Threatened Species. Available at: \u003ca href=\"www.iucnredlist.org\"\u003ewww.iucnredlist.org\u003c/a\u003e.
+        (Accessed: 23 November 2004).","year":"2004","title":"2004 IUCN Red List of
+        Threatened Species","author":"IUCN","citation_short":"IUCN 2004"},{"citation":"Barker,
+        J., Grigg, G. and Tyler, M. 1995. \u003ci\u003eA Field Guide to Australian
+        Frogs\u003c/i\u003e. Surrey Beatty and Sons Pty Ltd, New South Wales.","year":"1995","title":"A
+        Field Guide to Australian Frogs","author":"Barker, J., Grigg, G. and Tyler,
+        M.","citation_short":null},{"citation":"Tyler, M.J., Smith, L.A. and Johnstone,
+        R.E. 1994. \u003ci\u003eFrogs of Western Australia\u003c/i\u003e. Western
+        Australian Museum, Perth.","year":"1994","title":"Frogs of Western Australia","author":"Tyler,
+        M.J., Smith, L.A. and Johnstone, R.E","citation_short":null},{"citation":"Tyler,
+        M.J., Smith, L.A. and Johnstone, R.E. 2000. \u003ci\u003eFrogs of Western
+        Australia, 3rd edition\u003c/i\u003e. Western Australian Museum, Perth.","year":"2000","title":"Frogs
+        of Western Australia, 3rd edition","author":"Tyler, M.J., Smith, L.A. and
+        Johnstone, R.E","citation_short":null},{"citation":"Roberts, J.D. 1984. Terrestrial
+        egg and deposition and direct development in Arenophryne rotunda a Myobatrachid
+        frog from the coastal sand dunes at Shark Bay, Western Australia. \u003ci\u003eAustralian
+        Wildlife Research\u003c/i\u003e: 191-200.","year":"1984","title":"Terrestrial
+        egg and deposition and direct development in Arenophryne rotunda a Myobatrachid
+        frog from the coastal sand dunes at Shark Bay, Western Australia","author":"Roberts,
+        J.D.","citation_short":null},{"citation":"Maxson, L.R. and Roberts, J.D. 1985.
+        An immunological analysis of the phylogenetic relationships between two enigmatic
+        frogs, Myobatrachus and Arenophryne. \u003ci\u003eJournal of Zoology\u003c/i\u003e:
+        289-300.","year":"1985","title":"An immunological analysis of the phylogenetic
+        relationships between two enigmatic frogs, Myobatrachus and Arenophryne","author":"Maxson,
+        L.R. and Roberts, J.D.","citation_short":null},{"citation":"Roberts, J.D.
+        1985. Population density estimates for Arenophryne rotunda: Is the round frog
+        rare? In: Grigg, G., Shine, R. and Ehmann, H. (eds), \u003ci\u003eBiology
+        of Australasian Frogs and Reptiles\u003c/i\u003e, pp. 463-467. Royal Zoological
+        Society of New South Wales, Sydney.","year":"1985","title":"Population density
+        estimates for Arenophryne rotunda: Is the round frog rare?","author":"Roberts,
+        J.D.","citation_short":null},{"citation":"Roberts, J.D. 1990. The biology
+        of Arenophryne rotunda (Anura: Myobatrachidae): a burrowing frog from Shark
+        Bay, Western Australia. In: Berry, P.F., Bradshaw, S.D. and Wilson, B.R. (eds),
+        \u003ci\u003eResearch in Shark Bay\u003c/i\u003e, pp. 287-297. Report of the
+        France-Australe Bicentenary Expedition Committee.","year":"1990","title":"The
+        biology of Arenophryne rotunda (Anura: Myobatrachidae): a burrowing frog from
+        Shark Bay, Western Australia","author":"Roberts, J.D.","citation_short":null}],"growth_forms":[],"lmes":[],"scopes":[{"description":{"en":"Global"},"code":"1"}],"stresses":[{"description":{"en":"Ecosystem
+        conversion"},"code":"1_1"},{"description":{"en":"Ecosystem degradation"},"code":"1_2"},{"description":{"en":"Ecosystem
+        degradation"},"code":"1_2"}],"systems":[{"description":{"en":"Terrestrial"},"code":"0"}]}'
+  recorded_at: 2025-04-17 21:50:59 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0
