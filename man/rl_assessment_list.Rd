@@ -28,14 +28,8 @@ wait time is being applied
 }
 Also supports any \link[curl:curl_options]{curl options} passed to the GET
 request via \link[crul:HttpClient]{HttpClient}.}
-
-\item{parse}{(logical) Whether to parse the output to list (\code{FALSE}) or,
-where possible, data.frame (\code{TRUE}). Default: \code{TRUE}.}
 }
 \value{
-A list unless using a function with a trailing underscore, in which
-case json as character string is returned.
-
 A list with each element representing the response of
 \code{\link[=rl_assessment]{rl_assessment()}}.
 }
@@ -49,7 +43,4 @@ assessments at once.
 # Get assessment details for multiple assessments
 ex1 <- rl_assessment_list(ids = c(166290968, 136250858))
 }
-}
-\references{
-API docs at \url{https://api.iucnredlist.org/}.
 }

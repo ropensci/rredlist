@@ -36,12 +36,11 @@ rl_assessment_ <- function(id, key = NULL, ...) {
 #' assessments at once.
 #'
 #' @param ids (integer) A vector of unique identifiers of the assessments.
+#' @param key (character) An IUCN API token. See [rl_use_iucn()].
 #' @param quiet (logical) If \code{TRUE}, suppresses the progress bar.
 #' @param wait_time (numeric) The number of seconds to wait between queries. The
 #'   default is 0.5 seconds, which is recommended by IUCN to avoid timeouts.
-#' @template all
 #' @template curl
-#' @template info
 #' @export
 #' @return A list with each element representing the response of
 #'   [rl_assessment()].
