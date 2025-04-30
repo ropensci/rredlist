@@ -62,10 +62,17 @@ test_that("rl_assessment_list works", {
     aa <- rl_assessment_list(ids = c(166290968, 136250858))
   })
 
+  vcr::use_cassette("rl_assessment_list_check1", {
+    bb <- rl_assessment(166290968)
+  })
+  vcr::use_cassette("rl_assessment_list_check2", {
+    cc <- rl_assessment(136250858)
+  })
+
   expect_is(aa, "list")
   expect_length(aa, 2)
-  expect_equal(aa[[1]], rl_assessment(166290968))
-  expect_equal(aa[[2]], rl_assessment(136250858))
+  expect_equal(aa[[1]], bb)
+  expect_equal(aa[[2]], cc)
 
   expect_error(rl_assessment_list(), "is missing, with no default")
   expect_error(rl_assessment_list(ids = ""),
@@ -79,7 +86,9 @@ test_that("rl_assessment_list works", {
 test_that("rl_assessment_extract works", {
   skip_on_cran()
 
-  aa <- rl_assessment_list(ids = c(166290968, 136250858))
+  vcr::use_cassette("rl_assessment_list_for_extract", {
+    aa <- rl_assessment_list(ids = c(166290968, 136250858))
+  })
 
   extract <- rl_assessment_extract(aa, "taxon")
   expect_is(extract, "list")
