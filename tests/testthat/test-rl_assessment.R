@@ -54,3 +54,57 @@ test_that("fails well", {
   expect_error(rl_assessment(166290968, parse = matrix()),
                "parse must be of class logical")
 })
+
+test_that("rl_assessment_list works", {
+  skip_on_cran()
+
+  vcr::use_cassette("rl_assessment_list", {
+    aa <- rl_assessment_list(ids = c(166290968, 136250858))
+  })
+
+  expect_is(aa, "list")
+  expect_length(aa, 2)
+  expect_equal(aa[[1]], rl_assessment(166290968))
+  expect_equal(aa[[2]], rl_assessment(136250858))
+
+  expect_error(rl_assessment_list(), "is missing, with no default")
+  expect_error(rl_assessment_list(ids = ""),
+               "ids must be of class integer")
+  expect_error(rl_assessment_list(166290968, wait_time = "never"),
+               "wait_time must be of class integer")
+  expect_error(rl_assessment_list(166290968, quiet = "yes"),
+               "quiet must be of class logical")
+})
+
+test_that("rl_assessment_extract works", {
+  skip_on_cran()
+
+  aa <- rl_assessment_list(ids = c(166290968, 136250858))
+
+  extract <- rl_assessment_extract(aa, "taxon")
+  expect_is(extract, "list")
+  expect_length(extract, 2)
+  expect_is(extract[[1]], "list")
+
+  extract2 <- rl_assessment_extract(aa, "taxon__common_names", format = "df")
+  expect_is(extract2, "data.frame")
+  expect_equal(nrow(extract2), 2)
+  expect_is(extract2$common_names, "list")
+
+  extract3 <- rl_assessment_extract(aa, "taxon__common_names", format = "df",
+                                    flatten = TRUE)
+  expect_is(extract3, "data.frame")
+  expect_equal(nrow(extract3), sum(nrow(extract2$common_names[[1]]),
+                                   nrow(extract2$common_names[[2]])))
+
+  expect_error(rl_assessment_extract(), "is missing, with no default")
+  expect_error(rl_assessment_extract(lst = 166290968, el_name = "taxon"),
+               "lst must be of class list")
+  expect_error(rl_assessment_extract(aa, el_name = 5),
+               "el_name must be of class character")
+  expect_error(rl_assessment_extract(aa, el_name = "taxon", format = TRUE),
+               "format must be of class character")
+  expect_error(rl_assessment_extract(aa, el_name = "taxon", format = "test"))
+  expect_error(rl_assessment_extract(aa, el_name = "taxon", flatten = "yes"),
+               "flatten must be of class logical")
+})

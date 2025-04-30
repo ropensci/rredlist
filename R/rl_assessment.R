@@ -59,14 +59,14 @@ rl_assessment_list <- function(ids, key = NULL, wait_time = 0.5, quiet = FALSE,
   assert_is(quiet, "logical")
   if (wait_time < 0.5) {
     cli_alert_warning(paste("Waiting for", wait_time, "seconds between API",
-                             "calls."))
+                            "calls."))
     cli_alert_warning(paste("This is a short wait time and could result in",
-                             "your API token being rate limited."))
+                            "your API token being rate limited."))
     cli_alert_warning(paste("IUCN recommends wait times >=0.5 seconds between",
-                             "calls to maintain service reliablity."))
+                            "calls to maintain service reliablity."))
   } else {
     cli_alert_success(paste("Waiting for", wait_time, "second(s) between",
-                             "API calls."))
+                            "API calls."))
   }
   if (!quiet) {
     prog_id <- cli_progress_bar(
