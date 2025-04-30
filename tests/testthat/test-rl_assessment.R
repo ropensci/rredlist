@@ -69,6 +69,11 @@ test_that("rl_assessment_list works", {
     cc <- rl_assessment(136250858)
   })
 
+  vcr::use_cassette("rl_assessment_list_warning", {
+    expect_message(rl_assessment_list(ids = c(166290968, 136250858),
+                                      wait_time = 0))
+  })
+
   expect_is(aa, "list")
   expect_length(aa, 2)
   expect_equal(aa[[1]], bb)
@@ -105,6 +110,9 @@ test_that("rl_assessment_extract works", {
   expect_is(extract3, "data.frame")
   expect_equal(nrow(extract3), sum(nrow(extract2$common_names[[1]]),
                                    nrow(extract2$common_names[[2]])))
+
+  expect_error(rl_assessment_extract(aa, "taxon", format = "df",
+                                     flatten = TRUE), "Error flattening")
 
   expect_error(rl_assessment_extract(), "is missing, with no default")
   expect_error(rl_assessment_extract(lst = 166290968, el_name = "taxon"),
