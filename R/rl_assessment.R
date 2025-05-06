@@ -209,15 +209,15 @@ rl_assessment_extract <- function(lst, el_name, format = c("list", "df"),
 
       # move assessment_id to first column
       df <- df[, c("assessment_id", setdiff(names(df), "assessment_id"))]
-      # unlist columns that are simple vectors
-      for (col in colnames(df)) {
-        if (is.list(df[[col]]) && all(sapply(df[[col]], Negate(is.list)))) {
-          df[[col]] <- unlist(df[[col]], use.names = FALSE)
-        }
-      }
     } else {
       df <- data.frame(assessment_id = ids)
       df[[el]] <- lst
+    }
+    # unlist columns that are simple vectors
+    for (col in colnames(df)) {
+      if (is.list(df[[col]]) && all(sapply(df[[col]], Negate(is.list)))) {
+        df[[col]] <- unlist(df[[col]], use.names = FALSE)
+      }
     }
     return(df)
   }

@@ -108,6 +108,7 @@ test_that("rl_assessment_extract works", {
   expect_is(extract2, "data.frame")
   expect_equal(nrow(extract2), 2)
   expect_is(extract2$common_names, "list")
+  expect_equal(colnames(extract2)[1], "assessment_id")
 
   extract3 <- rl_assessment_extract(aa, "taxon__common_names", format = "df",
                                     flatten = TRUE)
@@ -118,6 +119,15 @@ test_that("rl_assessment_extract works", {
   extract4 <- rl_assessment_extract(aa, "threats", format = "df",
                                     flatten = TRUE)
   expect_is(extract4, "data.frame")
+
+  extract5 <- rl_assessment_extract(aa, "taxon__kingdom_name", format = "df")
+  expect_is(extract5, "data.frame")
+  expect_named(extract5, c("assessment_id", "kingdom_name"))
+
+  extract6 <- rl_assessment_extract(aa, "taxon", format = "df", flatten = TRUE)
+  expect_is(extract6, "data.frame")
+  expect_equal(colnames(extract6)[1], "assessment_id")
+  expect_equal(extract6$kingdom_name, extract5$kingdom_name)
 
   expect_error(rl_assessment_extract(), "is missing, with no default")
   expect_error(rl_assessment_extract(lst = 166290968, el_name = "taxon"),
