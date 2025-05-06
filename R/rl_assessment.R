@@ -199,12 +199,12 @@ rl_assessment_extract <- function(lst, el_name, format = c("list", "df"),
         df <- dplyr::bind_rows(lst)
       },
       error = function(e) {
-        cli_abort(
+        cli_abort(# nocov start
           paste("Error flattening the {.val {el_name}} element to a",
                 "data.frame. Try setting {.code flatten = FALSE} or extracting",
                 "a lower level element of the assessments."),
           call = expr(rl_assessment_extract())
-        )
+        )# nocov end
       })
 
       # move assessment_id to first column
@@ -222,8 +222,9 @@ rl_assessment_extract <- function(lst, el_name, format = c("list", "df"),
     return(df)
   }
 }
-
+# nocov start
 get_assessment_elements <- function() {
   element_names <- names(rl_assessment(id = 166290968))
   return(paste0("\\item ", sort(element_names), collapse = "\n"))
 }
+# nocov end
