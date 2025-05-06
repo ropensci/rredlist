@@ -8,7 +8,8 @@ rl_assessment_extract(lst, el_name, format = c("list", "df"), flatten = FALSE)
 }
 \arguments{
 \item{lst}{(list) A list of assessments, as returned by
-\code{\link[=rl_assessment_list]{rl_assessment_list()}}.}
+\code{\link[=rl_assessment_list]{rl_assessment_list()}}. If \code{lst} contains any \code{NULL} elements, they will be
+removed.}
 
 \item{el_name}{(character) The name of the element to extract from each
 assessment. Supports multilevel extraction using "__" as the separator. For

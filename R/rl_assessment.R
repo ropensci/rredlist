@@ -63,7 +63,7 @@ rl_assessment_list <- function(ids, key = NULL, wait_time = 0.5, quiet = FALSE,
     cli_alert_warning(paste("This is a short wait time and could result in",
                             "your API token being rate limited."))
     cli_alert_warning(paste("IUCN recommends wait times >=0.5 seconds between",
-                            "calls to maintain service reliablity."))
+                            "calls to maintain service reliability."))
   } else {
     cli_alert_success(paste("Waiting for", wait_time, "second(s) between",
                             "API calls."))
@@ -77,9 +77,17 @@ rl_assessment_list <- function(ids, key = NULL, wait_time = 0.5, quiet = FALSE,
   lst <- lapply(ids,
                 function(id) {
                   Sys.sleep(wait_time)
-                  tmp <- rl_assessment(id, key = key, ...)
-                  if (!quiet) cli_progress_update(id = prog_id)
-                  return(tmp)
+                  tryCatch({
+                    rl_assessment(id, key = key, ...)
+                  }, error = function(e) {
+                    cli_alert_warning(
+                      paste(
+                        "Couldn't find an IUCN assessment with {.field ID}",
+                        "{.val {id}}."
+                      )
+                    )
+                    return(NULL)
+                  }, finally = if (!quiet) cli_progress_update(id = prog_id))
                 }
   )
   if (!quiet) cli_progress_done(id = prog_id)
@@ -105,7 +113,8 @@ rl_assessment_list <- function(ids, key = NULL, wait_time = 0.5, quiet = FALSE,
 #'   found by inspecting the return of an [rl_assessment()] call.
 #'
 #' @param lst (list) A list of assessments, as returned by
-#'   [rl_assessment_list()].
+#'   [rl_assessment_list()]. If `lst` contains any `NULL` elements, they will be
+#'   removed.
 #' @param el_name (character) The name of the element to extract from each
 #'   assessment. Supports multilevel extraction using "__" as the separator. For
 #'   example, to extract the synonyms table, you could use "taxon__synonyms".
@@ -138,6 +147,8 @@ rl_assessment_extract <- function(lst, el_name, format = c("list", "df"),
   assert_is(format, "character")
   assert_is(flatten, "logical")
   format <- match.arg(format)
+  # filter out NULL elements
+  lst <- Filter(Negate(is.null), lst)
   # get assessment ids for later
   ids <- vapply(lst, function(x) x$assessment_id, FUN.VALUE = integer(1))
   # extract levels of extraction
