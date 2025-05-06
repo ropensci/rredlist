@@ -1,0 +1,1321 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/assessment/166290968
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/6.2.0 crul/1.5.0 rOpenSci(rredlist/1.0.0.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '37794'
+      content-type: application/json
+      etag: W/"b7659a0cab8115c8d4fb9f1712113f23"
+      x-request-id: 258bf803-95df-45e4-8dae-f41053012a06
+      x-runtime: '0.181298'
+      date: Wed, 30 Apr 2025 21:33:04 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"assessment_date":"2020-12-18T00:00:00.000Z","year_published":"2021","latest":true,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":22694927,"criteria":"A2abcde+4abcde","url":"https://www.iucnredlist.org/species/22694927/166290968","citation":"BirdLife
+        International 2021. Fratercula arctica (Europe assessment). The IUCN Red List
+        of Threatened Species 2021: e.T22694927A166290968. https://dx.doi.org/10.2305/IUCN.UK.2021-3.RLTS.T22694927A166290968.en.
+        Accessed on 30 April 2025.","assessment_id":166290968,"assessment_points":false,"assessment_ranges":true,"taxon":{"sis_id":22694927,"scientific_name":"Fratercula
+        arctica","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"AVES","order_name":"CHARADRIIFORMES","family_name":"ALCIDAE","genus_name":"Fratercula","species_name":"arctica","subpopulation_name":null,"infra_name":null,"authority":"(Linnaeus,
+        1758)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Bird Red List Authority (BirdLife International)","url":"https://www.birdlife.org/","description":"Red
+        List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"}],"common_names":[{"main":false,"name":"Puffin","language":"eng"},{"main":true,"name":"Atlantic
+        Puffin","language":"eng"}],"synonyms":[]},"population_trend":{"description":{"en":"Decreasing"},"code":"1"},"red_list_category":{"version":"3.1","description":{"en":"Endangered"},"code":"EN"},"supplementary_info":{"upper_elevation_limit":null,"lower_elevation_limit":null,"lower_depth_limit":null,"upper_depth_limit":null,"population_size":"7400000-8240000,7820000","population_severely_fragmented":"No","population_continuing_decline":"Yes","generational_length":"17","congregatory":"Congregatory
+        (and dispersive)","movement_patterns":"Full Migrant","continuing_decline_in_area":"Unknown","conservation_actions_in_place":[{"name":"In-place
+        research and monitoring","actions":[{"name":"Action Recovery Plan","value":"Yes"},{"name":"Systematic
+        monitoring scheme","value":"No"}]},{"name":"In-place land/water protection","actions":[{"name":"Conservation
+        sites identified","value":"Yes, over entire range"},{"name":"Occurs in at
+        least one protected area","value":"Yes"},{"name":"Invasive species control
+        or prevention","value":"No"}]},{"name":"In-place species management","actions":[{"name":"Successfully
+        reintroduced or introduced benignly","value":"No"},{"name":"Subject to ex-situ
+        conservation","value":"No"}]},{"name":"In-place education","actions":[{"name":"Subject
+        to recent education and awareness programmes","value":"No"},{"name":"Included
+        in international legislation","value":"Yes"},{"name":"Subject to any international
+        management / trade controls","value":"No"}]}],"identification_information":null,"extreme_fluctuations":"No","no_of_subpopulations":null,"continuing_decline_in_subpopulations":"Unknown","extreme_fluctuations_in_subpopulations":"No","all_individuals_in_one_subpopulation":"No","no_of_individuals_in_largest_subpopulation":null,"estimated_area_of_occupancy":null,"continuing_decline_in_area_of_occupancy":"Unknown","extreme_fluctuations_in_area_of_occupancy":"No","estimated_extent_of_occurence":null,"continuing_decline_in_extent_of_occurence":"Unknown","extreme_fluctuations_in_extent_of_occurence":"No","continuing_decline_in_number_of_locations":"Unknown","extreme_fluctuations_in_number_of_locations":"No"},"documentation":{"range":"The
+        species can be found throughout the North Atlantic Ocean. In Europe, it occurs
+        in north-west Greenland (to Denmark), and from north Norway down to the Canary
+        Islands, Spain in the east (Nettleship \u003cem\u003eet al.\u003c/em\u003e
+        2014), and breeds primarily in Norway and Iceland, and also notably in the
+        United Kingdom and the Faroe Islands.","population":"The European breeding
+        population is estimated at 3,700,000-4,120,000 pairs, which equates to\u0026#160;7,400,000-8,240,000
+        mature individuals. The breeding population in the EU28 is estimated at 601,000-602,000
+        pairs, which equates to 1,200,000-1,210,000 mature individuals. For details
+        of national estimates, see the Supplementary Information.","habitats":"The
+        breeding range is restricted to colder parts of the Atlantic and Arctic Oceans,
+        with its southernmost colonies in Brittany (France).\u0026#160; Breeding colonies
+        are located in Iceland, Norway, Faroe Islands, the U.K., Ireland and France
+        on islands or high cliffs.\u003cbr/\u003e\u003cbr/\u003eThe species nests
+        on grassy maritime slopes, sea cliffs and rocky slopes (Nettleship \u003cem\u003eet
+        al.\u003c/em\u003e 2014). During the winter the species is highly pelagic
+        and is dispersed widely across the sea from the Azores to the western Mediterranean
+        and Canary Islands. When feeding chicks, birds generally forage within 10
+        km of their colony, but may range as far as 50 to 100 km or more (Harris 1984,
+        Rodway and Montevecchi 1996). Birds of this species are pursuit-divers that
+        catch most of their prey within 30 m of the water surface (Piatt and Nettleship
+        1985). They prey on ''forage'' species, including juvenile pelagic fishes,
+        such as herring (\u003cem\u003eClupea harengus\u003c/em\u003e), juvenile and
+        adult capelin (\u003cem\u003eMallotus villosus\u003c/em\u003e), and sand eel
+        (\u003cem\u003eAmmodytes \u003c/em\u003e\u003cem\u003espp.\u003c/em\u003e)
+        (Barrett \u003cem\u003eet al. \u003c/em\u003e1987). At times, they also prey
+        on juvenile demersal fishes, such as gadids (Harris and Hislop 1978, Martin
+        1989, Rodway and Montevecchi 1996). Sand eels usually form the majority of
+        the prey fed to chicks (Corkhill 1973, Hislop and Harris 1985, Harris and
+        Wanless 1986, Harris and Riddiford 1989, Martin 1989), and many chicks starve
+        during periods of low sand eel abundance (Martin 1989).\u003cbr/\u003e\u003cbr/\u003eAlthough
+        the generation length for both EU and Europe regional assessments were calculated
+        using the same methodology, new information arriving after the EU assessments
+        were undertaken gave rise to an update in the generation lengths. This new
+        information was then used for the Europe level assessments giving rise to
+        a difference between the generation lengths used for the EU and Europe regions.","threats":"This
+        species is highly susceptible to the impacts of climate change, such as sea
+        temperature rise and shifts in prey distribution and abundance (Durant \u003cem\u003eet
+        al.\u003c/em\u003e 2003, Sandvik \u003cem\u003eet al. \u003c/em\u003e2005).
+        This is a particularly important threat when prey species are exploited unsustainably,
+        leading to prey reductions and subsequent unsuccessful breeding. The species
+        is vulnerable to oil spills and other marine pollution. The species is also
+        vulnerable to extreme weather events and storms, with large wrecks recorded
+        following severe winter storms at sea. At the breeding colonies the species
+        is vulnerable to invasive predators, such as rats, cats, and American Mink
+        (\u003cem\u003eNeovison vison\u003c/em\u003e). The species is susceptible
+        to being caught in gillnets, although other fishing gears may also catch significant
+        numbers. Increasing numbers of offshore wind farms may result in displacement
+        from habitat, although the risk of collision is considered very low (Bradbury
+        \u003cem\u003eet al.\u003c/em\u003e 2014). The species is hunted for human
+        consumption in Iceland, and in the Faroe Islands (Thorup \u003cem\u003eet
+        al.\u003c/em\u003e 2014).","measures":"\u003cstrong\u003eConservation Actions
+        Underway\u003c/strong\u003e\u003cbr/\u003eThe species is listed under the
+        African Eurasian Waterbird Agreement. The species is included in the Action
+        plan for seabirds in Western-Nordic areas (2010). There are 76 marine Important
+        Bird Areas identified across the European region. Within the EU there are
+        40 Special Protection Areas which list this species as occurring within its
+        boundaries. \u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003eConservation Actions
+        Proposed\u003c/strong\u003e\u003cbr/\u003eFurther identification of important
+        sites for this species, particularly in offshore regions and designation as
+        marine protected areas; Identify the risks of different activities on seabirds,
+        and locations sensitive to seabirds. Continue eradication of invasive predators
+        from breeding colonies. Management of fisheries to ensure long term sustainability
+        of key stocks (e.g. sand eels). Establish observer schemes for bycatch and
+        prepare National/European Community plans of action on seabird bycatch. Continue
+        AMAP monitoring of seabird contaminants; include new contaminants and secure
+        communication between seabird and contaminants research. Increase the level
+        of understanding among the public of introducing hunting restrictions. Develop
+        codes-of-conduct for more organised activities (e.g. tourism). Ensure that
+        appropriate protection (national laws and international agreements) applies
+        to new areas and times in cases of changes in seabird migration routes and
+        times.","use_trade":null,"rationale":"\u003cstrong\u003eEuropean regional
+        assessment:\u0026#160;\u003c/strong\u003e\u003cstrong\u003eEndangered (EN)\u003c/strong\u003e\u003cstrong\u003e\u003cbr/\u003eEU28
+        regional assessment: Least Concern (LC)\u003c/strong\u003e\u003cbr/\u003e\u003cbr/\u003eIn
+        Europe, this species has an extremely large range (its extent of occurrence
+        (EOO) is much larger than 20,000 km² and its area of occupancy (AOO) is much
+        larger than 2,000 km²), and hence it does not approach the thresholds for
+        Vulnerable under the range size criteria (criteria B and D2). The population
+        size is extremely large, (much larger than 10,000 mature individuals), and
+        hence it does not approach the thresholds for Vulnerable under the population
+        size criteria (criteria C and D). The probability of extinction has not been
+        calculated for this species, therefore criterion E cannot be applied. The
+        population trend appears to be decreasing at a very rapid rate which meets
+        the thresholds for Endangered (EN) under the population size reduction criterion
+        (criterion A). The species is therefore assessed as such in Europe. There
+        is not considered to be significant potential for rescue from outside the
+        region, and therefore the final category remains unchanged.\u0026#160;\u003cbr/\u003e\u003cbr/\u003eIn
+        the EU28, this species has a very large range (its extent of occurrence (EOO)
+        is much larger than 20,000 km² and its area of occupancy (AOO) is much larger
+        than 2,000 km²), and hence it does not approach the thresholds for Vulnerable
+        under the range size criteria (criteria B and D2). The population size is
+        extremely large, (much larger than 10,000 mature individuals), and hence it
+        does not approach the thresholds for Vulnerable under the population size
+        criteria (criteria C and D). The population trend appears to be increasing,
+        and hence the species does not approach the thresholds for Vulnerable under
+        the population size reduction criterion (criterion A). The probability of
+        extinction has not been calculated for this species, therefore criterion E
+        cannot be applied. For these reasons the species is evaluated as Least Concern
+        in the EU28.","trend_justification":"In Europe, the population size is estimated
+        to have decreased by approximately 68% (best estimate) over the past 51 years
+        (three generations) and is expected to decline at a similar rate between 1970-2021.  In
+        the EU28, the population size is estimated to be increasing. These trends
+        were calculated using the IUCN Criterion A tool, and based on Náttúrufræðistofnun
+        Íslands\u0026#160;2018 and Fauchald \u003cem\u003eet al.\u003c/em\u003e\u0026#160;2015,
+        and on the national population figures provided in the Supplementary Information
+        (see this document for details of national estimates).","taxonomic_notes":null},"biogeographical_realms":[{"description":{"en":"Palearctic"},"code":"7"}],"conservation_actions":[{"note":"","code":"5_4_4","description":{"en":"Scale
+        unspecified"}},{"note":"","code":"1_1","description":{"en":"Site/area protection"}},{"note":"","code":"2_1","description":{"en":"Site/area
+        management"}},{"note":"","code":"1_2","description":{"en":"Resource \u0026
+        habitat protection"}},{"note":"","code":"4_3","description":{"en":"Awareness
+        \u0026 communications"}},{"note":"","code":"2_2","description":{"en":"Invasive/problematic
+        species control"}},{"note":"","code":"5_2","description":{"en":"Policies and
+        regulations"}}],"faos":[],"habitats":[{"majorImportance":"Yes","season":"Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Neritic - Macroalgal/Kelp"},"code":"9_7"},{"majorImportance":"Yes","season":"Non-Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Neritic - Pelagic"},"code":"9_1"},{"majorImportance":"No","season":"Non-Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Oceanic - Epipelagic
+        (0-200m)"},"code":"10_1"},{"majorImportance":"Yes","season":"Non-Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Neritic - Subtidal
+        Sandy-Mud"},"code":"9_5"},{"majorImportance":"Yes","season":"Non-Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Neritic - Subtidal
+        Loose Rock/pebble/gravel"},"code":"9_3"},{"majorImportance":"No","season":"Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Oceanic - Mesopelagic
+        (200-1000m)"},"code":"10_2"},{"majorImportance":"Yes","season":"Breeding Season","suitability":"Suitable","description":{"en":"Marine
+        Neritic - Subtidal Loose Rock/pebble/gravel"},"code":"9_3"},{"majorImportance":"Yes","season":"Non-Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Neritic - Subtidal
+        Sandy"},"code":"9_4"},{"majorImportance":"No","season":"Breeding Season","suitability":"Suitable","description":{"en":"Marine
+        Intertidal - Rocky Shoreline"},"code":"12_1"},{"majorImportance":"No","season":"Non-Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Intertidal -
+        Rocky Shoreline"},"code":"12_1"},{"majorImportance":"Yes","season":"Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Neritic - Seagrass
+        (Submerged)"},"code":"9_9"},{"majorImportance":"Yes","season":"Breeding Season","suitability":"Suitable","description":{"en":"Marine
+        Neritic - Subtidal Sandy-Mud"},"code":"9_5"},{"majorImportance":"No","season":"Non-Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Oceanic - Mesopelagic
+        (200-1000m)"},"code":"10_2"},{"majorImportance":"No","season":"Breeding Season","suitability":"Suitable","description":{"en":"Marine
+        Intertidal - Tidepools"},"code":"12_6"},{"majorImportance":"Yes","season":"Non-Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Neritic - Subtidal
+        Rock and Rocky Reefs"},"code":"9_2"},{"majorImportance":"Yes","season":"Non-Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Neritic - Macroalgal/Kelp"},"code":"9_7"},{"majorImportance":"No","season":"Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Oceanic - Epipelagic
+        (0-200m)"},"code":"10_1"},{"majorImportance":"Yes","season":"Breeding Season","suitability":"Suitable","description":{"en":"Grassland
+        - Temperate"},"code":"4_4"},{"majorImportance":"Yes","season":"Breeding Season","suitability":"Suitable","description":{"en":"Marine
+        Neritic - Subtidal Rock and Rocky Reefs"},"code":"9_2"},{"majorImportance":"Yes","season":"Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Neritic - Pelagic"},"code":"9_1"},{"majorImportance":"No","season":"Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Coastal/Supratidal
+        - Sea Cliffs and Rocky Offshore Islands"},"code":"13_1"},{"majorImportance":"Yes","season":"Breeding
+        Season","suitability":"Suitable","description":{"en":"Grassland - Subarctic"},"code":"4_2"},{"majorImportance":"Yes","season":"Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Neritic - Subtidal
+        Sandy"},"code":"9_4"},{"majorImportance":"No","season":"Non-Breeding Season","suitability":"Suitable","description":{"en":"Marine
+        Intertidal - Tidepools"},"code":"12_6"},{"majorImportance":"Yes","season":"Non-Breeding
+        Season","suitability":"Suitable","description":{"en":"Marine Neritic - Seagrass
+        (Submerged)"},"code":"9_9"}],"locations":[{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Non-Breeding
+        Season"],"description":{"en":"Belgium"},"code":"BE"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Non-Breeding
+        Season"],"description":{"en":"Spain"},"code":"ES"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Iceland"},"code":"IS"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Non-Breeding
+        Season"],"description":{"en":"Netherlands"},"code":"NL"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Breeding
+        Season"],"description":{"en":"United Kingdom"},"code":"GB"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Non-Breeding
+        Season"],"description":{"en":"Germany"},"code":"DE"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Resident","Passage"],"description":{"en":"France"},"code":"FR"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Vagrant","presence":"Extant","seasonality":null,"description":{"en":"Malta"},"code":"MT"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Greenland"},"code":"GL"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Non-Breeding
+        Season"],"description":{"en":"Italy"},"code":"IT"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Origin
+        Uncertain","presence":"Extant","seasonality":["Seasonal Occurrence Uncertain"],"description":{"en":"Estonia"},"code":"EE"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Vagrant","presence":"Extant","seasonality":null,"description":{"en":"Croatia"},"code":"HR"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Breeding
+        Season"],"description":{"en":"Russian Federation"},"code":"RU"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Vagrant","presence":"Extant","seasonality":null,"description":{"en":"Austria"},"code":"AT"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Non-Breeding
+        Season","Passage"],"description":{"en":"Denmark"},"code":"DK"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Vagrant","presence":"Extant","seasonality":["Seasonal
+        Occurrence Uncertain"],"description":{"en":"Serbia"},"code":"RS"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Vagrant","presence":"Extant","seasonality":null,"description":{"en":"Finland"},"code":"FI"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Non-Breeding
+        Season","Passage"],"description":{"en":"Gibraltar"},"code":"GI"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Non-Breeding
+        Season"],"description":{"en":"Sweden"},"code":"SE"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Origin
+        Uncertain","presence":"Extant","seasonality":["Seasonal Occurrence Uncertain"],"description":{"en":"Lithuania"},"code":"LT"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Ireland"},"code":"IE"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Breeding
+        Season"],"description":{"en":"European Russia"},"code":"RU-EU"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Faroe
+        Islands"},"code":"FO"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Vagrant","presence":"Extant","seasonality":["Seasonal
+        Occurrence Uncertain"],"description":{"en":"Montenegro"},"code":"ME"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Vagrant","presence":"Extant","seasonality":null,"description":{"en":"Hungary"},"code":"HU"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Breeding
+        Season"],"description":{"en":"Svalbard and Jan Mayen"},"code":"SJ"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Origin
+        Uncertain","presence":"Extant","seasonality":["Seasonal Occurrence Uncertain"],"description":{"en":"Latvia"},"code":"LV"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Breeding
+        Season"],"description":{"en":"Norway"},"code":"NO"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Native","presence":"Extant","seasonality":["Non-Breeding
+        Season"],"description":{"en":"Portugal"},"code":"PT"},{"is_endemic":false,"formerlyBred":"Unknown","origin":"Vagrant","presence":"Extant","seasonality":null,"description":{"en":"Poland"},"code":"PL"}],"researches":[{"note":"","code":"1_5","description":{"en":"Threats"}},{"note":"","code":"3_1","description":{"en":"Population
+        trends"}}],"use_and_trade":[{"international":null,"national":true,"other":null,"subsistence":true,"description":{"en":"Food
+        - human"},"code":"1"},{"international":true,"national":null,"other":null,"subsistence":null,"description":{"en":"Pets/display
+        animals, horticulture"},"code":"13"}],"threats":[{"scope":"Majority (50-90%)","timing":"Ongoing","internationalTrade":null,"score":"Medium
+        Impact: 6","severity":"Slow, Significant Declines","ancestry":null,"virus":null,"ias":"Neogale
+        vison","text":null,"description":{"en":"Named species"},"code":"8_1_2"},{"scope":"Unknown","timing":"Ongoing","internationalTrade":null,"score":"Unknown","severity":"Unknown","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Habitat
+        shifting \u0026 alteration"},"code":"11_1"},{"scope":"Minority (\u003c50%)","timing":"Ongoing","internationalTrade":null,"score":"Low
+        Impact: 5","severity":"Slow, Significant Declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Intentional
+        use (species is the target)"},"code":"5_1_1"},{"scope":"Minority (\u003c50%)","timing":"Ongoing","internationalTrade":null,"score":"Low
+        Impact: 5","severity":"Causing/Could cause fluctuations","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Renewable
+        energy"},"code":"3_3"},{"scope":"Unknown","timing":"Ongoing","internationalTrade":null,"score":"Unknown","severity":"Rapid
+        Declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Storms
+        \u0026 flooding"},"code":"11_4"},{"scope":"Unknown","timing":"Ongoing","internationalTrade":null,"score":"Unknown","severity":"Unknown","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Temperature
+        extremes"},"code":"11_3"},{"scope":"Unknown","timing":"Past, Likely to Return","internationalTrade":null,"score":"Past
+        Impact","severity":"Rapid Declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Oil
+        spills"},"code":"9_2_1"},{"scope":"Unknown","timing":"Ongoing","internationalTrade":null,"score":"Unknown","severity":"Rapid
+        Declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Unintentional
+        effects: (large scale) [harvest]"},"code":"5_4_4"},{"scope":"Unknown","timing":"Ongoing","internationalTrade":null,"score":"Unknown","severity":"Unknown","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Other
+        impacts"},"code":"11_5"},{"scope":"Majority (50-90%)","timing":"Ongoing","internationalTrade":null,"score":"Medium
+        Impact: 6","severity":"Slow, Significant Declines","ancestry":null,"virus":null,"ias":"Unspecified
+        Rattus","text":null,"description":{"en":"Named species"},"code":"8_1_2"},{"scope":"Unknown","timing":"Ongoing","internationalTrade":null,"score":"Unknown","severity":"Unknown","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Type
+        Unknown/Unrecorded"},"code":"9_2_3"}],"credits":[{"credit_type_name":"assessor","full":"BirdLife
+        International","value":[" BirdLife International (BirdLife International)"]},{"credit_type_name":"evaluator","full":"Burfield,
+        I. \u0026 Martin, R.","value":["Ian Burfield (BirdLife International)","Rob
+        Martin (BirdLife)"]},{"credit_type_name":"contributor","full":"Ashpole, J,
+        Burfield, I., Ieronymidou, C., Pople, R., Tarzia, M, Wheatley, H. \u0026 Wright,
+        L","value":["Ian Burfield (BirdLife International)","Joscelyne Ashpole (BirdLife)","Rob
+        Pople (BirdLife International)","Christina Ieronymidou (BirdLife International)","Hannah
+        Wheatley (BirdLife International)","Laura Wright (BirdLife)","M Tarzia (BirdLife)"]},{"credit_type_name":"facilitators","full":"Fernando,
+        E., Grice, H., Piggott, A., Rutherford, C.A. \u0026 Staneva, A.","value":["Anna
+        Staneva (BirdLIfe International)","Hannah Grice (RBG Kew)","Eresha Fernando
+        (BirdLife International)","Claire Rutherford (BirdLife International)","Alexa
+        Piggott (BirdLife International)"]}],"errata":[],"references":[{"citation":"del
+        Hoyo, J., Elliott, A., and Sargatal, J. 1996. \u003ci\u003eHandbook of the
+        Birds of the World, vol. 3: Hoatzin to Auks\u003c/i\u003e. Lynx Edicions,
+        Barcelona, Spain.","year":"1996","title":"Handbook of the Birds of the World,
+        vol. 3: Hoatzin to Auks","author":"del Hoyo, J., Elliott, A., and Sargatal,
+        J.","citation_short":""},{"citation":"BirdLife International. 2000. \u003ci\u003eThe
+        Development of Boundary Selection Criteria for the Extension of Breeding Seabird
+        Special Protection Areas into the Marine Environment. OSPAR Convention for
+        the Protection of the Marine Environment of the North-East Atlantic.\u003c/i\u003e
+        Vlissingen (Flushing).","year":"2000","title":"The Development of Boundary
+        Selection Criteria for the Extension of Breeding Seabird Special Protection
+        Areas into the Marine Environment. OSPAR Convention for the Protection of
+        the Marine Environment of the North-East Atlantic.","author":"BirdLife International","citation_short":null},{"citation":"Harris,
+        M.P. and Riddiford, N.J. 1989. The food of some young seabirds on Fair Isle
+        in 1986-88. \u003ci\u003eScottish Birds\u003c/i\u003e 15: 119-125.","year":"1989","title":"The
+        food of some young seabirds on Fair Isle in 1986-88","author":"Harris, M.P.
+        and Riddiford, N.J.","citation_short":null},{"citation":"Harris, M.P. and
+        Hislop, J.R.G. 1978. The food of young puffins. \u003ci\u003eJournal of Zoology\u003c/i\u003e
+        185: 213-236.","year":"1978","title":"The food of young puffins","author":"Harris,
+        M.P. and Hislop, J.R.G.","citation_short":null},{"citation":"Harris, M.P.
+        and Wanless, S. 1986. The food of young razorbills on the Isle of May and
+        a comparison with that of young guillemots and puffins. \u003ci\u003eOrnis
+        Scandinavica\u003c/i\u003e 17: 41-46.","year":"1986","title":"The food of
+        young razorbills on the Isle of May and a comparison with that of young guillemots
+        and puffins","author":"Harris, M.P. and Wanless, S.","citation_short":null},{"citation":"Pearson,
+        T.H. 1968. The feeding ecology of sea-bird species breeding on the Farne Islands,
+        Northumberland. \u003ci\u003eJournal of Animal Ecology\u003c/i\u003e 37: 521-552.","year":"1968","title":"The
+        feeding ecology of sea-bird species breeding on the Farne Islands, Northumberland","author":"Pearson,
+        T.H.","citation_short":null},{"citation":"Harris, M.P. 1984. A. \u0026 C.
+        Black Publishers Ltd, London, UK.","year":"1984","title":"","author":"Harris,
+        M.P.","citation_short":null},{"citation":"Stone, C.J., Harrison, N.M., Webb,
+        A. \u0026 Best, B.J. Seabird distribution around Skomer and Skokholm Islands,
+        June 1990. 1992. Seabird distribution around Skomer and Skokholm Islands,
+        June 1990.","year":"1992","title":"Seabird distribution around Skomer and
+        Skokholm Islands, June 1990","author":"Stone, C.J., Harrison, N.M., Webb,
+        A. \u0026 Best, B.J. Seabird distribution around Skomer and Skokholm Islands,
+        June 1990.","citation_short":null},{"citation":"Corkhill, P. 1973. Food and
+        feeding ecology of puffins. \u003ci\u003eBird Study\u003c/i\u003e 20(3): 207-220.","year":"1973","title":"Food
+        and feeding ecology of puffins","author":"Corkhill, P.","citation_short":null},{"citation":"Piatt,
+        J.F., Nettleship, D.N. 1985. Diving depths of four alcids. \u003ci\u003eThe
+        Auk \u003c/i\u003e 102: 293-297.","year":"1985","title":"Diving depths of
+        four alcids","author":"Piatt, J.F., Nettleship, D.N.","citation_short":null},{"citation":"Wanless,
+        S., Harris, M.P. and Morris, J.A. 1990. A comparison of feeding areas used
+        by individual common murres (Uria aalge) razorbills (Alca torda) and an Atlantic
+        puffin (Fratercula arctica) during the breeding season. \u003ci\u003eColonial
+        Waterbirds\u003c/i\u003e 13: 16-24.","year":"1990","title":"A comparison of
+        feeding areas used by individual common murres (Uria aalge) razorbills (Alca
+        torda) and an Atlantic puffin (Fratercula arctica) during the breeding season","author":"Wanless,
+        S., Harris, M.P. and Morris, J.A.","citation_short":null},{"citation":"Hislop,
+        J.R.G. and Harris, M.P. 1985. Recent changes in the food of young puffins
+        (Fratercula arctica) on the Isle of May in relation to fish stocks. \u003ci\u003eIbis\u003c/i\u003e
+        127: 234-239.","year":"1985","title":"Recent changes in the food of young
+        puffins (Fratercula arctica) on the Isle of May in relation to fish stocks","author":"Hislop,
+        J.R.G. and Harris, M.P.","citation_short":null},{"citation":"Creelman, E.
+        and Storey, A.E. 1991. Sex-differences in reproductive-behavior of Atlantic
+        puffins. \u003ci\u003eCondor\u003c/i\u003e 93(2): 390-398.","year":"1991","title":"Sex-differences
+        in reproductive-behavior of Atlantic puffins","author":"Creelman, E. and Storey,
+        A.E.","citation_short":null},{"citation":"Burger, A.E. and Simpson, M. 1986.
+        Diving depths of Atlantic puffins and common murres. \u003ci\u003eAuk\u003c/i\u003e
+        103: 828-830.","year":"1986","title":"Diving depths of Atlantic puffins and
+        common murres","author":"Burger, A.E. and Simpson, M.","citation_short":null},{"citation":"Rodway,
+        M.S., Montevecchi, W. A. 1996. Sampling methods for assessing the diets of
+        Atlantic puffin chicks . \u003ci\u003eMarine Ecology Progress Series\u003c/i\u003e
+        144(1-3): 41-55.","year":"1996","title":"Sampling methods for assessing the
+        diets of Atlantic puffin chicks ","author":"Rodway, M.S., Montevecchi, W.
+        A.","citation_short":null},{"citation":"Martin, A.R. 1989. The diet of Atlantic
+        puffin Fratercula arctica and northern gannet Sula bassana chicks at a Shetland
+        colony during a period of changing prey availability. \u003ci\u003eBird Study\u003c/i\u003e
+        36(3): 170-180.","year":"1989","title":"The diet of Atlantic puffin Fratercula
+        arctica and northern gannet Sula bassana chicks at a Shetland colony during
+        a period of changing prey availability","author":"Martin, A.R.","citation_short":null},{"citation":"Webb,
+        A., Tasker, M.L. and Greenstreet, S.P.R. 1985. The distribution of guillemots
+        (Uria aalge), razorbills (Alca torda) and puffins (Fratercula arctica) at
+        sea around Flamborough Head, June 1984.","year":"1985","title":"The distribution
+        of guillemots (Uria aalge), razorbills (Alca torda) and puffins (Fratercula
+        arctica) at sea around Flamborough Head, June 1984.","author":"Webb, A., Tasker,
+        M.L. and Greenstreet, S.P.R.","citation_short":null},{"citation":"Barrett,
+        R.T., Anker-Nilsson, T., Rikardsen, F., Valde, K., Røv, N. and Vader, W. 1987.
+        The food, growth and fledging success of Norwegian puffin chicks Fratercula
+        arctica in 1980-1983. \u003ci\u003eOrnis Scandinavica\u003c/i\u003e 18: 73-83.","year":"1987","title":"The
+        food, growth and fledging success of Norwegian puffin chicks Fratercula arctica
+        in 1980-1983","author":"Barrett, R.T., Anker-Nilsson, T., Rikardsen, F., Valde,
+        K., Røv, N. and Vader, W.","citation_short":""},{"citation":"Stone, C.J.,
+        Webb, A., Barton, T.R. \u0026 Gordon, J.R.W. 1993. Seabird distribution around
+        Skomer and Skokholm Islands, June 1992.","year":"1993","title":"Seabird distribution
+        around Skomer and Skokholm Islands, June 1992.","author":"Stone, C.J., Webb,
+        A., Barton, T.R. \u0026 Gordon, J.R.W.","citation_short":null},{"citation":"Sandvik,
+        H., Erikstad, K.E., Barrett, R.T. and Yoccoz, N.G. 2005. The effect of climate
+        on adult survival in five species of North Atlantic seabirds. \u003ci\u003eJournal
+        of Animal Ecology\u003c/i\u003e 74(5): 817-831.","year":"2005","title":"The
+        effect of climate on adult survival in five species of North Atlantic seabirds","author":"Sandvik,
+        H., Erikstad, K.E., Barrett, R.T. and Yoccoz, N.G.","citation_short":""},{"citation":"Bradbury,
+        G., Trinder, M., Furness, B., Banks, A.N., Caldow, R.W.G. and Hume, D. 2014.
+        Mapping Seabird Sensitivity to Offshore Wind Farms. \u003ci\u003ePLoS ONE
+        \u003c/i\u003e 9(9): e106366.","year":"2014","title":"Mapping Seabird Sensitivity
+        to Offshore Wind Farms","author":"Bradbury, G., Trinder, M., Furness, B.,
+        Banks, A.N., Caldow, R.W.G. and Hume, D.","citation_short":null},{"citation":"Durant,
+        J.; Anker-Nilssen, T.; Stenseth, N. C. 2003. Trophic interactions under climate
+        fluctuations: the Atlantic puffin as an example. \u003ci\u003eProceedings
+        of the Royal Society of London Series B\u003c/i\u003e 270: 1461-1466.","year":"2003","title":"Trophic
+        interactions under climate fluctuations: the Atlantic puffin as an example","author":"Durant,
+        J.; Anker-Nilssen, T.; Stenseth, N. C.","citation_short":null},{"citation":"Thorup,
+        S.H., Jensen, J-K., Petersen, K.T. and Kasper, D.B. 2014. \u003ci\u003eFærøsk
+        Trækfugleatlas. The Faroese Bird Migration Atlas\u003c/i\u003e. Faroe University
+        Press, Tórshavn.","year":"2014","title":"Færøsk Trækfugleatlas. The Faroese
+        Bird Migration Atlas","author":"Thorup, S.H., Jensen, J-K., Petersen, K.T.
+        and Kasper, D.B.","citation_short":null},{"citation":"Nettleship, D.N., Kirwan,
+        G.M., Christie, D.A. and de Juana, E. 2014. Atlantic Puffin (\u003ci\u003eFratercula
+        arctica\u003c/i\u003e). In: del Hoyo, J., Elliott, A., Sargatal, J., Christie,
+        D.A. and de Juana, E. (eds), \u003ci\u003eHandbook of the Birds of the World
+        Alive\u003c/i\u003e, Lynx Edicions, Barcelona.","year":"2014","title":"Atlantic
+        Puffin (\u003ci\u003eFratercula arctica\u003c/i\u003e)","author":"Nettleship,
+        D.N., Kirwan, G.M., Christie, D.A. and de Juana, E.","citation_short":null},{"citation":"Fauchald,
+        P.; Anker-Nilssen, T.; Barrett, R. T.; Bustnes, J. O.; Bårdsen, B. J.; Christensen-Dalsgaard,
+        S.; Descamps, S.; Engen, S.; Erikstad, K. E.; Hanssen, S. A.; Lorentsen, S.-H.;
+        Moe, B.; Reiertsen, T. K.; Strøm,, H.; Systad, G. H. 2015. The status and
+        trends of seabirds breeding in Norway and Svalbard. Norwegian Institute for
+        Nature Research, NINA Report 1151.","year":"2015","title":"The status and
+        trends of seabirds breeding in Norway and Svalbard","author":"Fauchald, P.;
+        Anker-Nilssen, T.; Barrett, R. T.; Bustnes, J. O.; Bårdsen, B. J.; Christensen-Dalsgaard,
+        S.; Descamps, S.; Engen, S.; Erikstad, K. E.; Hanssen, S. A.; Lorentsen, S.-H.;
+        Moe, B.; Reiertsen, T. K.; Strøm,, H.; Systad, G. H.","citation_short":null},{"citation":"Bird,
+        J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G.,
+        Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. 2020. Generation
+        lengths of the world’s birds and their implications for extinction risk. \u003ci\u003eConservation
+        Biology\u003c/i\u003e 34(5): 1252-1261.","year":"2020","title":"Generation
+        lengths of the world’s birds and their implications for extinction risk","author":"Bird,
+        J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G.,
+        Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. ","citation_short":""},{"citation":"IUCN.
+        2021. The IUCN Red List of Threatened Species. Version 2021-3. Available at:
+        \u003ca href=\"www.iucnredlist.org\"\u003ewww.iucnredlist.org\u003c/a\u003e.
+        (Accessed: 09 December 2021).","year":"2021","title":"The IUCN Red List of
+        Threatened Species. Version 2021-3","author":"IUCN","citation_short":"IUCN
+        2021-3"},{"citation":"NÁTTÚRUFRÆÐISTOFNUN ÍSLANDS. 2018. \u003ci\u003eVálisti
+        fugla\u003c/i\u003e.","year":"2018","title":"Válisti fugla","author":"Náttúrufræðistofnun
+        Íslands","citation_short":""}],"growth_forms":[],"lmes":[],"scopes":[{"description":{"en":"Europe"},"code":"2"}],"stresses":[{"description":{"en":"Ecosystem
+        degradation"},"code":"1_2"},{"description":{"en":"Ecosystem degradation"},"code":"1_2"},{"description":{"en":"Ecosystem
+        degradation"},"code":"1_2"},{"description":{"en":"Indirect ecosystem effects"},"code":"1_3"},{"description":{"en":"Indirect
+        ecosystem effects"},"code":"1_3"},{"description":{"en":"Indirect ecosystem
+        effects"},"code":"1_3"},{"description":{"en":"Indirect ecosystem effects"},"code":"1_3"},{"description":{"en":"Indirect
+        ecosystem effects"},"code":"1_3"},{"description":{"en":"Species mortality"},"code":"2_1"},{"description":{"en":"Species
+        mortality"},"code":"2_1"},{"description":{"en":"Species mortality"},"code":"2_1"},{"description":{"en":"Species
+        mortality"},"code":"2_1"},{"description":{"en":"Species mortality"},"code":"2_1"},{"description":{"en":"Species
+        mortality"},"code":"2_1"},{"description":{"en":"Species mortality"},"code":"2_1"},{"description":{"en":"Species
+        mortality"},"code":"2_1"},{"description":{"en":"Species disturbance"},"code":"2_2"},{"description":{"en":"Species
+        disturbance"},"code":"2_2"},{"description":{"en":"Reduced reproductive success"},"code":"2_3_7"},{"description":{"en":"Reduced
+        reproductive success"},"code":"2_3_7"}],"systems":[{"description":{"en":"Terrestrial"},"code":"0"},{"description":{"en":"Marine"},"code":"2"}]}'
+  recorded_at: 2025-04-30 21:33:06 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/assessment/136250858
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/6.2.0 crul/1.5.0 rOpenSci(rredlist/1.0.0.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: max-age=0, private, must-revalidate
+      content-length: '80419'
+      content-type: application/json
+      etag: W/"45b87964d9d06400a639e349aa4fe263"
+      x-request-id: 453c16f0-3652-4c83-98a2-4fb22b5e670b
+      x-runtime: '0.209969'
+      date: Wed, 30 Apr 2025 21:33:06 GMT
+    body:
+      encoding: ''
+      file: no
+      string: '{"assessment_date":"2016-04-01T00:00:00.000Z","year_published":"2018","latest":true,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":9404,"criteria":"A4bcde","url":"https://www.iucnredlist.org/species/9404/136250858","citation":"Maisels,
+        F., Bergl, R.A. \u0026 Williamson, E.A. 2018. Gorilla gorilla (amended version
+        of 2016 assessment). The IUCN Red List of Threatened Species 2018: e.T9404A136250858.
+        https://dx.doi.org/10.2305/IUCN.UK.2018-2.RLTS.T9404A136250858.en. Accessed
+        on 30 April 2025.","assessment_id":136250858,"assessment_points":false,"assessment_ranges":true,"taxon":{"sis_id":9404,"scientific_name":"Gorilla
+        gorilla","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[{"sis_id":39998,"scientific_name":"Gorilla
+        gorilla ssp. diehli","kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"PRIMATES","family_name":"HOMINIDAE","genus_name":"Gorilla","species_name":"gorilla","subpopulation_name":null,"infra_name":"diehli","authority":"Matschie,
+        1904","ssc_groups":[{"name":"IUCN SSC Primate Specialist Group","url":"http://www.primate-sg.org/","description":"Chair:
+        Russell Mittermeier (email: rmittermeier@globalwildlife.org)\nRed List Authority
+        Focal Points: \nProsimians, monkeys and smaller apes - Sanjay Molur (email:
+        sanjay@zooreach.org) and Christoph Schwitzer (email: cschwitzer@bristolzoo.org.uk)\nVice-Chair
+        for great apes - Dirck S. Byler (email: dbyler@globalwildlife.org)\nVice-Chair
+        for small apes - Susan M. Cheyne (email: section.small.apes@gmail.com)\nJournals
+        and Newsletters: \nPrimate Conservation: http://www.primate-sg.org/primate_conservation/\nNeotropical
+        Primates: http://www.primate-sg.org/neotropical_primates/\nAsian Primates:
+        http://www.primate-sg.org/asian_primates_newsletter/ and http://www.primate-sg.org/asian_primates_journal/\nLemur
+        News: http://www.primate-sg.org/lemur_news/\nAfrican Primates: http://www.primate-sg.org/african_primates/\n"}],"common_names":[{"main":true,"name":"Cross
+        River Gorilla","language":"eng"}],"synonyms":[{"name":"Gorilla gorilla Nigerian
+        subpopulation","status":"ACCEPTED","genus_name":"Gorilla","species_name":"gorilla","species_author":null,"infrarank_author":"Matschie,
+        1904","subpopulation_name":"Nigerian subpopulation","infra_type":null,"infra_name":null}]},{"sis_id":9406,"scientific_name":"Gorilla
+        gorilla ssp. gorilla","kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"PRIMATES","family_name":"HOMINIDAE","genus_name":"Gorilla","species_name":"gorilla","subpopulation_name":null,"infra_name":"gorilla","authority":"(Savage,
+        1847)","ssc_groups":[{"name":"IUCN SSC Primate Specialist Group","url":"http://www.primate-sg.org/","description":"Chair:
+        Russell Mittermeier (email: rmittermeier@globalwildlife.org)\nRed List Authority
+        Focal Points: \nProsimians, monkeys and smaller apes - Sanjay Molur (email:
+        sanjay@zooreach.org) and Christoph Schwitzer (email: cschwitzer@bristolzoo.org.uk)\nVice-Chair
+        for great apes - Dirck S. Byler (email: dbyler@globalwildlife.org)\nVice-Chair
+        for small apes - Susan M. Cheyne (email: section.small.apes@gmail.com)\nJournals
+        and Newsletters: \nPrimate Conservation: http://www.primate-sg.org/primate_conservation/\nNeotropical
+        Primates: http://www.primate-sg.org/neotropical_primates/\nAsian Primates:
+        http://www.primate-sg.org/asian_primates_newsletter/ and http://www.primate-sg.org/asian_primates_journal/\nLemur
+        News: http://www.primate-sg.org/lemur_news/\nAfrican Primates: http://www.primate-sg.org/african_primates/\n"}],"common_names":[{"main":true,"name":"Western
+        Lowland Gorilla","language":"eng"}],"synonyms":[]}],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"PRIMATES","family_name":"HOMINIDAE","genus_name":"Gorilla","species_name":"gorilla","subpopulation_name":null,"infra_name":null,"authority":"(Savage,
+        1847)","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Primate Specialist Group","url":"http://www.primate-sg.org/","description":"Chair:
+        Russell Mittermeier (email: rmittermeier@globalwildlife.org)\nRed List Authority
+        Focal Points: \nProsimians, monkeys and smaller apes - Sanjay Molur (email:
+        sanjay@zooreach.org) and Christoph Schwitzer (email: cschwitzer@bristolzoo.org.uk)\nVice-Chair
+        for great apes - Dirck S. Byler (email: dbyler@globalwildlife.org)\nVice-Chair
+        for small apes - Susan M. Cheyne (email: section.small.apes@gmail.com)\nJournals
+        and Newsletters: \nPrimate Conservation: http://www.primate-sg.org/primate_conservation/\nNeotropical
+        Primates: http://www.primate-sg.org/neotropical_primates/\nAsian Primates:
+        http://www.primate-sg.org/asian_primates_newsletter/ and http://www.primate-sg.org/asian_primates_journal/\nLemur
+        News: http://www.primate-sg.org/lemur_news/\nAfrican Primates: http://www.primate-sg.org/african_primates/\n"}],"common_names":[{"main":false,"name":"Lowland
+        Gorilla","language":"eng"},{"main":false,"name":"Gorila Occidental","language":"spa"},{"main":false,"name":"Gorille
+        de l''Ouest","language":"fre"},{"main":false,"name":"Westlicher Gorilla","language":"ger"},{"main":true,"name":"Western
+        Gorilla","language":"eng"}],"synonyms":[{"name":"Troglodytes gorilla Savage,
+        1847","status":"ACCEPTED","genus_name":"Troglodytes","species_name":"gorilla","species_author":"Savage,
+        1847","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]},"population_trend":{"description":{"en":"Decreasing"},"code":"1"},"red_list_category":{"version":"3.1","description":{"en":"Critically
+        Endangered"},"code":"CR"},"supplementary_info":{"upper_elevation_limit":1900,"lower_elevation_limit":0,"lower_depth_limit":null,"upper_depth_limit":null,"population_size":null,"population_severely_fragmented":"No","population_continuing_decline":null,"generational_length":"22","congregatory":null,"movement_patterns":"Not
+        a Migrant","continuing_decline_in_area":null,"conservation_actions_in_place":[{"name":"In-place
+        research and monitoring","actions":[{"name":"Action Recovery Plan","value":"Yes"},{"name":"Systematic
+        monitoring scheme","value":"No"}]},{"name":"In-place land/water protection","actions":[{"name":"Conservation
+        sites identified","value":"Yes, over entire range"},{"name":"Area based regional
+        management plan","value":"Yes"},{"name":"Occurs in at least one protected
+        area","value":"Yes"}]},{"name":"In-place species management","actions":[{"name":"Harvest
+        management plan","value":"No"}]},{"name":"In-place education","actions":[{"name":"Subject
+        to recent education and awareness programmes","value":"Yes"},{"name":"Included
+        in international legislation","value":"Yes"},{"name":"Subject to any international
+        management / trade controls","value":"Yes"}]}],"identification_information":null,"extreme_fluctuations":null,"no_of_subpopulations":null,"continuing_decline_in_subpopulations":null,"extreme_fluctuations_in_subpopulations":null,"all_individuals_in_one_subpopulation":null,"no_of_individuals_in_largest_subpopulation":null,"estimated_area_of_occupancy":null,"continuing_decline_in_area_of_occupancy":null,"extreme_fluctuations_in_area_of_occupancy":null,"estimated_extent_of_occurence":null,"continuing_decline_in_extent_of_occurence":null,"extreme_fluctuations_in_extent_of_occurence":null,"continuing_decline_in_number_of_locations":null,"extreme_fluctuations_in_number_of_locations":null},"documentation":{"range":"\u003cem\u003eGorilla
+        gorilla\u003c/em\u003e is found in Angola (Cabinda enclave), Cameroon, Central
+        African Republic (CAR), mainland Equatorial Guinea (Rio Muni), Gabon, Nigeria
+        and Republic of Congo. Until recently, the core population had an almost continuous
+        distribution from southern CAR to the Congo River and west to the coast. Rivers
+        are the primary geographic barrier for this taxon, followed by habitat fragmentation:
+        the two subspecies are separated by a major river (the Sanaga), and Western
+        Lowland Gorillas are divided into subpopulations by other major rivers in
+        the region (Anthony \u003cem\u003eet al\u003c/em\u003e. 2007, Fünfstück \u003cem\u003eet
+        al\u003c/em\u003e. 2014, Fünfstück and Vigilant 2015).\u003cbr/\u003e\u003cbr/\u003eThe
+        northwestern limit of the western lowland subspecies distribution is the Sanaga
+        River in Cameroon; the northern limit is the forest-savanna boundary to a
+        maximum of roughly 6°N; the eastern limit is the Ubangi River; the Congo River
+        south of its confluence with the Ubangi then becomes the southeastern and
+        southern limits all the way to the coast. Small outlying populations of the
+        Cross River subspecies remain on the Nigeria-Cameroon border at the headwaters
+        of the Cross River and in the proposed Ebo National Park in Cameroon. Most
+        Western Gorillas are found below 500 m asl, but those living on mountains
+        occasionally reach elevations of 1,900 m asl.","population":"Estimates of
+        Gorilla population size are usually made using a standard index of abundance:
+        night nest abundance and distribution, sometimes combined with predictive
+        modelling.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e\u003cem\u003eG.
+        g. diehli\u003cbr/\u003e\u003c/em\u003e\u003c/strong\u003eIntensive surveys
+        carried out in 1990–2005 suggested that approximately 250–300 Cross River
+        Gorillas persist in a forested area of roughly 12,000 km² (Bergl 2006, Oates
+        \u003cem\u003eet al\u003c/em\u003e. 2007). Monitoring of the Gorillas at multiple
+        sites and genetic analysis at select locations (Arandjelovic \u003cem\u003eet
+        al\u003c/em\u003e. 2015) has confirmed the small size of the subspecies population,
+        while also documenting a larger geographic range than previously recorded
+        (Bergl \u003cem\u003eet al\u003c/em\u003e. 2012, Dunn \u003cem\u003eet al\u003c/em\u003e.
+        2014). Cross River Gorillas occur in at least geographically distinct 11 localities
+        (\u003cem\u003eibid\u003c/em\u003e.) Genetic evidence suggests that these
+        subpopulations have had reproductive contact in the recent past (Bergl and
+        Vigilant 2007); however, field surveys paired with remote sensing analysis
+        reveal that forest corridors connecting subpopulations may no longer be functional
+        as routes for dispersal (Imong \u003cem\u003eet al\u003c/em\u003e. 2014).\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e\u003cem\u003eG.
+        g. gorilla\u003c/em\u003e\u003c/strong\u003e\u003cbr/\u003eWestern Lowland
+        Gorillas are found in almost all protected areas and many of the logging concessions
+        in their range; they can persist at high densities in well-managed logging
+        concessions (Morgan \u003cem\u003eet al\u003c/em\u003e. 2013).\u0026#160;
+        Strindberg \u003cem\u003eet al\u003c/em\u003e. (2018) produced the first range-wide
+        estimate for the subspecies, giving a total population in 2013 of 361,919
+        (302,973-460,093). Their numbers declined by 19.4% between 2005 and 2013,
+        corresponding to an annual loss of approximately 2.7% (\u003cem\u003eibid\u003c/em\u003e.).
+        By the end of 2018, numbers will decline by a further 13.5% to roughly 316,000
+        individuals.","habitats":"Western Gorillas are diurnal and semi-terrestrial.
+        They build nests to sleep in every night, usually on the ground but sometimes
+        in trees. They are social and live in stable, cohesive groups composed of
+        one “silverback” adult male, several adult females and their offspring. Gorillas
+        are not territorial and group ranges overlap extensively.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e\u003cem\u003eG.
+        g. diehli\u003c/em\u003e\u003c/strong\u003e\u003cbr/\u003eCross River Gorillas
+        inhabit forests largely restricted to rough terrain in remote areas, although
+        they occasionally use lowland areas between hills (Oates \u003cem\u003eet
+        al\u003c/em\u003e. 2003, Bergl and Vigilant 2007). This distribution appears
+        to be directly related to greater levels of human activity (especially poaching)
+        in lowland areas, rather than selection of areas that provide preferred foods
+        (Imong \u003cem\u003eet al\u003c/em\u003e. 2013, Sawyer and Brashares 2013).
+        Group sizes range from 2 to 20 individuals and home ranges may be as large
+        as 30 km² (McFarland 2007, Sunderland-Groves \u003cem\u003eet al\u003c/em\u003e.
+        2009). The highly-seasonal nature of the Cross River Gorillas’ habitat (more
+        markedly seasonal than that of other Gorilla populations) likely contributes
+        to grouping and ranging patterns. Their diet reflects this seasonality, with
+        terrestrial herbs and bark eaten as staples throughout the year, and fruit
+        consumed during periods of seasonal abundance (McFarland 2007, De Vere \u003cem\u003eet
+        al\u003c/em\u003e. 2011, Etiendem and Tagg 2013, Sawyer and Brashares 2013).\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e\u003cem\u003eG.
+        g. gorilla\u003c/em\u003e\u003c/strong\u003e\u003cbr/\u003eWestern Lowland
+        Gorillas occur in both swamp and \u003cem\u003eterra firma\u003c/em\u003e
+        lowland forests throughout Western Equatorial Africa. They are especially
+        common where ground vegetation is dominated by monocotyledonous plants such
+        as \u003cem\u003eHaumania liebrechtsiana\u003c/em\u003e and \u003cem\u003eMegaphrynium
+        macrostachyum\u003c/em\u003e (Rainey \u003cem\u003eet al\u003c/em\u003e. 2009).
+        Staple and fallback foods are pith of \u003cem\u003eAframomum\u003c/em\u003e
+        spp. and leaves and shoots of the Marantaceae family, whereas fruit consumption
+        varies greatly between seasons (Rogers \u003cem\u003eet al\u003c/em\u003e.
+        2004). Some populations spend hours feeding on aquatic herbs in baïs and swamps.
+        Social ants and termites are the only animal matter deliberately ingested.
+        Group size averages 10, but is occasionally over 20 individuals, and annual
+        home ranges are usually 10–25 km² (Williamson and Butynski 2013).\u003cbr/\u003e\u003cbr/\u003eLife
+        History (as summarised in Williamson \u003cem\u003eet al\u003c/em\u003e. 2013):
+        Male Western Gorillas take 18 years to reach full maturity, and females take
+        \u003cem\u003eca\u003c/em\u003e10 years. Length of the reproductive cycle
+        is unknown. There is no birth season. Mean length of gestation is 256 days
+        in captive Gorillas. Infant mortality up to three years of age is 22–65%.
+        Infants suckle for 4–5 years, causing lactational amenorrhea in the mother.
+        Interbirth intervals are 4–6 years. Western Gorillas appear to reproduce more
+        slowly than Eastern Gorillas (\u003cem\u003eG. beringei\u003c/em\u003e). Maximum
+        life span is unknown, but likely to be \u003cem\u003eca\u003c/em\u003e 40
+        years. Generation time is estimated to be 22 years (see Appendix I in the
+        supplementary material).","threats":"The two subspecies of Western Gorilla
+        face similar threats, but to varying degrees in different regions.\u003cbr/\u003e\u003cbr/\u003e\u003col\u003e\u003cli\u003e\u003cstrong\u003e\u003cu\u003ePoaching\u003c/u\u003e\u003c/strong\u003e
+        - Despite the fact that all killing, capture or consumption of great apes
+        is illegal, hunting for bushmeat is the primary driver of Western Gorilla
+        decline. Current offtake levels are unsustainable – even legally-protected
+        areas suffer high levels of poaching. The remaining population of Cross River
+        Gorillas is small and fragmented, which puts each subpopulation at particular
+        risk from poaching. While Gorillas do not generally appear to be targeted
+        by hunters, it is estimated that opportunistic hunting removes at least 1–3
+        Cross River Gorillas from the population each year. Additionally, snares targeting
+        other species may trap Gorillas, causing injury or death. Until the mid-1990s,
+        much of the Western Lowland Gorilla’s range included vast, roadless blocks
+        of forest that were extremely difficult to access, where human population
+        densities were very low and Gorilla densities high. In the last quarter century,
+        however, almost all unprotected terra firma forest in this region has been
+        allocated as logging concessions (Global Forest Watch 2016). This means that
+        much of the once-remote, inaccessible forest is now covered by a network of
+        logging roads (Laporte \u003cem\u003eet al\u003c/em\u003e. 2007), which gives
+        easy access to both hunters entering the forest and traffickers taking consignments
+        of bushmeat (and ivory) out of the forest to distant destinations – often
+        towns and cities where meat fetches high prices. Throughout Central Africa,
+        mining permits for prospecting or resource extraction are being issued over
+        an increasingly large surface area. As well as direct removal of Gorilla habitat,
+        depending on the type of extraction, mining leads to very high rates of human
+        immigration and the creation of yet more access roads, which are used for
+        poaching (e.g., Edwards \u003cem\u003eet al\u003c/em\u003e. 2014). The region’s
+        governance is typically poor (Transparency International 2016); the weak law
+        enforcement and corruption that enable poaching are evident in ivory trafficking
+        (Bennett 2014), but also widespread elsewhere (Bour \u003cem\u003eet al\u003c/em\u003e.
+        2013). In addition, huge road projects that will substantially fragment Gorilla
+        habitat are currently underway (Laurance \u003cem\u003eet al\u003c/em\u003e.
+        2015). The ease and speed of transport is now orders of magnitude higher than
+        before the creation of such access roads, and hunting pressures are much higher.
+        Across their range, Gorilla densities are lowest near roads, except where
+        forest guards operate control points or roadblocks (Strindberg \u003cem\u003eet
+        al\u003c/em\u003e. 2018). In addition, human populations in these once remote
+        areas have grown, as people migrate to the employment opportunities offered
+        by logging companies (Wilkie \u003cem\u003eet al\u003c/em\u003e. 2000, Poulsen
+        \u003cem\u003eet al\u003c/em\u003e. 2009).\u003c/li\u003e\u003cli\u003e\u003cu\u003e\u003cstrong\u003eDisease\u003c/strong\u003e\u003c/u\u003e
+        - The second major driver of Western Lowland Gorilla decline is infectious
+        disease, specifically Ebola virus disease (EVD). Surveys carried out from
+        the 1980s to the present day show that there were a series of massive great
+        ape die-offs in a large, mostly-intact forested area straddling the border
+        between northeastern Gabon and northwestern Congo, which includes several
+        national parks and logging concessions (Walsh \u003cem\u003eet al\u003c/em\u003e.
+        2003; Maisels \u003cem\u003eet al\u003c/em\u003e. 2004, 2013). Walsh \u003cem\u003eet
+        al\u003c/em\u003e. (2008) estimated that three quarters of Western Lowland
+        Gorillas in six protected areas affected by \u003cem\u003eEbolavirus\u003c/em\u003e
+        were lost between 1995 and 2000. Typical mortality rate during the worst disease
+        outbreaks was 95% (Bermejo \u003cem\u003eet al\u003c/em\u003e. 2006, Caillaud
+        \u003cem\u003eet al\u003c/em\u003e. 2006). In protected areas, populations
+        hit by disease began to recover within a decade (e.g., Genton \u003cem\u003eet
+        al\u003c/em\u003e. 2012); however, total recovery would take 75–131 years
+        in the absence of poaching, which is an unlikely scenario (Ryan and Walsh
+        2011). Ebola virus has already been detected to the east of the Mambili River,
+        a major river barrier between Odzala-Kokoua National Park and the Sangha River
+        (Reed \u003cem\u003eet al\u003c/em\u003e. 2014). Although rivers and forest
+        fragmentation seem to present a partial barrier to the spread of Ebola, large
+        numbers of Gorillas could be wiped out in a short space of time, as transmission
+        between individuals is rapid and large areas can be affected by a single outbreak
+        (Walsh \u003cem\u003eet al\u003c/em\u003e. 2007, 2009). The small size of
+        the Cross River population means it is also highly vulnerable to infectious
+        disease. \u003cem\u003eEbolavirus\u003c/em\u003e has not been reported in
+        the Cross River Gorillas, but their close proximity to dense human populations
+        and livestock heightens the risks of disease transmission (Dunn \u003cem\u003eet
+        al\u003c/em\u003e. 2014).\u003c/li\u003e\u003cli\u003e\u003cstrong\u003e\u003cu\u003eHabitat
+        degradation and destruction\u003c/u\u003e\u003c/strong\u003e - Habitat loss
+        is emerging as a major threat to Western Gorillas. As oil-palm plantations
+        in Asia reach capacity, Africa is becoming the new frontier for this crop,
+        offering excellent economic prospects in countries with appropriate rainfall,
+        soil and temperatures (Rival and Lavang 2014). Unfortunately, such areas coincide
+        with good Gorilla habitat: 73.8% of the Western Lowland Gorilla’s range is
+        considered suitable for oil palm (Wich \u003cem\u003eet al\u003c/em\u003e.
+        2014). The recent expansion of industrial-scale mineral extraction and the
+        creation of open-pit mines are of great concern (Edwards \u003cem\u003eet
+        al\u003c/em\u003e. 2014, Lanjouw 2014), and also lead to the establishment
+        of development corridors, which can be several kilometres wide and add to
+        areas of “lost forest” (Laurance \u003cem\u003eet al\u003c/em\u003e. 2015).
+        There is a disconnect between the various bodies responsible for land-use
+        planning in the realms of conservation, mining and agriculture in all Western
+        Gorilla range states except Gabon. Consequently, there is increasing competition
+        for land between long-term conservation needs and immediate financial gain
+        as governments explore the potential of clearing natural habitat in favour
+        of economic development. Without careful and immediate land-use planning that
+        involves cooperation between the government bodies responsible for protected
+        areas and wildlife on one hand, and economic and agricultural development
+        on the other, large areas of Western Lowland Gorilla habitat could be cleared
+        within a few decades. The lack of effective protected area management throughout
+        much of the Cross River Gorilla’s range combined with the lack of protected
+        status for much of the Gorillas’ habitat in Cameroon, threatens the future
+        availability of habitat suitable for the population. Conversion of forest
+        for agriculture and grazing is occurring rapidly in many parts of the Gorillas’
+        range and the largest protected areas in which Cross River Gorillas occur
+        contain enclaves of human settlements whose farmlands have spread beyond their
+        legal boundaries. Expansion of these settlements and associated development
+        of access routes in the form of roads and bridges inside the protected areas
+        exacerbate subdivision of the Cross River Gorilla population. In both Cameroon
+        and Nigeria, the construction and improvement of roads outside protected areas
+        also threatens to increase subdivision of Gorilla populations through habitat
+        disturbance and intensification of forest resource extraction. Increasing
+        access will also exacerbate poaching pressure. While most habitat loss in
+        the region is the result of small-scale agriculture, commercial logging and
+        industrial agriculture (e.g., for oil palm) are also impending threats.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003e\u003cu\u003eClimate
+        change\u003c/u\u003e\u003c/strong\u003e - Climate change will affect both
+        subspecies of Western Gorilla, as it is already thought to be affecting the
+        Central African tropical moist forests (Lewis \u003cem\u003eet al\u003c/em\u003e.
+        2013). Although the likely impacts of global climate change are not yet known,
+        some predictions suggest a drying of this region with potentially negative
+        consequences for forest ecology, such as changes in fruit and flower phenology,
+        forest productivity and increased vulnerability to fire, and even forest retreat
+        (James et al. 2013). Seasonal changes in precipitation and temperature, and
+        weather extremes are likely ongoing and set to continue (Lovett 2015). Negative
+        impacts on great apes have already been predicted (Lehmann \u003cem\u003eet
+        al\u003c/em\u003e. 2010), particularly along the coast (Korstjens \u003cem\u003eet
+        al\u003c/em\u003e. 2010). Climate change is the least likely factor for which
+        effective action for great apes and for African tropical forests in general
+        can be taken in a timely manner. Climate talks in 2015 resulted in international
+        cooperative agreement between most of the world’s nations regarding the need
+        for action; however, the task of reversing, or even flattening current temperature
+        trends will be extremely challenging.\u003c/li\u003e\u003cli\u003eFor more
+        details, see the two \u003cem\u003eGorilla gorilla\u003c/em\u003e subspecies
+        assessments.\u003c/li\u003e\u003c/ol\u003e","measures":"National and international
+        laws controlling hunting or capture of Gorillas exist in all habitat countries,
+        but enforcement of protective legislation is inconsistent or lacking throughout
+        much of the species’ range. \u003cem\u003eGorilla gorilla\u003c/em\u003e is
+        listed under Appendix I of CITES and in Class A of the African Convention.\u003cbr/\u003e\u003cbr/\u003eOnly
+        ~22% of Western Lowland Gorillas live inside protected areas, which cover
+        ~14% of their geographic range (Strindberg \u003cem\u003eet al\u003c/em\u003e.
+        2018). A further 20% are found in FSC-certified logging concessions, adding
+        up to 8% of the range (Strindberg \u003cem\u003eet al\u003c/em\u003e. 2018).
+        Although forest guards work in many protected areas and in the well-managed
+        logging concessions, 58% of Western Lowland Gorillas and 77% of their range
+        are unprotected and highly vulnerable to poachers.\u003cbr/\u003e\u003cbr/\u003eThe
+        Cross River Gorilla population is small and fragmented and their habitat is
+        surrounded by some of the most densely populated human settlements in Africa.
+        Approximately 30% of Cross River Gorillas occur outside of protected areas
+        and many important habitat corridors between subpopulations exist as ungazetted
+        land. The recent creation of new protected areas in Cameroon combined with
+        existing protected areas in Nigeria, provides the legal framework for habitat
+        protection and the control of hunting. However, effective management of these
+        reserves remains a challenge. Illegal activities, including poaching, occur
+        in all the region’s protected areas. Resources, equipment and training, in
+        addition to proper oversight are needed for these areas to operate effectively.\u003cbr/\u003e\u003cbr/\u003eTargeted
+        conservation action plans have been produced for both Cross River Gorillas
+        (Oates \u003cem\u003eet al\u003c/em\u003e. 2007, Dunn \u003cem\u003eet al\u003c/em\u003e.
+        2014) and Western Lowland Gorillas (Tutin \u003cem\u003eet al\u003c/em\u003e.
+        2005, IUCN 2014). A series of recommendations have been outlined, which can
+        be broadly encapsulated as:\u003cbr/\u003e\u003col\u003e\u003cli\u003eAn increase
+        in effective law enforcement throughout the region, not only in protected
+        areas, but also in logging concessions and unprotected forests. Law enforcement
+        needs to be supported by updated regulations and sanctions.\u003c/li\u003e\u003cli\u003eEffective,
+        coordinated land-use planning to avoid the clearing of intact Gorilla habitat
+        to establish industrial plantations, for oil palm in particular (IUCN SSC
+        Primate Specialist Group 2014). Industrial extraction of other natural resources,
+        namely timber and minerals, should be included in a holistic, spatially-explicit
+        approach. Such planning needs to be done at both national and regional levels.
+        Several of the most important areas for Gorilla conservation are transboundary,
+        and thus fall within the remit of national agencies from two or three countries.\u003c/li\u003e\u003cli\u003eAwareness
+        raising among all sectors that deal with land and the protection of natural
+        resources: law enforcement and judiciary; protected area authorities; mining,
+        logging and agricultural industries; local communities and tour operators.
+        This outreach effort should include specific information on minimising human
+        impacts, such as preventing transmission of human diseases to great apes.
+        Recommendations for logging companies regarding management practices that
+        are compatible with great ape conservation (Morgan and Sanz 2007, Morgan \u003cem\u003eet
+        al\u003c/em\u003e. 2013) can be downloaded here: \u003ca href=\"http://www.primate-sg.org/best_practice_logging\"\u003ehttp://www.primate-sg.org/best_practice_logging\u003c/a\u003e\u003c/li\u003e\u003cli\u003eFurther
+        research into ways of mitigating the spread and virulence of \u003cem\u003eEbolavirus\u003c/em\u003e,
+        such as administering vaccines that are non-detrimental to the target species
+        (great apes) or other species that may come into contact with the vaccine,
+        and that protect a sufficiently large and geographically appropriate proportion
+        of the great ape population to form barriers against its spread. IUCN guidelines
+        on great apes and disease (Gilardi \u003cem\u003eet al\u003c/em\u003e. 2015)
+        are available here: \u003ca href=\"http://www.primate-sg.org/best_practice_disease\"\u003ehttp://www.primate-sg.org/best_practice_disease\u003c/a\u003e\u003c/li\u003e\u003cli\u003eImplement
+        standardised monitoring of law enforcement effort and effectiveness, of Gorilla
+        abundance and of great ape health, particularly with respect to \u003cem\u003eEbolavirus\u003c/em\u003e.
+        A standardised tool for law enforcement monitoring (SMART: \u003ca href=\"http://www.smartconservationsoftware.org\"\u003ehttp://www.smartconservationsoftware.org\u003c/a\u003e)
+        is already in use at many sites; standard methods for surveying and monitoring
+        great ape populations that facilitate more accurate and precise monitoring
+        of changes in abundance have been in use for about a decade (Kühl \u003cem\u003eet
+        al\u003c/em\u003e. 2008 \u003ca href=\"http://www.primate-sg.org/best_practice_surveys\"\u003ehttp://www.primate-sg.org/best_practice_surveys\u003c/a\u003e);
+        and non-invasive diagnosis of a range of pathogens is now possible, for example,
+        detection of \u003cem\u003eEbolavirus\u003c/em\u003e in faeces (Reed \u003cem\u003eet
+        al\u003c/em\u003e. 2014).\u003c/li\u003e\u003cli\u003eSpecifically for Cross
+        River Gorillas, the key conservation need for their long-term survival is
+        allowing the population to expand. Since significant areas of unoccupied Gorilla
+        habitat remain across the landscape, population growth is feasible if levels
+        of hunting and other human activities can be reduced. Maintenance (or re-establishment)
+        of habitat connectivity between areas currently occupied by Gorillas is essential
+        for future population expansion.\u003c/li\u003e\u003c/ol\u003eMaintaining
+        well-protected areas of forest will be key to maintaining Gorilla populations
+        in the long term, and this can only be done through the conservation strategies
+        detailed in the action plans. These are presented in greater detail in the
+        action plans than is possible here. The documents can be downloaded at: \u003ca
+        href=\"http://www.primate-sg.org/action_plans\"\u003ehttp://www.primate-sg.org/action_plans\u003c/a\u003e","use_trade":"\u003cp\u003eGorillas
+        are completely protected by national and international laws in all countries
+        of their range, and it is, therefore, illegal to kill, capture or trade in
+        live Gorillas or their body parts.\u003cbr/\u003e\u003c/p\u003e","rationale":"\u003cem\u003eGorilla
+        gorilla\u003c/em\u003e has a large geographic range, covering over 700,000
+        km². The size of the population in 2013 was estimated to be almost 362,000
+        individuals\u0026#160; (Strindberg \u003cem\u003eet al\u003c/em\u003e. 2018).
+        Only a very small number of Western Gorillas are the \u003cem\u003eG. g. diehli\u003c/em\u003e
+        subspecies, therefore this rationale focuses on the \u003cem\u003eG. g. gorilla\u003c/em\u003e
+        subspecies. The country of Gabon lost over half its Gorilla population between
+        1983 and 2000 (Walsh \u003cem\u003eet al\u003c/em\u003e. 2003). More recent
+        population declines have been estimated using a predictive model that incorporated
+        survey data collected between 2003 and 2013 across the entire range of Western
+        Lowland Gorillas. The results reveal an 19.4% decline between 2005 and 2013,
+        corresponding to an annual loss of ~2.7% (Strindberg \u003cem\u003eet al\u003c/em\u003e.
+        2018). These population decreases were driven by poaching and disease (\u003cem\u003eEbolavirus\u003c/em\u003e)
+        outbreaks.\u003cbr/\u003e\u003cbr/\u003eDespite their abundance and wide geographic
+        range, Western Gorillas qualify as Critically Endangered under criterion A:
+        a population reduction of more than 80% over three generations (one generation
+        is ~22 years). This listing is based on ongoing population losses due to illegal
+        hunting, disease and habitat loss: poaching is intensifying with the expansion
+        of access routes into forests and Zaire \u003cem\u003eEbolavirus\u003c/em\u003e
+        remains a highly significant threat. At a conservative rate of reduction (2.7%
+        per year rather than 4%, calculated from Walsh \u003cem\u003eet al\u003c/em\u003e.
+        2003), the reduction in the Western Gorilla population is predicted to exceed
+        80% over three generations (i.e., 66 years, 2005–2071). Illegal hunting has
+        not ceased despite intense anti-poaching efforts, and the threat of \u003cem\u003eEbolavirus\u003c/em\u003e
+        has not been removed. In addition, the scale of habitat conversion to industrial
+        agriculture will increase, and the effects of climate change will become more
+        evident. \u003cem\u003eGorilla gorilla\u003c/em\u003e thus qualifies as Critically
+        Endangered (A4bcde).","trend_justification":null,"taxonomic_notes":"\u003cp\u003eThe
+        Western Gorilla (\u003cem\u003eGorilla gorilla\u003c/em\u003e) has two recognized
+        subspecies: the Western Lowland Gorilla (\u003cem\u003eGorilla gorilla gorilla\u003c/em\u003e)
+        and the Cross River Gorilla (\u003cem\u003eGorilla gorilla diehli\u003c/em\u003e:
+        Sarmiento and Oates 2000, Groves 2001). Genetic data suggest that the two
+        subspecies of Western Gorilla diverged approximately 18,000 years ago (Thalmann
+        \u003cem\u003eet al\u003c/em\u003e. 2011) and that the Cross River Gorilla
+        population can be clearly differentiated from Western Lowland Gorillas (Prado-Martinez
+        \u003cem\u003eet al\u003c/em\u003e. 2013). The taxonomic status of the Gorilla
+        populations in Ebo (Cameroon) awaits clarification; however, measurements
+        from a single Ebo Gorilla skull indicate this may be a relict population of
+        a previously more widespread population living north of the Sanaga River (Groves
+        2005).\u003cbr/\u003e\u003c/p\u003e"},"biogeographical_realms":[{"description":{"en":"Afrotropical"},"code":"0"}],"conservation_actions":[{"note":"","code":"2_1","description":{"en":"Site/area
+        management"}},{"note":"","code":"5_4_2","description":{"en":"National level"}},{"note":"","code":"5_3","description":{"en":"Private
+        sector standards \u0026 codes"}},{"note":"","code":"1_2","description":{"en":"Resource
+        \u0026 habitat protection"}},{"note":"","code":"4_3","description":{"en":"Awareness
+        \u0026 communications"}},{"note":"","code":"4_2","description":{"en":"Training"}},{"note":"","code":"4_1","description":{"en":"Formal
+        education"}},{"note":"","code":"1_1","description":{"en":"Site/area protection"}},{"note":"","code":"3_2","description":{"en":"Species
+        recovery"}}],"faos":[],"habitats":[{"majorImportance":"Yes","season":"Resident","suitability":"Suitable","description":{"en":"Forest
+        - Subtropical/Tropical Swamp"},"code":"1_8"},{"majorImportance":"Yes","season":"Resident","suitability":"Suitable","description":{"en":"Forest
+        - Subtropical/Tropical Moist Lowland"},"code":"1_6"},{"majorImportance":"Yes","season":"Resident","suitability":"Suitable","description":{"en":"Forest
+        - Subtropical/Tropical Moist Montane"},"code":"1_9"}],"locations":[{"is_endemic":false,"formerlyBred":"No","origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Nigeria"},"code":"NG"},{"is_endemic":false,"formerlyBred":"No","origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Gabon"},"code":"GA"},{"is_endemic":false,"formerlyBred":"No","origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Equatorial
+        Guinea (mainland)"},"code":"EQG-OO"},{"is_endemic":false,"formerlyBred":"No","origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Congo"},"code":"CG"},{"is_endemic":false,"formerlyBred":"No","origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Central
+        African Republic"},"code":"CF"},{"is_endemic":false,"formerlyBred":"No","origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Cameroon"},"code":"CM"},{"is_endemic":false,"formerlyBred":"No","origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Cabinda"},"code":"CAB-OO"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Equatorial
+        Guinea"},"code":"GQ"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Angola"},"code":"AO"}],"researches":[{"note":"","code":"1_6","description":{"en":"Actions"}},{"note":"","code":"1_5","description":{"en":"Threats"}},{"note":"","code":"1_2","description":{"en":"Population
+        size, distribution \u0026 trends"}},{"note":"","code":"3_4","description":{"en":"Habitat
+        trends"}},{"note":"","code":"3_1","description":{"en":"Population trends"}}],"use_and_trade":[],"threats":[{"scope":"Majority
+        (50-90%)","timing":"Ongoing","internationalTrade":null,"score":"Medium Impact:
+        6","severity":"Slow, Significant Declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Unintentional
+        effects: (large scale) [harvest]"},"code":"5_3_4"},{"scope":"Whole (\u003e90%)","timing":"Ongoing","internationalTrade":null,"score":"Medium
+        Impact: 7","severity":"Slow, Significant Declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Habitat
+        shifting \u0026 alteration"},"code":"11_1"},{"scope":"Minority (\u003c50%)","timing":"Ongoing","internationalTrade":null,"score":"Medium
+        Impact: 7","severity":"Very Rapid Declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Problematic
+        native species/diseases"},"code":"8_2"},{"scope":"Minority (\u003c50%)","timing":"Ongoing","internationalTrade":null,"score":"Medium
+        Impact: 7","severity":"Very Rapid Declines","ancestry":null,"virus":null,"ias":null,"text":"Lethal
+        and non-lethal human pathogens transmission to gorillas, especially where
+        gorillas are habituated for tourism or research purposes (see Gilardi et al.
+        2015)","description":{"en":"Unspecified species"},"code":"8_5_1"},{"scope":"Minority
+        (\u003c50%)","timing":"Ongoing","internationalTrade":null,"score":"Medium
+        Impact: 7","severity":"Very Rapid Declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Persecution/control"},"code":"5_1_3"},{"scope":"Minority
+        (\u003c50%)","timing":"Ongoing","internationalTrade":null,"score":"Low Impact:
+        5","severity":"Slow, Significant Declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Small-holder
+        farming"},"code":"2_1_2"},{"scope":"Minority (\u003c50%)","timing":"Ongoing","internationalTrade":null,"score":"Medium
+        Impact: 7","severity":"Very Rapid Declines","ancestry":null,"virus":"Ebola
+        Virus (EBOV)","ias":null,"text":null,"description":{"en":"Named species"},"code":"8_5_2"},{"scope":"Minority
+        (\u003c50%)","timing":"Ongoing","internationalTrade":null,"score":"Low Impact:
+        5","severity":"Slow, Significant Declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Roads
+        \u0026 railroads"},"code":"4_1"},{"scope":"Majority (50-90%)","timing":"Ongoing","internationalTrade":null,"score":"High
+        Impact: 8","severity":"Very Rapid Declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Unintentional
+        effects (species is not the target)"},"code":"5_1_2"},{"scope":"Minority (\u003c50%)","timing":"Ongoing","internationalTrade":null,"score":"Low
+        Impact: 5","severity":"Slow, Significant Declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Shifting
+        agriculture"},"code":"2_1_1"},{"scope":"Minority (\u003c50%)","timing":"Ongoing","internationalTrade":null,"score":"Medium
+        Impact: 7","severity":"Very Rapid Declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Agro-industry
+        farming"},"code":"2_1_3"},{"scope":"Minority (\u003c50%)","timing":"Ongoing","internationalTrade":"No","score":"Medium
+        Impact: 7","severity":"Very Rapid Declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Intentional
+        use (species is the target)"},"code":"5_1_1"},{"scope":"Minority (\u003c50%)","timing":"Ongoing","internationalTrade":null,"score":"Low
+        Impact: 5","severity":"Slow, Significant Declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Mining
+        \u0026 quarrying"},"code":"3_2"}],"credits":[{"credit_type_name":"assessor","full":"Maisels,
+        F., Bergl, R.A. \u0026 Williamson, E.A.","value":["Richard Bergl","Elizabeth
+        A. Williamson (University of Stirling)","Fiona Maisels (Wildlife Conservation
+        Society)"]},{"credit_type_name":"evaluator","full":"Mittermeier, R.A. \u0026
+        Rylands, A.B.","value":["Anthony B. Rylands (Conservation International)","Russell
+        A. Mittermeier (Conservation International)"]},{"credit_type_name":"contributor","full":"Baillie,
+        J., Butynski, T.M., Dunn, A., Gatti, S., Oates, J.F., Stokes, E., Strindberg,
+        S., Sunderland-Groves, J., Tutin, C. \u0026 Walsh, P.D.","value":["Caroline
+        Tutin","Samantha Strindberg","Emma Stokes","Jacqui Sunderland-Groves","Sylvain
+        Gatti","Peter Walsh","John Oates","Andrew Dunn","Jonathan Baillie (Institute
+        of Zoology, London)","Thomas Butynski (Bioko Biodiversity Protection Program)"]}],"errata":[{"reason":"This
+        amended version of the 2016 assessment was created to update population and
+        reduction estimates based on Strindberg \u003cem\u003eet al\u003c/em\u003e.
+        (2018)."}],"references":[{"citation":"Groves C.P. 2001. \u003ci\u003ePrimate
+        Taxonomy\u003c/i\u003e. Smithsonian Institution Press, Washington, DC, USA.","year":"2001","title":"Primate
+        Taxonomy","author":"Groves C.P.","citation_short":""},{"citation":"Sarmiento,
+        E.E. and Oates, J.F. 2000. The Cross River gorillas: a distinct subspecies,
+        \u003ci\u003eGorilla gorilla diehli\u003c/i\u003e Matschie 1904. \u003ci\u003eAmerican
+        Museum Novitates\u003c/i\u003e 3304: 1–55.","year":"2000","title":"The Cross
+        River gorillas: a distinct subspecies, \u003ci\u003eGorilla gorilla diehli\u003c/i\u003e
+        Matschie 1904.","author":"Sarmiento, E.E. and Oates, J.F.","citation_short":""},{"citation":"Bermejo,
+        M., Rodríguez-Teijeiro, J.D., Illera, G., Barroso, A., Vilà, C. and Walsh,
+        P.D. 2006. Ebola outbreak kills 5000 gorillas. \u003ci\u003eScience\u003c/i\u003e
+        314: 1564.","year":"2006","title":"Ebola outbreak kills 5000 gorillas","author":"Bermejo,
+        M., Rodríguez-Teijeiro, J.D., Illera, G., Barroso, A., Vilà, C. and Walsh,
+        P.D.","citation_short":""},{"citation":"Walsh, P.D., Biek, R. and Real, L.A.
+        2005. Wave-like spread of Ebola Zaire. \u003ci\u003ePLoS Biology\u003c/i\u003e
+        3: 1946–1953.","year":"2005","title":"Wave-like spread of Ebola Zaire","author":"Walsh,
+        P.D., Biek, R. and Real, L.A.","citation_short":""},{"citation":"Maisels,
+        F., Ella Akou, M., Douckaga, M. and Moundounga, A. 2004. Mwagne National Park,
+        Gabon: large mammals and human impact. WCS/WWF Gabon.","year":"2004","title":"Mwagne
+        National Park, Gabon: large mammals and human impact","author":"Maisels, F.,
+        Ella Akou, M., Douckaga, M. and Moundounga, A.","citation_short":""},{"citation":"Walsh,
+        P.D., Abernethy, K.A., Bermejo, M., Beyersk, R., De Wachter, P., Akou, M.E.,  Huijbregts,
+        B., Mambounga, D.I., Toham, A.K., Kilbournk, A.M., Lahmq, S.A., Latourk, S.,
+        Maiselsk, S.F., Mbinak, C., Mihindouk, Y., Obiang, S.N., Effa, E.N., Starkeyk,
+        M. 2003. Catastrophic ape decline in western equatorial Africa. \u003ci\u003eNature\u003c/i\u003e
+        422: 611–614.","year":"2003","title":"Catastrophic ape decline in western
+        equatorial Africa","author":"Walsh, P.D., Abernethy, K.A., Bermejo, M., Beyersk,
+        R., De Wachter, P., Akou, M.E.,  Huijbregts, B., Mambounga, D.I., Toham, A.K.,
+        Kilbournk, A.M., Lahmq, S.A., Latourk, S., Maiselsk, S.F., Mbinak, C., Mihindouk,
+        Y., Obiang, S.N., Effa, E.N., Starkeyk, M.","citation_short":""},{"citation":"Morgan,
+        D. and Sanz, C. 2007. \u003ci\u003eBest Practice Guidelines for Reducing the
+        Impact of Commercial Logging on Great Apes in Western Equatorial Africa\u003c/i\u003e.
+        IUCN/SSC Primate Specialist Group, Gland, Switzerland.","year":"2007","title":"Best
+        Practice Guidelines for Reducing the Impact of Commercial Logging on Great
+        Apes in Western Equatorial Africa","author":"Morgan, D. and Sanz, C.","citation_short":""},{"citation":"Tutin,
+        C.,Stokes, E., Boesch, C., Morgan, D., Sanz, C., Reed, T., Blom, A., Walsh,
+        P., Blake, S. and Kormos, R. 2005. \u003ci\u003eRegional Action Plan for the
+        Conservation of Chimpanzees and Gorillas in Western Equatorial Africa\u003c/i\u003e.
+        IUCN/SSC Primate Specialist Group and Conservation International, Washington
+        DC.","year":"2005","title":"Regional Action Plan for the Conservation of Chimpanzees
+        and Gorillas in Western Equatorial Africa","author":"Tutin, C.,Stokes, E.,
+        Boesch, C., Morgan, D., Sanz, C., Reed, T., Blom, A., Walsh, P., Blake, S.
+        and Kormos, R.","citation_short":""},{"citation":"Robbins, M.M., Bermejo,
+        M., Cipolletta, C., Magliocca, F., Parnell, R.J. and Stokes, E.J. 2004. Social
+        structure and life-history patterns in western gorillas (\u003ci\u003eGorilla
+        gorilla gorilla\u003c/i\u003e). \u003ci\u003eAmerican Journal of Primatology\u003c/i\u003e
+        64: 145–159.","year":"2004","title":"Social structure and life-history patterns
+        in western gorillas (\u003ci\u003eGorilla gorilla gorilla\u003c/i\u003e)","author":"Robbins,
+        M.M., Bermejo, M., Cipolletta, C., Magliocca, F., Parnell, R.J. and Stokes,
+        E.J.","citation_short":""},{"citation":"Bergl, R.A. and Vigilant, L. 2007.
+        Genetic analysis reveals population structure and recent migration within
+        the highly fragmented range of the Cross River gorilla (\u003ci\u003eGorilla
+        gorilla diehli\u003c/i\u003e). \u003ci\u003eMolecular Ecology\u003c/i\u003e
+        16: 501–516.","year":"2007","title":"Genetic analysis reveals population structure
+        and recent migration within the highly fragmented range of the Cross River
+        gorilla (\u003ci\u003eGorilla gorilla diehli\u003c/i\u003e)","author":"Bergl,
+        R.A. and Vigilant, L.","citation_short":""},{"citation":"Groves, C.P. 2005.
+        A note on the affinities of the Ebo Forest gorilla. \u003ci\u003eGorilla Journal\u003c/i\u003e
+        31: 19–21.","year":"2005","title":"A note on the affinities of the Ebo Forest
+        gorilla","author":"Groves, C.P.","citation_short":""},{"citation":"Rogers,
+        M.E., Abernethy, K., Bermejo, M., Cipolletta, C., Doran, D., McFarland, K.,
+        Nishihara, T., Remis, M. and Tutin, C.E.G. 2004. Western gorilla diet: a synthesis
+        from six sites. \u003ci\u003eAmerican Journal of Primatology\u003c/i\u003e
+        64: 173–192.","year":"2004","title":"Western gorilla diet: a synthesis from
+        six sites","author":"Rogers, M.E., Abernethy, K., Bermejo, M., Cipolletta,
+        C., Doran, D., McFarland, K., Nishihara, T., Remis, M. and Tutin, C.E.G.","citation_short":""},{"citation":"Walsh,
+        P.D., Breuer, T., Sanz, C., Morgan, D. and Doran-Sheehy, D. 2007. Potential
+        for Ebola transmission between gorilla and chimpanzee social groups. \u003ci\u003eAmerican
+        Naturalist\u003c/i\u003e 169: 684–689.","year":"2007","title":"Potential for
+        Ebola transmission between gorilla and chimpanzee social groups","author":"Walsh,
+        P.D., Breuer, T., Sanz, C., Morgan, D. and Doran-Sheehy, D.","citation_short":""},{"citation":"Bergl,
+        R.A. 2006. Conservation Biology of the Cross River Gorilla (\u003ci\u003eGorilla
+        gorilla diehli\u003c/i\u003e). City University of New York.","year":"2006","title":"Conservation
+        Biology of the Cross River Gorilla (\u003ci\u003eGorilla gorilla diehli\u003c/i\u003e)","author":"Bergl,
+        R.A.","citation_short":""},{"citation":"Oates, J.F., McFarland, K.L., Groves,
+        J.L., Bergl, R.A., Linder, J.M. and Disotell, T.R. 2003. The Cross River gorilla:
+        the natural history and status of a neglected and critically endangered subspecies.
+        In: A. Taylor and M. Goldsmith (eds), \u003ci\u003eGorilla Biology: A Multidisciplinary
+        Perspective\u003c/i\u003e, pp. 472–497. Cambridge University Press, Cambridge.","year":"2003","title":"The
+        Cross River gorilla: the natural history and status of a neglected and critically
+        endangered subspecies","author":"Oates, J.F., McFarland, K.L., Groves, J.L.,
+        Bergl, R.A., Linder, J.M. and Disotell, T.R.","citation_short":""},{"citation":"McFarland,
+        K.L. 2007. Ecology of Cross River Gorillas (\u003ci\u003eGorilla gorilla diehli\u003c/i\u003e)
+        on Afi Mountain, Cross River State, Nigeria. City University of New York.","year":"2007","title":"Ecology
+        of Cross River Gorillas (\u003ci\u003eGorilla gorilla diehli\u003c/i\u003e)
+        on Afi Mountain, Cross River State, Nigeria","author":"McFarland, K.L.","citation_short":""},{"citation":"Caillaud,
+        D., Levréro, F., Cristescu, R., Gatti, S., Dewas, M., Douadi, M., Gautier-Hion,
+        A., Raymond, M. and Ménard, N. 2006. Gorilla susceptibility to Ebola virus:
+        the cost of sociality. \u003ci\u003eCurrent Biology\u003c/i\u003e 16: R489–R491.","year":"2006","title":"Gorilla
+        susceptibility to Ebola virus: the cost of sociality","author":"Caillaud,
+        D., Levréro, F., Cristescu, R., Gatti, S., Dewas, M., Douadi, M., Gautier-Hion,
+        A., Raymond, M. and Ménard, N.","citation_short":""},{"citation":"Oates, J.F.,
+        Sunderland-Groves, J.L., Bergl, R., Dunn, A., Nicholas, A., Takang, E., Omeni,
+        F., Imong, I. Fotso, R., Nkembi, L. and Williamson, E.A. 2007. \u003ci\u003eRegional
+        Action Plan for the Conservation of the Cross River Gorilla (\u003c/i\u003eGorilla
+        gorilla diehli\u003ci\u003e)\u003c/i\u003e. IUCN/SSC Primate Specialist Group
+        and Conservation International, Arlington, VA.","year":"2007","title":"Regional
+        Action Plan for the Conservation of the Cross River Gorilla (\u003ci\u003eGorilla
+        gorilla diehli\u003c/i\u003e)","author":"Oates, J.F., Sunderland-Groves, J.L.,
+        Bergl, R., Dunn, A., Nicholas, A., Takang, E., Omeni, F., Imong, I. Fotso,
+        R., Nkembi, L. and Williamson, E.A.","citation_short":""},{"citation":"Thalmann,
+        O., Wegmann, D., Spitzner, M., Arandjelovic, M., Guschanski, K., Leuenberger,
+        C., Bergl, R.A. and Vigilant, L. 2011. Historical sampling reveals dramatic
+        demographic changes in western gorilla populations. \u003ci\u003eBMC Evolutionary
+        Biology\u003c/i\u003e 11: 85.","year":"2011","title":"Historical sampling
+        reveals dramatic demographic changes in western gorilla populations","author":"Thalmann,
+        O., Wegmann, D., Spitzner, M., Arandjelovic, M., Guschanski, K., Leuenberger,
+        C., Bergl, R.A. and Vigilant, L.","citation_short":null},{"citation":"Maisels,
+        F., Strindberg, S., Rayden, T., Kiminou, F., Madzoke, B., Mangonga, P. and
+        Ndzai, C. 2015. Wildlife and Human Impact Survey of the Ngombé Ntoukou-Pikounda
+        Forest Landscape, Republic of Congo. Feb–Oct 2014. Wildlife Conservation Society,
+        Brazzaville, Congo.","year":"2015","title":"Wildlife and Human Impact Survey
+        of the Ngombé Ntoukou-Pikounda Forest Landscape, Republic of Congo. Feb–Oct
+        2014","author":"Maisels, F., Strindberg, S., Rayden, T., Kiminou, F., Madzoke,
+        B., Mangonga, P. and Ndzai, C.","citation_short":null},{"citation":"Reed,
+        P.E., Cameron, K.N., Ondzie, A.U., Joly, D., Karesh, W.B. et al. 2014. A new
+        approach for monitoring Ebolavirus in wild great apes. \u003ci\u003ePLoS Neglected
+        Tropical Diseases\u003c/i\u003e 8: e3143.","year":"2014","title":"A new approach
+        for monitoring Ebolavirus in wild great apes","author":"Reed, P.E., Cameron,
+        K.N., Ondzie, A.U., Joly, D., Karesh, W.B. et al.","citation_short":null},{"citation":"Transparency
+        International. 2016. Corruption Perceptions Index 2015. Transparency International,
+        Berlin.","year":"2016","title":"Corruption Perceptions Index 2015","author":"Transparency
+        International","citation_short":""},{"citation":"Breuer, T., Robbins, A.M.,
+        Olejniczak, C., Parnell, R.J., Stokes, E.J. and Robbins, M.M. 2010. Variance
+        in the male reproductive success of western gorillas: Acquiring females is
+        just the beginning. \u003ci\u003eBehavioral Ecology and Sociobiology\u003c/i\u003e
+        64: 1–14.","year":"2010","title":"Variance in the male reproductive success
+        of western gorillas: Acquiring females is just the beginning","author":"Breuer,
+        T., Robbins, A.M., Olejniczak, C., Parnell, R.J., Stokes, E.J. and Robbins,
+        M.M.","citation_short":null},{"citation":"Arandjelovic, M., Bergl, R.A., Ikfuingei,
+        R., Jameson, C., Parker, M. and Vigilant, L. 2015. Detection dog efficacy
+        for collecting faecal samples from the critically endangered Cross River gorilla
+        (\u003ci\u003eGorilla gorilla diehli\u003c/i\u003e) for genetic censusing.
+        \u003ci\u003eRoyal Society Open Science\u003c/i\u003e 2: 140423.","year":"2015","title":"Detection
+        dog efficacy for collecting faecal samples from the critically endangered
+        Cross River gorilla (\u003ci\u003eGorilla gorilla diehli\u003c/i\u003e) for
+        genetic censusing","author":"Arandjelovic, M., Bergl, R.A., Ikfuingei, R.,
+        Jameson, C., Parker, M. and Vigilant, L.","citation_short":""},{"citation":"Imong,
+        I., Robbins, M.M., Mundry, R., Bergl, R.A. and Kuhl, H.S. 2014. Informing
+        conservation management about structural versus functional connectivity: a
+        case-study of Cross River gorillas. \u003ci\u003eAmerican Journal of Primatology\u003c/i\u003e
+        76: 978–988.","year":"2014","title":"Informing conservation management about
+        structural versus functional connectivity: a case-study of Cross River gorillas","author":"Imong,
+        I., Robbins, M.M., Mundry, R., Bergl, R.A. and Kuhl, H.S.","citation_short":""},{"citation":"Stokes,
+        E.J., Strindberg, S., Bakabana, P.C., Elkan, P.W., Iyenguet, F.C. et al. 2010.
+        Monitoring great ape and elephant abundance at large spatial scales: measuring
+        effectiveness of a conservation landscape. \u003ci\u003ePLoS One\u003c/i\u003e
+        5: e10294.","year":"2010","title":"Monitoring great ape and elephant abundance
+        at large spatial scales: measuring effectiveness of a conservation landscape","author":"Stokes,
+        E.J., Strindberg, S., Bakabana, P.C., Elkan, P.W., Iyenguet, F.C. et al.","citation_short":null},{"citation":"Poulsen,
+        J.R., Clark, C.J., Mavah, G. and Elkan, P.W. 2009. Bushmeat supply and consumption
+        in a tropical logging concession in northern Congo. \u003ci\u003eConservation
+        Biology\u003c/i\u003e 23: 1597–1608.","year":"2009","title":"Bushmeat supply
+        and consumption in a tropical logging concession in northern Congo","author":"Poulsen,
+        J.R., Clark, C.J., Mavah, G. and Elkan, P.W.","citation_short":null},{"citation":"Blake,
+        S., Strindberg, S. and Princée, F. 2012. Evaluation of the CARPO/GHOA Biological
+        Monitoring Programme. Reporting on Consultancy Contract No. WWF CARPO/AFGAP/FY12/CC/030
+        and Project Activity No. 9F0865.01. World Wide Fund for Nature, Morges, Switzerland.","year":"2012","title":"Evaluation
+        of the CARPO/GHOA Biological Monitoring Programme. Reporting on Consultancy
+        Contract No. WWF CARPO/AFGAP/FY12/CC/030 and Project Activity No. 9F0865.01","author":"Blake,
+        S., Strindberg, S. and Princée, F.","citation_short":null},{"citation":"Rainey,
+        H.J., Iyenguet, F.C., Malanda, G.-A.F., Madzoké, B., Santos, D.D., Stokes,
+        E.J., Maisels, F. and Strindberg, S. 2010. Survey of Raphia swamp forest,
+        Republic of Congo, indicates high densities of critically endangered western
+        lowland gorillas \u003ci\u003eGorilla gorilla gorilla\u003c/i\u003e. \u003ci\u003eOryx\u003c/i\u003e
+        44: 124–132.","year":"2010","title":"Survey of Raphia swamp forest, Republic
+        of Congo, indicates high densities of critically endangered western lowland
+        gorillas \u003ci\u003eGorilla gorilla gorilla\u003c/i\u003e","author":"Rainey,
+        H.J., Iyenguet, F.C., Malanda, G.-A.F., Madzoké, B., Santos, D.D., Stokes,
+        E.J., Maisels, F. and Strindberg, S.","citation_short":null},{"citation":"Bour,
+        P., Drori, O., Elkan, P., Feistner, A., Froment, J.M. et al. 2013. La crise
+        du trafic d’ivoire et la gestion de la faune en Afrique Centrale. Contribution
+        aux réflexions initiales menées pour le développement des Plans de Lutte Anti-braconnage
+        proposées par la CEEAC. Available at: \u003ca href=\"http://cms-family-ors.unep-wcmc.org/answers/1959658/documents/383\"\u003ehttp://cms-family-ors.unep-wcmc.org/answers/1959658/documents/383\u003c/a\u003e.
+        ","year":"2013","title":"La crise du trafic d’ivoire et la gestion de la faune
+        en Afrique Centrale. Contribution aux réflexions initiales menées pour le
+        développement des Plans de Lutte Anti-braconnage proposées par la CEEAC","author":"Bour,
+        P., Drori, O., Elkan, P., Feistner, A., Froment, J.M. et al.","citation_short":""},{"citation":"Strindberg,
+        S., Maisels, F. et al. In prep. Guns, germs and trees: key factors influencing
+        the status of gorillas and chimpanzees in Western Equatorial Africa.","year":"2016","title":"Guns,
+        germs and trees: key factors influencing the status of gorillas and chimpanzees
+        in Western Equatorial Africa","author":"Strindberg, S., Maisels, F. et al.","citation_short":""},{"citation":"Lewis,
+        S.L., Sonke, B., Sunderland, T., Begne, S.K., Lopez-Gonzalez, G. et al. 2013.
+        Above-ground biomass and structure of 260 African tropical forests. \u003ci\u003ePhilosophical
+        Transactions of the Royal Society B-Biological Sciences\u003c/i\u003e 368:
+        20120295.","year":"2013","title":"Above-ground biomass and structure of 260
+        African tropical forests","author":"Lewis, S.L., Sonke, B., Sunderland, T.,
+        Begne, S.K., Lopez-Gonzalez, G. et al.","citation_short":null},{"citation":"Maisels,
+        F., Nishihara, T., Strindberg , S., Boudjan, P., Breuer, T. et al. 2012. Great
+        Ape and Human Impact Monitoring Training, Surveys, and Protection in the Ndoki-Likouala
+        Landscape, Republic of Congo. Final Report. Wildlife Conservation Society,
+        Brazzaville, Congo.","year":"2012","title":"Great Ape and Human Impact Monitoring
+        Training, Surveys, and Protection in the Ndoki-Likouala Landscape, Republic
+        of Congo. Final Report","author":"Maisels, F., Nishihara, T., Strindberg ,
+        S., Boudjan, P., Breuer, T. et al.","citation_short":null},{"citation":"Lehmann,
+        J., Korstjens, A.H. and Dunbar, R.I.M. 2010. Apes in a changing world – the
+        effects of global warming on the behaviour and distribution of African apes.
+        \u003ci\u003eJournal of Biogeography\u003c/i\u003e 37: 2217–2231.","year":"2010","title":"Apes
+        in a changing world – the effects of global warming on the behaviour and distribution
+        of African apes","author":"Lehmann, J., Korstjens, A.H. and Dunbar, R.I.M.","citation_short":null},{"citation":"IUCN
+        SSC Primate Specialist Group. 2014. Industrial oil palm expansion in great
+        ape habitat in Africa. A policy statement from the Section on Great Apes (SGA)
+        of the IUCN SSC Primate Specialist Group. Available at: \u003ca href=\"http://www.primate-sg.org/position-statements\"\u003ehttp://www.primate-sg.org/position-statements\u003c/a\u003e.
+        ","year":"2014","title":"Industrial oil palm expansion in great ape habitat
+        in Africa. A policy statement from the Section on Great Apes (SGA) of the
+        IUCN SSC Primate Specialist Group","author":"IUCN SSC Primate Specialist Group","citation_short":""},{"citation":"Ryan,
+        S.J. and Walsh, P.D. 2011. Consequences of non-intervention for infectious
+        disease in African great apes. \u003ci\u003ePLoS One\u003c/i\u003e 6: e29030.","year":"2011","title":"Consequences
+        of non-intervention for infectious disease in African great apes","author":"Ryan,
+        S.J. and Walsh, P.D.","citation_short":null},{"citation":"Williamson, E.A.,
+        Maisels, F.G., Groves, C.P., Fruth, B., Humle, T.H., Morton, F.B., Richardson,
+        M.C., Russon, A. and Singleton, I. 2013. Hominidae. In: R.A. Mittermeier,
+        A.B. Rylands and D.E. Wilson (eds), \u003ci\u003eHandbook of the Mammals of
+        the World Vol 3: Primates\u003c/i\u003e, pp. 792–854. Lynx Edicions, Barcelona,
+        Spain.","year":"2013","title":"Hominidae","author":"Williamson, E.A., Maisels,
+        F.G., Groves, C.P., Fruth, B., Humle, T.H., Morton, F.B., Richardson, M.C.,
+        Russon, A. and Singleton, I.","citation_short":""},{"citation":"Morgan, D.,
+        Sanz, C., Greer, D., Rayden, T., Maisels, F. and Williamson, E.A. 2013. \u003ci\u003eGreat
+        Apes and FSC: Implementing ‘Ape Friendly’ Practices in Central Africa’s Logging
+        Concessions\u003c/i\u003e. IUCN/SSC Primate Specialist Group, Gland, Switzerland.","year":"2013","title":"Great
+        Apes and FSC: Implementing ‘Ape Friendly’ Practices in Central Africa’s Logging
+        Concessions","author":"Morgan, D., Sanz, C., Greer, D., Rayden, T., Maisels,
+        F. and Williamson, E.A.","citation_short":null},{"citation":"Global Forest
+        Watch. 2016. Available at: \u003ca href=\"http://www.globalforestwatch.org/map/6/0.74/15.68/ALL/grayscale/none/581\"\u003ehttp://www.globalforestwatch.org/map/6/0.74/15.68/ALL/grayscale/none/581\u003c/a\u003e.
+        ","year":"2016","title":"","author":"Global Forest Watch ","citation_short":""},{"citation":"Laporte,
+        N.T., Stabach, J.A., Grosch, R., Lin, T.S. and Goetz, S.J. 2007. Expansion
+        of industrial logging in Central Africa. \u003ci\u003eScience\u003c/i\u003e
+        316(5830): 1451.","year":"2007","title":"Expansion of industrial logging in
+        Central Africa","author":"Laporte, N.T., Stabach, J.A., Grosch, R., Lin, T.S.
+        and Goetz, S.J.","citation_short":""},{"citation":"Walsh, P.D., Bermejo, M.
+        and Rodriguez-Teijeiro, J.D. 2009. Disease avoidance and the evolution of
+        primate social connectivity: Ebola, bats, gorillas, and chimpanzees. In: M.A.
+        Huffman and C.A. Chapman (eds), \u003ci\u003ePrimate Parasite Ecology: The
+        Dynamics and Study of Host–Parasite Relationships\u003c/i\u003e, pp. 183–198.
+        Cambridge University Press, Cambridge, UK.","year":"2009","title":"Disease
+        avoidance and the evolution of primate social connectivity: Ebola, bats, gorillas,
+        and chimpanzees","author":"Walsh, P.D., Bermejo, M. and Rodriguez-Teijeiro,
+        J.D.","citation_short":""},{"citation":"Magliocca, F., Querouil, S. and Gautier-Hion,
+        A. 1999. Population structure and group composition of western lowland gorillas
+        in north-western Republic of Congo. \u003ci\u003eAmerican Journal of Primatology\u003c/i\u003e
+        48: 1-14.","year":"1999","title":"Population structure and group composition
+        of western lowland gorillas in north-western Republic of Congo","author":"Magliocca,
+        F., Querouil, S. and Gautier-Hion, A.","citation_short":""},{"citation":"Fünfstück,
+        T. and Vigilant, L. 2015. The geographic distribution of genetic diversity
+        within gorillas. \u003ci\u003eAmerican Journal of Primatology\u003c/i\u003e
+        77: 974–985.","year":"2015","title":"The geographic distribution of genetic
+        diversity within gorillas","author":"Fünfstück, T. and Vigilant, L.","citation_short":null},{"citation":"Anthony,
+        N.M., Johnson-Bawe, M., Jeffery, K., Clifford, S.L., Abernethy, K.A., Tutin,
+        C.E., Lahm, S.A., White, L.J.T., Utley, J.F., Wickings, E.J. and Bruford,
+        M.W. 2007. The role of Pleistocene refugia and rivers in shaping gorilla genetic
+        diversity in central Africa. \u003ci\u003eProceedings of the National Academy
+        of Sciences of the United States of America\u003c/i\u003e 104: 20432–20436.","year":"2007","title":"The
+        role of Pleistocene refugia and rivers in shaping gorilla genetic diversity
+        in central Africa","author":"Anthony, N.M., Johnson-Bawe, M., Jeffery, K.,
+        Clifford, S.L., Abernethy, K.A., Tutin, C.E., Lahm, S.A., White, L.J.T., Utley,
+        J.F., Wickings, E.J. and Bruford, M.W.","citation_short":null},{"citation":"Blake,
+        S., Rogers, E., Fay, J. M., Ngangoue, M. and Ebeke, G. 1995. Swamp gorillas
+        in northern Congo. \u003ci\u003eAfrican Journal of Ecology\u003c/i\u003e 33:
+        285–290.","year":"1995","title":"Swamp gorillas in northern Congo","author":"Blake,
+        S., Rogers, E., Fay, J. M., Ngangoue, M. and Ebeke, G.","citation_short":null},{"citation":"Prado-Martinez,
+        J., Sudmant, P.H., Kidd, J.M., Li H., Kelley J.L. et al. 2013. Great ape genetic
+        diversity and population history. \u003ci\u003eNature\u003c/i\u003e 499: 471–475.","year":"2013","title":"Great
+        ape genetic diversity and population history","author":"Prado-Martinez, J.,
+        Sudmant, P.H., Kidd, J.M., Li H., Kelley J.L. et al.","citation_short":""},{"citation":"Kühl,
+        H., Maisels, F., Ancrenaz, M. and Williamson, E.A. 2008. \u003ci\u003eBest
+        Practice Guidelines for Surveys and Monitoring of Great Ape Populations\u003c/i\u003e.
+        IUCN/SSC Primate Specialist Group, Gland, Switzerland.","year":"2008","title":"Best
+        Practice Guidelines for Surveys and Monitoring of Great Ape Populations","author":"Kühl,
+        H., Maisels, F., Ancrenaz, M. and Williamson, E.A.","citation_short":null},{"citation":"James,
+        R., Washington, R. and Rowell, D.P. 2013. Implications of global warming for
+        the climate of African rainforests. \u003ci\u003ePhilosophical Transactions
+        of the Royal Society B: Biological Sciences\u003c/i\u003e 368: 20120298.","year":"2013","title":"Implications
+        of global warming for the climate of African rainforests","author":"James,
+        R., Washington, R. and Rowell, D.P.","citation_short":null},{"citation":"IUCN.
+        2014. \u003ci\u003eRegional Action Plan for the Conservation of Western Lowland
+        Gorillas and Central Chimpanzees 2015–2025\u003c/i\u003e. IUCN SSC Primate
+        Specialist Group, Gland, Switzerland.","year":"2014","title":"Regional Action
+        Plan for the Conservation of Western Lowland Gorillas and Central Chimpanzees
+        2015–2025","author":"IUCN","citation_short":null},{"citation":"Lovett, J.C.
+        2015. Modelling the effects of climate change in Africa. \u003ci\u003eAfrican
+        Journal of Ecology\u003c/i\u003e 53: 1–2.","year":"2015","title":"Modelling
+        the effects of climate change in Africa","author":"Lovett, J.C.","citation_short":null},{"citation":"Bergl,
+        R.A., Warren, Y., Nicholas, A., Dunn, A., Imong, I., Sunderland-Groves, J.L.
+        and Oates, J.F. 2012. Remote sensing analysis reveals habitat, dispersal corridors
+        and expanded distribution for the Critically Endangered Cross River gorilla,
+        \u003ci\u003eGorilla gorilla diehli\u003c/i\u003e. \u003ci\u003eOryx\u003c/i\u003e
+        46: 278–289.","year":"2012","title":"Remote sensing analysis reveals habitat,
+        dispersal corridors and expanded distribution for the Critically Endangered
+        Cross River gorilla, \u003ci\u003eGorilla gorilla diehli\u003c/i\u003e","author":"Bergl,
+        R.A., Warren, Y., Nicholas, A., Dunn, A., Imong, I., Sunderland-Groves, J.L.
+        and Oates, J.F.","citation_short":""},{"citation":"Etiendem, D.N. and Tagg
+        N. 2013. Feeding ecology of Cross River gorillas (\u003ci\u003eGorilla gorilla
+        diehli\u003c/i\u003e) at Mawambi Hills: the influence of resource seasonality.
+        \u003ci\u003eInternational Journal of Primatology \u003c/i\u003e 34: 1261–1280.","year":"2013","title":"Feeding
+        ecology of Cross River gorillas (\u003ci\u003eGorilla gorilla diehli\u003c/i\u003e)
+        at Mawambi Hills: the influence of resource seasonality","author":"Etiendem,
+        D.N. and Tagg N.","citation_short":""},{"citation":"Breuer, T., Hockemba,
+        M.B.N., Olejniczak, C., Parnell, R.J. and Stokes, E.J. 2009. Physical maturation,
+        life-history classes and age estimates of free-ranging western gorillas–insights
+        from Mbeli Bai, Republic of Congo. \u003ci\u003eAmerican Journal of Primatology\u003c/i\u003e
+        71: 106–119.","year":"2009","title":"Physical maturation, life-history classes
+        and age estimates of free-ranging western gorillas–insights from Mbeli Bai,
+        Republic of Congo","author":"Breuer, T., Hockemba, M.B.N., Olejniczak, C.,
+        Parnell, R.J. and Stokes, E.J.","citation_short":null},{"citation":"Rainey,
+        H.J., Iyenguet, F.C., Malanda, G.-A.F., Madzoké, B., Santos, D.D., Stokes,
+        E.J., Maisels, F. and Strindberg, S. 2009. Survey of Raphia swamp forest,
+        Republic of Congo, indicates high densities of Critically Endangered western
+        lowland gorillas \u003ci\u003eGorilla gorilla gorilla\u003c/i\u003e. \u003ci\u003eOryx\u003c/i\u003e
+        44: 124–132.","year":"2009","title":"Survey of Raphia swamp forest, Republic
+        of Congo, indicates high densities of Critically Endangered western lowland
+        gorillas \u003ci\u003eGorilla gorilla gorilla\u003c/i\u003e","author":"Rainey,
+        H.J., Iyenguet, F.C., Malanda, G.-A.F., Madzoké, B., Santos, D.D., Stokes,
+        E.J., Maisels, F. and Strindberg, S.","citation_short":null},{"citation":"Sawyer,
+        S.C. and Brashares, J.S. 2013. Applying resource selection functions at multiple
+        scales to prioritize habitat use by the endangered Cross River gorilla. \u003ci\u003eDiversity
+        and Distributions\u003c/i\u003e 19: 943–954.","year":"2013","title":"Applying
+        resource selection functions at multiple scales to prioritize habitat use
+        by the endangered Cross River gorilla","author":"Sawyer, S.C. and Brashares,
+        J.S.","citation_short":""},{"citation":"Dunn, A., Bergl, R., Byler, D., Eben-Ebai,
+        S., Etiendem, D.N., Fotso, R., Ikfuingei, R., Imong, I., Jameson, C., Macfie,
+        L., Morgan, B., Nchanji, A., Nicholas, A., Nkembi, L., Omeni, F., Oates, J.,
+        Pokempner, A., Sawyer, S. and Williamson, E.A. 2014. \u003ci\u003eRevised
+        Regional Action Plan for the Conservation of the Cross River Gorilla (\u003c/i\u003eGorilla
+        gorilla diehli\u003ci\u003e): 2014–2019\u003c/i\u003e. IUCN/SSC Primate Specialist
+        Group and Wildlife Conservation Society, New York.","year":"2014","title":"Revised
+        Regional Action Plan for the Conservation of the Cross River Gorilla (\u003ci\u003eGorilla
+        gorilla diehli\u003c/i\u003e): 2014–2019","author":"Dunn, A., Bergl, R., Byler,
+        D., Eben-Ebai, S., Etiendem, D.N., Fotso, R., Ikfuingei, R., Imong, I., Jameson,
+        C., Macfie, L., Morgan, B., Nchanji, A., Nicholas, A., Nkembi, L., Omeni,
+        F., Oates, J., Pokempner, A., Sawyer, S. and Williamson, E.A.","citation_short":""},{"citation":"Fünfstück,
+        T., Arandjelovic, M., Morgan, D.B., Sanz, C., Breuer, T. et al. 2014. The
+        genetic population structure of wild western lowland gorillas (\u003ci\u003eGorilla
+        gorilla gorilla\u003c/i\u003e) living in continuous rain forest. \u003ci\u003eAmerican
+        Journal of Primatology\u003c/i\u003e 76: 868–878.","year":"2014","title":"The
+        genetic population structure of wild western lowland gorillas (\u003ci\u003eGorilla
+        gorilla gorilla\u003c/i\u003e) living in continuous rain forest","author":"Fünfstück,
+        T., Arandjelovic, M., Morgan, D.B., Sanz, C., Breuer, T. et al.","citation_short":null},{"citation":"Edwards,
+        D.P., Sloan, S., Weng, L., Dirks, P., Sayer, J. and Laurance, W.F. 2014. Mining
+        and the African environment. \u003ci\u003eConservation Letters\u003c/i\u003e
+        7(3): 302-311.","year":"2014","title":"Mining and the African environment","author":"Edwards,
+        D.P., Sloan, S., Weng, L., Dirks, P., Sayer, J. and Laurance, W.F. ","citation_short":""},{"citation":"Bennett,
+        E.L. 2014. Legal ivory trade in a corrupt world and its impact on African
+        elephant populations. \u003ci\u003eConservation Biology\u003c/i\u003e 29:
+        54–60.","year":"2014","title":"Legal ivory trade in a corrupt world and its
+        impact on African elephant populations","author":"Bennett, E.L","citation_short":null},{"citation":"Imong,
+        I., Robbins, M.M., Mundry, R., Bergl, R. and Kühl, H.S. 2013. Distinguishing
+        ecological constraints from human activity in species range fragmentation:
+        the case of Cross River gorillas. \u003ci\u003eAnimal Conservation\u003c/i\u003e
+        17: 323–331.","year":"2013","title":"Distinguishing ecological constraints
+        from human activity in species range fragmentation: the case of Cross River
+        gorillas","author":"Imong, I., Robbins, M.M., Mundry, R., Bergl, R. and Kühl,
+        H.S.","citation_short":""},{"citation":"Rival, A. and Levang, P. 2014. Palms
+        of Controversies: Oil Palm and Development Challenges. CIFOR, Bogor, Indonesia.","year":"2014","title":"Palms
+        of Controversies: Oil Palm and Development Challenges","author":"Rival, A.
+        and Levang, P.","citation_short":null},{"citation":"Williamson, E.A., Rawson,
+        B.M., Cheyne, S.M., Meijaard, E. and Wich, S.A. 2014. Ecological impacts of
+        extractive industries on ape populations. In: Arcus Foundation (ed.), \u003ci\u003eState
+        of the Apes 2013: Extractive Industries and Ape Conservation\u003c/i\u003e,
+        pp. 65–99. Cambridge University Press, Cambridge, UK.","year":"2014","title":"Ecological
+        impacts of extractive industries on ape populations","author":"Williamson,
+        E.A., Rawson, B.M., Cheyne, S.M., Meijaard, E. and Wich, S.A.","citation_short":""},{"citation":"Wich,
+        S.A., Garcia-Ulloa, J., Kühl, H.S., Humle, T., Lee, J.S. and Koh, L.P. 2014.
+        Will oil palm''s homecoming spell doom for Africa''s great apes? \u003ci\u003eCurrent
+        Biology\u003c/i\u003e 24: 1659–1663.","year":"2014","title":"Will oil palm''s
+        homecoming spell doom for Africa''s great apes?","author":"Wich, S.A., Garcia-Ulloa,
+        J., Kühl, H.S., Humle, T., Lee, J.S. and Koh, L.P.","citation_short":""},{"citation":"Maisels,
+        F., Strindberg, S., Kiminou, F., Ndzai, C., Ngounga, R. et al. 2013. Wildlife
+        and Human Impact Survey 2012, and monitoring 2005–2008–2012. Odzala-Kokoua
+        National Park, Republic of Congo. Fondation Odzala-Kokoua and Wildlife Conservation
+        Society, Brazzaville, Congo.","year":"2013","title":"Wildlife and Human Impact
+        Survey 2012, and monitoring 2005–2008–2012. Odzala-Kokoua National Park, Republic
+        of Congo","author":"Maisels, F., Strindberg, S., Kiminou, F., Ndzai, C., Ngounga,
+        R. et al.","citation_short":null},{"citation":"Sunderland-Groves, J.L., Ekinde,
+        A. and Mboh, H. 2009. Nesting behavior of \u003ci\u003eGorilla gorilla diehli\u003c/i\u003e
+        at Kagwene Mountain, Cameroon: implications for assessing group size and density.
+        \u003ci\u003eInternational Journal of Primatology\u003c/i\u003e 30: 253–266.","year":"2009","title":"Nesting
+        behavior of \u003ci\u003eGorilla gorilla diehli\u003c/i\u003e at Kagwene Mountain,
+        Cameroon: implications for assessing group size and density","author":"Sunderland-Groves,
+        J.L., Ekinde, A. and Mboh, H.","citation_short":""},{"citation":"Lanjouw,
+        A. 2014. Mining/oil extraction and ape populations and habitats. In: Arcus
+        Foundation (ed.), \u003ci\u003eState of the Apes 2013: Extractive Industries
+        and Ape Conservation\u003c/i\u003e, pp. 127–161. Cambridge University Press,
+        Cambridge, UK.","year":"2014","title":"Mining/oil extraction and ape populations
+        and habitats","author":"Lanjouw, A.","citation_short":null},{"citation":"Walsh,
+        P.D., Tutin, C.E.G., Baillie, J.E.M., Maisels, F., Stokes, E.J. and Gatti,
+        S. 2008. \u003ci\u003e\u003c/i\u003eGorilla gorilla ssp. Gorilla\u003ci\u003e\u003c/i\u003e.
+        The IUCN Red List of Threatened Species.","year":"2008","title":"\u003ci\u003eGorilla
+        gorilla ssp. Gorilla\u003c/i\u003e","author":"Walsh, P.D., Tutin, C.E.G.,
+        Baillie, J.E.M., Maisels, F., Stokes, E.J. and Gatti, S. ","citation_short":null},{"citation":"De
+        Vere, R.A., Warren, Y., Nicholas, A., Mackenzie, M.E. and Higham, J.P. 2011.
+        Nest site ecology of the Cross River gorilla at the Kagwene Gorilla Sanctuary,
+        Cameroon, with special reference to anthropogenic influence. \u003ci\u003eAmerican
+        Journal of Primatology\u003c/i\u003e 73: 253–261.","year":"2011","title":"Nest
+        site ecology of the Cross River gorilla at the Kagwene Gorilla Sanctuary,
+        Cameroon, with special reference to anthropogenic influence","author":"De
+        Vere, R.A., Warren, Y., Nicholas, A., Mackenzie, M.E. and Higham, J.P. ","citation_short":null},{"citation":"Gilardi,
+        K.V., Gillespie, T.R., Leendertz, F.H., Macfie, E.J., Travis, D.A., Whittier,
+        C.A. and Williamson, E.A. 2015. \u003ci\u003eBest Practice Guidelines for
+        Health Monitoring and Disease Control in Great Ape Populations\u003c/i\u003e.
+        IUCN SSC Primate Specialist Group, Gland, Switzerland.","year":"2015","title":"Best
+        Practice Guidelines for Health Monitoring and Disease Control in Great Ape
+        Populations","author":"Gilardi, K.V., Gillespie, T.R., Leendertz, F.H., Macfie,
+        E.J., Travis, D.A., Whittier, C.A. and Williamson, E.A.","citation_short":null},{"citation":"Genton,
+        C., Cristescu, R., Gatti, S., Levrero, F., Bigot, E., Caillaud, D., Pierre,
+        J.S. and Menard, N. 2012. Recovery potential of a western lowland gorilla
+        population following a major Ebola outbreak: results from a ten year study.
+        \u003ci\u003ePLoS One\u003c/i\u003e 7: e37106.","year":"2012","title":"Recovery
+        potential of a western lowland gorilla population following a major Ebola
+        outbreak: results from a ten year study","author":"Genton, C., Cristescu,
+        R., Gatti, S., Levrero, F., Bigot, E., Caillaud, D., Pierre, J.S. and Menard,
+        N.","citation_short":null},{"citation":"Laurance, W.F., Sloan, S., Weng, L.
+        and Sayer, J.A. 2015. Estimating the environmental costs of Africa''s massive
+        development corridors. \u003ci\u003eCurrent Biology\u003c/i\u003e 25: 3202–3208.","year":"2015","title":"Estimating
+        the environmental costs of Africa''s massive development corridors","author":"Laurance,
+        W.F., Sloan, S., Weng, L. and Sayer, J.A.","citation_short":null},{"citation":"Korstjens,
+        A.H., Lehmann, J. and Dunbar, R.I.M. 2010. Resting time as an ecological constraint
+        on primate biogeography. \u003ci\u003eAnimal Behaviour\u003c/i\u003e 79: 361–374.","year":"2010","title":"Resting
+        time as an ecological constraint on primate biogeography","author":"Korstjens,
+        A.H., Lehmann, J. and Dunbar, R.I.M.","citation_short":null},{"citation":"Wilkie,
+        D., Shaw, E., Rotberg, F., Morelli, G. and Auzel, P. 2000. Roads, development
+        and conservation in the Congo basin. \u003ci\u003eConservation Biology\u003c/i\u003e
+        14: 1614–1622.","year":"2000","title":"Roads, development and conservation
+        in the Congo basin","author":"Wilkie, D., Shaw, E., Rotberg, F., Morelli,
+        G. and Auzel, P.","citation_short":null},{"citation":"IUCN. 2016. The IUCN
+        Red List of Threatened Species. Version 2016-2. Available at: \u003ca href=\"www.iucnredlist.org\"\u003ewww.iucnredlist.org\u003c/a\u003e.
+        (Accessed: 04 September 2016).","year":"2016","title":"The IUCN Red List of
+        Threatened Species. Version 2016-2","author":"IUCN","citation_short":"IUCN
+        2016-2"},{"citation":"Williamson, E.A. and Butynski, T.M. 2013. \u003ci\u003eGorilla
+        gorilla\u003c/i\u003e Western Gorilla. In: T.M. Butynski, J. Kingdon and J.
+        Kalina (eds), \u003ci\u003eMammals of Africa\u003c/i\u003e, pp. 39–45. Bloomsbury
+        Publishing, London, UK.","year":"2013","title":"\u003ci\u003eGorilla gorilla\u003c/i\u003e
+        Western Gorilla","author":"Williamson, E.A. and Butynski, T.M.","citation_short":""},{"citation":"IUCN.
+        2018. The IUCN Red List of Threatened Species. Version 2018-2. Available at:
+        \u003ca href=\"www.iucnredlist.org\"\u003ewww.iucnredlist.org\u003c/a\u003e.
+        (Accessed: 15 November 2018).","year":"2018","title":"The IUCN Red List of
+        Threatened Species. Version 2018-2","author":"IUCN","citation_short":"IUCN
+        2018-2"}],"growth_forms":[],"lmes":[],"scopes":[{"description":{"en":"Global"},"code":"1"}],"stresses":[{"description":{"en":"Ecosystem
+        conversion"},"code":"1_1"},{"description":{"en":"Ecosystem conversion"},"code":"1_1"},{"description":{"en":"Ecosystem
+        conversion"},"code":"1_1"},{"description":{"en":"Ecosystem conversion"},"code":"1_1"},{"description":{"en":"Ecosystem
+        conversion"},"code":"1_1"},{"description":{"en":"Ecosystem degradation"},"code":"1_2"},{"description":{"en":"Ecosystem
+        degradation"},"code":"1_2"},{"description":{"en":"Ecosystem degradation"},"code":"1_2"},{"description":{"en":"Ecosystem
+        degradation"},"code":"1_2"},{"description":{"en":"Indirect ecosystem effects"},"code":"1_3"},{"description":{"en":"Indirect
+        ecosystem effects"},"code":"1_3"},{"description":{"en":"Species mortality"},"code":"2_1"},{"description":{"en":"Species
+        mortality"},"code":"2_1"},{"description":{"en":"Species mortality"},"code":"2_1"},{"description":{"en":"Species
+        mortality"},"code":"2_1"},{"description":{"en":"Species mortality"},"code":"2_1"},{"description":{"en":"Species
+        mortality"},"code":"2_1"},{"description":{"en":"Species mortality"},"code":"2_1"},{"description":{"en":"Species
+        mortality"},"code":"2_1"},{"description":{"en":"Species disturbance"},"code":"2_2"},{"description":{"en":"Species
+        disturbance"},"code":"2_2"},{"description":{"en":"Species disturbance"},"code":"2_2"},{"description":{"en":"Species
+        disturbance"},"code":"2_2"},{"description":{"en":"Species disturbance"},"code":"2_2"},{"description":{"en":"Species
+        disturbance"},"code":"2_2"},{"description":{"en":"Species disturbance"},"code":"2_2"},{"description":{"en":"Species
+        disturbance"},"code":"2_2"},{"description":{"en":"Species disturbance"},"code":"2_2"},{"description":{"en":"Competition"},"code":"2_3_2"},{"description":{"en":"Skewed
+        sex ratios"},"code":"2_3_6"},{"description":{"en":"Reduced reproductive success"},"code":"2_3_7"},{"description":{"en":"Reduced
+        reproductive success"},"code":"2_3_7"},{"description":{"en":"Reduced reproductive
+        success"},"code":"2_3_7"},{"description":{"en":"Reduced reproductive success"},"code":"2_3_7"},{"description":{"en":"Reduced
+        reproductive success"},"code":"2_3_7"},{"description":{"en":"Other"},"code":"2_3_8"}],"systems":[{"description":{"en":"Terrestrial"},"code":"0"}]}'
+  recorded_at: 2025-04-30 21:33:06 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0
