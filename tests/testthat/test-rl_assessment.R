@@ -71,7 +71,11 @@ test_that("rl_assessment_list works", {
 
   vcr::use_cassette("rl_assessment_list_warning", {
     expect_message(rl_assessment_list(ids = c(166290968, 136250858),
-                                      wait_time = 0))
+                                      wait_time = 0), "short wait time")
+  })
+
+  vcr::use_cassette("rl_assessment_list_warning2", {
+    expect_message(rl_assessment_list(ids = c(5, 136250858)), "Couldn't find")
   })
 
   expect_is(aa, "list")
@@ -120,6 +124,7 @@ test_that("rl_assessment_extract works", {
                "lst must be of class list")
   expect_error(rl_assessment_extract(aa, el_name = 5),
                "el_name must be of class character")
+  expect_error(rl_assessment_extract(aa, el_name = "abcdefg"))
   expect_error(rl_assessment_extract(aa, el_name = "taxon", format = TRUE),
                "format must be of class character")
   expect_error(rl_assessment_extract(aa, el_name = "taxon", format = "test"))
