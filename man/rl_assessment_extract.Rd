@@ -20,7 +20,9 @@ example, to extract the synonyms table, you could use "taxon__synonyms".}
 
 \item{flatten}{(logical) If \code{TRUE}, the output will be flattened to a
 data.frame. Note that this may not work for all elements, especially
-complex multilevel list elements. Only used when \code{format = "df"}.}
+complex multilevel list elements. Only used when \code{format = "df"}. The
+\code{dplyr}, \code{tidyr}, and \code{tibble} packages are required to use this feature.
+Note that fields with no data across all assessments may be lost.}
 }
 \value{
 A list or data.frame containing the extracted element from each
@@ -35,7 +37,7 @@ or the red list category (\code{el_name = "red_list_category"}).
 }
 \details{
 The following top-level element names can be extracted as of
-2025-04-30:
+2025-05-06:
 \itemize{
 \item assessment_date
 \item assessment_id
@@ -81,13 +83,14 @@ found by inspecting the return of an \code{\link[=rl_assessment]{rl_assessment()
 lst <- rl_assessment_list(ids = c(166290968, 136250858))
 # get complex elements as a list
 ex1 <- rl_assessment_extract(lst, "taxon")
-# get complex elements within a data.frame
-ex2 <- rl_assessment_extract(lst, "threats", format = "df")
-# get simple elements flattened to a data.frame
-ex3 <- rl_assessment_extract(lst, "taxon__order_name", format = "df",
-                             flatten = TRUE)
-# get complex elements flattened to a data.frame
-ex4 <- rl_assessment_extract(lst, "taxon__synonyms", format = "df",
+# get simple elements as a data.frame
+ex2 <- rl_assessment_extract(lst, "red_list_category__code", format = "df")
+# get complex elements as a data.frame
+ex3 <- rl_assessment_extract(lst, "threats", format = "df")
+# get the same elements flattened to a single data.frame
+ex4 <- rl_assessment_extract(lst, "threats", format = "df", flatten = TRUE)
+# get subelements flattened to a data.frame
+ex5 <- rl_assessment_extract(lst, "taxon__order_name", format = "df",
                              flatten = TRUE)
 }
 }

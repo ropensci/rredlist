@@ -111,8 +111,9 @@ test_that("rl_assessment_extract works", {
   expect_equal(nrow(extract3), sum(nrow(extract2$common_names[[1]]),
                                    nrow(extract2$common_names[[2]])))
 
-  expect_error(rl_assessment_extract(aa, "taxon", format = "df",
-                                     flatten = TRUE), "Error flattening")
+  extract4 <- rl_assessment_extract(aa, "threats", format = "df",
+                                    flatten = TRUE)
+  expect_is(extract4, "data.frame")
 
   expect_error(rl_assessment_extract(), "is missing, with no default")
   expect_error(rl_assessment_extract(lst = 166290968, el_name = "taxon"),

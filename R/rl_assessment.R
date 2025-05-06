@@ -122,22 +122,27 @@ rl_assessment_list <- function(ids, key = NULL, wait_time = 0.5, quiet = FALSE,
 #'   (for a data.frame).
 #' @param flatten (logical) If `TRUE`, the output will be flattened to a
 #'   data.frame. Note that this may not work for all elements, especially
-#'   complex multilevel list elements. Only used when `format = "df"`.
+#'   complex multilevel list elements. Only used when `format = "df"`. The
+#'   `dplyr`, `tidyr`, and `tibble` packages are required to use this feature.
+#'   Note that fields with no data across all assessments may be lost.
 #' @return
 #'   A list or data.frame containing the extracted element from each
 #'   assessment.
 #' @export
+#' @importFrom rlang check_installed expr
+#' @importFrom cli cli_abort
 #' @examples \dontrun{
 #' lst <- rl_assessment_list(ids = c(166290968, 136250858))
 #' # get complex elements as a list
 #' ex1 <- rl_assessment_extract(lst, "taxon")
-#' # get complex elements within a data.frame
-#' ex2 <- rl_assessment_extract(lst, "threats", format = "df")
-#' # get simple elements flattened to a data.frame
-#' ex3 <- rl_assessment_extract(lst, "taxon__order_name", format = "df",
-#'                              flatten = TRUE)
-#' # get complex elements flattened to a data.frame
-#' ex4 <- rl_assessment_extract(lst, "taxon__synonyms", format = "df",
+#' # get simple elements as a data.frame
+#' ex2 <- rl_assessment_extract(lst, "red_list_category__code", format = "df")
+#' # get complex elements as a data.frame
+#' ex3 <- rl_assessment_extract(lst, "threats", format = "df")
+#' # get the same elements flattened to a single data.frame
+#' ex4 <- rl_assessment_extract(lst, "threats", format = "df", flatten = TRUE)
+#' # get subelements flattened to a data.frame
+#' ex5 <- rl_assessment_extract(lst, "taxon__order_name", format = "df",
 #'                              flatten = TRUE)
 #' }
 rl_assessment_extract <- function(lst, el_name, format = c("list", "df"),
@@ -156,6 +161,12 @@ rl_assessment_extract <- function(lst, el_name, format = c("list", "df"),
 
   # perform multi-level extraction
   for (el in el_name_spl) {
+    # check if element exists
+    if (!any(sapply(lst, function(x) el %in% names(x)))) {
+      cli_abort(
+        paste("Element {.val {el}} not found in any of the assessments.")
+      )
+    }
     lst <- lapply(lst, function(x) x[[el]])
   }
 
@@ -165,27 +176,45 @@ rl_assessment_extract <- function(lst, el_name, format = c("list", "df"),
     return(lst)
   } else {
     if (flatten) {
-      # TODO: would tibble fix most of this?
+      check_installed(c("dplyr", "tibble", "tidyr"),
+                      reason = "to use `flatten = TRUE`")
       tryCatch({
         for (i in seq_along(lst)) {
-          lst[[i]] <- as.data.frame(lst[[i]])
+          if (is.list(lst[[i]]) && !is.data.frame(lst[[i]])) {
+            # need to handle all sorts of formats, otherwise would use as_tibble
+            lst[[i]] <- tidyr::pivot_wider(tibble::enframe(lst[[i]]),
+                                           names_from = "name",
+                                           values_from = "value")
+          } else {
+            lst[[i]] <- as.data.frame(lst[[i]])
+          }
+          # if there is only one column, rename it to the element name
           if (ncol(lst[[i]]) == 1) {
-            colnames(lst[[i]]) <- el_name
+            colnames(lst[[i]]) <- el
           }
           if (nrow(lst[[i]]) > 0) {
             lst[[i]]$assessment_id <- ids[i]
           }
         }
-        df <- do.call(rbind, lst)
+        df <- dplyr::bind_rows(lst)
       },
       error = function(e) {
-        stop(paste0("Error flattening the \"", el_name, "\" element to a ",
-                    "data.frame. Try setting `flatten = FALSE` or extracting ",
-                    "a lower level element of the assessments."), call. = FALSE)
+        cli_abort(
+          paste("Error flattening the {.val {el_name}} element to a",
+                "data.frame. Try setting {.code flatten = FALSE} or extracting",
+                "a lower level element of the assessments."),
+          call = expr(rl_assessment_extract())
+        )
       })
 
       # move assessment_id to first column
       df <- df[, c("assessment_id", setdiff(names(df), "assessment_id"))]
+      # unlist columns that are simple vectors
+      for (col in colnames(df)) {
+        if (is.list(df[[col]]) && all(sapply(df[[col]], Negate(is.list)))) {
+          df[[col]] <- unlist(df[[col]], use.names = FALSE)
+        }
+      }
     } else {
       df <- data.frame(assessment_id = ids)
       df[[el]] <- lst

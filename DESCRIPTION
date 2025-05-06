@@ -55,6 +55,8 @@ Suggests:
     microbenchmark,
     ggplot2,
     dplyr,
+    tibble,
+    tidyr,
     patchwork,
     vdiffr
 RoxygenNote: 7.3.2
