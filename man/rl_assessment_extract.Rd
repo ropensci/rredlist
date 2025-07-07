@@ -37,7 +37,7 @@ or the red list category (\code{el_name = "red_list_category"}).
 }
 \details{
 The following top-level element names can be extracted as of
-2025-05-06:
+2025-07-07:
 \itemize{
 \item assessment_date
 \item assessment_id
@@ -92,5 +92,11 @@ ex4 <- rl_assessment_extract(lst, "threats", format = "df", flatten = TRUE)
 # get subelements flattened to a data.frame
 ex5 <- rl_assessment_extract(lst, "taxon__order_name", format = "df",
                              flatten = TRUE)
+# get a data frame with taxon name and red list category code
+ex6 <- merge(
+ rl_assessment_extract(lst, "taxon", format = "df", flatten = TRUE),
+ rl_assessment_extract(lst, "red_list_category__code", format = "df"),
+ by = "assessment_id"
+)
 }
 }

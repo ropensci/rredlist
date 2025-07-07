@@ -144,6 +144,12 @@ rl_assessment_list <- function(ids, key = NULL, wait_time = 0.5, quiet = FALSE,
 #' # get subelements flattened to a data.frame
 #' ex5 <- rl_assessment_extract(lst, "taxon__order_name", format = "df",
 #'                              flatten = TRUE)
+#' # get a data frame with taxon name and red list category code
+#' ex6 <- merge(
+#'  rl_assessment_extract(lst, "taxon", format = "df", flatten = TRUE),
+#'  rl_assessment_extract(lst, "red_list_category__code", format = "df"),
+#'  by = "assessment_id"
+#' )
 #' }
 rl_assessment_extract <- function(lst, el_name, format = c("list", "df"),
                                   flatten = FALSE) {
