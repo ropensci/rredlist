@@ -19,11 +19,13 @@ articles:
   - benchmarks
 
 reference:
-- title: Get all details for a single assessment
+- title: Get details for one or more assessments
   contents:
   - rl_assessment
+  - rl_assessment_list
   - rl_species_latest
   - rl_sis_latest
+  - rl_assessment_extract
 
 - title: Query assessments by taxa
   contents:
