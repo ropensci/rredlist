@@ -219,9 +219,39 @@ rl_assessment_extract <- function(lst, el_name, format = c("list", "df"),
       df <- data.frame(assessment_id = ids)
       df[[el]] <- lst
     }
-    # unlist columns that are simple vectors
+    # convert complex columns
     for (col in colnames(df)) {
-      if (is.list(df[[col]]) && all(sapply(df[[col]], Negate(is.list)))) {
+      if (
+        # if data frame column, then append as additional columns
+        is.data.frame(df[[col]]) &&
+        all(sapply(df[[col]], Negate(is.list))) &&
+        identical(nrow(df[[col]]), nrow(df))
+      ) {
+        # prepare new column(s)
+        # columns are renamed to avoid potential clashes
+        # e.g., if df contains a data frame column called "description" with a
+        # column called "en" (e.g., df$description$en), then this column
+        # will be appended as df$description.en
+        new_col <- setNames(df[[col]], paste0(col, ".", colnames(df[[col]])))
+        # identify the index to insert new column(s)
+        idx <- which(colnames(df) == col)
+        # insert new columns based on the index, and drop data frame column
+        if (identical(idx, 1L)) {
+          df <- cbind(new_col, df[, -idx, drop = FALSE])
+        } else if (identical(idx, ncol(df))) {
+          df <- cbind(df, df[, -idx, drop = FALSE])
+        } else {
+          df <- cbind(
+            df[, seq(1, idx - 1), drop = FALSE],
+            new_col,
+            df[, seq(idx + 1, ncol(df)), drop = FALSE]
+          )
+        }
+      } else if (
+        # if list column with atomic vector of values, then append as column
+        is.list(df[[col]]) &&
+        all(vapply(df[[col]], Negate(is.list), logical(1)))
+      ) {
         df[[col]] <- unlist(df[[col]], use.names = FALSE)
       }
     }
