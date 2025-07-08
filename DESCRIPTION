@@ -31,7 +31,7 @@ Authors@R:
              role = "rev",
              email = "stephhazlitt@gmail.com")
       )
-License: MIT + file LICENSE
+License: MIT
 URL: https://docs.ropensci.org/rredlist/,
      https://github.com/ropensci/rredlist
 BugReports: https://github.com/ropensci/rredlist/issues
