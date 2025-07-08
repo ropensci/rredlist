@@ -1,8 +1,18 @@
 # rredlist (development version)
 
+### NEW FEATURES
+
+- Added `rl_assessment_list()` which is a wrapper for `rl_assessment()` that allows you to retrieve multiple assessments at once (#71).
+- Added `rl_assessment_extract()` which can be used to extract a given element from each of a list of assessments, such as the output of `rl_assessment_list()` (#71).
+
 ### MINOR IMPROVEMENTS
 
-- Fixed `rl_sis_latest()` and `rl_species_latest()` so that, in the event that no assessment has been officially identified as the latest assessment, they will return the most recently published assessment (based on the year that the assessment was published) (#69).
+- Added a `scope` argument to `rl_sis_latest()` and `rl_species_latest()` to filter the results to a specific scope. The default scope is "1" (i.e., global).
+
+### BUG FIXES
+
+- Fixed `rl_sis_latest()` and `rl_species_latest()` so that, in the event that no assessment has been officially identified as the latest assessment, they will return the most recently published assessment (based on the year that the assessment was published) (@jeffreyhanson, #69).
+
 
 # rredlist 1.0.0
 
