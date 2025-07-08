@@ -40,6 +40,11 @@ rl_sis_ <- function(id, key = NULL, ...) {
 #'
 #' @export
 #' @param id (integer) The SIS ID of the taxonomic entity to look up.
+#' @param scope (character) An optional scope (see [rl_scopes()]) to filter the
+#'   results by. The default, "1", returns the latest global assessment. If no
+#'   assessments exist for the specified `scope`, the latest assessment across
+#'   all scopes is returned. If `NULL`, the latest assessment across all scopes
+#'   is returned.
 #' @template all
 #' @template curl
 #' @template info
@@ -49,10 +54,21 @@ rl_sis_ <- function(id, key = NULL, ...) {
 #' ex1 <- rl_sis_latest(id = 9404)
 #' ex1$stresses
 #' }
-rl_sis_latest <- function(id, key = NULL, parse = TRUE, ...) {
+rl_sis_latest <- function(id, scope = "1", key = NULL, parse = TRUE, ...) {
   assert_is(parse, "logical")
 
   tmp <- rl_sis(id, key, ...)$assessments
+  if (!is.null(scope)) {
+    ind <- vapply(tmp$scopes, function(x) scope %in% x$code, logical(1))
+    if (any(ind)) {
+      tmp <- tmp[ind, , drop = FALSE]
+    } else {
+      cli_alert_warning(paste(
+        "No assessment(s) found for the specified scope.",
+        "Returning the latest assessment across all scopes.")
+      )
+    }
+  }
   if (any(tmp$latest, na.rm = TRUE)) {
     tmp <- subset(tmp, tmp$latest)
   }
@@ -138,6 +154,11 @@ rl_species_ <- function(genus, species, infra = NULL, subpopulation = NULL,
 #'   look up.
 #' @param subpopulation (character) An optional name of the geographically
 #'   separate subpopulation to look up.
+#' @param scope (character) An optional scope (see [rl_scopes()]) to filter the
+#'   results by. The default, "1", returns the latest global assessment. If no
+#'   assessments exist for the specified `scope`, the latest assessment across
+#'   all scopes is returned. If `NULL`, the latest assessment across all scopes
+#'   is returned.
 #' @details Geographically separate subpopulations of a species are defined as
 #'   those populations that are so isolated from others of the same species that
 #'   it is considered extremely unlikely that there is any genetic interchange.
@@ -155,6 +176,7 @@ rl_species_ <- function(genus, species, infra = NULL, subpopulation = NULL,
 #' @template curl
 #' @template info
 #' @family taxa
+#' @importFrom cli cli_alert_warning
 #' @examples \dontrun{
 #' # Get latest assessment for species
 #' ex1 <- rl_species_latest(genus = "Fratercula", species = "arctica")
@@ -166,12 +188,24 @@ rl_species_ <- function(genus, species, infra = NULL, subpopulation = NULL,
 #' ex2$stresses
 #' }
 rl_species_latest <- function(genus, species, infra = NULL,
-                              subpopulation = NULL,
+                              subpopulation = NULL, scope = "1",
                               key = NULL, parse = TRUE, ...) {
   assert_is(parse, "logical")
+  assert_is(scope, c("character"))
 
   tmp <- rl_species(genus, species, infra = infra,
                     subpopulation = subpopulation, key, ...)$assessments
+  if (!is.null(scope)) {
+    ind <- vapply(tmp$scopes, function(x) scope %in% x$code, logical(1))
+    if (any(ind)) {
+      tmp <- tmp[ind, , drop = FALSE]
+    } else {
+      cli_alert_warning(paste(
+        "No assessment(s) found for the specified scope.",
+        "Returning the latest assessment across all scopes.")
+      )
+    }
+  }
   if (any(tmp$latest, na.rm = TRUE)) {
     tmp <- subset(tmp, tmp$latest)
   }

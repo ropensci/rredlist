@@ -1,0 +1,1519 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/taxa/scientific_name?genus_name=Canis&species_name=lupus
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/6.2.2 crul/1.5.0 rOpenSci(rredlist/1.0.0.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      date: Mon, 07 Jul 2025 22:24:07 GMT
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+      cache-control: max-age=0, private, must-revalidate
+      etag: W/"e515f7239bf65a38cb0eb7aabb141e5a"
+      x-request-id: c4875e2e-2368-443b-8435-a021b7a362ec
+      x-runtime: '0.162154'
+      cf-cache-status: DYNAMIC
+      nel: '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
+      speculation-rules: '"/cdn-cgi/speculation"'
+      report-to: '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=UPI5PKtXmtu8m%2BniT9suyd%2F3jpXOHlOuuqmq4ZwLyMAFyLkkrOwmvgrGNWAaE%2Ff5IkbJP%2FzoEi96UWNgBVO8cMLfAAqnsglGL3oa%2BvaLrxFXIII%3D"}]}'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 95bac0105c821a5c-EWR
+      alt-svc: h3=":443"; ma=86400
+    body:
+      encoding: ''
+      file: no
+      string: '{"taxon":{"sis_id":3746,"scientific_name":"Canis lupus","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[{"sis_id":223987824,"scientific_name":"Canis
+        lupus ssp. chanco","kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"CARNIVORA","family_name":"CANIDAE","genus_name":"Canis","species_name":"lupus","subpopulation_name":null,"infra_name":"chanco","authority":"Gray,
+        1863","ssc_groups":[{"name":"IUCN SSC Canid Specialist Group (foxes, jackals
+        and wild dogs)","url":"http://www.canids.org/","description":"Chair: Claudio
+        Sillero-Zubiri (email: canids@zoology.oxford.ac.uk)\nRed List Authority Coordinator:
+        Michael Hoffmann (email: mike.hoffmann@zsl.org)\nNewsletter: http://www.canids.org/c-b-c"}],"common_names":[{"main":false,"name":"Tibetan
+        Wolf","language":"eng"},{"main":false,"name":"Woolly Wolf","language":"eng"},{"main":true,"name":"Himalayan
+        Wolf","language":"eng"}],"synonyms":[{"name":"Canis lupus ssp. laniger Hodgson,
+        1847","status":"ACCEPTED","genus_name":"Canis","species_name":"lupus","species_author":null,"infrarank_author":"Hodgson,
+        1847","subpopulation_name":null,"infra_type":"subspecies","infra_name":"laniger"},{"name":"Canis
+        chanco Gray, 1863","status":"ACCEPTED","genus_name":"Canis","species_name":"chanco","species_author":"Gray,
+        1863","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null},{"name":"Canis
+        lupus ssp. himalayensis Aggarwal, Kivisild, Ramadevi \u0026 Singh, 2007","status":"ACCEPTED","genus_name":"Canis","species_name":"lupus","species_author":null,"infrarank_author":"Aggarwal,
+        Kivisild, Ramadevi \u0026 Singh, 2007","subpopulation_name":null,"infra_type":"subspecies","infra_name":"himalayensis"},{"name":"Canis  lupus
+        ssp. filchneri Matschie, 1907","status":"ACCEPTED","genus_name":"Canis ","species_name":"lupus","species_author":null,"infrarank_author":"Matschie,
+        1907","subpopulation_name":null,"infra_type":"subspecies","infra_name":"filchneri"}]},{"sis_id":223987953,"scientific_name":"Canis
+        lupus ssp. pallipes","kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"CARNIVORA","family_name":"CANIDAE","genus_name":"Canis","species_name":"lupus","subpopulation_name":null,"infra_name":"pallipes","authority":"Sykes,
+        1831","ssc_groups":[{"name":"IUCN SSC Canid Specialist Group (foxes, jackals
+        and wild dogs)","url":"http://www.canids.org/","description":"Chair: Claudio
+        Sillero-Zubiri (email: canids@zoology.oxford.ac.uk)\nRed List Authority Coordinator:
+        Michael Hoffmann (email: mike.hoffmann@zsl.org)\nNewsletter: http://www.canids.org/c-b-c"}],"common_names":[{"main":false,"name":"Indian
+        peninsular wolf","language":"eng"},{"main":false,"name":"بھیڑیا Bhediya","language":"urd"},{"main":false,"name":"بھگیاڑ
+        (Bhigiyarh)","language":"pan"},{"main":false,"name":"بگھڑ (Baghar)","language":"snd"},{"main":false,"name":"لیووه
+        (lewo),  شرماخ (Sharmakh)","language":"pus"},{"main":false,"name":"कॉळसूणे
+        (kŏḷsūṇe), तॉळ (tŏḷ)","language":"kok"},{"main":false,"name":"चारि नार (chari
+        nar)","language":"raj"},{"main":false,"name":"भेड़िया Bhediya","language":"hin"},{"main":false,"name":"लांडगा
+        (lāṇḍagā)","language":"mar"},{"main":false,"name":"વરુ (varu), નાર (nar)","language":"guj"},{"main":false,"name":"తోడేలు
+        (Tōḍēlu)","language":"tel"},{"main":false,"name":"ತೋಳ (Tola)","language":"kan"},{"main":false,"name":"ஓநாய்
+        (Ōnāy)","language":"tam"},{"main":false,"name":"ചെന്നായ് (Chennaya)","language":"mal"},{"main":false,"name":"কুকুৰনেছীয়া
+        বাঘ (Kurnechiya Bhagh)","language":"asm"},{"main":false,"name":"নেকড়ে (nēkaṛē),
+        হুরাল (Hural), হুরার (Hurar)","language":"ben"},{"main":true,"name":"Indian
+        Wolf","language":"eng"}],"synonyms":[{"name":"Canis pallipes Sykes, 1831","status":"ACCEPTED","genus_name":"Canis","species_name":"pallipes","species_author":"Sykes,
+        1831","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null},{"name":"Canis
+        indica Aggarwal, Kivisild, Ramadevi, Singh 2007","status":"ADD","genus_name":"Canis","species_name":"indica","species_author":"Aggarwal,
+        Kivisild, Ramadevi, Singh 2007","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"CARNIVORA","family_name":"CANIDAE","genus_name":"Canis","species_name":"lupus","subpopulation_name":null,"infra_name":null,"authority":"Linnaeus,
+        1758","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Canid Specialist Group (foxes, jackals and wild dogs)","url":"http://www.canids.org/","description":"Chair:
+        Claudio Sillero-Zubiri (email: canids@zoology.oxford.ac.uk)\nRed List Authority
+        Coordinator: Michael Hoffmann (email: mike.hoffmann@zsl.org)\nNewsletter:
+        http://www.canids.org/c-b-c"}],"common_names":[{"main":false,"name":"Arctic
+        Wolf","language":"eng"},{"main":false,"name":"Common Wolf","language":"eng"},{"main":false,"name":"Gray
+        Wolf","language":"eng"},{"main":false,"name":"Mexican Wolf","language":"eng"},{"main":false,"name":"Plains
+        Wolf","language":"eng"},{"main":false,"name":"Timber Wolf","language":"eng"},{"main":false,"name":"Tundra
+        Wolf","language":"eng"},{"main":false,"name":"Wolf","language":"eng"},{"main":false,"name":"Dheeb","language":"ara"},{"main":false,"name":"Farkas","language":"hun"},{"main":false,"name":"Hunt","language":"est"},{"main":false,"name":"Kurt","language":"tur"},{"main":false,"name":"Lobo","language":"spa"},{"main":false,"name":"Loup","language":"fre"},{"main":false,"name":"Loup
+        gris","language":"fre"},{"main":false,"name":"Loup vulgaire","language":"fre"},{"main":false,"name":"Lup","language":"rum"},{"main":false,"name":"Lupo","language":"ita"},{"main":false,"name":"Saaral
+        Chono","language":"mon"},{"main":false,"name":"Susi","language":"fin"},{"main":false,"name":"Ujku","language":"alb"},{"main":false,"name":"Ulv","language":"nor"},{"main":false,"name":"Varg","language":"swe"},{"main":false,"name":"Vilkas","language":"lit"},{"main":false,"name":"Vilks","language":"lav"},{"main":false,"name":"Vlk","language":"cze"},{"main":false,"name":"Vlk","language":"slo"},{"main":false,"name":"Volk","language":"slv"},{"main":false,"name":"Vuk","language":"scr"},{"main":false,"name":"Wilk","language":"pol"},{"main":false,"name":"Wolf","language":"ger"},{"main":false,"name":"الذئب
+        العربي","language":"ara"},{"main":false,"name":"λύκος","language":"gre"},{"main":false,"name":"вовк","language":"ukr"},{"main":false,"name":"волк","language":"mac"},{"main":false,"name":"волк","language":"rus"},{"main":false,"name":"вук","language":"scc"},{"main":true,"name":"Grey
+        Wolf","language":"eng"}],"synonyms":[]},"assessments":[{"year_published":"2025","latest":true,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/216872082","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":216872082,"scopes":[{"description":{"en":"Europe"},"code":"2"}]},{"year_published":"2018","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/119623865","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":119623865,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/247624660","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":247624660,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2018","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/163508960","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":163508960,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2018","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/144226239","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":144226239,"scopes":[{"description":{"en":"Europe"},"code":"2"}]},{"year_published":"2018","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/133234888","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":133234888,"scopes":[{"description":{"en":"Europe"},"code":"2"}]},{"year_published":"2010","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10049204","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":10049204,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10047272","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":10047272,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2010","latest":true,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10048228","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":10048228,"scopes":[{"description":{"en":"Mediterranean"},"code":"4"}]},{"year_published":"2007","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10048689","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":10048689,"scopes":[{"description":{"en":"Europe"},"code":"2"}]},{"year_published":"2004","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10047740","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":10047740,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1996","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10049157","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LR/lc","assessment_id":10049157,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1994","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10049693","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"V","assessment_id":10049693,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1990","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10049676","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"V","assessment_id":10049676,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1988","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10049130","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"V","assessment_id":10049130,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1986","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10049103","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"V","assessment_id":10049103,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1982","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10049177","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"V","assessment_id":10049177,"scopes":[{"description":{"en":"Global"},"code":"1"}]}],"params":{"genus_name":"Canis","species_name":"lupus"}}'
+  recorded_at: 2025-07-07 22:24:02 GMT
+  recorded_with: vcr/1.7.0, webmockr/2.0.0
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/assessment/216872082
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/6.2.2 crul/1.5.0 rOpenSci(rredlist/1.0.0.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      date: Mon, 07 Jul 2025 22:24:08 GMT
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+      cache-control: max-age=0, private, must-revalidate
+      etag: W/"548f113d11752dab7c81612e0e617fa1"
+      x-request-id: 85ebcf19-f543-46b9-94c6-ace381d7a4e2
+      x-runtime: '0.281207'
+      cf-cache-status: DYNAMIC
+      nel: '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
+      speculation-rules: '"/cdn-cgi/speculation"'
+      report-to: '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Q9lllu3JOAjorfc7fLQJyrOhlOMxvmEt9J93WN7Em0L3Kv71zak5kNGgjgVU3WhaQ7d2qt6tnpXlsdzuSqARH00%2BRM38HM0mVOM1vYf3nDSNVmI%3D"}]}'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 95bac0122a3c1a5c-EWR
+      alt-svc: h3=":443"; ma=86400
+    body:
+      encoding: ''
+      file: no
+      string: '{"assessment_date":"2023-01-18T00:00:00.000Z","year_published":"2025","latest":true,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"criteria":null,"url":"https://www.iucnredlist.org/species/3746/216872082","citation":"Boitani,
+        L. 2025. Canis lupus (Europe assessment). The IUCN Red List of Threatened
+        Species 2025: e.T3746A216872082. https://dx.doi.org/10.2305/IUCN.UK.2025-1.RLTS.T3746A216872082.en.
+        Accessed on 07 July 2025.","assessment_id":216872082,"assessment_points":false,"assessment_ranges":true,"taxon":{"sis_id":3746,"scientific_name":"Canis
+        lupus","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[{"sis_id":223987824,"scientific_name":"Canis
+        lupus ssp. chanco","kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"CARNIVORA","family_name":"CANIDAE","genus_name":"Canis","species_name":"lupus","subpopulation_name":null,"infra_name":"chanco","authority":"Gray,
+        1863","ssc_groups":[{"name":"IUCN SSC Canid Specialist Group (foxes, jackals
+        and wild dogs)","url":"http://www.canids.org/","description":"Chair: Claudio
+        Sillero-Zubiri (email: canids@zoology.oxford.ac.uk)\nRed List Authority Coordinator:
+        Michael Hoffmann (email: mike.hoffmann@zsl.org)\nNewsletter: http://www.canids.org/c-b-c"}],"common_names":[{"main":false,"name":"Tibetan
+        Wolf","language":"eng"},{"main":false,"name":"Woolly Wolf","language":"eng"},{"main":true,"name":"Himalayan
+        Wolf","language":"eng"}],"synonyms":[{"name":"Canis lupus ssp. laniger Hodgson,
+        1847","status":"ACCEPTED","genus_name":"Canis","species_name":"lupus","species_author":null,"infrarank_author":"Hodgson,
+        1847","subpopulation_name":null,"infra_type":"subspecies","infra_name":"laniger"},{"name":"Canis
+        chanco Gray, 1863","status":"ACCEPTED","genus_name":"Canis","species_name":"chanco","species_author":"Gray,
+        1863","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null},{"name":"Canis
+        lupus ssp. himalayensis Aggarwal, Kivisild, Ramadevi \u0026 Singh, 2007","status":"ACCEPTED","genus_name":"Canis","species_name":"lupus","species_author":null,"infrarank_author":"Aggarwal,
+        Kivisild, Ramadevi \u0026 Singh, 2007","subpopulation_name":null,"infra_type":"subspecies","infra_name":"himalayensis"},{"name":"Canis  lupus
+        ssp. filchneri Matschie, 1907","status":"ACCEPTED","genus_name":"Canis ","species_name":"lupus","species_author":null,"infrarank_author":"Matschie,
+        1907","subpopulation_name":null,"infra_type":"subspecies","infra_name":"filchneri"}]},{"sis_id":223987953,"scientific_name":"Canis
+        lupus ssp. pallipes","kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"CARNIVORA","family_name":"CANIDAE","genus_name":"Canis","species_name":"lupus","subpopulation_name":null,"infra_name":"pallipes","authority":"Sykes,
+        1831","ssc_groups":[{"name":"IUCN SSC Canid Specialist Group (foxes, jackals
+        and wild dogs)","url":"http://www.canids.org/","description":"Chair: Claudio
+        Sillero-Zubiri (email: canids@zoology.oxford.ac.uk)\nRed List Authority Coordinator:
+        Michael Hoffmann (email: mike.hoffmann@zsl.org)\nNewsletter: http://www.canids.org/c-b-c"}],"common_names":[{"main":false,"name":"Indian
+        peninsular wolf","language":"eng"},{"main":false,"name":"بھیڑیا Bhediya","language":"urd"},{"main":false,"name":"بھگیاڑ
+        (Bhigiyarh)","language":"pan"},{"main":false,"name":"بگھڑ (Baghar)","language":"snd"},{"main":false,"name":"لیووه
+        (lewo),  شرماخ (Sharmakh)","language":"pus"},{"main":false,"name":"कॉळसूणे
+        (kŏḷsūṇe), तॉळ (tŏḷ)","language":"kok"},{"main":false,"name":"चारि नार (chari
+        nar)","language":"raj"},{"main":false,"name":"भेड़िया Bhediya","language":"hin"},{"main":false,"name":"लांडगा
+        (lāṇḍagā)","language":"mar"},{"main":false,"name":"વરુ (varu), નાર (nar)","language":"guj"},{"main":false,"name":"తోడేలు
+        (Tōḍēlu)","language":"tel"},{"main":false,"name":"ತೋಳ (Tola)","language":"kan"},{"main":false,"name":"ஓநாய்
+        (Ōnāy)","language":"tam"},{"main":false,"name":"ചെന്നായ് (Chennaya)","language":"mal"},{"main":false,"name":"কুকুৰনেছীয়া
+        বাঘ (Kurnechiya Bhagh)","language":"asm"},{"main":false,"name":"নেকড়ে (nēkaṛē),
+        হুরাল (Hural), হুরার (Hurar)","language":"ben"},{"main":true,"name":"Indian
+        Wolf","language":"eng"}],"synonyms":[{"name":"Canis pallipes Sykes, 1831","status":"ACCEPTED","genus_name":"Canis","species_name":"pallipes","species_author":"Sykes,
+        1831","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null},{"name":"Canis
+        indica Aggarwal, Kivisild, Ramadevi, Singh 2007","status":"ADD","genus_name":"Canis","species_name":"indica","species_author":"Aggarwal,
+        Kivisild, Ramadevi, Singh 2007","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"CARNIVORA","family_name":"CANIDAE","genus_name":"Canis","species_name":"lupus","subpopulation_name":null,"infra_name":null,"authority":"Linnaeus,
+        1758","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Canid Specialist Group (foxes, jackals and wild dogs)","url":"http://www.canids.org/","description":"Chair:
+        Claudio Sillero-Zubiri (email: canids@zoology.oxford.ac.uk)\nRed List Authority
+        Coordinator: Michael Hoffmann (email: mike.hoffmann@zsl.org)\nNewsletter:
+        http://www.canids.org/c-b-c"}],"common_names":[{"main":false,"name":"Arctic
+        Wolf","language":"eng"},{"main":false,"name":"Common Wolf","language":"eng"},{"main":false,"name":"Gray
+        Wolf","language":"eng"},{"main":false,"name":"Mexican Wolf","language":"eng"},{"main":false,"name":"Plains
+        Wolf","language":"eng"},{"main":false,"name":"Timber Wolf","language":"eng"},{"main":false,"name":"Tundra
+        Wolf","language":"eng"},{"main":false,"name":"Wolf","language":"eng"},{"main":false,"name":"Dheeb","language":"ara"},{"main":false,"name":"Farkas","language":"hun"},{"main":false,"name":"Hunt","language":"est"},{"main":false,"name":"Kurt","language":"tur"},{"main":false,"name":"Lobo","language":"spa"},{"main":false,"name":"Loup","language":"fre"},{"main":false,"name":"Loup
+        gris","language":"fre"},{"main":false,"name":"Loup vulgaire","language":"fre"},{"main":false,"name":"Lup","language":"rum"},{"main":false,"name":"Lupo","language":"ita"},{"main":false,"name":"Saaral
+        Chono","language":"mon"},{"main":false,"name":"Susi","language":"fin"},{"main":false,"name":"Ujku","language":"alb"},{"main":false,"name":"Ulv","language":"nor"},{"main":false,"name":"Varg","language":"swe"},{"main":false,"name":"Vilkas","language":"lit"},{"main":false,"name":"Vilks","language":"lav"},{"main":false,"name":"Vlk","language":"cze"},{"main":false,"name":"Vlk","language":"slo"},{"main":false,"name":"Volk","language":"slv"},{"main":false,"name":"Vuk","language":"scr"},{"main":false,"name":"Wilk","language":"pol"},{"main":false,"name":"Wolf","language":"ger"},{"main":false,"name":"الذئب
+        العربي","language":"ara"},{"main":false,"name":"λύκος","language":"gre"},{"main":false,"name":"вовк","language":"ukr"},{"main":false,"name":"волк","language":"mac"},{"main":false,"name":"волк","language":"rus"},{"main":false,"name":"вук","language":"scc"},{"main":true,"name":"Grey
+        Wolf","language":"eng"}],"synonyms":[]},"population_trend":{"description":{"en":"Increasing"},"code":"0"},"red_list_category":{"version":"3.1","description":{"en":"Least
+        Concern"},"code":"LC"},"supplementary_info":{"upper_elevation_limit":2500,"lower_elevation_limit":0,"lower_depth_limit":null,"upper_depth_limit":null,"population_size":null,"population_severely_fragmented":"No","population_continuing_decline":"No","generational_length":null,"congregatory":null,"movement_patterns":null,"continuing_decline_in_area":"Unknown","conservation_actions_in_place":[{"name":"In-place
+        land/water protection","actions":[{"name":"Occurs in at least one protected
+        area","value":"Yes"}]},{"name":"In-place education","actions":[{"name":"Included
+        in international legislation","value":"Yes"}]}],"identification_information":null,"extreme_fluctuations":"No","no_of_subpopulations":null,"continuing_decline_in_subpopulations":null,"extreme_fluctuations_in_subpopulations":null,"all_individuals_in_one_subpopulation":null,"no_of_individuals_in_largest_subpopulation":null,"estimated_area_of_occupancy":null,"continuing_decline_in_area_of_occupancy":"No","extreme_fluctuations_in_area_of_occupancy":null,"estimated_extent_of_occurence":null,"continuing_decline_in_extent_of_occurence":"No","extreme_fluctuations_in_extent_of_occurence":null,"continuing_decline_in_number_of_locations":null,"extreme_fluctuations_in_number_of_locations":null},"documentation":{"range":"Historically,
+        Grey Wolves were found over most of Europe, including the British Isles. By
+        the mid-20th century, their range was greatly reduced to remnants in northwest
+        Iberia, central Italy, parts of the Baltics, the Carpathians, and the mountain
+        areas of the Balkans. In the last 50 years, their range has greatly expanded
+        with Grey Wolf presence being recorded in all continental European countries.
+        The European Grey Wolf population is currently a large meta-population with
+        several distinct populations, which can be described as follows (Chapron \u003cem\u003eet
+        al.\u003c/em\u003e 2014):\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e1.
+        Iberian \u003c/strong\u003e\u003cbr/\u003eWolves are found mainly in the north-western
+        quadrant and centre of Iberia (both Spain and Portugal). The Iberian population
+        does not extend as far east as the Pyrenees (although some individuals are
+        now recolonising the Pyrenees from the Alps, via France). Wolves are expanding
+        southwards in Spain and are now found on both banks of the Duero River in
+        both Spain and Portugal. The population segment in the Sierra Morena mountains
+        in southern Spain seems to be extinct. The population segment in the Sierra
+        Morena mountains in southern Spain seems to be extinct (Blanco and Cortés
+        2002, Alvares \u003cem\u003eet al.\u003c/em\u003e 2015, Blanco and Cortés
+        2012, Jiménez \u003cem\u003eet al.\u003c/em\u003e 2016, López-Bao \u003cem\u003eet
+        al.\u003c/em\u003e 2018).\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e2.
+        Western-Central Alps\u003c/strong\u003e\u003cbr/\u003eThe population in 2021
+        occupies a large area that includes most of the Western Alps in France and
+        Italy, with many wolf packs territories being transboundary along the French-Italian
+        border and occupying large areas of south-eastern France up to the Massif
+        Central, and in Italy to lowlands of Piemonte and Liguria, also far from the
+        Alps. Increasing numbers of wolves are found in Switzerland and in eastern
+        Alpine regions of Italy, with numbers rapidly building up in Veneto, Friuli
+        Venezia-Giulia and Trentino, and will likely further expand through most of
+        the central Alps. Several packs have been formed by individuals from the Alps
+        and animals from the Dinaric-Balkan population, especially in the easternmost
+        part of its range.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e3. Italian
+        peninsula\u003c/strong\u003e\u003cbr/\u003eWolves occur in the whole Apennines
+        range from Liguria to Calabria (Aspromonte) and extending into the coastal
+        plains along the Tirrenic and Adriatic coasts and to all hilly areas of northern
+        Lazio and central-western Tuscany (provinces of Siena, Grosseto and Pisa).\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e4.
+        Dinaric-Balkan\u003c/strong\u003e\u003cbr/\u003eThe population covers a vast
+        area from Slovenia in the North to central Greece in the South, including
+        the whole Dinaric Mountain range through Slovenia, Croatia, Bosnia-Herzegovina,
+        western Serbia and Kosovo, Montenegro, North Macedonia, Albania, the western
+        and southern parts of Bulgaria and the European part of Türkiye. \u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e5.
+        Carpathian\u003c/strong\u003e\u003cbr/\u003eThe population extends across
+        several countries, from northern Bulgaria and eastern Serbia through Romania,
+        south-western Ukraine, Slovakia, south-eastern Poland and the eastern part
+        of Czechia. Small (but increasing) numbers of wolves are also present in northern
+        Hungary on the periphery of the distribution.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e6.
+        Baltic\u003cbr/\u003e\u003c/strong\u003eThis population covers the eastern
+        lowlands of Poland, Lithuania, Latvia, Estonia, and northern Ukraine and would
+        naturally extend to Belarus and the neighbouring parts of the Russian Federation
+        (including the oblasts of Kaliningrad, Leningrad, Novgorod, Pskov, Tver, Smolensk,
+        Bryansk, Moscow, Kursk, Belgorod and Orel). However, the connectivity with
+        Belarus and Russia is being increasingly reduced by the recent dramatic increase
+        in border fence construction. \u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e7.
+        Karelian\u003c/strong\u003e\u003cbr/\u003eWolves occur in Finland (mainly
+        in the southern half of the country) and Russian Karelia. The Karelian wolf
+        population is the western extremity of the large Russian population. However,
+        of the three main connectivity areas allowing continuity of the Russian Karelian
+        population with the rest of Russia, one is completely blocked by megalopolis
+        St. Petersburg and its satellites. Wolves in Russian Karelia are estimated
+        to number about 300 and they are heavily hunted: bounties are paid and the
+        annual wolf harvest is often equivalent to annual breeding.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e8.
+        Scandinavian\u003c/strong\u003e\u003cbr/\u003eThe distribution range of the
+        population is in central Sweden and, to a lesser extent, in south-eastern
+        Norway. It is spreading slowly toward southern Sweden but is being prevented
+        from expanding in Norway because of government policy.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e9.
+        Central European\u003c/strong\u003e\u003cbr/\u003eThis population is expanding
+        rapidly into the central European lowlands from its core in the western half
+        of Poland and the eastern part of Germany. Several packs are also found in
+        Czechia. Its expansion is likely to continue with packs being established
+        in Belgium, the Netherlands and Denmark.","population":"Due to the diversity
+        in climate, topography, vegetation, patterns of human settlement and historical
+        development of the wolf range, wolf populations in various parts of the original
+        range vary dramatically in density. Wolf densities normally vary from about
+        one per 12 km² to less than one per 120 km² (Mech and Boitani 2003). The overall
+        European wolf population can be viewed as a large metapopulation with several
+        distinct fragments, although dispersal could theoretically connect almost
+        all fragments, and connections are being re-established in many areas. Following
+        the bottleneck of the 1960s and 1970s, the European wolf population is generally
+        increasing in number and expanding its distribution range. However, some European
+        populations are still small and not all have more than 1,000 animals (see
+        below for specific details). Dispersing animals can potentially be found anywhere
+        in mainland Europe. The number of wolves in Europe (excluding Russia) is likely
+        to exceed 21,500, and the total number of wolves in the EU 27 region is likely
+        to be in the order of 19,000; some of the populations are continuous with
+        wolf populations living in countries outside the EU.\u003cbr/\u003e\u003cstrong\u003e\u003cbr/\u003e1.
+        Iberian\u003c/strong\u003e\u003cbr/\u003ePopulation size: about 2,500 individuals
+        (2024-2990) and rather stable. The Iberian Wolf (\u003cem\u003eCanis lupus
+        \u003c/em\u003essp. \u003cem\u003esignatus\u003c/em\u003e) may be a distinct
+        subspecies. After the population reduction up to the 1960s, it has increased
+        dramatically since the 1970s and has been stable or slightly increasing in
+        the last ten years and expanding its range across central Spain. The population
+        occupies most of northwestern Iberia and is expanding south and east after
+        having crossed the Duero River in Spain. There are two distinct population
+        segments within this population. The largest is that north of the Duero River
+        in both Spain and Portugal. South of the Duero in Portugal there is a small
+        population segment of around 50 wolves which has only limited exchange of
+        animals with the segments north of the Duero in Portugal and east to the Spanish
+        segment south of the Duero.\u003cbr/\u003e\u003cbr/\u003eThe nearest wolf
+        population is in the western Alps and connections between the two are limited
+        to rare known cases. In the Pyrenees (regions of Cataluña and Aragón) there
+        are currently a few non-reproducing wolves that have been genetically identified
+        as members of the Alpine population from where they are assumed to have dispersed
+        naturally (Alvares \u003cem\u003eet al.\u003c/em\u003e 2015, Blanco and Cortés
+        2012, Jiménez \u003cem\u003eet al.\u003c/em\u003e 2016, López-Bao \u003cem\u003eet
+        al.\u003c/em\u003e 2018, Torres and Fonseca 2016).\u003cbr/\u003e\u003cbr/\u003eThe
+        isolated Sierra Morena subpopulation in southern Spain has (virtually) disappeared.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e2.
+        Western-Central Alps\u003c/strong\u003e\u003cbr/\u003ePopulation size: \u003cem\u003ec\u003c/em\u003e.1,900
+        wolves. This population is of Italian Apennines origin and all wolves share
+        the same distinctive Italian genetic haplotype. Individual wolves dispersing
+        from the Apennines first colonised the Alps in 1992 and succeeded in establishing
+        a permanent and expanding population which shows a highly dynamic spatial
+        pattern spreading towards the west and north (and then to the east along the
+        Alpine arc). New packs are regularly reported in Switzerland where there are
+        about 150 wolves. More recently (2015) dispersing individuals from Dinaric-Balkans
+        and the western Alps formed a pack in the central Alps. The total number in
+        2015/2016 was estimated to be about 420-550 wolves (65 packs and 12 pairs;
+        WAG 2018, Marucco \u003cem\u003eet al.\u003c/em\u003e 2012); in 2017/18 it
+        was estimated to be 550-700, increasing on average by 10-20% per year. The
+        genetic continuity with the Apennines population has been recently assessed
+        at 1.25-2.5 individuals per generation, all of them moving from the Apennines
+        to the Alpine population (Fabbri \u003cem\u003eet al.\u003c/em\u003e 2007).
+        In 2005, a young radio-marked wolf dispersed more than 1,300 km from Parma
+        (Italy) to Nice (France), providing a demonstration of the natural dispersal
+        along the northern Apennines range to the Alps. In spite of the continuity
+        between the two populations (Apennine and Alpine), their ecological and socio-economic
+        contexts are sufficiently different to justify a separation into two functional
+        population units for management purposes (LCIE 2007, Marucco \u003cem\u003eet
+        al.\u003c/em\u003e 2017; \u003ca rel=\"nofollow\" target=\"_blank\" href=\"http://www.lifewolfalps.eu/\"\u003ehttp://www.lifewolfalps.eu/\u003c/a\u003e).\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e3.
+        Italian peninsula\u003c/strong\u003e\u003cbr/\u003ePopulation size: 2,020-2,645
+        wolves (Aragno \u003cem\u003eet al.\u003c/em\u003e 2022). The population was
+        described in 1921 (Altobello 1921) and confirmed in 1999 (Nowak 1999) as a
+        distinct subspecies (\u003cem\u003eCanis lupus italicus\u003c/em\u003e). It
+        is genetically recognised by the presence of a unique mtDNA haplotype. After
+        the population bottleneck of the 1960s, when total numbers were estimated
+        to be about 100 animals, the population has steadily recovered throughout
+        the Apennines and expanded into the western Alps. In 2006, the population
+        was estimated to be 500-800; estimates in 2017 suggested numbers to be 1,100-2,400
+        with an estimate of 1,600 probably being close to the real number. However,
+        the difference between the 2006, 2017 and 2021 estimates are also due to improved
+        estimation methods. The nearest population (apart from that in the western
+        Alps, see above) is in Slovenia (Dinaric-Balkan population). Although a large
+        portion of the central Alps and part of the agricultural Po River valley effectively
+        separate the Italian peninsula and the Dinaric populations, the current trend
+        suggests the inevitable continuity between them (Galaverni \u003cem\u003eet
+        al.\u003c/em\u003e 2015, Boitani and Salvatori 2016).\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e4.
+        Dinaric-Balkan\u003c/strong\u003e\u003cbr/\u003ePopulation size: 5,000-5,500.
+        There is continuity of the population and suitable habitats throughout the
+        range although the population might be significantly sub-structured within
+        this massive elongated range. Although the population is estimated to number
+        about 5,000 individuals, locally the densities may vary greatly and its overall
+        demographic trend is unknown. In Croatia and Slovenia, the population has
+        recovered significantly following improved management in the 1990s. In Serbia
+        and Bosnia-Herzegovina (Trbojević 2016) it is likely that the population has
+        decreased in recent years due to overharvesting. To the north, the population
+        has increasing functional contacts with the nearest population in Italy, and
+        dispersing animals are reported in Austria. One dispersing male successfully
+        established a pair and a territory in Veneto (northern Italy) with a mate
+        from the western-central Alps population. To the east, the population may
+        exchange individuals with the large wolf population of the Carpathians which
+        extends into northern Bulgaria and eastern Serbia (Iliopoulos 1999; Kusak
+        \u003cem\u003eet al.\u003c/em\u003e 2005; Štrbenac \u003cem\u003eet al.\u003c/em\u003e
+        2005; Jeremic \u003cem\u003eet al.\u003c/em\u003e 2014, 2015, 2016; Trbojević
+        2016).\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e5. Carpathian\u003c/strong\u003e\u003cbr/\u003eThis
+        population is estimated to number \u003cem\u003ec\u003c/em\u003e. 3,900-4,700
+        animals, the majority of them living in Romania and Ukraine. The differences
+        between the 2006 and 2017 estimates are partly due to improved estimation
+        methods. Slovakia hosts about 600 wolves and southern Poland contributes with
+        good wolf habitat in the areas along its southern borders (the wolf population
+        in the Polish Carpathians is about 300 individuals). In the past, there was
+        natural continuity with wolves living in northern Poland and Belarus, but
+        this link is now constrained by large areas where wolves have been exterminated.
+        Nevertheless, it is likely that some level of genetic exchange still occurs
+        with the Dinaric-Balkan population in western Bulgaria / eastern Serbia, and
+        with the Baltic population in eastern-central Poland (Okarma 1993; CLCP 1997-98,
+        2000, 2001, 2002; Smietana and Wajda 1997, Okarma \u003cem\u003eet al.\u003c/em\u003e
+        2000, Shkvyrya 2008, Cazacu \u003cem\u003eet al.\u003c/em\u003e 2014, Pirga
+        \u003cem\u003eet al.\u003c/em\u003e 2016, Rigg \u003cem\u003eet al.\u003c/em\u003e
+        2014).\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e6. Baltic\u003c/strong\u003e\u003cbr/\u003eSubpopulation
+        size: about 2,190-2,790 in EU countries and an additional 1,000-1,500 in Belarus
+        and 1,600 in the adjacent Russian oblasts. At the start of the 20th century
+        the population was greatly reduced, but still widely present, these increased
+        during and after World War 1. In the period between the wars, populations
+        were greatly reduced again, but recovered to peak levels during and after
+        World War II, only to be heavily persecuted in the 1950s such that they again
+        reached very low levels in the 1960s and early 1970s. The populations appear
+        to have then increased, peaking in the early 1990s – before being reduced
+        again in the late 1990s. This population is the westernmost portion of the
+        large Russian population and it ultimately connects with the wolf range of
+        Russian Karelia. In Poland, although the distribution is not continuous, it
+        is highly likely that dispersal regularly connects the Baltic and Central
+        European populations. The recent building of fences against human migrations
+        effectively reduce the continuity of this population with the Belarus/Russian
+        population (Bluzma 2000, Sidorovich \u003cem\u003eet al.\u003c/em\u003e 2003,
+        Linnell \u003cem\u003eet al.\u003c/em\u003e 2006, Nowak and Mysłajek 2016,
+        Bragina \u003cem\u003eet al.\u003c/em\u003e 2018, Ozolins \u003cem\u003eet
+        al.\u003c/em\u003e 2011, Kawata \u003cem\u003eet al.\u003c/em\u003e 2013,
+        Geldon \u003cem\u003eet al.\u003c/em\u003e 2015).\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e7.
+        Karelian\u003c/strong\u003e\u003cbr/\u003ePopulation size: 275-315 wolves
+        in Finland and about 750 including Finland and Russian Karelia. Following
+        widespread control of the population in the first part of 20th century, the
+        population recovered after the 1980s and 1990s. The current estimates are
+        based on counts of family groups in Finland and the population is expanding.
+        In Russian Karelia, wolf numbers appear to be stable.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e8.
+        Scandinavian\u003c/strong\u003e\u003cbr/\u003ePopulation size: 550 (CI = 364
+        – 598). The population derives from a pair that immigrated from Finland and
+        first reproduced in Sweden in 1983. A third immigrant in 1991 boosted the
+        reproduction and the population is now estimated to be 460 wolves (about 85
+        in Norway). The population has been steadily increasing from 1983-2001, then
+        slightly decreased in 2002-3, and then is increasing again. In winter 2023
+        it has been reduced by the removal of at least 75 animals. There is evidence
+        of limited further genetic exchanges with the Finnish/Russian wolf population
+        after 1991. Immigration from Russia / Finland is the only possible mechanism
+        to increase the genetic variability of the population which is critical for
+        its future viability (Chapron \u003cem\u003eet al.\u003c/em\u003e 2016; Svensson
+        \u003cem\u003eet al.\u003c/em\u003e 2017; Wabakken \u003cem\u003eet al.\u003c/em\u003e
+        2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014 and 2016).\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e9.
+        Central European\u003c/strong\u003e\u003cbr/\u003ePopulation size: 1,850.
+        Wolves were exterminated in Germany during the 19th century, but individuals
+        that were dispersing from Poland were shot occasionally throughout the 20th
+        century. In the late-1990s a pack began breeding in Saxony and there are now
+        (2022) at least 160 packs. Wolves in western Poland have had a dynamic history
+        of persecution and heavy harvest with periods of total absence and very low
+        numbers in 1950 - 1990s, but since 2000 the population started to recover
+        from immigrants originating in eastern Poland and presently there are about
+        550 wolves in the region. Three packs were confirmed in Czechia in 2016 /2017
+        (Kutal \u003cem\u003eet al.\u003c/em\u003e 2017, Hulva \u003cem\u003eet al.\u003c/em\u003e
+        2018) and they have grown to 16 in 2022. This population is highly dynamic
+        and dispersing animals have reached Denmark, Belgium and the Netherlands where
+        the first packs are now permanently present. Connections exist to the Baltic
+        population, but the distances are in the order of up to several hundred kilometres
+        (Fechter and Storch 2015; Reinhardt \u003cem\u003eet al.\u003c/em\u003e 2015;
+        Sunde and Olsen 2017; Nowak and Myslajek 2016, 2017; Nowak \u003cem\u003eet
+        al.\u003c/em\u003e 2017).","habitats":"Wolves live in diverse habitat types
+        and their broad distribution ranges show the species'' adaptability to the
+        most extreme (both in terms of natural and anthropogenic factors) habitat
+        conditions. The wolf’s habitat has been prosaically described as anywhere
+        where humans do not kill it and where there is something to eat. Where wolves
+        depend on wild ungulate prey, their habitat is that of their prey. Habitat
+        quality should thus be interpreted in terms of human disturbance, prey densities
+        and range size. In general, large forest areas are particularly suitable for
+        wolves in Europe, although wolves are not exclusively a forest species.\u003cbr/\u003e\u003cbr/\u003eThe
+        wolf has a very diversified diet and is a true generalist that feeds opportunistically
+        on what is most available in its habitat. The wolf’s diet may include large
+        prey, such as Moose, Red Deer, Roe Deer and Wild Boar, as well as small mammals
+        and birds, invertebrates, vegetation and carcasses. Diet composition throughout
+        the geographic range and seasonal variations depend on the relative abundance
+        of potential prey, as well as accessibility and availability. A wolf typically
+        requires 3-5 kg of meat per day, although it can fast for several days when
+        food is not readily available.","threats":"Human intolerance is perhaps the
+        most important limiting factor facing wolves in Europe today. Fear, misunderstanding
+        and the fact that wolves do kill livestock have prompted an uneasy relationship
+        with people in many areas, leading to direct conflicts and retaliatory/preventative
+        persecution. In some countries, poorly regulated hunting of wolves poses a
+        threat, while in others licenses for killing wolves are issued irrespective
+        of biological understanding. Poaching is widespread and probably represents
+        the most important mortality factor for the wolf in many parts of Europe.
+        Wolf depredation on domestic animals has been a problem since man progressed
+        from hunter/gatherer to farmer, and although the numbers of sheep or cattle
+        taken are, as a percentage, very low, livestock depredation remains the primary
+        reason for persecuting wolves. Wolves have also become symbolic of wider issues
+        of social change facing rural life, such that the politics of wolf management
+        has become very controversial and intertwined with multiple other issues.
+        It also appears that institutions in many countries are ill-equipped to handle
+        the biological and socio-politic challenges of wolf management. Human land
+        use is the most significant threat to wolf habitat. Wolves can live close
+        to humans but they require safe areas in which to retreat. This is not always
+        considered in land use planning in wolf areas and the small, fragmented populations
+        in western Europe can result in animals moving into unsuitable habitats. Although
+        wolves show a good ability to cross linear infrastructure like highways and
+        railroads, these structures can be associated with wolf mortality and there
+        is a need to ensure wildlife permeability in all infrastructure projects.
+        Wolf-dog hybridisation has been increasingly reported in most European countries
+        but only appears to be a major issue in Italy and other Mediterranean countries
+        because of poor dog management practices. Legislation and public attitudes
+        towards dog management and dog control policies impede the implementation
+        of a coordinated effort to manage the occurrence and spread of hybridisation
+        (Ciucci 2012). Another emerging threat is the border fences being built to
+        control human migrations and the veterinary fences built to control the spread
+        of the African swine fever in wild boar that have an increasingly serious
+        impact on the connectivity towards the east and within the populations of
+        several eastern and central European wolf populations. These fences will soon
+        reduce the viability and conservation status of several wolf populations.
+        Specific threats to different European wolf populations are as follows:\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e1.
+        Iberian\u003c/strong\u003e\u003cbr/\u003eIllegal killing is still common (estimated
+        to account for 50% of the total mortality) and poison baits are still used.
+        Illegal killing appears the primary cause of the (virtual) disappearance of
+        the Sierra Morena population. \u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e2.
+        Western-Central Alps\u003cbr/\u003e\u003c/strong\u003eDocumented causes of
+        mortality include car or train accidents and poaching. Several cases of illegal
+        killing have been reported in France and Italy, and conflicts with hunters
+        and farmers are constantly reported. Both France and the Regional Government
+        of Piemonte have been carrying out extensive and continuous research and monitoring
+        of the wolf population and damages to livestock, and excellent data is available
+        for management purposes. The number of livestock depredations in the Italian
+        Alps is decreasing, despite the increase in wolf numbers, due to the large
+        efforts in the implementation of preventive practices promoted by the authorities.
+        Although wolf presence is still far from being accepted by local farmers and
+        livestock breeders, the general attitude is improving (\u003ca href=\"http://www.lifewolfalps.eu/\"\u003eLIFE
+        WOLFALPS\u003c/a\u003e).\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e3.
+        Italian peninsula\u003c/strong\u003e\u003cbr/\u003eThe population is protected
+        on paper, but the law is poorly enforced with illegal killing remaining common
+        (and rarely prosecuted) throughout the range. Poison baits are increasingly
+        used against dogs, foxes and wolves. Hybridisation with dogs has been documented
+        and, in certain areas of central Italy, it appears to account for up to 70%
+        of the total wolf population (Verardi \u003cem\u003eet al.\u003c/em\u003e
+        2006, Ciucci 2012, Salvatori \u003cem\u003eet al.\u003c/em\u003e 2019). \u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e4.
+        Dinaric-Balkan\u003c/strong\u003e\u003cbr/\u003eThere is an enormous diversity
+        in threats occurring throughout the range. Poorly regulated legal hunting
+        and illegal killing, often with the use of poison) are taking an unknown number
+        of wolves throughout most of the range. Other pressures that are commonly
+        reported include: habitat fragmentation due to the construction of fenced
+        highways and a shortage of wild prey. In many countries, there is very limited
+        knowledge about wolf ecology or status (Huber \u003cem\u003eet al.\u003c/em\u003e
+        2002, Iliopoulos 2005, Trbojević 2016).\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e5.
+        Carpathian\u003c/strong\u003e\u003cbr/\u003ePoison baits and illegal killing
+        are widespread throughout the range. In Ukraine, wolves are treated as a pest
+        species. Poorly regulated legal hunting in Slovakia hinders the recovery of
+        the wolf in the Czech-Slovak borderlands (Kutal \u003cem\u003eet al.\u003c/em\u003e
+        2016).\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e6. Baltic\u003c/strong\u003e\u003cbr/\u003eThe
+        Baltic population is subject to hunter-harvest in Estonia, Latvia and Lithuania.
+        Access to good quality population monitoring data is, therefore, crucial to
+        ensure that quotas are set at sustainable levels. There is room for substantial
+        improvement in monitoring efforts in Latvia and Lithuania.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e7.
+        Karelian\u003c/strong\u003e\u003cbr/\u003eThe main threat to wolves in this
+        region is killing by humans. In south-central Finland, wolves cause very limited
+        damage to livestock, but predation on domestic dogs and a perception of competition
+        for game species is the most frequent impact that causes strong resentment
+        from the public. In the north of Finland, potential conflicts with semi-domestic
+        reindeer herding effectively prevent its expansion.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e8.
+        Scandinavian\u003c/strong\u003e\u003cbr/\u003eDue to the small number of founders
+        the inbreeding coefficient is very high, on average higher than for full siblings
+        mating (Liberg \u003cem\u003eet al.\u003c/em\u003e 2005). Predation on domestic
+        dogs, sheep and semi-domestic reindeer are the most frequent damages that
+        cause continuing debate on wolf conservation. In the north of Sweden and Norway,
+        potential conflicts with semi-domestic reindeer herding effectively prevent
+        its expansion. Norway has a restrictive policy that officially prevents further
+        expansion.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e9. Central European\u003c/strong\u003e\u003cbr/\u003eThe
+        main cause of documented mortality in Germany is traffic accidents (70%).
+        Cases of illegal killing have been reported in Poland and Germany, and complaints
+        from hunters and farmers are constantly reported from Germany. The implementation
+        of livestock protection measures in Germany does not keep track with the fast
+        population growth providing the ground for permanent and growing conflict
+        with farmers, whereas such conflicts appear to be much less in the Polish
+        population segment. The habitat is also very heavily modified and fragmented.
+        Coordination between the federal states of Germany and between Germany and
+        neighbouring countries is crucial.","measures":"By default, the species is
+        strictly protected under the Bern Convention (Appendix II) and Habitats Directive
+        (Annex II and IV), meaning that wolves may not be killed except under strict
+        conditions, and key wolf habitat must be protected as part of the European
+        protected area networks Natura 2000 (Habitats Directive, Annex II) and Emerald
+        Network (Bern Convention, Appendix II). However, there are many national and
+        regional exceptions. Regarding the Habitats Directive:\u003cbr/\u003e\u003cbr/\u003e1)
+        in Spain, wolves north of the Duero River are not subject to Annexes II or
+        IV, but covered instead by the more flexible regime of Annex V, which permits
+        harvesting – and it remains uncertain which regimes apply to wolves east of
+        the Duero River (Trouwborst 2014);\u003cbr/\u003e2) in Greece, wolves north
+        of 39°N have a similar status (only Annex V);\u003cbr/\u003e3) in the Baltic
+        States (Estonia, Latvia and Lithuania) wolves have a similar status (only
+        Annex V);\u003cbr/\u003e4) in Finland, wolves occurring in the Reindeer herding
+        area in northern Finland fall under Annex V; wolves outside the Reindeer herding
+        area fall under Annex IV but not Annex II;\u003cbr/\u003e5) In Bulgaria and
+        Slovakia, wolves are subject to Annex II and Annex V;\u003cbr/\u003e6) In
+        Poland, wolves are also on Annex II and Annex V of the Habitats Directive,
+        but strictly protected under the national legislations and government has
+        not opened for harvest.\u003cbr/\u003e\u003cbr/\u003eA similar set of diverse
+        situations exist under the Bern Convention, with some countries having taken
+        total exceptions (e.g. Finland) and others treating it as Appendix III instead
+        of Appendix II.\u003cbr/\u003e\u003cbr/\u003eIn general, habitat restoration
+        is required in some key areas (especially in southern Europe) in the form
+        of fostering a healthy prey base and encouraging wolves to move back into
+        their former range where appropriate. Conflicts with humans need to be addressed
+        by involving local people in wolf management plans and through education programmes
+        to increase people''s understanding of wolf biology and behaviour. Problems
+        resulting from wolves preying on domestic animals need to be tackled by livestock
+        protection schemes and compensation systems. In general, there is a need for
+        innovative governance regimes that balance the need for large-scale (international
+        level) coordination of management with the need to give local stakeholders
+        a voice in local-level solutions to local problems. Finally, there is a need
+        to increase investment in population monitoring in many countries in southern
+        and eastern Europe where the largest populations live. Details of specific
+        conservation measures for European wolf populations are given below: \u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e1.
+        Iberian\u003c/strong\u003e\u003cbr/\u003eWolves are fully protected in Portugal
+        and south of the Duero River in Spain. North of the Duero River in Spain,
+        wolves were game species until 2021 and subject to various management regimes
+        depending on the legislation of eight autonomous regional governments. Since
+        2021, the wolf is nationally protected by law. The autonomous regions are
+        gradually approving their action plans. Asturias has a wolf management plan
+        and Galicia and Castilla y León also have approved their plans. However, management
+        coordination among the regional governments and between Spain and Portugal
+        is very limited. By allowing the (virtual) extinction of the Sierra Morena
+        population in southern Spain, Spain has been in contravention of its obligations
+        under the Habitats Directive’s Annex II and Annex IV regimes, and EU law requires
+        the Spanish authorities to restore this population (Trouwborst 2014).\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e2.
+        Western-Central Alps\u003c/strong\u003e\u003cbr/\u003eThe population is fully
+        protected under French, Italian and Swiss law. In France and Switzerland,
+        the national Action Plans include provisions for the legal take of a certain
+        number of wolves under strict conditions in response to damages on livestock.
+        The three countries signed (2006) a formal agreement of cooperation for the
+        management of the entire population, recognising that the biological population
+        needs to be managed through a common and accepted approach, but the agreement
+        has not produced any concrete cooperation at the administrative or political
+        levels. \u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e3. Italian peninsula\u003c/strong\u003e\u003cbr/\u003eFully
+        protected by a national law, with damage compensation provided by 14 different
+        regional laws. Compensation is paid for livestock lost to wolf predation,
+        but the effectiveness of compensation programmes has never been assessed and
+        it is increasingly questioned. Apart from formal protection the population
+        is not actively managed. The species occurs in several protected areas throughout
+        its range but the size of these areas is far too small to protect any viable
+        populations. In spite of formal protection, illegal killings are estimated
+        to take a substantial portion of the population every year (up to 15-20%).
+        A national Action Plan setting the broad strategic ground for management has
+        been under discussion for several years (2015-2017) but has not been approved
+        because of disagreement between the national and regional governments (Boitani
+        and Salvatori 2016). \u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e4. Dinaric-Balkan\u003c/strong\u003e\u003cbr/\u003eManagement
+        is fragmented by multiple national laws. Most of the range is also outside
+        the EU and therefore not bound by the protection of the Habitats Directive,
+        although all range countries are now Bern Convention signatories. It is a
+        game species in almost all countries, except for Slovenia, Croatia, Albania
+        and Greece south of 39° latitude where wolves are fully protected. In Slovenia
+        and Croatia, an effective Action Plan is in place and implemented (Štrbenac
+        \u003cem\u003eet al.\u003c/em\u003e 2005, \u003ca rel=\"nofollow\" target=\"_blank\"
+        href=\"http://www.mop.gov.si/fileadmin/mop.gov.si/pageuploads/podrocja/velike_zveri/akcijski_nacrt_upravljanja_volk_2013_2017.pdf\"\u003ehttp://www.mop.gov.si/fileadmin/mop.gov.si/pageuploads/podrocja/velike_zveri/akcijski_nacrt_upravljanja_volk_2013_2017.pdf\u003c/a\u003e)
+        but no plans exists for any of the other countries. With the exception of
+        Slovenia and Croatia, in general, law enforcement is weak or totally absent,
+        institutions in several of the countries are not fully functional, there is
+        very limited monitoring and research, and wildlife management structures for
+        regulating hunter harvest of the prey base are poorly developed. There is
+        a major need for investment in institution building in these countries.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e5.
+        Carpathian\u003c/strong\u003e\u003cbr/\u003eIn Slovakia wolves are a game
+        species with a hunting season; in Poland and Czechia they are strictly protected
+        by national laws; in Romania, they are legally protected, but are managed
+        as a de facto game species with hunting quotas decided yearly; in Ukraine,
+        wolves are neither a game species nor protected (often treated as “pest” species,
+        with bounties of\u003cem\u003e c\u003c/em\u003e. 20 Euro per individual) (Salvatori
+        \u003cem\u003eet al.\u003c/em\u003e 2002). There is a need to improve monitoring,
+        especially in Slovakia, and ensure that quotas and seasons are scaled with
+        respect to realistic population estimates. \u003cbr/\u003e\u003cstrong\u003e\u003cbr/\u003e6.
+        Baltic\u003c/strong\u003e\u003cbr/\u003eWolves have been strictly protected
+        in Poland since 1998, but are harvested in the three Baltic States (EU Habitats
+        and Species Directive Appendix V) and in neighbouring Belarus and Ukraine.
+        There is a new action plan for the conservation of the wolf in Latvia (2017).
+        In all countries, there is a need to ensure that monitoring is effective at
+        detecting trends in population development so that hunting quotas and seasons
+        can be adjusted accordingly.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e7.
+        Karelian\u003c/strong\u003e\u003cbr/\u003eIn Finland, wolves occurring in
+        the reindeer herding area fall under Annex V of the Habitats Directive; those
+        outside the reindeer herding area fall under Annex IV. Finland has a National
+        Management Plan that includes the removal of some wolves under controlled
+        circumstances. In Russian Karelia, wolves are killed throughout the range
+        and at any time. In spite of the small number of wolves, Finland has approved
+        a plan to maintain the population within the maximum of 25 packs. The discontinuous
+        flow of dispersing wolves from Russia allows a reasonable but cautiously positive
+        forecast on the conservation of this population. Illegal killing of wolves
+        remains a major problem in Finland. There are also widespread social and political
+        conflicts that centre on wolf conservation.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e8.
+        Scandinavian\u003c/strong\u003e\u003cbr/\u003eWolves are fully protected in
+        Sweden and Norway; however, Norway applies both a zoning system and operates
+        with a very low management goal that restricts wolves to a small area (\u003cem\u003ec\u003c/em\u003e.
+        5% of the country) along the border with Sweden and prevents population expansion.
+        Both Norway and Sweden provide full compensation for damages. Both countries
+        greatly restrict the presence of wolves in the reindeer herding areas that
+        cover the northern part of the peninsula. The main issue for the long-term
+        viability of the population is inbreeding, which can only be improved by facilitating
+        the movement of wolves through the northern reindeer herding areas of Norway,
+        Sweden and Finland. Social and political conflicts around wolf management
+        are intense.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e9. Central European\u003c/strong\u003e\u003cbr/\u003eWolves
+        are functionally protected in all countries. In Germany, conservation is implemented
+        by the local authority but there is a certain degree of coordination at the
+        federal level. In Poland, wolves are strictly protected since 1995. The main
+        threats stem from the intense social and political conflicts around wolf management.","use_trade":"The
+        species is sometimes hunted for sport. In some countries the species is also
+        important for the skin market and the pelt industry.","rationale":"European
+        regional assessment: Least Concern (LC)\u003cbr/\u003eEU 27 regional assessment:
+        Least Concern (LC)\u003cbr/\u003e\u003cbr/\u003eFollowing the population bottleneck
+        of the 1960s and 1970s, the European Grey Wolf population is generally increasing
+        in number and expanding its distribution range. Based on the best available
+        data, in 2022, the total number of wolves in the 27 EU Member States is likely
+        to be in the order of 19,000, and the number of wolves in the European assessment
+        region (excluding Belarus and European Russia) is likely to exceed 21,500,
+        a significant increase over the last five years (Boitani \u003cem\u003eet
+        al.\u003c/em\u003e 2022). Consequently, the species qualifies as Least Concern
+        at both the European and EU 27 regional levels. The quantity and quality of
+        data on population size and structure varies greatly between European countries:
+        see the IUCN Red List assessment (Boitani \u003cem\u003eet al. \u003c/em\u003e2018)
+        for a description of the nine main European populations (\u003cem\u003esensu\u003c/em\u003e
+        Linnell \u003cem\u003eet al. \u003c/em\u003e2008) and for an explanation of
+        the methods used to obtain the numbers for each population.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e1.
+        Iberian\u003c/strong\u003e\u003cbr/\u003eNear Threatened. The Iberian population
+        is large, about 2,500 individuals (2024-2990), and rather stable, slowly expanding
+        towards the south and east. Although recently (2021) declared nationally protected
+        in Spain, it is maintained in the  Near Threatened category because of fragmentation
+        in management regimes, lack of a population-level management plan, the occurrence
+        of largely unpredictable events of human persecution (poisoning, shooting,
+        etc.) that may threaten the population at the local level and the near-isolation
+        of some of its southern population segments.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e2.
+        Western-Central Alps\u003c/strong\u003e\u003cbr/\u003eNear Threatened. The
+        Alpine population was founded based on a recent expansion of the Italian peninsula
+        wolf population and has grown rapidly and steadily (10-20% /year) in each
+        country of the Alpine arch. Accurate estimates from each country cannot be
+        simply added up to estimate the population because an unknown % of wolves
+        are shared among countries and the effect of running independent capture-recapture
+        estimates could significantly inflate double counts. This concern is especially
+        serious for the Italian-French part of the population. The total number of
+        about 1,900 individuals should be considered as indicative. Dispersion over
+        a large range, fragmentation among several countries, and the first signs
+        of hybridisation (northeast in the western Alps of Italy and France, and eastern
+        Alps of Italy) justify its assessment in the category Near Threatened.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e3.
+        Italian peninsula\u003c/strong\u003e\u003cbr/\u003eNear Threatened. The Italian
+        peninsula wolf population is estimated to number 2,020-2,645 individuals.
+        The shape of the range is narrow and elongated, mainly restricted to the Apennines
+        Mountains. In spite of the recent increase in numbers and range, the Italian
+        peninsula wolf population is locally vulnerable to local extermination from
+        human pressures (poisoning, shooting) and the locally high prevalence of wolf-dog
+        hybridisation. The stochastic nature of these events suggests that the current
+        positive status of the population may easily be reversed.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e4.
+        Dinaric-Balkan\u003c/strong\u003e\u003cbr/\u003eLeast Concern. This wolf population
+        does not qualify for any Threatened categories because of its large size (\u003cem\u003ec\u003c/em\u003e.
+        5,000-5,500 individuals) and wide distribution. However, several parts of
+        the range may be subject to excessive pressure from lethal control and poorly
+        regulated hunting. In many countries the data quality is poor, and management
+        plans are poorly developed or absent. Moreover, there are also very different
+        management regimes amongst countries, lack of any compensation system in many
+        of them (e.g. Albania, Bulgaria, Serbia, North Macedonia), lack of robust
+        population monitoring in some of the countries (uncertainties on population
+        estimates and trends), widespread poaching even in protected populations and
+        probably excessive wolf hybridisation with dogs. It is worth noting that all
+        cases of decreasing wolf population in Europe are from this population. There
+        is an acute need for better data from throughout the southern part of this
+        population.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e5. Carpathian\u003c/strong\u003e\u003cbr/\u003eLeast
+        Concern. This large wolf population (\u003cem\u003ec\u003c/em\u003e. 3,900-4,700
+        individuals) appears to be maintaining its conservation status mainly due
+        to the management implemented in Romania, Poland and the Slovak Republic.
+        Some of the peripheral areas of the range may be subject to excessive hunting
+        and poaching pressure (e.g. Hungary, Bulgaria) and may require appropriate
+        conservation measures to limit mortality. In Poland and Czechia, wolves are
+        fully protected while quotas for wolf hunting have decreased substantially
+        in Slovakia. There is no common management plan at the population level and
+        completely different management regimes are implemented in neighbouring countries
+        (Ukraine, Poland, Slovak Republic, Hungary and Czechia).\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e6.
+        Baltic\u003c/strong\u003e\u003cbr/\u003eLeast Concern. The relatively large
+        (and increasing) number of wolves (\u003cem\u003ec\u003c/em\u003e. 2,190–2,790)
+        in the EU member states (Estonia, Latvia, Lithuania and Poland) and the natural
+        continuity of its range into the Russian Federation and Belarus support its
+        assessment in the category of Least Concern. A large part of the population
+        is fully protected in eastern Poland (1,040 wolves). However, portions of
+        the population in some of the Baltic States are intensively hunted with high
+        hunting quotas at 40-50% and may require careful monitoring to ensure their
+        long-term persistence. The recent increase in solid border security fencing
+        along the borders to Belarus and the Russian Federation are grounds for concern
+        as they will decrease the degree of connectivity. Accurate monitoring is necessary
+        as without this connectivity the population might be down-listed to Near Threatened.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e7.
+        Karelian\u003c/strong\u003e\u003cbr/\u003eNear Threatened. The total population,
+        shared by Finland and Russian Karelia is estimated to be 750 individuals and
+        would qualify for Vulnerable under criterion D. However, the Karelian population
+        is generally considered to have connections with the very large Russian population,
+        and there could potentially be a rescue effect, so the population level assessment
+        is downgraded by one step to Near Threatened. The total population in Finland
+        is small (\u003cem\u003ec\u003c/em\u003e. 275 – 315) and it would qualify
+        for the category of Endangered (D1) if it were isolated. The number of wolves
+        in Russian Karelia is not well-known but is likely to be in the order of 500
+        and may be declining as a result of excessive persecution. The degree of fragmentation
+        is not known. Very little information is currently available on the status
+        of the wolf in Russian Karelia, and this population should be reassessed if
+        any new relevant data becomes available. \u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e8.
+        Scandinavian\u003c/strong\u003e\u003cbr/\u003eVulnerable (D1). The population
+        size is well known (550 of which 460 [364 – 598 95% CI] in Sweden) and the
+        estimated number of mature individuals justifies the category Vulnerable.
+        The population has low genetic variability due to a small number of founders
+        and has little genetic exchange with the Karelian population. The management
+        policies (low population goals and high hunting/control quotas) in Norway
+        (and recently proposed in Sweden) dramatically affect the future conservation
+        prospects of the overall population, and there is no common management plan
+        at the population level.\u003cbr/\u003e\u003cbr/\u003e\u003cstrong\u003e9.
+        Central European\u003c/strong\u003e\u003cbr/\u003eNear Threatened. The population
+        has grown very rapidly since 2000 and it is now estimated to number in the
+        order of 1,850 individuals. This population is highly dynamic and dispersing
+        animals have reached all Central European countries with confirmed packs established
+        in Austria, Denmark, Belgium and the Netherlands. In the German part of the
+        population, the expansion is mainly occurring in a north-westerly direction,
+        whereas the expansion to the southwest is slower. Although the geographic
+        gap between the Central European population and the Baltic population is nearly
+        closed, genetic exchange between these populations still appears to be limited.
+        New connections with the expanding populations in the Alps are also likely
+        to occur soon. However, an increasing number of fences built to contain the
+        spread of African Swine Fever may become a serious threat by contributing
+        to population fragmentation.","trend_justification":null,"taxonomic_notes":null},"biogeographical_realms":[{"description":{"en":"Palearctic"},"code":"7"}],"conservation_actions":[{"note":"","code":"3_1_3","description":{"en":"Limiting
+        population growth"}},{"note":"","code":"3_1_1","description":{"en":"Harvest
+        management"}},{"note":"","code":"5_4_2","description":{"en":"National level"}},{"note":"","code":"3_2","description":{"en":"Species
+        recovery"}},{"note":"","code":"2_3","description":{"en":"Habitat \u0026 natural
+        process restoration"}},{"note":"","code":"1_2","description":{"en":"Resource
+        \u0026 habitat protection"}},{"note":"","code":"5_1_2","description":{"en":"National
+        level"}},{"note":"","code":"6_4","description":{"en":"Conservation payments"}},{"note":"","code":"5_2","description":{"en":"Policies
+        and regulations"}},{"note":"","code":"1_1","description":{"en":"Site/area
+        protection"}},{"note":"","code":"5_4_3","description":{"en":"Sub-national
+        level"}},{"note":"","code":"5_4_1","description":{"en":"International level"}},{"note":"","code":"4_3","description":{"en":"Awareness
+        \u0026 communications"}},{"note":"","code":"5_1_1","description":{"en":"International
+        level"}},{"note":"","code":"4_1","description":{"en":"Formal education"}}],"faos":[],"habitats":[{"majorImportance":"Yes","season":null,"suitability":"Suitable","description":{"en":"Forest
+        - Boreal"},"code":"1_1"},{"majorImportance":"Yes","season":null,"suitability":"Suitable","description":{"en":"Forest
+        - Temperate"},"code":"1_4"},{"majorImportance":null,"season":null,"suitability":"Marginal","description":{"en":"Desert
+        - Temperate"},"code":"8_2"},{"majorImportance":"Yes","season":null,"suitability":"Suitable","description":{"en":"Shrubland
+        - Mediterranean-type Shrubby Vegetation"},"code":"3_8"},{"majorImportance":"Yes","season":null,"suitability":"Suitable","description":{"en":"Forest
+        - Subarctic"},"code":"1_2"},{"majorImportance":null,"season":null,"suitability":"Marginal","description":{"en":"Desert
+        - Cold"},"code":"8_3"},{"majorImportance":"Yes","season":null,"suitability":"Suitable","description":{"en":"Artificial/Terrestrial
+        - Arable Land"},"code":"14_1"},{"majorImportance":null,"season":null,"suitability":"Marginal","description":{"en":"Artificial/Terrestrial
+        - Rural Gardens"},"code":"14_4"},{"majorImportance":null,"season":null,"suitability":"Marginal","description":{"en":"Wetlands
+        (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"},"code":"5_4"},{"majorImportance":"Yes","season":null,"suitability":"Suitable","description":{"en":"Shrubland
+        - Boreal"},"code":"3_3"},{"majorImportance":"Yes","season":null,"suitability":"Suitable","description":{"en":"Shrubland
+        - Temperate"},"code":"3_4"},{"majorImportance":null,"season":null,"suitability":"Marginal","description":{"en":"Wetlands
+        (inland) - Alpine Wetlands (includes temporary waters from snowmelt)"},"code":"5_11"},{"majorImportance":"Yes","season":null,"suitability":"Suitable","description":{"en":"Grassland
+        - Temperate"},"code":"4_4"},{"majorImportance":"Yes","season":null,"suitability":"Suitable","description":{"en":"Shrubland
+        - Subarctic"},"code":"3_1"},{"majorImportance":"Yes","season":null,"suitability":"Suitable","description":{"en":"Artificial/Terrestrial
+        - Pastureland"},"code":"14_2"},{"majorImportance":"Yes","season":null,"suitability":"Suitable","description":{"en":"Artificial/Terrestrial
+        - Plantations"},"code":"14_3"},{"majorImportance":"Yes","season":null,"suitability":"Suitable","description":{"en":"Grassland
+        - Subarctic"},"code":"4_2"},{"majorImportance":"Yes","season":null,"suitability":"Suitable","description":{"en":"Grassland
+        - Tundra"},"code":"4_1"}],"locations":[{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Romania"},"code":"RO"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Finland"},"code":"FI"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Türkiye-in-Europe"},"code":"TUE-OO"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Germany"},"code":"DE"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Switzerland"},"code":"CH"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Russian
+        Federation"},"code":"RU"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Poland"},"code":"PL"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Spain
+        (mainland)"},"code":"SPA-SP"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Belgium"},"code":"BE"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Bulgaria"},"code":"BG"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Belarus"},"code":"BY"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Slovenia"},"code":"SI"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Hungary"},"code":"HU"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Kosovo"},"code":"YUG-KO"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Portugal
+        (mainland)"},"code":"POR-OO"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Norway"},"code":"NO"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"France"},"code":"FR"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Serbia"},"code":"RS"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Croatia"},"code":"HR"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Türkiye"},"code":"TR"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Serbia"},"code":"YUG-SE"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Moldova"},"code":"MD"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"North
+        Macedonia"},"code":"MK"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Lithuania"},"code":"LT"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Portugal"},"code":"PT"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Slovakia"},"code":"SK"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Seasonal
+        Occurrence Uncertain"],"description":{"en":"Luxembourg"},"code":"LU"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Montenegro"},"code":"ME"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Seasonal
+        Occurrence Uncertain"],"description":{"en":"Andorra"},"code":"AD"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Netherlands"},"code":"NL"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Greece
+        (mainland)"},"code":"GRC-OO"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Austria"},"code":"AT"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Sweden"},"code":"SE"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"France
+        (mainland)"},"code":"FRA-FR"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Albania"},"code":"AL"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Ukraine
+        (main part)"},"code":"UKR-UK"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Spain"},"code":"ES"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Ukraine"},"code":"UA"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Estonia"},"code":"EE"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Denmark"},"code":"DK"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Bosnia
+        and Herzegovina"},"code":"BA"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Greece"},"code":"GR"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Italy"},"code":"IT"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Latvia"},"code":"LV"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Czechia"},"code":"CZ"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"European
+        Russia"},"code":"RU-EU"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Central
+        European Russia"},"code":"RUC-OO"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"East
+        European Russia"},"code":"RUE-OO"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Kaliningrad"},"code":"BLT-KA"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"North
+        European Russia"},"code":"RUN-OO"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Northwest
+        European Russia"},"code":"RUW-OO"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"South
+        European Russia"},"code":"RUS-OO"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Krym"},"code":"KRY-OO"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":["Resident"],"description":{"en":"Italy
+        (mainland)"},"code":"ITA-IT"}],"researches":[{"note":"","code":"1_6","description":{"en":"Actions"}},{"note":"","code":"1_5","description":{"en":"Threats"}},{"note":"","code":"2_2","description":{"en":"Area-based
+        Management Plan"}},{"note":"","code":"2_3","description":{"en":"Harvest \u0026
+        Trade Management Plan"}},{"note":"","code":"1_3","description":{"en":"Life
+        history \u0026 ecology"}},{"note":"","code":"1_4","description":{"en":"Harvest,
+        use \u0026 livelihoods"}},{"note":"","code":"2_1","description":{"en":"Species
+        Action/Recovery Plan"}},{"note":"","code":"3_3","description":{"en":"Trade
+        trends"}},{"note":"","code":"3_2","description":{"en":"Harvest level trends"}},{"note":"","code":"3_4","description":{"en":"Habitat
+        trends"}},{"note":"","code":"1_1","description":{"en":"Taxonomy"}},{"note":"","code":"1_2","description":{"en":"Population
+        size, distribution \u0026 trends"}},{"note":"","code":"3_1","description":{"en":"Population
+        trends"}}],"use_and_trade":[{"international":null,"national":true,"other":null,"subsistence":null,"description":{"en":"Sport
+        hunting/specimen collecting"},"code":"15"},{"international":null,"national":true,"other":null,"subsistence":null,"description":{"en":"Wearing
+        apparel, accessories"},"code":"10"}],"threats":[{"scope":"Majority (50-90%)","timing":"Ongoing","internationalTrade":null,"score":"Medium
+        Impact: 6","severity":"Causing/Could cause fluctuations","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Persecution/control"},"code":"5_1_3"},{"scope":"Majority
+        (50-90%)","timing":"Ongoing","internationalTrade":null,"score":"Medium Impact:
+        6","severity":"Causing/Could cause fluctuations","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Habitat
+        shifting \u0026 alteration"},"code":"11_1"},{"scope":"Majority (50-90%)","timing":"Ongoing","internationalTrade":null,"score":"Medium
+        Impact: 6","severity":"Causing/Could cause fluctuations","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Agro-industry
+        grazing, ranching or farming"},"code":"2_3_3"},{"scope":"Majority (50-90%)","timing":"Ongoing","internationalTrade":null,"score":"Medium
+        Impact: 6","severity":"Causing/Could cause fluctuations","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Roads
+        \u0026 railroads"},"code":"4_1"},{"scope":"Majority (50-90%)","timing":"Future","internationalTrade":null,"score":"Low
+        Impact: 4","severity":"Causing/Could cause fluctuations","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Tourism
+        \u0026 recreation areas"},"code":"1_3"},{"scope":"Majority (50-90%)","timing":"Past,
+        Unlikely to Return","internationalTrade":null,"score":"Past Impact","severity":"Causing/Could
+        cause fluctuations","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Nomadic
+        grazing"},"code":"2_3_1"},{"scope":"Majority (50-90%)","timing":"Future","internationalTrade":null,"score":"Low
+        Impact: 4","severity":"Causing/Could cause fluctuations","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Housing
+        \u0026 urban areas"},"code":"1_1"},{"scope":"Majority (50-90%)","timing":"Ongoing","internationalTrade":null,"score":"Medium
+        Impact: 6","severity":"Causing/Could cause fluctuations","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Recreational
+        activities"},"code":"6_1"},{"scope":"Majority (50-90%)","timing":"Ongoing","internationalTrade":"No","score":"Medium
+        Impact: 6","severity":"Causing/Could cause fluctuations","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Intentional
+        use (species is the target)"},"code":"5_1_1"},{"scope":"Majority (50-90%)","timing":"Ongoing","internationalTrade":null,"score":"Medium
+        Impact: 6","severity":"Causing/Could cause fluctuations","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Small-holder
+        grazing, ranching or farming"},"code":"2_3_2"},{"scope":"Majority (50-90%)","timing":"Future","internationalTrade":null,"score":"Low
+        Impact: 4","severity":"Causing/Could cause fluctuations","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Commercial
+        \u0026 industrial areas"},"code":"1_2"}],"credits":[{"credit_type_name":"assessor","full":"Boitani,
+        L.","value":["Luigi Boitani"]},{"credit_type_name":"evaluator","full":"Hoffmann,
+        M., Chiozza, F. \u0026 Battistoni, A.","value":["Michael Hoffmann (Zoological
+        Society of London / IUCN SSC Canid Specialist Group)","Federica Chiozza (Global
+        Mammal Assessment)","Alessia Battistoni (Global Mammal Assessment)"]},{"credit_type_name":"contributor","full":"Álvares,
+        F., Avanzinelli, E., Avukatov, V., Bagrade, G., Balys, V., Barroso, I., Bartol,
+        M., Bassano, B., Belotti, E., Bionda, R., Blanco, J.C., Bojda, M., Bragalanti,
+        N., Bufka, L., Calderola, S., Chioso, C., Duchamp, C., Duľa, M., Elezi, R.,
+        Fattori, U., Franc, K., Groff, C., Guinot-Ghestem, M., Hoxha, B., Hrovat,
+        M., Huber, D., Iliopoulos, Y., Ionescu, G., Ionescu, O., Jansman, H., Jelenčič,
+        M., Jeremić, J., Jerina, K., Jonozovič, M., Kaczensky, P., Kalaš, M., Kojola,
+        I., Konec, M., Kos, I., Krofel, M., Kunz, F., Kuralt, Z., Kusak, J., Kutal,
+        M., Kübarsepp, M., Lelieveld, G., Linnartz, L., Linnell, J., Luštrik, R.,
+        López-Bao, J.V., Lūkins, M., Machciník, B., Majić Skrbinšek, A., Manz, R.,
+        Martinelli, L., Marucco, F., Melovski, D., Melovski, D., Mysłajek, R.W., Männil,
+        P., Nakamura, M., Nakamura, M., Nivala, V., Nowak, S., Olsen, K., Ozoliņš,
+        J., Pedrotti, L., Pimenta, V., Popa, M., Potočnik, H., Ramadani, A., Rauer,
+        G., Ražen, N., Reinhardt, I., Reljić, S., Rigg, R., Righetti, D., Salvatori,
+        V., Sanaja, B., Shkvyria, M., Skrbinšek, T., Stergar, M., Sunde, P., Tironi,
+        E., Trajçe, A., Trbojević, I., Truc, F., Tsingarska-Sedefcheva, E., Veeroja,
+        R., Venema, P., Volfová, J., Yakovlev, Y., Zetterberg, A., Zimmermann, F.,
+        Ćirović, D., Černe, R. \u0026 Špinkytė-Bačkaitienė, R.","value":["Dime Melovski
+        (IUCN SSC Cat Specialist Group)","Vasko  Avukatov (Macedonian Ecological Society)","Aleksandër
+        Trajçe (Protection and Preservation of Natural Environment in Albania)","Bledi
+        Hoxha (Protection and Preservation of Natural Environment in Albania)","Petra
+        Kaczensky (Research Institute of Wildlife Ecology, University of Veterinary
+        Medicine, Vienna, Austria)","John Linnell","Murielle Guinot-Ghestem","Jānis
+        Ozoliņš (Latvian State Forest Research Institute ''Silava'')","Michio Nakamura","Djuro
+        Huber (Veterinary Faculty, University of Zagreb)","Miha Krofel (University
+        of Ljubljana, Faculty of Biotechnology)","Duško Ćirović (University of Belgrade)","Georgeta
+        Ionescu (Transylvania University - Forest Faculty)","Francisco Álvares (CIBIO,
+        Research Center in Biodiversity and Genetic Resources, Porto Universit)","Elisa
+        Avanzinelli (Progetto LIFE WolfAlps, Centro Grandi Carnivori, Ente di Gestione
+        delle Aree Protette delle Alpi Marittime)","Guna Bagrade (Latvian State Forest
+        Research Institute Silava)","Vaidas Balys (Association for Nature Conservation,
+        Lithuania)","Inês Barroso (ICNF, Institute for Nature Conservation and Forests)","Matej
+        Bartol (Slovenia Forest Service)","Bruno Bassano (Parco Nazionale del Gran
+        Paradiso)","Elisa Belotti (Administration of the National Park and Protective
+        Landscape Area of Šumava, Czech Republic)","Radames Bionda (Progetto LIFE
+        WolfAlps, Ente di Gestione delle Aree Protette dell’Ossola)","Juan Carlos
+        Blanco (Wolf Project, Consultores en Biología de la Conservación)","Michal
+        Bojda (Friends of the Earth Czech Republic)","Natalia Bragalanti (Provincia
+        Autonoma di Trento, Servizio Foreste e fauna)","Luděk Bufka (Administration
+        of the National Park and Protective Landscape Area of Šumava, Czech Republic)","Sonia
+        Calderola (Progetto LIFE WolfAlps, Regione Veneto, Sezione Caccia e Pesca)","Rok
+        Černe (Slovenia Forest Service)","Christian Chioso (Regione Autonoma Valle
+        d’Aosta - Flora, fauna, caccia e pesca - Ufficio per la fauna selvatica)","Christophe
+        Duchamp (Office national de la chasse et de la faune sauvage ONCFS, Réseau
+        Loup-Lynx)","Martin Duľa (Mendel University in Brno · Institute of Forest
+        Ecology)","Rafet Elezi (Environmentally Responsible Action (ERA), Balkan Lynx
+        Recovery Programme)","Umberto Fattori (Regione Autonoma Friuli Venezia Giulia,
+        Ufficio studi faunistici)","Kljun Franc (University of Ljubljana, Faculty
+        of Biotechnology)","Claudio Groff (Provincia Autonoma di Trento, Servizio
+        Foreste e fauna)","Yorgos Iliopoulos (Callisto Wildlife Society)","Ovidiu
+        Ionescu (Transylvania University - Forest Faculty)","Hugh Jansman (Inter Provinciaal
+        Overleg (IPO), ‘Lupus’; the data belongs to Wageningen Environmental Research,
+        Edgar van der Grift)","Jasna Jeremić (State Institute for Nature Protection,
+        Department for Wild and Domesticated Taxa and Habitats)","Klemen Jerina (University
+        of Ljubljana, Faculty of Biotechnology)","Marko Jonozovič (Slovenia Forest
+        Service)","Michal Kalaš (Administration of the National Park Malá Fatra, Slovakia)","Ilpo
+        Kojola (Natural Resources Institute Finland (Luke))","Ivan Kos (University
+        of Ljubljana, Faculty of Biotechnology)","Marko Kübarsepp (Estonian Environment
+        Agency, Department of Wildlife Monitoring)","Florin Kunz (KORA - Carnivore
+        Ecology and Wildlife Management)","Josip Kusak (University of Zagreb, Department
+        of Biology)","Miroslav Kutal (Friends of the Earth Czech Republic)","Glenn
+        Lelieveld (Wolven in Nederland)","Leo Linnartz (Wolven in Nederland)","José
+        Vincente López-Bao (Research Unit of Biodiversity (UO/CSIC/PA), Oviedo University)","Mārtiņš
+        Lūkins (Latvian State Forest Research Institute “Silava”)","Beňadik Machciník
+        (Administration of the Protected Landscape Area Strážovské vrchy, Slovakia)","Maja
+        Jelenčič (University of Ljubljana, Faculty of Biotechnology)","Aleksandra
+        Majić Skrbinšek (University of Ljubljana, Faculty of Biotechnology)","Peep
+        Männil (Estonian Environment Agency, Department of Wildlife Monitoring)","Ralph
+        Manz (KORA - Carnivore Ecology and Wildlife Management)","Marjeta Konec (University
+        of Ljubljana, Faculty of Biotechnology)","Laura Martinelli (Progetto LIFE
+        WolfAlps, Centro Grandi Carnivori, Ente di Gestione delle Aree Protette delle
+        Alpi Marittime)","Francesca Marucco (Progetto LIFE WolfAlps, Centro Grandi
+        Carnivori, Ente di Gestione delle Aree Protette delle Alpi Marittime)","Dime
+        Melovski (Macedonian Ecological Society)","Mojca Hrovat (Dinaricum)","Robert
+        Mysłajek (University of Warsaw, Faculty of Biology, Institute of Genetics
+        and Biotechnology)","Mónia Nakamura (CIBIO, Research Center in Biodiversity
+        and Genetic Resources, Porto Universit)","Nina Ražen (University of Ljubljana,
+        Faculty of Biotechnology)","Vesa Nivala (Natural Resources Institute Finland
+        (Luke))","Sabina Nowak (Association for Nature Wolf )","Kent Olsen (Natural
+        History Museum, Danish Agency for the Environment)","Luca Pedrotti (Provincia
+        Autonoma di Trento, Servizio Foreste e fauna)","Virginia Pimenta (CIBIO, Research
+        Center in Biodiversity and Genetic Resources, Porto Universit)","Marius Popa
+        (Transylvania University - Forest Faculty)","Hubert Potočnik (University of
+        Ljubljana, Faculty of Biotechnology)","Azem Ramadani (Environmentally Responsible
+        Action (ERA), Balkan Lynx Recovery Programme)","Georg Rauer (Research Institute
+        of Wildlife Ecology, University of Veterinary Medicine Vienna)","Ilka Reinhardt
+        (LUPUS German Institute for Wolf Monitoring and Research)","Slaven Reljić
+        (University of Zagreb, Department of Biology)","Robin Rigg (Slovak Wildlife
+        Society)","Davide Righetti (Progetto LIFE WolfAlps, Parco Nazionale dello
+        Stelvio)","Roman Luštrik (University of Ljubljana, Faculty of Biotechnology)","Valeria
+        Salvatori (Istituto di Ecologia Applicata)","Bardh Sanaja (Environmentally
+        Responsible Action (ERA), Balkan Lynx Recovery Programme)","Maryna Shkvyria
+        (Kyiv zoological park of National importance)","Tomaž Skrbinšek (University
+        of Ljubljana, Faculty of Biotechnology)","Renata Špinkytė-Bačkaitienė (Aleksandras
+        Stulginskis University)","Matija Stergar (University of Ljubljana, Faculty
+        of Biotechnology)","Peter Sunde (Aarhus University, Department of Bioscience)","Elena
+        Tironi (Progetto LIFE WolfAlps, Regione Lombardia, DG Ambiente, Energia e
+        Sviluppo sostenibile, Struttura Valorizzazione aree protette e biodiversità)","Igor
+        Trbojević (University of Banja Luka, Faculty of Science)","Fabrizio Truc (Progetto
+        LIFE WolfAlps, Centro Grandi Carnivori, Ente di Gestione delle Aree Protette
+        delle Alpi Marittime)","Elena Tsingarska-Sedefcheva (Balkani Wildlife Society)","Rauno
+        Veeroja (Estonian Environment Agency, Department of Wildlife Monitoring)","Peter
+        Venema (Provincie Drenthe)","Josefa Volfová (Friends of the Earth Czech Republic)","Yegor
+        Yakovlev (Kyiv zoological park of National importance)","Žan Kuralt (University
+        of Ljubljana, Faculty of Biotechnology)","Andreas Zetterberg (Swedish University
+        of Agricultural Science)","Fridolin Zimmermann (KORA - Carnivore Ecology and
+        Wildlife Management)"]},{"credit_type_name":"institutions","full":"IUCN SSC
+        Large Carnivore Initiative for Europe","value":["IUCN SSC Large Carnivore
+        Initiative for Europe"]}],"errata":[],"references":[{"citation":"Sillero-Zubiri,
+        C., Hoffmann, M. and Macdonald D.W. (eds). 2004. \u003ci\u003eCanids: Foxes,
+        Wolves, Jackals and Dogs. Status Survey and Conservation Action Plan. IUCN/SSC
+        Canid Specialist Group. IUCN, Gland, Switzerland and Cambridge, UK.\u003c/i\u003e.","year":"2004","title":"Canids:
+        Foxes, Wolves, Jackals and Dogs. Status Survey and Conservation Action Plan.
+        IUCN/SSC Canid Specialist Group. IUCN, Gland, Switzerland and Cambridge, UK.","author":"Sillero-Zubiri,
+        C., Hoffmann, M. and Macdonald D.W. (eds)","citation_short":null},{"citation":"Mech,
+        L. D. and Boitani, L. (eds). 2003. \u003ci\u003eWolves: behavior, ecology
+        and conservation\u003c/i\u003e. pp. 472 pp.. University of Chicago Press,
+        Chicago, IL, USA.","year":"2003","title":"Wolves: behavior, ecology and conservation","author":"Mech,
+        L. D. and Boitani, L.","citation_short":null},{"citation":"Danilov, P. I.
+        2003. \u003ci\u003eStatus and dynamics of commercial game populations in Karelia.
+        In: The Third International Symposium “Dynamics of Game Animals Populations
+        in Northern Europe”, 45–48\u003c/i\u003e.","year":"2003","title":"Status and
+        dynamics of commercial game populations in Karelia. In: The Third International
+        Symposium “Dynamics of Game Animals Populations in Northern Europe”, 45–48","author":"Danilov,
+        P. I.","citation_short":null},{"citation":"Iliopoulos, Y. 2005. \u003ci\u003eLinkage
+        areas of wolf distribution in the alignment of EGNATIA highway – section 4.1-
+        Final report- Project: “Monitoring and evaluation project on the effects of
+        the construction and operating of the EGNATIA highway on large carnivores
+        and their habitats - section4.1”, Arcturos, Egnatia S.A.\u003c/i\u003e.","year":"2005","title":"Linkage
+        areas of wolf distribution in the alignment of EGNATIA highway – section 4.1-
+        Final report- Project: “Monitoring and evaluation project on the effects of
+        the construction and operating of the EGNATIA highway on large carnivores
+        and their habitats - section4.1”, Arcturos, Egnatia S.A.","author":"Iliopoulos,
+        Y.","citation_short":null},{"citation":"Blanco, J.C. and Cortés, Y. 2002.
+        \u003ci\u003eEcología, censos, percepción y evolución del lobo en España.
+        SECEM, Málaga. 176 pp.\u003c/i\u003e.","year":"2002","title":"Ecología, censos,
+        percepción y evolución del lobo en España. SECEM, Málaga. 176 pp.","author":"Blanco,
+        J.C. and Cortés, Y.","citation_short":null},{"citation":"Salvatori, V., Okarma,
+        H., Ionescu, O., Dovhanych, Y., Findo, S. and Boitani, L. 2002. \u003ci\u003eHunting
+        legislation in the Carpathian Mountains: implications for the conservation
+        and management of large carnivores. Wildlife Biology, 8, 3-10.\u003c/i\u003e.","year":"2002","title":"Hunting
+        legislation in the Carpathian Mountains: implications for the conservation
+        and management of large carnivores. Wildlife Biology, 8, 3-10.","author":"Salvatori,
+        V., Okarma, H., Ionescu, O., Dovhanych, Y., Findo, S. and Boitani, L.","citation_short":null},{"citation":"LCIE.
+        2007. \u003ci\u003eGuidelines for Population Level Management Plans for Large
+        Carnivores (Final draft, April 2007). Instituto di Ecologia Applicata, Rome.\u003c/i\u003e.","year":"2007","title":"Guidelines
+        for Population Level Management Plans for Large Carnivores (Final draft, April
+        2007). Instituto di Ecologia Applicata, Rome.","author":"LCIE","citation_short":null},{"citation":"Smietana,
+        W. and Wajda, J. 1997. \u003ci\u003eWolf number changes in Bieszczady National
+        Park, Poland. Acta Theriologica, 42: 241-252.\u003c/i\u003e.","year":"1997","title":"Wolf
+        number changes in Bieszczady National Park, Poland. Acta Theriologica, 42:
+        241-252.","author":"Smietana, W. and Wajda, J.","citation_short":null},{"citation":"Mech,
+        L.D. 1970. \u003ci\u003eThe wolf: the ecology and behavior of an endangered
+        species. Natural History Press, Doubleday Publishing Co., NY, USA.\u003c/i\u003e.","year":"1970","title":"The
+        wolf: the ecology and behavior of an endangered species. Natural History Press,
+        Doubleday Publishing Co., NY, USA.","author":"Mech, L.D.","citation_short":null},{"citation":"Okarma
+        et al. 2000. \u003ci\u003eStatus of Carnivores in the Carpathian Ecoregion.
+        WWF Report.\u003c/i\u003e.","year":"2000","title":"Status of Carnivores in
+        the Carpathian Ecoregion. WWF Report.","author":"Okarma et al.","citation_short":null},{"citation":"Boitani,
+        L. 2003. \u003ci\u003eWolf Conservation and Recovery. In: D. Mech and L. Boitani
+        (eds), Wolves: Behavior, Ecology, and Conservation. University of Chicago
+        Press.\u003c/i\u003e.","year":"2003","title":"Wolf Conservation and Recovery.
+        In: D. Mech and L. Boitani (eds), Wolves: Behavior, Ecology, and Conservation.
+        University of Chicago Press.","author":"Boitani, L.","citation_short":null},{"citation":"Linnell,
+        J. D. C. et al. 2006. \u003ci\u003eLarge Carnivores in northern landscapes:
+        Final report. NINA, Trondheim, Norway.\u003c/i\u003e.","year":"2006","title":"Large
+        Carnivores in northern landscapes: Final report. NINA, Trondheim, Norway.","author":"Linnell,
+        J. D. C. et al.","citation_short":null},{"citation":"Verardi, A., Lucchini,
+        V. and Randi, E. 2006. \u003ci\u003eDetecting introgressive hybridisation
+        between free-ranging domestic dogs and wild wolves (Canis lupus) by admixture
+        linkage disequilibrium analysis. Molecular Ecology (in press)\u003c/i\u003e.","year":"2006","title":"Detecting
+        introgressive hybridisation between free-ranging domestic dogs and wild wolves
+        (Canis lupus) by admixture linkage disequilibrium analysis. Molecular Ecology
+        (in press)","author":"Verardi, A., Lucchini, V. and Randi, E.","citation_short":null},{"citation":"Huber,
+        Đ., Kusak, J., Frković, A., Gužvica, G. and Gomerčić, T. 2002. \u003ci\u003eCauses
+        of wolf mortality in Croatia in the period 1986-2001. Veterinarski arhiv.
+        72: 131-139.\u003c/i\u003e.","year":"2002","title":"Causes of wolf mortality
+        in Croatia in the period 1986-2001. Veterinarski arhiv. 72: 131-139.","author":"Huber,
+        Đ., Kusak, J., Frković, A., Gužvica, G. and Gomerčić, T.","citation_short":null},{"citation":"Sidorovich,
+        V. E., Tikhomirova, L. L. \u0026 Jedrzejewska, B. 2003. \u003ci\u003eWolf
+        Canis lupus numbers, diet and damage to livestock in relation to hunting and
+        ungulate abundance in northeastern Belarus during 1990-2000. Wildlife Biology,
+        9, 103-112.\u003c/i\u003e.","year":"2003","title":"Wolf Canis lupus numbers,
+        diet and damage to livestock in relation to hunting and ungulate abundance
+        in northeastern Belarus during 1990-2000. Wildlife Biology, 9, 103-112.","author":"Sidorovich,
+        V. E., Tikhomirova, L. L. \u0026 Jedrzejewska, B.","citation_short":null},{"citation":"Wabakken,
+        P., Sand, H., Liberg, O. \u0026 Bjärvall, A. 2001. \u003ci\u003eThe recovery,
+        distribution and population dynamics of wolves on the Scandinavian Peninsula,
+        1978–98. Canadian Journal of Zoology 79: 710–725.\u003c/i\u003e.","year":"2001","title":"The
+        recovery, distribution and population dynamics of wolves on the Scandinavian
+        Peninsula, 1978–98. Canadian Journal of Zoology 79: 710–725.","author":"Wabakken,
+        P., Sand, H., Liberg, O. \u0026 Bjärvall, A.","citation_short":null},{"citation":"Iliopoulos,Y.
+        1999. \u003ci\u003eDistribution, population estimates and conservation of
+        the wolf in Greece-Arcturos, Thessaloniki, Greece - Project LIFE “Lycos” NAT97-GR04249:
+        Conservation of the wolf (Canis lupus L.) and its habitats in Greece (Arcturos,
+        EC DGEnv, Greek Ministry of Agriculture).\u003c/i\u003e.","year":"1999","title":"Distribution,
+        population estimates and conservation of the wolf in Greece-Arcturos, Thessaloniki,
+        Greece - Project LIFE “Lycos” NAT97-GR04249: Conservation of the wolf (Canis
+        lupus L.) and its habitats in Greece (Arcturos, EC DGEnv, Greek Ministry of
+        Agriculture).","author":"Iliopoulos,Y.","citation_short":null},{"citation":"Ministry
+        of Agriculture and Forestry. 2006. \u003ci\u003eManagement Plan for the Wolf
+        Population in Finland. Helsinki, Finland.\u003c/i\u003e.","year":"2006","title":"Management
+        Plan for the Wolf Population in Finland. Helsinki, Finland.","author":"Ministry
+        of Agriculture and Forestry","citation_short":null},{"citation":"Boitani,
+        L. 1995. Ecological and cultural diversities in the evolution of wolf-human
+        relationships. In: L.N. Carbyn, S.H. Fritts and D.R. Seip (eds). Ecology and
+        conservation of wolves in a changing world. Ocassional Publication 35. pp:
+        3-11. Canadian Circumpolar Institute. Edmonton, Alberta, Canada.","year":"1995","title":"Ecological
+        and cultural diversities in the evolution of wolf-human relationships. In:
+        L.N. Carbyn, S.H. Fritts and D.R. Seip (eds). Ecology and conservation of
+        wolves in a changing world. Ocassional Publication 35. pp: 3-11. Canadian
+        Circumpolar Institute. Edmonton, Alberta, Canada.","author":"Boitani, L.","citation_short":null},{"citation":"Okarma,
+        H. 1993. \u003ci\u003eStatus and management of the wolf in Poland. Biological
+        Conservation, 66: 153-158.\u003c/i\u003e.","year":"1993","title":"Status and
+        management of the wolf in Poland. Biological Conservation, 66: 153-158.","author":"Okarma,
+        H.","citation_short":null},{"citation":"Vosksar, J. 1993. \u003ci\u003eThe
+        ecology of the wolf (Canis lupus) and its share on the formalization and stability
+        of the Carpathian ecosystems in Slovakia. - Ochrana prirody, 12: 241-276.
+        (In Slovak).\u003c/i\u003e.","year":"1993","title":"The ecology of the wolf
+        (Canis lupus) and its share on the formalization and stability of the Carpathian
+        ecosystems in Slovakia. - Ochrana prirody, 12: 241-276. (In Slovak).","author":"Vosksar,
+        J.","citation_short":null},{"citation":"Kusak, J., Majić Skrbinšek, A., Huber,
+        D. 2005. \u003ci\u003eHome ranges, movements, and activity of wolves (Canis
+        lupus) in the Dalmatian part of Dinarids, Croatia. European Journal of Wildlife
+        Research. 51: 254-262.\u003c/i\u003e.","year":"2005","title":"Home ranges,
+        movements, and activity of wolves (Canis lupus) in the Dalmatian part of Dinarids,
+        Croatia. European Journal of Wildlife Research. 51: 254-262.","author":"Kusak,
+        J., Majić Skrbinšek, A., Huber, D.","citation_short":null},{"citation":"Bluzma,
+        P. 2000. \u003ci\u003eLarge predatory mammals in Lithuania: abundance dynamics,
+        distribution, population density. Folia Theriologica Estonica, 5, 35-41.\u003c/i\u003e.","year":"2000","title":"Large
+        predatory mammals in Lithuania: abundance dynamics, distribution, population
+        density. Folia Theriologica Estonica, 5, 35-41.","author":"Bluzma, P.","citation_short":null},{"citation":"Vila,
+        C., Sundqvist, A.-K., Flagstadt, Ø., Seddon, J., Björnerfeldt, S., Kojola,
+        I., Casulli, A., Sand, H., Wabakken, P. \u0026 Ellegren, H. 2003. \u003ci\u003eRescue
+        of a severely bottlenecked wolf (Canis lupus) population by a single immigrant.
+        Proceedings Royal Society London B 270: 91–97.\u003c/i\u003e.","year":"2003","title":"Rescue
+        of a severely bottlenecked wolf (Canis lupus) population by a single immigrant.
+        Proceedings Royal Society London B 270: 91–97.","author":"Vila, C., Sundqvist,
+        A.-K., Flagstadt, Ø., Seddon, J., Björnerfeldt, S., Kojola, I., Casulli, A.,
+        Sand, H., Wabakken, P. \u0026 Ellegren, H.","citation_short":null},{"citation":"Ciucci,
+        P. and Boitani, L. 1998. \u003ci\u003eIl Lupo. Elementi di biologia, gestione
+        e ricerca. Istituto Nazionale della Fauna Selvatica, Bologna. Documenti Tecnici
+        n. 23: 1-114.\u003c/i\u003e.","year":"1998","title":"Il Lupo. Elementi di
+        biologia, gestione e ricerca. Istituto Nazionale della Fauna Selvatica, Bologna.
+        Documenti Tecnici n. 23: 1-114.","author":"Ciucci, P. and Boitani, L.","citation_short":null},{"citation":"Ozolins,
+        J. and Andersone, Z. 2001. \u003ci\u003eStatus of Large Carnivore Conservation
+        in the Baltic States: Action Plan for the Conservation of Wolf (Canis lupus)
+        in Latvia. Council of Europe, T-PVS (2001) 73 addendum 2, 1-34.\u003c/i\u003e.","year":"2001","title":"Status
+        of Large Carnivore Conservation in the Baltic States: Action Plan for the
+        Conservation of Wolf (Canis lupus) in Latvia. Council of Europe, T-PVS (2001)
+        73 addendum 2, 1-34.","author":"Ozolins, J. and Andersone, Z.","citation_short":null},{"citation":"Liberg,
+        O.,  Andrén, H.,  Pedersen, C.-H.,  Sand, H., Sejberg, D.,  Wabakken, P.,  Åkesson,
+        M. and Bensch, S. 2005. \u003ci\u003eSevere inbreeding depression in a wild
+        wolf Canis lupus population. Biology Letters 1: 17-20.\u003c/i\u003e.","year":"2005","title":"Severe
+        inbreeding depression in a wild wolf Canis lupus population. Biology Letters
+        1: 17-20.","author":"Liberg, O.,  Andrén, H.,  Pedersen, C.-H.,  Sand, H.,
+        Sejberg, D.,  Wabakken, P.,  Åkesson, M. and Bensch, S.","citation_short":null},{"citation":"Chapron,
+        G., Kaczensky, P., Linnell, J.D.C., von Arx, M., Huber, D., Andrén, H., Vicente
+        López-Bao, J., Adamec, M., Álvares, F., Anders, O., Balčiauskas, L., Balys,
+        V., Bedő, P., Bego, F., Blanco, J. C., Breitenmoser, U., Brøseth, H., Bufka,
+        L., Bunikyte, R., Ciucci, P., Dutsov, A., Engleder, T., Fuxjäger, C., Groff,
+        C., Holmala, K., Hoxha, B., Iliopoulos, Y., Ionescu, O., Jeremić, J., Jerina,
+        K., Kluth, Knauer, F., Kojola, I., Kos, I., Krofel, M., Kubala, J., Kunovac,
+        S., Kusak, J., Kutal, M., Liberg, O., Majić, A., Männil, P., Manz, R., Marboutin,
+        E., Marucco, F., Melovski, D., Mersini, K., Mertzanis, Y., Mysłajek, R.W.,
+        Nowak, S., Odden, J., Ozolins, J., Palomero, G., Paunović, M., Persson, J.,
+        Potočnik, H., Quenette, P.-Y., Rauer, G., Reinhardt, I., Rigg, R., Ryser,
+        A., Salvatori, V., Skrbinšek, T., Stojanov, A., Swenson, J.E., Szemethy, L.,
+        Trajçe, A., Tsingarska-Sedefcheva, E., Váňa, M., Veeroja, R., Wabakken, P.,
+        Wölfl, M., Wölfl, S., Zimmermann, F., Zlatanova, D., and Boitani, L. 2014.
+        Recovery of Large carnivores in Europe''s modern human-dominated landscapes.
+        \u003ci\u003eScience\u003c/i\u003e 346: 1517-1519.","year":"2014","title":"Recovery
+        of Large carnivores in Europe''s modern human-dominated landscapes","author":"Chapron,
+        G., Kaczensky, P., Linnell, J.D.C., von Arx, M., Huber, D., Andrén, H., Vicente
+        López-Bao, J., Adamec, M., Álvares, F., Anders, O., Balčiauskas, L., Balys,
+        V., Bedő, P., Bego, F., Blanco, J. C., Breitenmoser, U., Brøseth, H., Bufka,
+        L., Bunikyte, R., Ciucci, P., Dutsov, A., Engleder, T., Fuxjäger, C., Groff,
+        C., Holmala, K., Hoxha, B., Iliopoulos, Y., Ionescu, O., Jeremić, J., Jerina,
+        K., Kluth, Knauer, F., Kojola, I., Kos, I., Krofel, M., Kubala, J., Kunovac,
+        S., Kusak, J., Kutal, M., Liberg, O., Majić, A., Männil, P., Manz, R., Marboutin,
+        E., Marucco, F., Melovski, D., Mersini, K., Mertzanis, Y., Mysłajek, R.W.,
+        Nowak, S., Odden, J., Ozolins, J., Palomero, G., Paunović, M., Persson, J.,
+        Potočnik, H., Quenette, P.-Y., Rauer, G., Reinhardt, I., Rigg, R., Ryser,
+        A., Salvatori, V., Skrbinšek, T., Stojanov, A., Swenson, J.E., Szemethy, L.,
+        Trajçe, A., Tsingarska-Sedefcheva, E., Váňa, M., Veeroja, R., Wabakken, P.,
+        Wölfl, M., Wölfl, S., Zimmermann, F., Zlatanova, D., and Boitani, L.","citation_short":null},{"citation":"Kaczensky
+        P., G. Chapron, G., von Arx, M., Huber, D., Andrén, C.H., and Linnell, J.
+        2013. Status, management and distribution of large carnivores – bear, lynx,
+        wolf and wolverine in Europe. Instituto di Ecologia Applicata and with contributions
+        of the IUCN/SSC Large Carnivore Initiative for Europe.","year":"2013","title":"Status,
+        management and distribution of large carnivores – bear, lynx, wolf and wolverine
+        in Europe","author":"Kaczensky P., G. Chapron, G., von Arx, M., Huber, D.,
+        Andrén, C.H., and Linnell, J.","citation_short":null},{"citation":"Bragina,
+        E.V., Ives, A.R., Pidgeon, A.M., Balčiauskas, L., Csányi, S., Khoyetskyy,
+        P., Kysucká, K., Lieskovsky, J., Ozolins, J.,  Randveer, T., Štych, P., Volokh,
+        A., Zhelev, C., Ziółkowska, E. and Radeloff, V.C. 2018. Wildlife population
+        changes across Eastern Europe after the collapse of socialism. \u003ci\u003eFrontiers
+        in ecology and environment\u003c/i\u003e 16: 77-81.","year":"2018","title":"Wildlife
+        population changes across Eastern Europe after the collapse of socialism","author":"Bragina,
+        E.V., Ives, A.R., Pidgeon, A.M., Balčiauskas, L., Csányi, S., Khoyetskyy,
+        P., Kysucká, K., Lieskovsky, J., Ozolins, J.,  Randveer, T., Štych, P., Volokh,
+        A., Zhelev, C., Ziółkowska, E. and Radeloff, V.C. ","citation_short":null},{"citation":"Cubaynes,
+        S., Pradel, R., Choquet, R., Duchamp, C., Gaillard, JM., Lebreton, JD., Marboutin,
+        E., Miquel, C., Reboulet, AM., Poillot, C., Taberlet, P. and Gimenez, O. 2010.
+        Importance of Accounting for Detection Heterogeneity When Estimating Abundance:
+        the Case of French Wolves. \u003ci\u003eConservation Biology \u003c/i\u003e
+        24(2): 621-626.","year":"2010","title":"Importance of Accounting for Detection
+        Heterogeneity When Estimating Abundance: the Case of French Wolves","author":"Cubaynes,
+        S., Pradel, R., Choquet, R., Duchamp, C., Gaillard, JM., Lebreton, JD., Marboutin,
+        E., Miquel, C., Reboulet, AM., Poillot, C., Taberlet, P. and Gimenez, O. ","citation_short":null},{"citation":"Nowak,
+        S., Mysłajek, R.W., Tomczak, P., Szewczyk, M., Borowik, T. and Jędrzejewska,
+        B. 2017. Sedentary but not dispersing wolves \u003ci\u003eCanis lupus\u003c/i\u003e
+        recolonizing western Poland (2001–2016) conform to the predictions of a habitat
+        suitability model. \u003ci\u003eDiversity and Distributions \u003c/i\u003e
+        23: 1353-1364.","year":"2017","title":"Sedentary but not dispersing wolves
+        \u003ci\u003eCanis lupus\u003c/i\u003e recolonizing western Poland (2001–2016)
+        conform to the predictions of a habitat suitability model","author":"Nowak,
+        S., Mysłajek, R.W., Tomczak, P., Szewczyk, M., Borowik, T. and Jędrzejewska,
+        B.","citation_short":null},{"citation":"Marucco, F., Avanzinelli, E., Bassano,
+        B., Bionda, R., Bragalanti, N., Calderola, S., Chioso, C., Martinelli, L.,
+        Fattori, U., Pedrotti, L., Righetti, D., Tironi, E. and Truc, F. 2017. Lo
+        Status della popolazione di lupo sulle Alpi Italiane 2014-2016 Relazione tecnica,
+        Progetto LIFE 12 NAT/IT/00080. WOLFALPS– Azione A4.","year":"2017","title":"Lo
+        Status della popolazione di lupo sulle Alpi Italiane 2014-2016 Relazione tecnica,
+        Progetto LIFE 12 NAT/IT/00080","author":"Marucco, F., Avanzinelli, E., Bassano,
+        B., Bionda, R., Bragalanti, N., Calderola, S., Chioso, C., Martinelli, L.,
+        Fattori, U., Pedrotti, L., Righetti, D., Tironi, E. and Truc, F. ","citation_short":null},{"citation":"Jiménez,
+        J., García, E. J., Llaneza, L., Palacios, V., González, L. M., Domínguez,
+        F. G., Igualada, J. M. and López-Bao, J. V. 2016. Multimethod, multistate
+        Bayesian hierarchical modeling approach for use in regional monitoring of
+        wolves. \u003ci\u003eConservation Biology \u003c/i\u003e 30: 883-893.","year":"2016","title":"Multimethod,
+        multistate Bayesian hierarchical modeling approach for use in regional monitoring
+        of wolves","author":"Jiménez, J., García, E. J., Llaneza, L., Palacios, V.,
+        González, L. M., Domínguez, F. G., Igualada, J. M. and López-Bao, J. V. ","citation_short":null},{"citation":"Kutal,
+        M., Belotti, E., Volfová, J., Mináriková, T., Bufka, L., Poledník, L., Krojerová,
+        J., Bojda, M., Váňa, M., Kutalová, L., Beneš, J., Flousek, J., Tomášek, V.,
+        Kafka, P., Poledníková, K., Pospíšková, J., Dekař, P., Machciník, B., Koubek,
+        P. and Duľa, M. 2017. Occurrence of large carnivores – \u003ci\u003eLynx lynx\u003c/i\u003e,
+        \u003ci\u003eCanis lupus\u003c/i\u003e, and \u003ci\u003eUrsus arctos\u003c/i\u003e
+        – and of \u003ci\u003eFelis silvestris\u003c/i\u003e in the Czech Republic
+        and western Slovakia in 2012–2016 (Carnivora). \u003ci\u003eLynx n.s. (Praha).\u003c/i\u003e
+        48: 93-107. (in Czech with English abstract).","year":"2017","title":"Occurrence
+        of large carnivores – \u003ci\u003eLynx lynx\u003c/i\u003e, \u003ci\u003eCanis
+        lupus\u003c/i\u003e, and \u003ci\u003eUrsus arctos\u003c/i\u003e – and of
+        \u003ci\u003eFelis silvestris\u003c/i\u003e in the Czech Republic and western
+        Slovakia in 2012–2016 (Carnivora)","author":"Kutal, M., Belotti, E., Volfová,
+        J., Mináriková, T., Bufka, L., Poledník, L., Krojerová, J., Bojda, M., Váňa,
+        M., Kutalová, L., Beneš, J., Flousek, J., Tomášek, V., Kafka, P., Poledníková,
+        K., Pospíšková, J., Dekař, P., Machciník, B., Koubek, P. and Duľa, M.","citation_short":null},{"citation":"Linnell,
+        J., Salvatori, V. and Boitani, L. 2008. Guidelines for population level management
+        plans for large carnivores in Europe. A Large Carnivore Initiative for Europe
+        report prepared for the European Commission, Rome.","year":"2008","title":"Guidelines
+        for population level management plans for large carnivores in Europe","author":"Linnell,
+        J., Salvatori, V. and Boitani, L.","citation_short":null},{"citation":"Pilot,
+        M., Jędrzejewski, W., Branicki, W., Sidorovich, V.E., Jędrzejewska, B., Stachura,
+        K., Funk, S. 2006. Ecological factors influence population genetic structure
+        of European grey wolves. \u003ci\u003eMolecular Ecology\u003c/i\u003e 15:
+        4533-4553.","year":"2006","title":"Ecological factors influence population
+        genetic structure of European grey wolves","author":"Pilot, M., Jędrzejewski,
+        W., Branicki, W., Sidorovich, V.E., Jędrzejewska, B., Stachura, K., Funk,
+        S. ","citation_short":null},{"citation":"BfN. 2017. Pressehintergrund. Artenschutz.
+        Der Wolf (\u003ci\u003eCanis lupus\u003c/i\u003e) – Bestand, Prävention und
+        Einschätzung von Wolfsverhalten. Available at: \u003ca href=\"https://www.bfn.de/fileadmin/BfN/presse/2017/Dokumente/Pressehintergrund_Wolf_2017bf.pdf\"\u003ehttps://www.bfn.de/fileadmin/BfN/presse/2017/Dokumente/Pressehintergrund_Wolf_2017bf.pdf\u003c/a\u003e.
+        ","year":"2017","title":"Pressehintergrund. Artenschutz. Der Wolf (\u003ci\u003eCanis
+        lupus\u003c/i\u003e) – Bestand, Prävention und Einschätzung von Wolfsverhalten","author":"BfN","citation_short":""},{"citation":"Strbenac,
+        A., Huber, Đ., Kusak, J., Majić-Skrbinšek, A., Frković, A., Štahan, Ž., Jeremić-Martinko,
+        J., Desnica, S. and Štrbenac, P. 2005. \u003ci\u003eWolf management plan for
+        the Republic of Croatia Državni zavod za zaštitu prirode, 2005.\u003c/i\u003e.","year":"2005","title":"Wolf
+        management plan for the Republic of Croatia Državni zavod za zaštitu prirode,
+        2005.","author":"Strbenac, A., Huber, Đ., Kusak, J., Majić-Skrbinšek, A.,
+        Frković, A., Štahan, Ž., Jeremić-Martinko, J., Desnica, S. and Štrbenac, P.","citation_short":null},{"citation":"Marescot,
+        L., Pradel, R., Duchamp, C., Cubaynes, S., Marboutin, S., Choquet, R., Miquel,
+        C. and Gimenez, O. 2011. Capture–recapture population growth rate as a robust
+        tool against detection heterogeneity for population management. \u003ci\u003eEcological
+        Applications\u003c/i\u003e 21: 2898-2907.","year":"2011","title":"Capture–recapture
+        population growth rate as a robust tool against detection heterogeneity for
+        population management","author":"Marescot, L., Pradel, R., Duchamp, C., Cubaynes,
+        S., Marboutin, S., Choquet, R., Miquel, C. and Gimenez, O. ","citation_short":null},{"citation":"Shkvyrya,
+        M. 2008. Distribution, ecology and behavioral features of the wolf (\u003ci\u003eCanis
+        lupus\u003c/i\u003e) in Ukraine. PhD thesis, Kyiv.","year":"2008","title":"Distribution,
+        ecology and behavioral features of the wolf (\u003ci\u003eCanis lupus\u003c/i\u003e)
+        in Ukraine","author":"Shkvyrya, M.","citation_short":null},{"citation":"Trouwborst,
+        A. 2014. The EU Habitats Directive and wolf conservation and management on
+        the Iberian Peninsula: a legal perspective. \u003ci\u003eGalemys: Spanish
+        Journal of Mammalogy\u003c/i\u003e 26: 15-30.","year":"2014","title":"The
+        EU Habitats Directive and wolf conservation and management on the Iberian
+        Peninsula: a legal perspective","author":"Trouwborst, A.","citation_short":null},{"citation":"Molinari-Jobin,
+        A., Wölfl, S., Marboutin, E., Molinari, P., Wölfl, M., Kos, I., Fasel, M.,
+        Koren, I., Fuxjäger, C., Breitenmoser, C., Huber, T., Blazic, M. and Breitenmoser,
+        U. 2012. Monitoring the Lynx in the Alps. \u003ci\u003eHystrix\u003c/i\u003e
+        23: 49-53.","year":"2012","title":"Monitoring the Lynx in the Alps","author":"Molinari-Jobin,
+        A., Wölfl, S., Marboutin, E., Molinari, P., Wölfl, M., Kos, I., Fasel, M.,
+        Koren, I., Fuxjäger, C., Breitenmoser, C., Huber, T., Blazic, M. and Breitenmoser,
+        U.","citation_short":null},{"citation":"Álvares, F., Barroso, I., Costa, G.,
+        Espírito-Santo, C., Fonseca, C., Godinho, R.; Nakamura, M., Petrucci-Fonseca,
+        F., Pimenta, V., Ribeiro, S., Rio-Maior, H., Santos, N. and Torres, R. 2015.
+        Situação de referência para o Plano de Ação para a Conservação do Lobo-ibérico
+        em Portugal (PACLOBO). ICNF/CIBIO-INBIO/CE3C/UA, Lisboa.","year":"2015","title":"Situação
+        de referência para o Plano de Ação para a Conservação do Lobo-ibérico em Portugal
+        (PACLOBO)","author":"Álvares, F., Barroso, I., Costa, G., Espírito-Santo,
+        C., Fonseca, C., Godinho, R.; Nakamura, M., Petrucci-Fonseca, F., Pimenta,
+        V., Ribeiro, S., Rio-Maior, H., Santos, N. and Torres, R. ","citation_short":null},{"citation":"Reinhardt,
+        I., Kluth, G., Nowak, S. and Mysłajek, R.W. 2015. Standards for the monitoring
+        of the Central European wolf population in Germany and Poland. BfN-Skripten
+        398. Bundesamt für Naturschutz (BfN), Federal Agency for Nature Conservation,
+        Bonn, Germany.","year":"2015","title":"Standards for the monitoring of the
+        Central European wolf population in Germany and Poland. BfN-Skripten 398","author":"Reinhardt,
+        I., Kluth, G., Nowak, S. and Mysłajek, R.W.","citation_short":null},{"citation":"Jeremić,
+        J., Desnica, S., Štrbenac, A., Kusak, J. and Huber, Đ. 2015. Report on the
+        State of the Wolf Population in Croatia in 2015. Croatian Agency for Nature
+        and Environment, Zagreb. (in Croatian).","year":"2015","title":"Report on
+        the State of the Wolf Population in Croatia in 2015","author":"Jeremić, J.,
+        Desnica, S., Štrbenac, A., Kusak, J. and Huber, Đ.  ","citation_short":null},{"citation":"Pirga,
+        B., Wasiak, P. and Kucharzyk, S. 2016. Identification and protection of migration
+        corridors for large mammals – the results of the project conducted in the
+        Bieszczady National Park in 2012–2015. Identyfikacja i ochrona korytarzy migracyjnych
+        dużych ssaków  - wyniki projektu realizowanego na terenie Bieszczadzkiego
+        Parku Narodowego w latach 2012-2015 . \u003ci\u003eRoczniki Bieszczadzkie
+        \u003c/i\u003e 24: 123-144. (in Polish with English abstract).","year":"2016","title":"Identification
+        and protection of migration corridors for large mammals – the results of the
+        project conducted in the Bieszczady National Park in 2012–2015. Identyfikacja
+        i ochrona korytarzy migracyjnych dużych ssaków  - wyniki projektu realizowanego
+        na terenie Bieszczadzkiego Parku Narodowego w latach 2012-2015 ","author":"Pirga,
+        B., Wasiak, P. and Kucharzyk, S. ","citation_short":null},{"citation":"Nowak,
+        S. and Mysłajek, R.W. 2016. Wolf recovery and population dynamics in Western
+        Poland, 2001-2012. \u003ci\u003eMammal Research \u003c/i\u003e 61: 83-98.","year":"2016","title":"Wolf
+        recovery and population dynamics in Western Poland, 2001-2012","author":"Nowak,
+        S. and Mysłajek, R.W.","citation_short":null},{"citation":"Fechter, D. and
+        Storch, I. 2014. How Many Wolves (\u003ci\u003eCanis lupus\u003c/i\u003e)
+        Fit into Germany? The Role of Assumptions in Predictive Rule-Based Habitat
+        Models for Habitat Generalists. \u003ci\u003ePLoS ONE \u003c/i\u003e 9(7):
+        e101798.","year":"2014","title":"How Many Wolves (\u003ci\u003eCanis lupus\u003c/i\u003e)
+        Fit into Germany? The Role of Assumptions in Predictive Rule-Based Habitat
+        Models for Habitat Generalists","author":"Fechter, D. and Storch, I. ","citation_short":null},{"citation":"Fabbri,
+        E., Miquel, C., Lucchini, V., Santini, A., Caniglia, R., Duchamp, C., Weber,
+        J.M., Lequette, B., Marucco, F., Boitani, L., Fumagalli, L., Taberlet, P.
+        and Randi, E. 2007. From the Apennines to the Alps: colonization genetics
+        of the naturally expanding Italian wolf (\u003ci\u003eCanis lupus\u003c/i\u003e)
+        population. \u003ci\u003eMolecular Ecology\u003c/i\u003e 16(8): 1661-1671.","year":"2007","title":"From
+        the Apennines to the Alps: colonization genetics of the naturally expanding
+        Italian wolf (\u003ci\u003eCanis lupus\u003c/i\u003e) population","author":"Fabbri,
+        E., Miquel, C., Lucchini, V., Santini, A., Caniglia, R., Duchamp, C., Weber,
+        J.M., Lequette, B., Marucco, F., Boitani, L., Fumagalli, L., Taberlet, P.
+        and Randi, E.","citation_short":""},{"citation":"Rigg, R., Skrbinšek, T. and
+        Linnell, J. 2014. Engaging hunters and other stakeholders in a pilot study
+        of wolves in Slovakia using non-invasive genetic sampling. Report to the project
+        Support to the European Commission''s policy on large carnivores under the
+        Habitats Directive – phase 2 (contract no. 07.0307/2013/654446/SER/B.3). Istituto
+        di Ecologia Applicata, Rome.","year":"2014","title":"Engaging hunters and
+        other stakeholders in a pilot study of wolves in Slovakia using non-invasive
+        genetic sampling. Report to the project Support to the European Commission''s
+        policy on large carnivores under the Habitats Directive – phase 2 (contract
+        no. 07.0307/2013/654446/SER/B.3)","author":"Rigg, R., Skrbinšek, T. and Linnell,
+        J.","citation_short":""},{"citation":"Blanco, J.C. and Cortés, Y. 2012. Surveying
+        wolves without snow: a critical review of the methods used in Spain. \u003ci\u003eHystrix,
+        The Italian Journal of Mammalogy \u003c/i\u003e 23: 35-48.","year":"2012","title":"Surveying
+        wolves without snow: a critical review of the methods used in Spain","author":"Blanco,
+        J.C. and Cortés, Y. ","citation_short":null},{"citation":"Jeremić, J., Desnica,
+        S., Štrbenac, A., Hamidović, D., Huber, Đ., and Kusak, J. 2014. Report on
+        the State of the Wolf Population in Croatia in 2014. State Institute for Nature
+        Conservation, Zagreb.","year":"2014","title":"Report on the State of the Wolf
+        Population in Croatia in 2014","author":"Jeremić, J., Desnica, S., Štrbenac,
+        A., Hamidović, D., Huber, Đ., and Kusak, J. ","citation_short":null},{"citation":"Cazacu,
+        C., Adamescu, M.C., Ionescu, O., Ionescu, G., Jurj, R., Popa, M., Cazacu,
+        R. and Cotovelea, A. 2014. Mapping trends of large and medium size carnivores
+        of conservation interest in Romania. \u003ci\u003eAnn. For. Res.\u003c/i\u003e
+        57(1): 97-107.","year":"2014","title":"Mapping trends of large and medium
+        size carnivores of conservation interest in Romania","author":"Cazacu, C.,
+        Adamescu, M.C., Ionescu, O., Ionescu, G., Jurj, R., Popa, M., Cazacu, R. and
+        Cotovelea, A.","citation_short":null},{"citation":"Jeremić, J., Kusak, J.,
+        Huber, Đ., Štrbenac, A. and Korša, A. 2016. Report on the State of the Wolf
+        Population in Croatia in 2016. Croatian Agency for Nature and Environment,
+        Zagreb. (in Croatian).","year":"2016","title":"Report on the State of the
+        Wolf Population in Croatia in 2016","author":"Jeremić, J., Kusak, J., Huber,
+        Đ., Štrbenac, A. and Korša, A.","citation_short":null},{"citation":"Trbojević,
+        I. 2016. Distribution of Grey wolf (\u003ci\u003eCanis lupus\u003c/i\u003e
+        L., 1758) in Bosnia and Herzegovina. (in Serbian with English summary). \u003ci\u003eBulletin
+        of Faculty of Forestry, University of Banja Luka\u003c/i\u003e 25: 41-49.","year":"2016","title":"Distribution
+        of Grey wolf (\u003ci\u003eCanis lupus\u003c/i\u003e L., 1758) in Bosnia and
+        Herzegovina. (in Serbian with English summary)","author":"Trbojević, I.","citation_short":null},{"citation":"López-Bao,
+        J.V., Godinho, R., Pacheco, C., Lema, F.J., García, E., Llaneza, L., Palacios,
+        V. and Jiménez, J. 2018. Toward reliable population estimates of wolves by
+        combining spatial capture-recapture models and non-invasive DNA monitoring.
+        \u003ci\u003eScientific Reports \u003c/i\u003e 8: 2177.","year":"2018","title":"Toward
+        reliable population estimates of wolves by combining spatial capture-recapture
+        models and non-invasive DNA monitoring","author":"López-Bao, J.V., Godinho,
+        R., Pacheco, C., Lema, F.J., García, E., Llaneza, L., Palacios, V. and Jiménez,
+        J. ","citation_short":null},{"citation":"Wolf Alpine Group. 2014. Available
+        at: \u003ca href=\"http://www2.nina.no/lcie_new/pdf/635422311267073434_WAG_report_2014.pdf
+        \"\u003ehttp://www2.nina.no/lcie_new/pdf/635422311267073434_WAG_report_2014.pdf
+        \u003c/a\u003e. ","year":"2014","title":null,"author":"Wolf Alpine Group ","citation_short":null},{"citation":"Nowak,
+        S., Mysłajek, R.W. and Jędrzejewska, B. 2008. Density and demography of wolf
+        \u003ci\u003eCanis lupus\u003c/i\u003e population in the western-most part
+        of the Polish Carpathian Mountains, 1996–2003. \u003ci\u003eFolia Zoologica
+        \u003c/i\u003e 57: 392-402.","year":"2008","title":"Density and demography
+        of wolf \u003ci\u003eCanis lupus\u003c/i\u003e population in the western-most
+        part of the Polish Carpathian Mountains, 1996–2003","author":"Nowak, S., Mysłajek,
+        R.W. and Jędrzejewska, B.","citation_short":null},{"citation":"Schnidrig,
+        R., Nienhuis, C., Imhof, R., Bürki, R. and Breitenmoser, U. (eds). 2016. Wolf
+        in the Alps: Recommendations for an internationally coordinated management.
+        \u003ci\u003eRowAlps Report Objective 3\u003c/i\u003e, pp. 70. KORA Bericht
+        Nr. 72. KORA. Muri bei Bern, Switzerland, and BAFU, Ittigen, Switzerland.","year":"2016","title":"Wolf
+        in the Alps: Recommendations for an internationally coordinated management","author":"Schnidrig,
+        R., Nienhuis, C., Imhof, R., Bürki, R. and Breitenmoser, U.","citation_short":""},{"citation":"Ciucci,
+        P. 2012. Ibridazione con il cane come minaccia per la conservazione del lupo:
+        status delle conoscenze e criteri per la identifcazione degli ibridi.  LIFE10NAT/IT/265
+        IBRIWOLF. Istituto Ecologia Applicata, Roma.","year":"2012","title":"Ibridazione
+        con il cane come minaccia per la conservazione del lupo: status delle conoscenze
+        e criteri per la identifcazione degli ibridi","author":"Ciucci, P.","citation_short":null},{"citation":"Chapron,
+        G., Wikenros, C, Liberg, O. and Sand, H. 2016. Estimating wolf (\u003ci\u003eCanis
+        lupus\u003c/i\u003e) population size from number of packs and an individual
+        based model. \u003ci\u003eEcological Modelling \u003c/i\u003e 339: 33-44.","year":"2016","title":"Estimating
+        wolf (\u003ci\u003eCanis lupus\u003c/i\u003e) population size from number
+        of packs and an individual based model","author":"Chapron, G., Wikenros, C,
+        Liberg, O. and Sand, H.","citation_short":null},{"citation":"Svensson, L.,
+        Wabakken, P., Maartmann, E., Åkesson, M and Flagstad, Ø. 2017. Inventering
+        av varg vintern 2016-2017. Bestandsovervåking av ulv vinteren 2016-2017. Bestandsstatus
+        for store rovdyr i Skandinavia. Beståndsstatus för stora rovdjur i Skandinavien
+        1-2017. 49 s. Grimsö och Evenstad, 30. mai 2017.","year":"2017","title":"Inventering
+        av varg vintern 2016-2017. Bestandsovervåking av ulv vinteren 2016-2017. Bestandsstatus
+        for store rovdyr i Skandinavia. Beståndsstatus för stora rovdjur i Skandinavien
+        1-2017. 49 s","author":"Svensson, L., Wabakken, P., Maartmann, E., Åkesson,
+        M and Flagstad, Ø. ","citation_short":null},{"citation":"Wolf Alpine Group.
+        2018. Wolf population status in the Alps: pack distribution and trend up to
+        2016, with focus on year 2015-2016. Available at: \u003ca href=\"http://www.lcie.org\"\u003ehttp://www.lcie.org\u003c/a\u003e.
+        ","year":"2018","title":"Wolf population status in the Alps: pack distribution
+        and trend up to 2016, with focus on year 2015-2016","author":"Wolf Alpine
+        Group ","citation_short":null},{"citation":"Kreeger, T.J. 2003. The internal
+        wolf: physiology, pathology, and pharmacology. In: L.D. Mech, and L. Boitani
+        (eds), \u003ci\u003eWolves: behavior, ecology, and conservation\u003c/i\u003e,
+        pp. 161-191. University of Chicago Press, Chicago, Illinois, USA.","year":"2003","title":"The
+        internal wolf: physiology, pathology, and pharmacology","author":"Kreeger,
+        T.J.","citation_short":""},{"citation":"Duchamp, C.,Boyer, J., Briaudet, P-E.,
+        Leonard, Y., Moris, P., Bataille, A., Dahier, T., Delacour, G., Millisher,
+        G., Miquel, C., Poillot, C. and Marboutin, E. 2012. Wolf monitoring in France:
+        a dual frame process to survey time- and space-related changes in the population.
+        \u003ci\u003eHystrix It. J. Mamm\u003c/i\u003e 23(1): 14-28.","year":"2012","title":"Wolf
+        monitoring in France: a dual frame process to survey time- and space-related
+        changes in the population","author":"Duchamp, C.,Boyer, J., Briaudet, P-E.,
+        Leonard, Y., Moris, P., Bataille, A., Dahier, T., Delacour, G., Millisher,
+        G., Miquel, C., Poillot, C. and Marboutin, E. ","citation_short":null},{"citation":"Fuller,
+        T.K., Mech, L.D. and Fitts-Cochran, J. 2003. Wolf population dynamics. In:
+        L.D. Mech and L. Boitani (eds), \u003ci\u003eWolves: behavior, ecology, and
+        conservation\u003c/i\u003e, University of Chicago Press, Chicago, Illinois,
+        USA.","year":"2003","title":"Wolf population dynamics","author":"Fuller, T.K.,
+        Mech, L.D. and Fitts-Cochran, J.","citation_short":""},{"citation":"Hulva,
+        P., Černá Bolfíková, B., Woznicová, V., Jindřichová, M., Benešová, M., Mysłajek,
+        R.W., Nowak, S., Szewczyk, M., Niedźwiecka, N., Figura, M., Hájková, A., Sándor,
+        A.D., Zyka, V., Romportl, D., Kutal, M., Finďo, S. and Antal V. 2018. Wolves
+        at the crossroad: fission-fusion range biogeography in the Western Carpathians
+        and Central Europe. \u003ci\u003eDiversity and Distributions \u003c/i\u003e
+        24(179-192).","year":"2018","title":"Wolves at the crossroad: fission-fusion
+        range biogeography in the Western Carpathians and Central Europe","author":"Hulva,
+        P., Černá Bolfíková, B., Woznicová, V., Jindřichová, M., Benešová, M., Mysłajek,
+        R.W., Nowak, S., Szewczyk, M., Niedźwiecka, N., Figura, M., Hájková, A., Sándor,
+        A.D., Zyka, V., Romportl, D., Kutal, M., Finďo, S. and Antal V. ","citation_short":null},{"citation":"Boitani,
+        L and Salvatori, V. 2016. Piano di gestione del lupo in Italia (draft). Ministero
+        Ambiente e tutela del territorio e del Mare, Roma.","year":"2016","title":"Piano
+        di gestione del lupo in Italia (draft)","author":"Boitani, L and Salvatori,
+        V.","citation_short":null},{"citation":"Marucco, F., Avanzinelli, E. and Boitani,
+        L. 2012. Non-invasive Integrated Sampling Design to Monitor the Wolf Population
+        in Piemonte, Italian Alps. \u003ci\u003eHystrix, the Italian Journal of Mammalogy\u003c/i\u003e
+        23: 5-13.","year":"2012","title":"Non-invasive Integrated Sampling Design
+        to Monitor the Wolf Population in Piemonte, Italian Alps","author":"Marucco,
+        F., Avanzinelli, E. and Boitani, L.","citation_short":""},{"citation":"Kawata,
+        Y., Ozoliņš, J. and Baumanis, J. 2013. Analysis of wildlife population dynamics
+        using a connected scatter plot: Latvian wild animals as an example . \u003ci\u003eResearch
+        Opinions in Animal and Veterinary Sciences\u003c/i\u003e 3(2): 50-59.","year":"2013","title":"Analysis
+        of wildlife population dynamics using a connected scatter plot: Latvian wild
+        animals as an example ","author":"Kawata, Y., Ozoliņš, J. and Baumanis, J.
+        ","citation_short":null},{"citation":"Gełdon, A., Nowak, S. and Mysłajek,
+        R.W. 2015. Report on the inventory of large carnivores in the season 2014/2015
+        in selected forest divisions of Regional Directorate of State Forests in Olsztyn
+        and Regional Directorate of State Forests in Białymstok. Lasy Paostwowe, Olsztyn.
+        In Polish.","year":"2015","title":"Report on the inventory of large carnivores
+        in the season 2014/2015 in selected forest divisions of Regional Directorate
+        of State Forests in Olsztyn and Regional Directorate of State Forests in Białymstok","author":"Gełdon,
+        A., Nowak, S. and Mysłajek, R.W. ","citation_short":null},{"citation":"Galaverni,
+        M., Caniglia, R., Fabbri, E., Milanesi, P. and Randi, E. 2015. One, no one,
+        or one hundred thousand: how many wolves are there currenlty in Italy? . \u003ci\u003eMammal
+        Research \u003c/i\u003e 61(1).","year":"2015","title":"One, no one, or one
+        hundred thousand: how many wolves are there currenlty in Italy? ","author":"Galaverni,
+        M., Caniglia, R., Fabbri, E., Milanesi, P. and Randi, E.","citation_short":null},{"citation":"Kutal,
+        M., Váňa, M., Suchomel, J., Chapron, G. and Lopez-Bao, J.V. 2016. Trans-Boundary
+        Edge Effects in the Western Carpathians: The Influence of Hunting on Large
+        Carnivore Occupancy. \u003ci\u003ePLOS ONE\u003c/i\u003e 11(12): e0168292.","year":"2016","title":"Trans-Boundary
+        Edge Effects in the Western Carpathians: The Influence of Hunting on Large
+        Carnivore Occupancy","author":"Kutal, M., Váňa, M., Suchomel, J., Chapron,
+        G. and Lopez-Bao, J.V. ","citation_short":null},{"citation":"Sunde, P. and
+        Olsen, K. 2018. Ulve (\u003ci\u003eCanis lupus\u003c/i\u003e) i Danmark 2012-2017.
+        Oversigt og analyse af tilgængelig bestandsinformation. Aarhus Universitet,
+        DCE – Nationalt Center for Miljø og Energi, 52 s. - Videnskabelig rapport
+        fra DCE - Nationalt Center for Miljø og Energi nr. 258.","year":"2018","title":"Ulve
+        (\u003ci\u003eCanis lupus\u003c/i\u003e) i Danmark 2012-2017. Oversigt og
+        analyse af tilgængelig bestandsinformation","author":"Sunde, P. and Olsen,
+        K.","citation_short":""},{"citation":"IUCN. 2025. The IUCN Red List of Threatened
+        Species. Version 2025-1. Available at: \u003ca href=\"www.iucnredlist.org\"\u003ewww.iucnredlist.org\u003c/a\u003e.
+        (Accessed: 27 March 2025).","year":"2025","title":"The IUCN Red List of Threatened
+        Species. Version 2025-1","author":"IUCN","citation_short":"IUCN 2025-1"},{"citation":"Altobello,
+        G. 1921. Mammiferi IV, Carnivori. \u003ci\u003eFauna d’Abruzzo e Molise\u003c/i\u003e,
+        pp. 38-45. Colitti, Campobasso.","year":"1921","title":"Mammiferi IV, Carnivori","author":"Altobello,
+        G.","citation_short":null},{"citation":"Aragno, P., Salvatori, V., Caniglia,
+        R., De Angelis, D., Fabbri, E., Gervasi, V., La Morgia, V., Marucco, F., Mucci,
+        N., Velli, E. and Genovesi P. 2022. La popolazione di lupo nelle regioni dell’Italia
+        peninsulare 2020/2021.  Relazione tecnica realizzata nell’ambito della convenzione
+        ISPRA-Ministero della Transizione Ecologica “Attività di monitoraggio nazionale
+        nell’ambito del Piano di Azione del lupo”.","year":"2022","title":"La popolazione
+        di lupo nelle regioni dell’Italia peninsulare 2020/2021","author":"Aragno,
+        P., Salvatori, V., Caniglia, R., De Angelis, D., Fabbri, E., Gervasi, V.,
+        La Morgia, V., Marucco, F., Mucci, N., Velli, E. and Genovesi P.","citation_short":""},{"citation":"Boitani,
+        L., Kaczensky, P., Alvares, F., Andrén, H., Balys, V., Blanco, J.C., Chapron,
+        G., Chiriac, S., Cirovic, D.,Drouet-Houguet, N., Groff, C., Huber, D., Iliopoulos,
+        Y., Ionescu, O., Kojola, I., Krofel, M., Kutal, M., Linnell, J., Majic, A.,
+        Mannil, P., Marucco, F., Melovski, D., Mengüllüoğlu, D., Mergeay, J., Nowak,
+        S., Ozolins, J., Perovic, A., Rauer, G., Reinhardt, I., Rigg, R., Salvatori,
+        V., Sanaja, B., Schley, L.  Shkvyria, M., Sunde, P., Tirronen, K., Trajce,
+        A., Trbojevic, I., Trouwborst, A., von Arx, M., Wolfl, M., Zlatanova, D. and
+        Patkó, L. 2022. Assessment of the conservation status of the Wolf (\u003ci\u003eCanis
+        lupus\u003c/i\u003e) in Europe. Council of Europe, Bern Convention, T-PVS/Inf(2022)45.","year":"2022","title":"Assessment
+        of the conservation status of the Wolf (\u003ci\u003eCanis lupus\u003c/i\u003e)
+        in Europe","author":"Boitani, L., Kaczensky, P., Alvares, F., Andrén, H.,
+        Balys, V., Blanco, J.C., Chapron, G., Chiriac, S., Cirovic, D.,Drouet-Houguet,
+        N., Groff, C., Huber, D., Iliopoulos, Y., Ionescu, O., Kojola, I., Krofel,
+        M., Kutal, M., Linnell, J., Majic, A., Mannil, P., Marucco, F., Melovski,
+        D., Mengüllüoğlu, D., Mergeay, J., Nowak, S., Ozolins, J., Perovic, A., Rauer,
+        G., Reinhardt, I., Rigg, R., Salvatori, V., Sanaja, B., Schley, L.  Shkvyria,
+        M., Sunde, P., Tirronen, K., Trajce, A., Trbojevic, I., Trouwborst, A., von
+        Arx, M., Wolfl, M., Zlatanova, D. and Patkó, L.","citation_short":null},{"citation":"Boitani,
+        L. Phillips, M. and Jhala, Y. 2018 in press. \u003ci\u003eCanis lupus\u003c/i\u003e.
+        \u003ci\u003eThe IUCN Red List of Threatened Species\u003c/i\u003e 2018(2).","year":"2018
+        in press","title":"\u003ci\u003eCanis lupus\u003c/i\u003e","author":"Boitani,
+        L. Phillips, M. and Jhala, Y.","citation_short":""},{"citation":"Salvatori,
+        V., Godinho, R., Braschi, C., Boitani, L. and Ciucci, P. 2019. High levels
+        of recent wolf × dog introgressive hybridization in agricultural landscapes
+        of central Italy. \u003ci\u003eEuropean Journal of Wildlife Research\u003c/i\u003e
+        65(5): 73-83.","year":"2019","title":"High levels of recent wolf × dog introgressive
+        hybridization in agricultural landscapes of central Italy","author":"Salvatori,
+        V., Godinho, R., Braschi, C., Boitani, L. and Ciucci, P","citation_short":""},{"citation":"Torres,
+        R.T. and Fonseca, C. 2016. Perspectives on the Iberian wolf in Portugal: population
+        trends and conservation threats. \u003ci\u003eBiodiversity Conservation\u003c/i\u003e
+        25(3): 411–425.","year":"2016","title":"Perspectives on the Iberian wolf in
+        Portugal: population trends and conservation threats","author":"Torres, R.T.
+        and Fonseca, C.","citation_short":null}],"growth_forms":[],"lmes":[],"scopes":[{"description":{"en":"Europe"},"code":"2"}],"stresses":[{"description":{"en":"Ecosystem
+        conversion"},"code":"1_1"},{"description":{"en":"Ecosystem conversion"},"code":"1_1"},{"description":{"en":"Ecosystem
+        conversion"},"code":"1_1"},{"description":{"en":"Ecosystem conversion"},"code":"1_1"},{"description":{"en":"Ecosystem
+        conversion"},"code":"1_1"},{"description":{"en":"Ecosystem conversion"},"code":"1_1"},{"description":{"en":"Ecosystem
+        conversion"},"code":"1_1"},{"description":{"en":"Ecosystem degradation"},"code":"1_2"},{"description":{"en":"Ecosystem
+        degradation"},"code":"1_2"},{"description":{"en":"Ecosystem degradation"},"code":"1_2"},{"description":{"en":"Ecosystem
+        degradation"},"code":"1_2"},{"description":{"en":"Ecosystem degradation"},"code":"1_2"},{"description":{"en":"Ecosystem
+        degradation"},"code":"1_2"},{"description":{"en":"Ecosystem degradation"},"code":"1_2"},{"description":{"en":"Species
+        mortality"},"code":"2_1"},{"description":{"en":"Species mortality"},"code":"2_1"},{"description":{"en":"Species
+        mortality"},"code":"2_1"},{"description":{"en":"Species disturbance"},"code":"2_2"}],"systems":[{"description":{"en":"Terrestrial"},"code":"0"}]}'
+  recorded_at: 2025-07-07 22:24:02 GMT
+  recorded_with: vcr/1.7.0, webmockr/2.0.0

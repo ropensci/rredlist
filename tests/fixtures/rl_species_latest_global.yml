@@ -1,0 +1,448 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/taxa/scientific_name?genus_name=Canis&species_name=lupus
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/6.2.2 crul/1.5.0 rOpenSci(rredlist/1.0.0.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      date: Mon, 07 Jul 2025 22:24:07 GMT
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+      cache-control: max-age=0, private, must-revalidate
+      etag: W/"e515f7239bf65a38cb0eb7aabb141e5a"
+      x-request-id: 71a5771e-496d-47dd-8ec8-1ff2dd38d956
+      x-runtime: '0.172564'
+      cf-cache-status: DYNAMIC
+      nel: '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
+      speculation-rules: '"/cdn-cgi/speculation"'
+      report-to: '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=F60O6T3y9roroqMFbVg6dDx8GPqV%2B2TISx2C9o9ZNuFrlpD52fgJUcv%2Bmvnl5VsVMf0nZQZQqGreT10LxZxwprvrSS1ikWNYRJXuuq340%2FyTIAY%3D"}]}'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 95bac0095c101a5c-EWR
+      alt-svc: h3=":443"; ma=86400
+    body:
+      encoding: ''
+      file: no
+      string: '{"taxon":{"sis_id":3746,"scientific_name":"Canis lupus","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[{"sis_id":223987824,"scientific_name":"Canis
+        lupus ssp. chanco","kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"CARNIVORA","family_name":"CANIDAE","genus_name":"Canis","species_name":"lupus","subpopulation_name":null,"infra_name":"chanco","authority":"Gray,
+        1863","ssc_groups":[{"name":"IUCN SSC Canid Specialist Group (foxes, jackals
+        and wild dogs)","url":"http://www.canids.org/","description":"Chair: Claudio
+        Sillero-Zubiri (email: canids@zoology.oxford.ac.uk)\nRed List Authority Coordinator:
+        Michael Hoffmann (email: mike.hoffmann@zsl.org)\nNewsletter: http://www.canids.org/c-b-c"}],"common_names":[{"main":false,"name":"Tibetan
+        Wolf","language":"eng"},{"main":false,"name":"Woolly Wolf","language":"eng"},{"main":true,"name":"Himalayan
+        Wolf","language":"eng"}],"synonyms":[{"name":"Canis lupus ssp. laniger Hodgson,
+        1847","status":"ACCEPTED","genus_name":"Canis","species_name":"lupus","species_author":null,"infrarank_author":"Hodgson,
+        1847","subpopulation_name":null,"infra_type":"subspecies","infra_name":"laniger"},{"name":"Canis
+        chanco Gray, 1863","status":"ACCEPTED","genus_name":"Canis","species_name":"chanco","species_author":"Gray,
+        1863","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null},{"name":"Canis
+        lupus ssp. himalayensis Aggarwal, Kivisild, Ramadevi \u0026 Singh, 2007","status":"ACCEPTED","genus_name":"Canis","species_name":"lupus","species_author":null,"infrarank_author":"Aggarwal,
+        Kivisild, Ramadevi \u0026 Singh, 2007","subpopulation_name":null,"infra_type":"subspecies","infra_name":"himalayensis"},{"name":"Canis  lupus
+        ssp. filchneri Matschie, 1907","status":"ACCEPTED","genus_name":"Canis ","species_name":"lupus","species_author":null,"infrarank_author":"Matschie,
+        1907","subpopulation_name":null,"infra_type":"subspecies","infra_name":"filchneri"}]},{"sis_id":223987953,"scientific_name":"Canis
+        lupus ssp. pallipes","kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"CARNIVORA","family_name":"CANIDAE","genus_name":"Canis","species_name":"lupus","subpopulation_name":null,"infra_name":"pallipes","authority":"Sykes,
+        1831","ssc_groups":[{"name":"IUCN SSC Canid Specialist Group (foxes, jackals
+        and wild dogs)","url":"http://www.canids.org/","description":"Chair: Claudio
+        Sillero-Zubiri (email: canids@zoology.oxford.ac.uk)\nRed List Authority Coordinator:
+        Michael Hoffmann (email: mike.hoffmann@zsl.org)\nNewsletter: http://www.canids.org/c-b-c"}],"common_names":[{"main":false,"name":"Indian
+        peninsular wolf","language":"eng"},{"main":false,"name":"بھیڑیا Bhediya","language":"urd"},{"main":false,"name":"بھگیاڑ
+        (Bhigiyarh)","language":"pan"},{"main":false,"name":"بگھڑ (Baghar)","language":"snd"},{"main":false,"name":"لیووه
+        (lewo),  شرماخ (Sharmakh)","language":"pus"},{"main":false,"name":"कॉळसूणे
+        (kŏḷsūṇe), तॉळ (tŏḷ)","language":"kok"},{"main":false,"name":"चारि नार (chari
+        nar)","language":"raj"},{"main":false,"name":"भेड़िया Bhediya","language":"hin"},{"main":false,"name":"लांडगा
+        (lāṇḍagā)","language":"mar"},{"main":false,"name":"વરુ (varu), નાર (nar)","language":"guj"},{"main":false,"name":"తోడేలు
+        (Tōḍēlu)","language":"tel"},{"main":false,"name":"ತೋಳ (Tola)","language":"kan"},{"main":false,"name":"ஓநாய்
+        (Ōnāy)","language":"tam"},{"main":false,"name":"ചെന്നായ് (Chennaya)","language":"mal"},{"main":false,"name":"কুকুৰনেছীয়া
+        বাঘ (Kurnechiya Bhagh)","language":"asm"},{"main":false,"name":"নেকড়ে (nēkaṛē),
+        হুরাল (Hural), হুরার (Hurar)","language":"ben"},{"main":true,"name":"Indian
+        Wolf","language":"eng"}],"synonyms":[{"name":"Canis pallipes Sykes, 1831","status":"ACCEPTED","genus_name":"Canis","species_name":"pallipes","species_author":"Sykes,
+        1831","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null},{"name":"Canis
+        indica Aggarwal, Kivisild, Ramadevi, Singh 2007","status":"ADD","genus_name":"Canis","species_name":"indica","species_author":"Aggarwal,
+        Kivisild, Ramadevi, Singh 2007","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"CARNIVORA","family_name":"CANIDAE","genus_name":"Canis","species_name":"lupus","subpopulation_name":null,"infra_name":null,"authority":"Linnaeus,
+        1758","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Canid Specialist Group (foxes, jackals and wild dogs)","url":"http://www.canids.org/","description":"Chair:
+        Claudio Sillero-Zubiri (email: canids@zoology.oxford.ac.uk)\nRed List Authority
+        Coordinator: Michael Hoffmann (email: mike.hoffmann@zsl.org)\nNewsletter:
+        http://www.canids.org/c-b-c"}],"common_names":[{"main":false,"name":"Arctic
+        Wolf","language":"eng"},{"main":false,"name":"Common Wolf","language":"eng"},{"main":false,"name":"Gray
+        Wolf","language":"eng"},{"main":false,"name":"Mexican Wolf","language":"eng"},{"main":false,"name":"Plains
+        Wolf","language":"eng"},{"main":false,"name":"Timber Wolf","language":"eng"},{"main":false,"name":"Tundra
+        Wolf","language":"eng"},{"main":false,"name":"Wolf","language":"eng"},{"main":false,"name":"Dheeb","language":"ara"},{"main":false,"name":"Farkas","language":"hun"},{"main":false,"name":"Hunt","language":"est"},{"main":false,"name":"Kurt","language":"tur"},{"main":false,"name":"Lobo","language":"spa"},{"main":false,"name":"Loup","language":"fre"},{"main":false,"name":"Loup
+        gris","language":"fre"},{"main":false,"name":"Loup vulgaire","language":"fre"},{"main":false,"name":"Lup","language":"rum"},{"main":false,"name":"Lupo","language":"ita"},{"main":false,"name":"Saaral
+        Chono","language":"mon"},{"main":false,"name":"Susi","language":"fin"},{"main":false,"name":"Ujku","language":"alb"},{"main":false,"name":"Ulv","language":"nor"},{"main":false,"name":"Varg","language":"swe"},{"main":false,"name":"Vilkas","language":"lit"},{"main":false,"name":"Vilks","language":"lav"},{"main":false,"name":"Vlk","language":"cze"},{"main":false,"name":"Vlk","language":"slo"},{"main":false,"name":"Volk","language":"slv"},{"main":false,"name":"Vuk","language":"scr"},{"main":false,"name":"Wilk","language":"pol"},{"main":false,"name":"Wolf","language":"ger"},{"main":false,"name":"الذئب
+        العربي","language":"ara"},{"main":false,"name":"λύκος","language":"gre"},{"main":false,"name":"вовк","language":"ukr"},{"main":false,"name":"волк","language":"mac"},{"main":false,"name":"волк","language":"rus"},{"main":false,"name":"вук","language":"scc"},{"main":true,"name":"Grey
+        Wolf","language":"eng"}],"synonyms":[]},"assessments":[{"year_published":"2025","latest":true,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/216872082","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":216872082,"scopes":[{"description":{"en":"Europe"},"code":"2"}]},{"year_published":"2018","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/119623865","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":119623865,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2023","latest":true,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/247624660","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":247624660,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2018","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/163508960","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":163508960,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2018","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/144226239","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":144226239,"scopes":[{"description":{"en":"Europe"},"code":"2"}]},{"year_published":"2018","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/133234888","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":133234888,"scopes":[{"description":{"en":"Europe"},"code":"2"}]},{"year_published":"2010","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10049204","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":10049204,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2008","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10047272","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":10047272,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"2010","latest":true,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10048228","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":10048228,"scopes":[{"description":{"en":"Mediterranean"},"code":"4"}]},{"year_published":"2007","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10048689","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":10048689,"scopes":[{"description":{"en":"Europe"},"code":"2"}]},{"year_published":"2004","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10047740","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LC","assessment_id":10047740,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1996","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10049157","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"LR/lc","assessment_id":10049157,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1994","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10049693","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"V","assessment_id":10049693,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1990","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10049676","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"V","assessment_id":10049676,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1988","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10049130","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"V","assessment_id":10049130,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1986","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10049103","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"V","assessment_id":10049103,"scopes":[{"description":{"en":"Global"},"code":"1"}]},{"year_published":"1982","latest":false,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"url":"https://www.iucnredlist.org/species/3746/10049177","taxon_scientific_name":"Canis
+        lupus","red_list_category_code":"V","assessment_id":10049177,"scopes":[{"description":{"en":"Global"},"code":"1"}]}],"params":{"genus_name":"Canis","species_name":"lupus"}}'
+  recorded_at: 2025-07-07 22:24:01 GMT
+  recorded_with: vcr/1.7.0, webmockr/2.0.0
+- request:
+    method: get
+    uri: https://api.iucnredlist.org/api/v4/assessment/247624660
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: r-curl/6.2.2 crul/1.5.0 rOpenSci(rredlist/1.0.0.9000)
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: My bearer token is safe
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      date: Mon, 07 Jul 2025 22:24:07 GMT
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+      cache-control: max-age=0, private, must-revalidate
+      etag: W/"80e4e59e31019347a2cbe992ca22a958"
+      x-request-id: 9bab3019-3c3d-4354-bc37-5d193cea967e
+      x-runtime: '0.274950'
+      cf-cache-status: DYNAMIC
+      nel: '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
+      speculation-rules: '"/cdn-cgi/speculation"'
+      report-to: '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=NcwECZdU%2B%2Bq8Ahtre6g4B4qvvyttUhUJiRQ5CZGR9pWMuiKrTaNy1btNrnpKkQvxX7U17NNp8exR5NVPTnN8JUpaJGEKXXx9%2BAKUkNfAiDyGjgU%3D"}]}'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 95bac00cd8991a5c-EWR
+      alt-svc: h3=":443"; ma=86400
+    body:
+      encoding: ''
+      file: no
+      string: '{"assessment_date":"2018-08-30T00:00:00.000Z","year_published":"2023","latest":true,"possibly_extinct":false,"possibly_extinct_in_the_wild":false,"sis_taxon_id":3746,"criteria":null,"url":"https://www.iucnredlist.org/species/3746/247624660","citation":"Boitani,
+        L., Phillips, M. \u0026 Jhala, Y.V. 2023. Canis lupus (amended version of
+        2018 assessment). The IUCN Red List of Threatened Species 2023: e.T3746A247624660.
+        https://dx.doi.org/10.2305/IUCN.UK.2023-1.RLTS.T3746A247624660.en. Accessed
+        on 07 July 2025.","assessment_id":247624660,"assessment_points":false,"assessment_ranges":true,"taxon":{"sis_id":3746,"scientific_name":"Canis
+        lupus","species_taxa":[],"subpopulation_taxa":[],"infrarank_taxa":[{"sis_id":223987824,"scientific_name":"Canis
+        lupus ssp. chanco","kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"CARNIVORA","family_name":"CANIDAE","genus_name":"Canis","species_name":"lupus","subpopulation_name":null,"infra_name":"chanco","authority":"Gray,
+        1863","ssc_groups":[{"name":"IUCN SSC Canid Specialist Group (foxes, jackals
+        and wild dogs)","url":"http://www.canids.org/","description":"Chair: Claudio
+        Sillero-Zubiri (email: canids@zoology.oxford.ac.uk)\nRed List Authority Coordinator:
+        Michael Hoffmann (email: mike.hoffmann@zsl.org)\nNewsletter: http://www.canids.org/c-b-c"}],"common_names":[{"main":false,"name":"Tibetan
+        Wolf","language":"eng"},{"main":false,"name":"Woolly Wolf","language":"eng"},{"main":true,"name":"Himalayan
+        Wolf","language":"eng"}],"synonyms":[{"name":"Canis lupus ssp. laniger Hodgson,
+        1847","status":"ACCEPTED","genus_name":"Canis","species_name":"lupus","species_author":null,"infrarank_author":"Hodgson,
+        1847","subpopulation_name":null,"infra_type":"subspecies","infra_name":"laniger"},{"name":"Canis
+        chanco Gray, 1863","status":"ACCEPTED","genus_name":"Canis","species_name":"chanco","species_author":"Gray,
+        1863","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null},{"name":"Canis
+        lupus ssp. himalayensis Aggarwal, Kivisild, Ramadevi \u0026 Singh, 2007","status":"ACCEPTED","genus_name":"Canis","species_name":"lupus","species_author":null,"infrarank_author":"Aggarwal,
+        Kivisild, Ramadevi \u0026 Singh, 2007","subpopulation_name":null,"infra_type":"subspecies","infra_name":"himalayensis"},{"name":"Canis  lupus
+        ssp. filchneri Matschie, 1907","status":"ACCEPTED","genus_name":"Canis ","species_name":"lupus","species_author":null,"infrarank_author":"Matschie,
+        1907","subpopulation_name":null,"infra_type":"subspecies","infra_name":"filchneri"}]},{"sis_id":223987953,"scientific_name":"Canis
+        lupus ssp. pallipes","kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"CARNIVORA","family_name":"CANIDAE","genus_name":"Canis","species_name":"lupus","subpopulation_name":null,"infra_name":"pallipes","authority":"Sykes,
+        1831","ssc_groups":[{"name":"IUCN SSC Canid Specialist Group (foxes, jackals
+        and wild dogs)","url":"http://www.canids.org/","description":"Chair: Claudio
+        Sillero-Zubiri (email: canids@zoology.oxford.ac.uk)\nRed List Authority Coordinator:
+        Michael Hoffmann (email: mike.hoffmann@zsl.org)\nNewsletter: http://www.canids.org/c-b-c"}],"common_names":[{"main":false,"name":"Indian
+        peninsular wolf","language":"eng"},{"main":false,"name":"بھیڑیا Bhediya","language":"urd"},{"main":false,"name":"بھگیاڑ
+        (Bhigiyarh)","language":"pan"},{"main":false,"name":"بگھڑ (Baghar)","language":"snd"},{"main":false,"name":"لیووه
+        (lewo),  شرماخ (Sharmakh)","language":"pus"},{"main":false,"name":"कॉळसूणे
+        (kŏḷsūṇe), तॉळ (tŏḷ)","language":"kok"},{"main":false,"name":"चारि नार (chari
+        nar)","language":"raj"},{"main":false,"name":"भेड़िया Bhediya","language":"hin"},{"main":false,"name":"लांडगा
+        (lāṇḍagā)","language":"mar"},{"main":false,"name":"વરુ (varu), નાર (nar)","language":"guj"},{"main":false,"name":"తోడేలు
+        (Tōḍēlu)","language":"tel"},{"main":false,"name":"ತೋಳ (Tola)","language":"kan"},{"main":false,"name":"ஓநாய்
+        (Ōnāy)","language":"tam"},{"main":false,"name":"ചെന്നായ് (Chennaya)","language":"mal"},{"main":false,"name":"কুকুৰনেছীয়া
+        বাঘ (Kurnechiya Bhagh)","language":"asm"},{"main":false,"name":"নেকড়ে (nēkaṛē),
+        হুরাল (Hural), হুরার (Hurar)","language":"ben"},{"main":true,"name":"Indian
+        Wolf","language":"eng"}],"synonyms":[{"name":"Canis pallipes Sykes, 1831","status":"ACCEPTED","genus_name":"Canis","species_name":"pallipes","species_author":"Sykes,
+        1831","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null},{"name":"Canis
+        indica Aggarwal, Kivisild, Ramadevi, Singh 2007","status":"ADD","genus_name":"Canis","species_name":"indica","species_author":"Aggarwal,
+        Kivisild, Ramadevi, Singh 2007","infrarank_author":null,"subpopulation_name":null,"infra_type":null,"infra_name":null}]}],"kingdom_name":"ANIMALIA","phylum_name":"CHORDATA","class_name":"MAMMALIA","order_name":"CARNIVORA","family_name":"CANIDAE","genus_name":"Canis","species_name":"lupus","subpopulation_name":null,"infra_name":null,"authority":"Linnaeus,
+        1758","species":true,"subpopulation":false,"infrarank":false,"ssc_groups":[{"name":"IUCN
+        SSC Canid Specialist Group (foxes, jackals and wild dogs)","url":"http://www.canids.org/","description":"Chair:
+        Claudio Sillero-Zubiri (email: canids@zoology.oxford.ac.uk)\nRed List Authority
+        Coordinator: Michael Hoffmann (email: mike.hoffmann@zsl.org)\nNewsletter:
+        http://www.canids.org/c-b-c"}],"common_names":[{"main":false,"name":"Arctic
+        Wolf","language":"eng"},{"main":false,"name":"Common Wolf","language":"eng"},{"main":false,"name":"Gray
+        Wolf","language":"eng"},{"main":false,"name":"Mexican Wolf","language":"eng"},{"main":false,"name":"Plains
+        Wolf","language":"eng"},{"main":false,"name":"Timber Wolf","language":"eng"},{"main":false,"name":"Tundra
+        Wolf","language":"eng"},{"main":false,"name":"Wolf","language":"eng"},{"main":false,"name":"Dheeb","language":"ara"},{"main":false,"name":"Farkas","language":"hun"},{"main":false,"name":"Hunt","language":"est"},{"main":false,"name":"Kurt","language":"tur"},{"main":false,"name":"Lobo","language":"spa"},{"main":false,"name":"Loup","language":"fre"},{"main":false,"name":"Loup
+        gris","language":"fre"},{"main":false,"name":"Loup vulgaire","language":"fre"},{"main":false,"name":"Lup","language":"rum"},{"main":false,"name":"Lupo","language":"ita"},{"main":false,"name":"Saaral
+        Chono","language":"mon"},{"main":false,"name":"Susi","language":"fin"},{"main":false,"name":"Ujku","language":"alb"},{"main":false,"name":"Ulv","language":"nor"},{"main":false,"name":"Varg","language":"swe"},{"main":false,"name":"Vilkas","language":"lit"},{"main":false,"name":"Vilks","language":"lav"},{"main":false,"name":"Vlk","language":"cze"},{"main":false,"name":"Vlk","language":"slo"},{"main":false,"name":"Volk","language":"slv"},{"main":false,"name":"Vuk","language":"scr"},{"main":false,"name":"Wilk","language":"pol"},{"main":false,"name":"Wolf","language":"ger"},{"main":false,"name":"الذئب
+        العربي","language":"ara"},{"main":false,"name":"λύκος","language":"gre"},{"main":false,"name":"вовк","language":"ukr"},{"main":false,"name":"волк","language":"mac"},{"main":false,"name":"волк","language":"rus"},{"main":false,"name":"вук","language":"scc"},{"main":true,"name":"Grey
+        Wolf","language":"eng"}],"synonyms":[]},"population_trend":{"description":{"en":"Stable"},"code":"2"},"red_list_category":{"version":"3.1","description":{"en":"Least
+        Concern"},"code":"LC"},"supplementary_info":{"upper_elevation_limit":3000,"lower_elevation_limit":0,"lower_depth_limit":null,"upper_depth_limit":null,"population_size":null,"population_severely_fragmented":"No","population_continuing_decline":null,"generational_length":null,"congregatory":null,"movement_patterns":null,"continuing_decline_in_area":null,"conservation_actions_in_place":[{"name":"In-place
+        research and monitoring","actions":[{"name":"Action Recovery Plan","value":"No"},{"name":"Systematic
+        monitoring scheme","value":"Yes"}]},{"name":"In-place land/water protection","actions":[{"name":"Conservation
+        sites identified","value":"No"},{"name":"Occurs in at least one protected
+        area","value":"Yes"},{"name":"Invasive species control or prevention","value":"Not
+        Applicable"}]},{"name":"In-place species management","actions":[{"name":"Successfully
+        reintroduced or introduced benignly","value":"Yes"},{"name":"Subject to ex-situ
+        conservation","value":"Yes"}]},{"name":"In-place education","actions":[{"name":"Included
+        in international legislation","value":"Yes"},{"name":"Subject to any international
+        management / trade controls","value":"Yes"}]}],"identification_information":null,"extreme_fluctuations":null,"no_of_subpopulations":null,"continuing_decline_in_subpopulations":null,"extreme_fluctuations_in_subpopulations":null,"all_individuals_in_one_subpopulation":null,"no_of_individuals_in_largest_subpopulation":null,"estimated_area_of_occupancy":null,"continuing_decline_in_area_of_occupancy":null,"extreme_fluctuations_in_area_of_occupancy":null,"estimated_extent_of_occurence":"\u003e20,000","continuing_decline_in_extent_of_occurence":null,"extreme_fluctuations_in_extent_of_occurence":null,"continuing_decline_in_number_of_locations":null,"extreme_fluctuations_in_number_of_locations":null},"documentation":{"range":"Originally,
+        the Grey Wolf was the world''s most widely distributed mammal, living throughout
+        the northern hemisphere north of 15°N latitude in North America and 12°N in
+        India. It became extinct in much of Western Europe (Boitani 1995), Mexico
+        and much of the USA (Mech 1970) and Japan. Their present distribution is more
+        restricted: wolves occur primarily in wilderness and remote areas, especially
+        in Canada, Alaska and northern USA, Europe, and Asia from about 75°N to 12°N
+        (Mech and Boitani 2004), but they are found also in human-dominated landscapes
+        where there is sufficient prey base and human-caused mortality is low. Distribution
+        is highly dynamic as wolf populations are currently increasing in range and
+        numbers in north-central and western United States and much of Europe. Dispersing
+        individuals can be found in almost any European country except the United
+        Kingdom and Ireland.","population":"Because of the diversity in climate, topography,
+        vegetation, human settlement and development of wolf range, wolf populations
+        in various parts of the original range vary from extinct to relatively pristine.
+        Wolf densities vary from about one/12 km² to one/120 km².\u003cbr/\u003e\u003cbr/\u003eMech
+        and Boitani (2004) provide details, for each range country, on subspecies
+        present, population status, approximate numbers, the percentage of former
+        range occupied at present, main prey (where known), legal status, and cause
+        of decline. For Europe, the wolf population is essentially a large meta-population
+        with several distinct subpopulations; the status and trends for each population
+        is provided by the Large Carnivore Initiative for Europe (\u003ca href=\"http://www.lcie.org/\"\u003ehttp://www.lcie.org/\u003c/a\u003e)
+        and in Chapron \u003cem\u003eet al\u003c/em\u003e. (2014).\u0026#160;The status
+        and trends for wolf populations in the United States are provided by the U.S.
+        Fish and Wildlife Service and game agencies in several US states, including
+        Minnesota, Wisconsin, Michigan, Montana, Idaho, Wyoming, Oregon, Washington,
+        Arizona, and New Mexico. In general, population increases in North America
+        and Europe are likely to be off-set by localized declines in other parts of
+        the range.","habitats":"Ranges in all northern habitats where there is suitable
+        food (Mech 1970), densities being highest where prey biomass is highest (Fuller
+        1989). Food is extremely variable, but the majority comprises large ungulates
+        (moose, caribou, deer, elk, wild boar, etc.). Wolves will also eat smaller
+        prey items, livestock, carrion, and garbage.","threats":"The historical range
+        of the Grey Wolf has been reduced by about one-third, primarily in developed
+        areas of Europe, Asia, Mexico, and the United States by poisoning and deliberate
+        persecution due to depredation on livestock. Since about 1970, legal protection,
+        land-use changes, and rural human population shifts to cities have arrested
+        wolf population declines and fostered natural recolonization in parts of Western
+        Europe and the United States, and reintroduction in the western United States
+        and Mexico. Continued threats include competition with humans for livestock,
+        especially in developing countries, exaggerated concern by the public concerning
+        the threat and danger of wolves. Fragmentation of habitat, with resulting
+        areas becoming too small for populations with long-term viability can be a
+        threat in parts of the range with highest density of human activities.","measures":"\u003cstrong\u003eLegislation\u003c/strong\u003e\u003cbr/\u003eThe
+        species is included in CITES Appendix II, except populations from Bhutan,
+        India, Nepal and Pakistan, which are listed on Appendix I. The species is
+        strictly protected under the Bern Convention (Appendix II) and Habitats Directive
+        (Annex II and IV), and there is extensive legal protection in many European
+        countries; however, there are national exceptions, and enforcement is variable
+        and often non-existent.\u0026#160;\u003cbr/\u003e\u003cstrong\u003e\u003cbr/\u003e\u003c/strong\u003e\u003cstrong\u003ePresence
+        in protected areas\u003c/strong\u003e\u003cbr/\u003eThe Grey Wolf occurs in
+        many protected areas across its range. \u003cbr/\u003e\u003cbr/\u003e\u003cspan
+        style=\"font-weight: bold;\"\u003eOccurrence in captivity\u003c/span\u003e\u003cbr/\u003eThe
+        species lives and breeds well in captivity and is common in many zoological
+        gardens.\u003cbr/\u003e\u003cbr/\u003e\u003cspan style=\"font-weight: bold;\"\u003eGaps
+        in knowledge\u003c/span\u003e\u003cbr/\u003eOne of the most important questions
+        still remaining about wolves involves the nature of their interaction with
+        prey populations. The conditions under which wolves limit, regulate, or control
+        their population is still open and important (Mech and Boitani 2003).\u0026#160;Of
+        recent and increasing importance is clarifying the role that wolves play in
+        precipitating ecosystem effects, particularly trophic cascades (Mech and Boitani
+        2003, Ripple and Betscha 2004, Peterson \u003cem\u003eet al\u003c/em\u003e.
+        2014). Of more academic interest are questions involving wolf genetics, scent-marking
+        behaviour, pseudo pregnancy and diseases (Mech 1995). Of recent and increasing
+        importance is the issue of hybridization with dogs (and indeed other \u003cem\u003eCanis\u003c/em\u003e
+        spp) in several parts of the range in Europe and Asia, with unknown impact
+        on medium- and long-term genetic integrity of the species.","use_trade":"There
+        is sustainable utilization of the species'' fur in Canada, Alaska, Montana
+        and the former Soviet Union and Mongolia, although illegal hunting for fur
+        does occur in some range states.","rationale":"\u003cp\u003eOriginally, the
+        Grey Wolf was the world''s most widely distributed mammal. It has become extinct
+        in much of Western Europe, in Mexico and much of the USA, and their present
+        distribution is more restricted; wolves occur primarily but not exclusively
+        in wilderness and remote areas. Their original worldwide range has been reduced
+        by about one-third by deliberate persecution due to depredation on livestock
+        and fear of attacks on humans. Since about 1970, legal protection, land-use
+        changes, rural human population shifts to cities and increasing prey populations
+        have arrested wolf population declines and fostered natural recolonization
+        in parts of its range and reintroduction in three areas of USA. Continued
+        threats include competition with humans for livestock and game species, exaggerated
+        concern by the public regarding the threat and danger of wolves, and fragmentation
+        of habitat, with resulting areas becoming too small for populations with long-term
+        viability.\u003cbr/\u003e\u003cbr/\u003eAlthough the Grey Wolf still faces
+        some threats, its relatively widespread range and stable population trend
+        mean that the species, at global level, does not meet, or nearly meet, any
+        of the criteria for the threatened categories. The global population is estimated
+        to be in the order of 200-250 thousands individuals.\u0026#160;Therefore,
+        it is assessed as Least Concern. However, at regional level, several wolf
+        populations, such as those in Europe, are seriously threatened (\u003ca href=\"http://www.lcie.org/\"\u003ehttp://www.lcie.org\u003c/a\u003e).\u003c/p\u003e","trend_justification":null,"taxonomic_notes":"In
+        Europe, two subspecies are recognized: \u003cem\u003eC. l. signatus\u003c/em\u003e
+        (Iberia) and \u003cem\u003eC. l. italicus\u003c/em\u003e (Italy, France and
+        Switzerland).\u003cbr/\u003e\u003cbr/\u003eIn Asia, two subspecies are recognized:
+        \u003cem\u003eC. l. pallipes\u003c/em\u003e (most of the Asian range from
+        Israel to China) and \u003cem\u003eC. l. arabs\u003c/em\u003e (Arabian peninsula).
+        Furthermore, wolves of the Himalayan range have been proposed as a distinct
+        subspecies (\u003cem\u003eC. l. chanco\u003c/em\u003e).\u003cbr/\u003e\u003cbr/\u003eIn
+        North America, five subspecies are often recognized: \u003cem\u003eC. l. arctos\u003c/em\u003e
+        (Arctic wolf), \u003cem\u003eC. l. lycaon\u003c/em\u003e (Eastern wolf), which
+        Chambers \u003cem\u003eet al\u003c/em\u003e. (2012) consider a distinct species,
+        \u003cem\u003eC. l. nubilus\u003c/em\u003e (Plains wolf), \u003cem\u003eC.
+        l. occidentalis\u003c/em\u003e (Northwestern wolf or Northern timber wolf),
+        and \u003cem\u003eC. l. baileyi \u003c/em\u003e(Mexican wolf).\u003cbr/\u003e\u003cbr/\u003eNote
+        that this assessment follows Jackson \u003cem\u003eet al\u003c/em\u003e. (2017)
+        in regarding the Dingo, sometimes considered a subspecies of Grey Wolf (\u003cem\u003eC.
+        l. dingo),\u003c/em\u003e\u0026#160;as a feral dog population derived from
+        a domesticate, and hence as \u003cem\u003eC. familiaris\u003c/em\u003e, along
+        with all other free-ranging dogs."},"biogeographical_realms":[{"description":{"en":"Indomalayan"},"code":"3"},{"description":{"en":"Nearctic"},"code":"4"},{"description":{"en":"Neotropical"},"code":"5"},{"description":{"en":"Palearctic"},"code":"7"}],"conservation_actions":[{"note":null,"code":"5_4_2","description":{"en":"National
+        level"}},{"note":null,"code":"2_1","description":{"en":"Site/area management"}}],"faos":[],"habitats":[{"majorImportance":null,"season":null,"suitability":"Suitable","description":{"en":"Shrubland
+        - Subtropical/Tropical Dry"},"code":"3_5"},{"majorImportance":null,"season":null,"suitability":"Suitable","description":{"en":"Artificial/Terrestrial
+        - Pastureland"},"code":"14_2"},{"majorImportance":null,"season":null,"suitability":"Suitable","description":{"en":"Shrubland
+        - Subarctic"},"code":"3_1"},{"majorImportance":null,"season":null,"suitability":"Suitable","description":{"en":"Shrubland
+        - Temperate"},"code":"3_4"},{"majorImportance":null,"season":null,"suitability":"Suitable","description":{"en":"Forest
+        - Boreal"},"code":"1_1"},{"majorImportance":null,"season":null,"suitability":"Suitable","description":{"en":"Desert
+        - Hot"},"code":"8_1"},{"majorImportance":null,"season":null,"suitability":"Suitable","description":{"en":"Grassland
+        - Tundra"},"code":"4_1"},{"majorImportance":null,"season":null,"suitability":"Suitable","description":{"en":"Grassland
+        - Subarctic"},"code":"4_2"},{"majorImportance":null,"season":null,"suitability":"Suitable","description":{"en":"Desert
+        - Temperate"},"code":"8_2"},{"majorImportance":null,"season":null,"suitability":"Suitable","description":{"en":"Grassland
+        - Temperate"},"code":"4_4"},{"majorImportance":null,"season":null,"suitability":"Suitable","description":{"en":"Forest
+        - Subarctic"},"code":"1_2"},{"majorImportance":null,"season":null,"suitability":"Suitable","description":{"en":"Wetlands
+        (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"},"code":"5_4"},{"majorImportance":null,"season":null,"suitability":"Suitable","description":{"en":"Forest
+        - Subtropical/Tropical Dry"},"code":"1_5"},{"majorImportance":null,"season":null,"suitability":"Suitable","description":{"en":"Forest
+        - Temperate"},"code":"1_4"},{"majorImportance":null,"season":null,"suitability":"Suitable","description":{"en":"Wetlands
+        (inland) - Tundra Wetlands (incl. pools and temporary waters from snowmelt)"},"code":"5_10"},{"majorImportance":null,"season":null,"suitability":"Suitable","description":{"en":"Rocky
+        areas (eg. inland cliffs, mountain peaks)"},"code":"6"}],"locations":[{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Estonia"},"code":"EE"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Denmark"},"code":"DK"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Albania"},"code":"AL"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extinct
+        Post-1500","seasonality":null,"description":{"en":"Japan"},"code":"JP"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Austria"},"code":"AT"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Belgium"},"code":"BE"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Montenegro"},"code":"ME"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Netherlands"},"code":"NL"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Mongolia"},"code":"MN"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Bosnia
+        and Herzegovina"},"code":"BA"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Spain"},"code":"ES"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Libya"},"code":"LY"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Hungary"},"code":"HU"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Uzbekistan"},"code":"UZ"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Possibly
+        Extinct","seasonality":null,"description":{"en":"Bangladesh"},"code":"BD"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Oman"},"code":"OM"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Lithuania"},"code":"LT"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Bulgaria"},"code":"BG"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Croatia"},"code":"HR"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Czechia"},"code":"CZ"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Portugal"},"code":"PT"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"United
+        States"},"code":"US"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Armenia"},"code":"AM"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Israel"},"code":"IL"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Nepal"},"code":"NP"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Kyrgyzstan"},"code":"KG"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Korea,
+        Republic of"},"code":"KR"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Greenland"},"code":"GL"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Azerbaijan"},"code":"AZ"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Korea,
+        Democratic People''s Republic of"},"code":"KP"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Myanmar"},"code":"MM"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Kazakhstan"},"code":"KZ"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Pakistan"},"code":"PK"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"United
+        Arab Emirates"},"code":"AE"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Poland"},"code":"PL"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Belarus"},"code":"BY"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Moldova"},"code":"MD"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extinct
+        Post-1500","seasonality":null,"description":{"en":"Ireland"},"code":"IE"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Greece"},"code":"GR"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Norway"},"code":"NO"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Serbia"},"code":"RS"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Mexico"},"code":"MX"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Turkmenistan"},"code":"TM"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Canada"},"code":"CA"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Georgia"},"code":"GE"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Jordan"},"code":"JO"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Syrian
+        Arab Republic"},"code":"SY"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Russian
+        Federation"},"code":"RU"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Italy"},"code":"IT"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Romania"},"code":"RO"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Türkiye"},"code":"TR"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Germany"},"code":"DE"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"China"},"code":"CN"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"North
+        Macedonia"},"code":"MK"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Slovakia"},"code":"SK"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extinct
+        Post-1500","seasonality":null,"description":{"en":"United Kingdom"},"code":"GB"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Saudi
+        Arabia"},"code":"SA"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Latvia"},"code":"LV"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Luxembourg"},"code":"LU"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Afghanistan"},"code":"AF"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"India"},"code":"IN"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Finland"},"code":"FI"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Switzerland"},"code":"CH"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Bhutan"},"code":"BT"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Slovenia"},"code":"SI"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"France"},"code":"FR"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Iran,
+        Islamic Republic of"},"code":"IR"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Yemen"},"code":"YE"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Iraq"},"code":"IQ"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Ukraine"},"code":"UA"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Tajikistan"},"code":"TJ"},{"is_endemic":false,"formerlyBred":null,"origin":"Native","presence":"Extant","seasonality":null,"description":{"en":"Sweden"},"code":"SE"}],"researches":[{"note":null,"code":"1_3","description":{"en":"Life
+        history \u0026 ecology"}}],"use_and_trade":[{"international":null,"national":true,"other":null,"subsistence":true,"description":{"en":"Wearing
+        apparel, accessories"},"code":"10"}],"threats":[{"scope":"Minority (\u003c50%)","timing":"Ongoing","internationalTrade":null,"score":"Low
+        Impact: 4","severity":"Negligible declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Persecution/control"},"code":"5_1_3"},{"scope":"Minority
+        (\u003c50%)","timing":"Ongoing","internationalTrade":null,"score":"Low Impact:
+        4","severity":"Negligible declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Small-holder
+        grazing, ranching or farming"},"code":"2_3_2"},{"scope":"Minority (\u003c50%)","timing":"Ongoing","internationalTrade":null,"score":"Low
+        Impact: 4","severity":"Negligible declines","ancestry":null,"virus":null,"ias":null,"text":null,"description":{"en":"Agro-industry
+        grazing, ranching or farming"},"code":"2_3_3"}],"credits":[{"credit_type_name":"assessor","full":"Boitani,
+        L., Phillips, M. \u0026 Jhala, Y.V.","value":["Yadvendradev Jhala","Mike Phillips","Luigi
+        Boitani"]},{"credit_type_name":"evaluator","full":"Hoffmann, M. \u0026 Sillero-Zubiri,
+        C.","value":["Michael Hoffmann (Zoological Society of London / IUCN SSC Canid
+        Specialist Group)","Claudio Sillero-Zubiri (IUCN SSC Canid Specialist Group)"]},{"credit_type_name":"contributor","full":"Mech,
+        D.","value":["David Mech"]},{"credit_type_name":"facilitators","full":"Hoffmann,
+        M.","value":["Michael Hoffmann (Zoological Society of London / IUCN SSC Canid
+        Specialist Group)"]}],"errata":[{"reason":"This amended assessment was created
+        to published an updated distribution map for this species."}],"references":[{"citation":"Mech,
+        L. D. 1970. \u003ci\u003eThe wolf: the ecology and behavior of an endangered
+        species\u003c/i\u003e. Natural History Press, Doubleday Publishing Co, New
+        York, USA.","year":"1970","title":"The wolf: the ecology and behavior of an
+        endangered species","author":"Mech, L. D.","citation_short":null},{"citation":"Boitani,
+        L. 1995. Ecological and cultural diversities in the evolution of wolf-human
+        relationships. In: L. N. Carbyn, S. H. Fritts and D. R. Seip (eds), \u003ci\u003eEcology
+        and conservation of wolves in a changing world. Ocassional Publication 35\u003c/i\u003e,
+        pp. 3-11. Canadian Circumpolar Institute, Edmonton, Alberta, Canada.","year":"1995","title":"Ecological
+        and cultural diversities in the evolution of wolf-human relationships","author":"Boitani,
+        L.","citation_short":null},{"citation":"Fuller, T. K. 1989. Population dynamics
+        of wolves in north-central Minnesota. \u003ci\u003eWildlife Monographs\u003c/i\u003e
+        105.","year":"1989","title":"Population dynamics of wolves in north-central
+        Minnesota","author":"Fuller, T. K.","citation_short":null},{"citation":"Mech,
+        L. D. 1995. What do we know about wolves and what more do we need to learn?
+        In: L. N. Carbyn, S. H. Fritts and D. R. Seip (eds), \u003ci\u003eEcology
+        and conservation of wolves in a changing world\u003c/i\u003e, pp. 537-545.
+        Canadian Circumpolar Institute, Edmonton, Alberta, Canada.","year":"1995","title":"What
+        do we know about wolves and what more do we need to learn?","author":"Mech,
+        L. D.","citation_short":null},{"citation":"Mech, L. D. and Boitani, L. (eds).
+        2003. \u003ci\u003eWolves: behavior, ecology and conservation\u003c/i\u003e.
+        pp. 472 pp.. University of Chicago Press, Chicago, IL, USA.","year":"2003","title":"Wolves:
+        behavior, ecology and conservation","author":"Mech, L. D. and Boitani, L.","citation_short":null},{"citation":"Chapron,
+        G., Kaczensky, P., Linnell, J.D.C., von Arx, M., Huber, D., Andrén, H., Vicente
+        López-Bao, J., Adamec, M., Álvares, F., Anders, O., Balčiauskas, L., Balys,
+        V., Bedő, P., Bego, F., Blanco, J. C., Breitenmoser, U., Brøseth, H., Bufka,
+        L., Bunikyte, R., Ciucci, P., Dutsov, A., Engleder, T., Fuxjäger, C., Groff,
+        C., Holmala, K., Hoxha, B., Iliopoulos, Y., Ionescu, O., Jeremić, J., Jerina,
+        K., Kluth, Knauer, F., Kojola, I., Kos, I., Krofel, M., Kubala, J., Kunovac,
+        S., Kusak, J., Kutal, M., Liberg, O., Majić, A., Männil, P., Manz, R., Marboutin,
+        E., Marucco, F., Melovski, D., Mersini, K., Mertzanis, Y., Mysłajek, R.W.,
+        Nowak, S., Odden, J., Ozolins, J., Palomero, G., Paunović, M., Persson, J.,
+        Potočnik, H., Quenette, P.-Y., Rauer, G., Reinhardt, I., Rigg, R., Ryser,
+        A., Salvatori, V., Skrbinšek, T., Stojanov, A., Swenson, J.E., Szemethy, L.,
+        Trajçe, A., Tsingarska-Sedefcheva, E., Váňa, M., Veeroja, R., Wabakken, P.,
+        Wölfl, M., Wölfl, S., Zimmermann, F., Zlatanova, D., and Boitani, L. 2014.
+        Recovery of Large carnivores in Europe''s modern human-dominated landscapes.
+        \u003ci\u003eScience\u003c/i\u003e 346: 1517-1519.","year":"2014","title":"Recovery
+        of Large carnivores in Europe''s modern human-dominated landscapes","author":"Chapron,
+        G., Kaczensky, P., Linnell, J.D.C., von Arx, M., Huber, D., Andrén, H., Vicente
+        López-Bao, J., Adamec, M., Álvares, F., Anders, O., Balčiauskas, L., Balys,
+        V., Bedő, P., Bego, F., Blanco, J. C., Breitenmoser, U., Brøseth, H., Bufka,
+        L., Bunikyte, R., Ciucci, P., Dutsov, A., Engleder, T., Fuxjäger, C., Groff,
+        C., Holmala, K., Hoxha, B., Iliopoulos, Y., Ionescu, O., Jeremić, J., Jerina,
+        K., Kluth, Knauer, F., Kojola, I., Kos, I., Krofel, M., Kubala, J., Kunovac,
+        S., Kusak, J., Kutal, M., Liberg, O., Majić, A., Männil, P., Manz, R., Marboutin,
+        E., Marucco, F., Melovski, D., Mersini, K., Mertzanis, Y., Mysłajek, R.W.,
+        Nowak, S., Odden, J., Ozolins, J., Palomero, G., Paunović, M., Persson, J.,
+        Potočnik, H., Quenette, P.-Y., Rauer, G., Reinhardt, I., Rigg, R., Ryser,
+        A., Salvatori, V., Skrbinšek, T., Stojanov, A., Swenson, J.E., Szemethy, L.,
+        Trajçe, A., Tsingarska-Sedefcheva, E., Váňa, M., Veeroja, R., Wabakken, P.,
+        Wölfl, M., Wölfl, S., Zimmermann, F., Zlatanova, D., and Boitani, L.","citation_short":null},{"citation":"IUCN.
+        2018. The IUCN Red List of Threatened Species. Version 2018-2. Available at:
+        \u003ca href=\"www.iucnredlist.org\"\u003ewww.iucnredlist.org\u003c/a\u003e.
+        (Accessed: 15 November 2018).","year":"2018","title":"The IUCN Red List of
+        Threatened Species. Version 2018-2","author":"IUCN","citation_short":"IUCN
+        2018-2"},{"citation":"Chambers, S.M., Fain, S.R., Fazio, B. and Amaral, M.
+        2012. An account of the taxonomy of North American wolves from morphological
+        and genetic analyses. \u003ci\u003eNorth American Fauna\u003c/i\u003e 77:
+        1-67.","year":"2012","title":"An account of the taxonomy of North American
+        wolves from morphological and genetic analyses","author":"Chambers, S.M.,
+        Fain, S.R., Fazio, B. and Amaral, M.","citation_short":""},{"citation":"Peterson,
+        R. O., Vucetich, J. A., Bump, J. M. \u0026 Smith, D. W. 2014. Trophic cascades
+        in a multicausal world: Isle Royale and Yellowstone. \u003ci\u003eAnnual Review
+        of Ecology, Evolution, and Systematics \u003c/i\u003e 45: 325-345.","year":"2014","title":"Trophic
+        cascades in a multicausal world: Isle Royale and Yellowstone","author":"Peterson,
+        R. O., Vucetich, J. A., Bump, J. M. \u0026 Smith, D. W. ","citation_short":null},{"citation":"Jackson,
+        S.M., Groves, C.P., Fleming, P.J.S., Aplin, K., Eldridge, M.D.B., Gonzalez,
+        A. and Helgen, K.M. 2017. The Wayward Dog: Is the Australian native dog or
+        Dingo a distinct species? \u003ci\u003eZootaxa\u003c/i\u003e 4317: 201-224.","year":"2017","title":"The
+        Wayward Dog: Is the Australian native dog or Dingo a distinct species?","author":"Jackson,
+        S.M., Groves, C.P., Fleming, P.J.S., Aplin, K., Eldridge, M.D.B., Gonzalez,
+        A. and Helgen, K.M.","citation_short":null},{"citation":"Mech, L.D. and Boitani,
+        L. 2004. Grey Wolf \u003ci\u003eCanis lupus\u003c/i\u003e. In: Sillero-Zubiri,
+        C., Hoffmann, M. \u0026 Macdonald, D.W. (ed.), \u003ci\u003eCanids: Foxes,
+        Wolves, Jackals and Dogs. Status Survey and Conservation Action Plan\u003c/i\u003e,
+        pp. 124-129. IUCN, Gland.","year":"2004","title":"Grey Wolf \u003ci\u003eCanis
+        lupus\u003c/i\u003e","author":"Mech, L.D. and Boitani, L.","citation_short":null},{"citation":"Ripple,
+        W. J. \u0026 Betscha, R.L. 2004. Wolves and the ecology of fear: can predation
+        risk structure ecosystems. \u003ci\u003eBioScience\u003c/i\u003e 54: 755-766.","year":"2004","title":"Wolves
+        and the ecology of fear: can predation risk structure ecosystems","author":"Ripple,
+        W. J. \u0026 Betscha, R.L.","citation_short":null},{"citation":"IUCN. 2023.
+        The IUCN Red List of Threatened Species. Version 2023-1. Available at: \u003ca
+        href=\"www.iucnredlist.org\"\u003ewww.iucnredlist.org\u003c/a\u003e. (Accessed:
+        07 December 2023).","year":"2023","title":"The IUCN Red List of Threatened
+        Species. Version 2023-1","author":"IUCN","citation_short":"IUCN 2023-1"}],"growth_forms":[],"lmes":[],"scopes":[{"description":{"en":"Global"},"code":"1"}],"stresses":[{"description":{"en":"Ecosystem
+        conversion"},"code":"1_1"},{"description":{"en":"Ecosystem conversion"},"code":"1_1"},{"description":{"en":"Ecosystem
+        degradation"},"code":"1_2"},{"description":{"en":"Ecosystem degradation"},"code":"1_2"},{"description":{"en":"Species
+        mortality"},"code":"2_1"}],"systems":[{"description":{"en":"Terrestrial"},"code":"0"}]}'
+  recorded_at: 2025-07-07 22:24:01 GMT
+  recorded_with: vcr/1.7.0, webmockr/2.0.0

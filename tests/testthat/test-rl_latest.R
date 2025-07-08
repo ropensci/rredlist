@@ -10,6 +10,16 @@ test_that("rl_species_latest works", {
   expect_is(aa, "list")
   expect_is(aa$taxon, "list")
   expect_is(aa$habitats, "data.frame")
+
+  vcr::use_cassette("rl_species_latest_global", {
+    bb <- rl_species_latest("Canis", "lupus", scope = "1")
+  })
+
+  vcr::use_cassette("rl_species_latest_europe", {
+    cc <- rl_species_latest("Canis", "lupus", scope = "2")
+  })
+
+  expect_false(identical(bb$assessment_id, cc$assessment_id))
 })
 
 test_that("rl_sis_latest works", {
@@ -22,6 +32,16 @@ test_that("rl_sis_latest works", {
   expect_is(aa, "list")
   expect_is(aa$taxon, "list")
   expect_is(aa$habitats, "data.frame")
+
+  vcr::use_cassette("rl_sis_latest_global", {
+    bb <- rl_sis_latest(3746, scope = "1")
+  })
+
+  vcr::use_cassette("rl_sis_latest_europe", {
+    cc <- rl_sis_latest(3746, scope = "2")
+  })
+
+  expect_false(identical(bb$assessment_id, cc$assessment_id))
 })
 
 test_that("rl_sis_latest works with no latest assessment", {
@@ -56,6 +76,11 @@ test_that("rl_species_latest fails well", {
                "parse must be of class logical")
   expect_error(rl_species_latest("Gorilla", "gorilla", parse = matrix()),
                "parse must be of class logical")
+
+  vcr::use_cassette("rl_species_latest_wrong_scope", {
+    expect_message(rl_species_latest("Gorilla", "gorilla", scope = "2"),
+                   "No assessment")
+  })
 })
 
 test_that("rl_sis_latest fails well", {
@@ -63,13 +88,18 @@ test_that("rl_sis_latest fails well", {
 
   expect_error(rl_sis_latest(), "is missing, with no default")
 
-  expect_error(rl_sis_latest(166290968, key = 5),
+  expect_error(rl_sis_latest(9404, key = 5),
                "key must be of class character")
-  expect_error(rl_sis_latest(166290968, key = matrix()),
+  expect_error(rl_sis_latest(9404, key = matrix()),
                "key must be of class character")
 
-  expect_error(rl_sis_latest(166290968, parse = 5),
+  expect_error(rl_sis_latest(9404, parse = 5),
                "parse must be of class logical")
-  expect_error(rl_sis_latest(166290968, parse = matrix()),
+  expect_error(rl_sis_latest(9404, parse = matrix()),
                "parse must be of class logical")
+
+  vcr::use_cassette("rl_sis_latest_wrong_scope", {
+    expect_message(rl_sis_latest(9404, scope = "2"),
+                   "No assessment")
+  })
 })

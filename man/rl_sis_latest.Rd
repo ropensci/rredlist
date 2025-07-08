@@ -4,10 +4,16 @@
 \alias{rl_sis_latest}
 \title{SIS ID latest assessment}
 \usage{
-rl_sis_latest(id, key = NULL, parse = TRUE, ...)
+rl_sis_latest(id, scope = "1", key = NULL, parse = TRUE, ...)
 }
 \arguments{
 \item{id}{(integer) The SIS ID of the taxonomic entity to look up.}
+
+\item{scope}{(character) An optional scope (see \code{\link[=rl_scopes]{rl_scopes()}}) to filter the
+results by. The default, "1", returns the latest global assessment. If no
+assessments exist for the specified \code{scope}, the latest assessment across
+all scopes is returned. If \code{NULL}, the latest assessment across all scopes
+is returned.}
 
 \item{key}{(character) An IUCN API token. See \code{\link[=rl_use_iucn]{rl_use_iucn()}}.}
 
