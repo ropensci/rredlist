@@ -3,13 +3,15 @@
 # Please edit source in vignettes/source/_research_workflows.Rmd
 title: "Using rredlist within a research workflow"
 author: "William Gearty"
-date: "2024-12-14"
+date: "2025-07-24"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Using rredlist within a research workflow}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
+
+
 
 <div style="text-align: justify">
 
@@ -47,6 +49,7 @@ moll_counts <- moll_assessments$assessments %>%
   mutate(year_published = as.numeric(year_published)) %>%
   arrange(year_published) %>%
   mutate(assess_cum = cumsum(assess_cnt))
+
 ```
 
 Now that we have our cumulative sums, we can make a simple plot. We'll save it for later to combine with our second plot.
@@ -59,7 +62,7 @@ gg1 <- ggplot(moll_counts) +
   theme_classic(base_size = 14)
 ```
 
-Now let's see how many cumulative _species_ are assessed by year. In order to do this, we'll first need to filter for the first assessment of each species using `arrange()` and `slice()`. Then we can calculate the cumulative sum as we did for the assessments above.
+Now let's see how many cumulative _species_ are assessed by year. In order to do this, we'll first need to filter to only the first assessment for each species using `arrange()` and `slice()`. Then we can calculate the cumulative sum as we did for the assessments above.
 
 
 ``` r
@@ -162,8 +165,8 @@ Yep, that looks good! Now let's inspect the format of the assessment summary:
 names(au_assessments$assessments)
 #>  [1] "year_published"               "latest"                       "possibly_extinct"            
 #>  [4] "possibly_extinct_in_the_wild" "sis_taxon_id"                 "url"                         
-#>  [7] "assessment_id"                "code"                         "code_type"                   
-#> [10] "scopes"
+#>  [7] "taxon_scientific_name"        "red_list_category_code"       "assessment_id"               
+#> [10] "code"                         "code_type"                    "scopes"
 head(au_assessments$assessments)
 #>   year_published latest possibly_extinct possibly_extinct_in_the_wild sis_taxon_id
 #> 1           2020   TRUE            FALSE                        FALSE        10030
@@ -172,13 +175,20 @@ head(au_assessments$assessments)
 #> 4           2013   TRUE            FALSE                        FALSE       137084
 #> 5           2013   TRUE            FALSE                        FALSE       137097
 #> 6           2013   TRUE            FALSE                        FALSE       137119
-#>                                                 url assessment_id code code_type       scopes
-#> 1  https://www.iucnredlist.org/species/10030/495630        495630   AU   country list(en ....
-#> 2  https://www.iucnredlist.org/species/11150/500780        500780   AU   country list(en ....
-#> 3  https://www.iucnredlist.org/species/11200/500969        500969   AU   country list(en ....
-#> 4 https://www.iucnredlist.org/species/137084/519692        519692   AU   country list(en ....
-#> 5 https://www.iucnredlist.org/species/137097/519904        519904   AU   country list(en ....
-#> 6 https://www.iucnredlist.org/species/137119/520192        520192   AU   country list(en ....
+#>                                                 url taxon_scientific_name red_list_category_code
+#> 1  https://www.iucnredlist.org/species/10030/495630     Hexanchus griseus                     NT
+#> 2  https://www.iucnredlist.org/species/11150/500780  Lagocephalus gloveri                     DD
+#> 3  https://www.iucnredlist.org/species/11200/500969           Lamna nasus                     VU
+#> 4 https://www.iucnredlist.org/species/137084/519692     Onthophagus manya                     LC
+#> 5 https://www.iucnredlist.org/species/137097/519904   Coptodactyla lesnei                     LC
+#> 6 https://www.iucnredlist.org/species/137119/520192  Onthophagus lamgalio                     DD
+#>   assessment_id code code_type    scopes
+#> 1        495630   AU   country Global, 1
+#> 2        500780   AU   country Global, 1
+#> 3        500969   AU   country Global, 1
+#> 4        519692   AU   country Global, 1
+#> 5        519904   AU   country Global, 1
+#> 6        520192   AU   country Global, 1
 ```
 
 We could go ahead and download the full assessments for all Australian species now, but downloading full assessments is the slowest part of the workflow, so let's get an assessment summary for reptiles first, then only download full assessments for Australian reptiles.
@@ -217,14 +227,14 @@ names(assessment)
 
 Now you can see why downloading this information will take a while; that's a lot of data! The information available from the IUCN API spans ecology, threats, references, and more!
 
-Now we'll go ahead and download the full records for all of our assessments. Note that performing this many large queries over a short period of time may result in getting timed out by the API. If you do get timed out, `rredlist` will automatically retry the query after a short wait time. By default, if you get timed out more than 3 times for the same query, the query will be stopped and throw an error, forcing you to try the entire download again. However, you can customize the settings related to these retries, including the wait time and the number of retries. Since this is a pretty large download that we don't want to have to redo, we'll increase the number of retries to 10 (from the default of 3).
+Now we'll go ahead and download the full records for all of our assessments. Note that performing this many large queries over a short period of time may result in getting timed out by the API. If you do get timed out, `rredlist` will automatically retry the query after a short wait time. By default, if you get timed out more than 3 times for the same query, the query will be stopped and throw an error, forcing you to try the entire download again. You can customize the settings related to these retries, including the wait time and the number of retries. Since this is a pretty large download that we don't want to have to redo, we could increase the number of retries to 10 (from the default of 3), like so:
 
 
 ``` r
 assessment_list <- lapply(assessment_ids, rl_assessment, times = 10)
 ```
 
-Alternatively, if we know we might get timed out because of the download size, we can impose our own wait time between each query to proactively prevent timeouts. IUCN recommends a wait time of 0.5 seconds between queries to avoid timeouts. We can use `Sys.sleep()` to impose such a wait before each query.
+Alternatively, if we know we might get timed out because of the download size, we could impose our own wait time between each query to proactively prevent timeouts. IUCN recommends a wait time of 0.5 seconds between queries to avoid timeouts. We can use `Sys.sleep()` to impose such a wait before each query.
 
 
 ``` r
@@ -236,17 +246,22 @@ assessment_list <- lapply(assessment_ids,
                           )
 ```
 
-OK, now, after a bit of a wait, we have our full assessment records! Each item of this list is a single assessment record. And each assessment record is also a list, with each element representing a different kind of data in the record (e.g., habitats, taxonomy). For this workflow, we only really care about the taxonomic and threat category data, so let's extract those elements from each list item. We'll put all of this into a data.frame so it is easier to use.
+However, instead of worrying about all of this, we can also use the `rl_assessment_list()` helper function that is included with `rredlist`. This function will retrieve multiple assessments for you while also making sure to wait for a given amount of time (0.5 seconds, by default, as recommended by IUCN) between queries.
 
 
 ``` r
-assessment_df <- data.frame(
-  assessment_id = sapply(assessment_list, function(x) x$assessment_id),
-  species = sapply(assessment_list, function(x) x$taxon$scientific_name),
-  class = sapply(assessment_list, function(x) x$taxon$class),
-  order = sapply(assessment_list, function(x) x$taxon$order_name),
-  category = sapply(assessment_list, function(x) x$red_list_category$code)
-  )
+assessment_list <- rl_assessment_list(assessment_ids)
+```
+
+OK, now, after a bit of a wait, we have our full assessment records! Each item of this list is a single assessment record. And each assessment record is also a list, with each element representing a different kind of data in the record (e.g., habitats, taxonomy). For this workflow, we only really care about the taxonomic and threat category data, so let's extract those elements from each list item using `rl_assessment_extract()`. We need to extract each element separately, so we'll merge the two sets of data together based on the `assessment_id` column. Note that the `flatten = TRUE` option for `rl_assessment_extract()` requires the `dplyr`, `tibble`, and `tidyr` packages to be installed.
+
+
+``` r
+assessment_df <- merge(
+ rl_assessment_extract(assessment_list, "taxon", format = "df", flatten = TRUE),
+ rl_assessment_extract(assessment_list, "red_list_category__code", format = "df"),
+ by = "assessment_id"
+)
 ```
 
 We'll do some very minor data cleaning and filtering. In this case, some of the assessments use old threat codes, so we'll exclude them from further analyses. We'll also convert the category column to an ordered factor for visualization purposes.
@@ -254,11 +269,11 @@ We'll do some very minor data cleaning and filtering. In this case, some of the 
 
 ``` r
 assessment_df <- assessment_df %>%
-  mutate(category = factor(category,
+  mutate(code = factor(code,
                            levels = c("DD", "LC", "NT", "VU", "EN", "CR",
                                       "EW", "EX"),
                            ordered = TRUE)) %>%
-  filter(!is.na(category))
+  filter(!is.na(code))
 ```
 
 Now let's make a plot! Here we are visualizing the number of reptiles in each threat category, split out by their order (crocs vs. lizards vs. turtles). Note that `rredlist` includes a custom color palette for use with `{ggplot2}` that matches the official IUCN threat category color scheme (`scale_fill_iucn()` for the fill aesthetic and `scale_color_iucn()` for the color aesthetic).
@@ -266,16 +281,16 @@ Now let's make a plot! Here we are visualizing the number of reptiles in each th
 
 ``` r
 ggplot(assessment_df) +
-  geom_bar(aes(x = category, fill = category), show.legend = FALSE) +
+  geom_bar(aes(x = code, fill = code), show.legend = FALSE) +
   scale_fill_iucn() +
-  facet_wrap(~order, ncol = 1, scales = "free_y") +
+  facet_wrap(~order_name, ncol = 1, scales = "free_y") +
   labs(x = "IUCN Category", y = "# of Species") +
   theme_classic(base_size = 14)
 ```
 
 <div class="figure" style="text-align: center">
-<img src="figure/unnamed-chunk-19-1.png" alt="plot of chunk unnamed-chunk-19"  />
-<p class="caption">plot of chunk unnamed-chunk-19</p>
+<img src="figure/unnamed-chunk-20-1.png" alt="plot of chunk unnamed-chunk-20"  />
+<p class="caption">plot of chunk unnamed-chunk-20</p>
 </div>
 
 We can do some quick data manipulation to calculate the proportions of species in each threat category instead of counts to make comparisons between the orders easier.
@@ -283,12 +298,12 @@ We can do some quick data manipulation to calculate the proportions of species i
 
 ``` r
 assessment_props <- assessment_df %>%
-  group_by(order) %>%
-  count(category, name = "cnt") %>%
+  group_by(order_name) %>%
+  count(code, name = "cnt") %>%
   mutate(prop = cnt/sum(cnt))
 
 ggplot(assessment_props) +
-  geom_col(aes(y = order, x = prop, fill = category)) +
+  geom_col(aes(y = order_name, x = prop, fill = code)) +
   scale_fill_iucn(name = NULL, limits = rev) +
   scale_x_continuous(expand = expansion()) +
   labs(x = "Proportion of Species", y = "Order") +
@@ -297,8 +312,8 @@ ggplot(assessment_props) +
 ```
 
 <div class="figure" style="text-align: center">
-<img src="figure/unnamed-chunk-20-1.png" alt="plot of chunk unnamed-chunk-20"  />
-<p class="caption">plot of chunk unnamed-chunk-20</p>
+<img src="figure/unnamed-chunk-21-1.png" alt="plot of chunk unnamed-chunk-21"  />
+<p class="caption">plot of chunk unnamed-chunk-21</p>
 </div>
 
 And that's that! You'll see that Australian turtles are all threatened, whereas Australian crocodiles and lizards tend to be not threatened.
@@ -365,54 +380,39 @@ rl_comp_groups()
 #> 51  TRUE FALSE               velvet_worms                 <NA>
 ```
 
-OK, since we have gymnosperms split into conifers and cycads, let's compare these two groups. Let's also introduce another type of data in assessments: habitat.
+OK, since we have gymnosperms split into conifers and cycads, let's compare these two groups. Let's also introduce another type of data in assessments: *habitat*.
 
-We'll start with the cycads and download a summary of their latest assessments. We'll then download the full assessment records based on that summary. Finally, we'll extract the entire `habitats` data.frame from each assessment record and add some taxonomic information from the `taxon` element of each record. Note that for each assessment, there are one or more habitats assigned to the species. There is also often habitat suitability data, although we'll ignore that for today.
+We'll start with the cycads and download a summary of their latest assessments. We'll then download the full assessment records based on that summary. Finally, we'll extract the entire `habitats` data.frame from each assessment record and merge that with the `taxon` element of each record. Note that for each assessment, there are one or more habitats assigned to the species. There is also often habitat suitability data, although we'll ignore that for today.
 
 
 ``` r
 cycad_assessments <- rl_comp_groups("cycads", quiet = TRUE, latest = TRUE)
 
-cycad_data <- lapply(cycad_assessments$assessments$assessment_id,
-                          function(x) {
-                            Sys.sleep(0.5)
-                            rl_assessment(x)
-                          }
-                          )
+cycad_data <- rl_assessment_list(cycad_assessments$assessments$assessment_id)
 
-cycad_habitats <- lapply(cycad_data, function(x) {
-  x$habitats %>%
-    mutate(species = x$taxon$scientific_name,
-           class = x$taxon$class_name,
-           order = x$taxon$order_name)
-}
-) %>% bind_rows()
+cycad_habitats <- merge(
+  rl_assessment_extract(cycad_data, "habitats", format = "df", flatten = TRUE),
+  rl_assessment_extract(cycad_data, "taxon", format = "df", flatten = TRUE),
+  by = "assessment_id"
+)
 ```
 
 Now we can do the same thing for conifers:
 
 
 ``` r
-# do the same thing for the conifers
 conifer_assessments <- rl_comp_groups("conifers", quiet = TRUE, latest = TRUE)
 
-conifer_data <- lapply(conifer_assessments$assessments$assessment_id,
-                          function(x) {
-                            Sys.sleep(0.5)
-                            rl_assessment(x)
-                          }
-                          )
+conifer_data <- rl_assessment_list(conifer_assessments$assessments$assessment_id)
 
-conifer_habitats <- lapply(conifer_data, function(x) {
-  x$habitats %>%
-    mutate(species = x$taxon$scientific_name,
-           class = x$taxon$class_name,
-           order = x$taxon$order_name)
-}
-) %>% bind_rows()
+conifer_habitats <- merge(
+  rl_assessment_extract(conifer_data, "habitats", format = "df", flatten = TRUE),
+  rl_assessment_extract(conifer_data, "taxon", format = "df", flatten = TRUE),
+  by = "assessment_id"
+)
 ```
 
-Now that we have habitat data for both clades, let's combine them and clean up the data a bit. We can also use `rl_habitats()` without any arguments to get descriptions of the different habitats. For visualization purposes, we'll shorten the descriptions to anything outside of parentheses. Also, we'll collapse all of the habitats into their major habitats (i.e., codes without underscores), since the visualization would be pretty messy otherwise.
+Now that we have habitat data for both clades, let's combine them and clean up the data a bit. We can also use `rl_habitats()` without any arguments to get descriptions of the different habitats. For visualization purposes, we'll shorten the descriptions to anything outside of the parentheses. Also, we'll collapse all of the habitats into their major habitats (i.e., codes without underscores), since the visualization would be pretty messy otherwise.
 
 
 ``` r
@@ -426,14 +426,18 @@ gymno_habitats <- bind_rows(Cycads = cycad_habitats,
   mutate(habitat_major = habitats$label[match(code_major, habitats$code)])
 ```
 
-We'll now summarize the data, counting how many of each clade exist in each habitat. Like above, we'll calculate proportions so we can compare between the two clades.
+We'll now summarize the data. First, we'll make sure to remove any duplicates now that we're using the major habitats. Then, we count how many of each clade exist in each habitat. Since the two clades have different numbers of species, we then divide by the number of unique assessed species in each clade to get the proportions of species in each habitat so we can easily compare between the two clades.
 
 
 ``` r
 gymno_counts <- gymno_habitats %>%
+  select(sis_id, clade, code_major, habitat_major) %>%
+  unique() %>%
   group_by(clade) %>%
   count(code_major, habitat_major, name = "cnt") %>%
-  mutate(prop = cnt/sum(cnt))
+  mutate(prop = cnt/length(
+    unique(subset(gymno_habitats, clade == cur_group()$clade)$sis_id)
+  ))
 ```
 
 And now we can plot our proportions:
@@ -454,8 +458,8 @@ ggplot(gymno_counts) +
 ```
 
 <div class="figure" style="text-align: center">
-<img src="figure/unnamed-chunk-26-1.png" alt="plot of chunk unnamed-chunk-26"  />
-<p class="caption">plot of chunk unnamed-chunk-26</p>
+<img src="figure/unnamed-chunk-27-1.png" alt="plot of chunk unnamed-chunk-27"  />
+<p class="caption">plot of chunk unnamed-chunk-27</p>
 </div>
 
 Tada! As you maybe expected, cycads and conifers live in fairly similar habitats, although conifers tend to live in forests slightly more than cycads, whereas some cycads live in rocky areas.
