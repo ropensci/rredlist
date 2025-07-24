@@ -1,4 +1,4 @@
-# rredlist (development version)
+# rredlist 1.1.0
 
 ### NEW FEATURES
 
