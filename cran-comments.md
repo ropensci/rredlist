@@ -1,3 +1,8 @@
+This is a resubmission. I have addressed the NOTEs raised from my previous submission. However, I'm not sure how to resolve this NOTE:
+"Author field differs from that derived from Authors@R"
+
+I believe this is referring to a difference between the DESCRIPTION file and the rredlist-package documentation file. However, the latter is generated automatically based on the former, so they should match. It appears there may be an issue processing the ROR comment?
+
 ## Test environments (with Github Actions)
 
 * Windows 10.0.20348 (x86_64-w64-mingw32): R 4.5.1

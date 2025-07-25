@@ -37,7 +37,7 @@ or the red list category (\code{el_name = "red_list_category"}).
 }
 \details{
 The following top-level element names can be extracted as of
-2025-07-07:
+2025-07-25:
 \itemize{
 \item assessment_date
 \item assessment_id

@@ -24,8 +24,9 @@
 #' the end of the function name, e.g., [rl_species_()].
 #'
 #' @section No Spatial:
-#' This package does not include support for the spatial API, described at
-#' <https://apiv3.iucnredlist.org/spatial>.
+#' This package does not include support for spatial data from the IUCN Red
+#' List. IUCN Red List Spatial data can be downloaded at
+#' <https://www.iucnredlist.org/resources/spatial-data-download>.
 #'
 #' @section Citing the IUCN Red List API:
 #' Get the proper citation for the version of the Red List you are using

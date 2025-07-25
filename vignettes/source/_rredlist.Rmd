@@ -52,7 +52,7 @@ Documentation for the IUCN Red List API is available at https://api.iucnredlist.
 #### What `rredlist` is not:
 
 1. [`redlistr`](https://cran.r-project.org/package=redlistr) is a different package for contributors to the IUCN Red List - not working with the IUCN Red List API.
-2. `rredlist` does not include support for the spatial API, described at https://apiv3.iucnredlist.org/spatial.
+2. `rredlist` does not include support for spatial data from the IUCN Red List. IUCN Red List Spatial data can be downloaded from the [IUCN website](https://www.iucnredlist.org/resources/spatial-data-download).
 
 ## Installation
 
@@ -193,7 +193,7 @@ lot of calls."
 
 ### API Versioning
 
-`rredlist` versions ≤ 0.7.1 tracked [version 3](https://apiv3.iucnredlist.org/) of the IUCN Red List API. `rredlist` versions ≥ 1.0.0 track version 4 of the IUCN Red List API. If you need to use version 3 of the API--and it is still functioning--you can install an old version of `rredlist` using the `remotes` package:
+`rredlist` versions ≤ 0.7.1 tracked the now-defunct version 3 of the IUCN Red List API. `rredlist` versions ≥ 1.0.0 track version 4 of the IUCN Red List API. If you need to use version 3 of the API--and it is still functioning--you can install an old version of `rredlist` using the `remotes` package:
 
 ```{r eval=FALSE}
 # From CRAN archive

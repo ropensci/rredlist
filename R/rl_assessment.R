@@ -131,6 +131,7 @@ rl_assessment_list <- function(ids, key = NULL, wait_time = 0.5, quiet = FALSE,
 #' @export
 #' @importFrom rlang check_installed expr
 #' @importFrom cli cli_abort
+#' @importFrom stats setNames
 #' @examples \dontrun{
 #' lst <- rl_assessment_list(ids = c(166290968, 136250858))
 #' # get complex elements as a list

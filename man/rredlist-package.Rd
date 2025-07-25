@@ -37,8 +37,9 @@ the end of the function name, e.g., \code{\link[=rl_species_]{rl_species_()}}.
 
 \section{No Spatial}{
 
-This package does not include support for the spatial API, described at
-\url{https://apiv3.iucnredlist.org/spatial}.
+This package does not include support for spatial data from the IUCN Red
+List. IUCN Red List Spatial data can be downloaded at
+\url{https://www.iucnredlist.org/resources/spatial-data-download}.
 }
 
 \section{Citing the IUCN Red List API}{

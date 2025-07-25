@@ -88,16 +88,16 @@ rl_actions()
 
 ``` r
 rl_actions("2_2", all = FALSE)$assessments
-#>     year_published latest possibly_extinct possibly_extinct_in_the_wild sis_taxon_id
-#> 1             2019   TRUE            FALSE                        FALSE    132523146
-#> 2             2019   TRUE            FALSE                        FALSE        10767
-#> 3             2013   TRUE            FALSE                        FALSE         1078
-#> 4             2019   TRUE            FALSE                        FALSE    132521900
-#> 5             2020  FALSE            FALSE                        FALSE         1086
-#> 6             2019   TRUE            FALSE                        FALSE         1117
-#> 7             2019   TRUE            FALSE                        FALSE        11797
-#> 8             2021   TRUE            FALSE                        FALSE        12124
-#> 9             2019   TRUE            FALSE                        FALSE        12695
+#>    year_published latest possibly_extinct possibly_extinct_in_the_wild sis_taxon_id
+#> 1            2019   TRUE            FALSE                        FALSE    132523146
+#> 2            2019   TRUE            FALSE                        FALSE        10767
+#> 3            2013   TRUE            FALSE                        FALSE         1078
+#> 4            2019   TRUE            FALSE                        FALSE    132521900
+#> 5            2020  FALSE            FALSE                        FALSE         1086
+#> 6            2019   TRUE            FALSE                        FALSE         1117
+#> 7            2019  FALSE            FALSE                        FALSE        11797
+#> 8            2021   TRUE            FALSE                        FALSE        12124
+#> 9            2025   TRUE            FALSE                        FALSE    232775771
 ...
 ```
 
@@ -105,7 +105,7 @@ rl_actions("2_2", all = FALSE)$assessments
 
 <img src="man/figures/logo.png" align="right" width="120" />
 
-The `rredlist` logo showcases a silhouette of a [Javan rhinoceros](https://www.iucnredlist.org/species/19495/18493900) (_Rhinoceros sondaicus_), one of the most endangered mammal species on the planet. The species has suffered extreme population decline due to habitat loss and poaching, with only ~75 individuals alive in the wild today, all in [Ujung Kulon National Park](https://tnujungkulon.menlhk.go.id/), a [UNESCO World Heritage Site](https://whc.unesco.org/en/list/608) in Java, Indonesia. Despite recent conservation efforts, [poaching continues](https://www.savetherhino.org/asia/indonesia/poaching-gangs-claim-to-have-killed-one-third-of-the-remaining-javan-rhino-population/); further, the small population is extremely susceptible to inbreeding, disease, and further habitat loss due to the rampant spreading of local palm trees. You can read more about the Javan rhino on the [IUCN Red List](https://www.iucnredlist.org/species/19495/18493900), [World Wildlife Fund](https://www.worldwildlife.org/species/javan-rhino), and [International Rhino Foundation](https://rhinos.org/about-rhinos/rhino-species/javan-rhino/).
+The `rredlist` logo showcases a silhouette of a [Javan rhinoceros](https://www.iucnredlist.org/species/19495/18493900) (_Rhinoceros sondaicus_), one of the most endangered mammal species on the planet. The species has suffered extreme population decline due to habitat loss and poaching, with only ~75 individuals alive in the wild today, all in Ujung Kulon National Park, a [UNESCO World Heritage Site](https://whc.unesco.org/en/list/608) in Java, Indonesia. Despite recent conservation efforts, [poaching continues](https://www.savetherhino.org/asia/indonesia/poaching-gangs-claim-to-have-killed-one-third-of-the-remaining-javan-rhino-population/); further, the small population is extremely susceptible to inbreeding, disease, and further habitat loss due to the rampant spreading of local palm trees. You can read more about the Javan rhino on the [IUCN Red List](https://www.iucnredlist.org/species/19495/18493900), [World Wildlife Fund](https://www.worldwildlife.org/species/javan-rhino), and [International Rhino Foundation](https://rhinos.org/about-rhinos/rhino-species/javan-rhino/).
 
 This work, "rredlist logo", is adapted from ["Javan rhino silhouette"](https://creazilla.com/media/silhouette/64313/javan-rhino) by [Creazilla](https://creazilla.com/), used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). "rredlist logo" is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) by William Gearty.
 
@@ -125,7 +125,7 @@ This work, "rredlist logo", is adapted from ["Javan rhino silhouette"](https://c
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 
-All contributions to this project are gratefully acknowledged using the [`allcontributors` package](https://github.com/ropensci/allcontributors) following the [allcontributors](https://allcontributors.org) specification. Contributions of any kind are welcome!
+All contributions to this project are gratefully acknowledged using the [`allcontributors` package](https://github.com/ropensci/allcontributors) following the [allcontributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
 
 ### Code
 
