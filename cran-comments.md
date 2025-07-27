@@ -1,7 +1,5 @@
-This is a resubmission. I have addressed the NOTEs raised from my previous submission. However, I'm not sure how to resolve this NOTE:
+This is a resubmission. I have addressed the following NOTE raised from my previous submission:
 "Author field differs from that derived from Authors@R"
-
-I believe this is referring to a difference between the DESCRIPTION file and the rredlist-package documentation file. However, the latter is generated automatically based on the former, so they should match. It appears there may be an issue processing the ROR comment?
 
 ## Test environments (with Github Actions)
 
