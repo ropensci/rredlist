@@ -59,7 +59,7 @@ Suggests:
     tidyr,
     patchwork,
     vdiffr
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.2.9000
 VignetteBuilder: knitr
 X-schema.org-applicationCategory: Biodiversity
 X-schema.org-keywords: IUCN, biodiversity, API, web-services, traits, habitat, species, conservation

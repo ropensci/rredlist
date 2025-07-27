@@ -28,7 +28,7 @@ ggplot2 color scales using the colors for the IUCN Red List threat categories, a
 documented in \href{https://nc.iucnredlist.org/redlist/resources/files/1646067752-FINAL_IUCN_Red_List_colour_chart.pdf}{this chart}.
 }
 \examples{
-\dontshow{if (require(ggplot2)) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (require(ggplot2)) withAutoprint(\{ # examplesIf}
 library(ggplot2)
 categories <- c("NE", "DD", "LC", "NT", "VU", "EN", "CR", "RE", "EW", "EX")
 df <- data.frame(
