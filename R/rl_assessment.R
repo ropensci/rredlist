@@ -253,7 +253,10 @@ rl_assessment_extract <- function(lst, el_name, format = c("list", "df"),
         is.list(df[[col]]) &&
         all(vapply(df[[col]], Negate(is.list), logical(1)))
       ) {
-        df[[col]] <- unlist(df[[col]], use.names = FALSE)
+        # replace NULL with NA to prevent breakage with unlist()
+        tmp <- df[[col]]
+        tmp[vapply(tmp, is.null, logical(1))] <- NA
+        df[[col]] <- unlist(tmp, use.names = FALSE)
       }
     }
     return(df)

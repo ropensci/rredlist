@@ -1,5 +1,7 @@
 # rredlist (development version)
 
+- Fixed a bug when trying to extract assessment components containing NULL values
+
 # rredlist 1.1.0
 
 ### NEW FEATURES
