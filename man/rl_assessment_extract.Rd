@@ -13,7 +13,13 @@ removed.}
 
 \item{el_name}{(character) The name of the element to extract from each
 assessment. Supports multilevel extraction using "__" as the separator. For
-example, to extract the synonyms table, you could use "taxon__synonyms".}
+example, to extract the synonyms table, you could use "taxon__synonyms".
+\code{el_name} may also be a character vector indicating multiple elements to
+extract. In this case, the output will contain all requested elements,
+either as a list (if \code{format = "list"}) or as a data.frame (if \code{format = "df"}). In the case of a data.frame, the extracted elements will be joined
+by \code{assessment_id}, which may result in an unexpected merged outcome when
+multiple rows are present in one or more of the extracted elements (e.g.,
+the \code{"threats"} element).}
 
 \item{format}{(character) The format of the output. Either "list" or "df"
 (for a data.frame).}
@@ -37,7 +43,7 @@ or the red list category (\code{el_name = "red_list_category"}).
 }
 \details{
 The following top-level element names can be extracted as of
-2025-07-25:
+2025-08-29:
 \itemize{
 \item assessment_date
 \item assessment_id
@@ -92,11 +98,8 @@ ex4 <- rl_assessment_extract(lst, "threats", format = "df", flatten = TRUE)
 # get subelements flattened to a data.frame
 ex5 <- rl_assessment_extract(lst, "taxon__order_name", format = "df",
                              flatten = TRUE)
-# get a data frame with taxon name and red list category code
-ex6 <- merge(
- rl_assessment_extract(lst, "taxon", format = "df", flatten = TRUE),
- rl_assessment_extract(lst, "red_list_category__code", format = "df"),
- by = "assessment_id"
-)
+# get a data frame with both taxon name and red list category code
+ex6 <- rl_assessment_extract(lst, c("taxon", "red_list_category__code"),
+                             format = "df", flatten = TRUE)
 }
 }

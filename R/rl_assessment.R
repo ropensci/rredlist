@@ -118,6 +118,13 @@ rl_assessment_list <- function(ids, key = NULL, wait_time = 0.5, quiet = FALSE,
 #' @param el_name (character) The name of the element to extract from each
 #'   assessment. Supports multilevel extraction using "__" as the separator. For
 #'   example, to extract the synonyms table, you could use "taxon__synonyms".
+#'   `el_name` may also be a character vector indicating multiple elements to
+#'   extract. In this case, the output will contain all requested elements,
+#'   either as a list (if `format = "list"`) or as a data.frame (if `format =
+#'   "df"`). In the case of a data.frame, the extracted elements will be joined
+#'   by `assessment_id`, which may result in an unexpected merged outcome when
+#'   multiple rows are present in one or more of the extracted elements (e.g.,
+#'   the `"threats"` element).
 #' @param format (character) The format of the output. Either "list" or "df"
 #'   (for a data.frame).
 #' @param flatten (logical) If `TRUE`, the output will be flattened to a
@@ -145,12 +152,9 @@ rl_assessment_list <- function(ids, key = NULL, wait_time = 0.5, quiet = FALSE,
 #' # get subelements flattened to a data.frame
 #' ex5 <- rl_assessment_extract(lst, "taxon__order_name", format = "df",
 #'                              flatten = TRUE)
-#' # get a data frame with taxon name and red list category code
-#' ex6 <- merge(
-#'  rl_assessment_extract(lst, "taxon", format = "df", flatten = TRUE),
-#'  rl_assessment_extract(lst, "red_list_category__code", format = "df"),
-#'  by = "assessment_id"
-#' )
+#' # get a data frame with both taxon name and red list category code
+#' ex6 <- rl_assessment_extract(lst, c("taxon", "red_list_category__code"),
+#'                              format = "df", flatten = TRUE)
 #' }
 rl_assessment_extract <- function(lst, el_name, format = c("list", "df"),
                                   flatten = FALSE) {
@@ -163,104 +167,116 @@ rl_assessment_extract <- function(lst, el_name, format = c("list", "df"),
   lst <- Filter(Negate(is.null), lst)
   # get assessment ids for later
   ids <- vapply(lst, function(x) x$assessment_id, FUN.VALUE = integer(1))
-  # extract levels of extraction
-  el_name_spl <- strsplit(el_name, "__")[[1]]
+  for (el_ind in seq_along(el_name)) {
+    lst_tmp <- lst
+    # extract levels of extraction
+    el_name_spl <- strsplit(el_name[el_ind], "__")[[1]]
 
-  # perform multi-level extraction
-  for (el in el_name_spl) {
-    # check if element exists
-    if (!any(sapply(lst, function(x) el %in% names(x)))) {
-      cli_abort(
-        paste("Element {.val {el}} not found in any of the assessments.")
+    # perform multi-level extraction
+    for (el in el_name_spl) {
+      # check if element exists
+      if (!any(sapply(lst_tmp, function(x) el %in% names(x)))) {
+        cli_abort(
+          paste("Element {.val {el}} not found in any of the assessments.")
+        )
+      }
+      lst_tmp <- lapply(lst_tmp, function(x) x[[el]])
+    }
+
+    # put output in requested format
+    if (format == "list") {
+      names(lst_tmp) <- as.character(ids)
+      if (el_ind == 1) {
+        ret_obj <- lst_tmp
+      } else (
+        ret_obj <- mapply(c, ret_obj, lst_tmp, SIMPLIFY = FALSE)
+      )
+    } else {
+      if (flatten) {
+        check_installed(c("dplyr", "tibble", "tidyr"),
+                        reason = "to use `flatten = TRUE`")
+        tryCatch({
+          for (i in seq_along(lst_tmp)) {
+            if (is.list(lst_tmp[[i]]) && !is.data.frame(lst_tmp[[i]])) {
+              # need to handle all sorts of formats, otherwise would use as_tibble
+              lst_tmp[[i]] <- tidyr::pivot_wider(tibble::enframe(lst_tmp[[i]]),
+                                             names_from = "name",
+                                             values_from = "value")
+            } else {
+              lst_tmp[[i]] <- as.data.frame(lst_tmp[[i]])
+            }
+            # if there is only one column, rename it to the element name
+            if (ncol(lst_tmp[[i]]) == 1) {
+              colnames(lst_tmp[[i]]) <- el
+            }
+            if (nrow(lst_tmp[[i]]) > 0) {
+              lst_tmp[[i]]$assessment_id <- ids[i]
+            }
+          }
+          df <- dplyr::bind_rows(lst_tmp)
+        },
+        error = function(e) {
+          cli_abort(# nocov start
+            paste("Error flattening the {.val {el_name}} element to a",
+                  "data.frame. Try setting {.code flatten = FALSE} or extracting",
+                  "a lower level element of the assessments."),
+            call = expr(rl_assessment_extract())
+          )# nocov end
+        })
+
+        # move assessment_id to first column
+        df <- df[, c("assessment_id", setdiff(names(df), "assessment_id"))]
+      } else {
+        df <- data.frame(assessment_id = ids)
+        df[[el]] <- lst_tmp
+      }
+      # convert complex columns
+      for (col in colnames(df)) {
+        if (
+          # if data frame column, then append as additional columns
+          is.data.frame(df[[col]]) &&
+          all(sapply(df[[col]], Negate(is.list))) &&
+          identical(nrow(df[[col]]), nrow(df))
+        ) {
+          # prepare new column(s)
+          # columns are renamed to avoid potential clashes
+          # e.g., if df contains a data frame column called "description" with a
+          # column called "en" (e.g., df$description$en), then this column
+          # will be appended as df$description.en
+          new_col <- setNames(df[[col]], paste0(col, ".", colnames(df[[col]])))
+          # identify the index to insert new column(s)
+          idx <- which(colnames(df) == col)
+          # insert new columns based on the index, and drop data frame column
+          if (identical(idx, 1L)) {
+            df <- cbind(new_col, df[, -idx, drop = FALSE])
+          } else if (identical(idx, ncol(df))) {
+            df <- cbind(df, df[, -idx, drop = FALSE])
+          } else {
+            df <- cbind(
+              df[, seq(1, idx - 1), drop = FALSE],
+              new_col,
+              df[, seq(idx + 1, ncol(df)), drop = FALSE]
+            )
+          }
+        } else if (
+          # if list column with atomic vector of values, then append as column
+          is.list(df[[col]]) &&
+          all(vapply(df[[col]], Negate(is.list), logical(1)))
+        ) {
+          # replace NULL with NA to prevent breakage with unlist()
+          tmp <- df[[col]]
+          tmp[vapply(tmp, is.null, logical(1))] <- NA
+          df[[col]] <- unlist(tmp, use.names = FALSE)
+        }
+      }
+      if (el_ind == 1) {
+        ret_obj <- df
+      } else (
+        ret_obj <- dplyr::left_join(ret_obj, df, by = "assessment_id")
       )
     }
-    lst <- lapply(lst, function(x) x[[el]])
   }
-
-  # put output in requested format
-  if (format == "list") {
-    names(lst) <- as.character(ids)
-    return(lst)
-  } else {
-    if (flatten) {
-      check_installed(c("dplyr", "tibble", "tidyr"),
-                      reason = "to use `flatten = TRUE`")
-      tryCatch({
-        for (i in seq_along(lst)) {
-          if (is.list(lst[[i]]) && !is.data.frame(lst[[i]])) {
-            # need to handle all sorts of formats, otherwise would use as_tibble
-            lst[[i]] <- tidyr::pivot_wider(tibble::enframe(lst[[i]]),
-                                           names_from = "name",
-                                           values_from = "value")
-          } else {
-            lst[[i]] <- as.data.frame(lst[[i]])
-          }
-          # if there is only one column, rename it to the element name
-          if (ncol(lst[[i]]) == 1) {
-            colnames(lst[[i]]) <- el
-          }
-          if (nrow(lst[[i]]) > 0) {
-            lst[[i]]$assessment_id <- ids[i]
-          }
-        }
-        df <- dplyr::bind_rows(lst)
-      },
-      error = function(e) {
-        cli_abort(# nocov start
-          paste("Error flattening the {.val {el_name}} element to a",
-                "data.frame. Try setting {.code flatten = FALSE} or extracting",
-                "a lower level element of the assessments."),
-          call = expr(rl_assessment_extract())
-        )# nocov end
-      })
-
-      # move assessment_id to first column
-      df <- df[, c("assessment_id", setdiff(names(df), "assessment_id"))]
-    } else {
-      df <- data.frame(assessment_id = ids)
-      df[[el]] <- lst
-    }
-    # convert complex columns
-    for (col in colnames(df)) {
-      if (
-        # if data frame column, then append as additional columns
-        is.data.frame(df[[col]]) &&
-        all(sapply(df[[col]], Negate(is.list))) &&
-        identical(nrow(df[[col]]), nrow(df))
-      ) {
-        # prepare new column(s)
-        # columns are renamed to avoid potential clashes
-        # e.g., if df contains a data frame column called "description" with a
-        # column called "en" (e.g., df$description$en), then this column
-        # will be appended as df$description.en
-        new_col <- setNames(df[[col]], paste0(col, ".", colnames(df[[col]])))
-        # identify the index to insert new column(s)
-        idx <- which(colnames(df) == col)
-        # insert new columns based on the index, and drop data frame column
-        if (identical(idx, 1L)) {
-          df <- cbind(new_col, df[, -idx, drop = FALSE])
-        } else if (identical(idx, ncol(df))) {
-          df <- cbind(df, df[, -idx, drop = FALSE])
-        } else {
-          df <- cbind(
-            df[, seq(1, idx - 1), drop = FALSE],
-            new_col,
-            df[, seq(idx + 1, ncol(df)), drop = FALSE]
-          )
-        }
-      } else if (
-        # if list column with atomic vector of values, then append as column
-        is.list(df[[col]]) &&
-        all(vapply(df[[col]], Negate(is.list), logical(1)))
-      ) {
-        # replace NULL with NA to prevent breakage with unlist()
-        tmp <- df[[col]]
-        tmp[vapply(tmp, is.null, logical(1))] <- NA
-        df[[col]] <- unlist(tmp, use.names = FALSE)
-      }
-    }
-    return(df)
-  }
+  return(ret_obj)
 }
 # nocov start
 get_assessment_elements <- function() {
