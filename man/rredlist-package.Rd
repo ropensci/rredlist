@@ -73,19 +73,19 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: William Gearty \email{willgearty@gmail.com}
+\strong{Maintainer}: William Gearty \email{willgearty@gmail.com} (\href{https://orcid.org/0000-0003-0076-3262}{ORCID})
 
 Authors:
 \itemize{
-  \item Scott Chamberlain \email{myrmecocystus@gmail.com}
+  \item Scott Chamberlain \email{myrmecocystus@gmail.com} (\href{https://orcid.org/0000-0003-1444-9135}{ORCID})
 }
 
 Other contributors:
 \itemize{
-  \item rOpenSci (\href{https://ror.org/019jywm96}{ROR}) [funder]
-  \item Maëlle Salmon \email{maelle.salmon@yahoo.se} [contributor]
+  \item rOpenSci (019jywm96) [funder]
+  \item Maëlle Salmon \email{maelle.salmon@yahoo.se} (\href{https://orcid.org/0000-0002-2815-0399}{ORCID}) [contributor]
   \item Kevin Cazelles \email{kevin.cazelles@insileco.io} (\href{https://orcid.org/0000-0001-6619-9874}{ORCID}) [reviewer]
-  \item Stephanie Hazlitt \email{stephhazlitt@gmail.com} [reviewer]
+  \item Stephanie Hazlitt \email{stephhazlitt@gmail.com} (\href{https://orcid.org/0000-0002-3161-2304}{ORCID}) [reviewer]
 }
 
 }
