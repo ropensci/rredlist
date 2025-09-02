@@ -3,7 +3,7 @@
 # Please edit source in vignettes/source/_research_workflows.Rmd
 title: "Using rredlist within a research workflow"
 author: "William Gearty"
-date: "2025-07-24"
+date: "2025-09-02"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Using rredlist within a research workflow}
@@ -163,32 +163,24 @@ Yep, that looks good! Now let's inspect the format of the assessment summary:
 
 ``` r
 names(au_assessments$assessments)
-#>  [1] "year_published"               "latest"                       "possibly_extinct"            
-#>  [4] "possibly_extinct_in_the_wild" "sis_taxon_id"                 "url"                         
-#>  [7] "taxon_scientific_name"        "red_list_category_code"       "assessment_id"               
-#> [10] "code"                         "code_type"                    "scopes"
+#>  [1] "year_published"               "latest"                       "possibly_extinct"             "possibly_extinct_in_the_wild"
+#>  [5] "sis_taxon_id"                 "url"                          "taxon_scientific_name"        "red_list_category_code"      
+#>  [9] "assessment_id"                "code"                         "code_type"                    "scopes"
 head(au_assessments$assessments)
-#>   year_published latest possibly_extinct possibly_extinct_in_the_wild sis_taxon_id
-#> 1           2020   TRUE            FALSE                        FALSE        10030
-#> 2           2014   TRUE            FALSE                        FALSE        11150
-#> 3           2019   TRUE            FALSE                        FALSE        11200
-#> 4           2013   TRUE            FALSE                        FALSE       137084
-#> 5           2013   TRUE            FALSE                        FALSE       137097
-#> 6           2013   TRUE            FALSE                        FALSE       137119
-#>                                                 url taxon_scientific_name red_list_category_code
-#> 1  https://www.iucnredlist.org/species/10030/495630     Hexanchus griseus                     NT
-#> 2  https://www.iucnredlist.org/species/11150/500780  Lagocephalus gloveri                     DD
-#> 3  https://www.iucnredlist.org/species/11200/500969           Lamna nasus                     VU
-#> 4 https://www.iucnredlist.org/species/137084/519692     Onthophagus manya                     LC
-#> 5 https://www.iucnredlist.org/species/137097/519904   Coptodactyla lesnei                     LC
-#> 6 https://www.iucnredlist.org/species/137119/520192  Onthophagus lamgalio                     DD
-#>   assessment_id code code_type    scopes
-#> 1        495630   AU   country Global, 1
-#> 2        500780   AU   country Global, 1
-#> 3        500969   AU   country Global, 1
-#> 4        519692   AU   country Global, 1
-#> 5        519904   AU   country Global, 1
-#> 6        520192   AU   country Global, 1
+#>   year_published latest possibly_extinct possibly_extinct_in_the_wild sis_taxon_id                                               url
+#> 1           2020   TRUE            FALSE                        FALSE        10030  https://www.iucnredlist.org/species/10030/495630
+#> 2           2014   TRUE            FALSE                        FALSE        11150  https://www.iucnredlist.org/species/11150/500780
+#> 3           2019   TRUE            FALSE                        FALSE        11200  https://www.iucnredlist.org/species/11200/500969
+#> 4           2013   TRUE            FALSE                        FALSE       137084 https://www.iucnredlist.org/species/137084/519692
+#> 5           2013   TRUE            FALSE                        FALSE       137097 https://www.iucnredlist.org/species/137097/519904
+#> 6           2013   TRUE            FALSE                        FALSE       137119 https://www.iucnredlist.org/species/137119/520192
+#>   taxon_scientific_name red_list_category_code assessment_id code code_type    scopes
+#> 1     Hexanchus griseus                     NT        495630   AU   country Global, 1
+#> 2  Lagocephalus gloveri                     DD        500780   AU   country Global, 1
+#> 3           Lamna nasus                     VU        500969   AU   country Global, 1
+#> 4     Onthophagus manya                     LC        519692   AU   country Global, 1
+#> 5   Coptodactyla lesnei                     LC        519904   AU   country Global, 1
+#> 6  Onthophagus lamgalio                     DD        520192   AU   country Global, 1
 ```
 
 We could go ahead and download the full assessments for all Australian species now, but downloading full assessments is the slowest part of the workflow, so let's get an assessment summary for reptiles first, then only download full assessments for Australian reptiles.
@@ -212,17 +204,15 @@ Now that we have this list of IDs, we can download the full assessment informati
 ``` r
 assessment <- rl_assessment(assessment_ids[1])
 names(assessment)
-#>  [1] "assessment_date"              "year_published"               "latest"                      
-#>  [4] "possibly_extinct"             "possibly_extinct_in_the_wild" "sis_taxon_id"                
-#>  [7] "criteria"                     "url"                          "citation"                    
-#> [10] "assessment_id"                "assessment_points"            "assessment_ranges"           
-#> [13] "taxon"                        "population_trend"             "red_list_category"           
-#> [16] "supplementary_info"           "documentation"                "biogeographical_realms"      
-#> [19] "conservation_actions"         "faos"                         "habitats"                    
-#> [22] "locations"                    "researches"                   "use_and_trade"               
-#> [25] "threats"                      "credits"                      "errata"                      
-#> [28] "references"                   "growth_forms"                 "lmes"                        
-#> [31] "scopes"                       "stresses"                     "systems"
+#>  [1] "assessment_date"              "year_published"               "latest"                       "possibly_extinct"            
+#>  [5] "possibly_extinct_in_the_wild" "sis_taxon_id"                 "criteria"                     "url"                         
+#>  [9] "citation"                     "assessment_id"                "assessment_points"            "assessment_ranges"           
+#> [13] "taxon"                        "population_trend"             "red_list_category"            "supplementary_info"          
+#> [17] "documentation"                "biogeographical_realms"       "conservation_actions"         "faos"                        
+#> [21] "habitats"                     "locations"                    "researches"                   "use_and_trade"               
+#> [25] "threats"                      "credits"                      "errata"                       "references"                  
+#> [29] "growth_forms"                 "lmes"                         "scopes"                       "stresses"                    
+#> [33] "systems"
 ```
 
 Now you can see why downloading this information will take a while; that's a lot of data! The information available from the IUCN API spans ecology, threats, references, and more!
@@ -253,15 +243,11 @@ However, instead of worrying about all of this, we can also use the `rl_assessme
 assessment_list <- rl_assessment_list(assessment_ids)
 ```
 
-OK, now, after a bit of a wait, we have our full assessment records! Each item of this list is a single assessment record. And each assessment record is also a list, with each element representing a different kind of data in the record (e.g., habitats, taxonomy). For this workflow, we only really care about the taxonomic and threat category data, so let's extract those elements from each list item using `rl_assessment_extract()`. We need to extract each element separately, so we'll merge the two sets of data together based on the `assessment_id` column. Note that the `flatten = TRUE` option for `rl_assessment_extract()` requires the `dplyr`, `tibble`, and `tidyr` packages to be installed.
+OK, now, after a bit of a wait, we have our full assessment records! Each item of this list is a single assessment record. And each assessment record is also a list, with each element representing a different kind of data in the record (e.g., habitats, taxonomy). For this workflow, we only really care about the taxonomic and threat category data, so let's extract those elements from each list item using `rl_assessment_extract()`. Note that the `flatten = TRUE` option for `rl_assessment_extract()` requires the `dplyr`, `tibble`, and `tidyr` packages to be installed.
 
 
 ``` r
-assessment_df <- merge(
- rl_assessment_extract(assessment_list, "taxon", format = "df", flatten = TRUE),
- rl_assessment_extract(assessment_list, "red_list_category__code", format = "df"),
- by = "assessment_id"
-)
+assessment_df <- rl_assessment_extract(assessment_list, c("taxon", "red_list_category__code"), format = "df", flatten = TRUE)
 ```
 
 We'll do some very minor data cleaning and filtering. In this case, some of the assessments use old threat codes, so we'll exclude them from further analyses. We'll also convert the category column to an ordered factor for visualization purposes.
@@ -382,7 +368,7 @@ rl_comp_groups()
 
 OK, since we have gymnosperms split into conifers and cycads, let's compare these two groups. Let's also introduce another type of data in assessments: *habitat*.
 
-We'll start with the cycads and download a summary of their latest assessments. We'll then download the full assessment records based on that summary. Finally, we'll extract the entire `habitats` data.frame from each assessment record and merge that with the `taxon` element of each record. Note that for each assessment, there are one or more habitats assigned to the species. There is also often habitat suitability data, although we'll ignore that for today.
+We'll start with the cycads and download a summary of their latest assessments. We'll then download the full assessment records based on that summary. Finally, we'll extract the `habitats` and `taxon` data.frame from each assessment record. Note that for each assessment, there are one or more habitats assigned to the species. There is also often habitat suitability data, although we'll ignore that for today.
 
 
 ``` r
@@ -390,11 +376,7 @@ cycad_assessments <- rl_comp_groups("cycads", quiet = TRUE, latest = TRUE)
 
 cycad_data <- rl_assessment_list(cycad_assessments$assessments$assessment_id)
 
-cycad_habitats <- merge(
-  rl_assessment_extract(cycad_data, "habitats", format = "df", flatten = TRUE),
-  rl_assessment_extract(cycad_data, "taxon", format = "df", flatten = TRUE),
-  by = "assessment_id"
-)
+cycad_habitats <- rl_assessment_extract(cycad_data, c("taxon", "habitats"), format = "df", flatten = TRUE)
 ```
 
 Now we can do the same thing for conifers:
@@ -405,11 +387,7 @@ conifer_assessments <- rl_comp_groups("conifers", quiet = TRUE, latest = TRUE)
 
 conifer_data <- rl_assessment_list(conifer_assessments$assessments$assessment_id)
 
-conifer_habitats <- merge(
-  rl_assessment_extract(conifer_data, "habitats", format = "df", flatten = TRUE),
-  rl_assessment_extract(conifer_data, "taxon", format = "df", flatten = TRUE),
-  by = "assessment_id"
-)
+conifer_habitats <- rl_assessment_extract(conifer_data, c("habitats", "taxon"), format = "df", flatten = TRUE)
 ```
 
 Now that we have habitat data for both clades, let's combine them and clean up the data a bit. We can also use `rl_habitats()` without any arguments to get descriptions of the different habitats. For visualization purposes, we'll shorten the descriptions to anything outside of the parentheses. Also, we'll collapse all of the habitats into their major habitats (i.e., codes without underscores), since the visualization would be pretty messy otherwise.
