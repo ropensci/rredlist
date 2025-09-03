@@ -1,7 +1,12 @@
 # rredlist (development version)
 
-- Fixed a bug when trying to extract assessment components containing NULL values
+### MINOR IMPROVEMENTS
+
 - Users can now specify multiple elements to extract with `rl_assessment_extract()` (#77)
+
+### BUG FIXES
+
+- Fixed a bug when trying to extract assessment components containing NULL values
 
 # rredlist 1.1.0
 
