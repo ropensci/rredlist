@@ -3,7 +3,7 @@
 # Please edit source in vignettes/source/_research_workflows.Rmd
 title: "Using rredlist within a research workflow"
 author: "William Gearty"
-date: "2025-09-02"
+date: "2025-09-03"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Using rredlist within a research workflow}
@@ -94,7 +94,7 @@ gg1 / gg2
 ```
 
 <div class="figure" style="text-align: center">
-<img src="figure/unnamed-chunk-7-1.png" alt="plot of chunk unnamed-chunk-7"  />
+<img src="unnamed-chunk-7-1.png" alt="plot of chunk unnamed-chunk-7"  />
 <p class="caption">plot of chunk unnamed-chunk-7</p>
 </div>
 
@@ -275,7 +275,7 @@ ggplot(assessment_df) +
 ```
 
 <div class="figure" style="text-align: center">
-<img src="figure/unnamed-chunk-20-1.png" alt="plot of chunk unnamed-chunk-20"  />
+<img src="unnamed-chunk-20-1.png" alt="plot of chunk unnamed-chunk-20"  />
 <p class="caption">plot of chunk unnamed-chunk-20</p>
 </div>
 
@@ -298,7 +298,7 @@ ggplot(assessment_props) +
 ```
 
 <div class="figure" style="text-align: center">
-<img src="figure/unnamed-chunk-21-1.png" alt="plot of chunk unnamed-chunk-21"  />
+<img src="unnamed-chunk-21-1.png" alt="plot of chunk unnamed-chunk-21"  />
 <p class="caption">plot of chunk unnamed-chunk-21</p>
 </div>
 
@@ -436,7 +436,7 @@ ggplot(gymno_counts) +
 ```
 
 <div class="figure" style="text-align: center">
-<img src="figure/unnamed-chunk-27-1.png" alt="plot of chunk unnamed-chunk-27"  />
+<img src="unnamed-chunk-27-1.png" alt="plot of chunk unnamed-chunk-27"  />
 <p class="caption">plot of chunk unnamed-chunk-27</p>
 </div>
 

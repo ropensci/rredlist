@@ -3,7 +3,7 @@
 # Please edit source in vignettes/source/_rredlist.Rmd
 title: "Introduction to rredlist"
 author: "William Gearty"
-date: "2025-07-25"
+date: "2025-09-02"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to rredlist}
@@ -77,16 +77,16 @@ library("rredlist")
 
 ``` r
 rl_species("Gorilla", "gorilla")$assessments
-#>    year_published latest possibly_extinct possibly_extinct_in_the_wild sis_taxon_id
-#> 1            2016  FALSE            FALSE                        FALSE         9404
-#> 2            2018   TRUE            FALSE                        FALSE         9404
-#> 3            2016  FALSE            FALSE                        FALSE         9404
-#> 4            2008  FALSE            FALSE                        FALSE         9404
-#> 5            2007  FALSE            FALSE                        FALSE         9404
-#> 6            2000  FALSE            FALSE                        FALSE         9404
-#> 7            1996  FALSE            FALSE                        FALSE         9404
-#> 8            1994  FALSE            FALSE                        FALSE         9404
-#> 9            1990  FALSE            FALSE                        FALSE         9404
+#>    year_published latest possibly_extinct possibly_extinct_in_the_wild sis_taxon_id                                                url
+#> 1            2016  FALSE            FALSE                        FALSE         9404  https://www.iucnredlist.org/species/9404/17963949
+#> 2            2018   TRUE            FALSE                        FALSE         9404 https://www.iucnredlist.org/species/9404/136250858
+#> 3            2016  FALSE            FALSE                        FALSE         9404 https://www.iucnredlist.org/species/9404/102330408
+#> 4            2008  FALSE            FALSE                        FALSE         9404  https://www.iucnredlist.org/species/9404/12983787
+#> 5            2007  FALSE            FALSE                        FALSE         9404  https://www.iucnredlist.org/species/9404/12983966
+#> 6            2000  FALSE            FALSE                        FALSE         9404  https://www.iucnredlist.org/species/9404/12983737
+#> 7            1996  FALSE            FALSE                        FALSE         9404  https://www.iucnredlist.org/species/9404/12983764
+#> 8            1994  FALSE            FALSE                        FALSE         9404  https://www.iucnredlist.org/species/9404/12984167
+#> 9            1990  FALSE            FALSE                        FALSE         9404  https://www.iucnredlist.org/species/9404/12984186
 ...
 ```
 
@@ -238,8 +238,7 @@ Use the function `rl_citation()`:
 rl_citation()
 #> To cite the IUCN API in publications, use the following citation:
 #> 
-#>   IUCN (2025). "IUCN Red List of Threatened Species." <https://www.iucnredlist.org>. Accessed on 25 July
-#>   2025.
+#>   IUCN (2025). "IUCN Red List of Threatened Species." <https://www.iucnredlist.org>. Accessed on 02 September 2025.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
@@ -249,7 +248,7 @@ rl_citation()
 #>     year = {2025},
 #>     edition = {Version 2025-1},
 #>     howpublished = {\url{https://www.iucnredlist.org}},
-#>     note = {Accessed on 25 July 2025},
+#>     note = {Accessed on 02 September 2025},
 #>   }
 ```
 
@@ -261,8 +260,7 @@ citation("rredlist")
 #> To cite package 'rredlist' in publications use:
 #> 
 #>   Gearty W, Chamberlain S (2025). _rredlist: 'IUCN' Red List Client_. doi:10.32614/CRAN.package.rredlist
-#>   <https://doi.org/10.32614/CRAN.package.rredlist>, R package version 1.0.0,
-#>   <https://docs.ropensci.org/rredlist/>.
+#>   <https://doi.org/10.32614/CRAN.package.rredlist>, R package version 1.1.0, <https://docs.ropensci.org/rredlist/>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
@@ -270,7 +268,7 @@ citation("rredlist")
 #>     title = {rredlist: 'IUCN' Red List Client},
 #>     author = {William Gearty and Scott Chamberlain},
 #>     year = {2025},
-#>     note = {R package version 1.0.0},
+#>     note = {R package version 1.1.0},
 #>     doi = {10.32614/CRAN.package.rredlist},
 #>     url = {https://docs.ropensci.org/rredlist/},
 #>   }

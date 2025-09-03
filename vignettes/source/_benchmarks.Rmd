@@ -40,7 +40,8 @@ knitr::opts_chunk$set(
   warning = FALSE,
   message = FALSE,
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  fig.path = ""
 )
 ```
 
@@ -177,6 +178,6 @@ Again, even with about 40 pages of data to parse, the download takes the vast ma
 
 ## Conclusion
 
-Ultimately, both APIs take about the same amount of time because the majority of time is spent downloading the data from the IUCN database and reading it into R. For larger downloads, the parsing done by the high-level API may take an appreciable amount of time (tenths of seconds to seconds), It's possible that users who are calling these functions many (e.g., thousands) of times would appreciate this time reduction. However, for most users it probably won't matter. Furthermore, keep in mind that if you use the low-level API you will likely need to do your own processing after the fact in order to do any sort of downstream analyses. Ultimately, the choice is up to you.
+Ultimately, both APIs take about the same amount of time because the majority of time is spent downloading the data from the IUCN database and reading it into R. For larger downloads, the parsing done by the high-level API may take an appreciable amount of time (tenths of seconds to seconds). It's possible that users who are calling these functions many (e.g., thousands) of times would appreciate this time reduction. However, for most users it probably won't matter. Furthermore, keep in mind that if you use the low-level API you will likely need to do your own processing after the fact in order to do any sort of downstream analyses. Ultimately, the choice is up to you.
 
 </div>

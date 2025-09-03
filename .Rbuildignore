@@ -13,7 +13,7 @@ Makefile
 ^codemeta\.json$
 ^LICENSE\.md$
 vignettes/precompile.R
-^vignettes/.source$
+^vignettes/source$
 ^CRAN-SUBMISSION$
 ^doc$
 ^Meta$
@@ -21,6 +21,5 @@ vignettes/precompile.R
 ^pkgdown$
 ^_pkgdown\.yml$
 ^CONTRIBUTING\.md$
-figure$
 cache$
 ^\.zenodo\.json$
