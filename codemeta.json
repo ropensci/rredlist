@@ -8,13 +8,13 @@
   "codeRepository": "https://github.com/ropensci/rredlist",
   "issueTracker": "https://github.com/ropensci/rredlist/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.4.2 (2024-10-31 ucrt)",
+  "runtimePlatform": "R version 4.5.1 (2025-06-13 ucrt)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -26,13 +26,15 @@
       "@type": "Person",
       "givenName": "William",
       "familyName": "Gearty",
-      "email": "willgearty@gmail.com"
+      "email": "willgearty@gmail.com",
+      "@id": "https://orcid.org/0000-0003-0076-3262"
     },
     {
       "@type": "Person",
       "givenName": "Scott",
       "familyName": "Chamberlain",
-      "email": "myrmecocystus@gmail.com"
+      "email": "myrmecocystus@gmail.com",
+      "@id": "https://orcid.org/0000-0003-1444-9135"
     }
   ],
   "contributor": [
@@ -40,7 +42,8 @@
       "@type": "Person",
       "givenName": "Maëlle",
       "familyName": "Salmon",
-      "email": "maelle.salmon@yahoo.se"
+      "email": "maelle.salmon@yahoo.se",
+      "@id": "https://orcid.org/0000-0002-2815-0399"
     }
   ],
   "funder": [
@@ -54,7 +57,8 @@
       "@type": "Person",
       "givenName": "William",
       "familyName": "Gearty",
-      "email": "willgearty@gmail.com"
+      "email": "willgearty@gmail.com",
+      "@id": "https://orcid.org/0000-0003-0076-3262"
     }
   ],
   "softwareSuggestions": [
@@ -295,8 +299,8 @@
   },
   "applicationCategory": "Biodiversity",
   "isPartOf": "https://ropensci.org",
-  "keywords": ["IUCN", "biodiversity", "API", "web-services", "traits", "habitat", "species", "conservation"],
-  "fileSize": "6932.669KB",
+  "keywords": ["IUCN", "biodiversity", "API", "web-services", "traits", "habitat", "species", "conservation", "api-wrapper", "rstats", "iucn-red-list", "iucn", "r", "r-package", "taxize"],
+  "fileSize": "6918.991KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
@@ -316,9 +320,18 @@
       "name": "rredlist: 'IUCN' Red List Client",
       "identifier": "10.32614/CRAN.package.rredlist",
       "url": "https://docs.ropensci.org/rredlist/",
-      "description": "R package version 1.1.0",
+      "description": "R package version 1.1.1",
       "@id": "https://doi.org/10.32614/CRAN.package.rredlist",
       "sameAs": "https://doi.org/10.32614/CRAN.package.rredlist"
     }
-  ]
+  ],
+  "releaseNotes": "https://github.com/ropensci/rredlist/blob/main/NEWS.md",
+  "readme": "https://github.com/ropensci/rredlist/blob/main/README.md",
+  "contIntegration": ["https://github.com/ropensci/rredlist/actions/workflows/R-check.yml", "https://app.codecov.io/gh/ropensci/rredlist"],
+  "developmentStatus": "https://www.repostatus.org/#active",
+  "review": {
+    "@type": "Review",
+    "url": "https://github.com/ropensci/software-review/issues/663",
+    "provider": "https://ropensci.org"
+  }
 }
