@@ -1,11 +1,8 @@
-This is a resubmission. I have addressed the following NOTE raised from my previous submission:
-"Author field differs from that derived from Authors@R"
-
 ## Test environments (with Github Actions)
 
 * Windows 10.0.20348 (x86_64-w64-mingw32): R 4.5.1
-* Mac OS X 14.7.6 (aarch64-apple-darwin20): R 4.5.1
-* Ubuntu 24.04.2 (x86_64-pc-linux-gnu): R 4.4.3, 4.5.1, and devel (r88411)
+* Mac OS X 15.5 (aarch64-apple-darwin20): R 4.5.1
+* Ubuntu 24.04.3 (x86_64-pc-linux-gnu): R 4.4.3, 4.5.1, and devel (r88773)
 
 ## R CMD check results
 
@@ -18,4 +15,5 @@ Checked 1 reverse dependency, comparing R CMD check results across CRAN and dev 
  * taxize (0.10.0)
 
 ### Dependency check results:
+
 All packages passed.

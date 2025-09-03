@@ -7,6 +7,7 @@
 ### BUG FIXES
 
 - Fixed a bug when trying to extract assessment components containing NULL values
+- Fixed the vignettes directory to properly include rendered figures
 
 # rredlist 1.1.0
 
